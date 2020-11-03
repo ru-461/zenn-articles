@@ -3,7 +3,7 @@ title: "検索効率を楽して上げたい...(Chrome拡張機能)"
 emoji: "🌟"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Chrome", "ツール", "作業効率化", "chromeextension"]
-published: false
+published: true
 ---
 
 # はじめに
