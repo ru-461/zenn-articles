@@ -18,7 +18,7 @@ Google 検索を頻繁に行う場合、テンポよく調べたい情報を手�
 
 Chrome を初期設定で使うと、新規タブを開いたとき以下のようなページが出ると思います。
 ![](https://storage.googleapis.com/zenn-user-upload/ptn4qslk7wkqftou7d1zeb6kzk8m)
-_インストール直後の画像です_
+_Chrome インストール直後の画像です_
 このページから Google 検索や独自にショートカットを追加してサイトへアクセスできるのですが、個人的にこのページではなく Google のトップページを使いたいと感じたため、このページを [Google トップ](https://www.google.com/)に置き換えました。使用した拡張機能は以下になります。
 
 ## New Tab Redirect
@@ -34,10 +34,10 @@ Redirect URL のフォームに新規タブを開いたときに開きたいペ�
 
 ここまで Google の検索結果を表示できました。しかし、現在タブキーで検索結果のページに遷移しようと Tab キーを連打してみても...?
 ![](https://storage.googleapis.com/zenn-user-upload/1q36voia8dvpg1oc6wtmoke2vvmz)
-_「メインコンテンツへスキップ」を選択してリンクにフォーカスされる_
+_「メインコンテンツへスキップ」を選択するとリンクへフォーカス_
 ![](https://storage.googleapis.com/zenn-user-upload/tcwnb5td4zgu1pya18m094bl1t74)
 _一番上にヒットしたサイトのタイトルへフォーカスが当たった状態_
-この調子で Tab キーで選択できるかと思いきや...
+この調子で Tab キーで次のリンクを選択できるかと思いきや...
 ![](https://storage.googleapis.com/zenn-user-upload/8zwlmt376q6h69t26l423maygkaf)
 _サイトのキャッシュにフォーカスが..._
 
