@@ -3,7 +3,7 @@ title: "Vueで技術系アイコンを使いたい！ [DEVICON]"
 emoji: "🤔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["npm", "Vue", "初心者"]
-published: false
+published: true
 ---
 
 ## Vue.js で DEVICON のアイコンを使いたい
