@@ -50,7 +50,7 @@ _トップページ_
 実は 1 年ほど前に Vue.js を勉強していた時期があります。そのときに学習していた書籍がこちら。
 ![](https://storage.googleapis.com/zenn-user-upload/pelpc1eitifqeqdt5g2kcsozpe27)
 _基礎から学ぶ Vue.js_
-[mio さん(@mio3io)](https://twitter.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した `猫本` の愛称親しまれている有名な 1 冊です。
+[mio さん(@mio3io)](https://twitter.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した `猫本` の愛称で親しまれている有名な 1 冊です。
 :::message
 この記事を執筆した 2020 年 11 月現在、改定 2 版が出版されています。画像は改定前の表紙になります。
 :::
