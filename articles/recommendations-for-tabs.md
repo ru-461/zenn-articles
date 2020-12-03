@@ -23,7 +23,7 @@ https://workona.com/
 
 まず、[Workona 公式ページ](https://workona.com/)にブラウザでアクセスしサインアップします。
 ![](https://storage.googleapis.com/zenn-user-upload/cifgjq90clqdnxe1ei8q8izbmrpz)
-_SIGN UP FREE ボタンをクリックでアカウント作成できます_
+_SIGN UP FREE ボタンから新規にアカウント作成できます_
 
 サインアップは現在 Google アカウントかメールアドレスを使った認証ができます。
 ![](https://storage.googleapis.com/zenn-user-upload/vm5f2gqbvxu44dxqoy4aw65szdto)Google のアカウントを持っていればログインするだけですぐに使い始めることができます。サインアップが完了したらタブを登録していきます。このタイミングで拡張機能の追加を促されるので予め以下の拡張機能をそれぞれインストールしておくをおすすめします。
