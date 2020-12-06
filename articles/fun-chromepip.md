@@ -3,7 +3,7 @@ title: "[Windows]ピクチャー イン ピクチャーで堕落した作業環�
 emoji: "🪟"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Windows", "Chrome", "ツール"]
-published: false
+published: true
 ---
 
 # はじめに
