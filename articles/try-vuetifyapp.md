@@ -1,5 +1,5 @@
 ---
-title: "[Vuetify]即興でそれっぽいTweet文字カウンターを作る"
+title: "[Vuetify]即興で Tweet文字カウンターを作る"
 emoji: "💭"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Vue", "Vuetify", "初心者", "個人開発"]
@@ -9,11 +9,13 @@ published: false
 # はじめに
 
 Twitter では 1 回のツイートに文字制限があります。最大 140 文字でツイートするというのは有名な制約でもあり、Twitter の特徴です。
-JavaScript を使って文字をカウントするアプリを作るサンプルは多くありますが、どうしてもコードが長くなってしまい見にくいと感じることがありました。JavaScript のフレームワークである Vue.js ではデータをリアクティブに扱えます。Vue.js のもつリアクティブを使うことでより簡単に記述できます。しかしテキストエリアの下に文字を表示するだけでは物足りないので、デザインもモダンなデザインでおしゃれにしてみました。今回はサンプルとして Twitter 風の文字カウンターアプリを Vuetify を使って作ってみました。少しのコードで画面のデザインが一気に変わっていくので作っていて楽しいです。VueCLI と Vuetify を組み合わせることで作業効率が上がりいい感じに爆速で開発できるようになります。
+JavaScript を使って文字をカウントするアプリを作るサンプルは多くありますが、どうしてもコードが長くなってしまい見にくいと感じることがありました。JavaScript フレームワークである Vue.js を使うことでリアクティブなデータ表示ができます。Vue.js のもつリアクティブを使うことでより簡単に記述できます。しかしテキストエリアの下に文字を表示するだけでは物足りないので、デザインもモダンなデザインでおしゃれにしてみました。今回はサンプルとして Twitter 風の文字カウンターアプリを Vuetify を使って作ってみました。少しのコードで画面のデザインが一気に変わっていくので作っていて楽しいです。VueCLI と Vuetify を組み合わせることで作業効率が上がりいい感じに爆速で開発できるようになります。
 
 簡単な記述でコンポーネントを使ってアプリを構築できることに重点をおいて作成しました。即興で作成したものなのでこれがベストプラクティスではない可能性もあります。
 
 # 完成イメージ
+
+コードはこちらで公開しています。
 
 # 前提条件
 
@@ -26,7 +28,7 @@ JavaScript を使って文字をカウントするアプリを作るサンプル
 
 # プロジェクト作成
 
-VueCLI を使いおなじみの `vue create` で Vue のプロジェクトを作成します。
+VueCLI を使い `vue createコマンド` で Vue のプロジェクトを作成します。
 
 ```shell
 $ vue create counter-app
@@ -64,7 +66,7 @@ $ npm run serve
 上記の npm コマンドで開発サーバーが立ち上がります。
 開発サーバーには http://localhost:8080 でアクセスできます。
 ブラウザでアクセスし、以下の画面が表示されれば Vue のプロジェクトが正しく生成されています。
-![Vue Welcome Page](https://storage.googleapis.com/zenn-user-upload/1jx3hff6qgxmo3ldt0jvzvkpn1lt)
+![Vue Welcome Page](https://i.gyazo.com/a429bbefb1da368638041c283f85b0b5.png)
 上の Welcome ページで表示されているテンプレートは src ディレクトリ内の App.vue ファイルに記述されている内容になります。
 
 ```vue:src/App.vue
@@ -99,7 +101,7 @@ export default {
 ```
 
 ソースを見ると、Helloworld.vue というコンポーネントをインポートして表示しているのがわかります。
-見慣れない独特な書き方になっていますが、これは単一コンポーネントファイルと呼ばれ、最終的にビルドされるときに Html へと変換されて表示されるものとなります。`<template>` の中に HTML やコンポーネントを配置できます。`<script>` はおなじみの JabvaScript を記述する場所、`<style>` も CSS などのスタイルを定義する場所となります。
+見慣れない独特な書き方になっていますが、これは単一コンポーネントファイルと呼ばれ、最終的にビルドされるときに Html へと変換されて表示されるものとなります。`<template>` の中に HTML やコンポーネントを配置できます。`<script>` はおなじみの JavaScript を記述する場所、`<style>` も CSS などのスタイルを定義する場所となります。
 
 次に、UI ライブラリである Vuetify を導入していきます。
 
@@ -127,7 +129,7 @@ $ vue add vuetify
 これで Vuetify を使う準備ができました。
 
 この状態でサーバーを立ち上げアクセスすると Vuetify の Welcome ページに置き換わっているのがわかります。
-![Vuetify Welcom Page](https://storage.googleapis.com/zenn-user-upload/bjjgmmfm5ekv34vmqd6p08cfslsr)
+![Vuetify Welcom Page](https://i.gyazo.com/cf101a6053a7361e3855dea124e4043d.png)
 
 このページのソースを確認しようと `App.vue`を開くと中身が Vuetify のものに変わっています。
 
@@ -238,8 +240,9 @@ export default {
 </template>
 ```
 
-このような表示になります。
-完成版としては、テキストエリアのしたに配置した `◯文字` の部分に入力できる残り文字を表示したいので、どうするかを考えます。
+ブラウザ上で確認すると以下のようになります。
+![初期](https://i.gyazo.com/58d58ae4724c22ac29db0cbdd2ce51be.png)
+最終的に、テキストエリアのしたに配置した `◯文字` へ入力できる残り文字を表示したいです。
 Vue.js にはリアクティブに値を書き換える機能があり、その機能を使うことで簡単にリアルタイムで値を変更したり、計算できます。
 今回は文字を動的に変更したいので以下のように書き換えます。
 
@@ -249,7 +252,7 @@ Vue.js にはリアクティブに値を書き換える機能があり、その�
     <v-main>
       <h1>文字カウンター for Twitter</h1>
       <p>文字数をカウントします。ツイート前の文字数確認に便利です。</p>
-      <textarea v-model="tweet"></textarea>
+      <textarea v-model.trim="tweet"></textarea>
       <h2>あと{{ 140 - tweet.length }}文字入力できます。</h2>
       <button type="button">ツイートしてみる？</button>
     </v-main>
@@ -270,10 +273,140 @@ export default {
 ```
 
 こうすることでテキストエリアに文字が入力されたときに、data()の中にある tweet プロパティをもとに文字数を計算してくれるようになります。
-`<h2>`の中の文章に `{{ }}` という見慣れない記法が含まれていますが、これは `マスタッシュ記法` と呼ばれ、定義した data の変数をコンポーネントやテンプレートに埋め込んで表示できる Vue の特徴的な記法になります。Twitter では 140 文字の制限があるため、残り入力可能な文字数を求めるために、`{{ 140 - tweet.length }}` としています。変数名.length とすることで入力されている文字数を取得できます。入力されている文字数はリアルタイムで tweet に反映されるため、リアルタイムに残り文字数を計算してくれるようになります。
+`<h2>`の中の文章に `{{ }}` という見慣れない記法が含まれていますが、これは `マスタッシュ記法` と呼ばれ、定義した data の変数をコンポーネントやテンプレートに埋め込んで表示できる Vue の特徴的な記法になります。Twitter では 140 文字の制限があるため、残り入力可能な文字数を求めるために、`{{ 140 - tweet.length }}` としています。変数名.length とすることで入力されている文字数を取得できます。入力されている文字数はリアルタイムで tweet に反映されるため、リアルタイムに残り文字数を計算してくれるようになります。`v-model` に対して `.trim` とすることで空白を取り除くことができます。
 
-ここまでで機能の基礎部分が完成したので、今回導入した Vuetify を使って画面をリッチに仕上げていきます。
+ここまでで基礎部分が完成したので、今回導入した Vuetify を使ってスタイリングしていきます。
 
 # Vuetify コンポーネントで置き換える
 
-Vuetify の基本として、template 内では一番親要素に `<v-app>` メインとなるコンテンツに `<v-main>`を使います。
+Vuetify の基本として、template 内では一番親要素に `<v-app>` メインとなるコンテンツに `<v-main>`を使います。この中にページ固有のコンテンツを配置していきます。Vuetify にはテキストエリアコンポーネントがあります。ドキュメントは[こちら](https://vuetifyjs.com/en/components/textareas/#usage)になります。Vuetify のドキュメントにはサンプルのコードに加えて、Prop(プロパティ)がまとめられているので便利です。それでは先程の `<textarea>` をテキストエリアコンポーネントで置き換えていきます。
+
+```vue:src/App.vue
+ <v-textarea
+      v-model.trim="tweet">
+  </v-textarea>
+```
+
+このようにして保存するとテキストエリアが画面全体に広がり、少しおしゃれなテキストエリアになります。コンポーネントを置き換えても先程のテキストエリアと同じように動作するのがわかります。ここに Prop(プロパティ) を追加してテキストエリアを拡張していきます。完成形がこちらになります。
+
+```vue:src/App.vue
+<v-textarea
+  dense
+  single-line
+  v-model.trim="tweet"
+  background-color="#ffffff"
+  rounded
+  outlined
+  rows="10"
+  required
+  label="いまどうしてる？"
+  maxlength="140"
+  class="mx-10"
+></v-textarea>
+```
+
+上のようにすることでテキストエリアが以下のようになります。
+
+![](https://i.gyazo.com/c840e6396d29ad2b645152ca2205cc49.png)
+
+これだけで見た目がかなり変わり、よりおしゃれになりました。
+
+ここでは背景色を白にして最大文字数を 140 文字にしています。`rounded` や `dense`、`outlined`をつけることでテキストエリアのスタイルを変えることができます。ドキュメントを見ながらどのように変わるのかを見るとより理解が深まります。色々と試してみてください。ここで背景色も変え全体のスタイルを適用します。ここでは背景色を Twitter のロゴの色と同じにし、コンテンツを中央寄せします。App.vue 内で `#app` に対してスタイルを設定することで全体に適用されます。
+
+```vue:src/App.vue
+<style>
+#app {
+  text-align: center;
+  background-color: #00aced;
+}
+</style>
+```
+
+## スタイルを簡単に設定する
+
+ここまでくるとかなり Web アプリっぽくなってきました。Vuetify ではスタイルを class で簡単に指定できる機能があり、スタイルシートを記述せずともスタイルを調整できます。背景を青にしたことで文字が少し見にくくなってしまったので文字色を白にしてみます。要素に対して `class="white--text"` とすると文字色を白にできます。ハイフンが 2 つ入るのに注意です。色以外にも class で指定できるスタイルは多くあるため、ドキュメントを参考に調整してみてください。ここでは色に合わせてマージンやパディングも同時に設定できます。これは `Spacing-Helper-Class` と呼ばれ、margin を m、padding を p としてディレクションを設定することで要素に反映されます。
+
+指定できるディレクションは以下のとおりです。
+
+| ディレクション | 方向              | サイズ |
+| -------------- | ----------------- | ------ |
+| t              | top (上方向)      | 0-12   |
+| b              | bottom (下方向)   | 0-12   |
+| l              | left (左方向)     | 0-12   |
+| r              | right (右方向)    | 0-12   |
+| x              | left&right (左右) | 0-12   |
+| y              | top&bottom (上下) | 0-12   |
+| x              | all (全方向)      | 0-12   |
+
+サイズは、1 にたいして 4px ずつ適用されます。要素をくっつけたい場合は 0 を指定することで実現できます。
+
+以上を踏まえて文字要素のスタイルを微調整していきます。
+
+現在の状態では、要素が全体的に上の方に寄っていて、画面下の空白が気になるため、`<v-main>` を `<v-container fill-height>`で囲み上下に均等の幅を持たせて中央揃えにします。
+
+文字の色を変えて、スタイルを調整を調整すると以下のようになります。
+![スタイル後の画面](https://i.gyazo.com/4b0270b6c1e6c9fb22635457c6126037.png)
+
+ここまでで文字数をカウントする機能とスタイリングができました。
+
+## Twitter へリンクするボタンを作成する
+
+付加機能として Twitter へアクセスできるボタンを配置してみます。API を使うことで Twitter へツイートさせることもできるようですが、今回はツイートを行わず、 Twitter のホームへリンクさせるボタンとして作成します。
+
+引き続き App.vue に記述していきます。Vuetify には [`v-btn`](https://vuetifyjs.com/ja/components/buttons/)というボタンコンポーネントも用意されているのでこちらを使っていきます。今回は `v-btn` を使い以下のようにしました。
+
+```vue:src/App.vue
+<v-btn
+  elevation="6"
+  color="white"
+  x-large
+  href="https://twitter.com/"
+  target="blank"
+  class="mt-4">ツイートしてみる？</v-btn>
+```
+
+上のボタンをブラウザで見ると以下のようになります。
+
+ボタンの配置ができました。上の記述だけで少し立体感のあるボタンが作成されました。href 対して Twitter の URL 、target="blank" としているため、ボタンをクリックすると Twitter が別タブで開かれます。ツイートする機能はないのであくまでツイートを促すだけのボタンなります。メインの機能は文字数のカウンターのため、ツイートボタンはあくまでオマケ的な位置づけです。
+
+## Twitter のブランドロゴ表示する
+
+ここまでで一通りの機能ができました。しかしこれだけだと Twitter の文字カウンターというのが少しひと目でわかりにくいのでタイトルの横に Twitter のアイコンを表示してみます。Vuetify にはアイコンを便利に扱えるコンポーネントが用意されているため、活用します。
+今回は Font Awesome にある[Twitter アイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
+
+Vuetify で Font Awesome を利用するためには、あらかじめ Font Awesome のアイコンをインストールする必要があります。
+ターミナル上で npm を使いインストールしていきます。
+
+```shell
+npm install  @fortawesome/fontawesome-svg-core
+npm install  @fortawesome/free-brands-svg-icons
+npm install  @fortawesome/vue-fontawesome
+```
+
+インストールが完了したら `src/main.js'に以下の記述をしてアイコンをインポートします。
+
+```vue:src/main.js
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faTwitter)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+```
+
+今回は Twitter のアイコンを使いたいため、インストールした `free-brands-svg-icons` から Twitter のブランドアイコン `faTwitter` をインポートしてライブラリに追加しています。`FontAwesomeIconコンポーネント`を定義して App.vue で呼び出せるようにします。
+
+最後に App.vue の方で FontAwesomeIcon コンポーネントを使いタイトルの横に Twitter のアイコンを描画します。
+
+```vue:src/App.vue
+<h1 class="white--text my-8">文字カウンター for Twitter <font-awesome-icon :icon="['fab','twitter']"/></h1>
+```
+
+以上のようにすることでタイトルの横に Twitter のアイコンが表示されるようになります。これで Twitter らしさを出すことができました。
+
+# さいごに
+
+今回は、Vuetify を使って Twitter の文字カウントアプリを作成しました。Vuetify は Vue 用に作られた UI フレームワークライブラリということもあり、VueCLI と組み合わせることで爆速な開発が実現できます。Vue.js は公式ドキュメントがわかりやすい日本語になっていたり、コミュニティが活発なため情報を手に入れやすいです。Vue.js の基本を理解したあと VueCLI などのツールを使って爆速な開発環境を簡単に作ることができるのも魅力の 1 つなので、今回のようなアプリを通して学ぶのもおすすめです。
+
+参考になれば幸いです。最後まで読んでいただきありがとうございました。
