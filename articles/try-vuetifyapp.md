@@ -1,21 +1,26 @@
 ---
-title: "[Vuetify]即興で Tweet文字カウンターを作る"
-emoji: "💭"
+title: "[Vuetify]即興でツイート文字数カウンターを作る"
+emoji: "🎨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Vue", "Vuetify", "初心者", "個人開発"]
-published: false
+published: true
 ---
+
+この記事は[Vue Advent Calendar 2020](https://qiita.com/advent-calendar/2020/vue)へ投稿したものになります。
 
 # はじめに
 
-Twitter では 1 回のツイートに文字制限があります。最大 140 文字でツイートするというのは有名な制約でもあり、Twitter の特徴です。
-JavaScript を使って文字をカウントするアプリを作るサンプルは多くありますが、どうしてもコードが長くなってしまい見にくいと感じることがありました。JavaScript フレームワークである Vue.js を使うことでリアクティブなデータ表示ができます。Vue.js のもつリアクティブを使うことでより簡単に記述できます。しかしテキストエリアの下に文字を表示するだけでは物足りないので、デザインもモダンなデザインでおしゃれにしてみました。今回はサンプルとして Twitter 風の文字カウンターアプリを Vuetify を使って作ってみました。少しのコードで画面のデザインが一気に変わっていくので作っていて楽しいです。VueCLI と Vuetify を組み合わせることで作業効率が上がりいい感じに爆速で開発できるようになります。
+Twitter では 1 回のツイートに文字制限があります。最大 140 文字でツイートのが Twitter の特徴でもあり特徴的なところです。
+JavaScript を使って文字をカウントするアプリを作るサンプルは多くありますが、どうしてもコードが長くなってしまい見にくいと感じることがありました。JavaScript フレームワークである Vue.js を使うことでリアクティブなデータ表示ができます。Vue.js のリアクティブシステムを使うことでより簡単に記述できます。しかしテキストエリアの下に文字を表示するだけでは物足りないので、デザインもモダンなデザインでおしゃれにしてみました。今回はサンプルとして Twitter 風の文字カウンターアプリを Vuetify を使って作ってみました。少しのコードで画面のデザインが一気に変わっていくので作っていて楽しいです。VueCLI と Vuetify を組み合わせることで作業効率が上がりいい感じに爆速で開発できるようになります。
 
-簡単な記述でコンポーネントを使ってアプリを構築できることに重点をおいて作成しました。即興で作成したものなのでこれがベストプラクティスではない可能性もあります。
+簡単な記述でコンポーネントを使ってアプリを構築できることに重点をおいて作成しました。Vue.js と Vuetify を使って初めてアプリを作る人、Vuetify がどういうものかを知りたい人向けに作成しているため、これがベストプラクティスではない可能性もあります。あらかじめご了承ください。
 
 # 完成イメージ
 
+![完成イメージ](https://i.gyazo.com/13a9f3438c632fafead61860ee382092.gif)
+テキストエリアに文字を入力すると下のカウンターが動的に変化します。
 コードはこちらで公開しています。
+https://github.com/ryu-461/tweet-counter
 
 # 前提条件
 
@@ -65,9 +70,10 @@ $ npm run serve
 
 上記の npm コマンドで開発サーバーが立ち上がります。
 開発サーバーには http://localhost:8080 でアクセスできます。
-ブラウザでアクセスし、以下の画面が表示されれば Vue のプロジェクトが正しく生成されています。
-![Vue Welcome Page](https://i.gyazo.com/a429bbefb1da368638041c283f85b0b5.png)
-上の Welcome ページで表示されているテンプレートは src ディレクトリ内の App.vue ファイルに記述されている内容になります。
+
+ブラウザでアクセスし、以下の画面が表示されればプロジェクトが正しく生成されています。
+![Vue Welcome Page](https://storage.googleapis.com/zenn-user-upload/587mvjvowie18447ki2arjz89ldi)
+上の Welcome ページで表示されているテンプレートは src ディレクトリ内の `App.vue` ファイルに記述されている内容になります。
 
 ```vue:src/App.vue
 <template>
@@ -128,10 +134,10 @@ $ vue add vuetify
 
 これで Vuetify を使う準備ができました。
 
-この状態でサーバーを立ち上げアクセスすると Vuetify の Welcome ページに置き換わっているのがわかります。
-![Vuetify Welcom Page](https://i.gyazo.com/cf101a6053a7361e3855dea124e4043d.png)
+この状態でサーバーを立ち上げアクセスすると Vue.js App の Welcome ページから Vuetify の Welcome ページに置き換わっているのがわかります。
+![Vuetify Welcom Page](https://storage.googleapis.com/zenn-user-upload/rx00t2tqd9nbeooi7m7ta3yiultz)
 
-このページのソースを確認しようと `App.vue`を開くと中身が Vuetify のものに変わっています。
+`App.vue`を開くと中身が Vuetify のものに変わっています。
 
 ```vue:src/App.vue
 <template>
@@ -196,7 +202,7 @@ export default {
 </script>
 ```
 
-ぱっと見るととても複雑に見えますが、`<template>`の中には Vuetify ですでに定義されているコンポーネントを配置して表示しているものになります。実際にコーディングしたほうが理解しやすいので、とりあえずページをまっさらな状態に戻して進めます。
+ぱっと見るととても複雑に見えますが、`<template>`の中に Vuetify で定義されているコンポーネントを配置して表示しているものになります。実際にコーディングしたほうが理解しやすいので、とりあえずページをまっさらな状態に戻して進めます。
 `App.vue`を以下のように書き換えてサーバーで確認します。
 
 ```vue:src/App.vue
@@ -220,7 +226,7 @@ export default {
 
 ```
 
-これで http://localhost:8080 にアクセスしたとき表示されていたページが消えてなにもないページが表示されるようになります。
+これで http://localhost:8080 にアクセスしたとき、なにもないページが表示されるようになります。
 
 # アプリの機能を作る
 
@@ -241,7 +247,7 @@ export default {
 ```
 
 ブラウザ上で確認すると以下のようになります。
-![初期](https://i.gyazo.com/58d58ae4724c22ac29db0cbdd2ce51be.png)
+![初期状態](https://storage.googleapis.com/zenn-user-upload/3nj9bwhuxgcc5j6r6dsc95fm6m7e)
 最終的に、テキストエリアのしたに配置した `◯文字` へ入力できる残り文字を表示したいです。
 Vue.js にはリアクティブに値を書き換える機能があり、その機能を使うことで簡単にリアルタイムで値を変更したり、計算できます。
 今回は文字を動的に変更したいので以下のように書き換えます。
@@ -254,7 +260,6 @@ Vue.js にはリアクティブに値を書き換える機能があり、その�
       <p>文字数をカウントします。ツイート前の文字数確認に便利です。</p>
       <textarea v-model.trim="tweet"></textarea>
       <h2>あと{{ 140 - tweet.length }}文字入力できます。</h2>
-      <button type="button">ツイートしてみる？</button>
     </v-main>
   </v-app>
 </template>
@@ -287,7 +292,7 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
   </v-textarea>
 ```
 
-このようにして保存するとテキストエリアが画面全体に広がり、少しおしゃれなテキストエリアになります。コンポーネントを置き換えても先程のテキストエリアと同じように動作するのがわかります。ここに Prop(プロパティ) を追加してテキストエリアを拡張していきます。完成形がこちらになります。
+このようにして保存するとテキストエリアが画面全体に広がり、少しおしゃれなテキストエリアになります。コンポーネントを置き換えても先程のテキストエリアと同じように動作するのがわかります。ここに Prop(プロパティ) を追加してテキストエリアを拡張していきます。
 
 ```vue:src/App.vue
 <v-textarea
@@ -307,7 +312,7 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
 
 上のようにすることでテキストエリアが以下のようになります。
 
-![](https://i.gyazo.com/c840e6396d29ad2b645152ca2205cc49.png)
+![](https://storage.googleapis.com/zenn-user-upload/vhw7kzwem01eo7t4znxaiuiz8o49)
 
 これだけで見た目がかなり変わり、よりおしゃれになりました。
 
@@ -345,7 +350,7 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
 現在の状態では、要素が全体的に上の方に寄っていて、画面下の空白が気になるため、`<v-main>` を `<v-container fill-height>`で囲み上下に均等の幅を持たせて中央揃えにします。
 
 文字の色を変えて、スタイルを調整を調整すると以下のようになります。
-![スタイル後の画面](https://i.gyazo.com/4b0270b6c1e6c9fb22635457c6126037.png)
+![スタイル後の画面](https://storage.googleapis.com/zenn-user-upload/2h735x9g2acw4afxqwef9y0sd8o0)
 
 ここまでで文字数をカウントする機能とスタイリングができました。
 
@@ -365,16 +370,17 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
   class="mt-4">ツイートしてみる？</v-btn>
 ```
 
+![v-btn追加後](https://storage.googleapis.com/zenn-user-upload/18an71n21bf6v7orxlz5mvhvlm42)
 上のボタンをブラウザで見ると以下のようになります。
 
 ボタンの配置ができました。上の記述だけで少し立体感のあるボタンが作成されました。href 対して Twitter の URL 、target="blank" としているため、ボタンをクリックすると Twitter が別タブで開かれます。ツイートする機能はないのであくまでツイートを促すだけのボタンなります。メインの機能は文字数のカウンターのため、ツイートボタンはあくまでオマケ的な位置づけです。
 
-## Twitter のブランドロゴ表示する
+## Twitter のブランドアイコンを表示する
 
 ここまでで一通りの機能ができました。しかしこれだけだと Twitter の文字カウンターというのが少しひと目でわかりにくいのでタイトルの横に Twitter のアイコンを表示してみます。Vuetify にはアイコンを便利に扱えるコンポーネントが用意されているため、活用します。
-今回は Font Awesome にある[Twitter アイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
+今回は FontAwesome にある[Twitter アイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
 
-Vuetify で Font Awesome を利用するためには、あらかじめ Font Awesome のアイコンをインストールする必要があります。
+Vuetify で FontAwesome を利用するためには、あらかじめ FontAwesome のアイコンをインストールする必要があります。
 ターミナル上で npm を使いインストールしていきます。
 
 ```shell
@@ -383,9 +389,9 @@ npm install  @fortawesome/free-brands-svg-icons
 npm install  @fortawesome/vue-fontawesome
 ```
 
-インストールが完了したら `src/main.js'に以下の記述をしてアイコンをインポートします。
+インストールが完了したら `src/main.js` に以下の記述をしてアイコンをインポートします。
 
-```vue:src/main.js
+```javascript:src/main.js
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -397,16 +403,25 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 今回は Twitter のアイコンを使いたいため、インストールした `free-brands-svg-icons` から Twitter のブランドアイコン `faTwitter` をインポートしてライブラリに追加しています。`FontAwesomeIconコンポーネント`を定義して App.vue で呼び出せるようにします。
 
-最後に App.vue の方で FontAwesomeIcon コンポーネントを使いタイトルの横に Twitter のアイコンを描画します。
+最後に `App.vue` の方で FontAwesomeIcon コンポーネントを使いタイトルの横に Twitter のアイコンを描画します。
 
 ```vue:src/App.vue
 <h1 class="white--text my-8">文字カウンター for Twitter <font-awesome-icon :icon="['fab','twitter']"/></h1>
 ```
 
 以上のようにすることでタイトルの横に Twitter のアイコンが表示されるようになります。これで Twitter らしさを出すことができました。
+![完成後の画像](https://storage.googleapis.com/zenn-user-upload/ma3bdad2chposz072xv4xzo4ka9w)
 
 # さいごに
 
-今回は、Vuetify を使って Twitter の文字カウントアプリを作成しました。Vuetify は Vue 用に作られた UI フレームワークライブラリということもあり、VueCLI と組み合わせることで爆速な開発が実現できます。Vue.js は公式ドキュメントがわかりやすい日本語になっていたり、コミュニティが活発なため情報を手に入れやすいです。Vue.js の基本を理解したあと VueCLI などのツールを使って爆速な開発環境を簡単に作ることができるのも魅力の 1 つなので、今回のようなアプリを通して学ぶのもおすすめです。
+今回は、Vuetify を使って Twitter 向け文字数カウントアプリを作成しました。Vuetify は Vue 用に作られた UI フレームワークライブラリということもあり、VueCLI と組み合わせることで爆速な開発が実現できます。Vue.js は公式ドキュメントがわかりやすい日本語になっていたり、コミュニティが活発なため情報を手に入れやすいです。Vue.js の基本を理解したあと VueCLI などのツールを使って爆速な開発環境を簡単に作ることができるのも魅力の 1 つなので、今回のようなアプリを通して学ぶのもおすすめです。
 
-参考になれば幸いです。最後まで読んでいただきありがとうございました。
+Vue.js を使って初めてアプリを作る人の参考になれば幸いです。最後まで読んでいただきありがとうございました。
+
+### 参考
+
+[Vuetify に入門する](https://qiita.com/azukiazusa/items/16ebffd361af8fa58333)
+
+[レイアウト微調整に便利な Spacing Helper (Vuetify) を使ってみる](https://riotz.works/articles/lopburny/2019/08/12/arrange-vuetify-components-with-spacing-helper/)
+
+[Font awesome を Vue.js で使ってみよう](https://qiita.com/kurararara/items/d76776a7dc2d763a068b)
