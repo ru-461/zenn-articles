@@ -1,5 +1,5 @@
 ---
-title: "ブラウザ - タブ管理のススメ"
+title: "ブラウザ - タブ管理のすゝめ"
 emoji: "🚪"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["chrome", "拡張機能", "ツール", "作業効率化"]
