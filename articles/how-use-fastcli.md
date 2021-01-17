@@ -21,21 +21,21 @@ https://fast.com/ja/
 
 node.js (バージョン 8 以降)がインストールされている場合、npm や Yarn などのパッケージマネージャーから簡単に導入できます。以下のコマンドをターミナルにて実行しグローバルにインストールすることで使えるようになります。
 
-### npm でインストール
+## npm でインストール
 
 ```shell
 npm install --global fast-cli
 ```
 
-### Yarn でインストール
+## Yarn でインストール
 
 ```shell
 yarn global add fast-cli
 ```
 
-## 実行してみる
+# 実行
 
-### ダウンロード速度のみの計測
+## ダウンロード速度の計測
 
 ```shell
 fast
@@ -43,7 +43,7 @@ fast
 
 上のコマンドで回線のダウンロードの速度計測が始まります。`--upload , -u` オプションを付けないとダウンロードのみの計測となります。
 
-### ダウンロードとアップロード速度を計測
+## ダウンロードとアップロード速度を計測
 
 ```shell
 fast --upload
@@ -51,7 +51,7 @@ fast --upload
 
 ダウンロード速度とアップロード速度を計測します。
 
-### ダウンロード速度を計測して一行表示
+## ダウンロード速度を計測して結果を一行表示
 
 ```shell
 fast --single-line
@@ -59,7 +59,7 @@ fast --single-line
 
 一行でシンプルにダウンロード速度を計測します。
 
-### fast-cli のヘルプを表示
+## fast-cli のヘルプを表示
 
 ```shell
 fast --help
@@ -75,7 +75,7 @@ fast --help
 
 以上、ここまで読んでいただきありがとうございました。
 
-## 参考
+# 参考
 
 [sindresorhus / fast-cli](https://github.com/sindresorhus/fast-cli)
 [回線速度のテストができる「fast」コマンドが便利だった](https://qiita.com/suin/items/8398f0b07299a3cc194f)
