@@ -1,69 +1,88 @@
 ---
-title: "VScode内でNotionを使う[VScode Notion]"
+title: "VSCodeでNotionを使う [VSCode Notion]"
 emoji: "💎"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["notion", "vscode"]
+topics: ["notion", "vscode", "ツール"]
 published: false
 ---
 
 # はじめに
 
-私は、普段のメモの管理やデータを「Notion」と呼ばれるオンラインノートを使って一元管理しています。使用例として以前投稿した[こちら](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)の記事内でプログラミングノートの作成について書いていますのでよろしければご覧ください。Notion を自分専用の Wiki のように活用し、一箇所で必要な情報を取得できるようにすることで生産性の向上に繋がります。
+私は普段のメモの管理やタスクを「Notion」と呼ばれるオンラインノートアプリを使って一元管理しています。
+Notion を自分専用の Wiki のように活用し、一箇所で必要な情報を取得できるようにすることで生産性の向上に繋がります。
 
-今回は VScode 内で Notion を使うことができる VScode Notion という拡張機能を知ったため、導入してみました。
+以前投稿した[こちら](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)の記事で Notion をプログラミングノートとして運用する方法について書いていますのでよろしければ合わせてご覧ください。
 
-# Notion の課題
+今回は VSCode 内で Notion を使うことができる `VSCode Notion` という拡張機能をご紹介します。
+
+# Notion の課題点
 
 私は普段主にプログラミングノートとして学んだことをまとめることや、Zenn で記事を書くときのアイデア出し、タスク管理として使っています。
 
-開発をするとき、記事を執筆するときはローカルのエディタとして Microsoft が開発している Visual Studio Code (VScode)というエディタを愛用しているのですが、Notion を開いて情報を見ながらのコーディングや、記事の執筆をする機会が多いです。そんなときは Notion のアプリやブラウザで Notion を開いて複数のウインドウをまたぎながら作業することになるのですが、この作業が多くなるほどウインドウの切り替えや視線の移動が多くなり大変に感じることが多くありました。
+開発をするとき、記事を執筆するときはローカルのエディタとして Microsoft が開発している Visual Studio Code (VSCode)というエディタを愛用しているのですが、Notion を開いて情報を見ながらのコーディングや、記事の執筆をする機会が多いです。そんなときは Notion のアプリやブラウザで Notion を開いて複数のウインドウをまたぎながら作業することになるのですが、この作業が多くなるほどウインドウの切り替えや視線の移動が多くなり大変に感じることが多くありました。
 
-# 「VScode Notion」とは何者か？
+# 「VSCode Notion」とは何者か？
 
-VScode に導入して使用できる拡張機能になります。
+VSCode に導入して使用できる拡張機能になります。
 
-https://marketplace.visualstudio.com/items?itemName=frenco.vscode-notion
+https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 
-拡張機能はすべて英語で表記されているため、難しそうに思えますが、機能としてはタブとして VScode 内で notion を開くことを可能にする拡張機能となります。
-notion ではまだ公式に正式 API が提供されていないため、拡張機能の説明には `unofficial API (非公式 Api)`を使用するとの記述があります。そのため認証機能などは使えず、機能が制限されるとのことですが、今後正式な API の提供に伴い切り替えていくとの記述もあり今後に期待できそうな拡張機能です。
+拡張機能はすべて英語で表記されているため、難しそうに思えますが、機能としてはタブとして VSCode 内で Notion を開くことを可能にする拡張機能となります。
+更新の履歴を見てみると 2021 年の 1 月 10 日に初期バージョンがリリースされたばかりの拡張機能であることがわかります。
+Notion ではまだ公式に正式な API が提供されていないため、拡張機能の説明には `unofficial API (非公式 Api)`を使用するとの記述があります。そのため認証機能などは使えず、いくつかの機能が制限されるとのことですが、今後正式な API の提供に伴い切り替えていくとの記述があり今後に期待できそうな拡張機能です。
 
 :::message
 非公式 API を使用している現在段階では、Notion で作成したページの閲覧だけできる状態となっています。編集をするなどの操作が制限されているため、しばらくは閲覧のみの拡張機能として割り切って使う必要がありそうです。
 :::
 
-## VScode Notion の導入
+## VSCode Notion の導入
 
-それでは、VScode に拡張機能を導入して Notion を開けるようにしていきます。
+それでは、VSCode に拡張機能を導入して Notion を開けるようにしていきます。
 
-拡張機能の検索ウインドウに `notion` といれることで「VSCode Notion」がヒットするのでインストールしていきます。
+拡張機能の検索ウインドウに `Notion` といれることで「VSCode Notion」がヒットするのでインストールしていきます。
 ![](https://storage.googleapis.com/zenn-user-upload/6i6uzl1kglf3dqx7d27trlev3v5m)
 
 インストールが完了するとステータスがインストール済みになり、インストール済みの拡張機能に追加されます。
 インストールすることで自動的に拡張機能が有効になり、左のメニューに Notion のアイコンが表示されます。
 
-VSCode Notion を開くと notion の開きたいページの URL を入力するように求められます。
+VSCode Notion を開くと RECENTS(最近使用したページ)と BOOKMARKS(ブックマークしたページ)の 2 つからページを選ぶことができます。
+
+初めて使用するときはまだページを開いていないため、 Notion ページを開くための `Open A Page`ボタンが表示されています。
 ![](https://storage.googleapis.com/zenn-user-upload/xcvqs9sr5jdgobphsr9t3i9tmgdf)
 
-ここに開きたい Notion のページへのアドレスを入れることで開くことができるのですが、デフォルトの状態では `Couldn't load the data from API.` と api エラーが出て開くことができません。
+ボタンをクリックしてフォームへ Notion のページへのアドレスを入れると指定したページを開くことができるのですが、デフォルトの状態では `Couldn't load the data from API.` と api エラーが出て開くことができません。
+Notion のページを開くためには**アクセストークンを取得して設定**する必要があります。
+デフォルトの状態ではアクセストークンが空になっているため以下の初期設定が必要となります。
 
 ## 初期設定
 
-API エラーで開くことができないため、初期設定が必要となります。拡張機能の設定画面を開きます。VScode 設定画面の検索ウインドウに `vscode notion` と入れることで VSCode Notion の拡張機能の設定を探すことができます。
+VSCode の設定画面を開きます。設定画面は Windows であれば `ctrl + ,`　 Mac なら `⌘ + ,`で開くことができます。VSCode 設定画面の検索ウインドウに `VSCode Notion` と入れることで VSCode Notion の拡張機能の設定を探すことができます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/f11qaiyywgrk22clorltljb788n7)
 
-API エラーを解消するためには、下にある `VScode Notion Access Token` のフォームに Notion のアクセストークンを入力する必要があります。
+API エラーを解消するためには、下にある `VSCode Notion Access Token` のフォームに取得した Notion のアクセストークンを入力する必要があります。
 
 ### Notion のアクセストークンの取得
 
-Notion のアクセストークンを取得します。ブラウザにて Notion のページにアクセスし、DeveloperTools を起動します。
-`Application` というタブの中に `token_v2`という項目があるため、値をコピーします。これが自分の Notion アクセストークンとなります。
+Notion のアクセストークンを取得します。ブラウザにて Notion のページにアクセスし、DevTools を起動します。
 
-このアクセストークンは拡張機能を使うために必要となるので、慎重に管理をお願いします。
+以下 Chrome の画面で説明します。
 
-取得した Notion アクセストークンを `VScode Notion Access Token` の項目にそのままペーストします。
+`Application` というタブの中に `token_v2`という項目があるため、項目内の値をコピーします。
+これが自分の Notion アクセストークンとなります。
 
-アクセストークンが正常に入力されていると `Open A page` から Notion のページリンクを入力することで VSCode 内で指定した Notion のページが開けるようになります。
+![](https://storage.googleapis.com/zenn-user-upload/vg3rhxbtu5tnwg1582frn4iss0q1)
+
+アクセストークンは長い文字列になっており、拡張機能を使うために必ず必要となるので、慎重に管理をお願いします。
+
+取得した Notion アクセストークンを設定画面の `VSCode Notion Access Token` にそのままペーストします。
+
+![](https://storage.googleapis.com/zenn-user-upload/g6yakw9g75hx8eh6zjssg38fu5q2)
+_赤枠の中にそのままペースト_
+
+これで初期設定が完了となります。
+
+拡張機能の設定にアクセストークンが正常に入力されていると `Open A page` から Notion を開けるようになります。ページリンクを入力することで指定した Notion のページが VSCode 内で開けます。
 
 ## ドキュメントの閲覧
 
@@ -81,7 +100,7 @@ _備忘録メモ - Notion 内のコードブロックもうまく表示できて
 
 ## 使ってみて気になった点
 
-トップページをブラウザで見たものが以下になります。
+トップページを**ブラウザ**で見たものが以下になります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/vi6278kahmdn2188fjqxuvuwiozy)
 
@@ -96,9 +115,9 @@ _備忘録メモ - Notion 内のコードブロックもうまく表示できて
 
 # おわりに
 
-VScode で Notion を開くことができるようになることで、Notion で作成したページを見ながらのコーディングが効率化できると感じました。
-しかし、非公式 API を使っていることで、機能の制限、不具合なども目立っている印象を受けました。これから公式の API が提供される中で、公式 API に切り替えていくなかでより便利に使えるようになるのを期待したいです。
+VSCode で Notion を開くことができるようになることで、Notion で作成したページを見ながらのコーディングが効率化できると感じました。
+しかし、非公式 API を使っていることでいくつかの機能が制限されていたり、不具合なども目立っている印象を受けました。これから公式の API が提供される中でより便利になっていくものと思われます。
 
-今後も拡張機能を使っていく中で更新などがありましたら記事の内容も最新の情報に更新していきます。
+まだリリースされてまもなく、開発が盛んに行われているため、今後どんどんアップデートされることを期待しましょう。
 
 以上、ここまで読んでいただきありがとうございました。
