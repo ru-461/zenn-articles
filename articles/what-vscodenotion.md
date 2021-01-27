@@ -39,13 +39,13 @@ Notion ではまだ公式に正式な API が提供されていないため、�
 
 それでは、VSCode に拡張機能を導入して Notion を開けるようにしていきます。
 
-拡張機能の検索ウインドウに `Notion` といれることで「VSCode Notion」がヒットするのでインストールしていきます。
+拡張機能の検索ウインドウに `notion` といれることで「VSCode Notion」がヒットするのでインストールしていきます。
 ![](https://storage.googleapis.com/zenn-user-upload/6i6uzl1kglf3dqx7d27trlev3v5m)
 
 インストールが完了するとステータスがインストール済みになり、インストール済みの拡張機能に追加されます。
 インストールすることで自動的に拡張機能が有効になり、左のメニューに Notion のアイコンが表示されます。
 
-VSCode Notion を開くと RECENTS(最近使用したページ)と BOOKMARKS(ブックマークしたページ)の 2 つからページを選ぶことができます。
+VSCode Notion を開くと `RECENTS (最近VSCodeで開いたページ)` と `BOOKMARKS (ブックマークしたページ)` の 2 つから選ぶことができます。
 
 初めて使用するときはまだページを開いていないため、 Notion ページを開くための `Open A Page`ボタンが表示されています。
 ![](https://storage.googleapis.com/zenn-user-upload/xcvqs9sr5jdgobphsr9t3i9tmgdf)
@@ -56,7 +56,7 @@ Notion のページを開くためには**アクセストークンを取得し�
 
 ## 初期設定
 
-VSCode の設定画面を開きます。設定画面は Windows であれば `ctrl + ,`　 Mac なら `⌘ + ,`で開くことができます。VSCode 設定画面の検索ウインドウに `VSCode Notion` と入れることで VSCode Notion の拡張機能の設定を探すことができます。
+VSCode の設定画面を開きます。設定画面は Windows であれば `ctrl + ,` Mac なら `⌘ + ,`で開くことができます。VSCode 設定画面の検索ウインドウに `vscode notion` と入れることで VSCode Notion の拡張機能の設定を探すことができます。設定が検索にヒットしない場合は VSCode を一旦再起動することで表示されるようになります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/f11qaiyywgrk22clorltljb788n7)
 
@@ -68,7 +68,7 @@ Notion のアクセストークンを取得します。ブラウザにて Notion
 
 以下 Chrome の画面で説明します。
 
-`Application` というタブの中に `token_v2`という項目があるため、項目内の値をコピーします。
+`Application` というタブを開き、`Cookies > https://www.notion.so/` とたどると `token_v2`という項目があるため、値をコピーします。
 これが自分の Notion アクセストークンとなります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/vg3rhxbtu5tnwg1582frn4iss0q1)
@@ -120,4 +120,4 @@ VSCode で Notion を開くことができるようになることで、Notion �
 
 まだリリースされてまもなく、開発が盛んに行われているため、今後どんどんアップデートされることを期待しましょう。
 
-以上、ここまで読んでいただきありがとうございました。
+最後まで読んでいただきありがとうございました。
