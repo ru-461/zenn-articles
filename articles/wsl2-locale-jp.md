@@ -156,7 +156,7 @@ apt コマンドのマニュアルを表示したところしっかりと日本�
 
 WSL2 で日本語表示ができる環境を作ることができました。コマンドのタイポをしたときなどに日本語でヒントが表示されるので、すぐに気づくことができたりとメリットがあると感じました。誰かの参考になれば幸いです。
 
-### 参考
+# 参考
 
-- https://www.atmarkit.co.jp/ait/articles/1806/28/news043.html
-- https://teratail.com/questions/262291
+[WSL の Ubuntu 環境を日本語化する：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1806/28/news043.html)
+[Ubuntu - 日本語版 man は WSL 上の Ubuntu20.04 の apt からインストールすることができないのでしょうか？｜ teratail](https://teratail.com/questions/262291)
