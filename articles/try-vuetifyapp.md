@@ -418,7 +418,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.js を使って初めてアプリを作る人の参考になれば幸いです。最後まで読んでいただきありがとうございました。
 
-### 参考
+# 参考
 
 [Vuetify に入門する](https://qiita.com/azukiazusa/items/16ebffd361af8fa58333)
 
