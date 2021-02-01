@@ -121,11 +121,32 @@ $ touch static.json
 先程作成した `static.json` を追加。
 
 ```shell
-git add static.json
+$ git add static.json
 ```
 
 コミットする。
 
 ```shell
-git commit -m "add static configuration"
+$ git commit -m "add static configuration"
 ```
+
+## Heroku アプリを作成
+
+ターミナルから Heroku へログインしデプロイ対象のプロジェクトのディレクトリで以下のコマンドを実行します。
+
+```shell
+$ heroku create
+Creating app... done
+```
+
+コマンド１つで Heroku プロジェクトが生成されます。
+以下のコマンドでアプリのページを開くことができます。
+
+```shell
+$ heroku open
+```
+
+デフォルトのブラウザが起動してアプリのページが表示されれば正常にアプリが作成されています。
+![created app](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
+Web ブラウザからアクセスできることが確認できれば OK です。
+
