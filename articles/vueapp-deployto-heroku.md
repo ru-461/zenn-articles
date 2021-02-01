@@ -1,17 +1,17 @@
 ---
-title: "Vueで作成したSPAをHerokuでデプロイするまで"
+title: "Vueで作成したSPAをHerokuへデプロイし動かすまで"
 emoji: "📡"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["vuejs", "heroku", "wsl2"]
+topics: ["vuejs", "heroku", "wsl2", "個人開発"]
 published: false
 ---
 
 # はじめに
 
-Vue で作成した SPA をデプロイする際には [Netlify](https://www.netlify.com/) や Github Pages といったホスティングサービスを使う方法があります。その中で今回は [Heroku](https://jp.heroku.com/) にてデプロイする方法を調べてみました。
+Vue で作成した SPA をデプロイする際には [Netlify](https://www.netlify.com/) や [Github Pages](https://docs.github.com/ja/github/working-with-github-pages/about-github-pages#) といったホスティングサービスを使う方法があります。その中で今回は [Heroku](https://jp.heroku.com/) にてデプロイする方法を調べてみました。
 以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事で VueCLI を使って開発した SPA を実際にデプロイしていきます。
 
-以前 Heroku にアプリをデプロイした経験はありましたが、VueSPA をデプロイした経験がなかったため、今回は Heroku にデプロイし動かせるところまでの流れについてまとめてみます。
+以前 Heroku にアプリをデプロイした経験はありましたが、Vue.js で作成した SPA をデプロイした経験がなかったため、今回は Heroku にデプロイし動かせるところまでについてまとめてみます。
 
 # 環境
 
@@ -20,6 +20,7 @@ Vue で作成した SPA をデプロイする際には [Netlify](https://www.net
 - Node.js v12.18.4
 - Vue CLI 4.5.10
 - heroku CLI 7.47.11
+- Git 2.25.1
 
 # 現状
 
@@ -118,7 +119,7 @@ $ touch static.json
 
 `static.json` は Heroku へのデプロイで必要になるため Git へ追加しておきます。
 
-先程作成した `static.json` を追加。
+先程作成した `static.json` をステージング。
 
 ```shell
 $ git add static.json
@@ -167,7 +168,10 @@ https://github.com/heroku/heroku-buildpack-static
 $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 ```
 
-上の２つのビルドパックを導入することでアプリをビルドする環境が出来上がりました。
+上の２つのビルドパックを導入することでアプリをビルドできる環境が出来上がりました。
+:::message
+ビルドパックは `heroku/node.js` ▶ `heroku-buildpack-static` の順番に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
+:::
 
 ## Heroku へデプロイする
 
@@ -180,9 +184,10 @@ $ git push heroku main
 ```
 
 すぐに Heroku へデプロイ処理が行われます。
+このときにビルドも同時に行われ最新の `distディレクトリ` がデプロイされます。
 
 :::message
-ドキュメントでは `masterブランチ` にプッシュしていますが、現在は `mainブランチ` に変更されているため注意
+ドキュメントでは `masterブランチ` にプッシュしていますが、現在は `mainブランチ` に変更されているため注意してください
 :::
 
 # デプロイできたかの確認
@@ -202,6 +207,15 @@ VueCLI で作成したプロジェクトがブラウザに表示され動作が�
 # さいごに
 
 今回 Heroku を使って Vue で作成した SPA のデプロイ手順をまとめました。
-簡単な SPA だったため比較的簡単にデプロイできました。インターネット上で見る記事では Express を使用してデプロイしている例が多くありましたが、ビルドパックを使うことで簡単にビルド、静的ホスティングまで行ってくれるのに驚きました。
+今回使用したのが簡単な SPA だったためすぐにデプロイできました。インターネット上で見る記事では Express を使用してデプロイしている例が多くありましたが、ビルドパックを使うことで簡単にビルド、静的ホスティングまで行ってくれるのに驚きました。
+
+今では優良なホスティングサービスが多く存在するため、Heroku 以外の選択肢もたくさんあります。今回久しぶりにデプロイを行う中でホスティングサービスの充実によってデプロイのハードルが下がってきていると感じました。
 
 お役に立てれば幸いです。最後まで読んでいただきありがとうございました。
+
+# 参考ドキュメント
+
+- [The Heroku CLI | Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install)
+- [Deployment | Vue CLI](https://cli.vuejs.org/guide/deployment.html#heroku)
+- [WSl 環境における Heroku CLI の導入 - Qiita](https://qiita.com/RoaaaA/items/604f7538d9ef57d2f9c7)
+- [Vue.js のアプリケーションを手早く Heroku で公開する - Qiita](https://qiita.com/akirakudo/items/f63322f6851feef3d9e4)
