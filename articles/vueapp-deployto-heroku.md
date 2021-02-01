@@ -18,12 +18,48 @@ Vue で作成した SPA をデプロイする際には [Netlify](https://www.net
 - Windows10 バージョン 20H2
 - WSL2 (Ubuntu 20.04.1 LTS (Focal Fossa))
 - Node.js v12.18.4
-- VueCLI 4.5.10
-- herokuCLI
+- Vue CLI 4.5.10
+- heroku CLI 7.47.11
 
 # 現状
 
 - 以前 Vagrant を使って Heoku に PHP 製アプリをデプロイした経験はあり
 - WSL2 で Heroku を使ったことはない
-- VueCLI で作った SPA を Heroku にデプロイできるのかわからない
+- Vue CLI で作った SPA を Heroku にデプロイできるのかわからない
 
+# インストール
+
+## Heroku CLI を WSL2 にインストール
+
+Heroku は各プラットフォーム向けに `Heroku CLI` というツールを提供しているためこちらを利用します。
+Heroku 公式ドキュメントに各プラットフォームごとの CLI をインストールする方法が列挙されているのでこちらを参考に進めます。
+https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install
+
+ドキュメントに従い以下のコマンドをターミナルで実行。
+
+```shell
+$ sudo snap install --classic heroku
+```
+
+以下のような**エラー**が出ました。
+
+```shell
+error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: dial unix /run/snapd.socket: connect: no such file or directory
+```
+
+どうやら WSL2 では `snapコマンド` がうまく動作しない模様です。
+そこで以下のコマンドでスタンドアロンインストールを実行します。
+
+```shell
+$ sudo curl https://cli-assets.heroku.com/install.sh | sh
+```
+
+## バージョン確認
+
+インストールに成功したかを確認するために以下のコマンドで CLI のバージョンを表示してみます。
+
+```shell
+$ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
+```
+
+インストールに成功し、WSL2 上にて Heroku CLI が使えるようになりました。
