@@ -3,7 +3,7 @@ title: "Vueで作成したSPAをHerokuへデプロイし動かすまで"
 emoji: "📡"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vuejs", "heroku", "wsl2", "個人開発"]
-published: false
+published: true
 ---
 
 # はじめに
