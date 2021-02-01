@@ -168,3 +168,19 @@ $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 ```
 
 上の２つのビルドパックを導入することでアプリをビルドする環境が出来上がりました。
+
+## Heroku へデプロイする
+
+Heroku へデプロイしていきます。
+
+以下の Git コマンドを実行します。
+
+```shell
+$ git push heroku main
+```
+
+すぐに Heroku へデプロイ処理が行われます。
+
+:::message
+ドキュメントでは `masterブランチ` にプッシュしていますが、現在は `mainブランチ` に変更されているため注意
+:::
