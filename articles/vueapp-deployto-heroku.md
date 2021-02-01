@@ -218,6 +218,19 @@ VueCLI で作成したプロジェクトがブラウザに表示され動作が�
 
 お役に立てれば幸いです。最後まで読んでいただきありがとうございました。
 
+# 補足: デプロイ後にアプリ名を変更したい
+
+デフォルトだとランダムでアプリの名前が付与されます。
+変更したい場合は CLI を使い以下の手順で変更可能です。
+
+```shell
+$ heroku apps:rename 変更したい名前
+```
+
+アプリの名前が変わるとアドレスも変わります。
+新しいアプリページは名前の変更後にダッシュボード or `heroku open` で開くことができます。
+アプリのダッシュボードから変更すると Git remote へ変更がうまく反映されないため、上記のコマンドを使用し、Heroku CLI から変更するのが無難です。
+
 # 参考ドキュメント
 
 - [The Heroku CLI | Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install)
