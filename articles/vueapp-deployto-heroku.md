@@ -150,3 +150,21 @@ $ heroku open
 ![created app](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
 Web ブラウザからアクセスできることが確認できれば OK です。
 
+## アプリをビルドする環境を作成
+
+Vue で作成した SPA はビルドする必要があります。
+Heroku 上でアプリをビルドするために以下のビルドパックが必要になるため、それぞれ追加します。
+
+https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-nodejs
+
+```shell
+$ heroku buildpacks:add heroku/nodejs
+```
+
+https://github.com/heroku/heroku-buildpack-static
+
+```shell
+$ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
+```
+
+上の２つのビルドパックを導入することでアプリをビルドする環境が出来上がりました。
