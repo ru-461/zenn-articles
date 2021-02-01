@@ -119,6 +119,9 @@ $ touch static.json
 
 `static.json` は Heroku へのデプロイで必要になるため Git へ追加しておきます。
 
+ここからは作成したアプリで Git コマンドが使える環境を前提に進めます。
+Git のインストール、`git init` でプロジェクトの初期化が済んでいる状態で進めてください。
+
 先程作成した `static.json` をステージング。
 
 ```shell
