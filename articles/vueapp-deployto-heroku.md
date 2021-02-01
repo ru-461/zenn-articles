@@ -63,3 +63,32 @@ $ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
 ```
 
 インストールに成功し、WSL2 上にて Heroku CLI が使えるようになりました。
+
+# デプロイする下準備
+
+それでは Heroku CLI を実際に動かしてデプロイする準備をしていきます。
+
+## Heroku へログイン
+
+以下のページから Heroku アカウントを登録します。
+https://signup.heroku.com/
+
+アカウントの登録ができたらターミナルからログインをしていきます。
+
+```shell
+$ heroku login
+  heroku: Press any key to open up the browser to login or q to exit:
+  # ブラウザにてログイン処理
+```
+
+`q`以外のキーを押すと自動的にデフォルトのブラウザで Heroku のログイン画面が開かれるのでブラウザ上でアカウントへログインします。
+
+以下の画面が表示されたら正常にログインできています。
+![Logged In](https://storage.googleapis.com/zenn-user-upload/mwtpkmsj2zy19usm5621nxm5zxxy)
+
+```shell
+Logging in... done
+  Logged in as '自分のメールアドレス'
+```
+
+ターミナルでもログインが成功していることを確認できます。
