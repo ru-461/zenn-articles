@@ -92,3 +92,40 @@ Logging in... done
 ```
 
 ターミナルでもログインが成功していることを確認できます。
+
+## 必要なファイルの生成
+
+以下のページに Vue CLI で構築したアプリを Heroku へデプロイする方法が載っていたため参考にして進めていきます。
+https://cli.vuejs.org/guide/deployment.html#heroku
+
+デプロイするのに `static.json` というファイルが必要みたいなので、Vue プロジェクトのルートディレクトリに移動して `static.json` を作成します。
+
+```shell
+$ touch static.json
+```
+
+作成したファイルを以下のように編集して保存します。
+
+```json:project/static.json
+{
+  "root": "dist",
+  "clean_urls": true,
+  "routes": {
+    "/**": "index.html"
+  }
+}
+```
+
+`static.json` は Heroku へのデプロイで必要になるため Git へ追加しておきます。
+
+先程作成した `static.json` を追加。
+
+```shell
+git add static.json
+```
+
+コミットする。
+
+```shell
+git commit -m "add static configuration"
+```
