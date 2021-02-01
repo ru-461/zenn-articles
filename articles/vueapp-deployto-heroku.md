@@ -20,3 +20,10 @@ Vue で作成した SPA をデプロイする際には [Netlify](https://www.net
 - Node.js v12.18.4
 - VueCLI 4.5.10
 - herokuCLI
+
+# 現状
+
+- 以前 Vagrant を使って Heoku に PHP 製アプリをデプロイした経験はあり
+- WSL2 で Heroku を使ったことはない
+- VueCLI で作った SPA を Heroku にデプロイできるのかわからない
+
