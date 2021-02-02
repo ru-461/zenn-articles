@@ -34,4 +34,24 @@ https://twitter.com/neverware/status/1338606293737730050?s=19
 
 今回は Windows にて仮想マシンを用意し、CloudReady を動かすところまでを解説します。
 
+# 仮想マシンの用意
+
+まず ChromeOS(CloudReady)を Windows 上で動作させるために仮想マシンを用意します。
+仮想マシンを利用することで Windows の環境を汚すことなく、OS を動かすことが可能となります。
+
+CloudReady を仮想マシンで利用する場合は VMware Workstation Player での動作のみサポートされているため VMware Workstation Player を使用します。VirtualBox では上手く動作しない模様です。
+
+VMware Workstation Player は以下のページからダウンロード可能です。
+
+https://www.vmware.com/jp/products/workstation-player/workstation-player-evaluation.html
+
+![](https://storage.googleapis.com/zenn-user-upload/w0r475gfqn6tcd0zvte1g9qr21a8)
+
+VMware Workstation Player for Windows をインストールします。
+
+![](https://storage.googleapis.com/zenn-user-upload/lik7ygtirmi2gvhvvljiwt079r48)
+
+この画面が表示されれば VMware のインストール完了です。
+
+
 # おわりに
