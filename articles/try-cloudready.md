@@ -34,7 +34,9 @@ https://twitter.com/neverware/status/1338606293737730050?s=19
 
 今回は Windows にて仮想マシンを用意し、CloudReady を動かすところまでを解説します。
 
-# 仮想マシンの用意
+# CloudReady のインストール
+
+## 仮想マシンの用意
 
 まず ChromeOS(CloudReady)を Windows 上で動作させるために仮想マシンを用意します。
 仮想マシンを利用することで Windows の環境を汚すことなく、OS を動かすことが可能となります。
@@ -53,5 +55,16 @@ VMware Workstation Player for Windows をインストールします。
 
 この画面が表示されれば VMware のインストール完了です。
 
+## CloudReady のイメージを用意
+
+CloudReady の公式ページにて OS の VMware イメージが配布されているためダウンロードします。
+
+https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMware
+
+こちらのページから VMware のイメージダウンロードできます。
+
+![](https://storage.googleapis.com/zenn-user-upload/a01gdj2rxsbzroq83uonsihep83f)
+
+ダウンロードリンクをクリックするとすぐにイメージのダウンロードが始まります。
 
 # おわりに
