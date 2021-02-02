@@ -55,7 +55,7 @@ VMware Workstation Player for Windows をインストールします。
 
 この画面が表示されれば VMware のインストール完了です。
 
-## CloudReady のイメージを用意
+## CloudReady の仮想マシンイメージのダウンロード
 
 CloudReady の公式ページにて OS の VMware イメージが配布されているためダウンロードします。
 
@@ -66,5 +66,25 @@ https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMwar
 ![](https://storage.googleapis.com/zenn-user-upload/a01gdj2rxsbzroq83uonsihep83f)
 
 ダウンロードリンクをクリックするとすぐにイメージのダウンロードが始まります。
+
+## 仮想マシンイメージを VMware にインポート
+
+先程、インストールした VMware に CloudReady のイメージを導入していきます。
+
+VMware のトップ画面から `仮想マシンを開く` をクリック。
+![](https://storage.googleapis.com/zenn-user-upload/2a737uds16ia5ssuglosc0dkzsrf)
+
+表示されるダイアログでダウンロードした仮想マシンイメージを選択します。
+
+![](https://storage.googleapis.com/zenn-user-upload/qenzprdht9uog3o4j5s3q8x9teiq)
+_参照からパスを指定_
+
+これでイメージの追加は完了です。
+
+![](https://storage.googleapis.com/zenn-user-upload/yn5drm39iwry6xu3993ob1rxgtpc)
+仮想マシンの設定を開くことで使うメモリの量やネットワークなどを詳しく設定できます。
+ホストマシンの環境に応じて設定を変更することをおすすめします。
+
+デフォルトでも問題なかったため、私はデフォルトで進めました。
 
 # おわりに
