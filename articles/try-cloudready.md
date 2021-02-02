@@ -45,7 +45,7 @@ CloudReady は仮想環境で本番運用することを推奨していません
 まず ChromeOS(CloudReady)を Windows 上で動作させるために仮想マシンを用意します。
 仮想マシンを利用することで Windows の環境を汚すことなく、OS を動かすことが可能となります。
 
-CloudReady を仮想マシンで利用する場合は VMware Workstation Player での動作のみサポートされているため VMware Workstation Player を使用します。VirtualBox では上手く動作しない模様です。
+CloudReady を仮想マシンで利用する場合は `VMware Workstation Player` での動作のみサポートされているため VMware Workstation Player を使用します。`VirtualBox` では上手く動作しない模様です。
 
 VMware Workstation Player は以下のページからダウンロード可能です。
 
@@ -54,6 +54,7 @@ https://www.vmware.com/jp/products/workstation-player/workstation-player-evaluat
 ![](https://storage.googleapis.com/zenn-user-upload/w0r475gfqn6tcd0zvte1g9qr21a8)
 
 VMware Workstation Player for Windows をインストールします。
+VMware は商業利用ではなく個人利用であれば無償で利用できます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/lik7ygtirmi2gvhvvljiwt079r48)
 
@@ -97,5 +98,21 @@ _参照からパスを指定_
 途中 Linxu の拡張機能が促された場合合わせてインストールを行ってください。
 
 ![](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
+_ようこそ！_
+
+デフォルトでは言語が英語、キーボード配列が US 配列になっているため私は以下のように変更しました。
+
+![](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31)
+
+以上で CloudReady(ChromeOS)の導入が完了しました。
 
 # おわりに
+
+仮想マシンで手軽に ChromeOS を動作させられるのが便利だと感じました。
+今後 ChromeOS が CloudReady に買収されるなど ChromeOS が今後どんどん使いやすくなっていくと思われます。
+
+今回紹介した方法はあくまで検証用や動作確認用ですが、手元に WindowsPC が一台あれば環境を大きく変えることなく試すことができるので ChromeOS に触ってみたい方には最適な手段だと感じました。
+
+CloudReady は無料で使うことができ、仮想マシンではなく PC にメインの OS としてインストールもできるため、この機会に ChromeOS デビューをしてみてもいいと
+
+最後まで読んでいただきありがとうございました。
