@@ -9,7 +9,7 @@ published: false
 # はじめに
 
 ChromeBook には Google ChromeOS という OS が搭載されています。
-これはオープンソースである ChromiumOS をベースに Google が設計した OS で、現在 Chromebook にて採用されています。
+これはオープンソースである ChromiumOS をベースに Google が設計した OS で、現在 Chromebook にて採用されていることで有名です。
 
 UI がとてもシンプルで Google のサービスを利用するのにとても便利、困らなそうという印相を受けます。
 Linux の機能がベータ版として組み込まれており。ターミナルを使った開発もできるようです。
@@ -102,9 +102,17 @@ _ようこそ！_
 
 デフォルトでは言語が英語、キーボード配列が US 配列になっているため私は以下のように変更しました。
 
-![](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31)
+![](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) _使用しているキーボードが JIS 配列のため日本語を選択_
 
-以上で CloudReady(ChromeOS)の導入が完了しました。
+以上で CloudReady の導入が完了しました。
+
+VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を行き来できるのが便利です。
+
+初期設定で Google のアカウントにログインするとデスクトップが表示されます。
+![](https://storage.googleapis.com/zenn-user-upload/fe7asv5fcidkgpue7z3f6mb7h3rs)
+ブラウザとして Chromium(Chrome のオープンソース版)がインストールされています。
+
+初期設定でログインした Google アカウントと紐付いているため自動的に Chrome の環境と同期が行われすぐに使い始めることができます。
 
 # おわりに
 
