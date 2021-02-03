@@ -9,16 +9,19 @@ published: false
 # はじめに
 
 ChromeBook には Google ChromeOS という OS が搭載されています。
-これはオープンソースである ChromiumOS をベースに Google が設計した OS で、現在 Chromebook にて採用されていることで有名です。
+これはオープンソースである ChromiumOS をベースに設計されている OS で、現在 Chromebook にて採用されていることで有名です。
 
-UI がとてもシンプルで Google のサービスを利用するのにとても便利、困らなそうという印相を受けます。
+UI がとてもシンプルで洗練されており、Google のサービスを利用するのに便利、困らなそうという印象を受けました。
 Linux の機能がベータ版として組み込まれており。ターミナルを使った開発もできるようです。
 ChromeBook の普及により今後、目にする機会や触る機会が多くなると思われます。
 
 # Chrome OS を試してみたい
 
-ChromeOS は ChromeBook にはプリインストールされている OS で試すには実機が必要と思われがちですが、neverware 社が提供してきる CloudReady というパッケージを使用することで簡単に個人利可能な ChromeOS をインストールできます。
+ChromeOS は ChromeBook にはプリインストールされている OS で試すには実機が必要と思われがちですが、Neverware 社が提供してきる CloudReady というパッケージを使用することで個人利可能な ChromeOS ライクな環境を手に入れることができます。
 CloudReady はオープンソースである Chrominuum OS をカスタマイズしたもので、ChromeOS と遜色なく使うことができます。
+
+Cloudready は本家 ChromeOS と比較したときに Google Play ストアがサポートされていないため Android アプリをインストールして使うことができないという大きな違いがあります。
+その他はそのまま ChromeOS と同じように使うことができます。
 
 CloudReady の公式ページはこちらになります。
 
@@ -30,9 +33,9 @@ https://www.neverware.com/freedownload
 
 https://twitter.com/neverware/status/1338606293737730050?s=19
 
-今後は CloudReady が正式に ChromeOS に生まれ変わる日も近いみたいですね。
+CloudReady が正式に ChromeOS として生まれ変わる日も近いみたいですね。
 
-今回は Windows にて仮想マシンを用意し、CloudReady を動かすところまでを解説します。
+今回は Windows にて仮想マシンを用意し、CloudReady HomeEdition を動かすところまでを解説します。
 
 :::message
 CloudReady は仮想環境で本番運用することを推奨していません。今回紹介する方法は検証用、動作チェックを想定して公開している仮想マシンイメージとなるため予めご了承ください。
@@ -104,8 +107,6 @@ _ようこそ！_
 
 ![](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) _使用しているキーボードが JIS 配列のため日本語を選択_
 
-以上で CloudReady の導入が完了しました。
-
 VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を行き来できるのが便利です。
 
 初期設定で Google のアカウントにログインするとデスクトップが表示されます。
@@ -114,13 +115,22 @@ VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を
 
 初期設定でログインした Google アカウントと紐付いているため自動的に Chrome の環境と同期が行われすぐに使い始めることができます。
 
+以上で CloudReady の導入が完了です。
+
 # おわりに
 
-仮想マシンで手軽に ChromeOS を動作させられるのが便利だと感じました。
+仮想マシンで手軽に ChromeOS の環境を動作させられるのが便利だと感じました。
 今後 ChromeOS が CloudReady に買収されるなど ChromeOS が今後どんどん使いやすくなっていくと思われます。
 
-今回紹介した方法はあくまで検証用や動作確認用ですが、手元に WindowsPC が一台あれば環境を大きく変えることなく試すことができるので ChromeOS に触ってみたい方には最適な手段だと感じました。
+今回紹介した方法はあくまで検証用や動作確認用ですが、手元に WindowsPC が 1 台あれば環境を大きく変えることなく試すことができるので ChromeOS に触ってみたい方には最適な手段だと感じました。今回紹介しているのは仮想マシンでの利用ですが、CloudReady 側としては PC にメインの OS としてインストールするのを推奨しているため今度は、メイン OS として使ってみるのも面白そうです。
 
-CloudReady は無料で使うことができ、仮想マシンではなく PC にメインの OS としてインストールもできるため、この機会に ChromeOS デビューをしてみてもいいと
+昨今はブラウザベースで利用できるサービスも多くあります。Notion を使ったドキュメント編集などのブラウザベースの作業をするのに困ることはなさそうです。
+
+この機会に CloudReady を使って ChromeOS デビューをしてみるのはいかがでしょうか。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考ドキュメント
+
+[Chromium OS 派生　 CloudReady - なろぐ 2](https://narolll.hateblo.jp/entry/20201027/1603784651)
+[グーグル、「Chromium」ベースの OS「CloudReady」の Neverware 買収 - ZDNet Japan](https://japan.zdnet.com/article/35164052/)
