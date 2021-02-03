@@ -38,7 +38,7 @@ CloudReady が正式に ChromeOS として生まれ変わる日も近いみた�
 今回は Windows にて仮想マシンを用意し、CloudReady HomeEdition を動かすところまでを解説します。
 
 :::message
-CloudReady は仮想環境で本番運用することを推奨していません。今回紹介する方法は検証用、動作チェックを想定して公開している仮想マシンイメージとなるため予めご了承ください。
+後述しますが、本来 CloudReady は仮想環境で本番運用することを推奨していません。今回紹介する方法は検証用、動作チェックを想定して公開している仮想マシンイメージとなるため予めご了承ください。
 :::
 
 # CloudReady のインストール
@@ -98,7 +98,6 @@ _参照からパスを指定_
 ## CloudReady の起動
 
 `仮想マシンの再生`ボタンから起動できます。
-途中 Linxu の拡張機能が促された場合合わせてインストールを行ってください。
 
 ![](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
 _ようこそ！_
@@ -117,10 +116,48 @@ VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を
 
 以上で CloudReady の導入が完了です。
 
+# 詰まったところと解決方法
+
+## インターネットに繋がらない
+
+私は PC を有線接続(イーサネット)で接続していたのですが、CloudReady の初期設定で上手く接続ができませんでした。
+ChromeOS の初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、`仮想マシンの設定の編集` から `ネットワークアダプタ`を選択し。
+![](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
+`デフォルトのブリッジからNATに変更`することですんなりと繋がるようになりました。
+繋がらない場合はお使いの環境に合わせてデフォルトから設定を変えてみてください。
+
+## ロック解除に毎回パスワードを打つのが大変
+
+ChromeOS ではログイン時に Google のパスワードを利用してロックを解除するのですが、私は Google のログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。`設定 → ユーザー → 画面ロック`で画面ロックの解除の方法をパスワードから 6 ケタの PIN に変更できます。
+
+![](https://storage.googleapis.com/zenn-user-upload/9xcdmioqwe4x7ejftl9p21meed9c)
+
+PIN にしてからストレスなくロックの解除ができるようになりました。
+:::message
+ロック解除に PIN を設定しても初回起動時のログインではパスワード入力が必須になります
+:::
+
+# Linux、ターミナルが起動できない問題
+
+CloudReady(ChromeOS) にはターミナル機能と Linux の機能が搭載されています。
+
+![](https://storage.googleapis.com/zenn-user-upload/5s0a5bfhmxpdkzsobyrenu0ww7w6)
+
+しかし仮想マシンで実行している CloudReady では起動ができませんでした。
+所持している別の PC にメイン OS としてインストールし実行したときは Linux とターミナルを普通に起動できたため仮想マシンでのサポートがされていないのではないかと感じました。
+
+> Neverware never recommends running CloudReady as a VM for production use cases as the security and management benefits are reduced or eliminated when a host-OS is also involved.
+> Neverware は、ホスト OS も関与している場合、セキュリティと管理のメリットが減少または排除されるため、本番ユースケースの VM として CloudReady を実行することを推奨しません。
+
+公式の VMware イメージ配布ページでもこのように説明がされている通り、やはり仮想マシンでは Linux の実行は現実的で無いような気がします。
+ChromeOS で Linux やターミナルを使って開発環境を構築している情報も多く見受けられますが、CloudReady 開発マシンとして運用する場合は仮想マシンではなく、メインの OS として正規にインストールするしかないみたいです。上記を踏まえても、仮想マシンでの運用は動作確認と検証用に留めるのが理想的だと感じました。
+
+CloudReady を触っていく中でこの部分についても引き続き検証していきたいです。
+
 # おわりに
 
 仮想マシンで手軽に ChromeOS の環境を動作させられるのが便利だと感じました。
-今後 ChromeOS が CloudReady に買収されるなど ChromeOS が今後どんどん使いやすくなっていくと思われます。
+今後 ChromeOS が CloudReady に買収されるなど Chrome OS が今後どんどん使いやすくなっていくと思われます。
 
 今回紹介した方法はあくまで検証用や動作確認用ですが、手元に WindowsPC が 1 台あれば環境を大きく変えることなく試すことができるので ChromeOS に触ってみたい方には最適な手段だと感じました。今回紹介しているのは仮想マシンでの利用ですが、CloudReady 側としては PC にメインの OS としてインストールするのを推奨しているため今度は、メイン OS として使ってみるのも面白そうです。
 
