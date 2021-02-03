@@ -137,13 +137,17 @@ PIN にしてからストレスなくロックの解除ができるようにな�
 ロック解除に PIN を設定しても初回起動時のログインではパスワード入力が必須になります
 :::
 
-# Linux、ターミナルが起動できない問題
+# Linux が起動できない問題
 
 CloudReady(ChromeOS) にはターミナル機能と Linux の機能が搭載されています。
+ターミナルは標準で搭載されており、`Ctrl + Shift + t`で呼び出すことができます。
+![](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
+それと合わせて使用できる Linux 機能が存在し、設定からインストールできるはずなのですが...。
 
 ![](https://storage.googleapis.com/zenn-user-upload/5s0a5bfhmxpdkzsobyrenu0ww7w6)
 
-しかし仮想マシンで実行している CloudReady では起動ができませんでした。
+しかし仮想マシンで実行している CloudReady では設定画面に項目が存在するものの起動ができませんでした。
+![](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
 所持している別の PC にメイン OS としてインストールし実行したときは Linux とターミナルを普通に起動できたため仮想マシンでのサポートがされていないのではないかと感じました。
 
 > Neverware never recommends running CloudReady as a VM for production use cases as the security and management benefits are reduced or eliminated when a host-OS is also involved.
@@ -152,8 +156,9 @@ CloudReady(ChromeOS) にはターミナル機能と Linux の機能が搭載さ�
 > Neverware は、ホスト OS も関与している場合、セキュリティと管理のメリットが減少または排除されるため、本番ユースケースの VM として CloudReady を実行することを推奨しません。
 
 公式の VMware イメージ配布ページでもこのように説明がされている通り、やはり仮想マシンでは Linux の実行は現実的で無いような気がします。
-ChromeOS で Linux やターミナルを使って開発環境を構築している情報も多く見受けられますが、CloudReady 開発マシンとして運用する場合は仮想マシンではなく、メインの OS として正規にインストールするしかないみたいです。上記を踏まえても、仮想マシンでの運用は動作確認と検証用に留めるのが理想的だと感じました。
+ChromeOS で Linux を使って開発環境を構築している情報も多く見受けられますが、CloudReady 開発マシンとして運用する場合は仮想マシンではなく、メインの OS として正規にインストールするしかないみたいです。
 
+上記を踏まえても、仮想マシンでの運用は動作確認と検証用に留めるのが理想的だと感じました。
 CloudReady を触っていく中でこの部分についても引き続き検証していきたいです。
 
 # おわりに
