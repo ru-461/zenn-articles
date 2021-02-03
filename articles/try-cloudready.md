@@ -1,6 +1,6 @@
 ---
 title: "Windows上でChromeOSを動かす [CloudReady]"
-emoji: "⛅"
+emoji: "☁"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "chromeos", "cloudready", "vmware", "ツール"]
 published: true
