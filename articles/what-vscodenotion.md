@@ -41,7 +41,7 @@ Notion ではまだ公式に正式な API が提供されていないため、�
 
 拡張機能の検索ウインドウに `notion` といれることで「VSCode Notion」がヒットするのでインストールしていきます。
 ![](https://storage.googleapis.com/zenn-user-upload/6i6uzl1kglf3dqx7d27trlev3v5m)
-
+*検索してヒットしたこちらの拡張機能をインストール*
 インストールが完了するとステータスがインストール済みになり、インストール済みの拡張機能に追加されます。
 インストールすることで自動的に拡張機能が有効になり、左のメニューに Notion のアイコンが表示されます。
 
@@ -49,7 +49,7 @@ VSCode Notion を開くと `RECENTS (最近VSCodeで開いたページ)` と `BO
 
 初めて使用するときはまだページを開いていないため、 Notion ページを開くための `Open A Page`ボタンが表示されています。
 ![](https://storage.googleapis.com/zenn-user-upload/xcvqs9sr5jdgobphsr9t3i9tmgdf)
-
+*Open A PageからNotionのページを開くことができる*
 ボタンをクリックしてフォームへ Notion のページへのアドレスを入れると指定したページを開くことができるのですが、デフォルトの状態では `Couldn't load the data from API.` と api エラーが出て開くことができません。
 Notion のページを開くためには**アクセストークンを取得して設定**する必要があります。
 デフォルトの状態ではアクセストークンが空になっているため以下の初期設定が必要となります。
@@ -72,7 +72,7 @@ Notion のアクセストークンを取得します。ブラウザにて Notion
 これが自分の Notion アクセストークンとなります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/vg3rhxbtu5tnwg1582frn4iss0q1)
-
+*valueの項目にある値をそのままコピー*
 アクセストークンは長い文字列になっており、拡張機能を使うために必ず必要となるので、慎重に管理をお願いします。
 
 取得した Notion アクセストークンを設定画面の `VSCode Notion Access Token` にそのままペーストします。
@@ -103,7 +103,7 @@ _備忘録メモ - Notion 内のコードブロックもうまく表示できて
 トップページを**ブラウザ**で見たものが以下になります。
 
 ![](https://storage.googleapis.com/zenn-user-upload/vi6278kahmdn2188fjqxuvuwiozy)
-
+*ブラウザで見たときの表示*
 テキストは問題なく表示できていますが、オリジナルの Notion と VSCode Notion を比較すると表示に失敗している部分が多々見受けられました。比較してみると。
 
 - フルデータベースページへの直リンク
