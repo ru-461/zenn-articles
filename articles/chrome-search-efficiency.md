@@ -17,28 +17,28 @@ Google 検索を頻繁に行う場合、テンポよく調べたい情報を手�
 # 新規タブページを Google のページで開きたい
 
 Chrome を初期設定で使うと、新規タブを開いたとき以下のようなページが表示されます。
-![](https://storage.googleapis.com/zenn-user-upload/ptn4qslk7wkqftou7d1zeb6kzk8m)
+![Chromeのデフォルトトップページの画像](https://storage.googleapis.com/zenn-user-upload/ptn4qslk7wkqftou7d1zeb6kzk8m)
 _Chrome インストール直後の画像です。_
 このページから Google 検索や独自にショートカットを追加してサイトへアクセスできるのですが、個人的にこのページではなく Google のトップページを使いたいと感じたため、このページを [Google トップページ](https://www.google.com/)に置き換えました。使用した拡張機能は以下になります。
 
 ## New Tab Redirect
 
-![](https://storage.googleapis.com/zenn-user-upload/dak1mxxzx9msyq9stkyep0855z0m)
+![New Tab RedirectのChromeウェブストアページの画像](https://storage.googleapis.com/zenn-user-upload/dak1mxxzx9msyq9stkyep0855z0m)
 [New Tab Redirect - chrome ウェブストア](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
 
 この拡張機能を使うことで Chrome 上で新規タブが開かれたときに、自動で設定したサイトにリダイレクトをしてくれます。設定画面はこんな感じでかなりシンプルです。
-![](https://storage.googleapis.com/zenn-user-upload/dia7r0wv65qh6pm8vfm90jex3e49)
+![New tab Redirect設定画面の画像](https://storage.googleapis.com/zenn-user-upload/dia7r0wv65qh6pm8vfm90jex3e49)
 Redirect URL のフォームに新規タブを開いたときに開きたいページを指定することで毎回決まったサイトを開いてくれるようになります。今回は、Google の検索ページを開きたいので Google の URL を指定しました。これで次回から新規タブを開くときに必ず Google の検索ページが開かれることになります。新規タブを変更しましたが、検索は今まで通り行うことができます。デフォルトでは `Ctrl + T / ⌘ + T` で Google に遷移して検索キーワードを入力することでスムーズに検索でき、使用感は Chrome デフォルトのタブと遜色ありません。便利ですね。
 
 # Google 検索結果をキーボードだけで選択したい
 
 ここまで Google の検索結果を表示できました。しかし、現在タブキーで検索結果のページに遷移しようと `Tabキー`を連打してみても...
-![](https://storage.googleapis.com/zenn-user-upload/1q36voia8dvpg1oc6wtmoke2vvmz)
+![デフォルトGoogle検索結果の画像](https://storage.googleapis.com/zenn-user-upload/1q36voia8dvpg1oc6wtmoke2vvmz)
 _「メインコンテンツへスキップ」を選択するとリンクへフォーカス_
-![](https://storage.googleapis.com/zenn-user-upload/tcwnb5td4zgu1pya18m094bl1t74)
+![一番上のページへリンクフォーカスする様子](https://storage.googleapis.com/zenn-user-upload/tcwnb5td4zgu1pya18m094bl1t74)
 _一番上にヒットしたサイトのタイトルへフォーカスが当たった状態_
 `Tabキー`で次のリンクを選択できるかと思いきや...
-![](https://storage.googleapis.com/zenn-user-upload/8zwlmt376q6h69t26l423maygkaf)
+![キャッシュボタンにフォーカスが当たる様子](https://storage.googleapis.com/zenn-user-upload/8zwlmt376q6h69t26l423maygkaf)
 _サイトのキャッシュにフォーカスが..._
 
 このあと `Tabキー`連打でサイトにフォーカスが当たるが、すべてのリンクにフォーカスが当たってしまい、下にあるサイトを選択するのに時間がかかってしまいます。普段、 [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=ja)というキーバインディングができる拡張機能を使ってサイトを見ることが多いのですが、Google 検索ではフォーカスできるリンクが多く、もっと簡単にフォーカスできないかが悩みでした。少し前までは `J & K キー`で検索結果をスイスイと上下選択できたみたいですが、現在の Google(2020 年 11 月現在)では `Tab キー`で地道にひとつひとつたどっていくしかない模様です。そこでこの検索結果でのリンクフォーカスを楽にできる拡張機能を探したところ...。
@@ -47,7 +47,7 @@ _サイトのキャッシュにフォーカスが..._
 
 ## Google 検索キーボードショートカット
 
-![](https://storage.googleapis.com/zenn-user-upload/oqbqv0vnc4zxolwle1ztpo1ndr2k)
+![Google 検索キーボードショートカットのストア画像](https://storage.googleapis.com/zenn-user-upload/oqbqv0vnc4zxolwle1ztpo1ndr2k)
 [Google 検索キーボードショートカット chrome ウェブストア](https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifgjemlhiekookpgjmkcelg?hl=ja)
 
 操作方法はとても簡単で以下の通り。
@@ -69,10 +69,10 @@ _サイトのキャッシュにフォーカスが..._
 `J / K キー`でリンクフォーカスの上下ができる他にも、キーの組み合わせで画像や動画などのコンテンツも検索できるみたいです。これはとても便利ですね。
 この拡張機能をインストールするとすぐに Google 検索の結果画面で使用可能になります。
 
-![](https://storage.googleapis.com/zenn-user-upload/8n0st6ntg37x61ecsijh9mappkh7)
+![Google 検索キーボードショートカット導入後の様子](https://storage.googleapis.com/zenn-user-upload/8n0st6ntg37x61ecsijh9mappkh7)
 _この拡張機能を導入したことで検索直後からフォーカスが当たり_
 すぐに `K キー`を押すと...
-![](https://storage.googleapis.com/zenn-user-upload/4jxh731n4i3w7o3tl6i5nkk77ii5)
+![2番目のリンクにフォーカスされる様子](https://storage.googleapis.com/zenn-user-upload/4jxh731n4i3w7o3tl6i5nkk77ii5)
 _しっかりと目的の２番目のリンクにフォーカスされました!_
 
 これでマウス・トラックパッドを触らなくてもキーボードだけで簡単に Google 検索ができるようになりました。
