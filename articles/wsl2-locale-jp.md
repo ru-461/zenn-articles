@@ -16,7 +16,7 @@ published: true
 
 # Microsoft Store から WSL2 へ Ubuntu をインストール
 
-![](https://storage.googleapis.com/zenn-user-upload/m9gsq8lu1u49qs989num6iyl7r8e)
+![Microsoft Store Ubuntu 20.04のインストールページの画像](https://storage.googleapis.com/zenn-user-upload/m9gsq8lu1u49qs989num6iyl7r8e)
 _インストールができたら「起動」をクリック_
 インストールが終わったら「起動」をクリックでシェルが起動します。
 
@@ -97,9 +97,9 @@ $ sudo dpkg-reconfigure tzdata
 ```
 
 GUI 表示になるので選択肢から「アジア」→「東京」を選択します。
-![](https://storage.googleapis.com/zenn-user-upload/hms81758oplrwgqztsc3d5lt2oql)
+![都市名のリスト選択画面の画像](https://storage.googleapis.com/zenn-user-upload/hms81758oplrwgqztsc3d5lt2oql)
 _アジアを選択_
-![](https://storage.googleapis.com/zenn-user-upload/wlmalkrups5z43uhweg3wnykiwkv)
+![時間帯選択画面の画像](https://storage.googleapis.com/zenn-user-upload/wlmalkrups5z43uhweg3wnykiwkv)
 _東京を選択_
 `date`コマンドで現在の時刻を表示。
 
