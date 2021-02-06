@@ -54,12 +54,12 @@ VMware Workstation Player は以下のページからダウンロード可能で
 
 https://www.vmware.com/jp/products/workstation-player/workstation-player-evaluation.html
 
-![](https://storage.googleapis.com/zenn-user-upload/w0r475gfqn6tcd0zvte1g9qr21a8)
+![VMware Workstation Playerをインストールする様子](https://storage.googleapis.com/zenn-user-upload/w0r475gfqn6tcd0zvte1g9qr21a8)
 
 VMware Workstation Player for Windows をインストールします。
 VMware は商業利用ではなく個人利用であれば無償で利用できます。
 
-![](https://storage.googleapis.com/zenn-user-upload/lik7ygtirmi2gvhvvljiwt079r48)
+![VMware Workstation Player起動後の画像](https://storage.googleapis.com/zenn-user-upload/lik7ygtirmi2gvhvvljiwt079r48)
 
 この画面が表示されれば VMware のインストール完了です。
 
@@ -71,7 +71,7 @@ https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMwar
 
 こちらのページから VMware のイメージダウンロードできます。
 
-![](https://storage.googleapis.com/zenn-user-upload/a01gdj2rxsbzroq83uonsihep83f)
+![イメージをダウンロードするリンクの画像](https://storage.googleapis.com/zenn-user-upload/a01gdj2rxsbzroq83uonsihep83f)
 
 ダウンロードリンクをクリックするとすぐにイメージのダウンロードが始まります。
 
@@ -80,16 +80,16 @@ https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMwar
 先程、インストールした VMware に CloudReady のイメージを導入していきます。
 
 VMware のトップ画面から `仮想マシンを開く` をクリック。
-![](https://storage.googleapis.com/zenn-user-upload/2a737uds16ia5ssuglosc0dkzsrf)
+![仮想マシンを開くボタンの画像](https://storage.googleapis.com/zenn-user-upload/2a737uds16ia5ssuglosc0dkzsrf)
 
 表示されるダイアログでダウンロードした仮想マシンイメージを選択します。
 
-![](https://storage.googleapis.com/zenn-user-upload/qenzprdht9uog3o4j5s3q8x9teiq)
+![イメージを指定するパスを](https://storage.googleapis.com/zenn-user-upload/qenzprdht9uog3o4j5s3q8x9teiq)
 _参照からパスを指定_
 
 これでイメージの追加は完了です。
 
-![](https://storage.googleapis.com/zenn-user-upload/yn5drm39iwry6xu3993ob1rxgtpc)
+![仮想マシン設定画面の画像](https://storage.googleapis.com/zenn-user-upload/yn5drm39iwry6xu3993ob1rxgtpc)
 仮想マシンの設定を開くことで使うメモリの量やネットワークなどを詳しく設定できます。
 ホストマシンの環境に応じて設定を変更することをおすすめします。
 
@@ -99,17 +99,17 @@ _参照からパスを指定_
 
 `仮想マシンの再生`ボタンから起動できます。
 
-![](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
+![CloudReadyようこそ画面の画像](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
 _ようこそ！_
 
 デフォルトでは言語が英語、キーボード配列が US 配列になっているため私は以下のように変更しました。
 
-![](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) _使用しているキーボードが JIS 配列のため日本語を選択_
+![言語とキーボード変更画面の画像](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) _使用しているキーボードが JIS 配列のため日本語を選択_
 
 VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を行き来できるのが便利です。
 
 初期設定で Google のアカウントにログインするとデスクトップが表示されます。
-![](https://storage.googleapis.com/zenn-user-upload/fe7asv5fcidkgpue7z3f6mb7h3rs)
+![CloudReadyのデスクトップ画像](https://storage.googleapis.com/zenn-user-upload/fe7asv5fcidkgpue7z3f6mb7h3rs)
 ブラウザとして Chromium(Chrome のオープンソース版)がインストールされています。
 
 初期設定でログインした Google アカウントと紐付いているため自動的に Chrome の環境と同期が行われすぐに使い始めることができます。
@@ -122,7 +122,7 @@ VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を
 
 私は PC を有線接続(イーサネット)で接続していたのですが、CloudReady の初期設定で上手く接続ができませんでした。
 ChromeOS の初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、`仮想マシンの設定の編集` から `ネットワークアダプタ`を選択し。
-![](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
+![ブリッジ接続からNATへ変更する様子](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
 `デフォルトのブリッジからNATに変更`することですんなりと繋がるようになりました。
 繋がらない場合はお使いの環境に合わせてデフォルトから設定を変えてみてください。
 
@@ -130,7 +130,7 @@ ChromeOS の初期設定をすすめる上でインターネット接続がで�
 
 ChromeOS ではログイン時に Google のパスワードを利用してロックを解除するのですが、私は Google のログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。`設定 → ユーザー → 画面ロック`で画面ロックの解除の方法をパスワードから 6 ケタの PIN に変更できます。
 
-![](https://storage.googleapis.com/zenn-user-upload/9xcdmioqwe4x7ejftl9p21meed9c)
+![PINを設定する様子](https://storage.googleapis.com/zenn-user-upload/9xcdmioqwe4x7ejftl9p21meed9c)
 
 PIN にしてからストレスなくロックの解除ができるようになりました。
 :::message
@@ -141,13 +141,13 @@ PIN にしてからストレスなくロックの解除ができるようにな�
 
 CloudReady(ChromeOS) にはターミナル機能と Linux の機能が搭載されています。
 ターミナルは標準で搭載されており、`Ctrl + Shift + t`で呼び出すことができます。
-![](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
+![CloudReadyのターミナル画像](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
 それと合わせて使用できる Linux 機能が存在し、設定からインストールできるはずなのですが...。
 
-![](https://storage.googleapis.com/zenn-user-upload/5s0a5bfhmxpdkzsobyrenu0ww7w6)
+![Linuxが起動できない様子](https://storage.googleapis.com/zenn-user-upload/5s0a5bfhmxpdkzsobyrenu0ww7w6)
 
 しかし仮想マシンで実行している CloudReady では設定画面に項目が存在するものの起動ができませんでした。
-![](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
+
 所持している別の PC にメイン OS としてインストールし実行したときは Linux とターミナルを普通に起動できたため仮想マシンでのサポートがされていないのではないかと感じました。
 
 > Neverware never recommends running CloudReady as a VM for production use cases as the security and management benefits are reduced or eliminated when a host-OS is also involved.
@@ -176,5 +176,5 @@ CloudReady を触っていく中でこの部分についても引き続き検証
 
 # 参考ドキュメント
 
-[Chromium OS 派生　 CloudReady - なろぐ 2](https://narolll.hateblo.jp/entry/20201027/1603784651)
+[Chromium OS 派生 CloudReady - なろぐ 2](https://narolll.hateblo.jp/entry/20201027/1603784651)
 [グーグル、「Chromium」ベースの OS「CloudReady」の Neverware 買収 - ZDNet Japan](https://japan.zdnet.com/article/35164052/)
