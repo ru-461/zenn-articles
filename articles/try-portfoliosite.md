@@ -17,7 +17,7 @@ published: true
 私は、今まで約 3 年ほどプログラミングを勉強してきましたが、**身につけたスキルを使って成果物を作るアウトプット型の学習より、ドットインストールや Progate を使った受動的なインプット学習が中心でした**。そこでアウトプット型の学習を始めたいと思い、Vue.js を学習してポートフォリオサイトを作成しました。フレームワークとして Vue.js を選定した理由は様々あるのですが、大きく **SPA 形式のサイトを構築してみたい**。**以前に Vue.js を少し触ったことがあったため**というのがあります。最近、Web 系の情報や、記事のトレンドを見ていると、`React.js` や `Next.js`・`Nuxt.js` などの JavaScript フレームワーク名を目にすることが多くなりました。私が JavaScript を学習したのはかなり前になるので、この機会にモダンな JavaScript を学習したいという気持ちが強くなり、この機会にポートフォリオサイトを作ってみることにしました。
 こちらが今回作成したサイトになります。
 https://ryu-461-portfolio.netlify.app/#/
-![](https://storage.googleapis.com/zenn-user-upload/m7ju9d5uj1cu33ff625r28d7gezy)
+![作成したポートフォリオサイトトップページの画像](https://storage.googleapis.com/zenn-user-upload/m7ju9d5uj1cu33ff625r28d7gezy)
 _トップページ_
 **学習期間が約 2 週間、制作期間として約 2 週間、全体として約 1 ヶ月で開発しました。** [Toggle](https://toggl.com/) という時間管理ツールを使って開発している時間の記録をしたところ、完成まで 40 時間ほどかかっていました。
 以前 Web 技術の概要を勉強したときに `HTML / CSS` と `JavaScript` を触ったことあり知識はあったのですが、かなり学習期間が空いてしまっている状態からのスタートでした。そのため学習期間を含めてかなり遅いペースでの開発にはなりましたが、Vue.js の教材や情報が充実しており、**理解しながら進められたので結果的にモダンな環境での開発ができたことの達成感がすごくありました**。
@@ -52,7 +52,7 @@ _トップページ_
 ## Vue.js の学習
 
 実は 1 年ほど前に Vue.js を勉強していた時期があります。そのときに学習していた書籍がこちら。
-![](https://storage.googleapis.com/zenn-user-upload/pelpc1eitifqeqdt5g2kcsozpe27)
+![基礎から学ぶVue.js表紙の画像](https://storage.googleapis.com/zenn-user-upload/pelpc1eitifqeqdt5g2kcsozpe27)
 _基礎から学ぶ Vue.js_
 [mio さん(@mio3io)](https://twitter.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した `猫本` の愛称で親しまれている有名な 1 冊です。
 :::message
@@ -69,10 +69,10 @@ _基礎から学ぶ Vue.js_
 ## レスポンシブデザインと UI
 
 今はモバイルファーストと言われるくらいにモバイル環境(タブレット・スマートフォン)への対応が必要不可欠となっています。今回の制作でもレスポンシブデザインに対応しながらおしゃれなデザインにしたいという思いがありました。レスポンシブデザイン対応はかなり難しい印象が強くあり、今まで意識してできていなかったのですが、[Vuetify](https://vuetifyjs.com/en/) というマテリアルデザインフレームワークを導入することで柔軟に対応できました。もともと `Booststrap` をよく使っており、`BootstrapVue` というライブラリを使おうとしていたのですが、公式サイトのデザインに惹かれて今回は Vuetify を採用しました。Vuetify はコンポーネント単位でデザインしていくため、Vue.js の知識が必要ですが、同時にコンポーネントの概念について勉強して対応しました。レスポンシブ対応するときにブレークポイントを使ってレイアウトするのですが、以前 Bootstrap を使った経験があったので、直感的に理解しやすくそこまで難しいと感じることはありませんでした。簡単な記述でマテリアルデザインのコンポーネントを使うことができるので、使っていて楽しかったです。レスポンシブデザインとして、公式ドキュメントとサンプルではドロワーメニューとして以下のデザインが採用されています。
-![](https://storage.googleapis.com/zenn-user-upload/5pxbcy9wgnl92eiyr6e5y56b5rg9)
+![navigation drawersページの画像](https://storage.googleapis.com/zenn-user-upload/5pxbcy9wgnl92eiyr6e5y56b5rg9)
 _ハンバーガーメニューライク_
 このデザインがマテリアルデザインの方針としては正しいみたいです。しかしハンバーガーメニューは今まで使ってきて、個人的にあまり好きではありませんでした。UX の観点で否定的な意見を目にすることがあり、モバイル向けメニュー実装をする上どのように実装するかで悩みました。
-![](https://storage.googleapis.com/zenn-user-upload/cnvbihzp5to5nzv48qsvcc3xf3fc)
+![ドロワーを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/cnvbihzp5to5nzv48qsvcc3xf3fc)
 そこで見つけたのが [v-bottom-navigation コンポーネント](https://vuetifyjs.com/en/components/bottom-navigation/#usage)です。
 
 ```vue:components/Navigation.vue
@@ -96,7 +96,7 @@ _ハンバーガーメニューライク_
 ```
 
 上の例だとコンポーネントのクラスにブレークポイント md 以上(タブレットやラップトップパソコン以上の画面サイズ)では `bottom-navigationコンポーネント`を表示するように指定しています。これだけの記述で出し分けができるのはすごいですね。
-![](https://storage.googleapis.com/zenn-user-upload/vezcnqa3dst21tdmyi6y6pk5p5gk)
+![bottom-navigationがうまく表示できた様子](https://storage.googleapis.com/zenn-user-upload/vezcnqa3dst21tdmyi6y6pk5p5gk)
 _アイコンでページイメージがわかりやすくて好きです。アイコンは Fontawesome 使用_
 
 Vuetify はまだ日本語のドキュメントなどが少なく、コンポーネントの使い方について調べるのが少し大変な部分もありましたが、公式のドキュメントを読み込むことで一通り使うことができました。今の段階でも使えるコンポーネントが使い切れないくらいあるのですが、今も開発が進んでおりバージョンが上がり続けているため、今後のコンポーネント追加や機能追加にも期待しています。Bootstrap などの他のフレームワークにも言えますが、デザインフレームワークの導入によって簡単な記述でデザインに一体感が出せる、モダンなデザインにできるのはとても便利です。しかし、**デザインがどうしても似通ってしまうためデザイン部分では個性が出しにくいと感じました**。
