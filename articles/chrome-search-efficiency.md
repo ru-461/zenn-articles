@@ -24,7 +24,7 @@ _Chrome インストール直後の画像です。_
 ## New Tab Redirect
 
 ![New Tab RedirectのChromeウェブストアページの画像](https://storage.googleapis.com/zenn-user-upload/dak1mxxzx9msyq9stkyep0855z0m)
-[New Tab Redirect - chrome ウェブストア](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
+https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna
 
 この拡張機能を使うことで Chrome 上で新規タブが開かれたときに、自動で設定したサイトにリダイレクトをしてくれます。設定画面はこんな感じでかなりシンプルです。
 ![New tab Redirect設定画面の画像](https://storage.googleapis.com/zenn-user-upload/dia7r0wv65qh6pm8vfm90jex3e49)
@@ -48,7 +48,7 @@ _サイトのキャッシュにフォーカスが..._
 ## Google 検索キーボードショートカット
 
 ![Google 検索キーボードショートカットのストア画像](https://storage.googleapis.com/zenn-user-upload/oqbqv0vnc4zxolwle1ztpo1ndr2k)
-[Google 検索キーボードショートカット chrome ウェブストア](https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifgjemlhiekookpgjmkcelg?hl=ja)
+https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifgjemlhiekookpgjmkcelg?hl=ja
 
 操作方法はとても簡単で以下の通り。
 
