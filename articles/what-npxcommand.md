@@ -3,7 +3,7 @@ title: "npxコマンドとは？何ができるのか？"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["javascript", "npm", "初心者"]
-published: false
+published: true
 ---
 
 # はじめに
