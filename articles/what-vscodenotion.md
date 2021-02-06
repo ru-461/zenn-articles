@@ -62,7 +62,7 @@ VSCode の設定画面を開きます。設定画面は Windows であれば `ct
 
 API エラーを解消するためには、下にある `VSCode Notion Access Token` のフォームに取得した Notion のアクセストークンを入力する必要があります。
 
-### Notion のアクセストークンの取得
+## Notion のアクセストークンの取得
 
 Notion のアクセストークンを取得します。ブラウザにて Notion のページにアクセスし、DevTools を起動します。
 
