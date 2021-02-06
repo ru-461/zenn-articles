@@ -2,7 +2,7 @@
 title: "JavaScriptフレームワークのプロジェクト作成コマンドを列挙した"
 emoji: "🔧"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["javascript", "nodejs", "npm", "yarn", "ツール"]
+topics: ["javascript", "ツール", "nodejs", "npm", "yarn"]
 published: true
 ---
 
