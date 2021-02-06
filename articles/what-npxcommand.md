@@ -8,7 +8,7 @@ published: false
 
 # はじめに
 
-Nuxt.js のプロジェクトを作成する際に、公式ドキュメントを読みながらすすめていたのですが。
+Nuxt.js のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation/)を読みながらすすめていたのですが。
 
 ```shell
 $ npx create-nuxt-app <project-name>
@@ -78,3 +78,9 @@ npx コマンドを使うことで、インストールせずともスクリプ�
 `「百聞は一見にしかず」`
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+
+[nuxt/create-nuxt-app: Create Nuxt.js App in seconds.](https://github.com/nuxt/create-nuxt-app)
+[npm 5.2.0 の新機能！ 「npx」でローカルパッケージを手軽に実行しよう - Qiita](https://qiita.com/tonkotsuboy_com/items/8227f5993769c3df533d#comments)
+[npm と npx。なにが違う？ - Qiita](https://qiita.com/sivertigo/items/622550c5d8ec991e59a6)
