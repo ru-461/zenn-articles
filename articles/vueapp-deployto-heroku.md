@@ -87,7 +87,7 @@ $ heroku login
 `q`以外のキーを押すと自動的にデフォルトのブラウザで Heroku のログイン画面が開かれるのでブラウザ上でアカウントへログインします。
 
 以下の画面が表示されたら正常にログインできています。
-![Logged In](https://storage.googleapis.com/zenn-user-upload/mwtpkmsj2zy19usm5621nxm5zxxy)
+![ログイン成功後の画面](https://storage.googleapis.com/zenn-user-upload/mwtpkmsj2zy19usm5621nxm5zxxy)
 
 ```shell
 Logging in... done
@@ -153,7 +153,7 @@ $ heroku open
 ```
 
 デフォルトのブラウザが起動してアプリのページが表示されれば正常にアプリが作成されています。
-![created app](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
+![アプリの初期ページを開いた様子](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
 Web ブラウザからアクセスできることが確認できれば OK です。
 
 ## アプリをビルドする環境を作成
@@ -205,7 +205,7 @@ $ git push heroku main
 $ heroku open
 ```
 
-![deployed app](https://storage.googleapis.com/zenn-user-upload/p53cv0lij6jtdhcts1c2f09bgv5l)
+![ブラウザからデプロイしたアプリを開いた様子](https://storage.googleapis.com/zenn-user-upload/p53cv0lij6jtdhcts1c2f09bgv5l)
 
 VueCLI で作成したプロジェクトがブラウザに表示され動作が確認できました。
 
