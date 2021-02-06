@@ -2,7 +2,7 @@
 title: "WSL2を日本語化するときにやったこと"
 emoji: "♨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["wsl", "Windows", "初心者", "ubuntu"]
+topics: ["wsl2", "Windows", "初心者", "ubuntu", "Linux"]
 published: true
 ---
 
@@ -10,7 +10,7 @@ published: true
 
 # 環境
 
-- Windows10 20H2
+- Windows 10 バージョン 20H2
 - Windows Subsystem for Linux 2(WSL2)
 - Ubuntu 20.04.1 LTS (Focal Fossa)
 
