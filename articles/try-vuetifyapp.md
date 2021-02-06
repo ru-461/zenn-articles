@@ -427,7 +427,5 @@ Vue.js を使って初めてアプリを作る人の参考になれば幸いで�
 # 参考
 
 [Vuetify に入門する](https://qiita.com/azukiazusa/items/16ebffd361af8fa58333)
-
-[レイアウト微調整に便利な Spacing Helper (Vuetify) を使ってみる](https://riotz.works/articles/lopburny/2019/08/12/arrange-vuetify-components-with-spacing-helper/)
-
 [Font awesome を Vue.js で使ってみよう](https://qiita.com/kurararara/items/d76776a7dc2d763a068b)
+[レイアウト微調整に便利な Spacing Helper (Vuetify) を使ってみる](https://riotz.works/articles/lopburny/2019/08/12/arrange-vuetify-components-with-spacing-helper/)
