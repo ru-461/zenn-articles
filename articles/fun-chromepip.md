@@ -2,7 +2,7 @@
 title: "ピクチャー イン ピクチャーで堕落した作業環境を作る"
 emoji: "🪟"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["windows", "chrome", "ツール"]
+topics: ["windows", "chrome", "ツール", "chrome拡張"]
 published: true
 ---
 
