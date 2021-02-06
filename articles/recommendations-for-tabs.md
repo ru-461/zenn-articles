@@ -16,23 +16,23 @@ https://workona.com/
 
 こちらが「Workona」というブラウザ向け拡張機能になります。この拡張機能は Zenn にて[futsu さん](https://zenn.dev/futsu)の[いつもの作業が 5 秒速くなるツールをひたすら列挙するページ](https://zenn.dev/futsu/articles/d54d7dfda7bb7f81a93e)という記事を見て知りました。有益なツールを紹介していただいてありがとうございます。この拡張機能を導入することでタブを種類や目的別で管理できるようになります。
 最初は、拡張機能のストアページを見ても動作イメージがピンとこなかったのですが、インストールすることですぐに使えるようになり直感的に扱えるのが驚きでした。私は毎日決まったサイトにアクセスして更新を確認したり、情報を得ることが多いため、Workona でタブを一元管理できるようにしています。
-![](https://storage.googleapis.com/zenn-user-upload/lk3cumgzgrumzmmltkviu61cddj8)
+![タブを切り替えて表示する様子](https://storage.googleapis.com/zenn-user-upload/lk3cumgzgrumzmmltkviu61cddj8)
 ワークスペースにタブを登録して、複数のタブをまとめて切り替えています。目的別のワークスペースを区切っているため、やりたいことに集中できるように工夫しています。
 
 # 使い方
 
 まず、[Workona 公式ページ](https://workona.com/)にブラウザでアクセスしサインアップします。
-![](https://storage.googleapis.com/zenn-user-upload/cifgjq90clqdnxe1ei8q8izbmrpz)
+![Workona公式ページトップ画像](https://storage.googleapis.com/zenn-user-upload/cifgjq90clqdnxe1ei8q8izbmrpz)
 _SIGN UP FREE ボタンから新規にアカウント作成できます_
 
 サインアップは現在 Google アカウントかメールアドレスを使った認証ができます。
-![](https://storage.googleapis.com/zenn-user-upload/vm5f2gqbvxu44dxqoy4aw65szdto)Google のアカウントを持っていればログインするだけですぐに使い始めることができます。サインアップが完了したらタブを登録していきます。このタイミングで拡張機能の追加を促されるので予め以下の拡張機能をそれぞれインストールしておくをおすすめします。
+![アカウント作成ページの画像](https://storage.googleapis.com/zenn-user-upload/vm5f2gqbvxu44dxqoy4aw65szdto)Google のアカウントを持っていればログインするだけですぐに使い始めることができます。サインアップが完了したらタブを登録していきます。このタイミングで拡張機能の追加を促されるので予め以下の拡張機能をそれぞれインストールしておくをおすすめします。
 
 - [Workona (Chrome ウェブストア)](https://chrome.google.com/webstore/detail/workona/ailcmbgekjpnablpdkmaaccecekgdhlh)
 - [Workona (Firefox ADD-ONS)](https://addons.mozilla.org/ja/firefox/addon/workona/)
 
 Workona 公式の拡張機能になります。この拡張機能を入れることでワークスペースが表示されるようになります。ワークスペースとはタブをまとめて管理するためのグループのようなものです。ワークスペースでタブを管理してワークスペース単位でタブをまとめて切り替えるのがこの拡張機能の主な機能となります。このあとはこのワークスペースにジャンルごとタブを登録していくことになります。Workona をインストールするとブラウザに固定タブ形式で管理ページが開かれます。
-![](https://storage.googleapis.com/zenn-user-upload/0mfmh2tdbba6hoazvptptxhayv71)
+![タブ管理ページの画像](https://storage.googleapis.com/zenn-user-upload/0mfmh2tdbba6hoazvptptxhayv71)
 右側の `Tabs` が現在のワークスペースで開いているタブです。左の `Resources` にタブを追加することで、次回からワークスペースを開いたときに登録したタブを一度に開いてくれるようになります。Workona ではワークスペース内で開いていたタブを保持しているため、次にワークスペースを開いたときに前回開いていたタブをそのまま復元してくれます。
 
 # 私の運用方法
@@ -52,7 +52,7 @@ Workona 公式の拡張機能になります。この拡張機能を入れるこ
 # ショートカットキーでもっと便利に
 
 Workona には便利なショートカットキーが用意されています。覚えるだけでキーボードで簡単にワークスペースを切り替えられるようになるので便利です。私は、現在このように設定しています。 ここは自分の使いやすいようにカスタマイズしてみてください。`CHANGE SHORTCUT KEYS`から設定を変えることができます。以下 Windwows での設定例となります。他の OS を使っている方は適宜読み替えてください。
-![](https://storage.googleapis.com/zenn-user-upload/dziwh604qvcvp05mjya8uov28h3y)
+![ショートカットキー設定の画像](https://storage.googleapis.com/zenn-user-upload/dziwh604qvcvp05mjya8uov28h3y)
 操作は以下の通りです。
 | ショートカット | 操作 |
 | ---- | ---- |
@@ -68,13 +68,13 @@ Workona には便利なショートカットキーが用意されています。
 
 ### ワークスペースの切り替え
 
-![](https://storage.googleapis.com/zenn-user-upload/occ0wdj7switxfz30b7n4x5gf481)
+![ワークスペース切り替えの画像](https://storage.googleapis.com/zenn-user-upload/occ0wdj7switxfz30b7n4x5gf481)
 ワークスペースの切り替えをショートカットで呼び出して現在開いているワークスペースを一覧表示できます。表示するワークスペースの色はそれぞれ設定できるので、ジャンルやカテゴリによって分けています。色で識別できるようにすることで目的のワークスペースを探しやすくなります。この状態でキーボードの `← → カーソル`を使ってワークスペースを切り替えることができます。
-![](https://storage.googleapis.com/zenn-user-upload/lk3cumgzgrumzmmltkviu61cddj8)
+![タブが切り替わる様子](https://storage.googleapis.com/zenn-user-upload/lk3cumgzgrumzmmltkviu61cddj8)
 
 ### 検索
 
-![](https://storage.googleapis.com/zenn-user-upload/dlffdeuw8nmc3m6wai0u8mb74bqt)
+![検索機能を使う様子](https://storage.googleapis.com/zenn-user-upload/dlffdeuw8nmc3m6wai0u8mb74bqt)
 
 Workona の検索機能を使うことで現在開いているワークスペース以外にもワークスペースをまたいで検索できます。上の GIF ではブラウザの履歴から `Vurtifyのドキュメント`へ検索を使ってアクセスしています。ワークスペースで開いているタブ、登録しているタブ以外にも履歴から検索できるのがとても便利です。履歴やタブの検索以外にも Google を使っての新規検索もできるため、目的の情報へのアクセスが格段に行いやすくなります。
 
