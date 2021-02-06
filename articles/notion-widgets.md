@@ -1,5 +1,5 @@
 ---
-title: "Notionに便利なウィジェットを配置する"
+title: "Notionに便利なウィジェットを配置する [Apption]"
 emoji: "📌"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["notion", "ツール", "Apption"]
@@ -19,7 +19,8 @@ Notion にウィジェットを埋め込むために外部サービスを使う�
 
 ウィジェットを埋め込むと Notion のページから天気予報や時計を表示させることができます。
 実際に、現在時刻(JST)と東京の週間天気予報を表示するとこのようになります。
-![Sample Dash Board](https://i.gyazo.com/07c203fcff51a450d44558920a8a6344.gif)
+![ウィジットを追加したダッシュボードの画像](https://i.gyazo.com/07c203fcff51a450d44558920a8a6344.gif)
+*アニメーションに対応しているため動きます*
 アニメーションに対応しているウィジェットはウィジェット内でアニメーションさせることができます。上の例では、時刻の秒表記と天気アイコンがアニメーションしています。ページに動きが出ると一気におしゃれになりますね。
 
 # Apption へのアカウント登録
@@ -32,20 +33,20 @@ Notion にウィジェットを埋め込むために外部サービスを使う�
 :::
 アカウントの登録はメールアドレスとパスワードのみ、簡単に作成できます。アカウント登録後にサインインすることでトップページ右上に自分の作成したアカウント名が表示されていればアカウントの登録が完了となります。
 
-# 天気予報ウィジェットを埋め込んでみる
+# 天気予報ウィジェットを埋め込む
 
 ウィジェットの中から登録したいウィジェットを選択して指示に従うだけで簡単に Notion へウィジェットを追加できます。サンプルとして一週間の天気予報が見れるウィジェットを追加してみます。まずトップページから天気ウィジェットを選択します。
 
-![天気ウィジェット](https://storage.googleapis.com/zenn-user-upload/ndr9wpgf67sjmda7bxevtw6xhf18)
+![天気ウィジェットの画像](https://storage.googleapis.com/zenn-user-upload/ndr9wpgf67sjmda7bxevtw6xhf18)
 こちらが天気ウィジェットになります。
 
 天気ウィジェットを選択すると簡単なチュートリアルが表示されます。
 ウィジェットには簡単なサンプルコードが用意されているので `/ embed `を使いリンクをペーストするだけで自分の作成したページに埋め込んで動作を確認できるのが便利です。
-![tutorial](https://storage.googleapis.com/zenn-user-upload/djoqbzfa1ml1gpjlmcyqwxud7510)
+![使い方説明の画像](https://storage.googleapis.com/zenn-user-upload/djoqbzfa1ml1gpjlmcyqwxud7510)
 `Try in your page!`の中にあるコードを Notion に埋め込んでみてください。
 
 自動的にウィジェットに変換されてサンプルのウィジェットが埋め込まれます。
-![sample](https://i.gyazo.com/1db3f598a0cbd98d2cd7a2a38a55db28.gif)
+![ウィジットをNotionに埋め込む様子](https://i.gyazo.com/1db3f598a0cbd98d2cd7a2a38a55db28.gif)
 
 コードを埋め込むだけで簡単にニューヨークの天気ウィジェットが埋め込まれました。
 この天気ウィジェットは自分の住む地域に合わせてカスタマイズできます。
@@ -57,7 +58,7 @@ Notion にウィジェットを埋め込むために外部サービスを使う�
 カスタマイズページではプレビューを見ながら自分好みにカスタマイズしていきます。
 例として、東京の一週間の天気予報ウィジェットを作成してみます。
 `select Location`に取得したい天気予報の地域を指定します。アルファベットで取得したい都市名を入力すると候補が表示されるので、候補の中から選ぶことで地点選択ができます。
-![Tokyo](https://storage.googleapis.com/zenn-user-upload/26ojk4trqmhuzfy4iepiky2j7pef)
+![東京の天気を表した画像](https://storage.googleapis.com/zenn-user-upload/26ojk4trqmhuzfy4iepiky2j7pef)
 ラベルの表示名やアイコン、温度の単位などはタブから自由にカスタマイズできます。カスタマイズができたら下にある `GET CODE` から `HTML埋め込みコード` を取得します。
 
 ```JavaScript
@@ -73,13 +74,13 @@ Notion にウィジェットを埋め込むために外部サービスを使う�
 ## Notion へカスタマイズしたウィジェットを埋め込む
 
 埋め込みを行うために HTML のコードを Notion で表示できる形式に変換する必要があります。 Apption が提供する[DIY Embed URL](https://apption.co/embeds/new)で Notion に埋め込み表示できる形式へと変換できます。
-![埋め込みURlへ変換](https://storage.googleapis.com/zenn-user-upload/d3puz7x7uc2o1wj67vvtnk2l3qnb)
+![埋め込みURlへ変換するページの画像](https://storage.googleapis.com/zenn-user-upload/d3puz7x7uc2o1wj67vvtnk2l3qnb)
 フォームの中に先程生成した埋め込みコードをペーストし、`Generate URL` をクリックします。
-![変換結果](https://storage.googleapis.com/zenn-user-upload/jqnnf3afowrql0273drgmi2x29xa)
+![変換結果の画像](https://storage.googleapis.com/zenn-user-upload/jqnnf3afowrql0273drgmi2x29xa)
 Notion 埋め込み用コードが生成されました。このコードを Notion で作成したページに埋め込むことで Notion 上でウィジェットとして表示されるようになります。Notion の設定に合わせて `light` `dark` を切り替えることもできます。
 
 生成されたコードを Notion で作成したページに埋め込んでいきます。
-![customized](https://i.gyazo.com/1442f9a77199a59a019cfbd573eba26f.gif)
+![カスタマイズした天気ウィジットを埋め込む様子](https://i.gyazo.com/1442f9a77199a59a019cfbd573eba26f.gif)
 埋め込んだあとは、幅や高さを変えることでレスポンシブにスタイルを変えることができるため、Notion 内で自由に配置できます。
 
 上記したアカウントの登録で作成したウィジェットを保存できるため、一度作成したウィジェットは Apption のマイページから埋め込みコードを取得できるようになります。この手順と同じように他のウィジェットも登録して表示できます。他にも使える機能が多くあるため、試してみてください。
