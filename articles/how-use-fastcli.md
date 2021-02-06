@@ -1,5 +1,5 @@
 ---
-title: "ターミナルから爆速で回線速度を計測する"
+title: "ターミナルから爆速で回線速度を計測する [fast-cli]"
 emoji: "🌠"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["nodejs", "npm", "yarn", "ツール"]
