@@ -1,8 +1,8 @@
 ---
 title: "新しい技術を学ぶときに意識している3つのこと"
-emoji: "🌟"
+emoji: "🍽"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["ポエム"]
+topics: ["プログラミング", "ポエム", "初心者", "学び"]
 published: false
 ---
 
