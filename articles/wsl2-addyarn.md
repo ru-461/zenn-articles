@@ -8,16 +8,25 @@ published: false
 
 # Yarnとは？
 
-`Yarn` とは Node.js 用のパッケージマネージャーです。
+`Yarn` とは JavaScript 用のパッケージマネージャーです。
 
 Node.js をインストールすると標準で `npm(Node Package Manager)` というパッケージマネージャーが付属します。
-Node.js 向けのパッケージマネージャとしては `npm` が有名ですが、他にもパッケージマネージャーはいくつか存在します。
+パッケージマネージャとしては `npm` が有名ですが、他にもパッケージマネージャーはいくつか存在します。
 その中の１つに FaceBook 社が開発した Yarn というパッケージマネージャーがあります。
 
-公式ページ
+Yarn 公式ページ
 https://yarnpkg.com/
 
-今回は Node.js をインストールしてある WSL2(Windows Sub System for Linux 2)の環境に Yarn を導入して動かすところまで行います。
+Yarn は npm が問題としていた部分を抑えるように設計され、登場当時は npm よりインストール速度が早くなったりとメリットが大きかったようです。
+今では npm のバージョンアップで差があまりなくなってきたとのこと。
+
+JavaScript 用パッケージマネージャーについて詳しく解説してくれている記事がありました。
+
+https://zenn.dev/hibikine/articles/27621a7f95e761
+
+優良な解説記事ありがとうございます！
+
+今回は WSL2(Windows Sub System for Linux 2)の環境に Node.js と Yarn を導入して動かすところまで行います。
 
 :::message
 現在、Yarn には `V1` と `V2` が存在します。この記事内では Yarn V1 のインストール手順にについて解説します。
@@ -27,7 +36,6 @@ https://yarnpkg.com/
 
 - Windows10 バージョン 20H2
 - WSL2 (Ubuntu 20.04.1 LTS (Focal Fossa))
-- Node.js v14.15.4 (LTS)
 # インストール
 ## Node.jsのインストール
 
@@ -63,12 +71,12 @@ $ sudo apt purge -y nodejs npm
 $ sudo apt autoremove -y
 ```
 
-n で node.js がうまくインストールされているかを確認します。
+n で Node.js がうまくインストールされているかを確認します。
 
 ```shell
 $ node -v
 
-v14.15.4
+  v14.15.4
 ```
 バージョンが返ってきたら WSL2 に Node.js がインストールされています。
 
@@ -78,12 +86,8 @@ v14.15.4
 
 ## aptでインストール
 
-WSL2npm がインストールされていなくてもインストール可能な方法です。
+npm がインストールされていなくてもインストール可能な方法です。
 
-:::message
-apt でインストールする際はにリポジトリの追加と構成を必ず行ってください。
-リポジトリを更新しないとうまくインストールできない可能性があります。
-:::
 
 まずリポジトリを追加します。
 リポジトリの追加に Curl を使うため、予め Curl コマンドをインストールしておきます。
@@ -97,6 +101,10 @@ $ which curl
 ```
 
 curl が使えるようになったら以下のコマンドでリポジトリを追加します。
+:::message
+apt でインストールする際は以下のリポジトリ追加と構成を必ず行ってください。
+リポジトリを更新しないとうまくインストールできない可能性があります。
+:::
 
 ```shell
 $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -122,6 +130,8 @@ $ yarn --version
 $ sudo npm install -g yarn
 ```
 
+インストールされたバージョンを確認します。
+
 ```shell
 $ yarn --version
 
@@ -129,9 +139,19 @@ $ yarn --version
 ```
 npm を使って導入する場合、グローバルオプション(-g) を付けてグローバルにインストールすることが公式ドキュメントにて推奨されています。
 
-今現在は `yarn V2` というバージョンが開発中とのことなので今後調べて触ってみたいです。
+# さいごに
 
+WSL2 に Node.js と Yarn をインストールする方法についてまとめました。
+パッケージマネージャーは依存性を解決しながらモジュールを管理してくれる優秀なツールで、JavaScript の開発をする上では必要不可欠です。
+今回の記事が WSL2 を使って JavaScript 開発を始めるうえで参考になれば幸いです。
+
+この記事内では触れませんでしたが、今現在は `yarn V2` というバージョンが開発中とのことなので今後調べて触ってみたいです。
 
 最後まで読んでいただきありがとうございました。
 
 # 参考
+
+[npmとyarnとpnpmの違い2021](https://zenn.dev/hibikine/articles/27621a7f95e761)
+[ubuntu 18.04 にyarn をインストールする - Qiita](https://qiita.com/crash-boy/items/5c9b7341e95b142e0d56)
+[Installation | Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
+[tj/n: Node version management](https://github.com/tj/n)
