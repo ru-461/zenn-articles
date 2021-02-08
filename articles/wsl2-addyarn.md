@@ -2,7 +2,7 @@
 title: "WSL2にNode.jsとYarnを導入する"
 emoji: "📥"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["wsl2", "yarn", "nodejs"]
+topics: ["wsl2", "yarn", "nodejs","npm"]
 published: true
 ---
 
