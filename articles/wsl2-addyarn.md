@@ -19,6 +19,15 @@ https://yarnpkg.com/
 
 今回は Node.js をインストールしてある WSL2(Windows Sub System for Linux 2)の環境に Yarn を導入して動かすところまで行います。
 
+:::message
+現在、Yarn には `V1` と `V2` が存在します。この記事内では Yarn V1 のインストール手順にについて解説します。
+:::
+
+# 環境
+
+- Windows10 バージョン 20H2
+- WSL2 (Ubuntu 20.04.1 LTS (Focal Fossa))
+- Node.js v14.15.4 (LTS)
 # インストール
 ## Node.jsのインストール
 
@@ -63,3 +72,66 @@ v14.15.4
 ```
 バージョンが返ってきたら WSL2 に Node.js がインストールされています。
 
+## Yarnのインストール
+
+つづいて Yarn を使いたいため、インストールしていきます。Yarn のインストール方法は複数あります。
+
+## aptでインストール
+
+WSL2npm がインストールされていなくてもインストール可能な方法です。
+
+:::message
+apt でインストールする際はにリポジトリの追加と構成を必ず行ってください。
+リポジトリを更新しないとうまくインストールできない可能性があります。
+:::
+
+まずリポジトリを追加します。
+リポジトリの追加に Curl を使うため、予め Curl コマンドをインストールしておきます。
+
+```shell
+$ sudo apt install -y curl
+
+# コマンドの確認
+$ which curl
+  /usr/bin/curl
+```
+
+curl が使えるようになったら以下のコマンドでリポジトリを追加します。
+
+```shell
+$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
+
+リポジトリを追加したら以下のコマンドを実行します。
+
+```shell
+$ sudo apt update && sudo apt install yarn
+```
+
+Yarn がインストールされたか確認します。
+
+```shell
+$ yarn --version
+  1.22.5
+```
+
+## npmを使ってインストール
+
+```shell
+$ sudo npm install -g yarn
+```
+
+```shell
+$ yarn --version
+
+  1.22.10
+```
+npm を使って導入する場合、グローバルオプション(-g) を付けてグローバルにインストールすることが公式ドキュメントにて推奨されています。
+
+今現在は `yarn V2` というバージョンが開発中とのことなので今後調べて触ってみたいです。
+
+
+最後まで読んでいただきありがとうございました。
+
+# 参考
