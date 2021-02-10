@@ -69,9 +69,10 @@ VSCode 公式の設定同期機能はこちらからオンにできます。
 Stable 版同士であっても同じ手順を踏むことで同期が可能です。
 
 :::message
-Stable 版と Insiders 版で設定の同期が可能ですが、それぞれ機能の違いで非整合が起こる可能性があるとされています。
-違うビルド同士での同期は一時的なものとして使い、環境が安定した段階で Stable 版に乗り換えて再度同期するのが無難だと思われます。
+Stable 版と Insiders 版で設定の同期は可能ですが、同期した際にデータの非互換性が生じる場合もある[^1]とされています。非互換性が生じた場合は自動的に同期がオフになるとのことですが、異なるビルド同士での同期は一時的なものとして使用し、環境が安定した段階で Stable 版に乗り換えて再度同期するのが無難だと思われます。
 :::
+
+[^1]: [Can I share settings between VS Code Stable and Insiders?](https://code.visualstudio.com/docs/editor/settings-sync#_can-i-share-settings-between-vs-code-stable-and-insiders)
 
 ![設定同期をオンにする様子](https://storage.googleapis.com/zenn-user-upload/nzyepfjno7qulnoaiuuffk0nj6c9)
 *左下の設定アイコンクリックでメニューが現れます*
@@ -115,7 +116,7 @@ Mac 側に Insiders 版の VSCode をインストールし、Windows 版(Stable 
 *Windows(Stable 版) ・MacBook Pro(Insider 版)*
 
 今回は起こりませんでしたが、同期を取り込む側で先に同期データが存在していた場合、設定の競合が発生します。
-その場合は一旦 `設定の同期をオフ → 全てのデバイスで同期をオフにし、クラウドから同期データを消去します。` へチェックし同期機能をオフ。もう 1 度設定の同期機能をオンにすることで解決します。
+その場合は一旦 `設定の同期をオフ → 全てのデバイスで同期をオフにし、クラウドから同期データを消去します。` へチェックし同期機能をオフ。もう一度設定の同期機能をオンにすることで解決します。
 
 ![同期オフの確認画面](https://storage.googleapis.com/zenn-user-upload/ckks1sdedjjg25gz6spuvogalsgq)
 
