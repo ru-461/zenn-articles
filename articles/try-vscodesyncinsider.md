@@ -49,9 +49,11 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 
 同期がうまくできないこと以外に関しては満足して今日まで使ってきました。そろそろ Stable 版も ARM アーキテクチャ対応版がでるといった話が流れ始めた頃、VSCode の公式ドキュメントを眺めていたら Stable 版と Insider 版で設定の同期ができるとのトピックがあり、試したところ上手くいきました。
 
-## Windows側で設定同期機能をオンにする
+## Stable版で設定同期機能をオンにする
 
 VSCode 公式の設定同期機能はこちらからオンにできます。
+この記事内では、Windows 側(Stable 版)から Mac(Insiders 版)への同期を解説します。
+Stable 版同士であっても同じ用に設定同期が可能です。
 
 ![設定同期をオンにする様子](https://storage.googleapis.com/zenn-user-upload/nzyepfjno7qulnoaiuuffk0nj6c9)
 *左下の設定アイコンクリックでメニューが現れます*
@@ -67,7 +69,7 @@ VSCode 公式の設定同期機能はこちらからオンにできます。
 ![使用するアカウントの選択画面](https://storage.googleapis.com/zenn-user-upload/zddtezfrdvcj9hbbfm7hj0zaqh3y)
 *私はGithubアカウントでサインインしました*
 
-右下に成功のメッセージが表示されたらうまくクラウドに保存できています。
+右下に成功のメッセージが表示されたらうまくクラウドに保存され同期する準備ができています。
 以上で同期する側の設定は終わりです。
 
 # おわりに
