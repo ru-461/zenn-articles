@@ -1,5 +1,5 @@
 ---
-title: "Windows & M1 Mac VSCode同期戦略"
+title: "Windows と M1 Macの VSCode同期戦略"
 emoji: "🔄"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["vscode", "windows", "mac", "m1"]
@@ -11,12 +11,14 @@ published: false
 昨年、`VSCode` で `version 1.48` から安定版(Stable)でも設定同期機能(Settings Sync)が使えるようになり話題となりました。
 VSCode には、Stable 版と、Inseders 版という２つの開発バージョンがあります。Insiders 版で先に新機能が試験的に搭載され、安定したら Stable 版にも追加されるといった形で開発が進められています。
 
-普段、私達がよく目にするのは Stable 版となり、安定版と呼ばれています。
+普段、私達がよく目にする青い VSCode は Stable 版となり、安定版と呼ばれています。
 
 ![VSCodeのアイコン画像](https://storage.googleapis.com/zenn-user-upload/tgrrxh4oo27xz99wxxw1tcfb5vuh)
 *右がStable版、左がInsiders版のアイコン*
 
 VSCode 公式が設定同期機能を実装し話題になりましたが、今まで拡張機能に設定同期する拡張機能は存在していました。
+
+https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 しかし、私は当時メインマシンである Windows で主に開発していたため、同期の拡張機能については全く触れていませんでした。昨年末に、開発用に M1 チップを搭載した Macbook Pro をお迎えしたのですが、開発環境を構築する上で小さな葛藤がありました。小さな問題ですが、設定の方法が分からず解決まで時間がかかったため、備忘録としてまとめます。
 
@@ -51,6 +53,7 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 
 同期がうまくできないこと以外に関しては満足して今日まで使ってきました。そろそろ Stable 版も ARM アーキテクチャ対応版がでるといった話が流れ始めた頃、VSCode の公式ドキュメントを眺めていたら Stable 版と Insiders 版で設定の同期ができるとのトピックがあり、試したところ上手くいきました。
 
+https://code.visualstudio.com/docs/editor/settings-sync#_syncing-stable-versus-insiders
 ## 設定同期機能をオンにする
 
 VSCode 公式の設定同期機能はこちらからオンにできます。
@@ -75,7 +78,7 @@ Stable 版同士であっても同じ用に設定同期が可能です。
 右下に成功のメッセージが表示されたらうまくクラウドに保存され同期する準備ができています。
 以上で同期する側の設定は終わりです。
 
-## 設定を取り込みたい側でも同期機能をオンにする
+## 設定を取り込みたいVSCodeで同期機能をオンにする
 
 同期させたいデータをクラウドに保存できたら、同期させたい端末側での操作が必要です。
 今回は、Insiders 版に Stable 版の設定を同期させます。
@@ -112,8 +115,14 @@ Mac 側に Insiders 版の VSCode をインストールし、Windows 版(Stable 
 
 各々が使いやすいようにカスタマイズした環境をプラットフォームにとらわれることなく使えることで、VSCode の設定に悩む時間を減らし、開発に集中できますね。この記事が誰かの参考になれば幸いです。
 
+---
 最近は、VSCode の [Updates](https://code.visualstudio.com/updates/v1_53) をよく眺めているのですが、現行バージョン(1.53)で Stable 版が M１チップ(arm64)に対応する予定が、[macOS Big Sur 11.2 でWASMモジュールをロードすると拡張モジュールがクラッシュする問題](https://github.com/microsoft/vscode/issues/115646)により難航している旨の記述がありました。
 
-去年から Stable 版でのネイティブ動作が待ち望まれてる VSCode ですが、公式のドキュメントから分かるように完全サポートされる日も近いと思われます。今後のアップデートを要チェックですね。
+M1 Mac の登場当時から多くの開発者に Stable 版でのネイティブ動作が待ち望まれてる VSCode ですが、公式のドキュメントから分かるように完全サポートされる日も近いと思われます。今後のアップデートを要チェックですね。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+
+- [Visual Studio Code January 2021](https://code.visualstudio.com/updates/v1_53#_engineering)
+- [Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync#_can-i-share-settings-between-vs-code-stable-and-insiders)
