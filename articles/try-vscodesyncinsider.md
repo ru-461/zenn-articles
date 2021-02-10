@@ -8,19 +8,21 @@ published: true
 
 # はじめに
 
-昨年、`VSCode` で `version 1.48` から安定版(Stable)でも設定同期機能(Settings Sync)が使えるようになり話題となりました。
-VSCode には、Stable 版と、Inseders 版という２つの開発バージョンがあります。Insiders 版で先に新機能が試験的に搭載され、安定したら Stable 版にも追加されるといった形で開発が進められています。
+Microsoft 社が開発しているエディタ[VisualStudioCode(VSCode)](https://code.visualstudio.com/) で昨年 7 月のアップデート [version 1.48](https://code.visualstudio.com/updates/v1_48) から VSCode 設定同期機能(Settings Sync)が使えるようになり話題となりました。
+VSCode には、`Stable release` と、`Inseders release` という２つのバージョンがあります。Insiders 版で先に新機能が試験的に搭載され、安定したら Stable 版にも追加されるといった形で開発が進められています。設定同期機能はもともと Insiders 版で試験的に実装されており、昨年アップデートで Stable 版でも使えるようになりました。
 
-普段、私達がよく目にする青い VSCode は Stable 版となり、安定版と呼ばれています。
+普段、私達がよく目にする青い VSCode は Stable 版となり、安定版と呼ばれています。Insidera 版少し緑がかった色のアイコンをしており、色で区別がつくようになっています。
+
+**それぞれの VSCode は独立しているため、同じ PC 内に共存させることも可能です。**
 
 ![VSCodeのアイコン画像](https://storage.googleapis.com/zenn-user-upload/tgrrxh4oo27xz99wxxw1tcfb5vuh)
 *右がStable版、左がInsiders版のアイコン*
 
-VSCode 公式が設定同期機能を実装し話題になりましたが、今まで拡張機能に設定同期する拡張機能は存在していました。
+昨年、VSCode 公式が Stable 版に設定同期機能を実装し話題になりましたが、今まで VSCode の設定を同期する拡張機能は存在していました。
 
 https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
-しかし、私は当時メインマシンである Windows で主に開発していたため、同期の拡張機能については全く触れていませんでした。昨年末に、開発用に M1 チップを搭載した Macbook Pro をお迎えしたのですが、開発環境を構築する上で小さな葛藤がありました。小さな問題ですが、設定の方法が分からず解決まで時間がかかったため、備忘録としてまとめます。
+しかし、私は当時メインマシンである Windows(WSL) で主に開発していたため、同期の拡張機能については全く触れていませんでした。昨年末に、開発用に M1 チップを搭載した Macbook Pro をお迎えしたのですが、開発環境を構築する上で小さな葛藤がありました。小さな問題ですが、設定の方法が分からず解決まで時間がかかったため、備忘録としてまとめます。
 
 # 何が問題だったのか
 
@@ -64,7 +66,12 @@ https://code.visualstudio.com/docs/editor/settings-sync#_syncing-stable-versus-i
 
 VSCode 公式の設定同期機能はこちらからオンにできます。
 この記事内では、Windows 側(Stable 版)から Mac(Insiders 版)への同期を解説します。
-Stable 版同士であっても同じ用に設定同期が可能です。
+Stable 版同士であっても同じ手順を踏むことで同期が可能です。
+
+:::message
+Stable 版と Insiders 版で設定の同期が可能ですが、それぞれ機能の違いで非整合が起こる可能性があるとされています。
+違うビルド同士での同期は一時的なものとして使い、環境が安定した段階で Stable 版に乗り換えて再度同期するのが無難だと思われます。
+:::
 
 ![設定同期をオンにする様子](https://storage.googleapis.com/zenn-user-upload/nzyepfjno7qulnoaiuuffk0nj6c9)
 *左下の設定アイコンクリックでメニューが現れます*
