@@ -1,8 +1,8 @@
 ---
-title: "Windows & Mac VSCode同期戦略"
+title: "Windows & M1 Mac VSCode同期戦略"
 emoji: "🔄"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["vscode", "windows", "mac"]
+topics: ["vscode", "windows", "mac", "m1"]
 published: false
 ---
 
@@ -105,3 +105,14 @@ Mac 側に Insiders 版の VSCode をインストールし、Windows 版(Stable 
 設定同期機能はまだプレビュー版ではありますが不具合なく使えており満足しています。
 
 # おわりに
+
+今回は VSCode 公式の設定同期機能を使って Stable 版と Insiders 版を同期しました。
+これで Windows マシンの環境にて使っていた VSCode 拡張機能を MacBook 側でも簡単にインストールできるようになりました。その他、同期したくない項目についても設定ファイルで柔軟に設定できるようです。つい昨年 Stable 版にて実装された機能となりまだプレビュー版ではありますが、設定がしやすくできる点、簡単に同期を行える点ではさすが公式という印象を受けました。
+
+各々が使いやすいようにカスタマイズした環境をプラットフォームにとらわれることなく使えることで、VSCode の設定に悩む時間を減らし、開発に集中できますね。この記事が誰かの参考になれば幸いです。
+
+最近は、VSCode の [Updates](https://code.visualstudio.com/updates/v1_53) をよく眺めているのですが、現行バージョン(1.53)で Stable 版が M１チップ(arm64)に対応する予定が、[macOS Big Sur 11.2 でWASMモジュールをロードすると拡張モジュールがクラッシュする問題](https://github.com/microsoft/vscode/issues/115646)により難航している旨の記述がありました。
+
+去年から Stable 版でのネイティブ動作が待ち望まれてる VSCode ですが、公式のドキュメントから分かるように完全サポートされる日も近いと思われます。今後のアップデートを要チェックですね。
+
+最後まで読んでいただきありがとうございました。
