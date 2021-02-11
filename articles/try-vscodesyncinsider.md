@@ -16,7 +16,7 @@ VSCode には、`Stable release` と、`Inseders release` という２つのバ�
 **それぞれの VSCode は独立しているため、同じ PC 内に共存させることも可能です。**
 
 ![VSCodeのアイコン画像](https://storage.googleapis.com/zenn-user-upload/tgrrxh4oo27xz99wxxw1tcfb5vuh)
-*右がStable版、左がInsiders版のアイコン*
+*左がStable版、右がInsiders版のアイコン*
 
 昨年、VSCode 公式が Stable 版に設定同期機能を実装し話題になりましたが、今まで VSCode の設定を同期する拡張機能は存在していました。
 
