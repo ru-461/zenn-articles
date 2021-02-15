@@ -1,9 +1,9 @@
 ---
-title: "VSCode使いなら使いたいCodeコマンド"
+title: "VSCode使いなら抑えておくべきCodeコマンド"
 emoji: "🌊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vscode","windows","mac"]
-published: false
+published: true
 ---
 
 # はじめに
