@@ -1,6 +1,6 @@
 ---
 title: "プログラミングを学ぶうえで大事にしている 3つ のこと"
-emoji: "🍽"
+emoji: ""
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["プログラミング", "ポエム", "初心者", "学び", "個人開発"]
 published: true
