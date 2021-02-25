@@ -124,4 +124,5 @@ Homebrew は brew doctor コマンドで起こっている問題をわかりや�
 
 # 参考
 
-[brew doctorコマンドを実行した時に発生したwarningを1個ずつ解決していきます！ | LaptrinhX](https://laptrinhx.com/brew-doctorkomandowo-shi-xingshita-shini-fa-shengshitawarningwo1gezutsu-jie-jueshiteikimasu-2122113170/)
+- [brew doctorコマンドを実行した時に発生したwarningを1個ずつ解決していきます！ | LaptrinhX](https://laptrinhx.com/brew-doctorkomandowo-shi-xingshita-shini-fa-shengshitawarningwo1gezutsu-jie-jueshiteikimasu-2122113170/)
+- [HomebrewでdoctorしたらWarning: You have unlinked kegs in your Cellarとなった時の対応方法 - Qiita](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
