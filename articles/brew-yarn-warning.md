@@ -3,7 +3,7 @@ title: "Homebrewでyarnが怒られた話"
 emoji: "🤔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["homebrew", "mac", "yarn", "nodejs"]
-published: false
+published: true
 ---
 
 # はじめに
