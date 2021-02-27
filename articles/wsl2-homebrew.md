@@ -21,18 +21,18 @@ Homebrew といえば MacOS ユーザー の特権という先入観で Homebrew
 
 と謳われており Linux もサポートしていることに驚きました。
 
-これは過去に Linuxbrew といった名前で開発されていたパッケージマネージャーがあったことに関係するようです。2019 年 2 月に公開された [Homebrew 2.0.0](https://brew.sh/2019/02/02/homebrew-2.0.0/) より Linux と WSL(Windows Subsystem for Linux)の公式サポートが行われ、現在 Homebrew というパッケージマネージャーに統合される形で使用できるようです。
+これは過去に Linuxbrew といった名前で開発されていたパッケージマネージャーがあったことに関係するようです。2019 年 2 月に公開された [Homebrew 2.0.0](https://brew.sh/2019/02/02/homebrew-2.0.0/) より Linux と WSL(Windows Subsystem for Linux)の公式サポートが行われ、現在 Homebrew がサポートするといった形で使用できるようです。
 
-今までずっと apt でパッケージ管理をしてきました。通常ユーザーで作業する際に apt だと管理者権限(sudo コマンド)必須というのが少し気になっていました。Homebrew ではホームディレクトリ内でパッケージを管理するため sudo コマンドを使うことがないというのも魅力的です。また、Mac で brew を使っていることもあり、使用するシェルやパッケージマネージャーは異なる環境でもコマンドが共通して使えるという点にとても魅力を感じました。パッケージマネージャーを乗り換えるのは少し抵抗がありますが重い腰を上げてこの機会に Homebrew へ乗り換えました。
+今までずっと apt を使ってパッケージ管理をしてきました。通常ユーザーで作業する際に apt だと管理者権限(sudo コマンド)必須というのが少し気になっていました。Homebrew ではホームディレクトリ内でパッケージを管理するため sudo コマンドを使わないというのも魅力的です。また、Mac で brew を使っていることもあり、使用するシェルやパッケージマネージャーは異なる環境でもコマンドが共通して使えるという点にとても魅力を感じました。パッケージマネージャーを乗り換えるのは少し抵抗がありますが重い腰を上げてこの機会に Homebrew へ乗り換えました。
 
-M1 Mac 登場のときも話題になりましたが、Homebrew は CPU のアーキテクチャ(x86_64 や ARM)によってインストール方法が微妙に異なります。今回は私の環境(x86_64)に合わせて紹介します。
+M1 Mac 登場のときも話題になりましたが、Homebrew は CPU のアーキテクチャ(x86_64 や ARM)によってインストール方法や使用できるパッケージが異なります。今回は私の環境(x86_64)に合わせて紹介します。
 
 Homebrew の公式サイト(日本語)はこちらです。
 https://brew.sh/index_ja
 
 # 環境
 
-- CPU Core i5 9400F(x64_86)
+- CPU Core™ i5-9400F(命令セット 64-bit)
 - Windows10 バージョン 20H2
 - WSL2 (Ubuntu 20.04.1 LTS (Focal Fossa))
 
@@ -64,17 +64,17 @@ $ sudo apt-get install build-essential curl file git
 
 ## インストールスクリプトの実行
 
-必要条件を満たしたらターミナル上で以下のコマンドを実行します。
+必要条件を満たしたらターミナル上で以下のを実行します。
 
-このコマンドは Homebrew のトップページに表示されているものになります
-![インストールスクリプトの画像](https://storage.googleapis.com/zenn-user-upload/pk2evmbol40spx5no4fi85gi4lqn)
-*Macとlinuxで同じコマンドを使用する*
+これは Homebrew のトップページに表示されているワンライナーになります
+![インストールワンライナーの画像](https://storage.googleapis.com/zenn-user-upload/pk2evmbol40spx5no4fi85gi4lqn)
+*Macとlinux共通で使用する*
 
 :::message
-インストールに使用するコマンドは今後変更されることも予測されるのでその都度公式ページから最新の情報を参照するようにしてください。
+インストールに使用するワンライナーは今後変更されることも予測されるのでその都度公式ページから最新の情報を参照するようにしてください。
 :::
 
-WSL2 のターミナル上で以下のコマンドを実行します。
+WSL2 のターミナル上一般ユーザーに切り替えたうえで実行します。
 
 ```shell
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -104,9 +104,10 @@ $ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" 
 $ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 ```
 
-上手く反映させるために一旦シェルを再起動します。
+設定を上手く反映させるためにシェルを再起動します。
 
 ```shell
+# シェル再起動
 $ exec $SHELL -l
 ```
 
@@ -120,7 +121,17 @@ Example usage:
   brew search [TEXT|/REGEX/]
   brew info [FORMULA...]
   brew install FORMULA...
+
   ...
+```
+
+導入されたバージョンは以下のコマンドで確認できます。
+
+```shell
+$ brew --version
+
+Homebrew 3.0.2
+Homebrew/linuxbrew-core (git revision b2e4cd; last commit 2021-02-27)
 ```
 
 これで導入は完了です。お疲れ様でした。
@@ -130,10 +141,10 @@ brew コマンド実行の際に怒られる場合はおなじみの `brew docto
 Homebrew ではパッケージを Fomula と呼び、以下のようにインストールします。
 
 ```shell
-# 有名な treeコマンドを Homebrew でインストール
+# 有名な treeコマンドを Homebrew を使ってインストール
 $ brew install tree
 ```
-インストールが完了すると同時にパスも通るためターミナルからすぐ実行できます。
+インストールが完了すると同時にパスも通るためターミナルからすぐに実行できます。
 
 インストールされた場所の確認。
 
@@ -143,13 +154,18 @@ $ which tree
 /home/linuxbrew/.linuxbrew/bin/tree
 ```
 
-WSL２ではパッケージを全て `/home/linuxbrew/.linuxbrew` の配下で管理するようです。
+パスを見て分かるように、WSL にインストールした Homebrew ではパッケージを `/home/linuxbrew/.linuxbrew` の配下で管理します。
+ホームディレクトリ配下で完結するため、システム環境をあまり汚染しないのがいいですね。
 
 # さいごに
 
 今回、WSL2 の環境にパッケージマネージャー Homebrew をインストールしてみました。
 インターネットの情報ではパッケージインストールを brew コマンドで解説している情報も多く、Ubuntu だと apt コマンドで置き換えてインストールするなど少し手間でした。Homebrew が使えるようになったことで MacOS と同じ感覚で操作できる、コマンドの管理、パッケージの管理がしやすいなどの大きなメリットがありました。
 
-なにより sudo を使わずに手軽に使えるのが大きいです。Homebrew を思い切って導入したことで WSL2 での開発が捗りそうです。
+なにより sudo を使わずに手軽にパッケージマネージャーを使えるのが大きいです。Homebrew を思い切って導入したことで WSL2 での開発がさらに捗りそうです。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+- [Homebrew on Linux — Homebrew Documentation](https://docs.brew.sh/Homebrew-on-Linux)
+- [Windows Terminal + WSL 2 + Homebrew + Zsh - Qiita](https://qiita.com/okayurisotto/items/36f6f9df499a74e62bff)
