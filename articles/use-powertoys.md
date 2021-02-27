@@ -16,4 +16,9 @@ https://github.com/microsoft/PowerToys
 
 提供されている機能はアップデートにより、どんどん追加され、Windows に今後標搭載される可能性もあります。
 
+# PowerToysで提供される機能
 
+| 機能名 | 説明 | Head |
+| ---- | ---- | ---- |
+| Text | Text | Text |
+| Text | Text | Text |
