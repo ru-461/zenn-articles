@@ -1,6 +1,6 @@
 ---
 title: "今更ながら 重い腰を上げて WSL2 へ Homebrew をインストールした"
-emoji: "⛱"
+emoji: "🧳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["wsl","ubuntu","windows","homebrew"]
 published: false
@@ -168,5 +168,6 @@ $ which tree
 最後まで読んでいただきありがとうございました。
 
 # 参考
+
 - [Homebrew on Linux — Homebrew Documentation](https://docs.brew.sh/Homebrew-on-Linux)
 - [Windows Terminal + WSL 2 + Homebrew + Zsh - Qiita](https://qiita.com/okayurisotto/items/36f6f9df499a74e62bff)
