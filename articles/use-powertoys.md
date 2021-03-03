@@ -23,4 +23,4 @@ https://github.com/microsoft/PowerToys
 | Text | Text | Text |
 | Text | Text | Text |
 
-これらの機能が使えるのはいいですね。
+これらの機能が使えるのはいいですね。すばらしいです。
