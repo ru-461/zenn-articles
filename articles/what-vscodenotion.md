@@ -11,9 +11,19 @@ published: true
 私は普段のメモの管理やタスクを「Notion」と呼ばれるオンラインノートアプリを使って一元管理しています。
 Notion を自分専用の Wiki のように活用し、一箇所で必要な情報を取得できるようにすることで生産性の向上に繋がります。
 
-以前投稿した[こちら](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)の記事で Notion をプログラミングノートとして運用する方法について書いていますのでよろしければ合わせてご覧ください。
+以前投稿した[こちらの記事](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)で Notion をプログラミングノートとして運用する方法について書いていますのでよろしければ合わせてご覧ください。
 
-今回は VSCode 内で Notion を使うことができる `VSCode Notion` という拡張機能をご紹介します。
+今回は VSCode 内で Notion を使うことができる `VSCode Notion` という便利な拡張機能をご紹介します。
+
+:::message
+**2021/03/06 追記**
+現在デフォルトで設定されている API を使用すると `500 エラー` になります。
+
+代替えの API 先として [Notion API Workerの提供するAPI](https://notion-api.splitbee.io/)が使用可能です。
+VSCode Notion の設定から `VSCode Notion: Api` を以下に変更することでうまく動作することが確認できました。
+![API](https://storage.googleapis.com/zenn-user-upload/nn64sjxnzzht9s234e6zuahzpc8w)
+アクセストークンを変更したけどうまく動かないという場合は API 先の設定を見直してみてください。
+:::
 
 # Notion の課題点
 
@@ -32,7 +42,7 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 Notion ではまだ公式に正式な API が提供されていないため、拡張機能の説明には `unofficial API (非公式 Api)`を使用するとの記述があります。そのため認証機能などは使えず、いくつかの機能が制限されるとのことですが、今後正式な API の提供に伴い切り替えていくとの記述があり今後に期待できそうな拡張機能です。
 
 :::message
-非公式 API を使用している現在段階では、Notion で作成したページの閲覧だけできる状態となっています。編集をするなどの操作が制限されているため、しばらくは閲覧のみの拡張機能として割り切って使う必要がありそうです。
+非公式 API を使用している現在段階では、Notion で作成したページの閲覧だけできる状態となっています。編集をするなどの操作が制限されているため、しばらくは Notion ドキュメントの閲覧だけに使えるものと割り切って使う必要がありそうです。
 :::
 
 ## VSCode Notion の導入
