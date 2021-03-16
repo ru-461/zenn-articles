@@ -2,7 +2,7 @@
 title: "Windowsのポテンシャルをさらに引き出すツール群 PowerToys "
 emoji: "🧮"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["windows","powertoys","ツール","microsoft"]
+topics: ["windows","powertoys","microsoft"]
 published: true
 ---
 
