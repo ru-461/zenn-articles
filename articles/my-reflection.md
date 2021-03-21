@@ -14,7 +14,7 @@ published: true
 
 https://www.youtube.com/watch?v=DTpGfpLybr0&t=405s
 
-これは Zenn の開発者である [catnoseさん](https://twitter.com/catnose99)がデブサミ(devsumi 2021)内に登壇したときのアーカイブとなります。私自身、リアルタイムで発表を見ることができなかったため、YouTube にてアーカイブを公開してくれたことに感謝しています。
+これは Zenn の開発者である [catnose さん](https://twitter.com/catnose99)がデブサミ(devsumi 2021)内に登壇したときのアーカイブとなります。私自身、リアルタイムで発表を見ることができなかったため、YouTube にてアーカイブを公開してくれたことに感謝しています。
 
 この発表内で Zenn を開発した目的や工夫した点について熱く述べられており、私の記事を書くという目的や動機について再度見つめ直し、振り返ってみようと思い立ったのがこの記事を書こうとしたきっかけです。
 
