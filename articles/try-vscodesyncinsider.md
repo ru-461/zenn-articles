@@ -32,6 +32,9 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 
 ツイート内の情報がかなり乏しく、なんのことか伝わりにくいですが、MacBook の環境構築をする際に CPU のアーキテクチャが変わったことで VSCode の環境も大きく変わりました。
 
+:::message
+2020 年２月に提供された VSCode 1.54 にて Stable 版が AppleSilicon に対応しました。
+:::
 ## Macの新CPU アーキテクチャ問題
 
 昨年末発売された MacBook Air、MacBook Pro、Mac mini には、従来の `Intel 製 CPU(x64)` ではなく、Apple が独自開発した新 CPU(arm64)が搭載されています。このことにより、CPU のアーキテクチャが `ARM` に置き換わったため、従来の Intel ベースのアプリを動かすために `Rosetta2` という変換ツールを介してアプリを動かすことになります。
