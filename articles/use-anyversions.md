@@ -2,7 +2,7 @@
 title: "オールインワンな開発環境をanyenvを使って構築する"
 emoji: "🧭"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["anyenv","環境構築"]
+topics: ["anyenv","nodenv","環境構築","初心者"]
 published: false
 ---
 
