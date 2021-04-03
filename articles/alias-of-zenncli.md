@@ -13,11 +13,11 @@ Zenn では [ZennCLI](https://zenn.dev/zenn/articles/install-zenn-cli) と呼ば
 # 作成したエイリアスの一覧
 
 :::message
-以下のエイリアスは MacOS のデフォルトシェルである `Zsh` で利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。ターミナルは ITerm2 を利用しています。
+以下のエイリアスは MacOS のデフォルトシェルである `Zsh` で利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。WSL2(Ubuntu Zsh)・Macbook(Zsh)にてそれぞれ動作確認済みです。
 :::
 
 ```shell:.zshrc
-# ZennCLIように定義したエイリアスの確認用
+# ZennCLI用にに定義したエイリアスの確認用
 alias agzenn='alias | grep zenn'
 # Zennのコンテンツ管理に移動
 alias zenn='cd ~/Documents/my-zenn-contents'
