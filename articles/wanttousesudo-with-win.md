@@ -26,5 +26,25 @@ Windows 向けのパッケージマネージャーになります。Redhat 系 O
 
 それでは Scoop を Windows へインストールしていきます。
 
+## Scoopのインストール
+
+インストールはとても簡単で、以下のスクリプトを PowerShell 上で実行するだけで導入できます。
+
+```shell:Powershell
+$ iwr -useb get.scoop.sh | iex
+```
+うまく実行できないときはユーザーポリシーの変更が必要です。
+```shell:Powershell
+$ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
+
+Scoop コマンドが実行できることを確認できればインストールは完了です。
+```shell:Powershell
+$ scoop
+
+Usage: scoop <command> [<args>]
+...
+```
+ヘルプが表示されます。
 
 # おわりに
