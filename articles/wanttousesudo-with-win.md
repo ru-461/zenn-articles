@@ -28,16 +28,15 @@ Windows 向けのパッケージマネージャーになります。Redhat 系 O
 
 ## Scoopのインストール
 
-インストールはとても簡単で、以下のスクリプトを PowerShell 上で実行するだけで導入できます。
+インストールはとても簡単で、PowerShell を起動して以下のスクリプトを実行するだけで導入できます。
 
 ```shell:Powershell
 $ iwr -useb get.scoop.sh | iex
 ```
-うまく実行できないときはユーザーポリシーの変更が必要です。
+うまく実行できないときは以下のコマンドでユーザーポリシーを緩めることでインストールできます。
 ```shell:Powershell
 $ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
-
 Scoop コマンドが実行できることを確認できればインストールは完了です。
 ```shell:Powershell
 $ scoop
@@ -46,5 +45,52 @@ Usage: scoop <command> [<args>]
 ...
 ```
 ヘルプが表示されます。
+
+
+# Sudoコマンドのインストール
+
+先程インストールした Scoop を使用して Sudo コマンドをインストールしていきます。
+```powershell
+$ scoop install sudo
+
+Installing 'sudo' (0.2020.01.26) [64bit]
+sudo.ps1 (2.2 KB) [======/ ~ ======] 100%
+Checking hash of sudo.ps1 ... ok.
+Linking ~\scoop\apps\sudo\current => ~\scoop\apps\sudo\0.2020.01.26
+Creating shim for 'sudo'.
+'sudo' (0.2020.01.26) was installed successfully!
+```
+`installed successfully!`となれば Sudo コマンドのインストール成功です。
+
+:::message
+Scoop を使ってインストールしたコマンドの実体は~\scoop\apps\shims に存在します。Scoop 経由でインストールしたものはすべてユーザーディレクトリの決まった場所にまとめられるため、インストールと実行に管理者権限が必要ありません。
+:::
+
+# 実行してみる
+
+インストール直後に自動でパスが通っているため、コマンドプロンプトや PowerShell からおなじみの Sudo コマンドを実行できます。
+
+```
+# 確認
+$ sudo
+
+usage: sudo <cmd...>
+```
+
+例として、編集に管理者権限が必要な hosts ファイルを管理者権限でメモ帳を使って開いてみます。
+```
+# notepad(メモ帳)でhostsファイルを指定
+$ sudo notepad C:\Windows\System32\drivers\etc\hosts
+```
+
+管理者に昇格するための UAC(ユーザーアカウント制御) が表示されます。
+
+![ユーザーアカウント制御の画面](https://storage.googleapis.com/zenn-user-upload/5gbhypvzvgkalw6r3xuzrubs8vkr)
+
+続行すると管理者権限で hosts ファイルをメモ帳で開くことができます。
+
+![管理者権限でhostsファイルを開いた様子](https://storage.googleapis.com/zenn-user-upload/6qc6m9myaywrqv6v70onc5zwwaj2)
+
+このように Sudo コマンドをインストールすることで Linux と同じ感覚で一時的に管理者に昇格してコマンド・アプリの実行ができるようになります。
 
 # おわりに
