@@ -1,8 +1,8 @@
 ---
-title: "WindowsでもSudoを使いたい"
+title: "WindowsにもおなじみのSudoコマンドを導入する"
 emoji: "⚡"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["windows","powershell"]
+topics: ["windows","powershell","scoop"]
 published: false
 ---
 
