@@ -16,7 +16,7 @@ Windows には、コマンドプロンプトや Powershell を起動する際「
 
 そこで `Scoop` という Windows 向けパッケージマネージャーを使用し、 Sudo コマンドをインストール、使用できるようになるまでを紹介します。
 
-# Scoopとは
+# Scoop とは
 
 Windows 向けのパッケージマネージャーになります。
 
@@ -32,20 +32,24 @@ https://scoop.sh/
 
 それでは Scoop を Windows へインストールしていきます。
 
-## Scoopのインストール
+## Scoop のインストール
 
 インストールはとても簡単で、PowerShell を起動して以下のスクリプトを実行するだけで導入できます。
 
-```shell:Powershell
-$ iwr -useb get.scoop.sh | iex
+```powershell:powershell
+> iwr -useb get.scoop.sh | iex
 ```
+
 うまく実行できないときは以下のコマンドでユーザーポリシーを緩めることでインストールできます。
-```shell:Powershell
-$ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+
+```powershell:powershell
+> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
+
 Scoop コマンドが実行できることを確認できればインストールは完了です。
-```shell:Powershell
-$ scoop
+
+```powershell:powershell
+> scoop
 
 Usage: scoop <command> [<args>]
 ...
@@ -53,11 +57,12 @@ Usage: scoop <command> [<args>]
 ヘルプが表示されます。
 
 
-# Sudoコマンドのインストール
+# Sudo コマンドのインストール
 
 先程インストールした Scoop を使用して Sudo コマンドをインストールしていきます。
-```powershell
-$ scoop install sudo
+
+```powershell:powershell
+> scoop install sudo
 
 Installing 'sudo' (0.2020.01.26) [64bit]
 sudo.ps1 (2.2 KB) [======/ ~ ======] 100%
@@ -66,6 +71,7 @@ Linking ~\scoop\apps\sudo\current => ~\scoop\apps\sudo\0.2020.01.26
 Creating shim for 'sudo'.
 'sudo' (0.2020.01.26) was installed successfully!
 ```
+
 `installed successfully!`となれば Sudo コマンドのインストール成功です。
 
 :::message
@@ -76,17 +82,18 @@ Scoop を使ってインストールしたコマンドの実体は~\scoop\apps\s
 
 インストール直後に自動でパスが通っているため、コマンドプロンプトや PowerShell からおなじみの Sudo コマンドを実行できます。
 
-```
+```powershell:powershell
 # 確認
-$ sudo
+> sudo
 
 usage: sudo <cmd...>
 ```
 
 例として、編集に管理者権限が必要な hosts ファイルを管理者権限でメモ帳を使って開いてみます。
-```
+
+```powershell:powershell
 # notepad(メモ帳)でhostsファイルを指定
-$ sudo notepad C:\Windows\System32\drivers\etc\hosts
+> sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
 管理者に昇格するための UAC(ユーザーアカウント制御) が表示されます。
