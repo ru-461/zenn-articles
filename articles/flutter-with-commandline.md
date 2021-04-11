@@ -162,6 +162,16 @@ Flutter のインストールが始まります。インストール途中で以
 - adopt8-hotspot  [64bit]
 - flutter [64bit]
 
+依存関係としてなにがインストールされるかは `depends コマンド`で都度確認できます。
+
+```powershell:powershell
+> scoop depends  flutter
+
+adopt8-hotspot
+android-sdk
+adb
+```
+
 最後に Android SDK のライセンスが表示されるので、`y`を押して承諾していきます。
 
 続けてインストールする SDK プラットフォームを選択します。デフォルトで一番最新のものが選択されます。こだわりがなければデフォルトで問題ありません。
@@ -212,12 +222,51 @@ No platform detected. Please select a platform to install [Default: 24]:
 ここで Android SDK の場所を設定してあげます。
 Scoop でインストールしたものはユーザーデフォルトの下 `~\scoop\`の中にまとめられています。
 
-Android SDK は `\scoop\persist\android-sdk` に存在します。Android Studio に SDK へのパスを指定します。
+先程導入した Android SDK は `C:\Users\ユーザー名\scoop\persist\android-sdk` 配下に存在します。`Android SDK Location:`に  SDK へのパス(`C:\Users\ユーザー名\scoop\persist\android-sdk`)を指定し続行します。
 
 ![](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
 
 パスを指定するとその他必要なコンポーネントのダウンロードが始まるので終わるまで待ちます。
 Android Studio のメインメニューが表示されればセットアップは完了です。
 
+SDK の場所のセットアップが終わった後に、PowerShell にてもう一度 flutter doctor コマンドを実行します。
+```powershell:powershell
+> flutter doctor
+
+Doctor summary (to see all details, run flutter doctor -v):
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+```
+上から 2 番目の `Android toolchain`の内容が変わっています。追加でライセンスに承諾する必要があるため、以下のコマンドでライセンスに承諾します。
+```powershell:powershell
+> flutter doctor --android-licenses
+```
+もう一度 `flutter doctor` を実行して `• No issues found!`と出力されれば Flutter の導入は完了です。
+
+## Flutter開発プラグインの導入
+
+Flutter のプロジェクトを作成するためにプラグインが必要になるためインストールします。
+Android Studio のメニュー画面から「Configure」→「Plugins」と進みます。
+
+![Pluginを選択する様子](https://storage.googleapis.com/zenn-user-upload/67u844h1vme47mw0s99zn5izti78)
+
+表示されるダイアログの中でタブを「Marketplace」に切り替えて「Flutter」と検索してインストールします。
+
+![Flutterプラグインをインストールする様子](https://storage.googleapis.com/zenn-user-upload/lfa6bx1hlltz39mb5zwf1b6d1saa)
+
+これで Flutter の開発プラグインの導入は完了です。
+
+Android Studio を再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規 Flutter プロジェクトを作成できるようになります。
+
+![新規プロジェクト作成項目が増えた様子](https://storage.googleapis.com/zenn-user-upload/fvqw55wf58miyulelw3v82ek1qik)
+
+画面の指示に従ってプロジェクト作成をしていくのですが、途中で Flutter SDK のパスを指定する箇所があります。
+
+![SDkへのパスを指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/0wlvhw8a7ds549qvv8sdxfy74ddx)
+
+`Flutter SDK path`のところに `C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\2.0.4(インストールしたバージョン)`を指定して続行します。
+
+そのまま続行すると新規 Flutter プロジェクトが Android Studio で開かれます。
 
 # おわりに
