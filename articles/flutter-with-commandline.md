@@ -2,7 +2,7 @@
 title: "Windowsのコマンドラインを駆使してFlutterの環境構築をしてみた"
 emoji: "🛫"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["flutter","windows","androidstudio","scoop",winget"]
+topics: ["flutter","windows","androidstudio","scoop","winget"]
 published: false
 ---
 
@@ -19,5 +19,6 @@ Mac には `homebrew` という強力なパッケージマネージャーが存�
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 ## Flutter とは
 
+Google が開発している UI ツールキットになります。Dart 言語で書かれており、単一のコードからモバイル・Web・デスクトップなどの環境を問わずに実行できるアプリを作成できることで有名です。最近はモバイルアプリ開発を始める人が Flutter から学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。
 
 # おわりに
