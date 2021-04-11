@@ -19,6 +19,17 @@ Mac には `homebrew` という強力なパッケージマネージャーが存�
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 ## Flutter とは
 
-Google が開発している UI ツールキットになります。Dart 言語で書かれており、単一のコードからモバイル・Web・デスクトップなどの環境を問わずに実行できるアプリを作成できることで有名です。最近はモバイルアプリ開発を始める人が Flutter から学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。
+Google が開発している UI ツールキットになります。Dart 言語で書かれており、単一のコードからモバイル・Web・デスクトップなどの環境を問わずに実行できるアプリを作成できることで有名です。最近はモバイルアプリ開発を始める人が Flutter から学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。Flutter は SDK のインストールとプラグインのインストールを行うことで AndroidStudio や Xcode といった IDE を使用して開発することが出来ます。この記事では Windows を対象としているため、Windows 版 AndroidStudio を使用します・
+
+# インストール検証環境
+
+OS は Windows10 を想定しています。
+
+| ツール | バージョン |
+| ---- | ---- |
+| Android Studio | 4.1.2.0 |
+| Flutter | Text |
+| Windows Package Manager | v0.2.10771 プレビュー |
+| Scoop | 3d67b7d3 |
 
 # おわりに
