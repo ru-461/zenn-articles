@@ -32,4 +32,78 @@ OS は Windows10 を想定しています。
 | Windows Package Manager | v0.2.10771 プレビュー |
 | Scoop | 3d67b7d3 |
 
+# Windows Package Manager の準備
+
+Windows Package Manager を使用してコマンドで Android Studio をインストールしていきます。
+Windows Package Manager は Microsoft Store からアプリインストーラーを更新することで使用できるようになります。
+
+Windows のスタートメニューから Microsoft Store を起動して「アプリインストーラー」と検索するか、以下のリンクから飛べます。
+
+https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC/9nblggh4nns1?activetab=pivot:overviewtab
+
+インストールページが開かれます。
+
+![アプリインストーラーの詳細情報の画像](https://storage.googleapis.com/zenn-user-upload/fn77b126s2ljhedbmolu1yerp56z)
+**すでに更新されている場合はこの様になります**
+
+インストールが終わったらコマンドプロンプトまたは PowerShell を**管理者権限で起動**します。
+ターミナルに `winget` と入力するとコマンドの使用例とヘルプが表示されます。winget とは Windows Package Manager 用のコマンドです。
+
+```powershell:powershell
+> winget
+
+Windows Package Manager v0.2.10771 プレビュー
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+WinGet コマンド ライン ユーティリティを使用すると、コマンド ラインからアプリケーションやその他のパッケージをインストールできます。
+
+etc ...
+```
+
+ここまで表示できたら Windows Package Manager のインストールが完了です。
+
+最初に以下のコマンドでソースを最新に更新しておきます。
+
+```powershell:powershell
+> winget source update
+
+すべてのソースを更新しています...
+ソースを更新しています: winget...
+完了
+```
+Winget コマンドでインストールできるパッケージ一覧を出力してみます。
+```powershell:powershell
+> winget search
+```
+たくさんのアプリがずらっと表示されます。この一覧にあるアプリがインストール可能です。
+この中から Android Studio を探してみます。`searchコマンド`に続けてアプリ名を入力します。
+
+```powershell:powershell
+> winget search AndroidStudio
+
+名前           ID                   バージョン
+----------------------------------------------
+Android Studio Google.AndroidStudio 4.1.2.0
+```
+Android Studio が見つかりました。それではインストールしていきます。
+```powershell:powershell
+> winget install Google.AndroidStudio
+
+見つかりました Android Studio [Google.AndroidStudio]
+このアプリケーションは所有者からライセンス供与されます。
+Microsoft はサードパーティのパッケージに対して責任を負わず、ライセンスも付与しません。
+Downloading https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/android-studio-ide-201.7042882-windows.exe
+  ██████████████████████████████   896 MB /  896 MB
+インストーラーハッシュが正常に検証されました
+パッケージのインストールを開始しています...
+インストールが完了しました
+```
+
+`インストールが完了しました`となればインストール成功です。うまくいかない場合は管理者権限にてコマンドを実行しているかを確認してください。
+
+Windows のスタートメニューを確認すると Android Studio がインストールされているのが確認できます。
+
+![スタートメニューからAndroid Studioを確認した様子](https://storage.googleapis.com/zenn-user-upload/ap161h386hbtb8xs86ggwyo5q14u)
+
+
 # おわりに
