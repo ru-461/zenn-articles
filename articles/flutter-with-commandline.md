@@ -3,7 +3,7 @@ title: "Windowsのコマンドラインを駆使してFlutterの開発環境を�
 emoji: "🛫"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["flutter","windows","androidstudio","scoop","winget"]
-published: false
+published: true
 ---
 
 # はじめに
