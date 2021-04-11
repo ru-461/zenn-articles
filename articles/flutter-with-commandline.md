@@ -37,7 +37,7 @@ OS は Windows10 を想定しています。
 Windows Package Manager を使用してコマンドで Android Studio をインストールしていきます。
 Windows Package Manager は Microsoft Store からアプリインストーラーを更新することで使用できるようになります。
 
-Windows のスタートメニューから Microsoft Store を起動して「アプリインストーラー」と検索するか、以下のリンクから飛べます。
+Windows のスタートメニューから Microsoft Store を起動して「アプリ インストーラー」と検索するか、以下のリンクから飛べます。
 
 https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC/9nblggh4nns1?activetab=pivot:overviewtab
 
@@ -46,7 +46,7 @@ https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3
 ![アプリインストーラーの詳細情報の画像](https://storage.googleapis.com/zenn-user-upload/fn77b126s2ljhedbmolu1yerp56z)
 **すでに更新されている場合はこの様になります**
 
-インストールが終わったらコマンドプロンプトまたは PowerShell を**管理者権限で起動**します。
+インストールが終わったら PowerShell を**管理者権限で起動**します。
 ターミナルに `winget` と入力するとコマンドの使用例とヘルプが表示されます。winget とは Windows Package Manager 用のコマンドです。
 
 ```powershell:powershell
@@ -105,5 +105,98 @@ Windows のスタートメニューを確認すると Android Studio がイン�
 
 ![スタートメニューからAndroid Studioを確認した様子](https://storage.googleapis.com/zenn-user-upload/ap161h386hbtb8xs86ggwyo5q14u)
 
+公式サイトからインストーラーをダウンロードしてローカルで実行、GUI をポチポチとすることなく Android Stuido をインストールできました。インストールにかかる時間もそれほどかからないです。
+# Flutterの導入
 
+ここまでコマンドだけで Android Studio をインストールできました。続いて `Scoop` というパッケージマネージャーを導入して Flutter と依存関係をまとめて導入します。
+Scoop とは Windows 向けのパッケージマネージャーの 1 つでパッケージ管理に管理者権限を使わないという特徴を持ちます。
+
+【公式サイト】
+https://scoop.sh/
+
+【GitHub】
+https://github.com/lukesampson/scoop
+
+## Scoopのインストール
+
+インストールするために以下のスクリプトを PowerShell から実行します。
+
+```powershell:Powershell
+$ iwr -useb get.scoop.sh | iex
+```
+うまく実行できないときは以下のコマンドでユーザーポリシーを緩めることでインストールできます。
+```powershell:Powershell
+$ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
+Scoop コマンドが実行できることを確認できればインストールは完了です。
+```powershell:Powershell
+$ scoop
+
+Usage: scoop <command> [<args>]
+...
+```
+
+Scoop コマンドが使えることを確認できたら、続けて Flutter を導入します。
+Scoop には、`Bucket`という概念が存在し、Bucket を追加することでインストールできるアプリを増やすことができます。デフォルトでは `main Bucket` しか追加されていません。
+Flutter 関連のツールは `Java Bucket` に存在するため、予め追加しないとインストールできません。
+
+以下のコマンドで Bucket を追加出来ます。
+
+```powershell:powershell
+ > scoop bucket add java
+```
+Bucket の追加が完了したら続けて Flutter の開発に必要なパッケージをまとめて導入していきます。
+
+以下のコマンドを実行します。
+
+```powershell:powershell
+> scoop install flutter
+```
+
+Flutter のインストールが始まります。インストール途中で以下が依存関係として順番にインストールされます。
+
+- adb [64bit]
+- android-sdk [64bit]
+- adopt8-hotspot  [64bit]
+- flutter [64bit]
+
+最後に Android SDK のライセンスが表示されるので、`y`を押して承諾していきます。
+
+続けてインストールする SDK プラットフォームを選択します。デフォルトで一番最新のものが選択されます。こだわりがなければデフォルトで問題ありません。
+
+```powershell:powershell
+Available platforms:
+[1] platforms;android-7
+[2] platforms;android-8
+[3] platforms;android-9
+[4] platforms;android-10
+[5] platforms;android-11
+[6] platforms;android-12
+[7] platforms;android-13
+[8] platforms;android-14
+[9] platforms;android-15
+[10] platforms;android-16
+[11] platforms;android-17
+[12] platforms;android-18
+[13] platforms;android-19
+[14] platforms;android-20
+[15] platforms;android-21
+[16] platforms;android-22
+[17] platforms;android-23
+[18] platforms;android-24
+[19] platforms;android-25
+[20] platforms;android-26
+[21] platforms;android-27
+[22] platforms;android-28
+[23] platforms;android-29
+[24] platforms;android-30
+For a list of platforms and what they mean, see: https://developer.android.com/about/dashboards/
+No platform detected. Please select a platform to install [Default: 24]:
+```
+
+再度ライセンスに承諾することで SDK Platform のインストールが行われます。
+
+インストールが終了する際に `flutter doctorコマンド` が走り、状態をチェックしてくれます。これで Flutter のインストールは完了です。
+
+Android toolchain でエラーがでますので、Android Studio 側で修正していきます。
 # おわりに
