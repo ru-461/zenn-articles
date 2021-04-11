@@ -18,7 +18,7 @@ Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケー�
 
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 
-Flutter の公式のドキュメントでも紹介されていますが、Flutter の本体を公式サイトからダウンロードして、ローカルに配置、システム環境変数に Flutter のパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作して Flutter のアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
+[Flutter の公式のドキュメント](https://flutter.dev/docs/get-started/install/windows)でも紹介されていますが、Flutter の本体を公式サイトからダウンロードして、ローカルに配置、システム環境変数に Flutter のパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作して Flutter のアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
 ## Flutter とは
 
 https://flutter.dev/
