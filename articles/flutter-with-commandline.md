@@ -14,7 +14,7 @@ Windows の場合はプログラミング言語や IDE もインストーラー�
 
 ## Windowsにおけるパッケージマネージャー
 
-Mac には `homebrew` という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在プレビュー版**として提供しております。コマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールを行えるようにできるため、Unix 系 OS のような柔軟な環境構築ができるような日も近いです。
+Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在プレビュー版**として提供しております。コマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールを行えるようにできるため、Unix 系 OS のような柔軟な環境構築ができるような日も近いです。
 
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 
@@ -51,7 +51,7 @@ https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3
 **すでに更新されている場合はこの様になります**
 
 インストールが終わったら PowerShell を**管理者権限で起動**します。
-ターミナルに `winget` と入力するとコマンドの使用例とヘルプが表示されます。winget とは Windows Package Manager 用のコマンドです。
+ターミナルに `winget` と入力するとコマンドの使用例とヘルプが表示されます。winget とは Windows Package Manager を操作するためのコマンドです。
 
 ```powershell:powershell
 > winget
@@ -89,7 +89,7 @@ Winget コマンドでインストールできるパッケージ一覧を出力�
 ----------------------------------------------
 Android Studio Google.AndroidStudio 4.1.2.0
 ```
-Android Studio が見つかりました。それではインストールしていきます。
+Google が提供する、Android Studio が見つかりました。それではインストールしていきます。
 ```powershell:powershell
 > winget install Google.AndroidStudio
 
@@ -109,7 +109,7 @@ Windows のスタートメニューを確認すると Android Studio がイン�
 
 ![スタートメニューからAndroid Studioを確認した様子](https://storage.googleapis.com/zenn-user-upload/ap161h386hbtb8xs86ggwyo5q14u)
 
-公式サイトからインストーラーをダウンロードしてローカルで実行、GUI をポチポチとすることなく Android Stuido をインストールできました。インストールにかかる時間もそれほどかからないです。
+公式サイトからインストーラーをダウンロードしてローカルで実行、GUI をポチポチとすることなく Android Stuido をインストールできました。インストールに時間もそれほどかからないです。
 # Flutterの導入
 
 ここまでコマンドだけで Android Studio をインストールできました。続いて `Scoop` というパッケージマネージャーを導入して Flutter と依存関係をまとめて導入します。
@@ -122,8 +122,6 @@ https://scoop.sh/
 
 【GitHub】
 https://github.com/lukesampson/scoop
-
-
 
 ## Scoopのインストール
 
