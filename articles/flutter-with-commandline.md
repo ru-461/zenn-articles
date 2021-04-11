@@ -12,6 +12,8 @@ Mac で開発環境を構築する際に Homebrew などのパッケージ管理
 
 Windows の場合はプログラミング言語や IDE もインストーラーを用いたインストールが多く、パスを通すために各自で直接環境変数を触るなど少し手間になります。例えば、Java の開発を始める際に JDK の環境変数をいじって導入している記事をよく見かけます。Java の開発を始める前の環境構築の難易度が少し高く、環境変数、パス周りの話がわからないと少しハードルが高いため億劫うです。過去の私がそうでした。Windows の環境変数を編集するときにシステム側の変数を触ってしまって PC の起動すらできなくなり、泣く泣く PC を初期化した記憶があります。このことから、なるべくであれば環境変数を触らず、できるのであれば環境を汚すことなく作業したいというのが本音です。パッケージマネージャーの仕組みに感動した記憶があります。
 
+公式のドキュメントに従うと、Flutter の本体を公式サイトからダウンロードして、ローカルに配置、システム環境変数に Flutter のパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドラインを使って Flutter のアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
+
 ## Windowsにおけるパッケージマネージャー
 
 Mac には `homebrew` という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして今、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在プレビュー版**として提供されております。コマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールを行えるようにできるため、Unix 系 OS のような環境構築ができるような日も近いです。
@@ -19,7 +21,7 @@ Mac には `homebrew` という強力なパッケージマネージャーが存�
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 ## Flutter とは
 
-Google が開発している UI ツールキットになります。Dart 言語で書かれており、単一のコードからモバイル・Web・デスクトップなどの環境を問わずに実行できるアプリを作成できることで有名です。最近はモバイルアプリ開発を始める人が Flutter から学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。Flutter は SDK のインストールとプラグインのインストールを行うことで AndroidStudio や Xcode といった IDE を使用して開発することが出来ます。この記事では Windows を対象としているため、Windows 版 AndroidStudio を使用します・
+Google が開発している UI ツールキットになります。Dart 言語で書かれており、単一のコードからモバイル・Web・デスクトップなどの環境を問わずに実行できるアプリを作成できることで有名です。最近はモバイルアプリ開発を始める人が Flutter から学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。Flutter は SDK のインストールとプラグインのインストールを行うことで AndroidStudio や Xcode といった IDE を使用して開発することが出来ます。この記事では Windows を対象としているため、Windows 版 AndroidStudio を使用します。
 
 # インストール検証環境
 
@@ -255,18 +257,37 @@ Android Studio のメニュー画面から「Configure」→「Plugins」と進�
 
 ![Flutterプラグインをインストールする様子](https://storage.googleapis.com/zenn-user-upload/lfa6bx1hlltz39mb5zwf1b6d1saa)
 
-これで Flutter の開発プラグインの導入は完了です。
+これで Flutter の開発プラグインの導入は完了です。合わせて **Dart のプラグインも必要になるのですが Flutter のプラグインをインストールするときに合わせてインストールされる**ので気にしなくて問題ありません。
 
-Android Studio を再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規 Flutter プロジェクトを作成できるようになります。
+Android Studio を再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規 Flutter プロジェクトを作成できるようになります。うまく反映されない場合はプラグイン画面から「Dart」と「Flutter」プラグインが `Enable` になっていることを再度確認してください。
 
-![新規プロジェクト作成項目が増えた様子](https://storage.googleapis.com/zenn-user-upload/fvqw55wf58miyulelw3v82ek1qik)
+![再起動したあとのメインメニュー](https://storage.googleapis.com/zenn-user-upload/fvqw55wf58miyulelw3v82ek1qik)
+***Create New Flutter Projectが追加された***
 
 画面の指示に従ってプロジェクト作成をしていくのですが、途中で Flutter SDK のパスを指定する箇所があります。
 
-![SDkへのパスを指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/0wlvhw8a7ds549qvv8sdxfy74ddx)
-
+![SDKへのパスを指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/0wlvhw8a7ds549qvv8sdxfy74ddx)
+***デフォルトでSDKへのパスが指定されていないので入力***
 `Flutter SDK path`のところに `C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\2.0.4(インストールしたバージョン)`を指定して続行します。
 
 そのまま続行すると新規 Flutter プロジェクトが Android Studio で開かれます。
+
+# アプリを実行する
+
+Android Studio 上でプロジェクトが開かれるのを確認したら、実際に実行できるか試します。
+
+上部のメニューから `Chrome(Dev)` を選択して `Shift + F10` で実行します。
+
+![ChromeでFlutterが実行される様子](https://storage.googleapis.com/zenn-user-upload/ydtjzfg7l2yes4wn5retozzl2xyy)
+***Flutter Demo Home Page***
+
+自動的に Chrome 上で Flutter のデモアプリが起動しました。ホットリロードに対応しているためコードの変更がリアルタイムに反映されます。
+
+AVD マネージャーから Android Emulator を作成して実行してみます。
+
+![Pixel4 Emulatorでアプリを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/3ck4my6py4f4lra31h6ue20tiht5 =300x)
+***Pixel 4 API 30***
+
+エミュレーター上でもエラーなく実行でき、Chrome で実行したときと同じような結果が得られました。
 
 # おわりに
