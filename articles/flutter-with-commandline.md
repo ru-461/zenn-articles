@@ -136,14 +136,16 @@ Usage: scoop <command> [<args>]
 ...
 ```
 
+## FlutterをScoopからインストール
+
 Scoop コマンドが使えることを確認できたら、続けて Flutter を導入します。
 Scoop には、`Bucket`という概念が存在し、Bucket を追加することでインストールできるアプリを増やすことができます。デフォルトでは `main Bucket` しか追加されていません。
 Flutter 関連のツールは `Java Bucket` に存在するため、予め追加しないとインストールできません。
 
-以下のコマンドで Bucket を追加出来ます。
+以下のコマンドで必要な Bucket を追加出来ます。
 
 ```powershell:powershell
- > scoop bucket add java
+ > scoop bucket add java extras versions
 ```
 Bucket の追加が完了したら続けて Flutter の開発に必要なパッケージをまとめて導入していきます。
 
@@ -197,6 +199,25 @@ No platform detected. Please select a platform to install [Default: 24]:
 再度ライセンスに承諾することで SDK Platform のインストールが行われます。
 
 インストールが終了する際に `flutter doctorコマンド` が走り、状態をチェックしてくれます。これで Flutter のインストールは完了です。
+この時点で Flutter にパスが通っているため、Windows の環境変数の編集からパスを通す必要はありません。便利ですね。
 
-Android toolchain でエラーがでますので、Android Studio 側で修正していきます。
+しかし、doctor コマンドを実行したときに Android toolchain でエラーがでますので、Android Studio 側で修正していきます。
+
+# Android Stuidoの初期設定
+
+最初に、Winget でインストールした Android Studio を起動します。最初の設定で Android SDK が見つからないとエラーになります。
+
+![Android SDKのエラー画面](https://storage.googleapis.com/zenn-user-upload/svy0zfj5pariecx1pgxb1xxzdzpp)
+
+ここで Android SDK の場所を設定してあげます。
+Scoop でインストールしたものはユーザーデフォルトの下 `~\scoop\`の中にまとめられています。
+
+Android SDK は `\scoop\persist\android-sdk` に存在します。Android Studio に SDK へのパスを指定します。
+
+![](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
+
+パスを指定するとその他必要なコンポーネントのダウンロードが始まるので終わるまで待ちます。
+Android Studio のメインメニューが表示されればセットアップは完了です。
+
+
 # おわりに
