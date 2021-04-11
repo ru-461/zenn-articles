@@ -8,13 +8,13 @@ published: false
 
 # はじめに
 
-Mac で開発環境を構築する際に Homebrew などのパッケージマネージャーを使って構築している記事をよく見かけます。パッケージマネージャーを使うことで、コマンドラインでパッケージの依存関係も解決してインストールできるため、開発環境構築に重宝されます。そのメリットの 1 つに、コマンドのインストールと同時にパスも通してくれるためすぐにコマンドの実行ができ、コマンドの場所を IDE(統合開発環境)側に教えてあげることですぐに開発に取りかかれる点があります。
+Mac で開発環境を構築する際に Homebrew などのパッケージマネージャーを使って構築している記事をよく見かけます。パッケージマネージャーを使うことで、コマンドラインでパッケージの依存関係も解決してインストールできるため、開発環境構築の際に重宝されます。そのメリットの 1 つに、コマンドのインストールと同時にパスも通してくれるためすぐにコマンドの実行ができ、コマンドの場所を IDE(統合開発環境)などに教えてあげることですぐに開発に取りかかれるという点があります。
 
-Windows の場合はプログラミング言語や IDE もインストーラーを用いたインストールが多く、パスを通すために各自で直接システム環境変数を触るなど少し手間になります。例えば、Java の開発を始める際 JDK をダウンロードし、システム環境変数を編集してパスを通したりして開発環境構築している例をよく見かけます。開発を始める前の環境構築で頻出するシステム環境変数、パス周りの概念がわからないと初学者にとって環境構築は少しハードルが高いように感じます。私がプログラミングを勉強し始めたとき、Windows の環境変数編集から管理者権限で間違えて他のシステム側の変数を消してしまったため PC の起動ができなくなり、泣く泣く OS を再インストールしたことがあります。その経験から、Windows 上でなるべくシステム環境変数を触らず、環境を汚すことなく手軽に開発環境を構築できればいいなと感じていました。そんなときに、Linux の `apt` や `yum` といったパッケージマネージャーと出会い、その仕組みや手軽さに感動した記憶があります。
+Windows の場合はプログラミング言語や IDE もインストーラーを用いたインストールが多く、パスを通すために各自で直接システム環境変数を触るなど少し手間になります。例えば、Java の開発を始める際 JDK をダウンロードし、システム環境変数を編集してパスを通したりして開発環境構築している例をよく見かけます。開発を始める前の環境構築で頻出するシステム環境変数、パス周りの概念がわからないと初学者にとって環境構築は少しハードルが高いように感じます。私がプログラミングを勉強し始めたとき、Windows の環境変数編集から管理者権限で間違えて他のシステム側の変数を消してしまったため PC の起動ができなくなり、泣く泣く Windows を再インストールしたことがあります。その経験から、Windows 上でなるべくシステム環境変数を触らず、環境を汚すことなく手軽に開発環境を構築できればいいなと感じていました。そんなときに、Linux の `apt` や `yum` といったパッケージマネージャーと出会い、その仕組みや手軽さに感動した記憶があります。
 
 ## Windowsにおけるパッケージマネージャー
 
-Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在プレビュー版**として提供しております。コマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールを行えるようにできるため、Unix 系 OS のような柔軟な環境構築ができるような日も近いです。
+Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでコマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールや依存関係の解決ができるため、Windows でも Unix 系 OS のような柔軟な環境構築ができるような日も近いのではと感じます。
 
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 
@@ -27,14 +27,14 @@ Google が開発している UI ツールキットになります。Dart 言語�
 
 # インストール検証環境
 
-OS は `Windows10` を想定しています。
+OS には `Windows10` を使用しています。
 
 | ツール | バージョン |
 | ---- | ---- |
-| Android Studio | 4.1.2.0 |
-| Flutter | 2.0.4 |
 | Windows Package Manager | v0.2.10771 プレビュー |
 | Scoop | 3d67b7d3 |
+| Android Studio | 4.1.2.0 |
+| Flutter | 2.0.4 |
 
 # Windows Package Manager の準備
 
@@ -151,18 +151,20 @@ Usage: scoop <command> [<args>]
 ...
 ```
 
+コマンドの使い方と使用可能なオプションが表示されます。
+
 ## FlutterをScoopからインストール
 
 Scoop コマンドが使えることを確認できたら、続けて Flutter を導入します。
 Scoop には、`Bucket`という概念が存在し、Bucket を追加することでインストールできるアプリを増やすことができます。デフォルトでは `main Bucket` しか追加されていません。
-Flutter 関連のツールは `Java Bucket` に存在するため、予め追加しないとインストールできません。
+Flutter 関連のツールは `extras Bucket`と `java Bucket` に存在するため、予め追加しないとインストールできません。
 
 以下のコマンドで必要な Bucket を追加出来ます。
 
 ```powershell:powershell
  > scoop bucket add java extras versions
 ```
-Bucket の追加が完了したら続けて Flutter の開発に必要なパッケージをまとめて導入していきます。
+Bucket の追加が完了したら続けて Flutter の開発に必要なものを導入していきます。
 
 以下のコマンドを実行します。
 
@@ -235,11 +237,20 @@ No platform detected. Please select a platform to install [Default: 24]:
 ![Android SDKのエラー画面](https://storage.googleapis.com/zenn-user-upload/svy0zfj5pariecx1pgxb1xxzdzpp)
 
 ここで Android SDK の場所を設定してあげます。
-Scoop でインストールしたものはユーザーデフォルトの下 `~\scoop\`の中にまとめられています。
+Scoop でインストールしたものはユーザーデフォルトの下 `~\scoop\`の中にすべてまとめられています。
 
-先程導入した Android SDK は `C:\Users\ユーザー名\scoop\persist\android-sdk` 配下に存在します。`Android SDK Location:`に  SDK へのパス(`C:\Users\ユーザー名\scoop\persist\android-sdk`)を指定し続行します。
+Scoop でインストールしたアプリとライブラリの格納場所は以下のコマンドで調べることが出来ます。
 
-![](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
+```powershell:powershell
+# インストール先を絶対パスで取得
+> scoop prefix android-sdk
+
+C:\Users\user\scoop\apps\android-sdk\current
+```
+
+`Android SDK Location:`に上のコマンドで取得した SDK へのフルパスを指定し続行します。
+
+![Android SDKのパスを指定する様子](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
 
 パスを指定するとその他必要なコンポーネントのダウンロードが始まるので終わるまで待ちます。
 Android Studio のメインメニューが表示されればセットアップは完了です。
@@ -285,9 +296,19 @@ Android Studio を再起動すると、「Create New Flutter Project」の項目
 
 ![SDKへのパスを指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/0wlvhw8a7ds549qvv8sdxfy74ddx)
 ***デフォルトでSDKへのパスが指定されていないので入力***
-`Flutter SDK path`のところに `C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\2.0.4(インストールしたバージョン)`を指定して続行します。
 
-そのまま続行すると新規 Flutter プロジェクトが Android Studio で開かれます。
+インストールした Flutter SDK のパスは Android SDK と同じように以下のコマンドで取得できます。
+
+```powershell:powershell
+# インストール先を絶対パスで取得
+> scoop prefix android-sdk
+
+C:\Users\user\scoop\apps\flutter\current
+```
+
+`Flutter SDK path`のところに `C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\current`を指定して続行します。
+
+そのまま続行すると新規 Flutter プロジェクトが Android Studio 上で開かれます。
 
 # アプリを実行する
 
