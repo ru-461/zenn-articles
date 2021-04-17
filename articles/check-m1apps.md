@@ -38,5 +38,22 @@ $ brew install --cask imobie-m1-app-checker
 
 ![M1-App-Checkの結果画面](https://storage.googleapis.com/zenn-user-upload/myi4j4psazwex1sm3qdo6384ufmz)
 
-アプリの右側に M1 Mac への対応状況が表示されます。
+アプリ名の右側に M1 Mac への対応状況が表示されます。この中で `Intel64` と表示されているものが Rosetta2 を使用して動作しているアプリ、AppleSilicon に未対応のアプリとなります。 このように一瞬で AppleSilicon に対応しているかしていないかをすぐに確認できます。
+
+# すべてのアプリから対応状況を調べる
+
+アプリの中にはアップデートで AppleSilicon に対応するものが多くあります。現在使用しているアプリが現行バージョンにて AppleSilicon に対応しているかしていないかを調べらために用意されたサイトがあるため紹介します。
+
+上記の M1-App-Checker は公式サイトにて AppleSilicon に対応しているかどうかを調べるための早見表を提供しています。
+
+https://www.imobie.jp/m1-app-checker/?ref=m1
+
+サイトの中段にリストがあり検索ボックスからアプリの対応状況を調べることができます。ただ全体的にアプリの情報が少し乏しく、検索しても見つからないアプリもあります。そこで以下のサイトも合わせて参照することをおすすめします。
+
+## Is Apple silicon ready？
+
+
+
+
+
 # おわりに
