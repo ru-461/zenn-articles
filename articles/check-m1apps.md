@@ -8,9 +8,11 @@ published: false
 
 # はじめに
 
-Apple M１ チップ(Apple Silicon M1)を搭載した Mac シリーズが発売されてしばらく経ちました。M1 Mac は `Applesilicon` と呼ばれ、`ARM アーキテクチャ`を採用しています。そのため、今まで使用されていた IntelCPU(x86)ベースのアプリとの互換性がなくなり、そのままでは使用できなくなりました。そこで Apple は `rosetta2` という変換ツールを用意しており、x64 ベースのアプリを M1 チップ上で変換し動作させることができます。M1Mac 発売当初は x6４ベースのアプリを変換していたアプリがほとんどでしたが、いまは各アプリがこぞって M1 チップ上でネイティブに動作する Applesilicon 対応ビルドやユニバーサルビルドをリリースし、今日までどんどん M1 Mac への対応が進んでいます。
+Apple M１ チップ(Apple Silicon M1)を搭載した Mac シリーズが発売されてしばらく経ちました。Apple Silicon M1 は `ARM アーキテクチャ` を採用しています。そのため、今まで使用されていた IntelCPU(x64)ベースのアプリとの互換性がなくなり、そのまま動かすことができなくなりました。
 
-先日、待望されていた Docker Desktop が v3.3.1 にて正式に `AppleSilicon へ対応`し、話題になりました。
+そこで Apple は `Rosetta2` という変換ツールを用意しており、使用することで x64 ベースのアプリを M1 チップ上で変換し動作させることが可能となります。M1 Mac 発売当初は x6４ベースのアプリを変換することで動作させられるアプリがほとんどでしたが、いまは各アプリがこぞって M1 チップ上でネイティブに動作する `Apple silicon 対応ビルド`や `ユニバーサルビルド` をリリースし、今日に至るまでどんどん M1 Mac への対応が進んでいます。
+
+先日、待望されていた Docker Desktop が v3.3.1 にて正式に `Apple Silicon へ対応`し、話題になりました。
 https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 まだまだ盛り上がりを見せている M1 Mac 対応ですが、まだ Rosseta２を使っているアプリも多く存在します。今日現在、Mac の中に M1 チップへネイティブ対応しているアプリと、変換して動かしている従来のアプリが混在する状態となっているなか、どのアプリが M1 チップに最適化されているのかを一瞬で確認する方法について紹介します。
@@ -48,12 +50,24 @@ $ brew install --cask imobie-m1-app-checker
 
 https://www.imobie.jp/m1-app-checker/?ref=m1
 
+![M1-App-Checkerが提供するリスト画像](https://storage.googleapis.com/zenn-user-upload/b73mxxgsgf4rhxda4g5q37e5lwbo)
+
 サイトの中段にリストがあり検索ボックスからアプリの対応状況を調べることができます。ただ全体的にアプリの情報が少し乏しく、検索しても見つからないアプリもあります。そこで以下のサイトも合わせて参照することをおすすめします。
+
+## Does it ARM？
+
+![Does it ARM?のページ画像](https://storage.googleapis.com/zenn-user-upload/0wwsb2h4po7g1kurx201gbyqscpz)
+
+https://doesitarm.com/
+
+アプリ名から対応状況を検索できるサイトになります。アプリごとに詳細を見ることができ、対応したバージョンやリリースノートへのリンクがまとめられています。またアプリが AppleSilicon にネイティブ対応していないアプリの場合、対応したときにメールにて情報を受け取る機能もあり、いち早く対応状況を知りたいときに活用できそうです。
 
 ## Is Apple silicon ready？
 
+![Is Apple silicon ready？のページ画像](https://storage.googleapis.com/zenn-user-upload/3j4hp9lazkmwehywuttx7zobzu2d)
 
+https://isapplesiliconready.com/jp
 
-
+こちらも同じくアプリの対応状況をまとめたリストを提供しています。こちらは、日本語表示に対応しております。探しているアプリが見つからない場合や、情報が古い場合は情報の更新を申し立てることができるようです。
 
 # おわりに
