@@ -3,7 +3,7 @@ title: "「このアプリM1 Macに最適化されてる？」を一瞬で確認
 emoji: "🌱"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["mac","applesilicon"]
-published: false
+published: true
 ---
 
 # はじめに
