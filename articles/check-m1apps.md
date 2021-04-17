@@ -28,7 +28,7 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 https://www.imobie.com/m1-app-checker/
 
-公式サイトから `「Free Download」` をクリックしてインストールできます。パッケージマネージャーとして `Homebrew` を導入している場合は、ターミナルから以下のコマンドでインストールもできます。
+公式サイトから `「Free Download」` をクリックしてインストールできます。パッケージマネージャーとして `Homebrew` を導入している場合は、以下のコマンドでインストールできます。
 
 ```shell:Terminal
 $ brew install --cask imobie-m1-app-checker
@@ -41,22 +41,22 @@ $ brew install --cask imobie-m1-app-checker
 アプリケーションがインストールされているディレクトリ（デフォルトでは/Applications）を確認して「チェック」をクリックします。するとチェック結果が表示されます。
 
 ![M1-App-Checkの結果画面](https://storage.googleapis.com/zenn-user-upload/myi4j4psazwex1sm3qdo6384ufmz)
-***Apple Silicon・Universalが M1 Mac に最適化済み***
+***Apple Silicon・Universal が M1 Mac に最適化済み***
 
 アプリ名の右側に M1 Mac への対応状況が表示されます。この中で `Intel 64` と表示されているものが Rosetta2 を使用して動作しているアプリ、Apple Silicon に未対応のアプリとなります。
-このように一瞬で AppleSilicon に対応しているかしていないかをすぐに確認できます。
+このように一瞬で Apple Silicon に対応しているかしていないかをすぐに確認できます。
 
 # すべてのアプリから対応状況を調べる
 
-アプリの中にはアップデートで AppleSilicon に対応するものが多くあります。現在使用しているアプリが現行バージョンにて AppleSilicon に対応しているかしていないかを調べらために用意されたサイトがあるため紹介します。
+アプリの中にはアップデートで Apple Silicon に対応するものが多くあります。現在使用しているアプリが現行バージョンにて Apple Silicon に対応しているかしていないかを調べるときに活用できるサイトがいくつかあるため紹介します。
 
-上記の M1-App-Checker は公式サイトにて AppleSilicon に対応しているかどうかを調べるための早見表を提供しています。
+上記の M1-App-Checker は公式サイトにて Apple Silicon に対応しているかどうかを調べるための早見表を提供しています。
 
 https://www.imobie.jp/m1-app-checker/?ref=m1
 
 ![M1-App-Checkerが提供するリスト画像](https://storage.googleapis.com/zenn-user-upload/b73mxxgsgf4rhxda4g5q37e5lwbo)
 
-サイトの中段にリストがあり検索ボックスからアプリの対応状況を調べることができます。ただ全体的にアプリの情報が少し乏しく、検索しても見つからないアプリもあります。そこで以下で紹介するサイトも合わせて参照することをおすすめします。
+サイトの中段にリストがあり検索ボックスからアプリの Apple Silicon 対応状況を調べることができます。ただ全体的にアプリの情報が他のサイトに比べて乏しく、検索しても見つからないアプリもあります。そこで以下で紹介するサイトも合わせて参照することをおすすめします。アプリが見つからない場合はリクエストもできるようです。
 
 ## Does it ARM？
 
