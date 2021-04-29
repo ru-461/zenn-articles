@@ -3,7 +3,7 @@ title: "速さを追い求めて apt から apt-fast へ乗り換えてみた"
 emoji: "🚄"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["linux","apt","ubuntu","wsl"]
-published: false
+published: true
 ---
 
 # はじめに
