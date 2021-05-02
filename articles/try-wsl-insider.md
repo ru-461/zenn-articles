@@ -1,5 +1,5 @@
 ---
-title: "Macに入れたWindows arm 64 InsiderPreviewでWSL2を動かす"
+title: "Macに入れたWindows ARM64 InsiderPreview上でWSL2を動かしてみた"
 emoji: "🐴"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["windows","mac","wsl","parallels","arm"]
@@ -8,9 +8,13 @@ published: false
 
 # はじめに
 
-Mac 上で Windows を動かすといったことが以前の Intel 製 CPU を搭載していた Mac では BootCamp や ParallelsDesktop といったツールを使うことで容易にできていましたが 2020 年秋に登場した Mac シリーズは CPU が AppleSilicon に変わりそれとともにアーキテクチャが arm64 に変わりました。その影響で Windows を Mac 上で動かすのが困難となっていましたが、今現在 ParallelsDesktop がバージョン 16.5 にて正式に AppleSilicon に対応し Windows が動くようになりました。ちょうど、Windows も arm64 Insider Preview を Windows InsidersProgram で配布しており AppleSilicon の Mac で Preview 版の Windows が動作する段階まで来ています。
+Mac 上で Windows を動かすといったことが以前の Intel 製 CPU を搭載していた Mac では [Boot Camp](https://support.apple.com/ja-jp/HT201468) や [Parallels Desktop](https://www.parallels.com/jp/) といったツールを使うことで容易に実現できていましたが 2020 年秋に登場した Mac シリーズで CPU が AppleSilicon に変わりそれとともにアーキテクチャが arm64 に変わりました。その影響で Windows を Mac 上で動かすのが困難となっていましたが、先日 Parallels Desktop 16 がバージョン 16.5 にて正式に AppleSilicon に対応[^1]し Windows が動くようになりました。これで Parallels Desktop は Intel Mac ・ AppleSilicon Mac 両方へ対応したことになります。
 
-arm 版 Windows が一般的にライセンスが使用できるようになるかはまだ定かではありませんが、現状 Preview 版の Windows で WSL2 をどこまで使えるのかを試してみました。
+[^1]: [M1 および Intel チップセット双方をサポートした Parallels Desktop 16.5 for Mac を発表. 最新 Mac 上で Windows 10 をネイティブ スピードで稼働でき、 シームレスなユーザー エクスペリエンスに数百万のユーザーが支持¹](https://www.parallels.com/jp/news/press-releases/show/2021-pd16-5-m1chip/)
+
+ちょうど、Windows も arm64 Insider Preview を Windows InsidersProgram で配布しており AppleSilicon の Mac で Preview 版の Windows が動作する段階まで来ています。
+
+arm 版 Windows が一般的にライセンスを購入して使用できるようになるかはまだ定かではありませんが、現状 Preview 版の Windows で WSL2 をどこまで使えるのかを試してみました。
 
 # 検証環境
 
@@ -73,3 +77,4 @@ https://docs.microsoft.com/ja-jp/windows/wsl/install-win10
 これで WSL2 が有効となり、ディストリビューションをインストールする準備が整いました。
 
 # おわりに
+
