@@ -172,7 +172,11 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 > wsl --set-default-version 1
 ```
 
-この状態でディストリビューションをインストールして起動することで WSL1 として設定できます。WSL1 と WSL2 の違いは以下のページでまとめられています。
+この状態でディストリビューションをインストールして起動することで WSL1 として設定できます。
+
+![WSL1として設定した様子](https://storage.googleapis.com/zenn-user-upload/6jz5d1x04dj1s3a69bujdeax1082)
+
+WSL1 と WSL2 の違いは以下のページでまとめられています。
 
 https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
