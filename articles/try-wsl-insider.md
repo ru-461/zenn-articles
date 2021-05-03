@@ -16,7 +16,7 @@ Mac 上で Windows を動かすといったことが以前の Intel 製 CPU を�
 
 arm 版 Windows が一般的にライセンスを購入して使用できるようになるかはまだ定かではありませんが、現状 Preview 版の Windows で WSL2 をどこまで使えるのかを試してみました。
 
-結論から話すと、現状の環境ではうまく起動させることができませんでした。しかし検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
+結論から話すと、現状の環境では `起動させることができませんでした` 。しかし検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
 
 # 検証環境
 
@@ -26,13 +26,13 @@ arm 版 Windows が一般的にライセンスを購入して使用できるよ�
 
 # 事前準備
 
-## Preview ARM 版Windowsの入手
+## Preview arm 版Windows10の入手
 
 Windows Insider Program に参加することで以下のページから Preview 版のビルドを無料でダウンロードできます。
 
 https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64?wa=wsignin1.0
 
-入手した Windows イメージは VHDX 形式となっており、ParallelsDestop にて選択することで起動させることができます。
+入手した Windows イメージは `VHDX 形式`となっており、Parallels Destop にて選択することで起動させることができます。
 
 ParallelsDesktop は以下のページからダウンロードしてインストールできます。
 
@@ -118,13 +118,13 @@ WSL2 に Ubuntu 20.04 LTS がインストールできたので起草してみま
 起動まではうまくいきましたが、エラー表示がでてここから先に進みませんでした。
 
 ![WSL2起動エラーの画像](https://storage.googleapis.com/zenn-user-upload/oshvlzztlom0cnxjz7v3kc29qta0)
-***文字がうまく表示されていない部分があるがエラー***
+***一部文字化けしている***
 
 ## 試したこと
 
-このままエラーで引き下がれないのでどうにか起動できないか試行錯誤してみました。
+このままエラーで引き下がれないので、どうにか起動できないか試行錯誤してみました。
 
-よくあるエラーとして、カーネルの更新がされていないというのがあり公式のガイドのとおりカーネルの更新をしてみます。`wsl --install`コマンドを実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
+よくあるエラーとして、カーネルの更新がされていないというのがあるようです。そこで半信半疑ながらに公式のガイドを参考にカーネルの更新をしてみます。`wsl --install`コマンドを実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
 
 :::message
 カーネルの更新プログラムパッケージは x64 向けと ARM64 向けで分かれています。今回使用しているのは ARM64 アーキテクチャのため ARM64 用のカーネル更新プログラムパッケージを選択しインストールします。
@@ -134,11 +134,10 @@ WSL2 に Ubuntu 20.04 LTS がインストールできたので起草してみま
 
 そこでエラーメッセージについて調べてみるとどうやら内部仮想化の部分が有効になっていない模様です。
 
-
-Paralles では設定から `「ネスト化された仮想化を有効にする」` という項目を有効にする必要があるようです。
-
 【参考記事】
 https://sugamasao.hatenablog.com/entry/2020/06/09/090000
+
+Paralles Desktop では設定から `「ネスト化された仮想化を有効にする」` という項目を有効にする必要があるようです。
 
 現在、Paralles Desktop の通常版(Standard Edition)を使用しているのですが、設定項目を探してみても該当項目は見当りませんでした。
 
@@ -154,5 +153,17 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 ![アップグレード後の設定画面](https://storage.googleapis.com/zenn-user-upload/0hazekic80sefdfsrstc67z0plp0)
 
 アップグレード前と比較して変わったところは、メモリの上限を拡張できるようになったことだけでネスト化された仮想化を有効にする設定は現れませんでした。
+
+以前のバージョンでは WSL2 の動作が仮想化された Windows 上にて実現できている例が見られたので、今後実現できるようになってほしいです。
+
 # おわりに
+
+今回、WSL2 を Parallels Desktop に導入した Windows arm64 Insider Preview 上で有効化できるのかを検証しました。結果としてはうまく動作させることができませんでした。まだ Windows が Preview ビルドであったり、Parallels Desktop が AppleSilicon に対応したてだったりと技術面で課題があるように感じました。
+
+本題からはそれるのですが、現在 Ubuntu Desktop の arm 版が[Ubuntu 20.04.2.0 LTS (Focal Fossa) Daily Build](https://cdimage.ubuntu.com/focal/daily-live/current/)として公開されています。このイメージを Parallels Desktop に導入することで仮想化した Ubuntu Desktop を AppleSilicon 上で使うことができます。こちらは問題なく動作検証できました。
+
+仮想化された環境の中で仮想化技術を使うという需要がどのくらいあるかはわかりませんが、arm 版の Windows10 が Macbook 上で快適に動作するようになったなどと興味深い結果が得られたので今後の動向にも注目していきたいところです。
+
+最後まで読んでいただきありがとうございました。
+
 
