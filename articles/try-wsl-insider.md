@@ -1,5 +1,5 @@
 ---
-title: "Macに入れたWindows ARM64 InsiderPreview上でWSL2を動かしてみた"
+title: "Macに入れたWindows ARM64 InsiderPreview上でWSL2を動かしてみようと試みた話"
 emoji: "🐴"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["windows","mac","wsl","parallels","arm"]
@@ -15,6 +15,8 @@ Mac 上で Windows を動かすといったことが以前の Intel 製 CPU を�
 ちょうど、Windows も arm64 Insider Preview を Windows InsidersProgram で配布しており AppleSilicon の Mac で Preview 版の Windows が動作する段階まで来ています。
 
 arm 版 Windows が一般的にライセンスを購入して使用できるようになるかはまだ定かではありませんが、現状 Preview 版の Windows で WSL2 をどこまで使えるのかを試してみました。
+
+結論から話すと、現状の環境ではうまく起動させることができませんでした。しかし検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
 
 # 検証環境
 
@@ -107,6 +109,50 @@ Ubuntu-20.04    Ubuntu 20.04 LTS
 > wsl --install -d Ubuntu-20.04
 ```
 
-Ubuntu 20.04 LTS のインストールが開始されます。インストールが完了するとぃ動的に起動します。
+Ubuntu 20.04 LTS のインストールが開始されます。インストールが完了すると自動的に起動します。
+
+## 起動する
+
+WSL2 に Ubuntu 20.04 LTS がインストールできたので起草してみます。
+
+起動まではうまくいきましたが、エラー表示がでてここから先に進みませんでした。
+
+![WSL2起動エラーの画像](https://storage.googleapis.com/zenn-user-upload/oshvlzztlom0cnxjz7v3kc29qta0)
+***文字がうまく表示されていない部分があるがエラー***
+
+## 試したこと
+
+このままエラーで引き下がれないのでどうにか起動できないか試行錯誤してみました。
+
+よくあるエラーとして、カーネルの更新がされていないというのがあり公式のガイドのとおりカーネルの更新をしてみます。`wsl --install`コマンドを実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
+
+:::message
+カーネルの更新プログラムパッケージは x64 向けと ARM64 向けで分かれています。今回使用しているのは ARM64 アーキテクチャのため ARM64 用のカーネル更新プログラムパッケージを選択しインストールします。
+:::
+
+[こちらのページ中段](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10)にあるダウンロードリンクからダウンロードしてインストールしてみるもエラー内容は変わらず...。
+
+そこでエラーメッセージについて調べてみるとどうやら内部仮想化の部分が有効になっていない模様です。
+
+
+Paralles では設定から `「ネスト化された仮想化を有効にする」` という項目を有効にする必要があるようです。
+
+【参考記事】
+https://sugamasao.hatenablog.com/entry/2020/06/09/090000
+
+現在、Paralles Desktop の通常版(Standard Edition)を使用しているのですが、設定項目を探してみても該当項目は見当りませんでした。
+
+![Standard Editionでの設定表示](https://storage.googleapis.com/zenn-user-upload/8mbsbqfe6yp54ocs3c3oq7pdgp2b)
+***参考記事を見るとここに項目があるはずだが...***
+
+https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User's%20Guide/37830.htm
+
+少し古い情報となりますが、ネスト化された仮想化サポートは Pro Edition でのみのサポートという情報があったため、勢いで Pro Edition に変更して検証してみます。
+
+こちらが Pro Edition へアップグレードした後の設定画面になります。
+
+![アップグレード後の設定画面](https://storage.googleapis.com/zenn-user-upload/0hazekic80sefdfsrstc67z0plp0)
+
+アップグレード前と比較して変わったところは、メモリの上限を拡張できるようになったことだけでネスト化された仮想化を有効にする設定は現れませんでした。
 # おわりに
 
