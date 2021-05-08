@@ -78,10 +78,12 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 この拡張機能をインストールするとすぐに Google 検索の結果画面で使用可能になります。
 
 ![Google 検索キーボードショートカット導入後の様子](https://storage.googleapis.com/zenn-user-upload/8n0st6ntg37x61ecsijh9mappkh7)
-_この拡張機能を導入したことで検索直後からフォーカスが当たり_
-すぐに `K キー`を押すと...
+*この拡張機能を導入したことで検索直後からフォーカスがあたりました*
+
+すぐに `K キー`を押すと..。
+
 ![2番目のリンクにフォーカスされる様子](https://storage.googleapis.com/zenn-user-upload/4jxh731n4i3w7o3tl6i5nkk77ii5)
-_しっかりと目的の２番目のリンクにフォーカスされました!_
+*しっかりと目的の２番目のリンクにフォーカスされました!*
 
 これでマウス・トラックパッドを触らなくてもキーボードだけで簡単に Google 検索ができるようになりました。
 以上２つの拡張機能を組み合わせたとき、Google 検索の流れは以下のようになります。
