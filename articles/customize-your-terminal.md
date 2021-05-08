@@ -30,17 +30,66 @@ https://starship.rs/ja-jp/
 公式サイトにそれぞれの環境でのインストールが詳しく紹介されているので簡潔にまとめます。
 
 以下のコマンドでバイナリをインストールします。
+WSL2 で Ubuntu などを利用している場合はこちらでのインストールが簡単です。
 
 ```shell
 $ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
-Starship の更新も上記のワンライナーで行えます。アップデートする際に設定ファイルを変えることなくバージョンを置き換えてくれます。
+✓ Starship installed となれば完了です。また上の方法でインストールした場合、Starship の更新も同じコマンドで行います。アップデートする際に設定ファイルを変えることなくバージョンを置き換えてくれます。
 
 また Mac などでパッケージ管理に Homebrew を使っている場合は以下のコマンドでもインストールできます。
 
 ```shell
 $ brew install starship
 ```
+
+## 初期設定 : Starshipの有効化
+
+Starship を有効にするたの処理をシェルプロファイルへ記述する必要があります。
+
+Zsh を使用している場合は以下のようにします。
+
+```shell:zsh
+# .zshrcの末尾に追記
+echo eval "$(starship init zsh)" >> ~/.zshrc
+
+# シェルの再読み込み
+source ~/.zshrc
+```
+
+Bash を使用している場合は以下のようになります。
+
+```shell:bash
+# .bashrcの末尾に追記
+echo eval "$(starship init bash)" >> ~/.bashrc
+
+# シェルの再読み込み
+source ~/.bashrc
+```
+
+シェルの再読み込みをすることで Starship が有効になります。
+
+```shell
+# デフォルトの表示
+~
+❯
+```
+
+:::message
+`eval "$(starship init zsh)"`はかならずファイルの末尾に記述してある必要があります。シェルを再起動しても有効にならない場合は記述位置を見直して見てください。
+:::
+
+## 初期設定 : 対応フォントの導入
+
+Starship はアイコンフォントに対応しているため使用しているフォントがアイコンフォントに対応していないと一部文字化けする可能性があります。公式は NerdFont の導入を推奨しているため、Nerd フォントが手元にない場合は以下から探してみてください。
+
+https://www.nerdfonts.com/
+
+私は、[たわら様](https://twitter.com/tawara_san)が開発しているプログラミングフォント「白源 (はくげん／HackGen)」をターミナルのフォントに使用しています。
+
+https://github.com/yuru7/HackGen
+
+NerdFont を追加した「HackGenNerd Consol	」というフォントを公開しているためこちらをインストールして使用することでアイコンフォントも問題なく表示できます。またプログラミングフォントのため文字の識別がしやすい点もおすすめです。
 
 # おわりに
