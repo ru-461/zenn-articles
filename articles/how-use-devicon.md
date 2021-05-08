@@ -10,18 +10,18 @@ published: true
 
 [DEVICON](https://devicon.dev/)は技術系のアイコンをアイコンフォントとして配布しているサイトでプログラミング言語のロゴなどが豊富に用意されています。以前投稿した [こちらの記事](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)でも使用しました。
 
-今回は VueCLI を使い作成したサイト内でアイコンを使おうとした際に少しハマったのでアイコンの導入方法をメモとして残しておきます。
+今回は Vue CLI を使い作成したサイト内でアイコンを使おうとした際に少しハマったのでアイコンの導入方法をメモとして残しておきます。
 
 # npm でインストールできそう
 
 ![Devicon v2 npmページの画像](https://storage.googleapis.com/zenn-user-upload/xsxld7fv2za6nbhn4g0wqae9oaej)
-_説明を見たところ npm でインストールして使えるみたい_
+*説明を見たところ npm でインストールして使えるみたい*
 
 # 説明のとおりにインストールしてみる
 
 ターミナルから以下のコマンドでインストール。
 
-```bash:shell
+```shell
 npm i devicon
 ```
 
@@ -38,6 +38,8 @@ npm i devicon
 npm のページを翻訳したりしてみたり、Google で使い方について検索してみましたが、解決策を書いてあるページは見当たらなくてハマりました。初めて npm を使って開発したので知識不足な部分もあるのかなと `index.js` や `App.vue` ファイルの中で試行錯誤した結果、時間はかかりましたが導入に成功しました。
 
 # 解決策
+
+App.vue で以下のように記述。
 
 ```js:App.vue
 import "devicon";
