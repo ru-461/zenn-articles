@@ -6,27 +6,29 @@ topics: ["wsl2", "Windows", "初心者", "ubuntu", "Linux"]
 published: true
 ---
 
-私は、メインの開発環境として Windows10 の WSL2 を使っています。初期状態では日本語ロケールが含まれておらず、表示はすべて英語です。この記事では日本語ロケールを追加して日本語表示に対応させます。それと同時に時刻の日本時間化、マニュアル日本語化を行います。 WSL 上で開発環境を作成するときに毎回行う作業で忘れがちなので備忘録として残しておきます。
+私は、メインの開発環境として Windows10 の WSL2(Ubuntu 20.04 LTS)を使っています。初期状態では日本語ロケールが含まれておらず、表示はすべて英語です。この記事では日本語ロケールを追加して日本語表示に対応させます。それと同時に時刻の日本時間化、マニュアル日本語化を行います。 WSL2 上で開発環境を作成するときに毎回行う作業で忘れがちなので備忘録として残しておきます。
 
 # 環境
 
 - Windows 10 バージョン 20H2
-- Windows Subsystem for Linux 2(WSL2)
+- Windows Subsystem for Linux 2 (WSL2)
 - Ubuntu 20.04.1 LTS (Focal Fossa)
 
 # Microsoft Store から WSL2 へ Ubuntu をインストール
 
 ![Microsoft Store Ubuntu 20.04のインストールページの画像](https://storage.googleapis.com/zenn-user-upload/m9gsq8lu1u49qs989num6iyl7r8e)
-_インストールができたら「起動」をクリック_
-インストールが終わったら「起動」をクリックでシェルが起動します。
+*インストールができたら「起動」をクリック*
+
+インストールが終わったら「起動」をクリックで Ubuntu が起動します。
 
 # 初期設定
 
 ## ユーザーアカウントとパスワードを作成
 
-ユーザアカウントとパスワードを作成するように促されるので、指示のとおりにアカウントを作成します。
+ユーザアカウントとパスワードを作成するように促されるので、指示のとおりにユーザーを作成します。
+
 :::message
-パスワードは 2 回確認されるので同じものを入力。
+パスワードは 2 回確認されるので同じものを入力します。
 :::
 
 ## デフォルトの WSL のバージョンを設定
@@ -59,9 +61,11 @@ $ sudo apt install -y language-pack-ja
 
 パスワードが求められたら root 権限のパスワード(初回に設定したパスワード)を入力して続行します。
 
-`locale -a`コマンドで確認。
+ロケールが追加されていることを `locale -a` コマンドで確認します。
 
 ```bash
+$ locale -a
+
 C
 C.UTF-8
 POSIX
@@ -69,7 +73,7 @@ en_US.utf8
 ja_JP.utf8
 ```
 
-一番下に日本語ロケール(ja_JP.utf8)が追加されました。
+一番下に日本語ロケール( ja_JP.utf8 )が追加されていることが確認できました。
 
 ## 日本語ロケールを設定
 
@@ -98,16 +102,21 @@ $ sudo dpkg-reconfigure tzdata
 
 GUI 表示になるので選択肢から「アジア」→「東京」を選択します。
 ![都市名のリスト選択画面の画像](https://storage.googleapis.com/zenn-user-upload/hms81758oplrwgqztsc3d5lt2oql)
-_アジアを選択_
+*アジアを選択*
+
 ![時間帯選択画面の画像](https://storage.googleapis.com/zenn-user-upload/wlmalkrups5z43uhweg3wnykiwkv)
-_東京を選択_
+*東京を選択*
+
 `date`コマンドで現在の時刻を表示。
 
 ```bash
+$ date
+
 2020年 11月 23日 月曜日 21:48:00 JST
 ```
 
-日本時間(JST)で表示されています。
+しっかりと日本時間(JST)で表示されています。
+
 これで WSL2 で日本時間が使用できるようになりました。
 
 ## コマンドのマニュアル表示も日本語にする
@@ -158,5 +167,5 @@ WSL2 で日本語表示ができる環境を作ることができました。コ
 
 # 参考
 
-[WSL の Ubuntu 環境を日本語化する：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1806/28/news043.html)
-[Ubuntu - 日本語版 man は WSL 上の Ubuntu20.04 の apt からインストールすることができないのでしょうか？｜ teratail](https://teratail.com/questions/262291)
+- [WSL の Ubuntu 環境を日本語化する：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1806/28/news043.html)
+- [Ubuntu - 日本語版 man は WSL 上の Ubuntu20.04 の apt からインストールすることができないのでしょうか？｜ teratail](https://teratail.com/questions/262291)
