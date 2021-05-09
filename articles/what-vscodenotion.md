@@ -21,7 +21,9 @@ Notion を自分専用の Wiki のように活用し、一箇所で必要な情�
 
 代替えの API 先として [Notion API Workerの提供するAPI](https://notion-api.splitbee.io/)が使用可能です。
 VSCode Notion の設定から `VSCode Notion: Api` を以下に変更することでうまく動作することが確認できました。
+
 ![API](https://storage.googleapis.com/zenn-user-upload/nn64sjxnzzht9s234e6zuahzpc8w)
+
 アクセストークンを変更したけどうまく動かないという場合は API 先の設定を見直してみてください。
 :::
 
@@ -50,16 +52,20 @@ Notion ではまだ公式に正式な API が提供されていないため、�
 それでは、VSCode に拡張機能を導入して Notion を開けるようにしていきます。
 
 拡張機能の検索ウインドウに `notion` といれることで「VSCode Notion」がヒットするのでインストールしていきます。
+
 ![VSCode Notionを検索する様子](https://storage.googleapis.com/zenn-user-upload/6i6uzl1kglf3dqx7d27trlev3v5m)
 *検索してヒットしたこちらの拡張機能をインストール*
+
 インストールが完了するとステータスがインストール済みになり、インストール済みの拡張機能に追加されます。
 インストールすることで自動的に拡張機能が有効になり、左のメニューに Notion のアイコンが表示されます。
 
 VSCode Notion を開くと `RECENTS (最近VSCodeで開いたページ)` と `BOOKMARKS (ブックマークしたページ)` の 2 つから選ぶことができます。
 
 初めて使用するときはまだページを開いていないため、 Notion ページを開くための `Open A Page`ボタンが表示されています。
+
 ![Notionのページを開く様子](https://storage.googleapis.com/zenn-user-upload/xcvqs9sr5jdgobphsr9t3i9tmgdf)
 *Open A PageからNotionのページを開くことができる*
+
 ボタンをクリックしてフォームへ Notion のページへのアドレスを入れると指定したページを開くことができるのですが、デフォルトの状態では `Couldn't load the data from API.` と api エラーが出て開くことができません。
 Notion のページを開くためには**アクセストークンを取得して設定**する必要があります。
 デフォルトの状態ではアクセストークンが空になっているため以下の初期設定が必要となります。
@@ -83,12 +89,13 @@ Notion のアクセストークンを取得します。ブラウザにて Notion
 
 ![Chrome DevToolsからトークンを取得する様子](https://storage.googleapis.com/zenn-user-upload/vg3rhxbtu5tnwg1582frn4iss0q1)
 *valueの項目にある値をそのままコピー*
+
 アクセストークンは長い文字列になっており、拡張機能を使うために必ず必要となるので、慎重に管理をお願いします。
 
 取得した Notion アクセストークンを設定画面の `VSCode Notion Access Token` にそのままペーストします。
 
 ![取得したトークンを設定する様子](https://storage.googleapis.com/zenn-user-upload/g6yakw9g75hx8eh6zjssg38fu5q2)
-_赤枠の中にそのままペースト_
+*赤枠の中にそのままペースト*
 
 これで初期設定が完了となります。
 
@@ -100,13 +107,13 @@ _赤枠の中にそのままペースト_
 アドレスで指定したページが VSCode 内で表示できており、問題なく動作しました。
 
 ![VSCodeから見たプログラミングノートトップページの画像](https://storage.googleapis.com/zenn-user-upload/oflnx8dsbnzpxr63rj5d4r9do9cp)
-_プログラミングノートトップページ - 技術ページへの遷移も可能_
+*プログラミングノートトップページ - 技術ページへの遷移も可能*
 
 ![VSCodeから見た技術個別ページの画像](https://storage.googleapis.com/zenn-user-upload/ieji7rr5hhhk4bwse6gnbskul1an)
-_技術ごとのページ - データベース表示が崩れ気味_
+*技術ごとのページ - データベース表示が崩れ気味*
 
 ![VSCodeから見た備忘録メモページの画像](https://storage.googleapis.com/zenn-user-upload/ykolgfd6cuzhuhy3tvzogz3ygd1i)
-_備忘録メモ - Notion 内のコードブロックもうまく表示できており可読性も問題なし_
+*備忘録メモ - Notion 内のコードブロックもうまく表示できており可読性も問題なし*
 
 ## 使ってみて気になった点
 
