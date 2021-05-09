@@ -24,13 +24,13 @@ node.js (バージョン 8 以降)がインストールされている場合、n
 ## npm でインストール
 
 ```shell
-npm install --global fast-cli
+$ npm install --global fast-cli
 ```
 
 ## Yarn でインストール
 
 ```shell
-yarn global add fast-cli
+$ yarn global add fast-cli
 ```
 
 # 実行
@@ -38,7 +38,7 @@ yarn global add fast-cli
 ## ダウンロード速度の計測
 
 ```shell
-fast
+$ fast
 ```
 
 上のコマンドで回線のダウンロードの速度計測が始まります。`--upload , -u` オプションを付けないとダウンロードのみの計測となります。
@@ -46,7 +46,7 @@ fast
 ## ダウンロードとアップロード速度を計測
 
 ```shell
-fast --upload
+$ fast --upload
 ```
 
 ダウンロード速度とアップロード速度を計測します。
@@ -54,7 +54,7 @@ fast --upload
 ## ダウンロード速度を計測して結果を一行表示
 
 ```shell
-fast --single-line
+$ fast --single-line
 ```
 
 一行でシンプルにダウンロード速度を計測します。
@@ -62,10 +62,10 @@ fast --single-line
 ## fast-cli のヘルプを表示
 
 ```shell
-fast --help
+$ fast --help
 ```
 
-使用できるコマンドと使用例を表示します。
+使用可能なコマンドと使用例を表示します。
 
 # おわりに
 
@@ -77,6 +77,6 @@ fast --help
 
 # 参考
 
-[sindresorhus / fast-cli](https://github.com/sindresorhus/fast-cli)
-[回線速度のテストができる「fast」コマンドが便利だった](https://qiita.com/suin/items/8398f0b07299a3cc194f)
-[windows10 fast.com のコマンドラインツール「fast-cli」を使って回線速度を計測する](https://mebee.info/2020/04/28/post-10023/)
+- [sindresorhus / fast-cli](https://github.com/sindresorhus/fast-cli)
+- [回線速度のテストができる「fast」コマンドが便利だった](https://qiita.com/suin/items/8398f0b07299a3cc194f)
+- [windows10 fast.com のコマンドラインツール「fast-cli」を使って回線速度を計測する](https://mebee.info/2020/04/28/post-10023/)
