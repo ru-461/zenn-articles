@@ -16,6 +16,12 @@ published: false
 
 そこで「ターミナルをもっとおしゃれに使いたい」そんな思いから、今回は、`Starship` という Rust 製のシェルフレームワークと Rust 製コマンド `exa` を活用してモダンかつ軽量、おしゃれなシェル環境を構築してみました。
 
+作成したターミナルはこちらです。
+
+![starship x exa で作成したターミナル画像](https://storage.googleapis.com/zenn-user-upload/ci6i4zza6ar0wna6l7zwfjszmsk3)
+
+Starship の設定から作業ブランチ名と Node.js のバージョンを表示し、exa を使ってアイコン付きのツリー表示で React のプロジェクトを開いた様子です。Powerline などでおなじみのアイコンフォントの表示できるのでターミナルがいっきにおしゃれになります。
+
 # Starshipを導入する
 
 まず、Rust 製のシェルフレームワーク「Starship」を導入します。
@@ -77,10 +83,10 @@ source ~/.bashrc
 ```
 
 :::message
-`eval "$(starship init zsh)"`はかならずファイルの末尾に記述してある必要があります。シェルを再起動しても有効にならない場合は記述位置を見直して見てください。
+`eval "$(starship init zsh)"`は必ずファイルの末尾に記述してある必要があります。シェルを再起動しても有効にならない場合は記述位置を見直して見てください。
 :::
 
-## 初期設定 : 対応フォントの導入
+## 初期設定 : フォントの導入
 
 Starship はアイコンフォントに対応しているため使用しているフォントがアイコンフォントに対応していないと一部文字化けする可能性があります。公式は NerdFont の導入を推奨しているため、Nerd フォントが手元にない場合は以下から探してみてください。
 
@@ -90,6 +96,32 @@ https://www.nerdfonts.com/
 
 https://github.com/yuru7/HackGen
 
-NerdFont を追加した「HackGenNerd Consol	」というフォントを公開しているためこちらをインストールして使用することでアイコンフォントも問題なく表示できます。またプログラミングフォントのため文字の識別がしやすい点もおすすめです。
+NerdFont を追加した「HackGenNerd Console」というフォントを公開しているためこちらをインストールして使用することでアイコンフォントも問題なく表示できます。またプログラミングフォントのため文字の識別がしやすい点もおすすめです。
+
+# Starshipのカスタマイズ
+
+Starship はデフォルトでもアイコンフォントの表示やカラフルな表示に対応しており便利なのですが、設定ファイルを作成して使用することでより細かい設定が可能となります。
+
+```shell
+$ starship config
+```
+
+とすることで `~/.config`の下に `starship.toml` という設定ファイルが作成され開かれます。
+
+設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config/)を見てみてください。上記の画像では以下の設定をしています。
+
+```toml:starship.toml
+# 空行追加
+add_newline = true
+
+# タイムアウト時間
+scan_timeout = 10
+
+# 記号の設定
+[character]
+success_symbol = "[▶](bold green)" # コマンド成功時
+error_symbol = "[▶](bold red)"    # コマンド失敗時
+```
+
 
 # おわりに
