@@ -27,21 +27,21 @@ JavaScript のフレームワークには npm や Yarn などのパッケージ�
 ## npm
 
 ```shell
-npm install -g @vue/cli
+$ npm install -g @vue/cli
 
-vue create <project-name>
-cd <project-name>
-npm run serve
+$ vue create <project-name>
+$ cd <project-name>
+$ npm run serve
 ```
 
 ## Yarn
 
 ```shell
-yarn global add @vue/cli
+$ yarn global add @vue/cli
 
-vue create <project-name>
-cd <project-name>
-npm run serve
+$ vue create <project-name>
+$ cd <project-name>
+$ npm run serve
 ```
 
 http://localhost:8080 で開発サーバが立ち上がります。
@@ -53,25 +53,25 @@ http://localhost:8080 で開発サーバが立ち上がります。
 ## npm
 
 ```shell
-npm init nuxt-app <project-name>
-cd <project-name>
-npm run dev (yarn dev)
+$ npm init nuxt-app <project-name>
+$ cd <project-name>
+$ npm run dev (yarn dev)
 ```
 
 ## npx
 
 ```shell
-npx create-nuxt-app <project-name>
-cd <project-name>
-npm run dev
+$ npx create-nuxt-app <project-name>
+$ cd <project-name>
+$ npm run dev
 ```
 
 ## Yarn
 
 ```shell
-yarn create nuxt-app <project-name>
-cd <project-name>
-yarn dev
+$ yarn create nuxt-app <project-name>
+$ cd <project-name>
+$ yarn dev
 ```
 
 http://localhost:3000 で開発サーバーが立ち上がります。
@@ -83,25 +83,25 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 ## npm
 
 ```shell
-npm init react-app <project-name>
-cd <project-name>
-npm start
+$ npm init react-app <project-name>
+$ cd <project-name>
+$ npm start
 ```
 
 ## npx
 
 ```shell
-npx create-react-app <project-name>
-cd <project-name>
-npm start
+$ npx create-react-app <project-name>
+$ cd <project-name>
+$ npm start
 ```
 
 ## Yarn
 
 ```shell
-yarn create react-app <project-name>
-cd <project-name>
-yarn start
+$ yarn create react-app <project-name>
+$ cd <project-name>
+$ yarn start
 ```
 
 npm、npx でインストールする場合は Yarn がインストールされているとデフォルトで Yarn が使用されます。
@@ -115,17 +115,17 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 ## npm
 
 ```shell
-npx create-next-app <project-name>
-cd <project-name>
-npm run dev
+$ npx create-next-app <project-name>
+$ cd <project-name>
+$ npm run dev
 ```
 
 ## Yarn
 
 ```shell
-yarn create next-app <project-name>
-cd <project-name>
-yarn dev
+$ yarn create next-app <project-name>
+$ cd <project-name>
+$ yarn dev
 ```
 
 React と同じく npm、npx でインストールする場合は Yarn がインストールされているとデフォルトで Yarn が使用されます。
@@ -139,22 +139,22 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 ## npm
 
 ```shell
-npm install -g @angular/cli
+$ npm install -g @angular/cli
 
-ng new <project-name>
-cd <project-name>
-ng serve --open
+$ ng new <project-name>
+$ cd <project-name>
+$ ng serve --open
 ```
 
 ## Yarn
 
 ```shell
-npm install -g @angular/cli
+$ npm install -g @angular/cli
 
-ng config -g cli.packageManager yarn
-ng new <project-name>
-cd <project-name>
-ng serve --open
+$ ng config -g cli.packageManager yarn
+$ ng new <project-name>
+$ cd <project-name>
+$ ng serve --open
 ```
 
 `ng serve --open`とすることでデフォルトのブラウザで起動します。
@@ -169,10 +169,10 @@ http://localhost:4200 で開発サーバーが立ち上がります。
 ## npx
 
 ```shell
-npx degit sveltejs/template <project-name>
-cd <project-name>
-npm install
-npm run dev
+$ npx degit sveltejs/template <project-name>
+$ cd <project-name>
+$ npm install
+$ npm run dev
 ```
 
 http://localhost:5000 で開発サーバーが立ち上がります。
