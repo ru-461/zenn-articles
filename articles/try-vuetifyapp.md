@@ -24,8 +24,10 @@ https://counter-for-twitter.herokuapp.com/
 # 完成イメージ
 
 ![完成イメージの画像](https://i.gyazo.com/13a9f3438c632fafead61860ee382092.gif)
+
 テキストエリアに文字を入力すると下のカウンターが動的に変化します。
 コードはこちらで公開しています。
+
 https://github.com/ryu-461/tweet-counter
 
 # 前提条件
@@ -78,7 +80,9 @@ $ npm run serve
 開発サーバーには http://localhost:8080 でアクセスできます。
 
 ブラウザでアクセスし、以下の画面が表示されればプロジェクトが正しく生成されています。
+
 ![Vue Welcome Pageの画像](https://storage.googleapis.com/zenn-user-upload/587mvjvowie18447ki2arjz89ldi)
+
 上の Welcome ページで表示されているテンプレートは src ディレクトリ内の `App.vue` ファイルに記述されている内容になります。
 
 ```vue:src/App.vue
@@ -141,6 +145,7 @@ $ vue add vuetify
 これで Vuetify を使う準備ができました。
 
 この状態でサーバーを立ち上げアクセスすると Vue.js App の Welcome ページから Vuetify の Welcome ページに置き換わっているのがわかります。
+
 ![Vuetify Welcom Pageの画像](https://storage.googleapis.com/zenn-user-upload/rx00t2tqd9nbeooi7m7ta3yiultz)
 
 `App.vue`を開くと中身が Vuetify のものに変わっています。
@@ -229,10 +234,9 @@ export default {
   }),
 };
 </script>
-
 ```
 
-これで http://localhost:8080 にアクセスしたとき、なにもないページが表示されるようになります。
+これで http://localhost:8080 にアクセスしたとき、何もないページが表示されるようになります。
 
 # アプリの機能を作る
 
@@ -356,6 +360,7 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
 現在の状態では、要素が全体的に上の方に寄っていて、画面下の空白が気になるため、`<v-main>` を `<v-container fill-height>`で囲み上下に均等の幅を持たせて中央揃えにします。
 
 文字の色を変えて、スタイルを調整を調整すると以下のようになります。
+
 ![スタイル後の画面画像](https://storage.googleapis.com/zenn-user-upload/2h735x9g2acw4afxqwef9y0sd8o0)
 
 ここまでで文字数をカウントする機能とスタイリングができました。
@@ -377,6 +382,7 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
 ```
 
 ![v-btn追加後の画像](https://storage.googleapis.com/zenn-user-upload/18an71n21bf6v7orxlz5mvhvlm42)
+
 上のボタンをブラウザで見ると以下のようになります。
 
 ボタンの配置ができました。上の記述だけで少し立体感のあるボタンが作成されました。href 対して Twitter の URL 、target="blank" としているため、ボタンをクリックすると Twitter が別タブで開かれます。ツイートする機能はないのであくまでツイートを促すだけのボタンなります。メインの機能は文字数のカウンターのため、ツイートボタンはあくまでオマケ的な位置づけです。
@@ -416,6 +422,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 ```
 
 以上のようにすることでタイトルの横に Twitter のアイコンが表示されるようになります。これで Twitter らしさを出すことができました。
+
 ![完成後の画像](https://storage.googleapis.com/zenn-user-upload/ma3bdad2chposz072xv4xzo4ka9w)
 
 # さいごに
