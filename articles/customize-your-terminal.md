@@ -98,7 +98,7 @@ https://github.com/yuru7/HackGen
 
 NerdFont を追加した「HackGenNerd Console」というフォントを公開しているためこちらをインストールして使用することでアイコンフォントも問題なく表示できます。またプログラミングフォントのため文字の識別がしやすい点もおすすめです。
 
-# Starshipのカスタマイズ
+## Starshipのカスタマイズ
 
 Starship はデフォルトでもアイコンフォントの表示やカラフルな表示に対応しており便利なのですが、設定ファイルを作成して使用することでより細かい設定が可能となります。
 
@@ -123,5 +123,24 @@ success_symbol = "[▶](bold green)" # コマンド成功時
 error_symbol = "[▶](bold red)"    # コマンド失敗時
 ```
 
+# exaの導入
+
+exa コマンドとは Linux でおなじみの `ls` コマンドを更に拡張したコマンドになります。こちらも Rust 製でとても扱いやすいものになっております。デフォルトでカラフルな表示とオプションを使用した詳細表示に対応しており前述した Starship ととても相性がいいです。
+
+GitHub リポジトリはこちらになります。
+
+https://github.com/ogham/exa
+
+exa コマンドはインストール方法が多数ありディストリビューションによって大きく異なります。
+
+## Homebrew を使用したインストール
+
+パッケージ管理に Homebrew を使用している場合は以下のコマンドでインストールできます。
+
+```shell
+$ brew install exa
+```
+
+WSL2 で Ubuntu を使用している場合であっても Homebrew を導入することで同じようにインストールできます。私は WSL2 において Homebrew を導入した上で exa コマンドを導入しています。WSL2 上の Ubuntu20.04 LTS に Homebrew を導入するやり方は過去に[こちらの記事](https://zenn.dev/ryuu/articles/wsl2-homebrew)にて紹介しています。
 
 # おわりに
