@@ -143,4 +143,29 @@ $ brew install exa
 
 WSL2 で Ubuntu を使用している場合であっても Homebrew を導入することで同じようにインストールできます。私は WSL2 において Homebrew を導入した上で exa コマンドを導入しています。WSL2 上の Ubuntu20.04 LTS に Homebrew を導入するやり方は過去に[こちらの記事](https://zenn.dev/ryuu/articles/wsl2-homebrew)にて紹介しています。
 
+## Cargoを使用したインストール
+
+Rust のビルドシステム兼パッケージマネージャーの `Cargo` を使用してインストールできます。
+
+```shell
+# Rustupをインストール
+$ curl https://sh.rustup.rs -sSf | sh
+```
+
+とすることで Rust のインストールが行われます。対話形式でインストールを進めていき `Rust is installed now. Great!` と表示されればインストールは成功です。
+
+インストール直後にパスを通す必要があるので以下の一行をシェルのプロファイルに記述してください。
+
+```shell:.zshrc
+export PATH="$HOME/.cargo/bin:$PATH"
+```
+
+インストールするとパッケージ管理ツールの `cargo` が使用できるようになるので、cargo 経由で exa を導入できます。
+
+```shell
+$ cargo install exa
+```
+
+パスは自動的に通るためすぐにコマンドを使用できます。
+
 # おわりに
