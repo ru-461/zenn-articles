@@ -36,6 +36,7 @@ Vue で作成した SPA をデプロイする際には [Netlify](https://www.net
 
 Heroku は各プラットフォーム向けに `Heroku CLI` というツールを提供しているためこちらを利用します。
 Heroku 公式ドキュメントに各プラットフォームごとの CLI をインストールする方法が列挙されているのでこちらを参考に進めます。
+
 https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install
 
 ドキュメントに従い以下のコマンドをターミナルで実行。
@@ -74,6 +75,7 @@ $ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
 ## Heroku へログイン
 
 以下のページから Heroku アカウントを登録します。
+
 https://signup.heroku.com/
 
 アカウントの登録ができたらターミナルからログインをしていきます。
@@ -87,6 +89,7 @@ $ heroku login
 `q`以外のキーを押すと自動的にデフォルトのブラウザで Heroku のログイン画面が開かれるのでブラウザ上でアカウントへログインします。
 
 以下の画面が表示されたら正常にログインできています。
+
 ![ログイン成功後の画面](https://storage.googleapis.com/zenn-user-upload/mwtpkmsj2zy19usm5621nxm5zxxy)
 
 ```shell
@@ -99,6 +102,7 @@ Logging in... done
 ## 必要なファイルの生成
 
 以下のページに Vue CLI で構築したアプリを Heroku へデプロイする方法が載っていたため参考にして進めていきます。
+
 https://cli.vuejs.org/guide/deployment.html#heroku
 
 デプロイするのに `static.json` というファイルが必要みたいなので、Vue プロジェクトのルートディレクトリに移動して `static.json` を作成します。
@@ -153,7 +157,9 @@ $ heroku open
 ```
 
 デフォルトのブラウザが起動してアプリのページが表示されれば正常にアプリが作成されています。
+
 ![アプリの初期ページを開いた様子](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
+
 Web ブラウザからアクセスできることが確認できれば OK です。
 
 ## アプリをビルドする環境を作成
@@ -174,6 +180,7 @@ $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 ```
 
 上の２つのビルドパックを導入することでアプリをビルドできる環境が出来上がりました。
+
 :::message
 ビルドパックは `heroku/node.js` ▶ `heroku-buildpack-static` の順番に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
 :::
