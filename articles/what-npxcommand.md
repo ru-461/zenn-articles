@@ -116,7 +116,7 @@ npx コマンドを使うことで、インストールせずともスクリプ�
 
 # 参考
 
-[nuxt/create-nuxt-app: Create Nuxt.js App in seconds.](https://github.com/nuxt/create-nuxt-app)
-[npx-npm](https://www.npmjs.com/package/npx)
+- [nuxt/create-nuxt-app: Create Nuxt.js App in seconds.](https://github.com/nuxt/create-nuxt-app)
+- [npx-npm](https://www.npmjs.com/package/npx)
 [npm 5.2.0 の新機能！ 「npx」でローカルパッケージを手軽に実行しよう - Qiita](https://qiita.com/tonkotsuboy_com/items/8227f5993769c3df533d#comments)
-[npm と npx。なにが違う？ - Qiita](https://qiita.com/sivertigo/items/622550c5d8ec991e59a6)
+- [npm と npx。なにが違う？ - Qiita](https://qiita.com/sivertigo/items/622550c5d8ec991e59a6)
