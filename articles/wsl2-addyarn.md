@@ -14,7 +14,8 @@ Node.js をインストールすると標準で `npm(Node Package Manager)` と�
 パッケージマネージャとしては `npm` が有名ですが、他にもパッケージマネージャーはいくつか存在します。
 その中の１つに FaceBook 社が開発した Yarn というパッケージマネージャーがあります。
 
-Yarn 公式ページ
+こちらが Yarn の公式ページになります。
+
 https://yarnpkg.com/
 
 Yarn は npm が問題としていた部分を抑えるように設計され、登場当時は npm よりインストール速度が早くなったりとメリットが大きかったようです。
@@ -36,6 +37,7 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 
 - Windows10 バージョン 20H2
 - WSL2 (Ubuntu 20.04.1 LTS (Focal Fossa))
+
 # インストール
 ## Node.jsのインストール
 
@@ -101,6 +103,7 @@ $ which curl
 ```
 
 curl が使えるようになったら以下のコマンドでリポジトリを追加します。
+
 :::message
 apt でインストールする際は以下のリポジトリ追加と構成を必ず行ってください。
 リポジトリを更新しないとうまくインストールできない可能性があります。
@@ -143,15 +146,15 @@ npm を使って導入する場合、グローバルオプション(-g) を付�
 
 WSL2 に Node.js と Yarn をインストールする方法についてまとめました。
 パッケージマネージャーは依存性を解決しながらモジュールを管理してくれる優秀なツールで、JavaScript の開発をする上では必要不可欠です。
-今回の記事が WSL2 を使って JavaScript 開発を始めるうえで参考になれば幸いです。
+今回の記事が WSL2 を使って JavaScript 開発を始めるかたの参考になれば幸いです。
 
-この記事内では触れませんでしたが、今現在は `yarn V2` というバージョンが開発中とのことなので今後調べて触ってみたいです。
+この記事内では触れませんでしたが、今現在は `yarn v2` というバージョンが開発中とのことなので今後調べて触ってみたいです。
 
 最後まで読んでいただきありがとうございました。
 
 # 参考
 
-[npmとyarnとpnpmの違い2021](https://zenn.dev/hibikine/articles/27621a7f95e761)
-[ubuntu 18.04 にyarn をインストールする - Qiita](https://qiita.com/crash-boy/items/5c9b7341e95b142e0d56)
-[Installation | Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
+- [npmとyarnとpnpmの違い2021](https://zenn.dev/hibikine/articles/27621a7f95e761)
+- [ubuntu 18.04 にyarn をインストールする - Qiita](https://qiita.com/crash-boy/items/5c9b7341e95b142e0d56)
+- [Installation | Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 [tj/n: Node version management](https://github.com/tj/n)
