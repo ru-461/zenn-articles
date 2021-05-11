@@ -213,7 +213,7 @@ $ cargo install exa
 ```
 
 :::message
-環境によっては `error: linker cc not found`となり exa のビルドに失敗する場合があります。これは gcc とその依存関係がないことによるエラーのため `apt install gcc` で必要なコンパイラをインストールした上で再試行してみてください。
+Ubuntu などの環境によっては `error: linker cc not found`となり exa のビルドに失敗する場合があります。これは `gcc` とその依存関係がないことによるエラーのため `apt install build-essential` で必要なコンパイラをインストールした上で再試行してみてください。
 :::
 # exaを使ってみる
 
@@ -257,12 +257,15 @@ fi
 
 内容としては exa コマンドがインストールされている環境でのみ有効になるエイリアスとしています。
 
-私は常にリスト表示にアイコンを表示したいため、`e`、`l`、`ls`に対してベースにアイコンを表示するオプション `--icons` を付けてエイリアスにしています。`--git`とすることで Git のファイル管理ステータスもリストに反映してくれるようになります。
+全体的に `e` 、`l`、`ls`に対してベースに、ファイルの種類ごとにアイコンを表示するオプション `--icons` を付けてエイリアスになっています。オプション `--git` を付与することで Git のファイル管理ステータスもリストに反映してくれるようになります。
 
 またコマンドに `t` を混ぜることでツリー表示できるようにしています。
 exa でのファイルツリー表示でもアイコンを合わせて表示するためにオプションを組み合わせています。ここまでくるとオプションがかなり長くなってしまいます。
 
 そこでエイリアスを活用することで ls コマンドの上位互換としての運用が簡単にできるようになりました。
+
+エイリアスの設定例としてはこちらのサイトを参考にカスタマイズさせていだたきました。わかりやすい解説ありがとうございます。
+https://tombomemo.com/exa-install-settings/
 
 exa はオプションを組みわせることで柔軟なファイル表示ができるので、各々使いやすいようにエイリアスを作成してみてください。
 
@@ -273,3 +276,10 @@ exa はオプションを組みわせることで柔軟なファイル表示が�
 Rust 製のツールを初めて使いましたが、互換性が高かったり、安全かつ高速だったりとメリットが多く更に調べて取り入れていきたいと感じました。この記事をきっかけに、モダンな技術で柔軟にカスタマイズできるターミナルを簡単に構築できることに少しでも魅力を感じてもらえたら幸いです。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+
+- [とってもかわいいプロンプトstarshipで2021年宇宙の旅に出よう](https://zenn.dev/aoi_avant/articles/9ac01d7857add9)
+- [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/title-page.html)
+- [lsよりもexaじゃん! Rust製Linuxコマンド 【exa】 | TomboMemo](https://tombomemo.com/exa-install-settings/)
+- ["error: linker `cc` not found" on Ubuntu 18.04 LTS, using X11 · Issue #1440 · alacritty/alacritty](https://github.com/alacritty/alacritty/issues/1440)
