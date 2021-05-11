@@ -97,7 +97,7 @@ echo eval "$(starship init bash)" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-シェルの再読み込みをすることで Starship が有効になります。
+シェルの再読み込みをすることで Starship が有効になり以下のような表示に変わります。
 
 ```shell
 # デフォルトの表示
@@ -167,20 +167,47 @@ WSL2 で Ubuntu を使用している場合であっても Homebrew を導入す
 
 ## Cargoを使用したインストール
 
-Rust のビルドシステム兼パッケージマネージャーの `Cargo` を使用してインストールできます。
+Rust のビルドシステム兼パッケージマネージャーの `Cargo` を使用して exa を導入する方法です。
+
+
+Cargo を使用するために Rust の環境を作る必要があるのですが、今回は `rustup`というツールを使い簡単に始めます。
+
+https://github.com/rust-lang/rustup/blob/master/README.md
+
+`rustup`とは Rust の公式ドキュメント内でも推奨されているツールで、ワンライナーで Rust 環境構築を簡単に行えるスグレモノです。以下のワンライナーを実行して Rust をインストールできます。
 
 ```shell
-# Rustupをインストール
+# rutupをインストール
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
-とすることで Rust のインストールが行われます。対話形式でインストールを進めていき `Rust is installed now. Great!` と表示されればインストールは成功です。
+インストールの途中で質問されたらエンターを押して続行します。デフォルトで 1 の( Proceed with installation) が選択されます。そのままでも問題ありませんが、カスタムインストールを行う場合は適宜選択を変えてください。
 
-インストール直後にパスを通す必要があるので以下のコマンドでパスを通します。
+ターミナル上に `Rust is installed now. Great!` と表示されればインストールは成功です。
+
+この状態でシェルにリログインすると自動的にパスが通ります。すぐにパスを通して使いたい場合は、source コマンドを使い以下のようにすると自動的にパスを通してくれます。
 
 ```shell
+# rustupが用意してくれているスクリプトを実行してパスを通す
 source $HOME/.cargo/env
 ```
+
+インストールが終わったら rustup のバージョンを確認してみます。パスが無事に通っていると cargo コマンドが使用できるようになっています。
+
+以下のコマンドでバージョンを確認し、アップデートがあれば最新の状態にしておきます。
+
+```shell
+# rustupのバージョンを確認 (Vは大文字なので注意)
+$ rustup -V
+
+# rustupを最新にアップデート
+$ rustup update
+
+# rustup自体を最新にアップデート
+$ rustup self update
+```
+
+
 
 パスが通るとパッケージ管理ツールの `Cargo` が使用できるようになり、Cargo 経由で exa を導入できます。
 
