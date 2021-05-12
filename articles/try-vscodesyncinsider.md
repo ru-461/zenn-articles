@@ -35,6 +35,7 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 :::message
 2020 年２月に提供された VSCode 1.54 にて Stable 版が AppleSilicon に対応しました。
 :::
+
 ## Macの新CPU アーキテクチャ問題
 
 昨年末発売された MacBook Air、MacBook Pro、Mac mini には、従来の `Intel 製 CPU(x64)` ではなく、Apple が独自開発した新 CPU(arm64)が搭載されています。このことにより、CPU のアーキテクチャが `ARM` に置き換わったため、従来の Intel ベースのアプリを動かすために `Rosetta2` という変換ツールを介してアプリを動かすことになります。
@@ -65,6 +66,7 @@ https://twitter.com/code/status/1338886895867224070
 同期がうまくできないこと以外に関しては満足して今日まで使ってきました。そろそろ Stable 版も ARM アーキテクチャ対応版がでるといった話が流れ始めた頃、VSCode の公式ドキュメントを眺めていたら Stable 版と Insiders 版で設定の同期ができるとのトピックがあり、試したところ上手くいきました。
 
 https://code.visualstudio.com/docs/editor/settings-sync#_syncing-stable-versus-insiders
+
 ## 設定同期機能をオンにする
 
 VSCode 公式の設定同期機能はこちらからオンにできます。
@@ -82,9 +84,11 @@ Stable 版と Insiders 版で設定の同期は可能ですが、同期した際
 
 同期する設定を選択するウインドウが現れるので選択します。デフォルトで全てオンになっています。
 ![同期する項目を選択する様子](https://storage.googleapis.com/zenn-user-upload/uo73sd23a1x1pxzwonx9r3cc3d53)
+
 :::message
 ショートカットキーは各プラットフォームごとに管理されるようです
 :::
+
 右上の `サインインしてオンにする` からアカウントへログインします。
 サインインには `Microsoftアカウント` もしくは `GitHubアカウント` のどちらかが必要になります。
 アカウント用意し VSCode の指示に従うことで簡単にサインインできます。
@@ -105,6 +109,7 @@ Mac 側に Insiders 版の VSCode をインストールし、Windows 版(Stable 
 
 ![同期サービスを選ぶ様子](https://storage.googleapis.com/zenn-user-upload/8h29c0led43jjwbaj57m95ggp8zo)
 *Insiders版でのみ表示されます。Stable ↔ Insidersでの同期はインサイダーを選択*
+
 これは、Stable 版と Insiders 版で**同期に使用するサービスが異なる**ために表示されるもののようです。Insiders 版が先行的に機能が実装され新しいものとなるため、データの非整合を防ぐためだそうです。
 
 前に VSCode の設定同期をおこなったときはサービス選択画面表示されなかったような気がします。当時気づかなかっただけなのか、VSCode のアップデートで追加されたものか定かではありませんが、この画面を見たときに少し感動したのを覚えています。
@@ -115,6 +120,7 @@ Mac 側に Insiders 版の VSCode をインストールし、Windows 版(Stable 
 これで自動的に同期が有効になりバックグラウンドで同期処理が行われます。
 
 わかりにくいですが、VSCode の拡張機能を Windows(Stable 版)と MacBook Pro(Insider 版)で同期した様子です。Stable 版と Insiders 版ですが、うまく同期に成功しています。
+
 ![拡張機能を同期した様子](https://storage.googleapis.com/zenn-user-upload/aab05r7hljie741tucmu5rrqvmug)
 *Windows(Stable 版) ・MacBook Pro(Insider 版)*
 
