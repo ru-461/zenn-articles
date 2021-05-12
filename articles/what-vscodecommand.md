@@ -24,12 +24,14 @@ VSCode には `Code コマンド` と呼ばれるコマンドが存在します�
 
 VSCode をインストールすることで自動的にパスが通りコマンドプロンプトから使用可能になります。
 コマンドプロンプトから以下のコマンドで VSCode が起動します。
+
 ```shell
 $ code
 ```
 
 ローカルのファイルを開くことはもちろん可能ですが、WSL であっても同じ用に使用できます。
 VSCode と WSL2 の親和性が高いので Windows で開発するときに威力を発揮します。
+
 # Code コマンドの準備【MacOS】
 
 MacOS の場合はシェルコマンドを手動で実行する必要があり、少し手数を踏む必要があります。
@@ -56,9 +58,11 @@ $ code
 Code コマンドは VSCode Stable 版、Insiders 版ともに使用可能です。2 つのビルドは共存できるため、コマンドも共存可能となります。
 
 VSCode Insiders のコマンドは以下のようになります。
+
 ```shell
 $ code-insiders
 ```
+
 使うにはそれぞれのビルドでコマンドパレットからコマンドインストールの手順を踏む必要があります。
 コマンドが独立していることで使いたい VSCode を選ぶことができるのは便利です。
 
@@ -69,6 +73,7 @@ $ code-insiders
 :::message
 VSCode Insiders の場合は `code` を `code-insiders` に適宜置き換えてください。
 :::
+
 ## VSCodeを起動
 
 ```shell
@@ -115,6 +120,6 @@ Code コマンドを上手く活用して生産性を上げていきましょう
 
 最後まで読んでいただきありがとうございました。
 
-# 参考ドキュメント
+# 参考
 
-https://code.visualstudio.com/docs/editor/command-line
+- [The Visual Studio Code command-line options](https://code.visualstudio.com/docs/editor/command-line)
