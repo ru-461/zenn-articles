@@ -28,7 +28,9 @@ Homebrew といえば MacOS ユーザー の特権という先入観で Homebrew
 :::message
 Apple Silicon Mac 登場のときも話題になりましたが、Homebrew は CPU のアーキテクチャ(x86_64 や ARM)によってインストール方法や使用できるパッケージが異なります。今回は私の環境(x86_64)に合わせて紹介します。
 :::
+
 Homebrew の公式サイト(日本語)はこちらです。
+
 https://brew.sh/index_ja
 
 # 環境
@@ -38,6 +40,7 @@ https://brew.sh/index_ja
 - WSL2 (Ubuntu 20.04.1 LTS (Focal Fossa))
 
 # Homebrewのインストール
+
 ## インストールの準備
 
 Homebrwe を導入するにあたりパッケージを最新に更新しておきます。
@@ -156,7 +159,7 @@ $ which tree
 ```
 
 パスを見て分かるように、WSL にインストールした Homebrew ではパッケージを `/home/linuxbrew/.linuxbrew` の配下で管理します。
-ホームディレクトリ配下で完結するため、**システム環境をあまり汚染しない**のがいいですね。
+ホームディレクトリ配下で完結するため、**システム環境をあまり汚さない**のがいいですね。
 
 # さいごに
 
