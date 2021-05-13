@@ -54,6 +54,7 @@ Zenn の執筆をすぐ行いたいとき用のエイリアスを定義したら
 alias zenn='cd ~/Documents/my-zenn-contents' # 共通処理 ディレクトリ移動
 alias zennop='zenn && code ~/Documents/my-zenn-contents && npx zenn preview --open'
 ```
+
 # ポイント
 
 ZennCLI をローカルにインストールしているため、基本的に npx を使ってコマンド実行します。npx コマンドの実行の際にエイリアス `zenn` で Zenn コンテンツ管理ディレクトリへ必ず移動するようにしています。
@@ -133,7 +134,7 @@ ZennCLI・ZennEditor は Zenn ならではの機能でとても革新的なも�
 
 最後まで読んでいただきありがとうございました。
 
-# 参考ドキュメント
+# 参考
 
 - [Zenn CLIをインストールする](https://zenn.dev/zenn/articles/install-zenn-cli)
 - [Zenn CLIで記事・本を管理する方法](https://zenn.dev/zenn/articles/zenn-cli-guide)
