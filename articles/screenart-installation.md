@@ -97,6 +97,7 @@ Termux は Android 端末で動作するターミナルエミュレータにな�
 ```shell
 $ screenfetch -D 'CentOS'
 ```
+
 ![CentOSのロゴを表示した様子](https://storage.googleapis.com/zenn-user-upload/kzeamubg5rhtesr2fdhtl2thujaz)
 
 オプションを付けたことで Ubuntu が動作する環境でも CentOS のロゴと端末情報を表示できました。
@@ -115,11 +116,13 @@ Android のロゴ(ドロイド君)は `-A` オプションを付けないとう�
 端末情報だけを表示したい場合は `-n` オプション、単色表示したい場合は `-N`オプションなど screenfetch コマンドには数多くのオプションがあります。
 
 使用できる全てのオプションは Github リポジトリの[ReadMe](https://github.com/KittyKatt/screenFetch#running-screenfetch)にまとめられているので覗いてみてください。
+
 # おわりに
 
 今回は「screenfetch」というコマンドをご紹介しました。
 
 小ネタ的なコマンドにはなりますが、画面上にかっこいいスクリーンアートと端末の詳細情報を一度に表示できるのでおすすめです。
+
 豊富なオプションが用意されており、他のディストリビューションでの表示を再現したりとなかなか作り込まれているコマンドだと感じました。
 端末の情報を共有する、息抜きに使用するなど、使い方次第ではなかなか使えるコマンドだと感じます。この記事内で紹介した他にも指定できるオプションが存在するのでぜひ、[ReadMe](https://github.com/KittyKatt/screenFetch#running-screenfetch)を参考にいろいろと試してみてください。
 
