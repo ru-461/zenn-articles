@@ -62,6 +62,7 @@ Usage: scoop <command> [<args>]
 先程インストールした Scoop を使用して Sudo コマンドをインストールしていきます。
 
 ```powershell:powershell
+# Scoop経由でSudoコマンドをインストールする
 > scoop install sudo
 
 Installing 'sudo' (0.2020.01.26) [64bit]
