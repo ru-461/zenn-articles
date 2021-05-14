@@ -13,6 +13,7 @@ Apple M１ チップ(Apple Silicon M1)を搭載した Mac シリーズが発売�
 そこで Apple は `Rosetta2` という変換ツールを用意しており、使用することで x64 ベースのアプリを M1 チップ上で変換し動作させることを可能としています。M1 Mac 発売当初は x64 ベースのアプリを変換することで動作させられるアプリがほとんどでしたが、いまは各アプリがこぞって M1 チップ上でネイティブに動作する `Apple silicon 対応ビルド`や `ユニバーサルビルド` をリリースし、今では多くのアプリにて Apple Silicon の恩恵を預かることができるようになりました。
 
 先日、ずっと待望されていた Docker Desktop が v3.3.1 にて正式に `Apple Silicon へ対応`し、話題になりました。
+
 https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 まだまだ盛り上がりを見せている M1 Mac ですが、まだ Rosseta２を使用しないと動作させられないアプリも存在します。そこで M1 チップへネイティブ対応しているアプリと、対応していない従来のアプリが混在する状態となっているなか、どのアプリが M1 チップに最適化されているのかを一瞬で確認する方法について紹介します。
@@ -23,6 +24,7 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 プロセスの中にあるアーキテクチャの項目に `Apple` と表示されていればそのアプリは M１Mac に**最適化されている**といえます。また従来のアーキテクチャ(x64)で動作しているアプリは `Intel` と表示されます。
 
 ![プロセスを見て調べる様子](https://storage.googleapis.com/zenn-user-upload/tfsrasc20r67jzy1unzbkbbubgts)
+
 ***プロセスごとにアーキテクチャを確認できる***
 これで 1 つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこで `iMobie M1 App Checker` というツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
 
