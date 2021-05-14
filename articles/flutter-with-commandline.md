@@ -167,6 +167,7 @@ Flutter 関連のツールは `extras Bucket`と `java Bucket` に存在する�
 ```powershell:powershell
  > scoop bucket add java extras versions
 ```
+
 Bucket の追加が完了したら続けて Flutter の開発に必要なものを導入していきます。
 
 以下のコマンドを実行します。
