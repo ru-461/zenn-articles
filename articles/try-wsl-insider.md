@@ -190,3 +190,9 @@ https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 仮想化された環境の中で仮想化技術を使うという需要がどのくらいあるかはわかりませんが、arm 版の Windows10 が Macbook 上で快適に動作するようになったなどと興味深い結果が得られたので今後のアップデートにも注目していきたいところです。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+
+- [M1 Mac正式対応の「Parallels Desktop 16.5」提供開始 - PC Watch](https://pc.watch.impress.co.jp/docs/news/1318735.html)
+- [M1搭載MacBook ProでWindowsアプリを動かす｢Parallels Desktop｣を試す | Business Insider Japan](https://www.businessinsider.jp/post-234408)
+- [ParallelsでWindows 10のWSL2を使う - すがブロ](https://sugamasao.hatenablog.com/entry/2020/06/09/090000)
