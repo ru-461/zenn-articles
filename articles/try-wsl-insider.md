@@ -22,7 +22,7 @@ arm64 版 Windows が一般的にライセンスを購入して使用できる�
 
 # 検証環境
 
-- macOS BigSur 11.3 (ホスト OS)
+- macOS BigSur バージョン 11.3 (ホスト OS)
 - Parallels Desktop 16 for Mac バージョン 16.5.0
 - Windows 10 on ARM Insider Preview OS ビルド 21354.1 (ゲスト OS)
 
@@ -44,7 +44,7 @@ ParallelsDesktop は有料のソフトですが、無料で ` 14 日間のトラ
 
 ## バージョン情報を確認
 
-Mac 上で仮想化した Windows10 から見た情報はこのようになっております。
+Mac 上で仮想化した Windows10 から見える情報はこのようになっております。
 
 ![Windows10のバージョン情報](https://storage.googleapis.com/zenn-user-upload/7yj9wv42q532az3nlffiwc8kg237)
 
@@ -52,19 +52,20 @@ Mac 上で仮想化した Windows10 から見た情報はこのようになっ�
 
 全体的な動作としては、ネイティブに動作している Windows10 と比較するとアニメーションの描画時など少しもっさりするかなといった部分はありますが、基本的な操作は問題なく行えるくらいに快適に動作してます。
 
-この環境に WSL2(Windows Subsystems Linux2)を導入して動かせるか試していきます。
+この環境に WSL2(Windows Subsystems Linux 2)を導入して動かせるか試していきます。
 
 # WSL2を導入する
 
 WSL のインストールは最新の Windows Preview において `コマンド 1 つ` でインストールが可能になりました。
 
-公式のドキュメントに日本語で詳しく説明があります。
+WSL の公式のドキュメントに日本語で詳しく説明があります。
 
 https://docs.microsoft.com/ja-jp/windows/wsl/install-win10
 
 現在 WSL2 を有効にするためには、仮想マシン周りの設定変更や WSL2 の既定化などの手順を踏まなければなりませんが、今後それらの手順がワンライナーに置き換えられより簡単に WSL2 の環境が作れるようになるようです。便利ですね。
 
 今回は、簡略化されたコマンド `wsl --install` を実際に使用して環境を構築していきます。
+
 ## WSL2の有効化
 
 Parallels Desktop で Windows が起動したら管理者権限で起動したコマンドプロンプトを起動して以下のコマンドを実行します。
@@ -146,7 +147,7 @@ Paralles Desktop では設定から `「ネスト化された仮想化を有効�
 ![Standard Editionでの設定表示](https://storage.googleapis.com/zenn-user-upload/8mbsbqfe6yp54ocs3c3oq7pdgp2b)
 *参考記事を見るとここに項目があるはずだが...*
 
-https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User's%20Guide/37830.htm
+https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User's%20Guide/37830.html
 
 少し古い情報となりますが、ネスト化された仮想化サポートは Pro Edition でのみのサポートという情報があったため、勢いで Pro Edition に変更して検証してみます。
 
@@ -161,7 +162,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 以前のバージョンでは WSL2 の動作が仮想化された Windows10 上にて実現できている例が見られたので、今後も引き続き検証していきたいところです。
 
-# 補足 : WSL1 として設定する
+## 補足 : WSL1 として設定する
 
 本題は WSL2 の実現なのですが、この環境で WSL1 が動作することが検証途中で確認できたので補足としてまとめます。
 
@@ -176,7 +177,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 ![WSL1として設定した様子](https://storage.googleapis.com/zenn-user-upload/6jz5d1x04dj1s3a69bujdeax1082)
 
-WSL1 と WSL2 の違いは以下のページでまとめられています。
+WSL1 と WSL2 の `違い` は以下のページでまとめられています。
 
 https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
@@ -190,4 +191,8 @@ https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
 最後まで読んでいただきありがとうございました。
 
+# 参考
 
+- [M1 Mac正式対応の「Parallels Desktop 16.5」提供開始 - PC Watch](https://pc.watch.impress.co.jp/docs/news/1318735.html)
+- [M1搭載MacBook ProでWindowsアプリを動かす｢Parallels Desktop｣を試す | Business Insider Japan](https://www.businessinsider.jp/post-234408)
+- [ParallelsでWindows 10のWSL2を使う - すがブロ](https://sugamasao.hatenablog.com/entry/2020/06/09/090000)
