@@ -110,7 +110,7 @@ VMware のトップ画面から `仮想マシンを開く` をクリック。
 
 VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を行き来できるのが便利です。
 
-初期設定で Google のアカウントにログインするとデスクトップが表示されます。
+初期設定で Google のアカウントにログインすると CloudReady のデスクトップが表示されます。
 
 ![CloudReadyのデスクトップ画像](https://storage.googleapis.com/zenn-user-upload/fe7asv5fcidkgpue7z3f6mb7h3rs)
 
@@ -130,7 +130,7 @@ ChromeOS の初期設定をすすめる上でインターネット接続がで�
 ![ブリッジ接続からNATへ変更する様子](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
 
 `デフォルトのブリッジからNATに変更`することですんなりと繋がるようになりました。
-繋がらない場合はお使いの環境に合わせてデフォルトから設定を変えてみてください。
+繋がらない場合はお使いの環境に合わせてデフォルトから適宜設定を変えてみてください。
 
 ## ロック解除に毎回パスワードを打つのが大変
 
@@ -141,7 +141,7 @@ ChromeOS ではログイン時に Google のパスワードを利用してロッ
 PIN にしてからストレスなくロックの解除ができるようになりました。
 
 :::message
-ロック解除に PIN を設定しても初回起動時のログインではパスワード入力が必須になります
+ロック解除に PIN を設定しても初回起動時のログインではパスワード入力が必須になります。
 :::
 
 # Linux が起動できない問題
