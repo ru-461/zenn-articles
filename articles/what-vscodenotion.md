@@ -15,18 +15,6 @@ Notion を自分専用の Wiki のように活用し、一箇所で必要な情�
 
 今回は VSCode 内で Notion を使うことができる `VSCode Notion` という便利な拡張機能をご紹介します。
 
-:::message
-**2021/03/06 追記**
-現在デフォルトで設定されている API を使用すると `500 エラー` になります。
-
-代替えの API 先として [Notion API Workerの提供するAPI](https://notion-api.splitbee.io/)が使用可能です。
-VSCode Notion の設定から `VSCode Notion: Api` を以下に変更することでうまく動作することが確認できました。
-
-![API](https://storage.googleapis.com/zenn-user-upload/nn64sjxnzzht9s234e6zuahzpc8w)
-
-アクセストークンを変更したけどうまく動かないという場合は API 先の設定を見直してみてください。
-:::
-
 # Notion の課題点
 
 私は普段主にプログラミングノートとして学んだことをまとめることや、Zenn で記事を書くときのアイデア出し、タスク管理として使っています。
