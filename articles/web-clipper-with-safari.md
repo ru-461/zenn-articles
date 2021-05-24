@@ -8,4 +8,12 @@ published: false
 
 # はじめに
 
+Notion には公式の拡張機能として[Notion Web Clipper](https://www.notion.so/web-clipper)というものがあります。
+
+![Notion Web Clipperのトップページ画像](https://storage.googleapis.com/zenn-user-upload/t6s7p5g4s5lnm8sgzu9u3wcvyaey)
+
+Web Clipper という名の通り、ブラウザで今見ている Web ページを Notion のページに変換し保存できるすぐれものです。Chrome や Firefox では[拡張機能](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)・[アドオン](https://addons.mozilla.org/ja/firefox/addon/notion-web-clipper/)としてかなり前から提供されていましたが、Safari では使用できない状態となっていました。モバイル版 Safari（iPhone・iPad）からは共有機能を使って Notion を開くことで WebClioer ができていましたが、PC 版の Safari からは対応していませんでした。
+
+私は、基本的に Chrome で作業することが多かったため、Mac の Safari をあまり使うことがなかったのですが、先日、Notion Web Clioer が Safari に対応したと聞き、実際に Safari で Notion Web Clipper を使ってみました。Notion を使うならぜひとも合わせて使ってほしいくらいに便利なものなのでご紹介します。
+
 # おわりに
