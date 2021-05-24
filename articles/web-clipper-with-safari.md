@@ -16,4 +16,15 @@ Web Clipper という名の通り、ブラウザで今見ている Web ページ
 
 私は、基本的に Chrome で作業することが多かったため、Mac の Safari をあまり使うことがなかったのですが、先日、Notion Web Clioer が Safari に対応したと聞き、実際に Safari で Notion Web Clipper を使ってみました。Notion を使うならぜひとも合わせて使ってほしいくらいに便利なものなのでご紹介します。
 
+# Safariに拡張機能を導入する
+
+あまり知られていないように感じますが、Safari も Chrome や Firefox と同様に拡張機能を導入することで機能を増やすことができます。Safari へ拡張機能を追加する際は AppStore から拡張機能を入手しインストールする形となります。
+
+Safari の設定画面を開き、拡張機能の項目を開くことで現在 Safari に導入している拡張機能を確認できます。
+
+![拡張機能の管理画面画像](https://storage.googleapis.com/zenn-user-upload/l48blskbtvtfv2e18ss0psab2xhc)
+*導入しているアプリによって拡張機能が入っている場合もあります*
+
+ここに拡張機能を検索して追加することで管理が可能となります。
+
 # おわりに
