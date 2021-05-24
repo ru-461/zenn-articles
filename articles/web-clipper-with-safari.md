@@ -37,6 +37,17 @@ Mac AppStore のサイドメニューからカテゴリを選択すると一覧�
 
 ここに Safari で使用する拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが便利です。Safari の拡張機能は、通常の Mac アプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダに格納されます。
 
+# Notion Web ClipperをSafariにインストール
 
+それでは、Safari に Notion Web Clipper をインストールしていきます。
+Mac AppStore 内の検索から「Notion」と検索することで上位にヒットします。
+
+![Notion Web Clipperの画像](https://storage.googleapis.com/zenn-user-upload/zt8r2t3v6grx0gl8irfhf358q4gj)
+
+または以下のリンクから直接、ダウンロードページを開きます。
+
+https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
+
+拡張機能の詳細ページを開いたら通常のアプリと同じようにインストールをクリックして導入します。
 
 # おわりに
