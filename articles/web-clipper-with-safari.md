@@ -44,7 +44,7 @@ Mac AppStore 内の検索から「Notion」と検索することで上位にヒ�
 
 ![Notion Web Clipperの画像](https://storage.googleapis.com/zenn-user-upload/zt8r2t3v6grx0gl8irfhf358q4gj)
 
-または以下のリンクから直接、ダウンロードページを開きます。
+または以下のリンクから直接、ダウンロードページを開けます。
 
 https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
 
