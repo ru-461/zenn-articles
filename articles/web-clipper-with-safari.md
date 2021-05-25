@@ -12,9 +12,13 @@ Notion には公式の拡張機能として[Notion Web Clipper](https://www.noti
 
 ![Notion Web Clipperのトップページ画像](https://storage.googleapis.com/zenn-user-upload/t6s7p5g4s5lnm8sgzu9u3wcvyaey)
 
-Web Clipper という名の通り、ブラウザで今見ている Web ページを Notion のページに変換し保存できるすぐれものです。Chrome や Firefox では[拡張機能](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)・[アドオン](https://addons.mozilla.org/ja/firefox/addon/notion-web-clipper/)としてかなり前から提供されていましたが、Safari では使用できない状態となっていました。モバイル版 Safari（iPhone・iPad）からは共有機能を使って Notion を開くことで WebClioer ができていましたが、PC 版の Safari からは対応していませんでした。
+Web Clipper という名の通り、ブラウザで今見ている Web ページを Notion のページに変換し保存できるすぐれものです。Chrome や Firefox では[拡張機能](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)・[アドオン](https://addons.mozilla.org/ja/firefox/addon/notion-web-clipper/)として前から提供されていましたが、Safari では使用できない状態となっていました。モバイル版 Safari（iPhone・iPad）からは共有機能を使って Notion を開くことで WebClioer ができていましたが、PC 版の Safari には対応していませんでした。
 
-私は、基本的に Chrome で作業することが多かったため、Mac の Safari をあまり使うことがなかったのですが、先日、Notion Web Clioer が Safari に対応したと聞き、実際に Safari で Notion Web Clipper を使ってみました。Notion を使うならぜひとも合わせて使ってほしいくらいに便利なものなのでご紹介します。
+私は、基本的に Chrome で作業することが多かったため、Mac の Safari をあまり使うことがなかったのですが、先日、Notion Web Clioer が Safari に対応したと聞き、実際に Safari で Notion Web Clipper を使ってみました。
+
+https://twitter.com/NotionHQ/status/1387825941263486976
+
+Notion を使うならぜひとも合わせて使いたいくらいに便利なものなのでご紹介します。
 
 # Safariに拡張機能を導入する
 
@@ -35,7 +39,9 @@ Mac AppStore のサイドメニューからカテゴリを選択すると一覧�
 
 ![拡張機能カテゴリの画像](https://storage.googleapis.com/zenn-user-upload/2qx25c8y1h1grxzpp70dw4c5qnzm)
 
-ここに Safari で使用する拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが便利です。Safari の拡張機能は、通常の Mac アプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダに格納されます。
+ここに Safari で使用可能な拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが探しやすくて便利です。Safari の拡張機能は、通常の Mac アプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダに格納されます。
+
+完全に余談ですが、Safari は拡張機能の管理とストアがそれぞれ完全に独立しているので、拡張機能の管理が少し不便に感じました。設定の拡張機能管理から AppStore の拡張機能カテゴリを直接開くことができれば、もっと便利になるような気がします。普段から Chrome や Firefox の拡張機能管理に慣れているので余計にそう感じます。
 
 # Notion Web ClipperをSafariにインストール
 
@@ -48,6 +54,24 @@ Mac AppStore 内の検索から「Notion」と検索することで上位にヒ�
 
 https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
 
-拡張機能の詳細ページを開いたら通常のアプリと同じようにインストールをクリックして導入します。
+拡張機能の詳細ページを開いたら通常のアプリと同じようにインストールをクリックして導入します。インストールしたあとは Safari の設定から拡張機能を開くことで有効無効を切り替えられるようになります。インストールしてもうまく反映されない場合は設定を見直して見てください。
+
+# Notion Web ClipperでWebページをクリップする
+
+ここからは Chrome や Firefox と共通の操作になります。拡張機能を導入すると Safari の上部メニューに Notion のアイコンが表示されるようになり、ここから Notion Web Clipper にアクセスできます。保存したい Web ページを開いた状態で Notion Web Clipper を起動すると以下のような表示になります。
+
+![Webページをクリップする様子](https://storage.googleapis.com/zenn-user-upload/77eyplq3pgk5xp8o0j3augleiz23)
+*Notion Web Clipper のページをクリップする様子*
+
+Notion にログインしてあるので、Workspace と保存先のページを選ぶ項目が表示されています。
+
+上の例だと `MySpace` という Workspace 内にある `WebClips` というデータベースに保存するという意味になります。この状態で `Save page` ボタンをクリックすることで瞬時に指定したデータベースへ Web ページが保存されます。
 
 # おわりに
+
+今回、Safari の拡張機能と Notion Web Clipper を導入する方法について書きました。Safari も Chrome と同じように拡張機能を導入できるのが便利だと感じました。有名な拡張機能は一通り揃っているので Chrome の拡張機能を多様していても、比較的移行しやすい環境だと感じます。
+Safari に Notion Web Clipper が対応したことで、ブラウザを選ぶことなく使用できるようになり、より Notion を使って Web Clip する機会が増えそうです。
+
+Notion API の PublicBeta が公開されるなど、ここ最近で Notion はかなり注目を集めているので、今後もさらなるアップデートに期待したいところですね。
+
+最後まで読んでいただきありがとうございました。
