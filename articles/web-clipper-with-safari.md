@@ -3,7 +3,7 @@ title: "SafariがNotion Web Clipperに対応したので使ってみる"
 emoji: "🧭"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["notion","safari","拡張機能"]
-published: false
+published: publish
 ---
 
 # はじめに
@@ -73,7 +73,7 @@ Notion にログインしてあるので、Workspace と保存先のページを
 
 上の例だと `MySpace` という Workspace 内にある `WebClips` というデータベースに保存するという意味になります。Web ページを保存する用のデータベースページを予め作成しておくのがおすすめです。この状態で `Save page` ボタンをクリックすることで瞬時に指定したデータベースへ Web ページが保存されます。
 
-保存したあとに表示される `Open in Notion`をクリックすることでクリップしたページをすぐに Notion で開いて確認できるのが便利です。
+保存したあとに表示される `Open in Notion` をクリックすることでクリップしたページをすぐに Notion で開いて確認できるのが便利です。
 
 # おわりに
 
