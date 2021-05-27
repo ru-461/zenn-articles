@@ -1,5 +1,5 @@
 ---
-title: "オールインワンな開発環境をanyenvを使って構築する"
+title: "オールインワンな開発環境をanyenvで構築する"
 emoji: "🧭"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["anyenv","nodenv","環境構築","初心者"]
@@ -124,7 +124,7 @@ $ echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
 anyenv install --init
 ```
 
-コマンドを実行途中で確認を求められたら `y` と入力し、続行します。`Completed!`と表示されれば完了です。これで手動での anyenv セットアップは終了です。
+コマンドを実行途中で確認を求められたら `y` と入力し、続行します。`Completed!` と表示されれば完了です。これで手動での anyenv セットアップは終了です。
 
 ## Homebrewを使ったインストール
 
@@ -146,7 +146,7 @@ Homebrew でインストールした場合はすでにパスが通っている�
 $ anyenv init
 ```
 
-設定ファイルに初期化処理を記述するように促されるので、`.zshrc`へ記述します。
+設定ファイルに初期化処理を記述するように促されるので、`.zshrc` へ記述します。
 
 ```
 $ echo 'eval "$(anyenv init -)"' >>  ~/.zshrc
@@ -165,7 +165,7 @@ $ exec $SHELL -l
 $ anyenv install --init
 ```
 
-コマンドを実行途中で確認を求められたら `y` と入力し、続行します。`Completed!`と表示されれば完了です。
+コマンドを実行途中で確認を求められたら `y` と入力し、続行します。`Completed!` と表示されれば完了です。
 
 # インストール可能なenv系を一覧表示
 
