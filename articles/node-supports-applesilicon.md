@@ -18,4 +18,11 @@ Node.js v16 系となるバージョンが 2021 年の 4 月 20 日にリリー�
 
 https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
+# さっそくインストールしてみる
+
+それでは、Node.js 16 を実際に AppleSilicon な Mac へインストールしていきます。今回はローカルと Docker でそれぞれインストールして検証しました。
+
+この記事の内容は執筆時点で M1 チップを搭載した Macbook Pro にて検証したものになります。
+
+## Dockerを使って
 # おわりに
