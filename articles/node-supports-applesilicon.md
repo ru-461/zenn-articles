@@ -24,5 +24,42 @@ https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
 この記事の内容は執筆時点で M1 チップを搭載した Macbook Pro にて検証したものになります。
 
-## Dockerを使って
+## ローカルにnodenvを使ってインストール
+
+まず、ローカルな環境に Node.js をインストールします。公式サイトからバイナリをダウンロードしてきてもいいのですが、すでに anyenv を使って node のバージョン切り替えができる環境を構築しているため、nodenv を使用します。
+
+anyenv のインストールは[以前投稿したこちらの記事](https://zenn.dev/ryuu/articles/use-anyversions)で詳しく紹介しているのでこの記事では割愛します。
+
+nodenv anyenv 経由で以下のコマンドを使ってインストールできます。
+
+```shell
+# anyenvでnodenvをインストール
+$ anyenv install nodenv
+
+# シェルを再起動
+$ exec $SHELL -l
+```
+
+最新のリリースに対応するため[anyenv update](https://github.com/znz/anyenv-update) という更新プラグインを使用し、最新の状態にアップデートしておきます。
+
+```shell
+$ anyenv update
+```
+
+アップデートが完了したら nodenv から最新の Node.js をインストールします。記事執筆時点では **v16.2.0** がリリースされていたのでこちらを指定します。
+
+```shell
+# 最新のNode.jsをインストール
+$ nodenv install 16.2.0
+
+# rehash処理
+$ nodenv rehash
+
+# バージョン確認
+$ node -v
+  v16.20.0
+```
+
+バージョンの表示ができれば成功です。
+
 # おわりに
