@@ -1,8 +1,8 @@
 ---
-title: "Node.jsがv16でAppleSiliconに対応していた"
+title: "Node.jsが v16 でAppleSiliconに対応していた"
 emoji: "🍎"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["nodejs","applesilicon"]
+topics: ["nodejs","applesilicon","docker","nodenv"]
 published: false
 ---
 
