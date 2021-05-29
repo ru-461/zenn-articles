@@ -3,7 +3,7 @@ title: "Node.jsが v16 でAppleSiliconに対応していた"
 emoji: "🍎"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nodejs","applesilicon","docker","nodenv"]
-published: false
+published: true
 ---
 
 # はじめに
