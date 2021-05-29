@@ -1,5 +1,5 @@
 ---
-title: "Node.jsが v16 でAppleSiliconに対応していた"
+title: "Node.jsが v16 でAppleSiliconに正式対応していた"
 emoji: "🍎"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nodejs","applesilicon","docker","nodenv"]
@@ -12,7 +12,7 @@ Node.js v16 系となるバージョンが 2021 年の 4 月 20 日にリリー�
 
 またリリースしてすぐ LTS のアクティブリリースになるわけではなく、約半年後にアクティブ LTS リリースとなります。
 
-そして今回最リリースされた新の LTS、Node.js 16 が **AppleSilicon をサポートする最初のバージョン**となります。つまり M1 チップを始めとする SoC を搭載した MacBook や iMac 上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
+そして今回リリースされた新の LTS、Node.js 16 が **AppleSilicon を正式にサポートする最初のLTSバージョン**となります。つまり M1 チップを始めとする SoC を搭載した MacBook や iMac 上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
 
 AppleSilicon で動作するかどうかを掲載しているサイト [Does it ARM](https://doesitarm.com/) 上でも v16 以降で対応と更新されておりました。
 
