@@ -8,11 +8,11 @@ published: false
 
 # はじめに
 
-[iTerm2](https://iterm2.com/) 使ってますか？
+> [iTerm2](https://iterm2.com/) 使ってますか？
 
-iTerm2 とは Mac で使用できるターミナルアプリです。エンジニア界隈では、かなり有名なので現在使用している人でも多いのではないしょうか。
+iTerm2 とは macOS で使用できるターミナルアプリです。エンジニア界隈では、かなり有名なので現在使用している人でも多いのではないしょうか。
 
-iTerm2 はカスタマイズ機能にも優れており、自分の使いやすいターミナル環境を作ることができます。また、いつも使うツールになるので設定を常にバックアップしてデータを管理し、いつ環境が変わっても同じ設定を使いことが往々にしてあります。
+iTerm2 はカスタマイズ機能にも優れており、自分の使いやすいターミナル環境を作ることができます。また、いつも使うツールになるので設定を常にバックアップしてデータを管理し、いつ環境が変わっても同じ設定を使いたいことが往々にしてあります。
 
 今回、iTerm2 とクラウドストレージサービスの [Dropbox](https://www.dropbox.com/ja/) を使用し、設定を管理、同期する方法について紹介します。
 
@@ -35,19 +35,25 @@ https://help.dropbox.com/ja-jp/installs-integrations/desktop/locate-dropbox-fold
 
 ```shell
 # ユーザーディレクトリからDropboxへ移動
-$ cd ~/dropbox
+$ cd ~/Dropbox
 ```
 
 上のようにすることで Dropbox へアクセスできます。Dropbox を開けることを確認したら iTerm2 の設定ファイルの保存場所を作成します。
 
 ```shell
-# Mac / Settingsディレクトリを作成(任意)
-~/dropbox $ mkdir Mac/Settings
+# Dropbox ディレクトリの直下に Mac / Settingsディレクトリを作成(任意)
+~/Dropbox  $ mkdir -p Mac/Settings
 ```
 
-場所はどこでも大丈夫なのですが、私は他のアプリの設定も合わせて保存する場所として上のようなディレクトリ構成にしています。
+Dropbox 上で保存する場所はどこでも大丈夫です。私は他のアプリの設定も合わせて保存する場所として以下のようなディレクトリ構成にしています。
 
-ディレクトリを作成したら iTerm2 の設定ファイルの保存先を指定して保存します。
+```shell
+# 上のコマンドでできる構成
+Dropbox(.)
+└── Mac
+   └── Settings
+```
+ディレクトリを作成したら iTerm2 の設定ファイルの保存先を指定します。
 
 iTerm2 の Preference から `Load preferences from a custom folder or URL` にチェックを入れると Finder が開くので、先程 Dropbbox に作成したファイルの保存場所を選択しセットします。
 
