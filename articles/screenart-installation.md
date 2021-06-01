@@ -68,10 +68,10 @@ $ screenfetch
 このようにおなじみの Ubuntu のロゴがカラフルに表示されます。
 画面の左には、ロゴのアスキーアート。右にはコマンドを実行している端末の詳細情報が表示されます。ユーザー名は隠していますが、端末の詳細についてかなり細かく表示されるのが驚きです。
 
-## MacOS
+## macOS
 
-![Macで実行した様子](https://storage.googleapis.com/zenn-user-upload/hxuxn19bii0krdru2nso6ojnreqs)
-*MacOSはUnix系のOSであるということがロゴからもわかりますね*
+![macで実行した様子](https://storage.googleapis.com/zenn-user-upload/hxuxn19bii0krdru2nso6ojnreqs)
+*macOSはUnix系のOSであるということがロゴからもわかりますね*
 
 Mac のターミナル上でコマンドを入力したときは `Unix` の文字列が大きく表示されます。とてもシンプルでかっこいいですね。M1 チップ搭載の MacBook 上で実行しているからなのかわかりませんが、端末情報の表示がうまくいきませんでした。その他エラーが出ていますがコマンドはうまく実行できロゴが表示されました。実行時のエラーは `-E` オプションを渡すことで非表示にできます。
 

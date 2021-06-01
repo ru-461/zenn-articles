@@ -13,7 +13,7 @@ Zenn では [ZennCLI](https://zenn.dev/zenn/articles/install-zenn-cli) と呼ば
 # 作成したエイリアスの一覧
 
 :::message
-以下のエイリアスは MacOS のデフォルトシェルである `Zsh` で利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。WSL2(Ubuntu Zsh)・Macbook(Zsh)にてそれぞれ動作確認済みです。
+以下のエイリアスは macOS のデフォルトシェルである `Zsh` で利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。WSL2(Ubuntu Zsh)・Macbook(Zsh)にてそれぞれ動作確認済みです。
 :::
 
 ```shell:.zshrc
@@ -67,11 +67,11 @@ ZennCLI をローカルにインストールしているため、基本的に np
 alias zenn='cd ~/Documents/my-zenn-contents'
 ```
 
-移動先に絶対パス(フルパス)を指定しているため、どのディレクトリで作業していても、`zenn`と打つだけですぐにコンテンツ管理ディレクトリへ移動します。
+移動先に絶対パス(フルパス)を指定しているため、どのディレクトリで作業していても、`zenn` と打つだけですぐにコンテンツ管理ディレクトリへ移動します。
 
 ![コンテンツ管理ディレクトリに移動する様子](https://storage.googleapis.com/zenn-user-upload/e84blxcz62h1s2s92vyq9e2ecyul)
 
-私は、Zenn の記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com/)というエディタを Zenn の記事を書くときに利用しています。VSCode の利点として、指定したディレクトリを VSCode 上で瞬時に開くことのできる `Code コマンド`の存在があります。Code コマンドについては以前、Zenn 記事にまとめています。
+私は、Zenn の記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com/)というエディタを Zenn の記事を書くときに利用しています。VSCode の利点として、指定したディレクトリを VSCode 上で瞬時に開くことのできる `Code コマンド` の存在があります。Code コマンドについては以前、Zenn 記事にまとめています。
 
 https://zenn.dev/ryuu/articles/what-vscodecommand
 
@@ -84,7 +84,7 @@ $ code ~/Documents/my-zenn-contents
 
 ## 記事や本のプレビュー
 
-VSCode にはデフォルトでマークダウンのプレビュー機能があるため、マークダウンファイル(.md)をその場でプレビューしながら書くことができます。しかし、Zenn には Zenn 独自のマークダウン記法(メッセージやアコーディオン（トグル）)があるため VSCode のプレビュー機能では完全にプレビューできません。そこで ZennCLI には、`localhost`でサーバーを立ち上げて Zenn 上でどのように表示されるのかを投稿前に確認できる `Zenn Editor` があります。ホットリロードに対応しているため、ローカルで加えた変更を瞬時に反映しながら記事を書いていくことができます。
+VSCode にはデフォルトでマークダウンのプレビュー機能があるため、マークダウンファイル(.md)をその場でプレビューしながら書くことができます。しかし、Zenn には Zenn 独自のマークダウン記法(メッセージやアコーディオン（トグル）)があるため VSCode のプレビュー機能では完全にプレビューできません。そこで ZennCLI には、`localhost` でサーバーを立ち上げて Zenn 上でどのように表示されるのかを投稿前に確認できる `Zenn Editor` があります。ホットリロードに対応しているため、ローカルで加えた変更を瞬時に反映しながら記事を書いていくことができます。
 
 ```shell
 $ npx zenn preview
@@ -92,7 +92,7 @@ $ npx zenn preview
 
 と実行し、ブラウザで[localhost:8000](http://localhost:8000)へアクセスすると `ZennEditor` が起動しており、ブラウザ上での見え方をリアルタイムで確認できます。
 
-この機能を簡単に呼び出すために、`zennpr`というエイリアスを設定しています。エイリアスを使うことで、プレビューを開くときのコマンドを `npx zenn preview` を簡略化でき時短に繋がります。
+この機能を簡単に呼び出すために、`zennpr` というエイリアスを設定しています。エイリアスを使うことで、プレビューを開くときのコマンドを `npx zenn preview` を簡略化でき時短に繋がります。
 エイリアスの中で、プレビューコマンドに加えて `--open` オプションを追加しているところがポイントになります 。
 
 ```shell:.zshrc
@@ -104,7 +104,7 @@ alias zennpr='zenn && npx zenn preview --open'
 
 ## 新しい記事・本の作成
 
-ZennCLI を使って新しい記事・本を作成するときのコマンド、`npx zenn new:article`を `zennna` 、`npx zenn new:book`を `zennnb` としています。記事と本とでエイリアスの後ろを(new:article , new:book)をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ(任意の記事名)を指定でき、`npx zenn new:article`とするとランダムのスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug`というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs`のようにスラッグオプション(--slug)を含めたエイリアスも定義しています。
+ZennCLI を使って新しい記事・本を作成するときのコマンド、`npx zenn new:article` を `zennna` 、`npx zenn new:book` を `zennnb` としています。記事と本とでエイリアスの後ろを(new:article , new:book)をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ(任意の記事名)を指定でき、`npx zenn new:article` とするとランダムのスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug` というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs` のようにスラッグオプション(--slug)を含めたエイリアスも定義しています。
 
 ```shell:.zshrc
 # 新しい記事をスラッグを指定して作成

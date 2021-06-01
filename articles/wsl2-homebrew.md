@@ -14,10 +14,10 @@ published: true
 
 それぞれのパッケージマネージャで使用するコマンドが異なるため、環境が変わったときにコマンドを暗記していても瞬間的に出てこないことがありました。そこで WSL2 にも homebrew が対応しているという情報を目にして今更ながら WSL2 に Homebrew を導入しました。
 
-Homebrew といえば MacOS ユーザー の特権という先入観で Homebrew は Mac OS だけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
+Homebrew といえば macOS ユーザー の特権という先入観で Homebrew は Mac OS だけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
 
 > The Missing Package Manager for macOS (or Linux)
-(macOS（またはLinux）用パッケージマネージャー)
+(macOS（または Linux）用パッケージマネージャー)
 
 と謳われており Linux もサポートしていることに驚きました。
 
@@ -91,7 +91,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 ターミナルに `==> Installation successful!` と表示されれるとインストールが完了です。
 
-しかしまだ PATH 関連で Warning が表示されており、`brewコマンド`を使うことができません。
+しかしまだ PATH 関連で Warning が表示されており、`brewコマンド` を使うことができません。
 ターミナルに表示された Next steps と公式ドキュメントを参考に手動で初期設定をしていきます。
 
 # Homebrewの初期設定
