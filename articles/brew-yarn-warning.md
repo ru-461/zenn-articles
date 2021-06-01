@@ -10,7 +10,7 @@ published: true
 
 以前、M1 Macbook にて Homebrew を使い、anyenv と nodenv をインストールして node.js を使った開発環境を構築しました。
 
-パッケージマネージャに yarn を使おうと Homebrew からインストールしたのですが、`brew doctor`コマンドで見てもらったところ以下のような Warning がでてきて焦りました。
+パッケージマネージャに yarn を使おうと Homebrew からインストールしたのですが、`brew doctor` コマンドで見てもらったところ以下のような Warning がでてきて焦りました。
 
 ```shell
 $ brew doctor
@@ -30,7 +30,7 @@ brew doctor コマンドを使用するとこのメッセージが表示され�
 
 # 環境・バージョン等
 
-- MacOS Big Sur 11.2.1
+- macOS Big Sur 11.2.1
 - HomeBrew 3.0.2
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
@@ -60,7 +60,7 @@ $ yarn --version
 
 結論としては、すでに yarn が存在しており、シンボリックリンクが切れていることが原因でした。
 
-エラーを見てみると、一番上に `You have unlinked kegs in your Cellar.`とあり、どうやらリンクが上手くできないために表示されているようです。
+エラーを見てみると、一番上に `You have unlinked kegs in your Cellar.` とあり、どうやらリンクが上手くできないために表示されているようです。
 `Cellar` とは貯蔵庫を意味し、Homebrew ではコマンドの実体(Keg)を格納するためのディレクトリを指しています。
 
 Celllar ディレクトリの場所は以下のコマンドで調べることができます。
