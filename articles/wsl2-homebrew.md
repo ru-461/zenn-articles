@@ -2,7 +2,7 @@
 title: "今更ながら重い腰を上げてWSL2へHomebrewをインストールした"
 emoji: "🧳"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["wsl","ubuntu","windows","homebrew"]
+topics: ["wsl", "ubuntu", "windows", "homebrew"]
 published: true
 ---
 
