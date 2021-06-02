@@ -2,7 +2,7 @@
 title: "ScreenFetchでターミナルにかっこいいスクリーンアートを表示しよう"
 emoji: "🌈"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["Linux","unix","cli"]
+topics: ["Linux", "unix", "cli"]
 published: true
 ---
 

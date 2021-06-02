@@ -2,7 +2,7 @@
 title: "Windowsのコマンドラインを駆使してFlutterの開発環境を構築してみた"
 emoji: "🛫"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["flutter","windows","androidstudio","scoop","winget"]
+topics: ["flutter", "windows", "androidstudio", "scoop", "winget"]
 published: true
 ---
 
@@ -85,7 +85,7 @@ Winget コマンドでインストールできるパッケージ一覧を出力�
 ```
 
 たくさんのアプリがずらっと表示されます。この一覧にあるアプリがインストール可能です。
-この中から Android Studio を探してみます。`searchコマンド`に続けてアプリ名を入力します。
+この中から Android Studio を探してみます。`searchコマンド` に続けてアプリ名を入力します。
 
 ```powershell:powershell
 > winget search AndroidStudio
@@ -110,7 +110,7 @@ Downloading https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/an
 インストールが完了しました
 ```
 
-`インストールが完了しました`となればインストール成功です。うまくいかない場合は管理者権限にてコマンドを実行しているかを確認してください。
+`インストールが完了しました` となればインストール成功です。うまくいかない場合は管理者権限にてコマンドを実行しているかを確認してください。
 
 Windows のスタートメニューを確認すると Android Studio がインストールているのが確認できます。
 
@@ -159,8 +159,8 @@ Usage: scoop <command> [<args>]
 ## Flutter を Scoop からインストール
 
 Scoop コマンドが使えることを確認できたら、続けて Flutter を導入します。
-Scoop には、`Bucket`という概念が存在し、Bucket を追加することでインストールできるアプリを増やすことができます。デフォルトでは `main Bucket` しか追加されていません。
-Flutter 関連のツールは `extras Bucket`と `java Bucket` に存在するため、予め追加しないとインストールできません。
+Scoop には、`Bucket` という概念が存在し、Bucket を追加することでインストールできるアプリを増やすことができます。デフォルトでは `main Bucket` しか追加されていません。
+Flutter 関連のツールは `extras Bucket` と `java Bucket` に存在するため、予め追加しないとインストールできません。
 
 以下のコマンドで Flutter のインストールに必要な Bucket をまとめて追加出来ます。
 
@@ -178,12 +178,12 @@ Bucket の追加が完了したら続けて Flutter の開発に必要なもの�
 
 Flutter のインストールが始まります。インストール途中で以下が依存関係として順番にインストールされます。
 
-- adb [64bit]
-- android-sdk [64bit]
-- adopt8-hotspot  [64bit]
-- flutter [64bit]
+- adb[64bit]
+- android-sdk[64bit]
+- adopt8-hotspot[64bit]
+- flutter[64bit]
 
-依存関係としてなにがインストールされるかは `depends コマンド`で都度確認できます。
+依存関係としてなにがインストールされるかは `depends コマンド` で都度確認できます。
 
 ```powershell:powershell
 > scoop depends  flutter
@@ -193,7 +193,7 @@ android-sdk
 adb
 ```
 
-最後に Android SDK のライセンスが表示されるので、`y`を押して承諾していきます。
+最後に Android SDK のライセンスが表示されるので、`y` を押して承諾していきます。
 
 続けてインストールする SDK プラットフォームを選択します。デフォルトで一番最新のものが選択されます。こだわりがなければデフォルトで問題ありません。
 
@@ -241,7 +241,7 @@ No platform detected. Please select a platform to install [Default: 24]:
 ![Android SDKのエラー画面](https://storage.googleapis.com/zenn-user-upload/svy0zfj5pariecx1pgxb1xxzdzpp)
 
 ここで Android SDK の場所を設定してあげます。
-Scoop でインストールしたものはユーザーデフォルトの下 `~\scoop\`の中にすべてまとめられています。
+Scoop でインストールしたものはユーザーデフォルトの下 `~\scoop\` の中にすべてまとめられています。
 
 Scoop でインストールしたアプリとライブラリの格納場所は以下のコマンドで調べることが出来ます。
 
@@ -252,7 +252,7 @@ Scoop でインストールしたアプリとライブラリの格納場所は�
 C:\Users\user\scoop\apps\android-sdk\current
 ```
 
-`Android SDK Location:`に上のコマンドで取得した SDK へのフルパスを指定し続行します。
+`Android SDK Location:` に上のコマンドで取得した SDK へのフルパスを指定し続行します。
 
 ![Android SDKのパスを指定する様子](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
 
@@ -270,13 +270,13 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 ```
 
-上から 2 番目の `Android toolchain`の内容が変わっています。追加でライセンスに承諾する必要があるため、以下のコマンドでライセンスに承諾します。
+上から 2 番目の `Android toolchain` の内容が変わっています。追加でライセンスに承諾する必要があるため、以下のコマンドでライセンスに承諾します。
 
 ```powershell:powershell
 > flutter doctor --android-licenses
 ```
 
-もう一度 `flutter doctor` を実行して `• No issues found!`と出力されれば Flutter の導入は完了です。
+もう一度 `flutter doctor` を実行して `• No issues found!` と出力されれば Flutter の導入は完了です。
 
 ## Flutter 開発プラグインの導入
 
@@ -310,7 +310,7 @@ Android Studio を再起動すると、「Create New Flutter Project」の項目
 C:\Users\user\scoop\apps\flutter\current
 ```
 
-`Flutter SDK path`のところに `C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\current`を指定して続行します。
+`Flutter SDK path` のところに `C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\current` を指定して続行します。
 
 そのまま続行すると新規 Flutter プロジェクトが Android Studio 上で開かれます。
 
@@ -327,7 +327,7 @@ Android Studio 上でプロジェクトが開かれるのを確認したら、�
 
 AVD マネージャーから Android Emulator を作成して実行してみます。
 
-![Pixel4 Emulatorでアプリを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/3ck4my6py4f4lra31h6ue20tiht5 =300x)
+![Pixel4 Emulator でアプリを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/3ck4my6py4f4lra31h6ue20tiht5=300x)
 ***Pixel 4 API 30***
 
 エミュレーター上でもエラーなく実行でき、Chrome で実行したときと同じような結果が得られました。このように Flutter は単一のコードで Web・モバイルを問わずに実行できる点が特徴です。
