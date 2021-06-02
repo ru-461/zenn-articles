@@ -2,7 +2,7 @@
 title: "Macに入れたWindows ARM64 InsiderPreview上でWSL2を動かそうと試みた話"
 emoji: "🐴"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["windows","mac","wsl2","parallels","arm"]
+topics: ["windows", "mac", "wsl2", "parallels", "arm"]
 published: true
 ---
 
@@ -34,7 +34,7 @@ Windows Insider Program に参加することで以下のページから Preview
 
 https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64?wa=wsignin1.0
 
-入手した Windows イメージは `VHDX ファイル`となっており、Parallels Destop にて選択することで起動させることができます。
+入手した Windows イメージは `VHDX ファイル` となっており、Parallels Destop にて選択することで起動させることができます。
 
 ParallelsDesktop は以下のページからダウンロードしてインストールできます。
 
@@ -127,7 +127,7 @@ WSL2 に Ubuntu 20.04 LTS がインストールできたので起動してみま
 
 このままエラーで引き下がれないので、どうにか起動できないか試行錯誤してみました。
 
-よくあるエラーとして、カーネルの更新がされていないというのがあるようです。そこで半信半疑ながらに公式のガイドを参考にカーネルの更新をしてみます。`wsl --install`コマンドを実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
+よくあるエラーとして、カーネルの更新がされていないというのがあるようです。そこで半信半疑ながらに公式のガイドを参考にカーネルの更新をしてみます。`wsl --install` コマンドを実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
 
 :::message
 カーネルの更新プログラムパッケージは x64 向けと ARM64 向けで分かれています。今回使用しているのは ARM64 アーキテクチャのため ARM64 用のカーネル更新プログラムパッケージを選択しインストールします。
@@ -166,7 +166,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 本題は WSL2 の実現なのですが、この環境で WSL1 が動作することが検証途中で確認できたので補足としてまとめます。
 
-`wsl --install`コマンドの実行直後は WSL2 が既定として設定されているため、以下のコマンドで WSL1 を既定のバージョンとして設定することでディストリビューションを WSL1 として起動できます。
+`wsl --install` コマンドの実行直後は WSL2 が既定として設定されているため、以下のコマンドで WSL1 を既定のバージョンとして設定することでディストリビューションを WSL1 として起動できます。
 
 ```shell:コマンドプロンプト
 # バージョン 1 をデフォルトにする
