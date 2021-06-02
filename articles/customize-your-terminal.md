@@ -2,7 +2,7 @@
 title: "Rust製ツールでおしゃれなターミナル環境を作る [Starship ✕ exa]"
 emoji: "✨"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["starship","exa","shell","rust","ターミナル"]
+topics: ["starship", "exa", "shell", "rust", "ターミナル"]
 published: true
 ---
 
