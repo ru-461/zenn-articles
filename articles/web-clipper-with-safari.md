@@ -2,7 +2,7 @@
 title: "SafariがNotion Web Clipperに対応したので使ってみる"
 emoji: "🧭"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["notion","safari","拡張機能"]
+topics: ["notion", "safari", "拡張機能"]
 published: true
 ---
 
@@ -78,6 +78,7 @@ Notion にログインしてあるので、Workspace と保存先のページを
 # おわりに
 
 今回、Safari の拡張機能と Notion Web Clipper を導入する方法について書きました。初めて Safari に拡張機能を導入しましたが、Safari も Chrome と同じように拡張機能を導入できるのが便利だと感じました。有名な拡張機能は一通り揃っているので Chrome の拡張機能を多様していても、比較的移行しやすい環境だと感じます。
+
 また Safari に Notion Web Clipper が対応したことで、ブラウザを選ぶことなく使用できるようになり、より Notion を使って Web Clip する機会が増えそうです。
 
 Notion API の PublicBeta が公開されるなど、ここ最近で Notion はかなり注目を集めているので、今後もさらなるアップデートに期待したいところですね。
