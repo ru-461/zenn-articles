@@ -1,7 +1,11 @@
 ---
-title: ""
+title: "VSCodeのZenModeで集中力をハックする"
 emoji: "😽"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+type: "idea" # tech: 技術記事 / idea: アイデア
+topics: ["vscode"]
 published: false
 ---
+
+# はじめに
+
+# おわりに
