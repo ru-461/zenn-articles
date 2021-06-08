@@ -43,7 +43,7 @@ Zen Mode で意図的にではありますが、ショートカットキーを�
 
 解除するときは `Escキー` を押すことで Zen Mode が終了し通常モードに戻ります。
 
-実際この記事も VSCode の ZennMode にて執筆しています。ターミナルも VSCode 内からアクセスできるため、Git の操作などに戸惑うことなく快適に執筆を進められるのがよかったです。
+実際この記事も VSCode の Zenn Mode を使用して執筆しています。ターミナルも VSCode 内からアクセスできるため、VSCode の画面だけで作業が完結し、快適に執筆を進められるのがよかったです。
 
 # 設定でさらにカスタマイズ
 
@@ -55,9 +55,9 @@ Zen Mode で意図的にではありますが、ショートカットキーを�
 
 ![設定後の様子](https://storage.googleapis.com/zenn-user-upload/714c9d4b7e88315b0acbdf49.png)*設定変更後*
 
-- Center Layout(レイアウトの中央寄せ)
-- Hide Line Number(行番号の非表示)
-- Hide Status Bar(下ステータスバーの非表示)
+- Center Layout (レイアウトの中央寄せ)
+- Hide Line Number (行番号の非表示)
+- Hide Status Bar (下ステータスバーの非表示)
 
 上の 3 項目それぞれデフォルトから変更しました。これにより最小限の UI 表示を保ちながら作業に没入できるのでおすすめです。
 
