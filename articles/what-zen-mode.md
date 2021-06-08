@@ -3,7 +3,7 @@ title: "VSCodeのZen Modeで集中力をハックする"
 emoji: "🧘"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["vscode"]
-published: false
+published: true
 ---
 
 # はじめに
@@ -14,9 +14,9 @@ Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pr
 
 余談ではありますが、このサイト「Zenn」の名前の由来については過去に [catnose さん](https://zenn.dev/catnose99)が devsumi 2021 にて言及されています。^[[Zennという名前にした理由](https://youtu.be/DTpGfpLybr0?t=1180)]
 
-> 善い行いをすればいずれ返ってくる →  善 → Zenn
+> 善い行いをすればいずれ返ってくる...  →  善  →  Zenn
 
-この表現がサービスをうまく表現しているなと感じるとともに Zenn が好きな理由でもあります。
+この表現がサービスをうまく表現しているなと感じるとともに私が Zenn を好きな理由でもあります。
 
 ~~記事内容とサイト名をかけていることにはあまりつっこまないでください とくに深い意味はありません~~
 
@@ -49,11 +49,11 @@ Zen Mode で意図的にではありますが、ショートカットキーを�
 
 また Zen mode は設定でさらにカスタマイズできます。初めて Zen Mode を使うとき設定は以下のようになっています。
 
-![設定がデフォルトの様子](https://storage.googleapis.com/zenn-user-upload/c112e2ba900d84b1c1ff9239.png)
+![設定がデフォルトの様子](https://storage.googleapis.com/zenn-user-upload/c112e2ba900d84b1c1ff9239.png)*設定変更前*
 
 設定項目は日本語表示に対応しているため直感てきに触ることができます。初期状態だとエディタが中央寄せ、行番号が非表示になるため私は以下のように設定しています。
 
-![設定後の様子](https://storage.googleapis.com/zenn-user-upload/714c9d4b7e88315b0acbdf49.png)
+![設定後の様子](https://storage.googleapis.com/zenn-user-upload/714c9d4b7e88315b0acbdf49.png)*設定変更後*
 
 `Center Layout(レイアウトの中央寄せ)`・`Hide Line Number(行番号の非表示)`・`Hide Status Bar(ステータスバーの非表示)` をそれぞれデフォルトから変更しました。これにより最小限の UI 表示を保ちながら作業に没入できるのでおすすめです。
 
