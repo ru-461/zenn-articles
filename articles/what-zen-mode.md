@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/) は拡張機能や機能が豊富で柔軟なコーティング環境を作れるエディタでとても人気です。また最近は同社が開発している `TypeScript` がフロントエンド開発のトレンドになってることもあり、VSCode をメインのエディタとして使用することも多くなってきました。私自身、VSCode にて記事を執筆していることもありいつもお世話になってます。
+Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/) は拡張機能や機能が豊富で柔軟なコーティング環境を作れるエディタでとても人気があります。また最近は同社が開発している `TypeScript` がフロントエンド開発のトレンドになってることもあり、VSCode をメインのエディタとして使用することも多くなってきました。私自身、VSCode にて記事を執筆していることもありいつもお世話になってます。
 
 そこで今回は、コーティング作業へ集中することに特化した機能、***禅モード(Zen mode)*** をご紹介します。この記事を投稿しているこちらのサイト [Zenn](https://zenn.dev/) とは何も関係ありません。`「Zen」` です。
 
@@ -31,7 +31,7 @@ Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pr
 ![コマンドパレットから有効化する様子](https://storage.googleapis.com/zenn-user-upload/2f83d0d692a0b2cc190a388b.png)
 *Zen Modeの切り替えを選択して有効化*
 
-有効化すると一瞬でエディタ以外のインターフェースが消えました。これがいわゆる `Zen mode` です。
+有効化すると一瞬でエディタ以外のインターフェースが消えました。これがいわゆる `Zen Mode` です。
 
 ![Zen Modeが有効化された様子](https://storage.googleapis.com/zenn-user-upload/1c3ca8a32d177846bc28dde3.png)*Zen ModeでUI表示が最低限になった*
 
