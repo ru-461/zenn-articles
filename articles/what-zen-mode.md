@@ -20,6 +20,8 @@ Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pr
 
 この表現がサービスをうまく表現しているなと感じるとともに私が Zenn を好きな理由でもあります。
 
+
+
 # Zen Modeの有効化
 
 拡張機能の導入などは必要なく、VSCode にデフォルトで用意されている機能なので、ショートカットで簡単に有効化できます。デフォルトでショートカットキーが用意されており、Windows であれば `Ctrl + K, Z` 、macOS であれば、`⌘ + K, Z` で Zen Mode が発動します。
