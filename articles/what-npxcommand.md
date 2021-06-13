@@ -38,7 +38,7 @@ $ npm install -g npx
 
 # Why？npx
 
-なぜ、npx コマンドなのでしょうか？
+なぜ、`npx ` コマンドなのでしょうか。
 
 npm を使ってプロジェクトを作成、初期化するコマンドは以下の通りです。
 
@@ -100,7 +100,7 @@ npx コマンド実行が実行されるとローカル内で指定された nod
 $ npx create-nuxt-app <project-name>
 ```
 
-つまり Nuxt.js のプロジェクトを作る際に[create-nuxt-app](https://github.com/nuxt/create-nuxt-app)というモジュールを実行することで各モジュールごとの依存関係を解決しながらプロジェクトを作成できるというイメージです。
+つまりプロジェクトを作る際、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app)というモジュールを実行することで各モジュール間の依存関係を解決しながらプロジェクトを作成できるというイメージです。
 
 Nuxt.js を使ったプロジェクトスクラッチで１から始めることもできますが、正直かなり手数が多いため、create-nuxt-app を使うことで**簡単に始められるのは大きなメリット**だと感じます。
 
