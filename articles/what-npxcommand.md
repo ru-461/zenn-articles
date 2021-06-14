@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Nuxt.js のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation/)を読みながらすすめていたのですが。
+Nuxt.js のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation/)を読みながら進めていたのですが。
 
 ```shell
 $ npx create-nuxt-app <project-name>
@@ -24,7 +24,7 @@ $ npx create-nuxt-app <project-name>
 
 npx コマンドは npm バージョン 5.2.0 より同梱されているコマンドで、ローカルインストールしたコマンドを実行するために使われます。npm のバージョン 5.2.0 がリリースされたのは、今から約 3 年ほど前になるため、今主に使われている npm ではほとんど使える状態にあります。
 
-npx が使える状態であえて使わないのはもったいないくらいなので是非使っていきたいコマンドの１つです。
+npx が使える状態であえて使わないのはもったいないに便利なので是非使っていきたいコマンドの１つです。
 
 https://www.npmjs.com/package/npx
 
@@ -102,7 +102,7 @@ $ npx create-nuxt-app <project-name>
 
 つまりプロジェクトを作る際、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app)というモジュールを実行することで各モジュール間の依存関係を解決しながらプロジェクトを作成できるというイメージです。
 
-Nuxt.js を使ったプロジェクトスクラッチで１から始めることもできますが、正直かなり手数が多いため、create-nuxt-app を使うことで**簡単に始められるのは大きなメリット**だと感じます。
+Nuxt.js を使ったプロジェクトはスクラッチで１から始めることもできますが、create-nuxt-app を使うことで**簡単に始められるのは大きなメリット**だと感じます。
 
 # まとめ
 
