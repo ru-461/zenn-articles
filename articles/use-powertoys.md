@@ -112,7 +112,7 @@ Windows 標準のファイル管理ツール `エクスプローラー` に機�
 
 すると以下のような選択した画像をリサイズするウインドウが開かれるので、ここから自由に画像のサイズ変更を行えます。
 
-![リサイズメニューの様子](https://storage.googleapis.com/zenn-user-upload/5w3aoy4rsuau8yq8lkjyc2no03s1=520x)
+![リサイズメニューの様子](https://storage.googleapis.com/zenn-user-upload/5w3aoy4rsuau8yq8lkjyc2no03s1 =520x)
 
 予めよく使われる解像度がプリセットで用意されているので簡単に目的のサイズにリサイズできるのはとても便利です。またカスタムとして各々が指定した数値でのリサイズも可能です。
 
@@ -129,7 +129,7 @@ Windows 標準のファイル管理ツール `エクスプローラー` に機�
 
 使い方は簡単でエクスプローラから編集したいファイルを複数選択し右クリックのコンテキストメニューから「Powerrename」を選択することで編集ウインドウが開きます。
 
-![Powerremove ウインドウの画像](https://storage.googleapis.com/zenn-user-upload/xlo8thjodz666pnjva92rv8l2si5=520x)
+![Powerremove ウインドウの画像](https://storage.googleapis.com/zenn-user-upload/xlo8thjodz666pnjva92rv8l2si5 =520x)
 
 まとめてファイル名を変更でき、おなじみの正規表現も使用できるため、柔軟にファイル名を編集できます。
 
