@@ -107,7 +107,7 @@ GUI 表示になるので選択肢から「アジア」→「東京」を選択�
 ![時間帯選択画面の画像](https://storage.googleapis.com/zenn-user-upload/wlmalkrups5z43uhweg3wnykiwkv)
 *東京を選択*
 
-`date`コマンドで現在の時刻を表示。
+`date` コマンドで現在の時刻を表示。
 
 ```bash
 $ date
