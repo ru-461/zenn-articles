@@ -1,5 +1,5 @@
 ---
-title: "今更ながら重い腰を上げてWSL2へHomebrewをインストールした"
+title: "今更ながら重い腰を上げて WSL2 へ Homebrew をインストールした"
 emoji: "🧳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["wsl", "ubuntu", "windows", "homebrew"]

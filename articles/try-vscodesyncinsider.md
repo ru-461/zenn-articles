@@ -1,5 +1,5 @@
 ---
-title: "WindowsとM1 MacのVSCode同期戦略"
+title: "Windows と M1 Mac の VSCode 同期戦略"
 emoji: "🔄"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["vscode", "windows", "mac", "m1", "applesilicon"]

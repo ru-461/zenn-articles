@@ -1,5 +1,5 @@
 ---
-title: "VSCodeのZen Modeで集中力をハックする"
+title: "VSCode の Zen Mode で集中力をハックする"
 emoji: "🧘"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["vscode"]
