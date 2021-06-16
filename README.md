@@ -1,4 +1,4 @@
-# My Zenn Contents
+# My Zenn Articles
 
-![My articles](https://zenn.dev/ryuu)
+- [Articles](https://zenn.dev/ryuu)
 
