@@ -1,5 +1,5 @@
 ---
-title: "Windowsのコマンドラインを駆使してFlutterの開発環境を構築してみた"
+title: "Windows のコマンドラインを駆使して Flutter の開発環境を構築してみた"
 emoji: "🛫"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["flutter", "windows", "androidstudio", "scoop", "winget"]

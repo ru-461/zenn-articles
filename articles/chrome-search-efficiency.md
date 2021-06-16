@@ -1,5 +1,5 @@
 ---
-title: "検索効率を楽して上げたい...[Google 検索キーボードショートカット]"
+title: "検索効率を楽して上げたい...[ Google 検索キーボードショートカット]"
 emoji: "🌟"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Chrome", "ツール", "作業効率化", "chrome拡張"]

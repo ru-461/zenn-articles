@@ -1,5 +1,5 @@
 ---
-title: "Macに入れたWindows ARM64 InsiderPreview上でWSL2を動かそうと試みた話"
+title: "Mac に入れた Windows ARM64 InsiderPreview 上で WSL2 を動かそうと試みた話"
 emoji: "🐴"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "mac", "wsl2", "parallels", "arm"]

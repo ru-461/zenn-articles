@@ -1,5 +1,5 @@
 ---
-title: "Windows上でChrome OSを動かす [CloudReady]"
+title: "Windows 上で Chrome OS を動かす [ CloudReady ]"
 emoji: "⛅"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "chromeos", "cloudready", "vmware", "ツール"]

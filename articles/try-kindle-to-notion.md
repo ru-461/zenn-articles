@@ -1,5 +1,5 @@
 ---
-title: "KindleのハイライトをNotionに同期するKindle2Notionがすごかった"
+title: "Kindle のハイライトを Notion に同期する Kindle2Notion がすごかった"
 emoji: "📖"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["python", "notion", "kindle"]
