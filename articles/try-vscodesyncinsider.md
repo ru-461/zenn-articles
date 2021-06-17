@@ -82,7 +82,7 @@ Stable 版と Insiders 版で設定の同期は可能ですが、同期した際
 ![設定同期をオンにする様子](https://storage.googleapis.com/zenn-user-upload/nzyepfjno7qulnoaiuuffk0nj6c9)
 *左下の設定アイコンクリックでメニューが現れます*
 
-同期する設定を選択するウインドウが現れるので選択します。デフォルトで全てオンになっています。
+同期する設定を選択するウィンドウが現れるので選択します。デフォルトで全てオンになっています。
 ![同期する項目を選択する様子](https://storage.googleapis.com/zenn-user-upload/uo73sd23a1x1pxzwonx9r3cc3d53)
 
 :::message
@@ -105,7 +105,7 @@ Stable 版と Insiders 版で設定の同期は可能ですが、同期した際
 今回は、Insiders 版に Stable 版の設定を同期させます。
 
 Mac 側に Insiders 版の VSCode をインストールし、Windows 版(Stable 版)と同じ用に設定同期機能をオンにします。
-オンにする項目をチェックし選択したあと Insiders 版では、同期に使用する同期サービスを選択するウインドウが現れます。
+オンにする項目をチェックし選択したあと Insiders 版では、同期に使用する同期サービスを選択するウィンドウが現れます。
 
 ![同期サービスを選ぶ様子](https://storage.googleapis.com/zenn-user-upload/8h29c0led43jjwbaj57m95ggp8zo)
 *Insiders版でのみ表示されます。Stable ↔ Insidersでの同期はインサイダーを選択*

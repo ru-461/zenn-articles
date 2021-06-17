@@ -1,5 +1,5 @@
 ---
-title: "Notion で Touch Bar を使いたい！ [ BetterTouchTool ]"
+title: "Notion で Touch Bar を使いたい！ [BetterTouchTool]"
 emoji: "🤏"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["notion", "mac", "BetterTouchTool"]
