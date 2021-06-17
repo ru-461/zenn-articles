@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Node.js v16 系となるバージョンが 2021 年の 4 月 20 日にリリースされました。v14 に次ぐ [LTS( Long Term Support )](https://nodejs.org/ja/about/releases/)となるバージョンになります。Node.js はメジャーバージョンが偶数になるタイミングで LTS となり、約 30 ヶ月間のサポートがされる形となっています。
+Node.js v16 系となるバージョンが 2021 年の 4 月 20 日にリリースされました。v14 に次ぐ [LTS（Long Term Support）](https://nodejs.org/ja/about/releases/)となるバージョンになります。Node.js はメジャーバージョンが偶数になるタイミングで LTS となり、約 30 ヶ月間のサポートがされる形となっています。
 
 またリリースしてすぐ LTS のアクティブリリースになるわけではなく、約半年後にアクティブ LTS リリースとなります。
 
