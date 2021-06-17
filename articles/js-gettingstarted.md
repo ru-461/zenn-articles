@@ -19,8 +19,8 @@ JavaScript のフレームワークには npm や Yarn などのパッケージ�
 
 # 前提条件
 
-- node.js がインストールされていること(バージョン 8 以降、最新の LTS バージョンを推奨)
-- npm もしくは Yarn が利用可能であること(npm は node.js にデフォルトで搭載)
+- Node.js がインストールされていること(バージョン 8 以降、最新の LTS バージョンを推奨)
+- npm もしくは Yarn が利用可能であること(npm は Node.js にデフォルトで搭載)
 
 # Vue
 
@@ -157,7 +157,7 @@ $ cd <project-name>
 $ ng serve --open
 ```
 
-`ng serve --open`とすることでデフォルトのブラウザで起動します。
+`ng serve --open` とすることでデフォルトのブラウザで起動します。
 http://localhost:4200 で開発サーバーが立ち上がります。
 
 ![Angularウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/p9fb7u0bkh2f6cer69st888s60yo)

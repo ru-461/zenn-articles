@@ -23,12 +23,12 @@ Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pr
 
 拡張機能の導入などは必要なく、VSCode にデフォルトで用意されている機能なので、ショートカットで簡単に有効化できます。デフォルトでショートカットキーが用意されており、Windows であれば `Ctrl + K, Z` 、macOS であれば、`⌘ + K, Z` で Zen Mode が発動します。
 
-また `Ctrl + Shift + P`、`⌘ + Shift + P` で開くコマンドパレットのウインドウに、`「zen」` と入力すると有効化、無効化のメニューが表示され、こちらからも有効化できます。
+また `Ctrl + Shift + P`、`⌘ + Shift + P` で開くコマンドパレットのウィンドウに、`「zen」` と入力すると有効化、無効化のメニューが表示され、こちらからも有効化できます。
 
 ![コマンドパレットから有効化する様子](https://storage.googleapis.com/zenn-user-upload/2f83d0d692a0b2cc190a388b.png)
 *Zen Modeの切り替えを選択して有効化*
 
-有効化すると一瞬でエディタ以外のインターフェースが消えました。これがいわゆる `Zen Mode` です。
+有効化すると一瞬でエディタ以外のインタフェースが消えました。これがいわゆる `Zen Mode` です。
 
 ![Zen Modeが有効化された様子](https://storage.googleapis.com/zenn-user-upload/1c3ca8a32d177846bc28dde3.png)*Zen ModeでUI表示が最低限になった*
 
@@ -52,9 +52,9 @@ Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pr
 
 ![設定後の様子](https://storage.googleapis.com/zenn-user-upload/714c9d4b7e88315b0acbdf49.png)*設定変更後*
 
-- Center Layout (レイアウトの中央寄せ)
-- Hide Line Number (行番号の非表示)
-- Hide Status Bar (下ステータスバーの非表示)
+- Center Layout（レイアウトの中央寄せ）
+- Hide Line Number（行番号の非表示）
+- Hide Status Bar（下ステータスバーの非表示）
 
 上の 3 項目それぞれデフォルトから変更しました。これにより最小限の UI 表示を保ちながら作業に没入できるのでおすすめです。
 
@@ -68,7 +68,7 @@ Microsoft 社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pr
 
 今回は、VSCode で Zen Mode を使用したコーディングだけに集中できる環境についてご紹介しました。
 
-個人的にこの `Zen(禅)` で集中力を高めるという発想がかなり気に入っています。小技的な機能にはなりますが、ショートカットキー1 つでいつでも集中へ特化したレイアウトに変更できるのはとても便利です。また VSCode には有志が開発している拡張機能も豊富にあるため、Git を使った開発、Workspace 機能を活用したチーム開発にも対応でき、VSCode だけで完結できることが多くオールインワンなポテンシャルを秘めていると感じました。今回紹介した Zen Mode 以外にも便利な機能が多く、VSCode を通して得られる***オールインワンな開発体験***にはすごく満足しています。
+個人的にこの `Zen（禅）` で集中力を高めるという発想がかなり気に入っています。小技的な機能にはなりますが、ショートカットキー1 つでいつでも集中へ特化したレイアウトに変更できるのはとても便利です。また VSCode には有志が開発している拡張機能も豊富にあるため、Git を使った開発、Workspace 機能を活用したチーム開発にも対応でき、VSCode だけで完結できることが多くオールインワンなポテンシャルを秘めていると感じました。今回紹介した Zen Mode 以外にも便利な機能が多く、VSCode を通して得られる***オールインワンな開発体験***にはすごく満足しています。
 
 Zen Mode は VSCode 以外にも Jetbrains 社の提供する PhpStorm^[[IDE 表示モード | PhpStorm](https://pleiades.io/help/phpstorm/ide-viewing-modes.html)] や PyCharm^[[IDE 表示モード | PyCharm](https://pleiades.io/help/pycharm/ide-viewing-modes.html)]などの IDE にも実装されているようです。他にも搭載しているエディタ、IDE がないか探してみるのも面白いですね。
 

@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-以前、M1 Macbook にて Homebrew を使い、anyenv と nodenv をインストールして node.js を使った開発環境を構築しました。
+以前、M1 Macbook にて Homebrew を使い、anyenv と nodenv をインストールして Node.js を使った開発環境を構築しました。
 
 パッケージマネージャに yarn を使おうと Homebrew からインストールしたのですが、`brew doctor` コマンドで見てもらったところ以下のような Warning がでてきて焦りました。
 
@@ -34,14 +34,14 @@ brew doctor コマンドを使用するとこのメッセージが表示され�
 - HomeBrew 3.0.2
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
-- node.js 14.15.4
+- Node.js 14.15.4
 - yarn 1.22.10
 
 # ここまでやったこと
 
 https://github.com/anyenv/anyenv#homebrew-for-macos-user
 
-上記を参考に homebrew で anyenv をインストールし、anyenv 経由で nodenv をインストール、node.js 14.15.4(LTS)をグローバルとローカルの両方に指定しました。
+上記を参考に homebrew で anyenv をインストールし、anyenv 経由で nodenv をインストール、Node.js 14.15.4(LTS)をグローバルとローカルの両方に指定しました。
 
 当初は npm を使って `yarn` をインストールしようとしてましたが、[catnoseさんのこちらの記事](https://zenn.dev/catnose99/articles/9356979accca26)で M1 Mac の homebrew を使って yarn をインストールできそうだったため homebrew を使って yarn をインストールすることにしました。
 
@@ -61,7 +61,7 @@ $ yarn --version
 結論としては、すでに yarn が存在しており、シンボリックリンクが切れていることが原因でした。
 
 エラーを見てみると、一番上に `You have unlinked kegs in your Cellar.` とあり、どうやらリンクが上手くできないために表示されているようです。
-`Cellar` とは貯蔵庫を意味し、Homebrew ではコマンドの実体(Keg)を格納するためのディレクトリを指しています。
+`Cellar` とは貯蔵庫を意味し、Homebrew ではコマンドの実体（Keg）を格納するためのディレクトリを指しています。
 
 Celllar ディレクトリの場所は以下のコマンドで調べることができます。
 

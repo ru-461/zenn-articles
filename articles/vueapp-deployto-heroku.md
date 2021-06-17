@@ -52,7 +52,7 @@ error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: di
 ```
 
 どうやら WSL2 では `snapコマンド` がうまく動作しない模様です。
-そこで以下のコマンドでスタンドアロンインストールを実行します。
+そこで以下のコマンドでスタンドアローンインストールを実行します。
 
 ```shell
 $ sudo curl https://cli-assets.heroku.com/install.sh | sh
@@ -86,7 +86,7 @@ $ heroku login
   # ブラウザにてログイン処理
 ```
 
-`q`以外のキーを押すと自動的にデフォルトのブラウザで Heroku のログイン画面が開かれるのでブラウザ上でアカウントへログインします。
+`q` 以外のキーを押すと自動的にデフォルトのブラウザで Heroku のログイン画面が開かれるのでブラウザ上でアカウントへログインします。
 
 以下の画面が表示されたら正常にログインできています。
 
