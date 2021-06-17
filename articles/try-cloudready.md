@@ -1,5 +1,5 @@
 ---
-title: "Windows 上で Chrome OS を動かす [ CloudReady ]"
+title: "Windows 上で Chrome OS を動かす [CloudReady]"
 emoji: "⛅"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "chromeos", "cloudready", "vmware", "ツール"]
@@ -45,7 +45,7 @@ CloudReady が正式に ChromeOS として生まれ変わる日も近いみた�
 
 ## 仮想マシンの用意
 
-まず ChromeOS(CloudReady)を Windows 上で動作させるために仮想マシンを用意します。
+まず ChromeOS（CloudReady）を Windows 上で動作させるために仮想マシンを用意します。
 仮想マシンを利用することで Windows の環境を汚すことなく、OS を動かすことが可能となります。
 
 CloudReady を仮想マシンで利用する場合は `VMware Workstation Player` での動作のみサポートされているため VMware Workstation Player を使用します。`VirtualBox` では上手く動作しない模様です。
@@ -99,7 +99,7 @@ VMware のトップ画面から `仮想マシンを開く` をクリック。
 
 ## CloudReady の起動
 
-`仮想マシンの再生`ボタンから起動できます。
+`仮想マシンの再生` ボタンから起動できます。
 
 ![CloudReadyようこそ画面の画像](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
 *ようこそ！*
@@ -108,13 +108,13 @@ VMware のトップ画面から `仮想マシンを開く` をクリック。
 
 ![言語とキーボード変更画面の画像](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) *使用しているキーボードが JIS 配列のため日本語を選択*
 
-VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を行き来できるのが便利です。
+VMware は `Ctrl + Alt` でホスト OS（Windows）とゲスト OS（CloudReady）を行き来できるのが便利です。
 
 初期設定で Google のアカウントにログインすると CloudReady のデスクトップが表示されます。
 
 ![CloudReadyのデスクトップ画像](https://storage.googleapis.com/zenn-user-upload/fe7asv5fcidkgpue7z3f6mb7h3rs)
 
-ブラウザとして Chromium(Chrome のオープンソース版)がインストールされています。
+ブラウザとして Chromium（Chrome のオープンソース版）がインストールされています。
 
 初期設定でログインした Google アカウントと紐付いているため自動的に Chrome の環境と同期が行われすぐに使い始めることができます。
 
@@ -124,17 +124,17 @@ VMware は `Ctrl + Alt` でホスト OS(Windows) とゲスト OS(CloudReady) を
 
 ## インターネットに繋がらない
 
-私は PC を有線接続(イーサネット)で接続していたのですが、CloudReady の初期設定で上手く接続ができませんでした。
-ChromeOS の初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、`仮想マシンの設定の編集` から `ネットワークアダプタ`を選択し。
+私は PC を有線接続（イーサネット）で接続していたのですが、CloudReady の初期設定で上手く接続ができませんでした。
+ChromeOS の初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、`仮想マシンの設定の編集` から `ネットワークアダプタ` を選択し。
 
 ![ブリッジ接続からNATへ変更する様子](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
 
-`デフォルトのブリッジからNATに変更`することですんなりと繋がるようになりました。
+`デフォルトのブリッジからNATに変更` することですんなりと繋がるようになりました。
 繋がらない場合はお使いの環境に合わせてデフォルトから適宜設定を変えてみてください。
 
 ## ロック解除に毎回パスワードを打つのが大変
 
-ChromeOS ではログイン時に Google のパスワードを利用してロックを解除するのですが、私は Google のログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。`設定 → ユーザー → 画面ロック`で画面ロックの解除の方法をパスワードから 6 ケタの PIN に変更できます。
+ChromeOS ではログイン時に Google のパスワードを利用してロックを解除するのですが、私は Google のログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。`設定 → ユーザー → 画面ロック` で画面ロックの解除の方法をパスワードから 6 ケタの PIN に変更できます。
 
 ![PINを設定する様子](https://storage.googleapis.com/zenn-user-upload/9xcdmioqwe4x7ejftl9p21meed9c)
 
@@ -146,8 +146,8 @@ PIN にしてからストレスなくロックの解除ができるようにな�
 
 # Linux が起動できない問題
 
-CloudReady(ChromeOS) にはターミナル機能と Linux の機能が搭載されています。
-ターミナルは標準で搭載されており、`Ctrl + Shift + t`で呼び出すことができます。
+CloudReady（ChromeOS）にはターミナル機能と Linux の機能が搭載されています。
+ターミナルは標準で搭載されており、`Ctrl + Shift + t` で呼び出すことができます。
 
 ![CloudReadyのターミナル画像](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
 

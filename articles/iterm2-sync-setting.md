@@ -20,7 +20,7 @@ iTerm2 はカスタマイズ機能にも優れており、自分の使いやす�
 
 iTerm2 を起動して、`設定(Preferences)` を開きます。メニューから `iTerm2 → Preferences` またはショートカットキーで `⌘ + ,` とすることで開くことができます。
 
-設定ウインドウが開いたら `Generalタブ` から `Preferences` を選択します。
+設定ウィンドウが開いたら `Generalタブ` から `Preferences` を選択します。
 
 ![設定ファイル保存場所設定の画像](https://storage.googleapis.com/zenn-user-upload/c18c98bb50725c47100a6202.png)
 *設定ファイルの保存先選択*
@@ -41,7 +41,7 @@ $ cd ~/Dropbox
 上のようにすることで Dropbox へアクセスできます。Dropbox を開けることを確認したら iTerm2 の設定ファイルの保存場所を作成します。
 
 ```shell
-# Dropbox ディレクトリの直下に Mac / Settingsディレクトリを作成(任意)
+# Dropboxディレクトリの直下に Mac / Settings ディレクトリを作成(任意)
 ~/Dropbox  $ mkdir -p Mac/Settings
 ```
 
@@ -60,7 +60,7 @@ iTerm2 の Preference から `Load preferences from a custom folder or URL` に�
 ディレクトリのセットが完了しパスの横に ✅ の表示がでれば保存先の設定は完了です。
 いますぐ同期をとる場合は、`Sync Now` をクリックすることですぐに設定ファイルの同期が行われます。
 
-SaveChanges のメニューから保存するタイミング、頻度を設定できます。デフォルトで `Automatically` となっていますが、自動的にで保存しておいてもらいたいのでそのまま(Automatically)にしています。
+SaveChanges のメニューから保存するタイミング、頻度を設定できます。デフォルトで `Automatically` となっていますが、自動的にで保存しておいてもらいたいのでそのまま（Automatically）にしています。
 
 これで常に iTerm2 の設定を Dropbox 上で管理できるようになりました。新しい環境に移行したときも Dropbbox を Mac へインストールし、設定ファイルの場所を選択することで自分の設定を反映させることができます。
 
