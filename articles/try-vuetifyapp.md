@@ -1,5 +1,5 @@
 ---
-title: "即興でツイート文字数カウンターを作る [Vuetify]"
+title: "即興でツイート文字数カウンターを作る【Vuetify】"
 emoji: "🎨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Vue", "Vuetify", "初心者", "個人開発"]

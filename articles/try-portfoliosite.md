@@ -1,5 +1,5 @@
 ---
-title: "JavaScript を学びなおしたくてポートフォリオサイトを作成した話 [Vue.js]"
+title: "JavaScript を学びなおしたくてポートフォリオサイトを作成した話【Vue.js】"
 emoji: "💭"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Vue", "初心者", "Vuetify", "個人開発", "JavaScript"]
