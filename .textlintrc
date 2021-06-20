@@ -7,7 +7,7 @@
   "filters": {
       "allowlist": {
           "allow": [
-
+            "!["
           ]
       }
   },
