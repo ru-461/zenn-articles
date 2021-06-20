@@ -1,5 +1,5 @@
 ---
-title: "Notion に便利なウィジェットを配置する [Apption]"
+title: "Notion に便利なウィジェットを配置する【Apption】"
 emoji: "📌"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["notion", "ツール", "Apption"]
