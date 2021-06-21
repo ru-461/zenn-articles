@@ -47,7 +47,7 @@ Redirect URL のフォームに新規タブを開いたときに開きたいペ�
 ![キャッシュボタンにフォーカスが当たる様子](https://storage.googleapis.com/zenn-user-upload/8zwlmt376q6h69t26l423maygkaf)
 *サイトのキャッシュにフォーカスが...*
 
-このあと `Tabキー` 連打でサイトにフォーカスが当たるが、すべてのリンクにフォーカスが当たってしまい、下にあるサイトを選択するのに時間がかかってしまいます。普段、 [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=ja)というキーバインディングができる拡張機能を使ってサイトを見ることが多いのですが、Google 検索ではフォーカスできるリンクが多く、もっと簡単にフォーカスできないかが悩みでした。少し前までは `J & K キー` で検索結果をスイスイと上下選択できたみたいですが、現在の Google(2020 年 11 月現在)では `Tab キー` で地道にひとつひとつたどっていくしかない模様です。そこでこの検索結果でのリンクフォーカスを楽にできる拡張機能を探したところ...。
+このあと `Tabキー` 連打でサイトにフォーカスが当たるが、すべてのリンクにフォーカスが当たってしまい、下にあるサイトを選択するのに時間がかかってしまいます。普段、 [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=ja)というキーバインディングができる拡張機能を使ってサイトを見ることが多いのですが、Google 検索ではフォーカスできるリンクが多く、もっと簡単にフォーカスできないかが悩みでした。少し前までは `J & K キー` で検索結果をスイスイと上下選択できたみたいですが、現在の Google（2020 年 11 月現在）では `Tab キー` で地道にひとつひとつたどっていくしかない模様です。そこでこの検索結果でのリンクフォーカスを楽にできる拡張機能を探したところ...。
 
 ***ありました！***
 
@@ -62,14 +62,14 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 
 | キーボード操作 | 動作                                |
 | -------------- | ----------------------------------- |
-| J / K          | リンクのフォーカス (↓ / ↑)           |
-| H / L          | ページング (前ページへ / 次ページへ) |
+| J / K          | リンクのフォーカス（↓ / ↑）          |
+| H / L          | ページング（前ページへ / 次ページへ） |
 | /              | 検索フォームへフォーカスを戻す      |
-| G + A          | 全体を検索 (All)                     |
-| G + I          | 画像を検索 (Images)                  |
-| G + V          | 動画を検索 (Videos)                  |
-| G + M          | 地図を検索 (Maps)                    |
-| G + N          | ニュースを検索 (News)                |
+| G + A          | 全体を検索（All）                     |
+| G + I          | 画像を検索（Images）                  |
+| G + V          | 動画を検索（Videos）                  |
+| G + M          | 地図を検索（Maps）                    |
+| G + N          | ニュースを検索（News）                |
 
 :::message
 キー表示が大文字表記ですが、キーボードは半角入力で大丈夫です。
@@ -89,7 +89,7 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 これでマウス・トラックパッドを触らなくてもキーボードだけで簡単に Google 検索ができるようになりました。
 以上２つの拡張機能を組み合わせたとき、Google 検索の流れは以下のようになります。
 
-### Windows 版 Chrome (デフォルト)
+### Windows 版 Chrome（デフォルト）
 
 1. Chrome を起動
 2. `Ctrl ＋ T` で新規タブを開く
@@ -97,7 +97,7 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 4. `J / K キー` でフォーカスを上下に
 5. `Enter キー` でページを開く
 
-### Mac 版 Chrome (デフォルト)
+### Mac 版 Chrome（デフォルト）
 
 1. Chrome を起動
 2. `⌘ ＋ Ｔ` で新規タブを開く
