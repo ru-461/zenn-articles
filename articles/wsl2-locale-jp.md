@@ -33,13 +33,13 @@ published: true
 
 ## デフォルトの WSL のバージョンを設定
 
-```bash
+```shell
 $ wsl --set-default-version 2
 ```
 
 ## アップデート
 
-```bash
+```shell
 $ sudo apt update && sudo apt upgrade
 ```
 
@@ -47,7 +47,7 @@ $ sudo apt update && sudo apt upgrade
 
 ## 使用可能なロケールを確認する
 
-```bash
+```shell
 $ locale -a
 ```
 
@@ -55,7 +55,7 @@ $ locale -a
 
 ## 日本語の言語パックをインストール
 
-```bash
+```shell
 $ sudo apt install -y language-pack-ja
 ```
 
@@ -63,7 +63,7 @@ $ sudo apt install -y language-pack-ja
 
 ロケールが追加されていることを `locale -a` コマンドで確認します。
 
-```bash
+```shell
 $ locale -a
 
 C
@@ -73,11 +73,11 @@ en_US.utf8
 ja_JP.utf8
 ```
 
-一番下に日本語ロケール( ja_JP.UTF-8 )が追加されていることが確認できました。
+一番下に日本語ロケールが追加されていることが確認できました。
 
 ## 日本語ロケールを設定
 
-```bash
+```shell
 $ sudo update-locale LANG=ja_JP.UTF8
 ```
 
@@ -87,7 +87,7 @@ $ sudo update-locale LANG=ja_JP.UTF8
 
 以下のコマンドでデフォルトロケール(英語)に戻すこともできます。
 
-```bash
+```shell
 $ sudo update-locale LANG=en_US.UTF8
 ```
 
@@ -96,7 +96,7 @@ $ sudo update-locale LANG=en_US.UTF8
 
 ## タイムゾーンの変更
 
-```bash
+```shell
 $ sudo dpkg-reconfigure tzdata
 ```
 
@@ -109,7 +109,7 @@ GUI 表示になるので選択肢から「アジア」→「東京」を選択�
 
 `date` コマンドで現在の時刻を表示。
 
-```bash
+```shell
 $ date
 
 2020年 11月 23日 月曜日 21:48:00 JST
@@ -121,13 +121,13 @@ $ date
 
 ## コマンドのマニュアル表示も日本語にする
 
-```bash
+```shell
 $ sudo apt -y install manpages-ja manpages-ja-dev
 ```
 
 実行することでマニュアルコマンド($man)の表示が日本語で表示されるようになります。
 
-```basg
+```shell
 $ man apt
 
 名前
