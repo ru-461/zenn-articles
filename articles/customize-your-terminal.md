@@ -112,7 +112,7 @@ Starship はアイコンフォントに対応しているため使用してい�
 
 https://www.nerdfonts.com/
 
-私は、[たわら様](https://twitter.com/tawara_san)が開発しているプログラミングフォント「白源 (はくげん／HackGen)」をターミナルのフォントに使用しています。
+私は、[たわら様](https://twitter.com/tawara_san)が開発しているプログラミングフォント「白源（はくげん／HackGen）」をターミナルのフォントに使用しています。
 
 https://github.com/yuru7/HackGen
 

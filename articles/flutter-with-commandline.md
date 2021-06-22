@@ -16,7 +16,7 @@ Windows の場合はプログラミング言語や IDE もインストーラー�
 
 ## Windowsにおけるパッケージマネージャー
 
-Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでコマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールや依存関係の解決ができるため、Windows でも UNIX 系 OS のような柔軟な環境構築ができるような日も近いのではと感じます。
+Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでコマンドライン（コマンドプロンプト・PowerShell）からパッケージのインストールや依存関係の解決ができるため、Windows でも UNIX 系 OS のような柔軟な環境構築ができるような日も近いのではと感じます。
 
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 

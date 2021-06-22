@@ -18,7 +18,7 @@ Vue で作成した SPA をデプロイする際には [Netlify](https://www.net
 # 環境
 
 - Windows10 バージョン 20H2
-- Ubuntu 20.04.1 LTS (WSL2)
+- Ubuntu 20.04.1 LTS（WSL2）
 - Node.js v12.18.4
 - Vue CLI 4.5.10
 - heroku CLI 7.47.11
