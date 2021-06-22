@@ -1,5 +1,5 @@
 ---
-title: "Homebrew で yarn が怒られた話"
+title: "Homebrew で Yarn が怒られた話"
 emoji: "🤔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["homebrew", "mac", "yarn", "nodejs"]
@@ -10,7 +10,7 @@ published: true
 
 以前、M1 Macbook にて Homebrew を使い、anyenv と nodenv をインストールして Node.js を使った開発環境を構築しました。
 
-パッケージマネージャに yarn を使おうと Homebrew からインストールしたのですが、`brew doctor` コマンドで見てもらったところ以下のような Warning がでてきて焦りました。
+パッケージマネージャに Yarn を使おうと Homebrew からインストールしたのですが、`brew doctor` コマンドで見てもらったところ以下のような Warning がでてきて焦りました。
 
 ```shell
 $ brew doctor
@@ -25,7 +25,7 @@ those kegs to fail to run properly once built. Run `brew link` on these:
   yarn
 ```
 
-brew doctor コマンドを使用するとこのメッセージが表示されますが、問題なく yarn を使ったパッケージ管理はできます。
+brew doctor コマンドを使用するとこのメッセージが表示されますが、問題なく Yarn を使ったパッケージ管理はできます。
 メッセージの種類も `Warning : ` だったので致命的なエラーではないという判断で今日まで放置していましたが、コマンドを実行するたびに表示されるのが少し気になり精神衛生上あまり良くないので解決策を探してみました。
 
 # 環境・バージョン等
@@ -41,12 +41,12 @@ brew doctor コマンドを使用するとこのメッセージが表示され�
 
 https://github.com/anyenv/anyenv#homebrew-for-macos-user
 
-上記を参考に homebrew で anyenv をインストールし、anyenv 経由で nodenv をインストール、Node.js 14.15.4(LTS)をグローバルとローカルの両方に指定しました。
+上記を参考に Homebrew で anyenv をインストールし、anyenv 経由で nodenv をインストール、Node.js 14.15.4(LTS)をグローバルとローカルの両方に指定しました。
 
-当初は npm を使って `yarn` をインストールしようとしてましたが、[catnoseさんのこちらの記事](https://zenn.dev/catnose99/articles/9356979accca26)で M1 Mac の homebrew を使って yarn をインストールできそうだったため homebrew を使って yarn をインストールすることにしました。
+当初は npm を使って `Yarn` をインストールしようとしてましたが、[catnoseさんのこちらの記事](https://zenn.dev/catnose99/articles/9356979accca26)で M1 Mac の Homebrew を使って Yarn をインストールできそうだったため Homebrew を使って Yarn をインストールすることにしました。
 
 ```shell
-# homebrew経由でyarnをインストール
+# Homebrew経由でYarnをインストール
 $ brew install yarn
 
 # バージョン確認
@@ -54,11 +54,11 @@ $ yarn --version
 1.22.10
 ```
 
-インストールに成功し、yarn を使ったパッケージの管理はエラーなく行えるが、brew doctor を実行するたび毎回 Warning が表示されるようになりました。
+インストールに成功し、Yarn を使ったパッケージの管理はエラーなく行えるが、brew doctor を実行するたび毎回 Warning が表示されるようになりました。
 
 # 解決策
 
-結論としては、すでに yarn が存在しており、シンボリックリンクが切れていることが原因でした。
+結論としては、すでに Yarn が存在しており、シンボリックリンクが切れていることが原因でした。
 
 エラーを見てみると、一番上に `You have unlinked kegs in your Cellar.` とあり、どうやらリンクが上手くできないために表示されているようです。
 `Cellar` とは貯蔵庫を意味し、Homebrew ではコマンドの実体（Keg）を格納するためのディレクトリを指しています。
@@ -88,7 +88,7 @@ To list all files that would be deleted:
   brew link --overwrite --dry-run yarn
 ```
 
-どうやらすでに Yarn が /opt/homebrew/bin/yarn 配下に存在しておりシンボリックリンクに失敗しているようです。
+どうやらすでに Yarn が /opt/homebrew/bin 配下に存在しておりシンボリックリンクに失敗しているようです。
 
 ```shell
 $ rm `/opt/homebrew/bin/yarn`
@@ -110,7 +110,7 @@ $ brew doctor
 Your system is ready to brew.
 ```
 
-yarn に対する Warning がきれいさっぱりなくなりました。
+Yarn に対する Warning がきれいさっぱりなくなりました。
 
 # おわりに
 
@@ -119,7 +119,7 @@ Homebrew は brew doctor コマンドで起こっている問題をわかりや�
 
 結果的に今回のエラーがなぜ起こっていたのかわかりませんでしたが、ずっと放置していた警告メッセージがなくなり今後ぐっすり眠れそうです。
 エラーメッセージをしっかりと読み対応することが以下に大切かを感じさせられます。
-今回の問題は yarn 以外でも起こり得るようなので、同じような問題を抱えている方の参考になれば幸いです。
+今回の問題は Yarn 以外でも起こり得るようなので、同じような問題を抱えている方の参考になれば幸いです。
 
 最後まで読んでいただきありがとうございました。
 

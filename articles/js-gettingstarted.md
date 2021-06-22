@@ -104,7 +104,7 @@ $ cd <project-name>
 $ yarn start
 ```
 
-npm、npx でインストールする場合は Yarn がインストールされているとデフォルトで Yarn が使用されます。
+npm、npx でインストールする場合は Yarn がインストールされているとデフォルトのパッケージマネージャーとして Yarn を使用するようになります。
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
@@ -128,7 +128,7 @@ $ cd <project-name>
 $ yarn dev
 ```
 
-React と同じく npm、npx でインストールする場合は Yarn がインストールされているとデフォルトで Yarn が使用されます。
+React と同じく Yarn がインストールされているとデフォルトで Yarn が使用されます。
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
