@@ -41,7 +41,7 @@ brew doctor コマンドを使用するとこのメッセージが表示され�
 
 https://github.com/anyenv/anyenv#homebrew-for-macos-user
 
-上記を参考に Homebrew で anyenv をインストールし、anyenv 経由で nodenv をインストール、Node.js 14.15.4(LTS)をグローバルとローカルの両方に指定しました。
+上記を参考に Homebrew で anyenv をインストールし、anyenv 経由で nodenv をインストール、Node.js 14.15.4（LTS）をグローバルとローカルの両方に指定しました。
 
 当初は npm を使って `Yarn` をインストールしようとしてましたが、[catnoseさんのこちらの記事](https://zenn.dev/catnose99/articles/9356979accca26)で M1 Mac の Homebrew を使って Yarn をインストールできそうだったため Homebrew を使って Yarn をインストールすることにしました。
 
