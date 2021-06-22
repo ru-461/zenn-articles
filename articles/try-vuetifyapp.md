@@ -294,7 +294,7 @@ export default {
 
 # Vuetify コンポーネントで置き換える
 
-Vuetify の基本として、template 内では一番親要素に `<v-app>` メインとなるコンテンツに `<v-main>` を使います。この中にページ固有のコンテンツを配置していきます。Vuetify にはテキストエリアコンポーネントがあります。ドキュメントは[こちら](https://vuetifyjs.com/en/components/textareas/#usage)になります。Vuetify のドキュメントにはサンプルのコードに加えて、Prop(プロパティ)がまとめられているので便利です。それでは先程の `<textarea>` をテキストエリアコンポーネントで置き換えていきます。
+Vuetify の基本として、template 内では一番親要素に `<v-app>` メインとなるコンテンツに `<v-main>` を使います。この中にページ固有のコンテンツを配置していきます。Vuetify にはテキストエリアコンポーネントがあります。ドキュメントは[こちら](https://vuetifyjs.com/en/components/textareas/#usage)になります。Vuetify のドキュメントにはサンプルのコードに加えて、Prop（プロパティ）まとめられているので便利です。それでは先程の `<textarea>` をテキストエリアコンポーネントで置き換えていきます。
 
 ```vue:src/App.vue
  <v-textarea
@@ -345,13 +345,13 @@ Vuetify の基本として、template 内では一番親要素に `<v-app>` メ�
 
 | ディレクション | 方向              | サイズ |
 | -------------- | ----------------- | ------ |
-| t              | top (上方向)      | 0-12   |
-| b              | bottom (下方向)   | 0-12   |
-| l              | left (左方向)     | 0-12   |
-| r              | right (右方向)    | 0-12   |
-| x              | left&right (左右) | 0-12   |
-| y              | top&bottom (上下) | 0-12   |
-| x              | all (全方向)      | 0-12   |
+| t              | top（上方向）      | 0-12   |
+| b              | bottom（下方向）   | 0-12   |
+| l              | left（左方向）     | 0-12   |
+| r              | right（右方向）    | 0-12   |
+| x              | left&right（左右） | 0-12   |
+| y              | top&bottom（上下） | 0-12   |
+| x              | all（全方向）      | 0-12   |
 
 サイズは、1 にたいして 4px ずつ適用されます。要素をくっつけたい場合は 0 を指定することで実現できます。
 
