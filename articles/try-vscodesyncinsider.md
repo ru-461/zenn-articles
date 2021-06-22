@@ -94,7 +94,7 @@ Stable 版と Insiders 版で設定の同期は可能ですが、同期した際
 アカウント用意し VSCode の指示に従うことで簡単にサインインできます。
 
 ![使用するアカウントの選択画面](https://storage.googleapis.com/zenn-user-upload/zddtezfrdvcj9hbbfm7hj0zaqh3y)
-*私はGithubアカウントでサインインしました*
+*私はGitHubアカウントでサインインしました*
 
 右下に成功のメッセージが表示されたらうまくクラウドに保存され同期する準備ができています。
 以上で同期する側の設定は終わりです。
