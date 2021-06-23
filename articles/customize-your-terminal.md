@@ -31,7 +31,7 @@ https://draculatheme.com/
 
 [Windows]
 - Windows Terminal バージョン: 1.7.1033.0
-- WSL2(Ubuntu 20.04 LTS)
+- WSL2（Ubuntu 20.04 LTS）
 - Zsh 1.56.0
 
 [Mac]
