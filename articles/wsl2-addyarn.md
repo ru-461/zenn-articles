@@ -36,7 +36,7 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 # 環境
 
 - Windows10 バージョン 20H2
-- Ubuntu 20.04.1 LTS（WSL2）
+- WSL2（Ubuntu 20.04 LTS）
 
 # インストール
 ## Node.jsのインストール
