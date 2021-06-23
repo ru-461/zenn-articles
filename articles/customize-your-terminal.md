@@ -30,6 +30,7 @@ https://draculatheme.com/
 今回は以下の環境、バージョンにてそれぞれターミナルを構築しました。
 
 [Windows]
+
 - Windows Terminal バージョン: 1.7.1033.0
 - WSL2（Ubuntu 20.04 LTS）
 - Zsh 1.56.0
