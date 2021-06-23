@@ -21,7 +21,7 @@ Vue で作成した SPA をデプロイする際には [Netlify](https://www.net
 - WSL2（Ubuntu 20.04.1 LTS）
 - Node.js v12.18.4
 - Vue CLI 4.5.10
-- heroku CLI 7.47.11
+- Heroku CLI 7.47.11
 - Git 2.25.1
 
 # 現状
