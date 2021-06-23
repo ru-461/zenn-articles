@@ -38,7 +38,7 @@ YouTube でピクチャー イン ピクチャー機能を使うには、再生�
 
 # ピクチャー イン ピクチャーを簡単に切り替えられるようにする
 
-Chrome の標準ではピクチャー イン ピクチャーの有効・無効を切り替えるショートカットが存在しません。そこで拡張機能を使ってピクチャー イン ピクチャーを有効にするショートカットキーを追加します。まず [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg) という拡張 chrome ウェブストアからインストールします（Google が提供している純正拡張機能なので安心して使うことができます）。
+Chrome の標準ではピクチャー イン ピクチャーの有効・無効を切り替えるショートカットが存在しません。そこで拡張機能を使ってピクチャー イン ピクチャーを有効にするショートカットキーを追加します。まず [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg) という拡張 Chrome ウェブストアからインストールします（Google が提供している純正拡張機能なので安心して使うことができます）。
 
 ![Picture-in-Picture Extension (by Google)のストアページ画像](https://storage.googleapis.com/zenn-user-upload/9xpo6ex85w2zvlmfy2wfcl0vgmlh)
 

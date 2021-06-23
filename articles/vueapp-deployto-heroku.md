@@ -11,7 +11,7 @@ published: true
 Vue で作成した SPA をデプロイする際には [Netlify](https://www.netlify.com/) や [GitHub Pages](https://docs.github.com/ja/github/working-with-github-pages/about-github-pages#) といったホスティングサービスを使う方法があります。
 
 その中で今回は [Heroku](https://jp.heroku.com/) にてデプロイする方法を調べてみました。
-以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事で VueCLI を使って開発した SPA を実際にデプロイしていきます。
+以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事で Vue CLI を使って開発した SPA を実際にデプロイしていきます。
 
 以前 Heroku にアプリをデプロイした経験はありましたが、Vue.js で作成した SPA をデプロイした経験がなかったため、今回は Heroku にデプロイし動かせるところまでについてまとめてみます。
 
@@ -214,7 +214,7 @@ $ heroku open
 
 ![ブラウザからデプロイしたアプリを開いた様子](https://storage.googleapis.com/zenn-user-upload/p53cv0lij6jtdhcts1c2f09bgv5l)
 
-VueCLI で作成したプロジェクトがブラウザに表示され動作が確認できました。
+Vue CLI で作成したプロジェクトがブラウザに表示され動作が確認できました。
 
 # さいごに
 

@@ -50,7 +50,7 @@ anyenv 1.1.2-1 時点では以下の **env 系ツールをインストール可�
 ## 実行環境
 
 - Ubuntu 20.04.2 LTS（WSL2）
-- macOS Big Sur バージョン 11.2.3（Apple Silicon）
+- macOS Big Sur バージョン 11.2.3（AppleSilicon）
 
 ## 手動インストール
 
