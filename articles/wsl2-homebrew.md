@@ -37,7 +37,7 @@ https://brew.sh/index_ja
 
 - CPU Core™ i5-9400F（x86_64）
 - Windows10 バージョン 20H2
-- Ubuntu 20.04.1 LTS（WSL2）
+- WSL2（Ubuntu 20.04 LTS）
 
 # Homebrewのインストール
 
