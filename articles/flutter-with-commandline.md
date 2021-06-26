@@ -16,7 +16,7 @@ Windows の場合はプログラミング言語や IDE もインストーラー�
 
 ## Windowsにおけるパッケージマネージャー
 
-Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでコマンドライン(コマンドプロンプト・PowerShell)からパッケージのインストールや依存関係の解決ができるため、Windows でも UNIX 系 OS のような柔軟な環境構築ができるような日も近いのではと感じます。
+Mac には [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windows にも 10 年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoft が [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでコマンドライン（コマンドプロンプト・PowerShell）からパッケージのインストールや依存関係の解決ができるため、Windows でも UNIX 系 OS のような柔軟な環境構築ができるような日も近いのではと感じます。
 
 今回は、Windows のパッケージマネージャである、[Scoop](https://scoop.sh/)と Windows Package Manager Client を使用して Flutter のアプリを Android Studio からビルドして実行できるところまでやってみます。
 
@@ -338,7 +338,7 @@ AVD マネージャーから Android Emulator を作成して実行してみま�
 
 今回、コマンドラインからパッケージ マネージャーを使って Android Studio と Flutter 、各種 SDK をインストールしてアプリをビルドするところまで行いました。Windows Package Manager はまだ現時点プレビュー版ですが、もうすぐ正式リリースされるみたいです。GUI を持つアプリケーションであっても、コマンドラインからいい感じにセットアップしてくれるのが便利だと感じました。また、Scoop も管理者権限をつかうことなく、アプリやコマンドをインストールできるので便利です。最終的には Windows Package Manager にパッケージ管理を集約し、コマンド 1 つで Windows の環境構築もできるようにしたいところです。
 
-開発環境を構築する際に Mac の homebrew を使っているドキュメントや記事が多く、Windows での開発環境構築となると環境変数面などの操作がネックで億劫うになりがちでしたが Windows Package Manager や Scoop などのパッケージマネージャーを使うことで GUI をあまり使うことなく爆速で開発環境を構築を実現できて満足しています。
+開発環境を構築する際に Mac の Homebrew を使っているドキュメントや記事が多く、Windows での開発環境構築となると環境変数面などの操作がネックで億劫うになりがちでしたが Windows Package Manager や Scoop などのパッケージマネージャーを使うことで GUI をあまり使うことなく爆速で開発環境を構築を実現できて満足しています。
 
 Windows 10 が登場してしばらく経ちますが、今現在も PowerToys、Windows Terminal の登場や、Windows Package Manager の提供により快適な環境ができてきているので今後どんな機能が提供されていくの期待したいですね。
 

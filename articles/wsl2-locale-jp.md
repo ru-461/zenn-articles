@@ -6,13 +6,13 @@ topics: ["wsl2", "Windows", "初心者", "ubuntu", "Linux"]
 published: true
 ---
 
-私は、メインの開発環境として Windows10 の WSL2(Ubuntu 20.04 LTS)を使っています。初期状態では日本語ロケールが含まれておらず、表示はすべて英語です。この記事では日本語ロケールを追加して日本語表示に対応させます。それと同時に時刻の日本時間化、マニュアル日本語化を行います。 WSL2 上で開発環境を作成するときに毎回行う作業で忘れがちなので備忘録として残しておきます。
+私は、メインの開発環境として Windows10 の WSL2（Ubuntu 20.04 LTS）を使っています。初期状態では日本語ロケールが含まれておらず、表示はすべて英語です。この記事では日本語ロケールを追加して日本語表示に対応させます。それと同時に時刻の日本時間化、マニュアル日本語化を行います。 WSL2 上で開発環境を作成するときに毎回行う作業で忘れがちなので備忘録として残しておきます。
 
 # 環境
 
 - Windows 10 バージョン 20H2
-- Windows Subsystem for Linux 2 (WSL2)
-- Ubuntu 20.04.1 LTS (Focal Fossa)
+- Windows Subsystem for Linux 2（WSL2）
+- Ubuntu 20.04.1 LTS（Focal Fossa）
 
 # Microsoft Store から WSL2 へ Ubuntu をインストール
 
@@ -33,13 +33,13 @@ published: true
 
 ## デフォルトの WSL のバージョンを設定
 
-```bash
+```shell
 $ wsl --set-default-version 2
 ```
 
 ## アップデート
 
-```bash
+```shell
 $ sudo apt update && sudo apt upgrade
 ```
 
@@ -47,7 +47,7 @@ $ sudo apt update && sudo apt upgrade
 
 ## 使用可能なロケールを確認する
 
-```bash
+```shell
 $ locale -a
 ```
 
@@ -55,15 +55,15 @@ $ locale -a
 
 ## 日本語の言語パックをインストール
 
-```bash
+```shell
 $ sudo apt install -y language-pack-ja
 ```
 
-パスワードが求められたら root 権限のパスワード(初回に設定したパスワード)を入力して続行します。
+パスワードが求められたら root 権限のパスワード（初回に設定したパスワード）を入力して続行します。
 
 ロケールが追加されていることを `locale -a` コマンドで確認します。
 
-```bash
+```shell
 $ locale -a
 
 C
@@ -73,30 +73,28 @@ en_US.utf8
 ja_JP.utf8
 ```
 
-一番下に日本語ロケール( ja_JP.UTF-8 )が追加されていることが確認できました。
+一番下に日本語ロケールが追加されていることが確認できました。
 
 ## 日本語ロケールを設定
 
-```bash
+```shell
 $ sudo update-locale LANG=ja_JP.UTF8
 ```
 
 インストールが終わったら `exit` でシェルを終了し、再起動します。
 
 :::message
+以下のコマンドでデフォルトのロケールに戻すこともできます。
 
-以下のコマンドでデフォルトロケール(英語)に戻すこともできます。
-
-```bash
+```shell
 $ sudo update-locale LANG=en_US.UTF8
 ```
-
 :::
-これで日本語ロケールの導入ができました。しかし、デフォルトではタイムゾーンが日本時間になっていません。せっかくなのでタイムゾーンも日本時間(JST)に設定していきます。
+これで日本語ロケールの導入ができました。しかし、デフォルトではタイムゾーンが日本時間になっていません。せっかくなのでタイムゾーンも日本時間（JST）に設定していきます。
 
 ## タイムゾーンの変更
 
-```bash
+```shell
 $ sudo dpkg-reconfigure tzdata
 ```
 
@@ -109,25 +107,25 @@ GUI 表示になるので選択肢から「アジア」→「東京」を選択�
 
 `date` コマンドで現在の時刻を表示。
 
-```bash
+```shell
 $ date
 
 2020年 11月 23日 月曜日 21:48:00 JST
 ```
 
-しっかりと日本時間(JST)で表示されています。
+しっかりと日本時間（JST）で表示されています。
 
 これで WSL2 で日本時間が使用できるようになりました。
 
 ## コマンドのマニュアル表示も日本語にする
 
-```bash
+```shell
 $ sudo apt -y install manpages-ja manpages-ja-dev
 ```
 
-実行することでマニュアルコマンド($man)の表示が日本語で表示されるようになります。
+実行することでマニュアルコマンド（$man）の表示が日本語で表示されるようになります。
 
-```basg
+```shell
 $ man apt
 
 名前

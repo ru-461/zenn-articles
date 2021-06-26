@@ -1,5 +1,5 @@
 ---
-title: "Vue で技術系アイコンを使いたい！ [DEVICON]"
+title: "Vue で技術系アイコンを使いたい！【DEVICON】"
 emoji: "🤔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["npm", "vue", "初心者", "devicon"]

@@ -18,7 +18,7 @@ iTerm2 はカスタマイズ機能にも優れており、自分の使いやす�
 
 # 設定ファイルの保存先をDropboxにする
 
-iTerm2 を起動して、`設定(Preferences)` を開きます。メニューから `iTerm2 → Preferences` またはショートカットキーで `⌘ + ,` とすることで開くことができます。
+iTerm2 を起動して、`設定（Preferences）` を開きます。メニューから `iTerm2 → Preferences` またはショートカットキーで `⌘ + ,` とすることで開くことができます。
 
 設定ウィンドウが開いたら `Generalタブ` から `Preferences` を選択します。
 

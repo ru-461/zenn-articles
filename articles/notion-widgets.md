@@ -1,5 +1,5 @@
 ---
-title: "Notion に便利なウィジェットを配置する [Apption]"
+title: "Notion に便利なウィジェットを配置する【Apption】"
 emoji: "📌"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["notion", "ツール", "Apption"]
@@ -68,7 +68,7 @@ Notion にウィジェットを埋め込むために外部サービスを使う�
 ![東京の天気を表した画像](https://storage.googleapis.com/zenn-user-upload/26ojk4trqmhuzfy4iepiky2j7pef)
 ラベルの表示名やアイコン、温度の単位などはタブから自由にカスタマイズできます。カスタマイズができたら下にある `GET CODE` から `HTML埋め込みコード` を取得します。
 
-```JavaScript
+```javascript
 <a class="weatherwidget-io" href="https://forecast7.com/en/35d71139d73/tokyo/" data-label_1="TOKYO" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="random_grey" >TOKYO WEATHER</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');

@@ -24,7 +24,7 @@ https://doesitarm.com/app/nodejs/
 
 またメジャーバージョンが上がったことで Node.js 15 にて実装された **Timers Promises API が安定版に移行**したことや、**V8 JavaScript エンジンが V89.0 に更新**されたりなど大きな変更も含んでいます。
 
-Node.js v16 のリリースノート(GitHub)はこちらになります。
+Node.js v16 のリリースノート（GitHub）はこちらになります。
 
 https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
@@ -36,7 +36,7 @@ https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
 ## 検証環境
 
-- MacBook Pro (macOS Big Sur 11.4)
+- MacBook Pro（macOS Big Sur 11.4）
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
 - docker desktop v3.3.3

@@ -1,5 +1,5 @@
 ---
-title: "Windows 上で Chrome OS を動かす [CloudReady]"
+title: "Windows 上で Chrome OS を動かす【CloudReady】"
 emoji: "⛅"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "chromeos", "cloudready", "vmware", "ツール"]
@@ -160,7 +160,7 @@ CloudReady（ChromeOS）にはターミナル機能と Linux の機能が搭載�
 所持している別の PC にメイン OS としてインストールし実行したときは Linux とターミナルを普通に起動できたため仮想マシンでのサポートがされていないのではないかと感じました。
 
 > Neverware never recommends running CloudReady as a VM for production use cases as the security and management benefits are reduced or eliminated when a host-OS is also involved.
-> (公式ページから引用)
+> （公式ページから引用）
 
 > Neverware は、ホスト OS も関与している場合、セキュリティと管理のメリットが減少または排除されるため、本番ユースケースの VM として CloudReady を実行することを推奨しません。
 

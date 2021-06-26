@@ -1,5 +1,5 @@
 ---
-title: "Rust 製ツールでおしゃれなターミナル環境を作る [Starship ✕ exa]"
+title: "Rust 製ツールでおしゃれなターミナル環境を作る【Starship ✕ exa】"
 emoji: "✨"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["starship", "exa", "shell", "rust", "ターミナル"]
@@ -30,8 +30,9 @@ https://draculatheme.com/
 今回は以下の環境、バージョンにてそれぞれターミナルを構築しました。
 
 [Windows]
+
 - Windows Terminal バージョン: 1.7.1033.0
-- WSL2(Ubuntu 20.04 LTS)
+- WSL2（Ubuntu 20.04 LTS）
 - Zsh 1.56.0
 
 [Mac]
@@ -112,7 +113,7 @@ Starship はアイコンフォントに対応しているため使用してい�
 
 https://www.nerdfonts.com/
 
-私は、[たわら様](https://twitter.com/tawara_san)が開発しているプログラミングフォント「白源 (はくげん／HackGen)」をターミナルのフォントに使用しています。
+私は、[たわら様](https://twitter.com/tawara_san)が開発しているプログラミングフォント「白源（はくげん／HackGen）」をターミナルのフォントに使用しています。
 
 https://github.com/yuru7/HackGen
 

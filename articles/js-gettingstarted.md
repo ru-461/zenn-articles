@@ -19,8 +19,8 @@ JavaScript のフレームワークには npm や Yarn などのパッケージ�
 
 # 前提条件
 
-- Node.js がインストールされていること(バージョン 8 以降、最新の LTS バージョンを推奨)
-- npm もしくは Yarn が利用可能であること(npm は Node.js にデフォルトで搭載)
+- Node.js がインストールされていること（バージョン 8 以降、最新の LTS バージョンを推奨）
+- npm もしくは Yarn が利用可能であるこ（npm は Node.js にデフォルトで搭載）
 
 # Vue
 
@@ -104,7 +104,7 @@ $ cd <project-name>
 $ yarn start
 ```
 
-npm、npx でインストールする場合は Yarn がインストールされているとデフォルトで Yarn が使用されます。
+npm、npx でインストールする場合は Yarn がインストールされているとデフォルトのパッケージマネージャーとして Yarn を使用するようになります。
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
@@ -128,7 +128,7 @@ $ cd <project-name>
 $ yarn dev
 ```
 
-React と同じく npm、npx でインストールする場合は Yarn がインストールされているとデフォルトで Yarn が使用されます。
+React と同じく Yarn がインストールされているとデフォルトで Yarn が使用されます。
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
