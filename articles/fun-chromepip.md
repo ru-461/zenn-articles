@@ -38,7 +38,7 @@ YouTube でピクチャー イン ピクチャー機能を使うには、再生�
 
 # ピクチャー イン ピクチャーを簡単に切り替えられるようにする
 
-Chrome の標準ではピクチャー イン ピクチャーの有効・無効を切り替えるショートカットが存在しません。そこで拡張機能を使ってピクチャー イン ピクチャーを有効にするショートカットキーを追加します。まず [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg) という拡張 chrome ウェブストアからインストールします（Google が提供している純正拡張機能なので安心して使うことができます）。
+Chrome の標準ではピクチャー イン ピクチャーの有効・無効を切り替えるショートカットが存在しません。そこで拡張機能を使ってピクチャー イン ピクチャーを有効にするショートカットキーを追加します。まず [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg) という拡張 Chrome ウェブストアからインストールします（Google が提供している純正拡張機能なので安心して使うことができます）。
 
 ![Picture-in-Picture Extension (by Google)のストアページ画像](https://storage.googleapis.com/zenn-user-upload/9xpo6ex85w2zvlmfy2wfcl0vgmlh)
 
@@ -67,7 +67,7 @@ https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overvi
 
 ![SylphyHorn設定画面の画像](https://storage.googleapis.com/zenn-user-upload/owvzichd66a4hqbj5w9huwfzlzhq)
 
-キー設定 2 となっているところにショートカットキーを設定するだけです。私は両方設定していますが、YouTube などの動画を固定するだけなら上にあるウィンドウをすべてのデスクトップに表示(ピン留め)の部分だけで機能します。画像の設定だとウィンドウをアクティブにし `Shift + Pause` でウィンドウを最前面に固定し、外すときは `Shift + Ctrl + Pause` で固定化を解除するようにしています（画面上では `Cancel` となっていますが Pause キーと同じキーになります。普段キーボードの Pause を使わないため、３つ目のキーとして割り当てています）。これでピクチャー イン ピクチャー化した再生ウィンドウを常に最前面に保持したまま他の作業もできるようになりました。
+キー設定 2 となっているところにショートカットキーを設定するだけです。私は両方設定していますが、YouTube などの動画を固定するだけなら上にあるウィンドウをすべてのデスクトップに表示（ピン留め）の部分だけで機能します。画像の設定だとウィンドウをアクティブにし `Shift + Pause` でウィンドウを最前面に固定し、外すときは `Shift + Ctrl + Pause` で固定化を解除するようにしています（画面上では `Cancel` となっていますが Pause キーと同じキーになります。普段キーボードの Pause を使わないため、３つ目のキーとして割り当てています）。これでピクチャー イン ピクチャー化した再生ウィンドウを常に最前面に保持したまま他の作業もできるようになりました。
 
 ## 活用例 [ドットインストール]
 

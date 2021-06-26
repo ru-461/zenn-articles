@@ -10,7 +10,7 @@ published: true
 
 今回は小ネタ記事になります。
 
-エンジニアが日常的によく見る画面に Linux や UNIX のターミナル(CLI)があります。
+エンジニアが日常的によく見る画面に Linux や UNIX のターミナル（CLI）があります。
 Linux や UNIX には数多くのパッケージが存在しますが、中には CLI の利点をうまく生かした小ネタ的なパッケージも多く存在します。
 
 Ubuntu 系の OS を使っている人がターミナルに以下のようなロゴを表示しているのを見たことがあるという人も多いのではないでしょうか。
@@ -29,7 +29,7 @@ Ubuntu 系の OS を使っている人がターミナルに以下のようなロ
 GitHub リポジトリはこちらです。
 https://github.com/KittyKatt/screenFetch
 
-`screenfetchコマンド` はパッケージマネージャー(apt や Homebrew)で簡単にインストールできます。
+`screenfetchコマンド` はパッケージマネージャー（apt や Homebrew）で簡単にインストールできます。
 ここでは多数の Debian 系の Linux ディストリビューションにて採用されている `apt` と長年 Mac ユーザーに親しまれている `Homebrew` を使ったインストール方法をご紹介します。
 
 その他のパッケージマネージャーを使う場合は、[Installing screenFetch](https://github.com/KittyKatt/screenFetch/wiki/Installation)に詳しくインストール方法がまとめられているので環境に応じてその都度参照をお願いします。
@@ -77,7 +77,7 @@ Mac のターミナル上でコマンドを入力したときは `Unix` の文�
 
 コマンドを入力するまで Apple のあのロゴがでるのかと予想してましたが、これもいいですね。もしも Apple のロゴが表示できるのならもっとテンション上がりそうです。
 
-## Termux (Androidアプリ)
+## Termux（Androidアプリ）
 
 Android OS 上で動作するターミナル環境 [Termux](https://play.google.com/store/apps/details?id=com.termux&hl=ja&gl=US) にコマンドをインストールして実行しました。
 
@@ -92,7 +92,7 @@ Termux は Android 端末で動作するターミナルエミュレータにな�
 
 やり方はとても簡単で、screenfetch コマンドにオプションと文字列を渡すことで表示できます。
 
-例として、有名な `CentOS` のロゴを表示してみます。screenfetch コマンドに `-D` オプションをつけ引数にディストリビューション名(CentOS)を指定します。
+例として、有名な `CentOS` のロゴを表示してみます。screenfetch コマンドに `-D` オプションをつけ引数にディストリビューション名（CentOS）を指定します。
 
 ```shell
 $ screenfetch -D 'CentOS'
@@ -108,14 +108,14 @@ $ screenfetch -D 'CentOS'
 
 ロゴを変えたまま端末の情報を合わせて表示したい場合また `-A` オプションを使用できます。こちらは `-D` オプションに似ていますが、端末情報の OS 部分やその他情報を書き換えることなく指定したディストリビューションのロゴを表示します。ロゴを変えつつ端末の情報をそのまま表示するといったイメージです。一部のディストリビューション、OS は `-A` オプションを付けないとうまく表示できないため注意が必要です。
 
-Android のロゴ(ドロイド君)は `-A` オプションを付けないとうまく表示できませんでした。
+Android のロゴ（ドロイド君）は `-A` オプションを付けないとうまく表示できませんでした。
 
 ---
 
 またコマンド実行時にエラーがでてロゴが見えにくい場合は -D の前に `-E` オプションでエラーを取り除いて出力できます。
 端末情報だけを表示したい場合は `-n` オプション、単色表示したい場合は `-N` オプションなど screenfetch コマンドには数多くのオプションがあります。
 
-使用できる全てのオプションは Github リポジトリの[ReadMe](https://github.com/KittyKatt/screenFetch#running-screenfetch)にまとめられているので覗いてみてください。
+使用できる全てのオプションは GitHub リポジトリの[ReadMe](https://github.com/KittyKatt/screenFetch#running-screenfetch)にまとめられているので覗いてみてください。
 
 # おわりに
 
