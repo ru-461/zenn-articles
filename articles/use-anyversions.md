@@ -1,5 +1,5 @@
 ---
-title: "オールインワンな開発環境を anyenv で構築する"
+title: "オールインワンな開発環境をanyenvで構築する"
 emoji: "🧭"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["anyenv", "nodenv", "環境構築", "初心者"]

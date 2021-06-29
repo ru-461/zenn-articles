@@ -1,5 +1,5 @@
 ---
-title: "VSCode で Notion を使う【VSCode Notion】"
+title: "VSCodeでNotionを使う【VSCode Notion】"
 emoji: "💎"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["notion", "vscode", "ツール"]

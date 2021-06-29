@@ -1,5 +1,5 @@
 ---
-title: "Windows のポテンシャルをさらに引き出すツール群 PowerToys"
+title: "Windowsのポテンシャルをさらに引き出すツール群「PowerToys」"
 emoji: "🧮"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "powertoys", "microsoft"]
