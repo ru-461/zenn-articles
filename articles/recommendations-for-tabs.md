@@ -1,5 +1,5 @@
 ---
-title: "ブラウザ - タブ管理のすゝめ【Workona】"
+title: "ブラウザ タブ管理のすゝめ【Workona】"
 emoji: "🚪"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["chrome", "拡張機能", "ツール", "作業効率化", "chrome拡張"]

@@ -1,5 +1,5 @@
 ---
-title: "WSL2 を日本語化するときにやったこと"
+title: "WSL2を日本語化するときにやったこと"
 emoji: "♨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["wsl2", "Windows", "初心者", "ubuntu", "Linux"]

@@ -1,5 +1,5 @@
 ---
-title: "「このアプリ M1 Mac に最適化されてる？」を一瞬で確認する"
+title: "「このアプリM1 Macに最適化されてる？」を一瞬で確認する"
 emoji: "🌱"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["mac", "applesilicon"]

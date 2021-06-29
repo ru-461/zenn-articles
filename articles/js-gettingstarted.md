@@ -1,5 +1,5 @@
 ---
-title: "JavaScript フレームワークのプロジェクト作成コマンドを列挙した"
+title: "JavaScriptフレームワークのプロジェクト作成コマンドを列挙した"
 emoji: "🔧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["javascript", "ツール", "nodejs", "npm", "yarn"]

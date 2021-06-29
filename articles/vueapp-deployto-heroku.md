@@ -1,5 +1,5 @@
 ---
-title: "Vue で作成した SPA を Heroku へデプロイし動かすまで"
+title: "Vueで作成したSPAをHerokuへデプロイし動かすまで"
 emoji: "📡"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vuejs", "heroku", "wsl2", "個人開発"]

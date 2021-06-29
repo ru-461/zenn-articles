@@ -1,5 +1,5 @@
 ---
-title: "Windows におなじみの Sudo コマンドを導入する"
+title: "WindowsにおなじみのSudoコマンドを導入する"
 emoji: "⚡"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "powershell", "scoop"]
