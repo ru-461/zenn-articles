@@ -1,5 +1,5 @@
 ---
-title: "VSCode使いなら抑えておくべき Code コマンド"
+title: "VSCode使いなら抑えておくべきCodeコマンド"
 emoji: "🧩"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vscode","windows","mac"]
