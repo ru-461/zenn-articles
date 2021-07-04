@@ -15,7 +15,7 @@ published: true
 # npm でインストールできそう
 
 ![Devicon v2 npmページの画像](https://storage.googleapis.com/zenn-user-upload/xsxld7fv2za6nbhn4g0wqae9oaej)
-*説明を見たところ npm でインストールして使えるみたい*
+*説明を見たところnpmでインストールして使えるみたい*
 
 # 説明のとおりにインストールしてみる
 

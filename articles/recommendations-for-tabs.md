@@ -26,7 +26,7 @@ https://workona.com/
 まず、[Workona 公式ページ](https://workona.com/)にブラウザでアクセスしサインアップします。
 
 ![Workona公式ページトップ画像](https://storage.googleapis.com/zenn-user-upload/cifgjq90clqdnxe1ei8q8izbmrpz)
-*SIGN UP FREE ボタンから新規にアカウント作成できます*
+*SIGN UP FREEボタンから新規にアカウント作成できます*
 
 サインアップは現在Googleアカウントかメールアドレスを使った認証ができます。
 

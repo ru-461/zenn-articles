@@ -43,7 +43,7 @@ $ brew install --cask imobie-m1-app-checker
 アプリケーションがインストールされているディレクトリ（デフォルトでは/Applications）を確認して「チェック」をクリックします。するとチェック結果が表示されます。
 
 ![M1-App-Checkの結果画面](https://storage.googleapis.com/zenn-user-upload/myi4j4psazwex1sm3qdo6384ufmz)
-***AppleSilicon・Universal が M1 Mac に最適化済み***
+***AppleSilicon・UniversalがM1 Macに最適化済み***
 
 アプリ名の右側にM1 Macへの対応状況が表示されます。この中で`Intel 64`と表示されているものがRosetta2を使用して動作しているアプリ、AppleSiliconに未対応のアプリとなります。
 このように一瞬でAppleSiliconに対応しているかしていないかをすぐに確認できます。
