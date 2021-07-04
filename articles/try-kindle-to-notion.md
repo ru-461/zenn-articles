@@ -8,9 +8,9 @@ published: false
 
 # はじめに
 
-Notion で読書した記録を残すために、読書ノートを作成している人が多いのではないでしょうか。
-昨日、`Kindle2Notion` というプロダクトを発見し、実際に触ってみました。
-GitHub リポジトリはこちらになります。
+Notionで読書した記録を残すために、読書ノートを作成している人が多いのではないでしょうか。
+昨日、`Kindle2Notion`というプロダクトを発見し、実際に触ってみました。
+GitHubリポジトリはこちらになります。
 
 https://github.com/paperboi/kindle2notion
 
