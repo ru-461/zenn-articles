@@ -57,7 +57,7 @@ https://ryu-461-portfolio.netlify.app/#/
 実は1年ほど前にVue.jsを勉強していた時期があります。そのときに学習していた書籍がこちら。
 
 ![基礎から学ぶVue.js表紙の画像](https://storage.googleapis.com/zenn-user-upload/pelpc1eitifqeqdt5g2kcsozpe27)
-*基礎から学ぶ Vue.js*
+*基礎から学ぶVue.js*
 
 [mio さん(@mio3io)](https://twitter.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
 

@@ -162,7 +162,7 @@ CloudReady（ChromeOS）にはターミナル機能とLinuxの機能が搭載さ
 > Neverware never recommends running CloudReady as a VM for production use cases as the security and management benefits are reduced or eliminated when a host-OS is also involved.
 > （公式ページから引用）
 
-> Neverware は、ホスト OS も関与している場合、セキュリティと管理のメリットが減少または排除されるため、本番ユースケースの VM として CloudReady を実行することを推奨しません。
+> Neverwareは、ホストOSも関与している場合、セキュリティと管理のメリットが減少または排除されるため、本番ユースケースのVMとしてCloudReadyを実行することを推奨しません。
 
 公式のVMwareイメージ配布ページでもこのように説明がされている通り、やはり仮想マシンではLinuxの実行は現実的で無いような気がします。
 ChromeOSでLinuxを使って開発環境を構築している情報も多く見受けられますが、CloudReady開発マシンとして運用する場合は仮想マシンではなく、メインのOSとして正規にインストールするしかないみたいです。
