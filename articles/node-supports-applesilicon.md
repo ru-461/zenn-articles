@@ -8,13 +8,13 @@ published: true
 
 # はじめに
 
-Node.js v16系となるバージョンが2021年の4月20日にリリースされました。v14に次ぐ [LTS（Long Term Support）](https://nodejs.org/ja/about/releases/)となるバージョンになります。Node.jsはメジャーバージョンが偶数になるタイミングでLTSとなり、約30ヶ月間のサポートがされる形となっています。
+Node.js v16系となるバージョンが2021年の4月20日にリリースされました。v14に次ぐ [LTS（Long Term Support）](https://nodejs.org/ja/about/releases/)にあたるバージョンになります。Node.jsはメジャーバージョンが偶数になるタイミングでLTSとなり、約30ヶ月間のサポートがされる形となっています。
 
 またリリースしてすぐLTSのアクティブリリースになるわけではなく、約半年後にアクティブLTSリリースとなります。
 
 そして今回リリースされた新のLTS、Node.js 16が **AppleSilicon を正式にサポートする最初のLTSバージョン**となります。つまりM1チップを始めとするSoCを搭載したMacBookやiMac上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
 
-AppleSiliconで動作するかどうかを掲載しているサイト [Does it ARM](https://doesitarm.com/) 上でもv16以降で対応と更新されておりました。
+AppleSiliconで動作するかどうかを掲載しているサイト[Does it ARM](https://doesitarm.com/)上でもv16以降で対応と更新されておりました。
 
 https://doesitarm.com/app/nodejs/
 
@@ -22,7 +22,7 @@ https://doesitarm.com/app/nodejs/
 
 ![v16から配布されるようになったインストーラーの画像](https://storage.googleapis.com/zenn-user-upload/a9c810cafefa4e2a4dae41a3.png)
 
-またメジャーバージョンが上がったことでNode.js 15にて実装された **Timers Promises API が安定版に移行**したことや、**V8 JavaScript エンジンが V89.0 に更新**されたりなど大きな変更も含んでいます。
+メジャーバージョンが上がったことで**Timers Promises API が安定版に移行**や、**V8 JavaScript エンジンが V8.9.0 へ更新**などと比較的大きな変更も含まれています。
 
 Node.js v16のリリースノート（GitHub）はこちらになります。
 
@@ -46,7 +46,7 @@ https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 まず、ローカルな環境にNode.jsをインストールします。公式サイトからバイナリをダウンロードしてきてもいいのですが、すでにanyenvを使ってnodeのバージョン切り替えができる環境を構築しているため、nodenvを使用します。
 
 :::message
-検証のためターミナルは`情報を見る`から、 `Rosettaを使用する`のチェックを外した状態で使用しています。
+検証のためターミナルは`情報を見る`から、`Rosettaを使用する`のチェックを外した状態で使用しています。
 :::
 
 anyenvのインストールは[以前投稿したこちらの記事](https://zenn.dev/ryuu/articles/use-anyversions)で詳しく紹介しているのでこの記事では割愛します。
@@ -89,9 +89,9 @@ Node.jsは公式でDockerイメージを配布しており、DockerHubから習�
 
 https://hub.docker.com/_/node/
 
-確認したところNode.js v16イメージが配布されていたのでDockerコンテナを作成して実行環境を確認します。
+確認したところNode.js v16のイメージが配布されていたのでDockerコンテナを作成して実行環境を確認します。
 
-Docker-Desktopも先日公開されたバージョンv3.3.1にてAppleSiliconにネイティブ対応しました。^[[Docker Desktop for Apple silicon | Docker Documentation](https://docs.docker.com/docker-for-mac/apple-silicon/)]Dockerは公式サイトからインストーラーを利用してインストールするか、Homebrewを使用してインストールできます。
+Docker Desktopも先日公開されたバージョンv3.3.1にてAppleSiliconへネイティブ対応しました。^[[Docker Desktop for Apple silicon | Docker Documentation](https://docs.docker.com/docker-for-mac/apple-silicon/)]DockerはインストーラやHomebrewで簡単にインストールできます。
 
 ```shell
 # HomebrewでDockerをインストール
@@ -105,7 +105,7 @@ $ docker --version
   Docker version 20.10.6, build 370c289
 ```
 
-Dockerの実行環境ができたら以下のコマンドを叩くだけでNode.js 16がインストールされたコンテナが起動します。
+続けて以下のコマンドを叩くとNode.js v16のインストールされたコンテナが起動します。
 
 ```docker
 # DockerHubからNode.js 16の公式イメージを取得して実行
@@ -134,7 +134,7 @@ v16.2.0
 
 # おわりに
 
-今まで開発にLTS版だったNode.js v14系を使用していましたが、あっという間にバージョンが16まで進んでいて驚きました。AppleSilicon正式にネイティブ対応したことでAppleSilicon黎明期に頻出していたアーキテクチャ問題、Rosetta2まわりを考慮することなくインストールできるので心理的負担が減りました。
+今まで開発にLTS版のNode.js v14系を使用していましたが、あっという間にバージョンが16まで進んでいて驚きました。AppleSilicon正式にネイティブ対応したことでアーキテクチャ問題を解決し、Rosetta2まわりを考慮することなくインストールできるので心理的負担が減りました。
 
 Dockerをはじめとする他の技術もAppleSiliconへの対応がかなり進んできて、AppleSiliconの登場時に比べるとベストプラクティスが確立し、柔軟な開発環境が構築可能になりました。開発環境が整備されつつあるAppleSiliconの今後の展開にも更に期待したいところです。
 
