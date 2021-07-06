@@ -39,7 +39,7 @@ https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 - MacBook Pro（macOS Big Sur 11.4）
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
-- docker desktop v3.3.3
+- Docker Desktop v3.3.3
 
 ## ローカルへnodenvでインストール
 
