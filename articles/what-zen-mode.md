@@ -68,8 +68,8 @@ Microsoft社が開発している [VSCode](https://azure.microsoft.com/ja-jp/pro
 
 今回は、VSCodeでZen Modeを使用したコーディングだけに集中できる環境についてご紹介しました。
 
-個人的にこの`Zen（禅）`で集中力を高めるという発想がかなり気に入っています。小技的な機能にはなりますが、ショートカットキー1つでいつでも集中へ特化したレイアウトに変更できるのはとても便利です。またVSCodeには有志が開発している拡張機能も豊富にあるため、Gitを使った開発、Workspace機能を活用したチーム開発にも対応でき、VSCodeだけで完結できることが多くオールインワンなポテンシャルを秘めていると感じました。今回紹介したZen Mode以外にも便利な機能が多く、VSCodeを通して得られる***オールインワンな開発体験***にはすごく満足しています。
+個人的にこの`Zen（禅）`で集中力を高めるという発想がかなり気に入っています。小技的な機能にはなりますが、ショートカットキー1つでいつでも集中へ特化したレイアウトに変更できるのはとても便利です。またVSCodeは有志が開発している拡張機能が豊富で、VSCodeだけで完結できることが多くオールインワンエディタとしてのポテンシャルを秘めていると感じました。今回紹介したZen Mode以外にも便利な機能が多く、VSCodeを通して得られる***オールインワンな開発体験***にはすごく満足しています。
 
-Zen ModeはVSCode以外にもJetbrains社の提供するPhpStorm^[[IDE 表示モード | PhpStorm](https://pleiades.io/help/phpstorm/ide-viewing-modes.html)] やPyCharm^[[IDE 表示モード | PyCharm](https://pleiades.io/help/pycharm/ide-viewing-modes.html)]などのIDEにも実装されているようです。他にも搭載しているエディタ、IDEがないか探してみるのも面白いですね。
+Zen ModeはJetbrains社の提供するPhpStorm^[[IDE 表示モード | PhpStorm](https://pleiades.io/help/phpstorm/ide-viewing-modes.html)] やPyCharm^[[IDE 表示モード | PyCharm](https://pleiades.io/help/pycharm/ide-viewing-modes.html)]などのIDEにも実装されているようです。他にも搭載しているエディタ、IDEがないか探してみるのも面白いですね。
 
 最後まで読んでいただきありがとうございました。

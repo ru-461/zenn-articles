@@ -45,7 +45,7 @@ https://github.com/microsoft/PowerToys/releases/
 
 インストールはプログラムのインストール場所と簡単なオプションを選択するだけで終わります。
 
-インストール途中でユーザーアカウント制御の画面が現れたら許可をしてください。インストール先を指定する際に、オプションとして`Automatically start PowerToys at logon`を選択しておくとWindowsへログオンした時に自動的に起動するようになります。
+インストール途中でユーザーアカウント制御の画面が現れたら許可をしてください。インストーラーの中で`Automatically start PowerToys at logon`を選択しておくとWindowsへログオンした時に自動的に起動するようになります。
 
 また[Windows Package Manager](https://github.com/microsoft/winget-cli)を導入している場合は以下のコマンドをコマンドプロンプトやPowerShell上から実行することで簡単にインストールできます。
 
@@ -80,7 +80,7 @@ Chromeの拡張機能でよく目にするカラーピッカーですが、Windo
 ウィンドウをレイアウトを分けてきれいに配置するためのアシストツールになります。
 マルチタスクのために画面を分割して使うときに威力を発揮します。
 
-まずレイアウトエディターでレイアウトを設定します。レイアウトエディタはデフォルトで`win + @`で呼び出すことができます。
+まずレイアウトエディターでレイアウトを設定します。レイアウトエディタは`win + @`で呼び出せます。
 設定できるレイアウトはいくつかレイアウトがテンプレートとして用意されています。テンプレート以外にも各自でレイアウトを新規に定義もできます。
 
 ![レイアウトエディタの画面](https://storage.googleapis.com/zenn-user-upload/q07csh1x16dhr6bhl10qbm272mzw)
@@ -136,7 +136,7 @@ Windows標準のファイル管理ツール`エクスプローラー`に機能�
 ## PowerToys Run
 
 機能を有効化することで、macOSなどでおなじみのSpotlight検索ライクな検索＆アプリランチャーが使用できるようになります。
-MacにはSpotlight検索をもっと便利に拡張した [Alfred](https://www.alfredapp.com/) という有名なツールがあります、PowertoysRunを使うことで完全とはいきませんが、近い操作感をWindowsでも実現させることが可能になります。
+MacにはSpotlight検索を便利した [Alfred](https://www.alfredapp.com/) という有名なツールがあります。PowertoysRunを使うことで完全とはいきませんが、近い操作感をWindowsでも実現させることが可能になります。
 
 デフォルトでは`Alt + Space`で呼び出すように設定されています。ショートカットキーを実行すると以下のようなウィンドウが画面上に現れます。
 
