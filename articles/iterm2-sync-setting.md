@@ -55,7 +55,7 @@ Dropbox(.)
 ```
 ディレクトリを作成したらiTerm2の設定ファイルの保存先を指定します。
 
-iTerm2のPreferenceから`Load preferences from a custom folder or URL`にチェックを入れるとFinderが開くので、先程Dropbboxに作成したファイルの保存場所を選択しセットします。
+Preferenceから`Load preferences from a custom folder or URL`にチェックを入れるとFinderが開くので、先程作成したファイルの保存場所を選択します。
 
 ディレクトリのセットが完了しパスの横に ✅ の表示がでれば保存先の設定は完了です。
 いますぐ同期をとる場合は、`Sync Now`をクリックすることですぐに設定ファイルの同期が行われます。
