@@ -160,7 +160,7 @@ $ heroku open
 
 ![アプリの初期ページを開いた様子](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
 
-Webブラウザからアクセスできることが確認できればOKです。
+ブラウザからアクセスできることが確認できればOKです。
 
 ## アプリをビルドする環境を作成
 
