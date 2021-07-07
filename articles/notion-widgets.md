@@ -88,7 +88,7 @@ Notionにウィジェットを埋め込むために外部サービスを使う�
 
 ![変換結果の画像](https://storage.googleapis.com/zenn-user-upload/jqnnf3afowrql0273drgmi2x29xa)
 
-Notion埋め込み用コードが生成されました。このコードをNotionで作成したページに埋め込むことでNotion上でウィジェットとして表示されるようになります。Notionの設定に合わせて`light` `dark`を切り替えることもできます。
+Notion埋め込み用コードが生成されました。このコードをNotionで作成したページに埋め込むことでNotion上にて表示されるようになります。Notionの設定に合わせて`light` `dark`を切り替えることもできます。
 
 生成されたコードをNotionで作成したページに埋め込んでいきます。
 
