@@ -8,7 +8,8 @@ published: true
 
 # はじめに
 
-Microsoft社が開発しているエディタ[VisualStudioCode(VSCode)](https://code.visualstudio.com/) で昨年7月のアップデート [version 1.48](https://code.visualstudio.com/updates/v1_48) からVSCode設定同期機能（Settings Sync）が使えるようになり話題となりました。
+Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com/) の [version 1.48](https://code.visualstudio.com/updates/v1_48) にて設定同期機能（Settings Sync）が実装され話題となりました。
+
 VSCodeには、`Stable release`と、`Inseders release`という２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
 
 普段、私達がよく目にする青いVSCodeはStable版となり、安定版と呼ばれています。Insidera版少し緑がかった色のアイコンをしており、色で区別がつくようになっています。
@@ -59,11 +60,11 @@ https://twitter.com/code/status/1338886895867224070
 
 ここで同期がうまくできない問題に遭遇しました。Windows版のVSCodeはStable版を使っており、設定の同期機能をオンにしました。
 続いてMacBookにインストールしたInsiders版で同期しようとしたのですが上手く、同期できませんでした。
-ここでつまづき、今日に至るまで、Windows版で使っていた拡張機能を１つずつ確認してインストールして環境を合わせながら使っておりました。正直これはかなり面倒な作業で、「Stable版とInsiders版で同期が上手くできれば、こんな苦労しなくていいのに...」そんな思いをしながら渋々MacBookのVSCode（Insiders）を使っていました。最初はパフォーマンス面で不安定な部分もありましたが、アップデートが積み重なり、今ではパフォーマンス面でかなり満足しています。
+ここでつまづき、今日に至るまで、Windows版で使っていた拡張機能を１つずつ確認してインストールして環境を合わせながら使っておりました。これはかなり面倒な作業で、「Stable版とInsiders版で同期できれば、こんな苦労しなくていいのに...」そんな思いをしながら渋々Insiders版を使っていました。最初はパフォーマンス面で不安定な部分もありましたが、アップデートが積み重なり、今ではパフォーマンス面でかなり満足しています。
 
 # 解決策
 
-同期がうまくできないこと以外に関しては満足して今日まで使ってきました。そろそろStable版もARMアーキテクチャ対応版がでるといった話が流れ始めた頃、VSCodeの公式ドキュメントを眺めていたらStable版とInsiders版で設定の同期ができるとのトピックがあり、試したところ上手くいきました。
+公式ドキュメントを眺めていたらStable版とInsiders版で設定同期ができるとのトピックがあり、試したところ上手くいきました。
 
 https://code.visualstudio.com/docs/editor/settings-sync#_syncing-stable-versus-insiders
 
