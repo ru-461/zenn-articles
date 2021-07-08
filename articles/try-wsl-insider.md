@@ -8,15 +8,15 @@ published: true
 
 # はじめに
 
-Mac上でWindowsを動かすといったことが以前のIntel製CPUを搭載していたMacでは [Boot Camp](https://support.apple.com/ja-jp/HT201468) や [Parallels Desktop](https://www.parallels.com/jp/) といったツールを使うことで容易に実現できていましたが2020年秋に登場したMacシリーズでCPUがAppleSiliconに変わりそれとともにアーキテクチャがarm64に変わりました。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**AppleSilicon に対応**[^1]しました。これでParallels DesktopはIntel Mac ・ AppleSilicon Mac両方へ対応したことになります。
+Mac上でWindowsを動かすといったことがIntel製CPUを搭載していたMacでは [Boot Camp](https://support.apple.com/ja-jp/HT201468) や [Parallels Desktop](https://www.parallels.com/jp/) を使うことで容易に実現できていました。しかし、2020年秋に登場したMacシリーズでCPUがAppleSiliconへと変わりアーキテクチャがarm64に変わり。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**AppleSilicon に対応**[^1]しました。これでParallels DesktopはIntel Mac ・ AppleSilicon Mac両方へ対応したことになります。
 
 [^1]: [M1 および Intel チップセット双方をサポートした Parallels Desktop 16.5 for Mac を発表. 最新 Mac 上で Windows 10 をネイティブ スピードで稼働でき、 シームレスなユーザー エクスペリエンスに数百万のユーザーが支持¹](https://www.parallels.com/jp/news/press-releases/show/2021-pd16-5-m1chip/)
 
-ちょうど、Microsoftもarm64 Insider PreviewをWindows10 InsidersProgramで配布しておりAppleSiliconのMacでPreview版のWindows10が動作する段階まで来ています。まだまだ一部の環境でしか使用されていないarm64版Windows10ですが、Previewビルドにて **x64 アプリのエミュレーションが実現**[^2]するなど着々と進化を遂げております。
+現在、AppleSiliconのMacでPreview版Windows10が動作する段階まで来ています。まだまだ一部の環境でしか使用されていないarm64版Windows10ですが、Previewビルドにて **x64 アプリのエミュレーションが実現**[^2]するなど着々と進化を遂げております。
 
 [^2]: [Introducing x64 emulation in preview for Windows 10 on ARM PCs to the Windows Insider Program | Windows Insider Blog](https://blogs.windows.com/windows-insider/2020/12/10/introducing-x64-emulation-in-preview-for-windows-10-on-arm-pcs-to-the-windows-insider-program/)
 
-arm64版Windowsが一般的にライセンスを購入して使用できるようになるかはまだ定かではありませんが、現状arm Preview版のWindows10でWSL2をどこまで使えるのかを試してみました。
+一般的にライセンスを購入して使用できるようになるかはまだ定かではありませんが、現状arm Preview版のWindows10でWSL2をどこまで使えるのかを試してみました。
 
 結論から述べると、現状の環境ではWSL1は起動しますが、WSL2は`起動させることができませんでした` 。今回は検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
 
@@ -50,7 +50,7 @@ Mac上で仮想化したWindows10から見える情報はこのようになっ�
 
 プロセッサとしてMac側のAppleSiliconが認識されており、問題なく動作しております。実装RAMは仮想マシンの設定から、4GBを割り当てておりしっかりと認識されています。Windows10 ProバージョンDevとして動作します。
 
-全体的な動作としては、ネイティブに動作しているWindows10と比較するとアニメーションの描画時など少しもっさりするかなといった部分はありますが、基本的な操作は問題なく行えるくらいに快適に動作してます。
+全体的にネイティブに動作しているWindows10と比較するとアニメーションの描画時など少しもっさりするかなといった部分はありますが、基本的な操作は問題なく行えるくらいに快適に動作してます。
 
 この環境にWSL2（Windows Subsystems Linux 2）を導入して動かせるか試していきます。
 
@@ -62,7 +62,7 @@ WSLの公式のドキュメントに日本語で詳しく説明があります�
 
 https://docs.microsoft.com/ja-jp/windows/wsl/install-win10
 
-現在WSL2を有効にするためには、仮想マシン周りの設定変更やWSL2のデフォルト化などの手順を踏まなければなりませんが、今後それらの手順がワンライナーに置き換えられより簡単にWSL2の環境が作れるようになるようです。便利ですね。
+WSL2を有効にするためには、仮想マシン周りの設定変更やWSL2のデフォルト化などの手順を踏まなければなりませんが、今後ワンライナーにより簡単にWSL2の環境が作れるようになるようです。便利ですね。
 
 今回は、簡略化されたコマンド`wsl --install`を実際に使用して環境を構築していきます。
 
@@ -158,7 +158,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 アップグレード前と比較して変わったところは、メモリの上限を拡張できるようになったことだけでネスト化された仮想化を有効にする設定は現れませんでした。
 
-ゲストOS側のBIOS側の設定やHyper-Vを見直したりしたのですが、仮想化に関する設定は見当たらず、タスクマネージャ上でも仮想化が非対応となっているため現状この環境にて仮想化を有効にするのは厳しそうといった状況です。
+ゲストOS側のBIOS設定やHyper-Vを見直したりしたのですが、仮想化に関する設定は見当たらず、現状この環境にて仮想化を有効にするのは厳しそうといった状況です。
 
 以前のバージョンではWSL2の動作が仮想化されたWindows10上にて実現できている例が見られたので、今後も引き続き検証していきたいところです。
 
@@ -166,7 +166,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 本題はWSL2の実現なのですが、この環境でWSL1が動作することを検証中に確認できたので補足としてまとめます。
 
-`wsl --install`コマンドの実行直後はWSL2がデフォルトとして設定されているため、以下のコマンドでWSL1をデフォルトのバージョンとして設定することでディストリビューションをWSL1として起動できます。
+`wsl --install`コマンドの実行直後はWSL2がデフォルトとして設定されているため、以下のコマンドでWSL1をデフォルトのバージョンとして設定することでをWSL1として起動できます。
 
 ```shell:コマンドプロンプト
 # バージョン 1 をデフォルトにする
@@ -187,7 +187,7 @@ https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
 本題からはそれるのですが、現在Ubuntu Desktopのarm版が[Ubuntu 20.04.2.0 LTS (Focal Fossa) Daily Build](https://cdimage.ubuntu.com/focal/daily-live/current/)として公開されています。このイメージをParallels Desktopに導入することで仮想化したUbuntu DesktopをAppleSilicon上で使うことができます。こちらは問題なく動作検証できました。
 
-仮想化された環境の中で仮想化技術を使うという需要がどのくらいあるかはわかりませんが、arm版のWindows10がMacbook上で快適に動作するようになったなどと興味深い結果が得られたので今後のアップデートにも注目していきたいところです。
+需要がどのくらいあるかは未知数ですが、arm版のWindows10がMacbook上で快適に動作するようになったなどと興味深い結果が得られたので今後のアップデートにも注目していきたいところです。
 
 最後まで読んでいただきありがとうございました。
 
