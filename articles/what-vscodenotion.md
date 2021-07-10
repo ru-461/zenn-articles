@@ -110,6 +110,7 @@ Notionのアクセストークンを取得します。ブラウザにてNotion�
 
 ![ブラウザから見たプログラミングノートの画像](https://storage.googleapis.com/zenn-user-upload/vi6278kahmdn2188fjqxuvuwiozy)
 *ブラウザで見たときの表示*
+
 テキストは問題なく表示できていますが、オリジナルのNotionとVSCode Notionを比較すると表示に失敗している部分が多々見受けられました。比較してみると。
 
 - フルデータベースページへの直リンク
