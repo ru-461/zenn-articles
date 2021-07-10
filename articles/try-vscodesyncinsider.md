@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com/) の [version 1.48](https://code.visualstudio.com/updates/v1_48)にて設定同期機能（Settings Sync）が実装され話題となりました。
+Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com/)の[version 1.48](https://code.visualstudio.com/updates/v1_48)にて設定同期機能（Settings Sync）が実装され話題となりました。
 
 VSCodeには、`Stable release`と、`Inseders release`という２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
 

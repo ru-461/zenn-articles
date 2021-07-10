@@ -8,9 +8,9 @@ published: true
 
 # はじめに
 
-Vueで作成したSPAをデプロイする際には [Netlify](https://www.netlify.com/) や [GitHub Pages](https://docs.github.com/ja/github/working-with-github-pages/about-github-pages#) といったホスティングサービスを使う方法があります。
+Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify.com/)や[GitHub Pages](https://docs.github.com/ja/github/working-with-github-pages/about-github-pages#)といったホスティングサービスを使う方法があります。
 
-その中で今回は [Heroku](https://jp.heroku.com/) にてデプロイする方法を調べてみました。
+その中で今回は[Heroku](https://jp.heroku.com/)にてデプロイする方法を調べてみました。
 以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事でVue CLIを使って開発したSPAを実際にデプロイしていきます。
 
 以前Herokuにアプリをデプロイした経験はありましたが、Vue.jsで作成したSPAをデプロイした経験がなかったため、今回はHerokuにデプロイし動かせるところまでについてまとめてみます。
