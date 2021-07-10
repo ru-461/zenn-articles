@@ -79,7 +79,7 @@ Macのターミナル上でコマンドを入力したときは`Unix`の文字�
 
 ## Termux（Androidアプリ）
 
-Android OS上で動作するターミナル環境 [Termux](https://play.google.com/store/apps/details?id=com.termux&hl=ja&gl=US) にコマンドをインストールして実行しました。
+Android OS上で動作するターミナル環境[Termux](https://play.google.com/store/apps/details?id=com.termux&hl=ja&gl=US)にコマンドをインストールして実行しました。
 
 ![Termuxで実行した様子](https://storage.googleapis.com/zenn-user-upload/ggvorr9quy47xh8ljnqwpzucq3cc)
 *端末の機種名やOS、メモリまでしっかりと表示されている*
