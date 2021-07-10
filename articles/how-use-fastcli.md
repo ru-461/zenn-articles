@@ -20,13 +20,13 @@ https://fast.com/ja/
 
 Node.js（バージョン8以降）がインストールされている場合、npmやYarnなどのパッケージマネージャーから簡単に導入できます。以下のコマンドをターミナルにて実行しグローバルにインストールすることで使えるようになります。
 
-## npm でインストール
+## npmでインストール
 
 ```shell
 $ npm install --global fast-cli
 ```
 
-## Yarn でインストール
+## Yarnでインストール
 
 ```shell
 $ yarn global add fast-cli
@@ -58,7 +58,7 @@ $ fast --single-line
 
 一行でシンプルにダウンロード速度を計測します。
 
-## fast-cli のヘルプを表示
+## fast-cliのヘルプを表示
 
 ```shell
 $ fast --help
