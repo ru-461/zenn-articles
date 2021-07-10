@@ -8,11 +8,11 @@ published: true
 
 # はじめに
 
-Apple M１ チップ（AppleSilicon M1）を搭載したMacシリーズが発売されてしばらく経ちました。AppleSilicon M1は`ARM アーキテクチャ`を採用しています。そのため、従来のモデルにて使用されていたIntelCPU向けのアプリ`(x64 アーキテクチャ)`との互換性がなくなり、そのまま動かすことができなくなりました。
+Apple M１ チップ（AppleSilicon M1）を搭載したMacシリーズが発売されてしばらく経ちました。AppleSilicon M1は`ARMアーキテクチャ`を採用しています。そのため、従来のモデルにて使用されていたIntelCPU向けのアプリ`（x64 アーキテクチャ）`との互換性がなくなり、そのまま動かすことができなくなりました。
 
-そこでAppleは`Rosetta2`という変換ツールを用意しており、使用することでx64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作する`Apple silicon 対応ビルド`や`ユニバーサルビルド`が増えてきており、今では多くのアプリにてAppleSiliconの恩恵を預かることができるようになりました。
+そこでAppleは`Rosetta 2`という変換ツールを用意しており、使用することでx64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作する`AppleSilicon対応ビルド`や`ユニバーサルビルド`が増えてきており、今では多くのアプリにてAppleSiliconの恩恵を預かることができるようになりました。
 
-そして先日、ずっと待望されていたDocker Desktopがv3.3.1にて正式に`AppleSilicon へ対応`し、話題になりました。
+そして先日、ずっと待望されていたDocker Desktopがv3.3.1にて正式に`AppleSiliconへ対応`し、話題になりました。
 
 https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
@@ -43,7 +43,7 @@ $ brew install --cask imobie-m1-app-checker
 アプリケーションがインストールされているディレクトリ（デフォルトでは/Applications）を確認して「チェック」をクリックします。するとチェック結果が表示されます。
 
 ![M1-App-Checkの結果画面](https://storage.googleapis.com/zenn-user-upload/myi4j4psazwex1sm3qdo6384ufmz)
-***AppleSilicon・UniversalがM1 Macに最適化済み***
+*AppleSilicon・UniversalがM1 Macに最適化済み*
 
 アプリ名の右側にM1 Macへの対応状況が表示されます。この中で`Intel 64`と表示されているものがRosetta2を使用して動作しているアプリ、AppleSiliconに未対応のアプリとなります。
 このように一瞬でAppleSiliconに対応しているかしていないかをすぐに確認できます。
