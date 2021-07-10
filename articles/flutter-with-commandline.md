@@ -16,7 +16,7 @@ Windowsの場合はプログラミング言語やIDEもインストーラーを�
 
 ## Windowsにおけるパッケージマネージャー
 
-Macには [Homebrew](https://brew.sh/index_ja) という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが [Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
+Macには[Homebrew](https://brew.sh/index_ja)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
 
 今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh/)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
 
@@ -50,7 +50,7 @@ https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3
 インストールページが開かれます。
 
 ![アプリインストーラーの詳細情報の画像](https://storage.googleapis.com/zenn-user-upload/fn77b126s2ljhedbmolu1yerp56z)
-**すでに更新されている場合はこの様になります**
+*すでに更新されている場合はこの様になります*
 
 インストールが終わったらPowerShellを**管理者権限で起動**します。
 ターミナルに`winget`と入力するとコマンドの使用例とヘルプが表示されます。wingetとはWindows Package Managerを操作するためのコマンドです。
@@ -289,17 +289,17 @@ Android Studioのメニュー画面から「Configure」→「Plugins」と進�
 
 ![Flutterプラグインをインストールする様子](https://storage.googleapis.com/zenn-user-upload/lfa6bx1hlltz39mb5zwf1b6d1saa)
 
-これでFlutterの開発プラグインの導入は完了です。合わせて **Dart のプラグインも必要になるのですが Flutter のプラグインをインストールするときに合わせてインストールされる**ので気にしなくて問題ありません。
+これでFlutterの開発プラグインの導入は完了です。合わせて **Dartのプラグインも必要になるのですが Flutterのプラグインをインストールするときに合わせてインストールされる**ので気にしなくて問題ありません。
 
 Android Studioを再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規Flutterプロジェクトを作成できるようになります。うまく反映されない場合はプラグイン画面から「Dart」と「Flutter」プラグインが`Enable`になっていることを再度確認してください。
 
 ![再起動したあとのメインメニュー](https://storage.googleapis.com/zenn-user-upload/fvqw55wf58miyulelw3v82ek1qik)
-***Create New Flutter Projectが追加された***
+*Create New Flutter Projectが追加された*
 
 画面の指示に従ってプロジェクト作成をしていくのですが、途中でFlutter SDKのパスを指定する箇所があります。
 
 ![SDKへのパスを指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/0wlvhw8a7ds549qvv8sdxfy74ddx)
-***デフォルトでSDKへのパスが指定されていないので入力***
+*デフォルトでSDKへのパスが指定されていないので入力*
 
 インストールしたFlutter SDKのパスはAndroid SDKと同じように以下のコマンドで取得できます。
 
@@ -321,14 +321,14 @@ Android Studio上でプロジェクトが開かれるのを確認したら、実
 上部のメニューから`Chrome（Dev）`を選択して`Shift + F10`で実行します。
 
 ![ChromeでFlutterが実行される様子](https://storage.googleapis.com/zenn-user-upload/ydtjzfg7l2yes4wn5retozzl2xyy)
-***Flutter Demo Home Page***
+*Flutter Demo Home Page*
 
 自動的にChrome上でFlutterのデモアプリが起動しました。ホットリロードに対応しているためコードの変更がリアルタイムに反映されます。
 
 AVDマネージャーからAndroid Emulatorを作成して実行してみます。
 
 ![Pixel4 Emulator でアプリを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/3ck4my6py4f4lra31h6ue20tiht5=300x)
-***Pixel 4 API 30***
+*Pixel 4 API 30*
 
 エミュレーター上でもエラーなく実行でき、Chromeで実行したときと同じような結果が得られました。このようにFlutterは単一のコードでWeb・モバイルを問わずに実行できる点が特徴です。
 
