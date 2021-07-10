@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Zennには [Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli) と呼ばれるコマンドラインツールがあり、記事の管理をGitHub、記事の執筆をローカルのエディタを使うといった執筆が可能となっています。
+Zennには[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるコマンドラインツールがあり、記事の管理をGitHub、記事の執筆をローカルのエディタを使うといった執筆が可能となっています。
 
 Zennの執筆環境周りについての説明は以下の公式記事にまとめられています。
 
@@ -35,7 +35,9 @@ GitHubのコミットメッセージを見るとき目にすることが多い�
 コミットメッセージの先頭にプレフィックスをつけワンライン（1行）形式にするのが個人的に運用しやすいと感じました。
 
 プレフィックスについては以下の記事を参考にしています。
+
 https://qiita.com/numanomanu/items/45dd285b286a1f7280ed
+
 https://qiita.com/konatsu_p/items/dfe199ebe3a7d2010b3e
 
 上の記事ではともに[angular.js/DEVELOPERS.md](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type)が参考にされています。
@@ -49,7 +51,7 @@ Gitコミットガイドラインの中にプレフィックスとして8つ挙�
 | update:        | 記事を更新したとき                     |
 | fix:           | 記事の誤字脱字などを修整したとき       |
 | publish:       | 記事を公開したとき                     |
-| upgrade:       | Zenn CLI 自体のアップデートがあったとき |
+| upgrade:       | パッケージをアップグレードしたとき     |
 
 あまり多くても管理が大変というのと、プレフィックスについて悩む時間を減らしたいと考えた結果、上記の5つになりました。
 
