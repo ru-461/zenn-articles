@@ -12,7 +12,7 @@ Node.js v16系となるバージョンが2021年の4月20日にリリースさ�
 
 またリリースしてすぐLTSのアクティブリリースになるわけではなく、約半年後にアクティブLTSリリースとなります。
 
-そして今回リリースされた新のLTS、Node.js 16が **AppleSilicon を正式にサポートする最初のLTSバージョン**となります。つまりM1チップを始めとするSoCを搭載したMacBookやiMac上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
+そして今回リリースされた新のLTS、Node.js 16が**AppleSilicon を正式にサポートする最初のLTSバージョン**となります。つまりM1チップを始めとするSoCを搭載したMacBookやiMac上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
 
 AppleSiliconで動作するかどうかを掲載しているサイト[Does it ARM](https://doesitarm.com/)上でもv16以降で対応と更新されておりました。
 
@@ -61,13 +61,13 @@ $ anyenv install nodenv
 $ exec $SHELL -l
 ```
 
-最新のリリースに対応するため[anyenv update](https://github.com/znz/anyenv-update) という更新プラグインを使用し、最新の状態にアップデートしておきます。
+最新のリリースに対応するため[anyenv update](https://github.com/znz/anyenv-update)という更新プラグインを使用し、最新の状態にアップデートしておきます。
 
 ```shell
 $ anyenv update
 ```
 
-アップデートが完了したらnodenvから最新のNode.jsをインストールします。記事執筆時点では **v16.2.0** がリリースされていたのでこちらを指定します。
+アップデートが完了したらnodenvから最新のNode.jsをインストールします。記事執筆時点では **v16.2.0**がリリースされていたのでこちらを指定します。
 
 ```shell
 # 最新のNode.jsをインストール

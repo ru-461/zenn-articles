@@ -8,11 +8,11 @@ published: true
 
 # はじめに
 
-Mac上でWindowsを動かすといったことがIntel製CPUを搭載していたMacでは [Boot Camp](https://support.apple.com/ja-jp/HT201468) や [Parallels Desktop](https://www.parallels.com/jp/) を使うことで容易に実現できていました。しかし、2020年秋に登場したMacシリーズでCPUがAppleSiliconへと変わりアーキテクチャがarm64に変わり。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**AppleSilicon に対応**[^1]しました。これでParallels DesktopはIntel Mac ・ AppleSilicon Mac両方へ対応したことになります。
+Mac上でWindowsを動かすといったことがIntel製CPUを搭載していたMacでは[Boot Camp](https://support.apple.com/ja-jp/HT201468)や[Parallels Desktop](https://www.parallels.com/jp/)を使うことで容易に実現できていました。しかし、2020年秋に登場したMacシリーズでCPUがAppleSiliconへと変わりアーキテクチャがarm64に変わり。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**AppleSilicon に対応**[^1]しました。これでParallels DesktopはIntel Mac ・ AppleSilicon Mac両方へ対応したことになります。
 
 [^1]: [M1 および Intel チップセット双方をサポートした Parallels Desktop 16.5 for Mac を発表. 最新 Mac 上で Windows 10 をネイティブ スピードで稼働でき、 シームレスなユーザー エクスペリエンスに数百万のユーザーが支持¹](https://www.parallels.com/jp/news/press-releases/show/2021-pd16-5-m1chip/)
 
-現在、AppleSiliconのMacでPreview版Windows10が動作する段階まで来ています。まだまだ一部の環境でしか使用されていないarm64版Windows10ですが、Previewビルドにて **x64 アプリのエミュレーションが実現**[^2]するなど着々と進化を遂げております。
+現在、AppleSiliconのMacでPreview版Windows10が動作する段階まで来ています。まだまだ一部の環境でしか使用されていないarm64版Windows10ですが、Previewビルドにて**x64 アプリのエミュレーションが実現**[^2]するなど着々と進化を遂げております。
 
 [^2]: [Introducing x64 emulation in preview for Windows 10 on ARM PCs to the Windows Insider Program | Windows Insider Blog](https://blogs.windows.com/windows-insider/2020/12/10/introducing-x64-emulation-in-preview-for-windows-10-on-arm-pcs-to-the-windows-insider-program/)
 
