@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com/) の [version 1.48](https://code.visualstudio.com/updates/v1_48) にて設定同期機能（Settings Sync）が実装され話題となりました。
+Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com/) の [version 1.48](https://code.visualstudio.com/updates/v1_48)にて設定同期機能（Settings Sync）が実装され話題となりました。
 
 VSCodeには、`Stable release`と、`Inseders release`という２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
 
@@ -39,7 +39,7 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 
 ## Macの新CPU アーキテクチャ問題
 
-昨年末発売されたMacBook Air、MacBook Pro、Mac miniには、従来の`Intel 製 CPU（x64）`ではなく、Appleが独自開発した新CPU（arm64）が搭載されています。このことにより、CPUのアーキテクチャが`ARM`に置き換わったため、従来のIntelベースのアプリを動かすために`Rosetta2`という変換ツールを介してアプリを動かすことになります。
+昨年末発売されたMacBook Air、MacBook Pro、Mac miniには、従来の`Intel 製 CPU（x64）`ではなく、Appleが独自開発した新CPU（arm64）が搭載されています。このことにより、CPUのアーキテクチャが`ARM`に置き換わったため、従来のIntelベースのアプリを動かすために`Rosetta 2`という変換ツールを介してアプリを動かすことになります。
 
 `M1 Macに最適化`という言葉をよく聞くようになりましたが、これはアプリが`ARMアーキテクチャ`に対応し、特別な変換などをしなくともそのまま動かせるということになります。つまりM1チップからするとネイティブな環境です。ネイティブというだけあり、パーフォーマンスやメモリの使用量などもかなり改善され、M1チップのパワーを最大限に活用することも可能となります。
 
