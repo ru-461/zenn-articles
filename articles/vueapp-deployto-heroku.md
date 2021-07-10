@@ -32,7 +32,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 # インストール
 
-## Heroku CLI を WSL2 にインストール
+## Heroku CLIをWSL2 にインストール
 
 Herokuは各プラットフォーム向けに`Heroku CLI`というツールを提供しているためこちらを利用します。
 Heroku公式ドキュメントに各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
@@ -140,7 +140,7 @@ $ git add static.json
 $ git commit -m "add static configuration"
 ```
 
-## Heroku アプリを作成
+## Herokuアプリを作成
 
 ターミナルからHerokuへログインしデプロイ対象のプロジェクトのディレクトリで以下のコマンドを実行します。
 
@@ -185,7 +185,7 @@ $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 ビルドパックは`heroku/node.js` ▶ `heroku-buildpack-static`の順番に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
 :::
 
-## Heroku へデプロイする
+## Herokuへデプロイする
 
 Herokuへデプロイしていきます。
 
@@ -225,7 +225,7 @@ Vue CLIで作成したプロジェクトがブラウザに表示され動作が�
 
 お役に立てれば幸いです。最後まで読んでいただきありがとうございました。
 
-# 補足: デプロイ後にアプリ名を変更したい
+# 補足：デプロイ後にアプリ名を変更したい
 
 デフォルトだとランダムでアプリの名前が付与されます。
 変更したい場合はCLIを使い以下の手順で変更可能です。
