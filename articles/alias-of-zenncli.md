@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-Zennでは [Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli) と呼ばれるツールが公式から提供されており、GitHubを利用した記事の投稿、記事のバージョン管理ができます。ブラウザ上のエディタに縛られない柔軟な執筆環境を構築できる点がZennの大きな特徴です。今回は、Zenn CLI用のエイリアスを作成することで記事の執筆に集中できる環境を作成しました。
+Zennでは[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるツールが公式から提供されており、GitHubを利用した記事の投稿、記事のバージョン管理ができます。ブラウザ上のエディタに縛られない柔軟な執筆環境を構築できる点がZennの大きな特徴です。今回は、Zenn CLI用のエイリアスを作成することで記事の執筆に集中できる環境を作成しました。
 
 # 作成したエイリアスの一覧
 
@@ -117,7 +117,7 @@ alias zennnbs='zenn && npx zenn new:book --slug '
 エイリアスに続けて、付けたいスラッグを続けるだけで簡単にオリジナルのスラッグをつけて記事を作れるので便利です。
 
 ```shell
-$ zennnas alias-of-zenncli(本記事のスラッグ)
+$ zennnas alias-of-zenncli（任意のスラッグ）
 ```
 
 スラッグ以外に、絵文字やタイトル、本の販売価格など作成時に利用できるオプションは数多くあるので、詳しくは以下の公式記事を参考にしてみてください。
