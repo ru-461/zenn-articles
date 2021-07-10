@@ -22,9 +22,9 @@ Mac上でWindowsを動かすといったことがIntel製CPUを搭載してい�
 
 # 検証環境
 
-- macOS BigSurバージョン11.3 (ホストOS)
+- macOS BigSurバージョン11.3（ホストOS）
 - Parallels Desktop 16 for Macバージョン16.5.0
-- Windows 10 on ARM Insider Preview OSビルド21354.1 (ゲストOS)
+- Windows 10 on ARM Insider Preview OSビルド21354.1（ゲストOS）
 
 # 事前準備
 
@@ -34,13 +34,13 @@ Windows Insider Programに参加することで以下のページからPreview�
 
 https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64?wa=wsignin1.0
 
-入手したWindowsイメージは`VHDX ファイル`となっており、Parallels Destopにて選択することで起動させることができます。
+入手したWindowsイメージは`VHDXファイル`となっており、Parallels Destopにて選択することで起動させることができます。
 
 ParallelsDesktopは以下のページからダウンロードしてインストールできます。
 
 https://www.parallels.com/jp/products/desktop/trial/
 
-ParallelsDesktopは有料のソフトですが、無料で` 14 日間のトライアル版`を使用できます。永久ライセンスはバージョンごとに買い切りとなっておりバージョンアップ時に買い直す必要があります。また現在はサブスクリプション形式でのライセンス購入もできるようです。
+ParallelsDesktopは有料のソフトですが、無料で`14日間のトライアル版`を使用できます。永久ライセンスはバージョンごとに買い切りとなっておりバージョンアップ時に買い直す必要があります。また現在はサブスクリプション形式でのライセンス購入もできるようです。
 
 ## バージョン情報を確認
 
@@ -56,7 +56,7 @@ Mac上で仮想化したWindows10から見える情報はこのようになっ�
 
 # WSL2を導入する
 
-WSLのインストールは最新のWindows Previewにおいて`コマンド 1 つ`でインストールが可能になりました。
+WSLのインストールは最新のWindows Previewにおいて`コマンド1つ`でインストールが可能になりました。
 
 WSLの公式のドキュメントに日本語で詳しく説明があります。
 
