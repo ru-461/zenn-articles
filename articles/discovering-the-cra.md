@@ -8,4 +8,6 @@ published: false
 
 # はじめに
 
+Reactでプロジェクトの雛形を作る際にCreate-React-Appを使用する例は多いです。
+
 # おわりに
