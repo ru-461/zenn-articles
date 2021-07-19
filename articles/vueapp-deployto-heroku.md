@@ -11,7 +11,7 @@ published: true
 Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify.com/)や[GitHub Pages](https://docs.github.com/ja/github/working-with-github-pages/about-github-pages#)といったホスティングサービスを使う方法があります。
 
 その中で今回は[Heroku](https://jp.heroku.com/)にてデプロイする方法を調べてみました。
-以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事でVue CLIを使って開発したSPAを実際にデプロイしていきます。
+以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事でVue CLIを使って作成したSPAを実際にHerokuへデプロイしていきます。
 
 以前Herokuにアプリをデプロイした経験はありましたが、Vue.jsで作成したSPAをデプロイした経験がなかったため、今回はHerokuにデプロイし動かせるところまでについてまとめてみます。
 
@@ -83,7 +83,7 @@ https://signup.heroku.com/
 ```shell
 $ heroku login
   heroku: Press any key to open up the browser to login or q to exit:
-  # ブラウザにてログイン処理
+  # ブラウザにてログイン処理を行う
 ```
 
 `q`以外のキーを押すと自動的にデフォルトのブラウザでHerokuのログイン画面が開かれるのでブラウザ上でアカウントへログインします。
@@ -199,7 +199,7 @@ $ git push heroku main
 このときにビルドも同時に行われ最新の`distディレクトリ`がデプロイされます。
 
 :::message
-ドキュメントでは`masterブランチ`にプッシュしていますが、現在は`mainブランチ`に変更されているため注意してください
+ドキュメントでは`masterブランチ`にプッシュしていますが、現在は`mainブランチ`に変更されているため注意してください。
 :::
 
 # デプロイできたかの確認
@@ -219,7 +219,7 @@ Vue CLIで作成したプロジェクトがブラウザに表示され動作が�
 # さいごに
 
 今回Herokuを使ってVueで作成したSPAのデプロイ手順をまとめました。
-今回使用したのが簡単なSPAだったためすぐにデプロイできました。インターネット上で見る記事ではExpressを使用してデプロイしている例が多くありましたが、ビルドパックを使うことで簡単にビルド、静的ホスティングまで行ってくれるのに驚きました。
+インターネット上で見る記事ではExpressを使用してデプロイしている例が多くありましたが、ビルドパックを使うことで簡単にビルド、静的ホスティングまで行ってくれるのに驚きました。
 
 今では優良なホスティングサービスが多く存在するため、Heroku以外の選択肢もたくさんあります。今回久しぶりにデプロイを行う中でホスティングサービスの充実によってデプロイのハードルが下がってきていると感じました。
 
@@ -231,7 +231,7 @@ Vue CLIで作成したプロジェクトがブラウザに表示され動作が�
 変更したい場合はCLIを使い以下の手順で変更可能です。
 
 ```shell
-$ heroku apps:rename 変更したい名前
+$ heroku apps:rename 【変更したい名前】
 ```
 
 アプリの名前が変わるとアドレスも変わります。
