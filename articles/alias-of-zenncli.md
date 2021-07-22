@@ -13,7 +13,7 @@ Zennでは[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ば�
 # 作成したエイリアスの一覧
 
 :::message
-以下のエイリアスはmacOSのデフォルトシェルである`Zsh`で利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。WSL2（Ubuntu Zsh）・Macbook（Zsh）にてそれぞれ動作確認済みです。
+以下のエイリアスはmacOSのデフォルトシェルであるZshで利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。WSL2（Ubuntu Zsh）・Macbook（Zsh）にてそれぞれ動作確認済みです。
 :::
 
 ```shell:.zshrc
@@ -57,7 +57,7 @@ alias zennop='zenn && code ~/Documents/my-zenn-contents && npx zenn preview --op
 
 # ポイント
 
-Zenn CLIをローカルにインストールしているため、基本的にnpxを使ってコマンド実行します。npxコマンドの実行の際にエイリアス`zenn`でZennコンテンツ管理ディレクトリへ必ず移動するようにしています。
+Zenn CLIをローカルにインストールしているため、基本的に`npx`を使ってコマンド実行します。npxコマンドの実行の際にエイリアス`zenn`でZennコンテンツ管理ディレクトリへ必ず移動するようにしています。
 ## コンテンツ管理ディレクトリへのアクセス
 
 記事を管理しているディレクトリ（my-zenn-contents）へすぐ移動できるように`zenn`というエイリアスを設定しています。
@@ -71,7 +71,7 @@ alias zenn='cd ~/Documents/my-zenn-contents'
 
 ![コンテンツ管理ディレクトリに移動する様子](https://storage.googleapis.com/zenn-user-upload/e84blxcz62h1s2s92vyq9e2ecyul)
 
-私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com/)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできる`Code コマンド`の存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
+私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com/)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
 
 https://zenn.dev/ryuu/articles/what-vscodecommand
 
@@ -84,7 +84,7 @@ $ code ~/Documents/my-zenn-contents
 
 ## 記事や本のプレビュー
 
-VSCodeにはデフォルトでマークダウンのプレビュー機能があるため、マークダウンファイル（.md）をその場でプレビューしながら書くことができます。しかし、ZennにはZenn独自のマークダウン記法（メッセージやアコーディオン、トグル）があるためVSCodeのプレビュー機能では完全にプレビューできません。そこでZenn CLIには、`localhost`でサーバーを立ち上げてZenn上でどのように表示されるのかを投稿前に確認できる`Zenn Editor`があります。ホットリロードに対応しているため、ローカルで加えた変更を瞬時に反映しながら記事を書いていくことができます。
+VSCodeにはデフォルトでマークダウンのプレビュー機能があるため、マークダウンファイル（.md）をその場でプレビューしながら書くことができます。しかし、ZennにはZenn独自のマークダウン記法（メッセージやアコーディオン、トグル）があるためVSCodeのプレビュー機能では完全にプレビューできません。そこでZenn CLIには、localhostでサーバーを立ち上げてZenn上でどのように表示されるのかを投稿前に確認できるZenn Editorがあります。ホットリロードに対応しているため、ローカルで加えた変更を瞬時に反映しながら記事を書いていくことができます。
 
 ```shell
 $ npx zenn preview
