@@ -34,7 +34,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 ## Heroku CLIをWSL2 にインストール
 
-Herokuは各プラットフォーム向けに`Heroku CLI`というツールを提供しているためこちらを利用します。
+Herokuは各プラットフォーム向けにHeroku CLIというツールを提供しているためこちらを利用します。
 Heroku公式ドキュメントに各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
 
 https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install
@@ -51,7 +51,7 @@ $ sudo snap install --classic heroku
 error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: dial unix /run/snapd.socket: connect: no such file or directory
 ```
 
-どうやらWSL2では`snapコマンド`がうまく動作しない模様です。
+どうやらWSL2では`snap`がうまく動作しない模様です。
 そこで以下のコマンドでスタンドアローンインストールを実行します。
 
 ```shell
@@ -105,7 +105,7 @@ Logging in... done
 
 https://cli.vuejs.org/guide/deployment.html#heroku
 
-デプロイするのに`static.json`というファイルが必要みたいなので、Vueプロジェクトのルートディレクトリに移動して`static.json`を作成します。
+デプロイするのにstatic.jsonというファイルが必要みたいなので、Vueプロジェクトのルートディレクトリに移動してstatic.jsonを作成します。
 
 ```shell
 $ touch static.json
@@ -123,12 +123,12 @@ $ touch static.json
 }
 ```
 
-`static.json`はHerokuへのデプロイで必要になるためGitへ追加しておきます。
+static.jsonはHerokuへのデプロイで必要になるためGitへ追加しておきます。
 
 ここからは作成したアプリでGitコマンドが使える環境を前提に進めます。
 Gitのインストール、`git init`でプロジェクトの初期化が済んでいる状態で進めてください。
 
-先程作成した`static.json`をステージング。
+先程作成したstatic.jsonをステージング。
 
 ```shell
 $ git add static.json
@@ -182,7 +182,7 @@ $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 上の２つのビルドパックを導入することでアプリをビルドできる環境が出来上がりました。
 
 :::message
-ビルドパックは`heroku/node.js` ▶ `heroku-buildpack-static`の順番に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
+ビルドパックはheroku/Node.js → heroku-buildpack-staticの順に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
 :::
 
 ## Herokuへデプロイする
@@ -196,10 +196,10 @@ $ git push heroku main
 ```
 
 すぐにHerokuへデプロイ処理が行われます。
-このときにビルドも同時に行われ最新の`distディレクトリ`がデプロイされます。
+このときにビルドも同時に行われ最新のdistディレクトリがデプロイされます。
 
 :::message
-ドキュメントでは`masterブランチ`にプッシュしていますが、現在は`mainブランチ`に変更されているため注意してください。
+ドキュメントではmasterブランチにプッシュしていますが、現在はmainブランチに変更されているため注意してください。
 :::
 
 # デプロイできたかの確認
@@ -235,7 +235,7 @@ $ heroku apps:rename 【変更したい名前】
 ```
 
 アプリの名前が変わるとアドレスも変わります。
-新しいアプリページは名前の変更後にダッシュボードor `heroku open`で開くことができます。
+新しいアプリページは名前の変更後にダッシュボードか`heroku open`で開くことができます。
 アプリのダッシュボードから変更するとGit remoteへ変更がうまく反映されないため、上記のコマンドを使用し、Heroku CLIから変更するのが無難です。
 
 # 参考ドキュメント
