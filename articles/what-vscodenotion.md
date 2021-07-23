@@ -13,7 +13,7 @@ Notionを自分専用のWikiのように活用し、一箇所で必要な情報�
 
 以前投稿した[こちらの記事](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)でNotionをプログラミングノートとして運用する方法について書いていますのでよろしければ合わせてご覧ください。
 
-今回はVSCode内でNotionを使うことができる`VSCode Notion`という便利な拡張機能をご紹介します。
+今回はVSCode内でNotionを使うことができる「VSCode Notion」という便利な拡張機能をご紹介します。
 
 # Notion の課題点
 
@@ -30,7 +30,7 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 拡張機能はすべて英語で表記されているため、難しそうに思えますが、機能としてはタブとしてVSCode内でNotionを開くことを可能にする拡張機能となります。
 更新の履歴を見てみると2021年の1月10日に初期バージョンがリリースされたばかりの拡張機能であることがわかります。
 
-拡張機能の説明には`unofficial API（非公式 API）`を使用するとの記述があります。そのため認証機能などは使えず、いくつかの機能が制限されるとのことですが、今後正式なAPIの提供に伴い切り替えていくとの記述があり今後に期待できそうな拡張機能です。先日、Notion APIのPublicBetaが公開されたため今後に注目したいですね。
+拡張機能の説明にはunofficial API（非公式API）を使用するとの記述があります。そのため認証機能などは使えず、いくつかの機能が制限されるとのことですが、今後正式なAPIの提供に伴い切り替えていくとの記述があり今後に期待できそうな拡張機能です。先日、Notion APIのPublicBetaが公開されたため今後に注目したいですね。
 
 :::message
 非公式APIを使用している現在段階では、Notionで作成したページの閲覧だけできる状態となっています。編集をするなどの操作が制限されているため、しばらくはNotionドキュメントの閲覧だけに使えるものと割り切って使う必要がありそうです。
@@ -40,7 +40,7 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 
 それでは、VSCodeに拡張機能を導入してNotionを開けるようにしていきます。
 
-拡張機能の検索ウィンドウに`notion`といれることで「VSCode Notion」がヒットするのでインストールしていきます。
+拡張機能の検索ウィンドウに「notion」といれることで「VSCode Notion」がヒットするのでインストールしていきます。
 
 ![VSCode Notionを検索する様子](https://storage.googleapis.com/zenn-user-upload/6i6uzl1kglf3dqx7d27trlev3v5m)
 *検索してヒットしたこちらの拡張機能をインストール*
@@ -48,9 +48,9 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 インストールが完了するとステータスがインストール済みになり、インストール済みの拡張機能に追加されます。
 インストールすることで自動的に拡張機能が有効になり、左のメニューにNotionのアイコンが表示されます。
 
-VSCode Notionを開くと`RECENTS（最近VSCodeで開いたページ）`と`BOOKMARKS（ブックマークしたページ）`の2つから選ぶことができます。
+VSCode Notionを開くとRECENTS（最近VSCodeで開いたページ）とBOOKMARKS（ブックマークしたページ）の2つから選ぶことができます。
 
-初めて使用するときはまだページを開いていないため、 Notionページを開くための`Open A Page`ボタンが表示されています。
+初めて使用するときはまだページを開いていないため、 Notionページを開くための「Open A Page」ボタンが表示されています。
 
 ![Notionのページを開く様子](https://storage.googleapis.com/zenn-user-upload/xcvqs9sr5jdgobphsr9t3i9tmgdf)
 *Open A PageからNotionのページを開くことができる*
@@ -61,11 +61,11 @@ Notionのページを開くためには**アクセストークンを取得して
 
 ## 初期設定
 
-VSCodeの設定画面を開きます。設定画面はWindowsであれば`ctrl + ,` Macなら`⌘ + ,`で開くことができます。VSCode設定画面の検索ウィンドウに`vscode notion`と入れることでVSCode Notionの拡張機能の設定を探すことができます。設定が検索にヒットしない場合はVSCodeを一旦再起動することで表示されるようになります。
+VSCodeの設定画面を開きます。設定画面はWindowsであれば`Ctrl`＋`,` Macなら`⌘`＋`,`で開くことができます。VSCode設定画面の検索ウィンドウに「vscode notion」と入れることでVSCode Notionの拡張機能の設定を探すことができます。設定が検索にヒットしない場合はVSCodeを一旦再起動することで表示されるようになります。
 
 ![設定を検索する様子](https://storage.googleapis.com/zenn-user-upload/f11qaiyywgrk22clorltljb788n7)
 
-APIエラーを解消するためには、下にある`VSCode Notion Access Token`のフォームに取得したNotionのアクセストークンを入力する必要があります。
+APIエラーを解消するためには、下にあるVSCode Notion Access Tokenのフォームに取得したNotionのアクセストークンを入力する必要があります。
 
 ## Notion のアクセストークンの取得
 
@@ -73,7 +73,7 @@ Notionのアクセストークンを取得します。ブラウザにてNotion�
 
 以下Chromeの画面で説明します。
 
-`Application`というタブを開き、`Cookies > https://www.notion.so/`とたどると`token_v2`という項目があるため、値をコピーします。
+Applicationというタブを開き、Cookies → `https://www.notion.so/`とたどると**token_v2**という項目があるため、値をコピーします。
 これが自分のNotionアクセストークンとなります。
 
 ![Chrome DevToolsからトークンを取得する様子](https://storage.googleapis.com/zenn-user-upload/vg3rhxbtu5tnwg1582frn4iss0q1)
@@ -81,14 +81,14 @@ Notionのアクセストークンを取得します。ブラウザにてNotion�
 
 アクセストークンは長い文字列になっており、拡張機能を使うために必ず必要となるので、慎重に管理をお願いします。
 
-取得したNotionアクセストークンを設定画面の`VSCode Notion Access Token`にそのままペーストします。
+取得したNotionアクセストークンを設定画面のVSCode Notion Access Tokenにそのままペーストします。
 
 ![取得したトークンを設定する様子](https://storage.googleapis.com/zenn-user-upload/g6yakw9g75hx8eh6zjssg38fu5q2)
 *赤枠の中にそのままペースト*
 
 これで初期設定が完了となります。
 
-拡張機能の設定にアクセストークンが正常に入力されていると`Open A Page`からNotionを開けるようになります。ページリンクを入力することで指定したNotionのページがVSCode内で開けます。
+拡張機能の設定にアクセストークンが正常に入力されているとOpen A PageからNotionを開けるようになります。ページリンクを入力することで指定したNotionのページがVSCode内で開けます。
 
 ## ドキュメントの閲覧
 

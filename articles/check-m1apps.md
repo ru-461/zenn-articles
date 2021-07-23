@@ -8,11 +8,11 @@ published: true
 
 # はじめに
 
-Apple M１ チップ（AppleSilicon M1）を搭載したMacシリーズが発売されてしばらく経ちました。AppleSilicon M1は`ARMアーキテクチャ`を採用しています。そのため、従来のモデルにて使用されていたIntelCPU向けのアプリ`（x64 アーキテクチャ）`との互換性がなくなり、そのまま動かすことができなくなりました。
+Apple M１ チップ（AppleSilicon M1）を搭載したMacシリーズが発売されてしばらく経ちました。AppleSilicon M1は**ARMアーキテクチャ**を採用しています。そのため、従来のモデルにて使用されていたIntelCPU向けのアプリ（x64アーキテクチャ）との互換性がなくなり、そのまま動かすことができなくなりました。
 
-そこでAppleは`Rosetta 2`という変換ツールを用意しており、使用することでx64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作する`AppleSilicon対応ビルド`や`ユニバーサルビルド`が増えてきており、今では多くのアプリにてAppleSiliconの恩恵を預かることができるようになりました。
+そこでAppleはRosetta 2という変換ツールを用意しており、使用することでx64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作するAppleSilicon対応ビルドやユニバーサルビルドが増えてきており、今では多くのアプリにてAppleSiliconの恩恵を預かることができるようになりました。
 
-そして先日、ずっと待望されていたDocker Desktopがv3.3.1にて正式に`AppleSiliconへ対応`し、話題になりました。
+そして先日、ずっと待望されていたDocker Desktopがv3.3.1にて正式にAppleSiliconへ対応し、話題になりました。
 
 https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
@@ -20,17 +20,17 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 # インストール済みのアプリから確認する
 
-すでにMacにインストールしているアプリの中でM1チップに最適化されているのかはアクティビティモニタからアーキテクチャ表示を見ることで判別できます。調べたいアプリを起動している状態で`アクティビティモニタ.app`を実行します。
-プロセスの中にあるアーキテクチャの項目に`Apple`と表示されていればそのアプリはM１Macに**最適化されている**といえます。また従来のアーキテクチャ（x64）で動作しているアプリは`Intel`と表示されます。
+すでにMacにインストールしているアプリの中でM1チップに最適化されているのかはアクティビティモニタからアーキテクチャ表示を見ることで判別できます。調べたいアプリを起動している状態でアクティビティモニタ.appを実行します。
+プロセスの中にあるアーキテクチャの項目に**Apple**と表示されていればそのアプリはM１Macに**最適化されている**といえます。また従来のアーキテクチャ（x64）で動作しているアプリは**Intel**と表示されます。
 
 ![プロセスを見て調べる様子](https://storage.googleapis.com/zenn-user-upload/tfsrasc20r67jzy1unzbkbbubgts)
 
 ***プロセスごとにアーキテクチャを確認できる***
-これで1つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこで`iMobie M1 App Checker`というツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
+これで1つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこでiMobie M1 App Checkerというツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
 
 https://www.imobie.com/m1-app-checker/
 
-公式サイトから`「Free Download」`をクリックしてインストールできます。パッケージマネージャーとして`Homebrew`を導入している場合は、以下のコマンドでインストールできます。
+公式サイトから「Free Download」をクリックしてインストールできます。パッケージマネージャーとしてHomebrewを導入している場合は、以下のコマンドでインストールできます。
 
 ```shell:Terminal
 $ brew install --cask imobie-m1-app-checker
@@ -45,8 +45,7 @@ $ brew install --cask imobie-m1-app-checker
 ![M1-App-Checkの結果画面](https://storage.googleapis.com/zenn-user-upload/myi4j4psazwex1sm3qdo6384ufmz)
 *AppleSilicon・UniversalがM1 Macに最適化済み*
 
-アプリ名の右側にM1 Macへの対応状況が表示されます。この中で`Intel 64`と表示されているものがRosetta2を使用して動作しているアプリ、AppleSiliconに未対応のアプリとなります。
-このように一瞬でAppleSiliconに対応しているかしていないかをすぐに確認できます。
+アプリ名の右側にM1 Macへの対応状況が表示されます。この中でIntel 64と表示されているものがRosetta2を使用して動作しているアプリ、AppleSiliconに未対応のアプリとなります。このように一瞬でAppleSiliconに対応しているかしていないかをすぐに確認できます。
 
 # すべてのアプリから対応状況を調べる
 

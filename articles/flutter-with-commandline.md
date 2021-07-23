@@ -12,7 +12,7 @@ Macで開発環境を構築する際にHomebrewなどのパッケージマネー
 
 Windowsの場合はプログラミング言語やIDEもインストーラーを用いたインストールが多く、パスを通すために各自で直接システム環境変数を触るなどの作業が発生し少し手間になります。例えば、WindowsでJavaのソースをコンパイルをするために、JDKダウンロード → binディレクトリの場所（パス）をシステム環境変数に追加しパスを通す作業をした経験があるのではないでしょうか。
 
-開発を始める前の環境構築で頻出するシステム環境変数、パス周りの概念がわからないと初学者にとって環境構築は少しハードルが高いように感じます。私がプログラミングを勉強し始めたとき、環境変数編集から管理者権限で間違えて他のシステム側の変数を削除してしまったためPCの起動ができなくなり、泣く泣くWindowsを再インストールしたことがあります。その経験から、Windows上でなるべくシステム環境変数を触らず、環境を汚すことなく手軽に開発環境を構築できればいいなと感じていました。そんなときに、Linuxの`apt`や`yum`といったパッケージマネージャーと出会い、その仕組みや手軽さに感動した記憶があります。
+開発を始める前の環境構築で頻出するシステム環境変数、パス周りの概念がわからないと初学者にとって環境構築は少しハードルが高いように感じます。私がプログラミングを勉強し始めたとき、環境変数編集から管理者権限で間違えて他のシステム側の変数を削除してしまったためPCの起動ができなくなり、泣く泣くWindowsを再インストールしたことがあります。その経験から、Windows上でなるべくシステム環境変数を触らず、環境を汚すことなく手軽に開発環境を構築できればいいなと感じていました。そんなときに、Linuxのaptやyumといったパッケージマネージャーと出会い、その仕組みや手軽さに感動した記憶があります。
 
 ## Windowsにおけるパッケージマネージャー
 
@@ -29,7 +29,7 @@ Googleが開発しているUIツールキットになります。Dart言語で�
 
 # インストール検証環境
 
-OSには`Windows10`を使用しています。
+OSにはWindows10を使用しています。
 
 | ツール | バージョン |
 | ---- | ---- |
@@ -50,7 +50,7 @@ https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3
 インストールページが開かれます。
 
 ![アプリインストーラーの詳細情報の画像](https://storage.googleapis.com/zenn-user-upload/fn77b126s2ljhedbmolu1yerp56z)
-*すでに更新されている場合はこの様になります*
+*すでに更新されている場合はこのようになります*
 
 インストールが終わったらPowerShellを**管理者権限で起動**します。
 ターミナルに`winget`と入力するとコマンドの使用例とヘルプが表示されます。wingetとはWindows Package Managerを操作するためのコマンドです。
@@ -85,7 +85,7 @@ Wingetコマンドでインストールできるパッケージ一覧を出力�
 ```
 
 たくさんのアプリがずらっと表示されます。この一覧にあるアプリがインストール可能です。
-この中からAndroid Studioを探してみます。`searchコマンド`に続けてアプリ名を入力します。
+この中からAndroid Studioを探してみます。`search`に続けてアプリ名を入力します。
 
 ```powershell:powershell
 > winget search AndroidStudio
@@ -110,7 +110,7 @@ Downloading https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/an
 インストールが完了しました
 ```
 
-`インストールが完了しました`となればインストール成功です。うまくいかない場合は管理者権限にてコマンドを実行しているかを確認してください。
+「インストールが完了しました」となればインストール成功です。うまくいかない場合は管理者権限にてコマンドを実行しているかを確認してください。
 
 Windowsのスタートメニューを確認するとAndroid Studioがインストールているのが確認できます。
 
@@ -119,7 +119,7 @@ Windowsのスタートメニューを確認するとAndroid Studioがインス�
 公式サイトからインストーラーをダウンロードしてローカルで実行、GUIをポチポチとすることなくAndroid Stuidoをインストールできました。インストールに時間もそれほどかからないです。
 # Flutter の導入
 
-ここまでコマンドだけでAndroid Studioをインストールできました。続いて`Scoop`というパッケージマネージャーを導入してFlutterと依存関係をまとめて導入します。
+ここまでコマンドだけでAndroid Studioをインストールできました。続いてScoopというパッケージマネージャーを導入してFlutterと依存関係をまとめて導入します。
 ScoopとはWindows向けのパッケージマネージャーの1つでパッケージ管理に管理者権限を使わないという特徴を持ちます。
 
 Scoopはコマンドツール以外にもAndroid StudioやVSCodeようなGUIアプリケーションもインストールできます。しかし、Scoopを使用する場合、Windowsの想定するディレクトリ構成と異なるため不具合に繋がる可能性もあります。そのため私は現在GUIベースのアプリケーションをWindows Package Manager、CUIベースのツールをScoopと分けて管理しています。
@@ -159,8 +159,8 @@ Usage: scoop <command> [<args>]
 ## Flutter を Scoop からインストール
 
 Scoopコマンドが使えることを確認できたら、続けてFlutterを導入します。
-Scoopには、`Bucket`という概念が存在し、Bucketを追加することでインストールできるアプリを増やすことができます。デフォルトでは`main Bucket`しか追加されていません。
-Flutter関連のツールは`extras Bucket`と`java Bucket`に存在するため、予め追加しないとインストールできません。
+Scoopには、**Bucket**という概念が存在し、Bucketを追加することでインストールできるアプリを増やすことができます。デフォルトでは`main Bucket`しか追加されていません。
+Flutter関連のツールはextras Bucketとjava Bucketに存在するため、予め追加しないとインストールできません。
 
 以下のコマンドでFlutterのインストールに必要なBucketをまとめて追加出来ます。
 
@@ -183,7 +183,7 @@ Flutterのインストールが始まります。インストール途中で以�
 - adopt8-hotspot[64bit]
 - flutter[64bit]
 
-依存関係としてなにがインストールされるかは`depends コマンド`で都度確認できます。
+依存関係としてなにがインストールされるかは`depends`で都度確認できます。
 
 ```powershell:powershell
 > scoop depends  flutter
@@ -193,7 +193,7 @@ android-sdk
 adb
 ```
 
-最後にAndroid SDKのライセンスが表示されるので、`y`を押して承諾していきます。
+最後にAndroid SDKのライセンスが表示されるので、承諾していきます。
 
 続けてインストールするSDKプラットフォームを選択します。デフォルトで一番最新のものが選択されます。こだわりがなければデフォルトで問題ありません。
 
@@ -229,7 +229,7 @@ No platform detected. Please select a platform to install [Default: 24]:
 
 再度ライセンスに承諾することでSDK Platformのインストールが行われます。
 
-インストールが終了する際に`flutter doctorコマンド`が走り、状態をチェックしてくれます。これでFlutterのインストールは完了です。
+インストールが終了する際に`flutter doctor`が走り、状態をチェックしてくれます。これでFlutterのインストールは完了です。
 この時点でFlutterにパスが通っているため、Windowsの環境変数の編集からパスを通す必要はありません。便利ですね。
 
 しかし、doctorコマンドを実行したときにAndroid toolchainでエラーがでますので、Android Studio側で修正していきます。
@@ -241,7 +241,7 @@ No platform detected. Please select a platform to install [Default: 24]:
 ![Android SDKのエラー画面](https://storage.googleapis.com/zenn-user-upload/svy0zfj5pariecx1pgxb1xxzdzpp)
 
 ここでAndroid SDKの場所を設定してあげます。
-Scoopでインストールしたものはユーザーデフォルトの下`~\scoop\`の中にすべてまとめられています。
+Scoopでインストールしたものは~\scoop\の中にすべてまとめられています。
 
 Scoopでインストールしたアプリとライブラリの格納場所は以下のコマンドで調べることが出来ます。
 
@@ -252,14 +252,14 @@ Scoopでインストールしたアプリとライブラリの格納場所は以
 C:\Users\user\scoop\apps\android-sdk\current
 ```
 
-`Android SDK Location:`に上のコマンドで取得したSDKへのフルパスを指定し続行します。
+Android SDK Location:に上のコマンドで取得したSDKへのフルパスを指定し続行します。
 
 ![Android SDKのパスを指定する様子](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
 
 パスを指定するとその他必要なコンポーネントのダウンロードが始まるので終わるまで待ちます。
 Android Studioのメインメニューが表示されればセットアップは完了です。
 
-SDKの場所のセットアップが終わった後に、PowerShellにてもう一度`flutter doctor`コマンドを実行します。
+SDKの場所のセットアップが終わった後に、PowerShellにてもう一度`flutter doctor`を実行します。
 
 ```powershell:powershell
 > flutter doctor
@@ -270,7 +270,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 ```
 
-上から2番目の`Android toolchain`の内容が変わっています。追加でライセンスに承諾する必要があるため、以下のコマンドでライセンスに承諾します。
+上から2番目のAndroid toolchainの内容が変わっています。追加でライセンスに承諾する必要があるため、以下のコマンドでライセンスに承諾します。
 
 ```powershell:powershell
 > flutter doctor --android-licenses
@@ -291,7 +291,7 @@ Android Studioのメニュー画面から「Configure」→「Plugins」と進�
 
 これでFlutterの開発プラグインの導入は完了です。合わせて **Dartのプラグインも必要になるのですが Flutterのプラグインをインストールするときに合わせてインストールされる**ので気にしなくて問題ありません。
 
-Android Studioを再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規Flutterプロジェクトを作成できるようになります。うまく反映されない場合はプラグイン画面から「Dart」と「Flutter」プラグインが`Enable`になっていることを再度確認してください。
+Android Studioを再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規Flutterプロジェクトを作成できるようになります。うまく反映されない場合はプラグイン画面から「Dart」と「Flutter」プラグインが**Enable**になっていることを再度確認してください。
 
 ![再起動したあとのメインメニュー](https://storage.googleapis.com/zenn-user-upload/fvqw55wf58miyulelw3v82ek1qik)
 *Create New Flutter Projectが追加された*
@@ -310,7 +310,7 @@ Android Studioを再起動すると、「Create New Flutter Project」の項目�
 C:\Users\user\scoop\apps\flutter\current
 ```
 
-`Flutter SDK path`のところに`C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\current`を指定して続行します。
+Flutter SDK pathのところにC:\Users\ユーザー名\scoop\app\scoop\apps\flutter\currentを指定して続行します。
 
 そのまま続行すると新規FlutterプロジェクトがAndroid Studio上で開かれます。
 
@@ -318,7 +318,7 @@ C:\Users\user\scoop\apps\flutter\current
 
 Android Studio上でプロジェクトが開かれるのを確認したら、実際に実行できるか試します。
 
-上部のメニューから`Chrome（Dev）`を選択して`Shift + F10`で実行します。
+上部のメニューからChrome（Dev）を選択して`Shift`＋`F10`で実行します。
 
 ![ChromeでFlutterが実行される様子](https://storage.googleapis.com/zenn-user-upload/ydtjzfg7l2yes4wn5retozzl2xyy)
 *Flutter Demo Home Page*
