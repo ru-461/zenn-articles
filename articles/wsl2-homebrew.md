@@ -10,7 +10,7 @@ published: true
 
 [前回の記事](https://zenn.dev/ryuu/articles/brew-yarn-warning)に続きHomebrew関連の記事になります。
 
-最近、WindowsのWSL2とM1 Macbookの環境を行き来することが多く、それぞれの環境でパッケージマネージャーを使いパッケージの依存関係を管理していました。WSL2ではデフォルトで使用できる`apt` 、Macでは[3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0/)にて最近M1チップに対応した`Homebrew`というパッケージマネージャーをそれぞれ使用しています。
+最近、WindowsのWSL2とM1 Macbookの環境を行き来することが多く、それぞれの環境でパッケージマネージャーを使いパッケージの依存関係を管理していました。WSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt) 、Macでは[3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0/)にて最近M1チップに対応した[Homebrew](https://github.com/Homebrew/brew)というパッケージマネージャーをそれぞれ使用しています。
 
 それぞれのパッケージマネージャで使用するコマンドが異なるため、環境が変わったときにコマンドを暗記していても瞬間的に出てこないことがありました。そこでWSL2にもHomebrewが対応しているという情報を目にして今更ながらWSL2にHomebrewを導入しました。
 
@@ -63,7 +63,7 @@ $ sudo apt-get install build-essential curl file git
 ```
 
 :::message
-このときにインストールしている`build-essential`とは開発のビルドパッケージをまとめてインストールできるもののようです
+このときにインストールしているbuild-essentialとは開発のビルドパッケージをまとめてインストールできるもののようです
 :::
 
 ## インストールスクリプトの実行
@@ -91,7 +91,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 ターミナルに`==> Installation successful!`と表示されれるとインストールが完了です。
 
-しかしまだPATH関連でWarningが表示されており、`brewコマンド`を使うことができません。
+しかしまだPATH関連でWarningが表示されており、brewコマンドを使うことができません。
 ターミナルに表示されたNext stepsと公式ドキュメントを参考に手動で初期設定をしていきます。
 
 # Homebrewの初期設定
@@ -158,7 +158,7 @@ $ which tree
 /home/linuxbrew/.linuxbrew/bin/tree
 ```
 
-パスを見て分かるように、WSLにインストールしたHomebrewではパッケージを`/home/linuxbrew/.linuxbrew`の配下で管理します。
+パスを見て分かるように、WSLにインストールしたHomebrewではパッケージを/home/linuxbrew/.linuxbrewの配下で管理します。
 ホームディレクトリ配下で完結するため、**システム環境をあまり汚さない**のがいいですね。
 
 # さいごに
