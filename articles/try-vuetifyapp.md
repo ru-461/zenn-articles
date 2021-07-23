@@ -37,17 +37,17 @@ https://github.com/ryu-461/tweet-counter
 
 # Vuetify とは？
 
-`Vuetify`とはVue向けUIライブラリになります。Googleが近年採用しているマテリアルデザインを採用しており、誰でも簡単にモダンなデザインのコンポーネントを使うことができます。公式サイトは[Vuetify](https://vuetifyjs.com/en/)になります。サイト内にもサンプルが多くあるため、一通り見るだけでもどんなコンポーネントがあるかわかり見やすいドキュメントになっています。
+VuetifyとはVue向けUIライブラリになります。Googleが近年採用しているマテリアルデザインを採用しており、誰でも簡単にモダンなデザインのコンポーネントを使うことができます。公式サイトは[Vuetify](https://vuetifyjs.com/en/)になります。サイト内にもサンプルが多くあるため、一通り見るだけでもどんなコンポーネントがあるかわかり見やすいドキュメントになっています。
 
 # プロジェクト作成
 
-Vue CLIを使い`vue createコマンド`でVueのプロジェクトを作成します。
+Vue CLIを使い`vue create`でVueのプロジェクトを作成します。
 
 ```shell
 $ vue create counter-app
 ```
 
-プロジェクト名はとりあえず`counter-app`とします。
+プロジェクト名はとりあえず「counter-app」とします。
 
 ```shell
 Vue CLI v4.5.9
@@ -70,7 +70,7 @@ Vue CLI v4.5.9
 ```
 
 このような表示がでればプロジェクトの作成に成功しています。
-画面の指示に従い、作成された`couter-app`ディレクトリに移動します。
+画面の指示に従い、作成されたcouter-appディレクトリに移動します。
 
 ```shell
 $ npm run serve
@@ -83,7 +83,7 @@ $ npm run serve
 
 ![Vue Welcome Pageの画像](https://storage.googleapis.com/zenn-user-upload/587mvjvowie18447ki2arjz89ldi)
 
-上のWelcomeページで表示されているテンプレートはsrcディレクトリ内の`App.vue`ファイルに記述されている内容になります。
+上のWelcomeページで表示されているテンプレートはsrcディレクトリ内のApp.vueファイルに記述されている内容になります。
 
 ```vue:src/App.vue
 <template>
@@ -140,7 +140,7 @@ $ vue add vuetify
   Configure (advanced)
 ```
 
-ここでもプロジェクト生成時と同じく色々と聞かれますが推奨となっている`Default`を選択します。
+ここでもプロジェクト生成時と同じく色々と聞かれますが推奨となっているDefaultを選択します。
 
 これでVuetifyを使う準備ができました。
 
@@ -148,7 +148,7 @@ $ vue add vuetify
 
 ![Vuetify Welcom Pageの画像](https://storage.googleapis.com/zenn-user-upload/rx00t2tqd9nbeooi7m7ta3yiultz)
 
-`App.vue`を開くと中身がVuetifyのものに変わっています。
+App.vueを開くと中身がVuetifyのものに変わっています。
 
 ```vue:src/App.vue
 <template>
@@ -214,7 +214,7 @@ export default {
 ```
 
 ぱっと見るととても複雑に見えますが、`<template>`の中にVuetifyで定義されているコンポーネントを配置して表示しているものになります。実際にコーディングしたほうが理解しやすいので、とりあえずページをまっさらな状態に戻して進めます。
-`App.vue`を以下のように書き換えてサーバーで確認します。
+App.vueを以下のように書き換えてサーバーで確認します。
 
 ```vue:src/App.vue
 <template>
@@ -257,8 +257,10 @@ export default {
 ```
 
 ブラウザ上で確認すると以下のようになります。
+
 ![初期表示の画像](https://storage.googleapis.com/zenn-user-upload/3nj9bwhuxgcc5j6r6dsc95fm6m7e)
-最終的に、テキストエリアのしたに配置した`◯文字`へ入力できる残り文字を表示したいです。
+
+最終的に、テキストエリアのしたに配置した◯文字へ入力できる残り文字を表示したいです。
 Vue.jsにはリアクティブに値を書き換える機能があり、その機能を使うことで簡単にリアルタイムで値を変更したり、計算できます。
 今回は文字を動的に変更したいので以下のように書き換えます。
 
@@ -287,8 +289,8 @@ export default {
 </script>
 ```
 
-テキストエリアに文字が入力されたときに、data()の中にあるツイートプロパティをもとに文字数を計算してくれるようになります。
-`<h2>`の中の文章に`{{ }}`という見慣れない記法が含まれていますが、これは`マスタッシュ記法`と呼ばれ、dataの変数をコンポーネントやテンプレートに埋め込んで表示できるVueの特徴的な記法になります。Twitterでは140文字の制限があるため、残り入力可能な文字数を求めるために、`{{ 140 - tweet.length }}`としています。変数名.lengthとすることで入力されている文字数を取得できます。入力されている文字数はリアルタイムでツイートに反映されるため、リアルタイムに残り文字数を計算してくれるようになります。`v-model`に対して`.trim`とすることで空白を取り除くことができます。
+テキストエリアに文字が入力されたときに、`data()`の中にあるツイートプロパティをもとに文字数を計算してくれるようになります。
+`<h2>`の中に`{{ }}`という見慣れない記法が含まれていますが、これは「マスタッシュ記法」と呼ばれ、dataの変数をコンポーネントやテンプレートに埋め込んで表示できるVueの特徴的な記法になります。Twitterでは140文字の制限があるため、残り入力可能な文字数を求めるために、`{{ 140 - tweet.length }}`としています。変数名.lengthとすることで入力されている文字数を取得できます。入力されている文字数はリアルタイムでツイートに反映されるため、リアルタイムに残り文字数を計算してくれるようになります。v-modelに対して`.trim`とすることで空白を取り除くことができます。
 
 ここまでで基礎部分が完成したので、今回導入したVuetifyを使ってスタイリングしていきます。
 
@@ -339,12 +341,12 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 ## スタイルを簡単に設定する
 
-ここまでくるとかなりWebアプリっぽくなってきました。Vuetifyではスタイルをclassで簡単に指定できる機能があり、スタイルシートを記述せずともスタイルを調整できます。背景を青にしたことで文字が少し見にくくなってしまったので文字色を白にしてみます。要素に対して`class="white--text"`とすると文字色を白にできます。ハイフンが2つ入るのに注意です。色以外にもclassで指定できるスタイルは多くあるため、ドキュメントを参考に調整してみてください。ここでは色に合わせてマージンやパディングも同時に設定できます。これは`Spacing-Helper-Class`と呼ばれ、marginを`m`、paddingを`p`としてディレクションを設定することで要素に反映されます。
+ここまでくるとかなりWebアプリっぽくなってきました。Vuetifyではスタイルをclassで簡単に指定できる機能があり、スタイルシートを記述せずともスタイルを調整できます。背景を青にしたことで文字が少し見にくくなってしまったので文字色を白にしてみます。要素に対して`class="white--text"`とすると文字色を白にできます。ハイフンが2つ入るのに注意です。色以外にもclassで指定できるスタイルは多くあるため、ドキュメントを参考に調整してみてください。ここでは色に合わせてマージンやパディングも同時に設定できます。これは「Spacing-Helper-Class」と呼ばれ、marginを`m`、paddingを`p`としてディレクションを設定することで要素に反映されます。
 
 指定できるディレクションは以下のとおりです。
 
-| ディレクション | 方向              | サイズ |
-| -------------- | ----------------- | ------ |
+| ディレクション | 方向               | サイズ |
+| -------------- | -----------------  | ------ |
 | t              | top（上方向）      | 0-12   |
 | b              | bottom（下方向）   | 0-12   |
 | l              | left（左方向）     | 0-12   |
@@ -353,7 +355,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 | y              | top&bottom（上下） | 0-12   |
 | x              | all（全方向）      | 0-12   |
 
-サイズは、1にたいして4pxずつ適用されます。要素をくっつけたい場合は0を指定することで実現できます。
+サイズは、1にたいして4pxずつ適用されます。要素同士をくっつけたい場合は0を指定することで実現できます。
 
 以上を踏まえて文字要素のスタイルを微調整していきます。
 
@@ -369,7 +371,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 付加機能としてTwitterへアクセスできるボタンを配置してみます。APIを使うことでTwitterへツイートさせることもできるようですが、今回はツイートを行わず、 Twitterのホームへリンクさせるボタンとして作成します。
 
-引き続きApp.vueに記述していきます。Vuetifyには [`v-btn`](https://vuetifyjs.com/ja/components/buttons/)というボタンコンポーネントも用意されているのでこちらを使っていきます。今回は`v-btn`を使い以下のようにしました。
+引き続きApp.vueに記述していきます。Vuetifyには [v-btn](https://vuetifyjs.com/ja/components/buttons/)というボタンコンポーネントも用意されているのでこちらを使っていきます。今回はv-btnを使い以下のようにしました。
 
 ```vue:src/App.vue
 <v-btn
@@ -385,12 +387,13 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 上のボタンをブラウザで見ると以下のようになります。
 
-ボタンの配置ができました。上の記述だけで少し立体感のあるボタンが作成されました。href対してTwitterのURL 、target="blank" としているため、ボタンをクリックするとTwitterが別タブで開かれます。ツイートする機能はないのであくまでツイートを促すだけのボタンなります。メインの機能は文字数のカウンターのため、ツイートボタンはあくまでオマケ的な位置づけです。
+ボタンの配置ができました。上の記述だけで少し立体感のあるボタンが作成されました。href対してTwitterのURL 、`target="blank"`としているため、ボタンをクリックするとTwitterが別タブで開かれます。ツイートする機能はないのであくまでツイートを促すだけのボタンなります。メインの機能は文字数のカウンターのため、ツイートボタンはあくまでオマケ的な位置づけです。
 
 ## Twitter のブランドアイコンを表示する
 
 ここまでで一通りの機能ができました。しかしこれだけだとTwitterの文字カウンターというのが少しひと目でわかりにくいのでタイトルの横にTwitterのアイコンを表示してみます。Vuetifyにはアイコンを便利に扱えるコンポーネントが用意されているため、活用します。
-今回はFontAwesomeにある[Twitter アイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
+
+今回はFontAwesomeにある[Twitterアイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
 
 VuetifyでFontAwesomeを利用するためには、あらかじめFontAwesomeのアイコンをインストールする必要があります。
 ターミナル上でnpmを使いインストールしていきます。
@@ -401,7 +404,7 @@ npm install  @fortawesome/free-brands-svg-icons
 npm install  @fortawesome/vue-fontawesome
 ```
 
-インストールが完了したら`src/main.js`に以下の記述をしてアイコンをインポートします。
+インストールが完了したらsrc/main.jsに以下の記述をしてアイコンをインポートします。
 
 ```javascript:src/main.js
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -413,9 +416,9 @@ library.add(faTwitter)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 ```
 
-Twitterのアイコンを使いたいため、インストールした`free-brands-svg-icons`からTwitterのブランドアイコン`faTwitter`をインポートしてライブラリに追加しています。`FontAwesomeIconコンポーネント`を定義してApp.vueで呼び出せるようにします。
+Twitterのアイコンを使いたいため、インストールしたfree-brands-svg-iconsからTwitterのブランドアイコンfaTwitterをインポートしてライブラリに追加しています。FontAwesomeIconコンポーネントを定義してApp.vueで呼び出せるようにします。
 
-最後に`App.vue`の方でFontAwesomeIconコンポーネントを使いタイトルの横にTwitterのアイコンを描画します。
+最後にApp.vueでFontAwesomeIconコンポーネントを使いタイトルの横にTwitterのアイコンを描画します。
 
 ```vue:src/App.vue
 <h1 class="white--text my-8">文字カウンター for Twitter <font-awesome-icon :icon="['fab','twitter']"/></h1>
