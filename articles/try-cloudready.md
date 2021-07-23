@@ -48,7 +48,7 @@ CloudReadyが正式にChromeOSとして生まれ変わる日も近いみたい�
 まずChromeOS（CloudReady）をWindows上で動作させるために仮想マシンを用意します。
 仮想マシンを利用することでWindowsの環境を汚すことなく、OSを動かすことが可能となります。
 
-CloudReadyを仮想マシンで利用する場合は`VMware Workstation Player`での動作のみサポートされているためVMware Workstation Playerを使用します。`VirtualBox`では上手く動作しない模様です。
+CloudReadyを仮想マシンで利用する場合はVMware Workstation Playerでの動作のみサポートされているためVMware Workstation Playerを使用します。VirtualBoxでは上手く動作しない模様です。
 
 VMware Workstation Playerは以下のページからダウンロード可能です。
 
@@ -79,7 +79,7 @@ https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMwar
 
 先程、インストールしたVMwareにCloudReadyのイメージを導入していきます。
 
-VMwareのトップ画面から`仮想マシンを開く`をクリック。
+VMwareのトップ画面から仮想マシンを開くをクリック。
 
 ![仮想マシンを開くボタンの画像](https://storage.googleapis.com/zenn-user-upload/2a737uds16ia5ssuglosc0dkzsrf)
 
@@ -99,7 +99,7 @@ VMwareのトップ画面から`仮想マシンを開く`をクリック。
 
 ## CloudReady の起動
 
-`仮想マシンの再生`ボタンから起動できます。
+仮想マシンの再生ボタンから起動できます。
 
 ![CloudReadyようこそ画面の画像](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
 *ようこそ！*
@@ -108,7 +108,7 @@ VMwareのトップ画面から`仮想マシンを開く`をクリック。
 
 ![言語とキーボード変更画面の画像](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) *使用しているキーボードが JIS 配列のため日本語を選択*
 
-VMwareは`Ctrl + Alt`でホストOS（Windows）とゲストOS（CloudReady）を行き来できるのが便利です。
+VMwareは`Ctrl`＋`Alt`でホストOS（Windows）とゲストOS（CloudReady）を行き来できるのが便利です。
 
 初期設定でGoogleのアカウントにログインするとCloudReadyのデスクトップが表示されます。
 
@@ -125,16 +125,16 @@ VMwareは`Ctrl + Alt`でホストOS（Windows）とゲストOS（CloudReady）�
 ## インターネットに繋がらない
 
 私はPCを有線接続（イーサネット）で接続していたのですが、CloudReadyの初期設定で上手く接続ができませんでした。
-ChromeOSの初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、`仮想マシンの設定の編集`から`ネットワークアダプタ`を選択し。
+ChromeOSの初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、仮想マシンの設定の編集からネットワークアダプタを選択し。
 
 ![ブリッジ接続からNATへ変更する様子](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
 
-`デフォルトのブリッジからNATに変更`することですんなりと繋がるようになりました。
+**デフォルトのブリッジからNATに変更**することですんなりと繋がるようになりました。
 繋がらない場合はお使いの環境に合わせてデフォルトから適宜設定を変えてみてください。
 
 ## ロック解除に毎回パスワードを打つのが大変
 
-デフォルトではGoogleのパスワードを利用してロックを解除するのですが、私はGoogleのログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。`設定 → ユーザー → 画面ロック`で画面ロックの解除の方法をパスワードから6ケタのPINに変更できます。
+デフォルトではGoogleのパスワードを利用してロックを解除するのですが、私はGoogleのログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。設定 → ユーザー → 画面ロックで画面ロックの解除方法をパスワードから6ケタのPINに変更できます。
 
 ![PINを設定する様子](https://storage.googleapis.com/zenn-user-upload/9xcdmioqwe4x7ejftl9p21meed9c)
 
@@ -147,7 +147,7 @@ PINにしてからストレスなくロックの解除ができるようにな�
 # Linux が起動できない問題
 
 CloudReady（ChromeOS）にはターミナル機能とLinuxの機能が搭載されています。
-ターミナルは標準で搭載されており、`Ctrl + Shift + t`で呼び出すことができます。
+ターミナルは標準で搭載されており、`Ctrl`＋`Shift`＋`t`で呼び出すことができます。
 
 ![CloudReadyのターミナル画像](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
 
