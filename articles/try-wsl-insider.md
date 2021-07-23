@@ -18,7 +18,7 @@ Mac上でWindowsを動かすといったことがIntel製CPUを搭載してい�
 
 一般的にライセンスを購入して使用できるようになるかはまだ定かではありませんが、現状arm Preview版のWindows10でWSL2をどこまで使えるのかを試してみました。
 
-結論から述べると、現状の環境ではWSL1は起動しますが、WSL2は`起動させることができませんでした` 。今回は検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
+結論から述べると、現状の環境ではWSL1は起動しますが、WSL2は**起動させることができませんでした**。今回は検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
 
 # 検証環境
 
@@ -34,13 +34,13 @@ Windows Insider Programに参加することで以下のページからPreview�
 
 https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64?wa=wsignin1.0
 
-入手したWindowsイメージは`VHDXファイル`となっており、Parallels Destopにて選択することで起動させることができます。
+入手したWindowsイメージはVHDXファイルとなっており、Parallels Destopにて選択することで起動させることができます。
 
 ParallelsDesktopは以下のページからダウンロードしてインストールできます。
 
 https://www.parallels.com/jp/products/desktop/trial/
 
-ParallelsDesktopは有料のソフトですが、無料で`14日間のトライアル版`を使用できます。永久ライセンスはバージョンごとに買い切りとなっておりバージョンアップ時に買い直す必要があります。また現在はサブスクリプション形式でのライセンス購入もできるようです。
+ParallelsDesktopは有料のソフトですが、**無料で14日間のトライアル版を使用できます**。永久ライセンスはバージョンごとに買い切りとなっておりバージョンアップ時に買い直す必要があります。また現在はサブスクリプション形式でのライセンス購入もできるようです。
 
 ## バージョン情報を確認
 
@@ -56,7 +56,7 @@ Mac上で仮想化したWindows10から見える情報はこのようになっ�
 
 # WSL2を導入する
 
-WSLのインストールは最新のWindows Previewにおいて`コマンド1つ`でインストールが可能になりました。
+WSLのインストールは最新のWindows Previewにおいてコマンド1つでインストールが可能になりました。
 
 WSLの公式のドキュメントに日本語で詳しく説明があります。
 
@@ -96,7 +96,7 @@ Linux 用 Windows サブシステムには、ディストリビューション�
 https://aka.ms/wslstore
 ```
 
-今回は、UbuntuをWSL2のディストリビューションとしてインストールしてみます。以下のコマンドでインストールできるディストリビューションを表示し`-dオプション`を指定してインストールします。
+今回は、UbuntuをWSL2のディストリビューションとしてインストールしてみます。以下のコマンドでインストールできるディストリビューションを表示しオプション`-d`を指定してインストールします。
 
 ```shell:コマンドプロンプト
 > wsl --list --online
@@ -127,7 +127,7 @@ WSL2にUbuntu 20.04 LTSがインストールできたので起動してみます
 
 このままエラーで引き下がれないので、どうにか起動できないか試行錯誤してみました。
 
-よくあるエラーとして、カーネルの更新がされていないというのがあるようです。そこで半信半疑ながらに公式のガイドを参考にカーネルの更新をしてみます。`wsl --install`コマンドを実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
+よくあるエラーとして、カーネルの更新がされていないというのがあるようです。そこで半信半疑ながらに公式のガイドを参考にカーネルの更新をしてみます。`wsl --install`を実行したときにカーネルは更新されているのですが、念の為もう一度更新をインストールしてみます。
 
 :::message
 カーネルの更新プログラムパッケージはx64向けとARM64向けで分かれています。今回使用しているのはARM64アーキテクチャのためARM64用のカーネル更新プログラムパッケージを選択しインストールします。
@@ -140,14 +140,12 @@ WSL2にUbuntu 20.04 LTSがインストールできたので起動してみます
 【参考記事】
 https://sugamasao.hatenablog.com/entry/2020/06/09/090000
 
-Paralles Desktopでは設定から`「ネスト化された仮想化を有効にする」`という項目を有効にする必要があるようです。
+Paralles Desktopでは**設定から「ネスト化された仮想化を有効にする」という項目を有効にする必要があるようです**。
 
-現在、Paralles Desktopの通常版(Standard Edition)を使用しているのですが、設定項目を探してみても該当項目は見当りませんでした。
+現在、Paralles Desktopの通常版（Standard Edition）を使用しているのですが、設定項目を探してみても該当項目は見当りませんでした。
 
 ![Standard Editionでの設定表示](https://storage.googleapis.com/zenn-user-upload/8mbsbqfe6yp54ocs3c3oq7pdgp2b)
 *参考記事を見るとここに項目があるはずだが...*
-
-https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User's%20Guide/37830.html
 
 少し古い情報となりますが、ネスト化された仮想化サポートはPro Editionでのみのサポートという情報があったため、勢いでPro Editionに変更して検証してみます。
 
@@ -166,7 +164,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 本題はWSL2の実現なのですが、この環境でWSL1が動作することを検証中に確認できたので補足としてまとめます。
 
-`wsl --install`コマンドの実行直後はWSL2がデフォルトとして設定されているため、以下のコマンドでWSL1をデフォルトのバージョンとして設定することでをWSL1として起動できます。
+`wsl --install`の実行直後はWSL2がデフォルトとして設定されているため、以下のコマンドでWSL1をデフォルトのバージョンとして設定することでをWSL1として起動できます。
 
 ```shell:コマンドプロンプト
 # バージョン 1 をデフォルトにする
@@ -177,7 +175,7 @@ https://download.parallels.com/desktop/v12/docs/ja_JP/Parallels%20Desktop%20User
 
 ![WSL1として設定した様子](https://storage.googleapis.com/zenn-user-upload/6jz5d1x04dj1s3a69bujdeax1082)
 
-WSL1とWSL2の`違い`は以下のページでまとめられています。
+WSL1とWSL2の違いは以下のページでまとめられています。
 
 https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
