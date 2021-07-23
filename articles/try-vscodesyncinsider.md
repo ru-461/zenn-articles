@@ -10,7 +10,7 @@ published: true
 
 Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com/)の[version 1.48](https://code.visualstudio.com/updates/v1_48)にて設定同期機能（Settings Sync）が実装され話題となりました。
 
-VSCodeには、`Stable release`と、`Inseders release`という２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
+VSCodeには、Stable releaseと、Inseders releaseという２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
 
 普段、私達がよく目にする青いVSCodeはStable版となり、安定版と呼ばれています。Insidera版少し緑がかった色のアイコンをしており、色で区別がつくようになっています。
 
@@ -39,9 +39,9 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 
 ## Macの新CPU アーキテクチャ問題
 
-昨年末発売されたMacBook Air、MacBook Pro、Mac miniには、従来の`Intel 製 CPU（x64）`ではなく、Appleが独自開発した新CPU（arm64）が搭載されています。このことにより、CPUのアーキテクチャが`ARM`に置き換わったため、従来のIntelベースのアプリを動かすために`Rosetta 2`という変換ツールを介してアプリを動かすことになります。
+昨年末発売されたMacBook Air、MacBook Pro、Mac miniには、従来のIntel製CPU（x64）ではなく、Appleが独自開発した新CPU（arm64）が搭載されています。このことにより、CPUのアーキテクチャがARMに置き換わったため、従来のIntelベースのアプリを動かすためにRosetta 2という変換ツールを介してアプリを動かすことになります。
 
-`M1 Macに最適化`という言葉をよく聞くようになりましたが、これはアプリが`ARMアーキテクチャ`に対応し、特別な変換などをしなくともそのまま動かせるということになります。つまりM1チップからするとネイティブな環境です。ネイティブというだけあり、パーフォーマンスやメモリの使用量などもかなり改善され、M1チップのパワーを最大限に活用することも可能となります。
+M1 Macに最適化という言葉をよく聞くようになりましたが、これはアプリがARMアーキテクチャに対応し、特別な変換などをしなくともそのまま動かせるということになります。つまりM1チップからするとネイティブな環境です。ネイティブというだけあり、パーフォーマンスやメモリの使用量などもかなり改善され、M1チップのパワーを最大限に活用することも可能となります。
 
 ## VSCode Insidersが一足早くM1対応するも、しかし...
 
@@ -87,11 +87,11 @@ Stable版とInsiders版で設定の同期は可能ですが、同期した際に
 ![同期する項目を選択する様子](https://storage.googleapis.com/zenn-user-upload/uo73sd23a1x1pxzwonx9r3cc3d53)
 
 :::message
-ショートカットキーは各プラットフォームごとに管理されるようです
+カスタマイズしたショートカットキーは各プラットフォームごとに管理されるようです
 :::
 
-右上の`サインインしてオンにする`からアカウントへログインします。
-サインインには`Microsoftアカウント`もしくは`GitHubアカウント`のどちらかが必要になります。
+右上の「サインインしてオンにする」からアカウントへログインします。
+サインインにはMicrosoftアカウントもしくはGitHubアカウントのどちらかが必要になります。
 アカウント用意しVSCodeの指示に従うことで簡単にサインインできます。
 
 ![使用するアカウントの選択画面](https://storage.googleapis.com/zenn-user-upload/zddtezfrdvcj9hbbfm7hj0zaqh3y)
@@ -126,7 +126,7 @@ Mac側にInsiders版のVSCodeをインストールし、Windows版（Stable版�
 *Windows（Stable 版） ・ MacBook Pro（Insider 版）*
 
 今回は起こりませんでしたが、同期を取り込む側で先に同期データが存在していた場合、設定の競合が発生します。
-その場合は一旦`設定の同期をオフ → 全てのデバイスで同期をオフにし、クラウドから同期データを消去します。`へチェックし同期機能をオフ。もう一度設定の同期機能をオンにすることで解決します。
+その場合は一旦設定の同期をオフ → 全てのデバイスで同期をオフにし、もう一度設定の同期機能をオンにすることで解決します。
 
 ![同期オフの確認画面](https://storage.googleapis.com/zenn-user-upload/ckks1sdedjjg25gz6spuvogalsgq)
 
