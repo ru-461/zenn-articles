@@ -69,7 +69,7 @@ alias zenn='cd ~/Documents/my-zenn-contents'
 
 移動先に絶対パス（フルパス）を指定しているため、どのディレクトリで作業していても、`zenn`と打つだけですぐにコンテンツ管理ディレクトリへ移動します。
 
-![コンテンツ管理ディレクトリに移動する様子](https://storage.googleapis.com/zenn-user-upload/e84blxcz62h1s2s92vyq9e2ecyul)
+![コンテンツ管理ディレクトリに移動する様子](/images/alias-of-zenncli/image01.gif)
 
 私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com/)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
 

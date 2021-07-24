@@ -23,7 +23,7 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 すでにMacにインストールしているアプリの中でM1チップに最適化されているのかはアクティビティモニタからアーキテクチャ表示を見ることで判別できます。調べたいアプリを起動している状態でアクティビティモニタ.appを実行します。
 プロセスの中にあるアーキテクチャの項目に**Apple**と表示されていればそのアプリはM１Macに**最適化されている**といえます。また従来のアーキテクチャ（x64）で動作しているアプリは**Intel**と表示されます。
 
-![プロセスを見て調べる様子](https://storage.googleapis.com/zenn-user-upload/tfsrasc20r67jzy1unzbkbbubgts)
+![プロセスを見て調べる様子](/images/check-m1apps/image01.png)
 
 ***プロセスごとにアーキテクチャを確認できる***
 これで1つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこでiMobie M1 App Checkerというツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
@@ -38,11 +38,11 @@ $ brew install --cask imobie-m1-app-checker
 
 アプリを起動させるとこのような画面が表示されます。
 
-![M1-App-Checkerが起動した様子](https://storage.googleapis.com/zenn-user-upload/0si9fjy3uizcqutzipl5u9wqmgs2)
+![M1-App-Checkerが起動した様子](/images/check-m1apps/image02.png)
 
 アプリケーションがインストールされているディレクトリ（デフォルトでは/Applications）を確認して「チェック」をクリックします。するとチェック結果が表示されます。
 
-![M1-App-Checkの結果画面](https://storage.googleapis.com/zenn-user-upload/myi4j4psazwex1sm3qdo6384ufmz)
+![M1-App-Checkの結果画面](/images/check-m1apps/image03.png)
 *AppleSilicon・UniversalがM1 Macに最適化済み*
 
 アプリ名の右側にM1 Macへの対応状況が表示されます。この中でIntel 64と表示されているものがRosetta2を使用して動作しているアプリ、AppleSiliconに未対応のアプリとなります。このように一瞬でAppleSiliconに対応しているかしていないかをすぐに確認できます。
@@ -55,13 +55,13 @@ $ brew install --cask imobie-m1-app-checker
 
 https://www.imobie.jp/m1-app-checker/?ref=m1
 
-![M1-App-Checkerが提供するリスト画像](https://storage.googleapis.com/zenn-user-upload/b73mxxgsgf4rhxda4g5q37e5lwbo)
+![M1-App-Checkerが提供するリスト画像](/images/check-m1apps/image04.png)
 
 サイトの中段にリストがあり検索ボックスからアプリのAppleSilicon対応状況を調べることができます。ただ全体的にアプリの情報が他のサイトに比べて乏しく、検索しても見つからないアプリもあります。そこで以下で紹介するサイトも合わせて参照することをおすすめします。アプリが見つからない場合はリクエストもできるようです。
 
 ## Does it ARM？
 
-![Does it ARM?のページ画像](https://storage.googleapis.com/zenn-user-upload/0wwsb2h4po7g1kurx201gbyqscpz)
+![Does it ARM?のページ画像](/images/check-m1apps/image05.png)
 
 https://doesitarm.com/
 
@@ -69,7 +69,7 @@ https://doesitarm.com/
 
 ## Is Apple silicon ready？
 
-![Is Apple silicon ready？のページ画像](https://storage.googleapis.com/zenn-user-upload/3j4hp9lazkmwehywuttx7zobzu2d)
+![Is Apple silicon ready？のページ画像](/images/check-m1apps/image06.png)
 
 https://isapplesiliconready.com/jp
 
