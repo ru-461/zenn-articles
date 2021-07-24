@@ -21,7 +21,7 @@ Macには[Homebrew](https://brew.sh/index_ja)という強力なパッケージ�
 今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh/)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
 
 [Flutter の公式のドキュメント](https://flutter.dev/docs/get-started/install/windows)でも紹介されていますが、Flutterを公式サイトからダウンロードして、ローカルに配置、システム環境変数にFlutterのパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作してFlutterのアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
-## Flutter とは
+## Flutterとは
 
 https://flutter.dev/
 
@@ -38,7 +38,7 @@ OSにはWindows10を使用しています。
 | Android Studio | 4.1.2.0 |
 | Flutter | 2.0.4 |
 
-# Windows Package Manager の準備
+# Windows Package Managerの準備
 
 Windows Package Managerを使用してコマンドでAndroid Studioをインストールしていきます。
 Windows Package Manager（winget-cli）はMicrosoft Storeからアプリインストーラーを更新することで使用できるようになります。
@@ -49,7 +49,7 @@ https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3
 
 インストールページが開かれます。
 
-![アプリインストーラーの詳細情報の画像](https://storage.googleapis.com/zenn-user-upload/fn77b126s2ljhedbmolu1yerp56z)
+![アプリインストーラーの詳細情報の画像](/images/flutter-with-commandline/image01.png)
 *すでに更新されている場合はこのようになります*
 
 インストールが終わったらPowerShellを**管理者権限で起動**します。
@@ -114,10 +114,10 @@ Downloading https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/an
 
 Windowsのスタートメニューを確認するとAndroid Studioがインストールているのが確認できます。
 
-![スタートメニューからAndroid Studioを確認した様子](https://storage.googleapis.com/zenn-user-upload/ap161h386hbtb8xs86ggwyo5q14u)
+![スタートメニューからAndroid Studioを確認した様子](/images/flutter-with-commandline/image02.png)
 
 公式サイトからインストーラーをダウンロードしてローカルで実行、GUIをポチポチとすることなくAndroid Stuidoをインストールできました。インストールに時間もそれほどかからないです。
-# Flutter の導入
+# Flutterの導入
 
 ここまでコマンドだけでAndroid Studioをインストールできました。続いてScoopというパッケージマネージャーを導入してFlutterと依存関係をまとめて導入します。
 ScoopとはWindows向けのパッケージマネージャーの1つでパッケージ管理に管理者権限を使わないという特徴を持ちます。
@@ -130,7 +130,7 @@ https://scoop.sh/
 【GitHub】
 https://github.com/lukesampson/scoop
 
-## Scoop のインストール
+## Scoopのインストール
 
 インストールするために以下のスクリプトをPowerShellから実行します。
 
@@ -156,7 +156,7 @@ Usage: scoop <command> [<args>]
 
 コマンドの使い方と使用可能なオプションが表示されます。
 
-## Flutter を Scoop からインストール
+## FlutterをScoopからインストール
 
 Scoopコマンドが使えることを確認できたら、続けてFlutterを導入します。
 Scoopには、**Bucket**という概念が存在し、Bucketを追加することでインストールできるアプリを増やすことができます。デフォルトでは`main Bucket`しか追加されていません。
@@ -234,11 +234,11 @@ No platform detected. Please select a platform to install [Default: 24]:
 
 しかし、doctorコマンドを実行したときにAndroid toolchainでエラーがでますので、Android Studio側で修正していきます。
 
-# Android Studio の初期設定
+# Android Studioの初期設定
 
 最初に、WingetでインストールしたAndroid Studioを起動します。最初の設定でAndroid SDKが見つからないとエラーになります。
 
-![Android SDKのエラー画面](https://storage.googleapis.com/zenn-user-upload/svy0zfj5pariecx1pgxb1xxzdzpp)
+![Android SDKのエラー画面](/images/flutter-with-commandline/image03.png)
 
 ここでAndroid SDKの場所を設定してあげます。
 Scoopでインストールしたものは~\scoop\の中にすべてまとめられています。
@@ -254,7 +254,7 @@ C:\Users\user\scoop\apps\android-sdk\current
 
 Android SDK Location:に上のコマンドで取得したSDKへのフルパスを指定し続行します。
 
-![Android SDKのパスを指定する様子](https://storage.googleapis.com/zenn-user-upload/tydpgb49kcjlldov0enf5odlava9)
+![Android SDKのパスを指定する様子](/images/flutter-with-commandline/image04.png)
 
 パスを指定するとその他必要なコンポーネントのダウンロードが始まるので終わるまで待ちます。
 Android Studioのメインメニューが表示されればセットアップは完了です。
@@ -278,27 +278,27 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 もう一度`flutter doctor`を実行して`• No issues found!`と出力されればFlutterの導入は完了です。
 
-## Flutter 開発プラグインの導入
+## Flutter開発プラグインの導入
 
 Flutterのプロジェクトを作成するためにプラグインが必要になるためインストールします。
 Android Studioのメニュー画面から「Configure」→「Plugins」と進みます。
 
-![Pluginを選択する様子](https://storage.googleapis.com/zenn-user-upload/67u844h1vme47mw0s99zn5izti78)
+![Pluginを選択する様子](/images/flutter-with-commandline/image05.png)
 
 表示されるダイアログの中でタブを「Marketplace」に切り替えて「Flutter」と検索してインストールします。
 
-![Flutterプラグインをインストールする様子](https://storage.googleapis.com/zenn-user-upload/lfa6bx1hlltz39mb5zwf1b6d1saa)
+![Flutterプラグインをインストールする様子](/images/flutter-with-commandline/image06.png)
 
 これでFlutterの開発プラグインの導入は完了です。合わせて **Dartのプラグインも必要になるのですが Flutterのプラグインをインストールするときに合わせてインストールされる**ので気にしなくて問題ありません。
 
 Android Studioを再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規Flutterプロジェクトを作成できるようになります。うまく反映されない場合はプラグイン画面から「Dart」と「Flutter」プラグインが**Enable**になっていることを再度確認してください。
 
-![再起動したあとのメインメニュー](https://storage.googleapis.com/zenn-user-upload/fvqw55wf58miyulelw3v82ek1qik)
+![再起動したあとのメインメニュー](/images/flutter-with-commandline/image07.png)
 *Create New Flutter Projectが追加された*
 
 画面の指示に従ってプロジェクト作成をしていくのですが、途中でFlutter SDKのパスを指定する箇所があります。
 
-![SDKへのパスを指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/0wlvhw8a7ds549qvv8sdxfy74ddx)
+![SDKへのパスを指定する画面の画像](/images/flutter-with-commandline/image08.png)
 *デフォルトでSDKへのパスが指定されていないので入力*
 
 インストールしたFlutter SDKのパスはAndroid SDKと同じように以下のコマンドで取得できます。
@@ -314,13 +314,13 @@ Flutter SDK pathのところにC:\Users\ユーザー名\scoop\app\scoop\apps\flu
 
 そのまま続行すると新規FlutterプロジェクトがAndroid Studio上で開かれます。
 
-# Flutter アプリを実行する
+# Flutterアプリを実行する
 
 Android Studio上でプロジェクトが開かれるのを確認したら、実際に実行できるか試します。
 
 上部のメニューからChrome（Dev）を選択して`Shift`＋`F10`で実行します。
 
-![ChromeでFlutterが実行される様子](https://storage.googleapis.com/zenn-user-upload/ydtjzfg7l2yes4wn5retozzl2xyy)
+![ChromeでFlutterが実行される様子](/images/flutter-with-commandline/image09.png)
 *Flutter Demo Home Page*
 
 自動的にChrome上でFlutterのデモアプリが起動しました。ホットリロードに対応しているためコードの変更がリアルタイムに反映されます。
