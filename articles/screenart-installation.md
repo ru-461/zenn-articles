@@ -15,7 +15,7 @@ LinuxやUNIXには数多くのパッケージが存在しますが、中にはCL
 
 Ubuntu系のOSを使っている人がターミナルに以下のようなロゴを表示しているのを見たことがあるという人も多いのではないでしょうか。
 
-![Ubuntuのロゴ](https://storage.googleapis.com/zenn-user-upload/c0ni1jbu3vq81ju8zdz9r35km3jf)
+![Ubuntuのロゴ](/images/screenart-installation/image01.png)
 *有名なUbuntuのスクリーンアート*
 
 これは`screenfetch`を使って表示しているUbuntuロゴのスクリーンアートになります。コマンドを実行することでディストリビューションのロゴと、端末の詳細が合わせて表示されます。開発に使用するコマンドではないため、小ネタ的な立ち位置のコマンドにはなりますが、ターミナル上でカラフルなロゴがアスキーアートとして大きく表示されているのはかっこいいですよね。
@@ -64,14 +64,14 @@ $ screenfetch
 
 例えば、Ubuntu-20.04 LTSをインストールしているWSL2上で実行した場合は。
 
-![Ubuntuのロゴを表示している様子](https://storage.googleapis.com/zenn-user-upload/qc95d5ddo5vqkqm2cjur5hqji1jz)
+![Ubuntuのロゴを表示している様子](/images/screenart-installation/image02.png)
 
 このようにおなじみのUbuntuのロゴがカラフルに表示されます。
 画面の左には、ロゴのアスキーアート。右にはコマンドを実行している端末の詳細情報が表示されます。ユーザー名は隠していますが、端末の詳細についてかなり細かく表示されるのが驚きです。
 
 ## macOS
 
-![macで実行した様子](https://storage.googleapis.com/zenn-user-upload/hxuxn19bii0krdru2nso6ojnreqs)
+![macで実行した様子](/images/screenart-installation/image03.png)
 *macOSはUnix系のOSであるということがロゴからもわかりますね*
 
 Macのターミナル上でコマンドを入力したときは「UNIX」という文字列が大きく表示されます。とてもシンプルでかっこいいですね。M1チップ搭載のMacBook上で実行しているからなのかわかりませんが、端末情報の表示がうまくいきませんでした。その他エラーが出ていますがコマンドはうまく実行できロゴが表示されました。実行時のエラーは`-E`オプションを渡すことで非表示にできます。
@@ -82,7 +82,7 @@ Macのターミナル上でコマンドを入力したときは「UNIX」とい�
 
 Android OS上で動作するターミナル環境[Termux](https://play.google.com/store/apps/details?id=com.termux&hl=ja&gl=US)にコマンドをインストールして実行しました。
 
-![Termuxで実行した様子](https://storage.googleapis.com/zenn-user-upload/ggvorr9quy47xh8ljnqwpzucq3cc)
+![Termuxで実行した様子](/images/screenart-installation/image04.png)
 *端末の機種名やOS、メモリまでしっかりと表示されている*
 
 TermuxはAndroid端末で動作するターミナルエミュレータになります。非Rootな環境でも手軽にLinuxのターミナルを触れるということで使っている人も多いアプリです。パッケージマネージャとしてデフォルトでaptが使えるため、 aptコマンドを使ってscreenfetchのインストールを行いました。コマンドを実行したターミナル上にはAndroidのキャラクターであるドロイド君が表示されています。ちょこんとターミナルに表示されている姿がなんともかわいいですね。
@@ -99,7 +99,7 @@ TermuxはAndroid端末で動作するターミナルエミュレータになり�
 $ screenfetch -D 'CentOS'
 ```
 
-![CentOSのロゴを表示した様子](https://storage.googleapis.com/zenn-user-upload/kzeamubg5rhtesr2fdhtl2thujaz)
+![CentOSのロゴを表示した様子](/images/screenart-installation/image05.png)
 
 オプションを付けたことでUbuntuが動作する環境でもCentOSのロゴと端末情報を表示できました。
 引数のディストリビューション名にはCentOSの他にもおなじみのRed Hatやdebian、Arch Linux、Mintなどを指定できます。

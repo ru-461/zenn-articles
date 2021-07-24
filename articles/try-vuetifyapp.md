@@ -81,7 +81,7 @@ $ npm run serve
 
 ブラウザでアクセスし、以下の画面が表示されればプロジェクトが正しく生成されています。
 
-![Vue Welcome Pageの画像](https://storage.googleapis.com/zenn-user-upload/587mvjvowie18447ki2arjz89ldi)
+![Vue Welcome Pageの画像](/images/try-vuetifyapp/image01.png)
 
 上のWelcomeページで表示されているテンプレートはsrcディレクトリ内のApp.vueファイルに記述されている内容になります。
 
@@ -146,7 +146,7 @@ $ vue add vuetify
 
 この状態でサーバーを立ち上げアクセスするとVue.js AppのWelcomeページからVuetifyのWelcomeページに置き換わっているのがわかります。
 
-![Vuetify Welcom Pageの画像](https://storage.googleapis.com/zenn-user-upload/rx00t2tqd9nbeooi7m7ta3yiultz)
+![Vuetify Welcom Pageの画像](/images/try-vuetifyapp/image02.png)
 
 App.vueを開くと中身がVuetifyのものに変わっています。
 
@@ -258,7 +258,7 @@ export default {
 
 ブラウザ上で確認すると以下のようになります。
 
-![初期表示の画像](https://storage.googleapis.com/zenn-user-upload/3nj9bwhuxgcc5j6r6dsc95fm6m7e)
+![初期表示の画像](/images/try-vuetifyapp/image03.png)
 
 最終的に、テキストエリアのしたに配置した◯文字へ入力できる残り文字を表示したいです。
 Vue.jsにはリアクティブに値を書き換える機能があり、その機能を使うことで簡単にリアルタイムで値を変更したり、計算できます。
@@ -324,7 +324,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 上のようにすることでテキストエリアが以下のようになります。
 
-![カスタマイズ後のテキストエリア画像](https://storage.googleapis.com/zenn-user-upload/vhw7kzwem01eo7t4znxaiuiz8o49)
+![カスタマイズ後のテキストエリア画像](/images/try-vuetifyapp/image04.png)
 
 これだけで見た目がかなり変わり、よりおしゃれになりました。
 
@@ -363,7 +363,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 文字の色を変えて、スタイルを調整を調整すると以下のようになります。
 
-![スタイル後の画面画像](https://storage.googleapis.com/zenn-user-upload/2h735x9g2acw4afxqwef9y0sd8o0)
+![スタイル後の画面画像](/images/try-vuetifyapp/image05.png)
 
 ここまでで文字数をカウントする機能とスタイリングができました。
 
@@ -383,7 +383,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
   class="mt-4">ツイートしてみる？</v-btn>
 ```
 
-![v-btn追加後の画像](https://storage.googleapis.com/zenn-user-upload/18an71n21bf6v7orxlz5mvhvlm42)
+![v-btn追加後の画像](/images/try-vuetifyapp/image06.png)
 
 上のボタンをブラウザで見ると以下のようになります。
 
@@ -426,7 +426,7 @@ Twitterのアイコンを使いたいため、インストールしたfree-brand
 
 以上のようにすることでタイトルの横にTwitterのアイコンが表示されるようになります。これでTwitterらしさを出すことができました。
 
-![完成後の画像](https://storage.googleapis.com/zenn-user-upload/ma3bdad2chposz072xv4xzo4ka9w)
+![完成後の画像](/images/try-vuetifyapp/image06.png)
 
 # さいごに
 
