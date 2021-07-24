@@ -56,16 +56,16 @@ $ sudo apt-get -y install apt-fast
 
 インストールが開始されます。Ubuntuだと途中で以下のような設定ダイアログが表示されます。
 
-![パッケージマネージャー選択画面の画像](https://storage.googleapis.com/zenn-user-upload/s9o7gsvs6amu9g0pjfzbwjxgy9r9)
+![パッケージマネージャー選択画面の画像](/images/fast-aptcommand/image01.png)
 *使用するパッケージマネージャーの選択*
 
 使用するパッケージマネージャーを選択します。apt-fastは**apt-get**、**apt**、**aptitude**の3つをデフォルトでをサポートしています。パッケージマネージャーとしてaptを使いたいため選択肢からaptを選択します。
 
-![最大の接続数を指定する画面の画像](https://storage.googleapis.com/zenn-user-upload/qdskjagjuzn7ctb2h18tgdkl5496)
+![最大の接続数を指定する画面の画像](/images/fast-aptcommand/image02.png)
 *最大接続数の指定*
 
 aria2cが使用する接続数の最大を指定します。デフォルトでも十分速いのでそのままで設定します。
-![ダイアログ表示選択の画像](https://storage.googleapis.com/zenn-user-upload/ek9a8751nq9req9s1trr0mi5yx4i)
+![ダイアログ表示選択の画像](/images/fast-aptcommand/image03.png)
 *ダウンロード前に確認ダイアログを表示するかどうかの選択*
 
 上記の画面から対話形式でパッケージマネージャーや最大コネクション数などを指定できます。ここで聞かれる質問の内容や、詳しい設定についてはあとから編集可能です。

@@ -16,7 +16,7 @@ published: true
 
 今回作成したものがこちらです。
 
-![starship x exa で作成したターミナル画像](https://storage.googleapis.com/zenn-user-upload/ci6i4zza6ar0wna6l7zwfjszmsk3)
+![starship x exa で作成したターミナル画像](/images/customize-your-terminal/image01.png)
 *プロンプトはStarship、アイコンツリー表示にexaを使用*
 
 Starshipで作業ブランチ名とNode.jsのバージョンを表示し、exaを使ってアイコン付きのツリー表示でReactのプロジェクトを開いた様子です。カラフルな表示とアイコンフォントで視認性を上げつつ、全体的にモダンな雰囲気になりました。
