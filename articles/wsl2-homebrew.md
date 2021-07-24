@@ -71,7 +71,7 @@ $ sudo apt-get install build-essential curl file git
 必要条件を満たしたらターミナル上で以下のワンライナーを実行します。
 
 これはHomebrewのトップページに表示されているワンライナーになります
-![インストールワンライナーの画像](https://storage.googleapis.com/zenn-user-upload/pk2evmbol40spx5no4fi85gi4lqn)
+![インストールワンライナーの画像](/images/wsl2-homebrew/image01.png)
 *MacとLinux共通で使用する*
 
 :::message

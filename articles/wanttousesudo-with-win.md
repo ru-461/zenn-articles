@@ -99,11 +99,11 @@ usage: sudo <cmd...>
 
 管理者に昇格するためのUAC（ユーザーアカウント制御）が表示されます。
 
-![ユーザーアカウント制御の画面](https://storage.googleapis.com/zenn-user-upload/5gbhypvzvgkalw6r3xuzrubs8vkr)
+![ユーザーアカウント制御の画面](/images/wanttousesudo-with-win/image01.png)
 
 続行すると管理者権限でhostsファイルをメモ帳で開くことができます。
 
-![管理者権限でhostsファイルを開いた様子](https://storage.googleapis.com/zenn-user-upload/6qc6m9myaywrqv6v70onc5zwwaj2)
+![管理者権限でhostsファイルを開いた様子](/images/wanttousesudo-with-win/image02.png)
 
 このようにsudoコマンドをインストールすることでUNIX系OSと同じ感覚で一時的に管理者に昇格してコマンド・アプリの実行ができるようになります。
 

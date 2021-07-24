@@ -10,7 +10,7 @@ published: true
 
 Notionには公式の拡張機能として[Notion Web Clipper](https://www.notion.so/web-clipper)というものがあります。
 
-![Notion Web Clipperのトップページ画像](https://storage.googleapis.com/zenn-user-upload/t6s7p5g4s5lnm8sgzu9u3wcvyaey)
+![Notion Web Clipperのトップページ画像](/images/web-clipper-with-safari/image01.png)
 
 Web Clipperという名の通り、ブラウザで今見ているWebページをNotionのページに変換し保存できるすぐれものです。ChromeやFirefoxでは[拡張機能](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)・[アドオン](https://addons.mozilla.org/ja/firefox/addon/notion-web-clipper/)として前から提供されていましたが、Safariでは使用できない状態となっていました。モバイル版Safari（iPhone・iPad）からは共有機能を使ってNotionを開くことでWeb Clipperが使用できていましたが、PC版のSafariには対応していませんでした。
 
@@ -28,7 +28,7 @@ Notion Web ClipperはNotionを使うならぜひとも合わせて使いたい�
 
 Safariの設定画面を開き、拡張機能の項目を開くことで現在Safariに導入している拡張機能を確認できます。
 
-![拡張機能の管理画面画像](https://storage.googleapis.com/zenn-user-upload/l48blskbtvtfv2e18ss0psab2xhc)
+![拡張機能の管理画面画像](/images/web-clipper-with-safari/image02.png)
 *導入しているアプリによって拡張機能が入っている場合もあります*
 
 ここに拡張機能を検索して追加することで管理が可能となります。チェックマークの付け外しで有効無効の切り替えを行ったり、アンインストールもここから行うことができます。
@@ -38,7 +38,7 @@ Safariの設定画面を開き、拡張機能の項目を開くことで現在Sa
 
 Mac AppStoreのサイドメニューからカテゴリを選択すると一覧の中にSafari拡張機能があります。
 
-![拡張機能カテゴリの画像](https://storage.googleapis.com/zenn-user-upload/2qx25c8y1h1grxzpp70dw4c5qnzm)
+![拡張機能カテゴリの画像](/images/web-clipper-with-safari/image03.png)
 
 ここにSafariで使用可能な拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが探しやすくて便利です。Safariの拡張機能は、通常のMacアプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダ（~/Applications）の中に格納されます。
 
@@ -47,7 +47,7 @@ Mac AppStoreのサイドメニューからカテゴリを選択すると一覧�
 それでは、SafariにNotion Web Clipperをインストールしていきます。
 Mac AppStore内の検索から「Notion」と検索することで上位にヒットします。
 
-![Notion Web Clipperの画像](https://storage.googleapis.com/zenn-user-upload/zt8r2t3v6grx0gl8irfhf358q4gj)
+![Notion Web Clipperの画像](/images/web-clipper-with-safari/image04.png)
 *インストール済みの場合は「開く」に変わる*
 
 または以下のリンクから直接、ダウンロードページを開くことができます。
@@ -66,7 +66,7 @@ https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
 
 初回起動時はNotionのログインページへ促されNotionのアカウントでログインする画面になります。ログイン後、Webページを開いた状態でNotion Web Clipperを起動すると以下のような表示になります。
 
-![Webページをクリップする様子](https://storage.googleapis.com/zenn-user-upload/77eyplq3pgk5xp8o0j3augleiz23)
+![Webページをクリップする様子](/images/web-clipper-with-safari/image05.png)
 *Notion Web Clipper のページをクリップする様子*
 
 Notionにログインしてあるので、Workspaceと保存先のページを選ぶ項目が表示されています。
