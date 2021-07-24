@@ -22,7 +22,7 @@ published: true
 
 https://ryu-461-portfolio.netlify.app/#/
 
-![作成したポートフォリオサイトトップページの画像](https://storage.googleapis.com/zenn-user-upload/m7ju9d5uj1cu33ff625r28d7gezy)
+![作成したポートフォリオサイトトップページの画像](/images/try-portfoliosite/image01.png)
 *トップページ*
 
 **学習期間が約 2 週間、制作が約 2 週間、合わせて約1ヶ月で開発しました。** [Toggle](https://toggl.com/) という時間管理ツールを使って開発している時間の記録をしたところ、完成まで40時間ほどかかっていました。
@@ -60,7 +60,7 @@ https://ryu-461-portfolio.netlify.app/#/
 
 実は1年ほど前にVue.jsを勉強していた時期があります。そのときに学習していた書籍がこちら。
 
-![基礎から学ぶVue.js表紙の画像](https://storage.googleapis.com/zenn-user-upload/pelpc1eitifqeqdt5g2kcsozpe27)
+![基礎から学ぶVue.js表紙の画像](/images/try-portfoliosite/image02.jpg)
 *基礎から学ぶVue.js*
 
 [mio さん(@mio3io)](https://twitter.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
@@ -83,12 +83,12 @@ https://ryu-461-portfolio.netlify.app/#/
 
 今はモバイルファーストと言われるくらいにモバイル環境（タブレット・スマートフォン）への対応が必要不可欠となっています。今回の制作でもレスポンシブデザインに対応しながらおしゃれなデザインにしたいという思いがありました。レスポンシブデザイン対応はかなり難しい印象が強くあり、今まで意識してできていなかったのですが、[Vuetify](https://vuetifyjs.com/en/)というマテリアルデザインフレームワークを導入することで柔軟に対応できました。もともと[Bootstrap](https://getbootstrap.jp/)をよく使っており、[BootstrapVue](https://bootstrap-vue.org/)というライブラリを使おうとしていたのですが、公式サイトのデザインに惹かれて今回はVuetifyを採用しました。Vuetifyはコンポーネント単位でデザインしていくため、Vue.jsの知識が必要ですが、同時にコンポーネントの概念について勉強して対応しました。レスポンシブ対応するときにブレークポイントを使ってレイアウトするのですが、以前Bootstrapを使った経験があったので、直感的に理解しやすくそこまで難しいと感じることはありませんでした。簡単な記述でマテリアルデザインのコンポーネントを使うことができるので、使っていて楽しかったです。レスポンシブデザインとして、公式ドキュメントとサンプルではドロワーメニューとして以下のデザインが採用されています。
 
-![navigation drawersページの画像](https://storage.googleapis.com/zenn-user-upload/5pxbcy9wgnl92eiyr6e5y56b5rg9)
+![navigation drawersページの画像](/images/try-portfoliosite/image03.png)
 *ハンバーガーメニューライク*
 
 このデザインがマテリアルデザインの方針としては正しいみたいです。しかしハンバーガーメニューは今まで使ってきて、個人的にあまり好きではありませんでした。UXの観点で否定的な意見を目にすることがあり、モバイル向けメニュー実装をする上どのように実装するかで悩みました。
 
-![ドロワーを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/cnvbihzp5to5nzv48qsvcc3xf3fc)
+![ドロワーを開いたときの様子](/images/try-portfoliosite/image_4.png)
 
 そこで見つけたのが [v-bottom-navigation コンポーネント](https://vuetifyjs.com/en/components/bottom-navigation/#usage)です。
 
@@ -114,7 +114,7 @@ https://ryu-461-portfolio.netlify.app/#/
 
 上の例だとコンポーネントのクラスにブレークポイントmd以上（タブレットやラップトップPC以上の画面サイズ）ではbottom-navigationコンポーネントを表示するように指定しています。これだけの記述で出し分けができるのはすごいですね。
 
-![bottom-navigationがうまく表示できた様子](https://storage.googleapis.com/zenn-user-upload/vezcnqa3dst21tdmyi6y6pk5p5gk)
+![bottom-navigationがうまく表示できた様子](/images/try-portfoliosite/image05.png)
 *アイコンでページイメージがわかりやすくて好きです。アイコンはFontawesome使用*
 
 Vuetifyはまだ日本語のドキュメントなどが少なく、コンポーネントの使い方について調べるのが少し大変な部分もありましたが、公式のドキュメントを読み込むことで一通り使うことができました。今の段階でも使えるコンポーネントが使い切れないくらいあるのですが、今も開発が進んでおりバージョンが上がり続けているため、今後のコンポーネント追加や機能追加にも期待しています。Bootstrapなどの他のフレームワークにも言えますが、デザインフレームワークの導入によって簡単な記述でデザインに一体感が出せる、モダンなデザインにできるのはとても便利です。しかし、**デザインがどうしても似通ってしまうためデザイン部分では個性が出しにくいと感じました**。
