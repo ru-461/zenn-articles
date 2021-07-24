@@ -20,7 +20,7 @@ https://doesitarm.com/app/nodejs/
 
 公式サイトでも最新版のタブから、x64とARM64にマルチ対応したインストーラーがmacOSへ提供されるようになりました。マルチビルドを採用しているため、環境に応じてネイティブに動作します。
 
-![v16から配布されるようになったインストーラーの画像](https://storage.googleapis.com/zenn-user-upload/a9c810cafefa4e2a4dae41a3.png)
+![v16から配布されるようになったインストーラーの画像](/images/node-supports-applesilicon/image01.png)
 
 メジャーバージョンが上がったことで**Timers Promises API が安定版に移行**や、**V8 JavaScript エンジンが V8.9.0 へ更新**などと比較的大きな変更も含まれています。
 

@@ -22,7 +22,7 @@ iTerm2を起動して、設定（Preferences）を開きます。メニューか
 
 設定ウィンドウが開いたらGeneralタブからPreferencesを選択します。
 
-![設定ファイル保存場所設定の画像](https://storage.googleapis.com/zenn-user-upload/c18c98bb50725c47100a6202.png)
+![設定ファイル保存場所設定の画像](/images/iterm2-sync-setting/image01.png)
 *設定ファイルの保存先選択*
 
 iTerm2は設定ファイルの保存先をカスタムでき、自由に保存先を指定できます。

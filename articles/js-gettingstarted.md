@@ -46,7 +46,7 @@ $ npm run serve
 
 http://localhost:8080 で開発サーバが立ち上がります。
 
-![Vue.jsウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/cvdlss3ecnw2ilpdjmyqurnvptit)
+![Vue.jsウェルカムページの画像](/images/js-gettingstarted/image01.png)
 
 # Nuxt.js
 
@@ -76,7 +76,7 @@ $ yarn dev
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
-![Nuxt.jsウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/pyqvhr5jtrwzxtxidjcw6cktwtuh)
+![Nuxt.jsウェルカムページの画像](/images/js-gettingstarted/image02.png)
 
 # React
 
@@ -108,7 +108,7 @@ npm、npxでインストールする場合はYarnがインストールされて�
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
-![Reactウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/6mttoycvin579n3lis5ehe2nbh7p)
+![Reactウェルカムページの画像](/images/js-gettingstarted/image03.png)
 
 # Next.js
 
@@ -132,7 +132,7 @@ Reactと同じくYarnがインストールされているとデフォルトでYa
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
-![Next.jsウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/91f4t8yih9l5azs2k7yotsmvb3aj)
+![Next.jsウェルカムページの画像](/images/js-gettingstarted/image04.png)
 
 # Angular
 
@@ -160,7 +160,7 @@ $ ng serve --open
 `ng serve --open`とすることでデフォルトのブラウザで起動します。
 http://localhost:4200 で開発サーバーが立ち上がります。
 
-![Angularウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/p9fb7u0bkh2f6cer69st888s60yo)
+![Angularウェルカムページの画像](/images/js-gettingstarted/image05.png)
 
 # Svelte
 
@@ -177,7 +177,7 @@ $ npm run dev
 
 http://localhost:5000 で開発サーバーが立ち上がります。
 
-![Svelteウェルカムページの画像](https://storage.googleapis.com/zenn-user-upload/0egd4abo3zlc9kxd4vjv0fa51g8m)
+![Svelteウェルカムページの画像](/images/js-gettingstarted/image06.png)
 
 # おわりに
 

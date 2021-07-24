@@ -21,11 +21,11 @@ Notionにはブラウザ上で使うウェブ版と各プラットフォーム�
 
 デフォルトでは以下のようにタッチバーに最低限のボタンしか表示されていません。
 
-![初期表示のタッチバー画像](https://storage.googleapis.com/zenn-user-upload/h0mw6t56x74d8z7rwvsqdeq3un4k)
+![初期表示のタッチバー画像](/images/notion-custom-touchbar/image01.jpg)
 *Before*
 
 以下がBetterTouchToolを使ってカスタマイズしたタッチバーになります。
-![カスタマイズ後のタッチバー画像](https://storage.googleapis.com/zenn-user-upload/3mmbvla4gr8jf675008qtf6s9bdd)
+![カスタマイズ後のタッチバー画像](/images/notion-custom-touchbar/image02.jpg)
 *After*
 
 ボタンをワンタッチでNotionのブロックを変換できるようにしています。例えば、H1をおすとH1入力（一番大きい見出し）に切り替わり、見出しが大きくなります。
@@ -79,7 +79,7 @@ https://www.notion.so/0d2e6e88fc804dbf8f307191de8ca005
 
 こちらの画像が設定後の画像になります。
 
-![設定したあとの画像](https://storage.googleapis.com/zenn-user-upload/pz7eyfkofm5qbl3tbcmo48nguykx)
+![設定したあとの画像](/images/notion-custom-touchbar/image03.png)
 
 画面一番左が現在登録しているタッチバーボタン（トリガー）、画面真ん中がボタンタッチ時に行うアクション（ショートカットキーの送信）、一番右側がタッチバートリガー設定（ボタンの詳細設定）になっています。
 
@@ -93,7 +93,7 @@ https://www.notion.so/0d2e6e88fc804dbf8f307191de8ca005
 
 まず、ボタンにアイコンを設定している場合の設定です。
 
-![ボタンにアイコンを設定する様子の画像](https://storage.googleapis.com/zenn-user-upload/2prhz5qnmnw4hek81ro1e0iug2qz)
+![ボタンにアイコンを設定する様子の画像](/images/notion-custom-touchbar/image04.png)
 
 初期設定からカスタマイズしてる点は以下のとおりです。
 
@@ -114,7 +114,7 @@ https://www.notion.so/0d2e6e88fc804dbf8f307191de8ca005
 
 デフォルトの設定からボタンタイトルを変更するだけでボタンの作成ができます。このときにテキストの色や背景色を他のボタンと同じ用にすることで違和感なくボタンとして並べることができます。
 
-![ボタンにアイコンを設定しない場合の設定例画像](https://storage.googleapis.com/zenn-user-upload/nrqhlv9cisgqux24l72a9jmwrvue)
+![ボタンにアイコンを設定しない場合の設定例画像](/images/notion-custom-touchbar/image05.png)
 
 テキストをボタンに表示する場合、ボタンには、ボタンタイトルに設定したもの表示されますが、ボタンタイトルが設定されていないとボタンに何も表示されないため注意が必要です。
 
@@ -122,13 +122,13 @@ https://www.notion.so/0d2e6e88fc804dbf8f307191de8ca005
 
 画面真ん中のアクション設定からタッチしたときに行うアクションを設定できます。
 
-![アクションを割り当てる画像](https://storage.googleapis.com/zenn-user-upload/hqb6re2qvmwepmnf8xtmnind1buq)
+![アクションを割り当てる画像](/images/notion-custom-touchbar/image06.png)
 
 今回はショートカットキーが押されたことをNotionのアプリに伝えたいため、「**キーボードショートカットを送信する**」の項目に設定したいショートカットキーを設定します。
 
 以下は、テキスト表示（`⌘`＋`⌥`＋`1`）をボタンへ設定しているアクションです。
 
-![テキスト表示を割り当てる様子](https://storage.googleapis.com/zenn-user-upload/7uptj9ywydo6ya4p58lkfvbxm6v7)
+![テキスト表示を割り当てる様子](/images/notion-custom-touchbar/image07.png)
 
 このように設定することで、該当するボタンをタッチしたときに設定したショートカットキーが必ず実行されるようになります。また複数のキーを連続して入力する場合は「**追加のアクションを追加**」からキーボードショートカットキーを更に追加できます。Notionで引用ブロック挿入のショートカットキー（`"`＋`Space`）のようなシフトキーを使う複雑な組み合わせも実行させることができます。
 

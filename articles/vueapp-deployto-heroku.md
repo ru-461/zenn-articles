@@ -32,7 +32,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 # インストール
 
-## Heroku CLIをWSL2 にインストール
+## Heroku CLIをWSL2にインストール
 
 Herokuは各プラットフォーム向けにHeroku CLIというツールを提供しているためこちらを利用します。
 Heroku公式ドキュメントに各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
@@ -72,7 +72,7 @@ $ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
 
 それではHeroku CLIを実際に動かしてデプロイする準備をしていきます。
 
-## Heroku へログイン
+## Herokuへログイン
 
 以下のページからHerokuアカウントを登録します。
 
@@ -90,7 +90,7 @@ $ heroku login
 
 以下の画面が表示されたら正常にログインできています。
 
-![ログイン成功後の画面](https://storage.googleapis.com/zenn-user-upload/mwtpkmsj2zy19usm5621nxm5zxxy)
+![ログイン成功後の画面](/images/vueapp-deployto-heroku/image01.png)
 
 ```shell
 Logging in... done
@@ -158,7 +158,7 @@ $ heroku open
 
 デフォルトのブラウザが起動してアプリのページが表示されれば正常にアプリが作成されています。
 
-![アプリの初期ページを開いた様子](https://storage.googleapis.com/zenn-user-upload/k8tl4pciubo755hftsnt78k3czvi)
+![アプリの初期ページを開いた様子](/images/vueapp-deployto-heroku/image02.png)
 
 ブラウザからアクセスできることが確認できればOKです。
 
@@ -212,7 +212,7 @@ $ git push heroku main
 $ heroku open
 ```
 
-![ブラウザからデプロイしたアプリを開いた様子](https://storage.googleapis.com/zenn-user-upload/p53cv0lij6jtdhcts1c2f09bgv5l)
+![ブラウザからデプロイしたアプリを開いた様子](/images/vueapp-deployto-heroku/image03.png)
 
 Vue CLIで作成したプロジェクトがブラウザに表示され動作が確認できました。
 

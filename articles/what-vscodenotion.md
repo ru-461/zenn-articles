@@ -42,7 +42,7 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 
 拡張機能の検索ウィンドウに「notion」といれることで「VSCode Notion」がヒットするのでインストールしていきます。
 
-![VSCode Notionを検索する様子](https://storage.googleapis.com/zenn-user-upload/6i6uzl1kglf3dqx7d27trlev3v5m)
+![VSCode Notionを検索する様子](/images/what-vscodenotion/image01.png)
 *検索してヒットしたこちらの拡張機能をインストール*
 
 インストールが完了するとステータスがインストール済みになり、インストール済みの拡張機能に追加されます。
@@ -52,7 +52,7 @@ VSCode Notionを開くとRECENTS（最近VSCodeで開いたページ）とBOOKMA
 
 初めて使用するときはまだページを開いていないため、 Notionページを開くための「Open A Page」ボタンが表示されています。
 
-![Notionのページを開く様子](https://storage.googleapis.com/zenn-user-upload/xcvqs9sr5jdgobphsr9t3i9tmgdf)
+![Notionのページを開く様子](/images/what-vscodenotion/image02.png)
 *Open A PageからNotionのページを開くことができる*
 
 Notionのページリンクを入力して指定したページを開くことができるのですが、デフォルトでは`Couldn't load the data from API.`とAPIのエラーが出て開くことができません。
@@ -63,7 +63,7 @@ Notionのページを開くためには**アクセストークンを取得して
 
 VSCodeの設定画面を開きます。設定画面はWindowsであれば`Ctrl`＋`,` Macなら`⌘`＋`,`で開くことができます。VSCode設定画面の検索ウィンドウに「vscode notion」と入れることでVSCode Notionの拡張機能の設定を探すことができます。設定が検索にヒットしない場合はVSCodeを一旦再起動することで表示されるようになります。
 
-![設定を検索する様子](https://storage.googleapis.com/zenn-user-upload/f11qaiyywgrk22clorltljb788n7)
+![設定を検索する様子](/images/what-vscodenotion/image03.png)
 
 APIエラーを解消するためには、下にあるVSCode Notion Access Tokenのフォームに取得したNotionのアクセストークンを入力する必要があります。
 
@@ -76,14 +76,14 @@ Notionのアクセストークンを取得します。ブラウザにてNotion�
 Applicationというタブを開き、Cookies → `https://www.notion.so/`とたどると**token_v2**という項目があるため、値をコピーします。
 これが自分のNotionアクセストークンとなります。
 
-![Chrome DevToolsからトークンを取得する様子](https://storage.googleapis.com/zenn-user-upload/vg3rhxbtu5tnwg1582frn4iss0q1)
+![Chrome DevToolsからトークンを取得する様子](/images/what-vscodenotion/image04.png)
 *valueの項目にある値をそのままコピー*
 
 アクセストークンは長い文字列になっており、拡張機能を使うために必ず必要となるので、慎重に管理をお願いします。
 
 取得したNotionアクセストークンを設定画面のVSCode Notion Access Tokenにそのままペーストします。
 
-![取得したトークンを設定する様子](https://storage.googleapis.com/zenn-user-upload/g6yakw9g75hx8eh6zjssg38fu5q2)
+![取得したトークンを設定する様子](/images/what-vscodenotion/image05.png)
 *赤枠の中にそのままペースト*
 
 これで初期設定が完了となります。
@@ -95,20 +95,20 @@ Applicationというタブを開き、Cookies → `https://www.notion.so/`とた
 以前[こちら](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)の記事で作成したプログラミングノートのトップページを開いてみます。
 アドレスで指定したページがVSCode内で表示できており、問題なく動作しました。
 
-![VSCodeから見たプログラミングノートトップページの画像](https://storage.googleapis.com/zenn-user-upload/oflnx8dsbnzpxr63rj5d4r9do9cp)
+![VSCodeから見たプログラミングノートトップページの画像](/images/what-vscodenotion/image05.png)
 *プログラミングノートトップページ - 技術ページへの遷移も可能*
 
-![VSCodeから見た技術個別ページの画像](https://storage.googleapis.com/zenn-user-upload/ieji7rr5hhhk4bwse6gnbskul1an)
+![VSCodeから見た技術個別ページの画像](/images/what-vscodenotion/image06.png)
 *技術ごとのページ - データベース表示が崩れ気味*
 
-![VSCodeから見た備忘録メモページの画像](https://storage.googleapis.com/zenn-user-upload/ykolgfd6cuzhuhy3tvzogz3ygd1i)
+![VSCodeから見た備忘録メモページの画像](/images/what-vscodenotion/image07.png)
 *備忘録メモ - Notion 内のコードブロックもうまく表示できており可読性も問題なし*
 
 ## 使ってみて気になった点
 
 トップページを**ブラウザ**で見たものが以下になります。
 
-![ブラウザから見たプログラミングノートの画像](https://storage.googleapis.com/zenn-user-upload/vi6278kahmdn2188fjqxuvuwiozy)
+![ブラウザから見たプログラミングノートの画像](/images/what-vscodenotion/image08.png)
 *ブラウザで見たときの表示*
 
 テキストは問題なく表示できていますが、オリジナルのNotionとVSCode Notionを比較すると表示に失敗している部分が多々見受けられました。比較してみると。

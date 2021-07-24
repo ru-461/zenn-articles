@@ -26,12 +26,12 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 また`Ctrl`＋`Shift`＋`P` / `⌘`＋`Shift`＋`P`で開くコマンドパレットのウィンドウに、zenと入力すると有効化、無効化のメニューが表示され、こちらからも有効化できます。
 
-![コマンドパレットから有効化する様子](https://storage.googleapis.com/zenn-user-upload/2f83d0d692a0b2cc190a388b.png)
+![コマンドパレットから有効化する様子](/images/what-zen-mode/image01.png)
 *Zen Modeの切り替えを選択して有効化*
 
 有効化すると一瞬でエディタ以外のインタフェースが消えました。これがいわゆる「Zen Mode」です。
 
-![Zen Modeが有効化された様子](https://storage.googleapis.com/zenn-user-upload/1c3ca8a32d177846bc28dde3.png)*Zen ModeでUI表示が最低限になった*
+![Zen Modeが有効化された様子](/images/what-zen-mode/image02.png)*Zen ModeでUI表示が最低限になった*
 
 海外のニュアンスなので少し解釈に迷いますが禅の精神（悟りをひらいた様子？）みたいなイメージでしょうか。とにかく集中だけに特化したモードといえますね。
 
@@ -47,11 +47,11 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 またZen modeは設定でさらにカスタマイズできます。初めてZen Modeを使うとき設定は以下のようになっています。
 
-![設定がデフォルトの様子](https://storage.googleapis.com/zenn-user-upload/c112e2ba900d84b1c1ff9239.png)*設定変更前*
+![設定がデフォルトの様子](/images/what-zen-mode/image03.png)*設定変更前*
 
 設定項目は日本語表記に対応しているため直感的に触ることができます。初期状態だとメインエディタが中央寄せ、ソースコードのないの行番号が非表示になるため私はしばらく使った上で以下のように設定しています。
 
-![設定後の様子](https://storage.googleapis.com/zenn-user-upload/714c9d4b7e88315b0acbdf49.png)*設定変更後*
+![設定後の様子](/images/what-zen-mode/image04.png)*設定変更後*
 
 - Center Layout（レイアウトの中央寄せ）
 - Hide Line Number（行番号の非表示）
@@ -59,7 +59,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 上の3項目それぞれデフォルトから変更しました。これにより最小限のUI表示を保ちながら作業に没入できるのでおすすめです。
 
-![Zen Modeの設定変更後の様子](https://storage.googleapis.com/zenn-user-upload/8f4e4426dd7cf5473cf7701b.png)
+![Zen Modeの設定変更後の様子](/images/what-zen-mode/image05.png)
 *作業スペースが広くなるのでターミナルとエディタを並べても余裕*
 
 他にもサイドバー、上部のUIの表示や、非表示を設定できます。
