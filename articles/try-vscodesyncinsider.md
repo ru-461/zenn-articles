@@ -16,7 +16,7 @@ VSCodeには、Stable releaseと、Inseders releaseという２つのバージ�
 
 **それぞれの VSCode は独立しているため、同じ PC 内に共存させることも可能です。**
 
-![VSCodeのアイコン画像](https://storage.googleapis.com/zenn-user-upload/tgrrxh4oo27xz99wxxw1tcfb5vuh)
+![VSCodeのアイコン画像](/images/try-vscodesyncinsider/image01.png)
 *左がStable版、右がInsiders版のアイコン*
 
 昨年、VSCode公式がStable版に設定同期機能を実装し話題になりましたが、今までVSCodeの設定を同期する拡張機能は存在していました。
@@ -52,7 +52,7 @@ https://twitter.com/code/status/1338886895867224070
 
 しかし、記事執筆時点（2021年2月上旬）では、VSCode（Stable版）はまだM1 Macに完全対応しておらず従来のアーキテクチャで動作している状態です。
 同時に起動した時のアクティビティモニタがこちらです。アーキテクチャを見ると一目瞭然ですね。
-![アクティビティモニターの画像](https://storage.googleapis.com/zenn-user-upload/p583bjzskira7znwdvp72ynrz535)
+![アクティビティモニターの画像](/images/try-vscodesyncinsider/image02.png)
 *Stable版はIntel、Insiders版はAppleとなっている*
 
 せっかくM1チップ搭載Macになったので、ネイティブなアプリを使いたいという思いから私は迷わずInsiders版をインストールしました。
@@ -80,11 +80,11 @@ Stable版とInsiders版で設定の同期は可能ですが、同期した際に
 
 [^1]: [Can I share settings between VS Code Stable and Insiders?](https://code.visualstudio.com/docs/editor/settings-sync#_can-i-share-settings-between-vs-code-stable-and-insiders)
 
-![設定同期をオンにする様子](https://storage.googleapis.com/zenn-user-upload/nzyepfjno7qulnoaiuuffk0nj6c9)
+![設定同期をオンにする様子](/images/try-vscodesyncinsider/image03.png)
 *左下の設定アイコンクリックでメニューが現れます*
 
 同期する設定を選択するウィンドウが現れるので選択します。デフォルトで全てオンになっています。
-![同期する項目を選択する様子](https://storage.googleapis.com/zenn-user-upload/uo73sd23a1x1pxzwonx9r3cc3d53)
+![同期する項目を選択する様子](/images/try-vscodesyncinsider/image04.png)
 
 :::message
 カスタマイズしたショートカットキーは各プラットフォームごとに管理されるようです
@@ -94,7 +94,7 @@ Stable版とInsiders版で設定の同期は可能ですが、同期した際に
 サインインにはMicrosoftアカウントもしくはGitHubアカウントのどちらかが必要になります。
 アカウント用意しVSCodeの指示に従うことで簡単にサインインできます。
 
-![使用するアカウントの選択画面](https://storage.googleapis.com/zenn-user-upload/zddtezfrdvcj9hbbfm7hj0zaqh3y)
+![使用するアカウントの選択画面](/images/try-vscodesyncinsider/image05.png)
 *私はGitHubアカウントでサインインしました*
 
 右下に成功のメッセージが表示されたらうまくクラウドに保存され同期する準備ができています。
@@ -108,7 +108,7 @@ Stable版とInsiders版で設定の同期は可能ですが、同期した際に
 Mac側にInsiders版のVSCodeをインストールし、Windows版（Stable版）と同じ用に設定同期機能をオンにします。
 オンにする項目をチェックし選択したあとInsiders版では、同期に使用する同期サービスを選択するウィンドウが現れます。
 
-![同期サービスを選ぶ様子](https://storage.googleapis.com/zenn-user-upload/8h29c0led43jjwbaj57m95ggp8zo)
+![同期サービスを選ぶ様子](/images/try-vscodesyncinsider/image06.png)
 *Insiders版でのみ表示されます。Stable ↔ Insidersでの同期はインサイダーを選択*
 
 これは、Stable版とInsiders版で**同期に使用するサービスが異なる**ために表示されるもののようです。Insiders版が先行的に機能が実装され新しいものとなるため、データの非整合を防ぐためだそうです。
@@ -122,13 +122,14 @@ Mac側にInsiders版のVSCodeをインストールし、Windows版（Stable版�
 
 わかりにくいですが、VSCodeの拡張機能をWindows（Stable版）とMacBook Pro（Insider版）で同期した様子です。Stable版とInsiders版ですが、うまく同期に成功しています。
 
-![拡張機能を同期した様子](https://storage.googleapis.com/zenn-user-upload/aab05r7hljie741tucmu5rrqvmug)
+![拡張機能を同期した様子](/images/try-vscodesyncinsider/image07.png)
 *Windows（Stable 版） ・ MacBook Pro（Insider 版）*
 
 今回は起こりませんでしたが、同期を取り込む側で先に同期データが存在していた場合、設定の競合が発生します。
 その場合は一旦設定の同期をオフ → 全てのデバイスで同期をオフにし、もう一度設定の同期機能をオンにすることで解決します。
 
-![同期オフの確認画面](https://storage.googleapis.com/zenn-user-upload/ckks1sdedjjg25gz6spuvogalsgq)
+![同期オフの確認画面](/images/try-vscodesyncinsider/image08.png)
+*下のチェックにチェックをつけるとクラウドからデータがすべて削除されます*
 
 また、設定が競合した場合に差分をマージ、手動で設定を確認しながらのマージも行えるみたいです。
 

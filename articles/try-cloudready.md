@@ -54,12 +54,12 @@ VMware Workstation Playerは以下のページからダウンロード可能で�
 
 https://www.vmware.com/jp/products/workstation-player/workstation-player-evaluation.html
 
-![VMware Workstation Playerをインストールする様子](https://storage.googleapis.com/zenn-user-upload/w0r475gfqn6tcd0zvte1g9qr21a8)
+![VMware Workstation Playerをインストールする様子](/images/try-cloudready/image01.png)
 
 VMware Workstation Player for Windowsをインストールします。
 VMwareは商業利用ではなく個人利用であれば無償で利用できます。
 
-![VMware Workstation Player起動後の画像](https://storage.googleapis.com/zenn-user-upload/lik7ygtirmi2gvhvvljiwt079r48)
+![VMware Workstation Player起動後の画像](/images/try-cloudready/image02.png)
 
 この画面が表示されればVMwareのインストール完了です。
 
@@ -71,7 +71,7 @@ https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMwar
 
 こちらのページからVMwareのイメージダウンロードできます。
 
-![イメージをダウンロードするリンクの画像](https://storage.googleapis.com/zenn-user-upload/a01gdj2rxsbzroq83uonsihep83f)
+![イメージをダウンロードするリンクの画像](/images/try-cloudready/image03.png)
 
 ダウンロードリンクをクリックするとすぐにイメージのダウンロードが始まります。
 
@@ -81,16 +81,16 @@ https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMwar
 
 VMwareのトップ画面から仮想マシンを開くをクリック。
 
-![仮想マシンを開くボタンの画像](https://storage.googleapis.com/zenn-user-upload/2a737uds16ia5ssuglosc0dkzsrf)
+![仮想マシンを開くボタンの画像](/images/try-cloudready/image04.png)
 
 表示されるダイアログでダウンロードした仮想マシンイメージを選択します。
 
-![イメージを指定するパスを](https://storage.googleapis.com/zenn-user-upload/qenzprdht9uog3o4j5s3q8x9teiq)
+![イメージを指定するパスを](/images/try-cloudready/image05.png)
 *参照からパスを指定*
 
 これでイメージの追加は完了です。
 
-![仮想マシン設定画面の画像](https://storage.googleapis.com/zenn-user-upload/yn5drm39iwry6xu3993ob1rxgtpc)
+![仮想マシン設定画面の画像](/images/try-cloudready/image06.png)
 
 仮想マシンの設定を開くことで使うメモリの量やネットワークなどを詳しく設定できます。
 ホストマシンの環境に応じて設定を変更することをおすすめします。
@@ -101,18 +101,18 @@ VMwareのトップ画面から仮想マシンを開くをクリック。
 
 仮想マシンの再生ボタンから起動できます。
 
-![CloudReadyようこそ画面の画像](https://storage.googleapis.com/zenn-user-upload/0n5mnvu4ocg77bisxeiyithku341)
+![CloudReadyようこそ画面の画像](/images/try-cloudready/image07.png)
 *ようこそ！*
 
 デフォルトでは言語が英語、キーボード配列がUS配列になっているため私は以下のように変更しました。
 
-![言語とキーボード変更画面の画像](https://storage.googleapis.com/zenn-user-upload/f9zkp9v1usoa0jrj2q9ct9gzcz31) *使用しているキーボードが JIS 配列のため日本語を選択*
+![言語とキーボード変更画面の画像](/images/try-cloudready/image08.png) *使用しているキーボードが JIS 配列のため日本語を選択*
 
 VMwareは`Ctrl`＋`Alt`でホストOS（Windows）とゲストOS（CloudReady）を行き来できるのが便利です。
 
 初期設定でGoogleのアカウントにログインするとCloudReadyのデスクトップが表示されます。
 
-![CloudReadyのデスクトップ画像](https://storage.googleapis.com/zenn-user-upload/fe7asv5fcidkgpue7z3f6mb7h3rs)
+![CloudReadyのデスクトップ画像](/images/try-cloudready/image09.png)
 
 ブラウザとしてChromium（Chromeのオープンソース版）がインストールされています。
 
@@ -127,7 +127,7 @@ VMwareは`Ctrl`＋`Alt`でホストOS（Windows）とゲストOS（CloudReady）
 私はPCを有線接続（イーサネット）で接続していたのですが、CloudReadyの初期設定で上手く接続ができませんでした。
 ChromeOSの初期設定をすすめる上でインターネット接続ができないと先に進めずつまずいたのですが、仮想マシンの設定の編集からネットワークアダプタを選択し。
 
-![ブリッジ接続からNATへ変更する様子](https://storage.googleapis.com/zenn-user-upload/suxvg286i3rgqsm6q902d1sjhlh1)
+![ブリッジ接続からNATへ変更する様子](/images/try-cloudready/image10.png)
 
 **デフォルトのブリッジからNATに変更**することですんなりと繋がるようになりました。
 繋がらない場合はお使いの環境に合わせてデフォルトから適宜設定を変えてみてください。
@@ -136,7 +136,7 @@ ChromeOSの初期設定をすすめる上でインターネット接続ができ
 
 デフォルトではGoogleのパスワードを利用してロックを解除するのですが、私はGoogleのログインのパスワードに長い文字列を設定していたためロックのたびに入力するのが、がかなりストレスでした。設定 → ユーザー → 画面ロックで画面ロックの解除方法をパスワードから6ケタのPINに変更できます。
 
-![PINを設定する様子](https://storage.googleapis.com/zenn-user-upload/9xcdmioqwe4x7ejftl9p21meed9c)
+![PINを設定する様子](/images/try-cloudready/image11.png)
 
 PINにしてからストレスなくロックの解除ができるようになりました。
 
@@ -149,11 +149,11 @@ PINにしてからストレスなくロックの解除ができるようにな�
 CloudReady（ChromeOS）にはターミナル機能とLinuxの機能が搭載されています。
 ターミナルは標準で搭載されており、`Ctrl`＋`Shift`＋`t`で呼び出すことができます。
 
-![CloudReadyのターミナル画像](https://storage.googleapis.com/zenn-user-upload/5c3ikwz48cj8vn7uvew8qh6hm27w)
+![CloudReadyのターミナル画像](/images/try-cloudready/image11.png)
 
 それと合わせて使用できるLinux機能が存在し、設定からインストールできるはずなのですが...。
 
-![Linuxが起動できない様子](https://storage.googleapis.com/zenn-user-upload/5s0a5bfhmxpdkzsobyrenu0ww7w6)
+![Linuxが起動できない様子](/images/try-cloudready/image12.png)
 
 しかし仮想マシンで実行しているCloudReadyでは設定画面に項目が存在するものの起動ができませんでした。
 

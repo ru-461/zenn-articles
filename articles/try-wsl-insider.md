@@ -120,7 +120,7 @@ WSL2にUbuntu 20.04 LTSがインストールできたので起動してみます
 
 起動まではうまくいきましたが、エラー表示がでてここから先に進みませんでした。
 
-![WSL2起動エラーの画像](https://storage.googleapis.com/zenn-user-upload/oshvlzztlom0cnxjz7v3kc29qta0)
+![WSL2起動エラーの画像](/images/try-wsl-insider/image01.png)
 *一部文字化けしているがエラーのよう*
 
 ## エラー解決に向けて試したこと
@@ -144,14 +144,14 @@ Paralles Desktopでは**設定から「ネスト化された仮想化を有効�
 
 現在、Paralles Desktopの通常版（Standard Edition）を使用しているのですが、設定項目を探してみても該当項目は見当りませんでした。
 
-![Standard Editionでの設定表示](https://storage.googleapis.com/zenn-user-upload/8mbsbqfe6yp54ocs3c3oq7pdgp2b)
+![Standard Editionでの設定表示](/images/try-wsl-insider/image02.png)
 *参考記事を見るとここに項目があるはずだが...*
 
 少し古い情報となりますが、ネスト化された仮想化サポートはPro Editionでのみのサポートという情報があったため、勢いでPro Editionに変更して検証してみます。
 
 こちらがPro Editionへアップグレードした後の設定画面になります。
 
-![アップグレード後の設定画面](https://storage.googleapis.com/zenn-user-upload/0hazekic80sefdfsrstc67z0plp0)
+![アップグレード後の設定画面](/images/try-wsl-insider/image03.png)
 *オプションが現れず...*
 
 アップグレード前と比較して変わったところは、メモリの上限を拡張できるようになったことだけでネスト化された仮想化を有効にする設定は現れませんでした。
@@ -173,7 +173,7 @@ Paralles Desktopでは**設定から「ネスト化された仮想化を有効�
 
 この状態でディストリビューションをインストールして起動することでWSL1として設定できます。
 
-![WSL1として設定した様子](https://storage.googleapis.com/zenn-user-upload/6jz5d1x04dj1s3a69bujdeax1082)
+![WSL1として設定した様子](/images/try-wsl-insider/image04.png)
 
 WSL1とWSL2の違いは以下のページでまとめられています。
 

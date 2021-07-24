@@ -42,13 +42,13 @@ Notionにウィジェットを埋め込むために外部サービスを使う�
 
 ウィジェットの中から登録したいウィジェットを選択して指示に従うだけで簡単にNotionへウィジェットを追加できます。サンプルとして一週間の天気予報が見られるウィジェットを追加してみます。まずトップページから天気ウィジェットを選択します。
 
-![天気ウィジェットの画像](https://storage.googleapis.com/zenn-user-upload/ndr9wpgf67sjmda7bxevtw6xhf18)
+![天気ウィジェットの画像](/images/notion-wedgets/image02.png)
 こちらが天気ウィジェットになります。
 
 天気ウィジェットを選択すると簡単なチュートリアルが表示されます。
 ウィジェットには簡単なサンプルコードが用意されているので/embedを使いリンクをペーストするだけで自分の作成したページに埋め込んで動作を確認できるのが便利です。
 
-![使い方説明の画像](https://storage.googleapis.com/zenn-user-upload/djoqbzfa1ml1gpjlmcyqwxud7510)
+![使い方説明の画像](/images/notion-wedgets/image03.png)
 
 Try in your page！　の中にあるコードをNotionに埋め込んでみてください。
 
@@ -66,7 +66,7 @@ Try in your page！　の中にあるコードをNotionに埋め込んでみて�
 例として、東京の一週間の天気予報ウィジェットを作成してみます。
 select Locationに取得したい天気予報の地域を指定します。アルファベットで取得したい都市名を入力すると候補が表示されるので、候補の中から選ぶことで地点選択ができます。
 
-![東京の天気を表した画像](https://storage.googleapis.com/zenn-user-upload/26ojk4trqmhuzfy4iepiky2j7pef)
+![東京の天気を表した画像](/images/notion-wedgets/image05.png)
 
 ラベルの表示名やアイコン、温度の単位などはタブから自由にカスタマイズできます。カスタマイズができたら下にあるGET CODEからHTML埋め込みコードを取得します。
 
@@ -84,11 +84,11 @@ select Locationに取得したい天気予報の地域を指定します。ア�
 
 埋め込みを行うためにHTMLのコードをNotionで表示できる形式に変換する必要があります。 Apptionが提供する[DIY Embed URL](https://apption.co/embeds/new)でNotionに埋め込み表示できる形式へと変換できます。
 
-![埋め込みURlへ変換するページの画像](https://storage.googleapis.com/zenn-user-upload/d3puz7x7uc2o1wj67vvtnk2l3qnb)
+![埋め込みURlへ変換するページの画像](/images/notion-wedgets/image06.png)
 
 フォームの中に先程生成した埋め込みコードをペーストし、Generate URLをクリックします。
 
-![変換結果の画像](https://storage.googleapis.com/zenn-user-upload/jqnnf3afowrql0273drgmi2x29xa)
+![変換結果の画像](/images/notion-wedgets/image07.png)
 
 Notion埋め込み用コードが生成されました。このコードをNotionで作成したページに埋め込むことでNotion上にて表示されるようになります。Notionの設定に合わせてlight darkを切り替えることもできます。
 
