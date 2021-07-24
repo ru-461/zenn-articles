@@ -14,7 +14,7 @@ published: true
 
 # npmでインストールできそう
 
-![Devicon v2 npmページの画像](https://storage.googleapis.com/zenn-user-upload/xsxld7fv2za6nbhn4g0wqae9oaej)
+![Devicon v2 npmページの画像](/images/how-use-devicon/image01.png)
 *説明を見たところnpmでインストールして使えるみたい*
 
 # 説明のとおりにインストールしてみる
@@ -45,7 +45,7 @@ App.vueで以下のように記述。
 import "devicon";
 ```
 
-![Vue.jsロゴアイコンの表示に成功した様子](https://storage.googleapis.com/zenn-user-upload/89tf7egm2ucsgktxunx1sza6n2op)
+![Vue.jsロゴアイコンの表示に成功した様子](/images/how-use-devicon/image02.png)
 
 App.vueの中に上の一文を追加したところ、うまく表示してくれました。
 アイコンフォントをnpmで使ったことがなかったためかなりの時間ハマってしまいました。他のCSSファイルと読み込み方が異なったので少しわかりにくいと感じました。
