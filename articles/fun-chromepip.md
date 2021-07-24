@@ -26,7 +26,7 @@ macOSをお使いの方は、項目「macOSでのピクチャー イン ピク�
 まずChromeにてピクチャー イン ピクチャー機能を利用する方法を紹介します。
 YouTubeにて機能を有効化するには、再生している動画上で2回右クリックすると現れるメニューからピクチャー イン ピクチャーを選択します。またChromeの右上、ログインユーザー隣のアイコンからもピクチャー イン ピクチャーを選ぶこともできます。
 
-![ピクチャー イン ピクチャーをオンにする様子](https://storage.googleapis.com/zenn-user-upload/v8kja44l1r8ou1vxcjzr53rqb7un)
+![ピクチャー イン ピクチャーをオンにする様子](/images/fun-chromepip/image02.png)
 
 前からこの機能をよく利用していたので、この機能が意外と知られていないことに驚きました。普段仮想デスクトップ機能を使い複数のデスクトップで作業しているのですが、ピクチャー イン ピクチャー化したウィンドウを他のデスクトップに移動するのが不便だと感じていました。
 
@@ -40,7 +40,7 @@ YouTubeにて機能を有効化するには、再生している動画上で2回
 
 Chromeの標準ではピクチャー イン ピクチャーの有効・無効を切り替えるショートカットが存在しません。そこで拡張機能を使ってピクチャー イン ピクチャーを有効にするショートカットキーを追加します。まず [Picture-in-Picture Extension (by Google)](https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg) という拡拡張機能をインストールします（Googleが提供している純正拡張機能なので安心して使うことができます）。
 
-![Picture-in-Picture Extension (by Google)のストアページ画像](https://storage.googleapis.com/zenn-user-upload/9xpo6ex85w2zvlmfy2wfcl0vgmlh)
+![Picture-in-Picture Extension (by Google)のストアページ画像](/images/fun-chromepip/image03.png)
 
 拡張機能を有効化すると動画再生時に`Alt`＋`P`で簡単にピクチャー イン ピクチャーモードへ切り替えられるようになります（一部対応していないサイトもあります）。動画再生ウィンドウに戻すときはもう一度ショートカットキーを入力することでもとに戻ります。
 
@@ -65,7 +65,7 @@ https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overvi
 
 設定方法はシンプルで、SylphyHornの設定画面を開き。
 
-![SylphyHorn設定画面の画像](https://storage.googleapis.com/zenn-user-upload/owvzichd66a4hqbj5w9huwfzlzhq)
+![SylphyHorn設定画面の画像](/images/fun-chromepip/image04.png)
 
 キー設定2となっているところにショートカットキーを設定するだけです。私は両方設定していますが、YouTubeなどの動画を固定するだけなら上にあるウィンドウをすべてのデスクトップに表示（ピン留め）の部分だけで機能します。`Shift`＋`Pause`でウィンドウを最前面に固定し、外すときは`Shift`＋`Ctrl`＋`Pause`で解除するようにします（画面上では`Cancel`となっていますが`Pause`になります）。これでピクチャー イン ピクチャー化した再生ウィンドウを常に最前面に保持したまま他の作業もできるようになりました。
 
@@ -73,7 +73,7 @@ https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overvi
 
 この方法はYouTube以外の動画サイトにも活用できます。例えば、有名なプログラミング動画学習サイトである[ドットインストール](https://dotinstall.com/)で動画を再生したままVScodeでコーディングをするなど工夫次第ではより効率的に学習する環境を作るのにも使えます。
 
-![ドットインストールで使用する様子](https://storage.googleapis.com/zenn-user-upload/3j443ic84p1laadqfdohy77fp1g8)
+![ドットインストールで使用する様子](/images/fun-chromepip/image05.png)
 
 他の仮想デスクトップでドキュメントを参照しながら動画を見るなどに使えそうですね。
 
