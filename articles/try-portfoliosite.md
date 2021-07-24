@@ -6,6 +6,8 @@ topics: ["Vue", "初心者", "Vuetify", "個人開発", "JavaScript"]
 published: true
 ---
 
+# はじめに
+
 私の中でJavaScriptの知識はかなり前から時間が止まったままでした。
 
 最近、JavaScriptの歴史を見ていく中で、JavaScriptという言語をまた勉強し直したいという気持ちが強くなりました。
