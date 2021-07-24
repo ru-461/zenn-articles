@@ -6,6 +6,8 @@ topics: ["wsl2", "Windows", "初心者", "ubuntu", "Linux"]
 published: true
 ---
 
+# はじめに
+
 私は、メインの開発環境としてWindows10のWSL2（Ubuntu 20.04 LTS）を使っています。初期状態では日本語ロケールが含まれておらず、表示はすべて英語です。この記事では日本語ロケールを追加して日本語表示に対応させます。それと同時に時刻の日本時間化、マニュアル日本語化を行います。 WSL2上で開発環境を作成するときに毎回行う作業で忘れがちなので備忘録として残しておきます。
 
 # 環境
@@ -14,7 +16,7 @@ published: true
 - Windows Subsystem for Linux 2（WSL2）
 - Ubuntu 20.04.1 LTS（Focal Fossa）
 
-# Microsoft Store から WSL2 へ Ubuntu をインストール
+# Microsoft StoreからWSL2へUbuntuをインストール
 
 ![Microsoft Store Ubuntu 20.04のインストールページの画像](https://storage.googleapis.com/zenn-user-upload/m9gsq8lu1u49qs989num6iyl7r8e)
 *インストールができたら「起動」をクリック*
