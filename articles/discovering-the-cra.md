@@ -8,7 +8,7 @@ published: false
 
 # はじめに
 
-Reactでプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev/)を使用する例は多いです。Reactの開発をしているFacebookチームが開発しており、Reactチュートリアルでも仕様が推奨されています。
+Reactで手早くプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev/)を使用する例は多いです。Reactの開発をしているFacebookチームが開発しており、Reactチュートリアルでも仕様が推奨されています。
 
 https://ja.reactjs.org/docs/create-a-new-react-app.html
 
@@ -67,7 +67,7 @@ $ tree -L 1
 3 directories, 3 files
 ```
 
-結果として`/react-projects`内で`npx create-react-app my-app`したのと同じになります。また、`create-react-app`のあとに続けて階層を指定すると作成先のファイル階層をさらに深くしたりと自由に作成先を指定できます。
+結果として`/react-projects`内で`npx create-react-app my-app`したのと同じになります。カレントディレクトリにプロジェクトファイルが配置されているため、続けて`yarn start`すると開発サーバーが立ち上がります。また、`create-react-app`のあとに続けて階層を指定すると作成先のファイル階層をさらに深くしたりと自由に作成先を指定できるので覚えておくと便利です。
 
 ```shell
 # カレントディレクトリにreact-projects/my-react-app/appを作成
