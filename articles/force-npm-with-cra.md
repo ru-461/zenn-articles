@@ -50,7 +50,7 @@ Happy hacking!
 
 Yarnがインストールされている状態で`npx`を使用して作成したReactプロジェクトではYarnの利用を想定してYarn.lockが生成されています。`npm start`でもアプリを立ち上げることは可能ですが、npmの利用を強制するところまでは至りません。
 
-そこでnpmを使用してのパッケージ管理を強制したいときにできることをまとめて紹介します。
+そこでnpmを使用してのパッケージ管理を強制したい場合にできることを紹介します。
 
 # オプションでnpmを強制させる
 
@@ -82,6 +82,16 @@ Happy hacking!
 ```
 
 Yarnがインストールされている環境でもnpmを使用するように設定できました。`--use-npm`をつけて作成した場合、yarn.lockではなくpackage-lock.jsonがプロジェクト配下に生成されます。
+
+```shell
+$ cd my-app
+# --use-npmをつけて作成した場合の構成
+$ ls
+node_modules  package-lock.json  package.json  public  README.md  src
+```
+
 # おわりに
+
+YarnはReactの開発元であるFacebookが開発していることもあり、Crate React AppがデフォルトでYarnを選択する仕様には納得です。npmを使用したい場合でも公式からオプションが提供されており、npmを使用するケースがあった場合にも柔軟に対応できるのが便利だと感じました。
 
 最後まで読んでいただきありがとうございました。
