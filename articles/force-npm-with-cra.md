@@ -95,3 +95,8 @@ node_modules  package-lock.json  package.json  public  README.md  src
 YarnはReactの開発元であるFacebookが開発していることもあり、Crate React AppがデフォルトでYarnを選択する仕様には納得です。npmを使用したい場合でも公式からオプションが提供されており、npmを使用するケースがあった場合にも柔軟に対応できるのが便利だと感じました。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+
+- [Getting Started | Create React App](https://create-react-app.dev/docs/getting-started/#selecting-a-package-manager)
+- [reactjs - Switch to npm for create-react-app - Stack Overflow](https://stackoverflow.com/questions/51048173/switch-to-npm-for-create-react-app)
