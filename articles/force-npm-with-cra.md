@@ -28,7 +28,7 @@ We suggest that you begin by typing:
 Happy hacking!
 ```
 
-Yarnがローカルにインストールされていない場合はnpmを使用するようになり、プロジェクト生成後に`npm start`で開発サーバーを立ち上げることを促されます。
+**Yarnがローカルにインストールされていない場合はnpmを使用する**ようになり、プロジェクト生成後に`npm start`で開発サーバーを立ち上げることを促されます。
 
 ```shell
 # Yarnがローカルに存在しない
