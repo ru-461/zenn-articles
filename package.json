@@ -21,5 +21,9 @@
     "textlint-rule-preset-ja-spacing": "^2.2.0",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
+  },
+  "volta": {
+    "node": "14.17.3",
+    "npm": "7.20.2"
   }
 }
