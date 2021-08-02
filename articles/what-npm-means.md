@@ -8,6 +8,14 @@ published: false
 
 # はじめに
 
+Node.jsにはデフォルトでnpmというパッケージマネージャが付属します。
+
+npmはよく「npmとはNode Package Managerの略です」といった説明されることがあります。
+私もnpmは、「Node Package Manager」の頭文字をそれぞれ並べたものという認識で使っていましたが、先日npmの公式リポジトリを見ていたときに興味深い説明を発見したので調べてみました。
+
+こちらがnpmのGitHubリポジトリになります。
+
+https://github.com/npm/cli
 # おわりに
 
 最後まで読んでいただきありがとうございました。
