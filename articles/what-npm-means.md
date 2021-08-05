@@ -3,7 +3,7 @@ title: "npmは本当に「Node Package Manager」の意味なのか"
 emoji: "🤔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["npm"]
-published: false
+published: true
 ---
 
 # はじめに
