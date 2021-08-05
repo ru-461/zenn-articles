@@ -20,4 +20,18 @@ AlfredとはMac OS向けのランチャーアプリです。ホットキーで�
 
 https://www.alfredapp.com/
 
+# Alfred Remoteとは
+
+Alfredの紹介で前置きが長くなってしまいましたが、今回紹介するのはAlfredではなく、Alfred Remoteというモバイル向けアプリになります。Alfredの紹介記事はインターネット上に数多く出回っていますが、Alfred Remoteについて説明しているものがあまり見られません。App Storeのレビューも近年のものがあまりなく動作するのかもわからず、導入を躊躇していました。
+
+今回そんなAlfred Remoteを導入してどこまでの操作ができるか、作業を効率化できるかをやってみました。
+
+Alfred Remoteは有料アプリになります。現状対応しているのがiPhone、iPadのみとなり、App Storeにて購入できます。私が購入したときは610円でした。以下のストアページになります。
+
+https://apps.apple.com/jp/app/alfred-remote/id927944141
+
+:::message
+海外のアプリのため時期によっては価格が変更になる可能性があります。
+:::
+
 # おわりに
