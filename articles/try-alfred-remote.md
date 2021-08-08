@@ -1,5 +1,5 @@
 ---
-title: "Alfred Remote（仮）"
+title: "Macを手元からあやつる魔法のツール【Alfred Remote】"
 emoji: "📶"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["alfred","alfredremote"]
@@ -107,7 +107,7 @@ Alfredと連携しているだけあり、アイテム登録の自由度はか�
 
 今回Alfred Remoteを紹介しました。使っている人をいままで聞いたことがなく、マイナーなアプリといった印象でしたが、実際に触ってみて使い込むと便利なアプリだと感じました。ただ、実際にMacを使用しているときにiPhoneを取り出して操作するよりキーボードでAlfredを呼び出したほうがはやいように感じます。ここはそれぞれのライフスタイル、作業スタイルによるので断言はできませんが、シャットダウンや特定のスクリプトの遠隔実行など使う場面によっては便利だなと感じる部分もあります。
 
-Macをリモートコントロールできる珍しいユーティリティなので工夫とアイデアで生産性を上げられるアプリなのは間違いないですが、惜しいポイントもあります。**対応プラットフォームがMacとiPhone、iPadといったApple製品に限られること**。^[[Alfred Remote for Android? - Alfred Remote Discussion & Help - Alfred App Community Forum](https://www.alfredforum.com/topic/5432-alfred-remote-for-android/)]**Alfred Remoteのアプリが有料である**、**Power Packが必須である**などと導入の敷居がやや高く、どうしてもネックになると感じました。環境が揃えば、親和性が高くて便利なだけにすごく惜しいポイントだと感じてしまいます。このあたりは作業環境にも大きく依存する部分なのでクロスプラットフォームなリモコンアプリになればいいのになとも感じました。
+Macをリモートコントロールできる珍しいユーティリティなので工夫とアイデアで生産性を上げられるアプリなのは間違いないですが、惜しいポイントもあります。**対応プラットフォームがMacとiPhone、iPadといったApple製品に限られること**。^[[Alfred Remote for Android? - Alfred Remote Discussion & Help - Alfred App Community Forum](https://www.alfredforum.com/topic/5432-alfred-remote-for-android/)]**Alfred Remoteのアプリが有料である**、**Power Packが必須である**など導入の敷居がやや高く、どうしてもネックになると感じました。環境が揃えば、親和性が高くて便利なだけにすごく惜しいポイントだと感じてしまいます。このあたりは作業環境にも大きく依存する部分なのでクロスプラットフォームなリモコンアプリになればいいのになとも感じました。
 
 私もしばらく使い込んでみてより便利に使えるようカスタマイズしていくつもりです。便利なものはどんどん生活に取り入れていきたいので、Alfred Remoteのこんな便利な使い方あるよなどあれば是非教えてほしいです。
 
