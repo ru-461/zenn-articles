@@ -3,7 +3,7 @@ title: "Macを手元からあやつる魔法のツール【Alfred Remote】"
 emoji: "📶"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["alfred","alfredremote"]
-published: false
+published: true
 ---
 
 # はじめに
