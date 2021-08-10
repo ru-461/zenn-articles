@@ -73,7 +73,7 @@ volta list
 
 # Zenn執筆環境の構築
 
-Zennには執筆環境＆記事プレビューツールとしてZenn Editor（Zenn CLI）があります。
+Zennには執筆環境＆記事プレビューツールとして[Zenn Editor（Zenn CLI）](https://github.com/zenn-dev/zenn-editor)があります。
 
 Zenn公式の投稿にインストールから記事の投稿までの流れを説明している記事があるためこちらを参考に進めます。
 
