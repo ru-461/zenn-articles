@@ -31,5 +31,12 @@ Voltaの公式サイトからWindows用のインストーラーを入手してVo
 
 ![Voltaインストールウィザードの画像](/images/win-zennenv-with-volta/image02.png)
 
+Nextをクリックしてインストールを進めます。
+Voltaをインストールする際に以下のようなUAC（ユーザーアカウント制御）が表示されます。
+
+![ユーザーアカウント制御の画像](/images/win-zennenv-with-volta/image03.png)
+
+許可を求められたら「はい」をクリックして続行します。
+これでインストールが完了します。WindowsであってもVoltaのインストールもかなり高速で終わります。
 
 # おわりに
