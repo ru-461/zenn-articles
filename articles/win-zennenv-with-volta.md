@@ -49,6 +49,26 @@ Voltaのインストールが完了し、ウィザードを終了した時点で
 
 ![Voltaコマンドの確認画像](/images/win-zennenv-with-volta/image04.png)
 
-コマンドが実行できることを確認できれば、WindowsへのVoltaのインストールは成功しています。
+コマンドが実行できることを確認できれば、WindowsへのVoltaのインストールは成功しています。これでVoltaをWindowsで使用する準備が整いました。
+
+# VoltaからNode.jsをインストール
+
+VoltaはあくまでNode.jsのバージョン管理マネージャのため、デフォルトとなるNode.jsのバージョンを設定する必要があります。今回は記事執筆時点でLTSリリースとなっているバージョンをインストールしていきます。
+
+```shell
+volta install node
+```
+
+とすることで自動的に現在のLTSリリースの最新版が選択されインストール、デフォルトとして設定されます。
+
+Voltaを経由でインストールしたNode.js、ツールチェインは`volta list`で一覧表示できます。
+
+```shell
+volta list
+⚡️ Currently active tools:
+    Node: v14.17.3 (default)
+```
+
+上の例だと**Node.js v14.17.3**がデフォルトとして使用されるという意味になります。また同じようにnpmやYarnといったパッケージマネージャのインストール、デフォルト化もできます。
 
 # おわりに
