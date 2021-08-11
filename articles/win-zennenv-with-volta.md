@@ -79,4 +79,31 @@ Zenn公式の投稿にインストールから記事の投稿までの流れを�
 
 https://zenn.dev/zenn/articles/install-zenn-cli
 
+## Zenn CLIの導入
+
+まず、記事を管理するためのディレクトリを作成する必要があるため、空のディレクトリを作成します。今回はユーザーディレクトリのドキュメントルート（C¥Users¥user¥Documents）に記事管理用ディレクトリを作成しました。WindowsではUNIXと同じように`mkdir`とすることでディレクトリを作成できます。
+
+```shell
+# ドキュメントルートへ移動
+cd C¥Users¥user¥Documents
+
+# Zennの投稿管理用ディレクトリを作成
+mkdir zenn-contents
+```
+
+続いて作成したnpmプロジェクトの初期化を行いZenn CLIのインストールを行います。
+
+```shell
+# 記事管理ディレクトリに移動
+cd zenn-contents
+
+# npmプロジェクトの初期化
+npm init --yes
+
+# Zenn CLIをプロジェクトにインストール
+npm install zenn-cli
+```
+
+上の流れで作成したディレクトリにZenn Cliのインストールが完了します。
+
 # おわりに
