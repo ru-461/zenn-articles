@@ -18,20 +18,20 @@ Rust製で高速に動作することはもちろんのこと、クロスプラ�
 
 ![Windows用インストールガイドの画像](/images/win-zennenv-with-volta/image01.png)
 
-そこで実際にVoltaをWindowsにインストールしてZennの執筆環境（Zenn Editor）を構築するところまでやってみました。
+そこで実際にVoltaをWindowsにインストールしてZenn公式のNode.js製ツールZenn Editorを導入して執筆環境を構築するところまでやってみました。
 
 # インストール
 
-今回はWindows10にVoltaを使用してNode.jsのLTSをインストールしてZennEditorをブラウザで動かせるところまで進めていきます。WSL2でも同じことができますが、クロスプラットフォームを体験するためにあえてWindows10で実装していきます。
+今回はWindows10にVoltaを使用してNode.jsのLTSをインストールしてZenn Editorをブラウザで動かせるところまで進めていきます。WSL2でも同じことができますが、クロスプラットフォームを体験するためにあえてWindows10で実装していきます。
 
 ## インストーラーでVoltaをインストール
 
-Voltaの公式サイトからWindows用のインストーラーを入手してVoltaをWindowsへインストールしていきます。
+Voltaの公式サイトからWindows用インストーラーを入手してVoltaをWindowsへインストールしていきます。
 ダウンロードしたインストーラー（volta-version-windows-x86_64.msi）をダブルクリックすることでインストールウィザードが起動します。ダウンロードファイル名のversionsにはインストールされるバージョン名が入ります。
 
 ![Voltaインストールウィザードの画像](/images/win-zennenv-with-volta/image02.png)
 
-Nextをクリックしてインストールを進めます。
+「Next」をクリックしてインストールを進めます。
 Voltaをインストールする際に以下のようなUAC（ユーザーアカウント制御）が表示されます。
 
 ![ユーザーアカウント制御の画像](/images/win-zennenv-with-volta/image03.png)
@@ -73,7 +73,7 @@ volta list
 
 # Zenn執筆環境の構築
 
-Zennには執筆環境＆記事プレビューツールとして[Zenn Editor（Zenn CLI）](https://github.com/zenn-dev/zenn-editor)があります。
+Zennには執筆環境＆記事プレビューツールとしてNode.js製の[Zenn Editor（Zenn CLI）](https://github.com/zenn-dev/zenn-editor)があります。
 
 Zenn公式の投稿にインストールから記事の投稿までの流れを説明している記事があるためこちらを参考に進めます。
 
