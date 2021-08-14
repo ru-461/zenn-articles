@@ -105,10 +105,10 @@ mkdir zenn-contents
 # 記事管理ディレクトリに移動
 cd zenn-contents
 
-# npmプロジェクトの初期化
+# プロジェクトの初期化
 npm init --yes
 
-# Zenn CLIをプロジェクトにインストール
+# Zenn CLIをインストール
 npm install zenn-cli
 ```
 
