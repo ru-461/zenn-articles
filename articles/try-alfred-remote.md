@@ -14,13 +14,13 @@ Alfredを利用している人なら設定画面に「Remote」という設定�
 
 ![Alfredの設定画面](/images/try-alfred-remote/image01.png)
 
-これはその名の通りRemoteでAlfredを操作する設定で、専用のアプリを導入することで有効化できます。今回はAlfredではなくAlfred Remoteを使ってできることについて紹介します。
+これはその名の通りRemoteでAlfredを操作する設定で、Alfred Remoteという専用のアプリを導入することで有効化できます。今回はAlfredではなくAlfred Remoteを使ってできることについて紹介します。
 
 # Alfredとは
 
 AlfredとはmacOS向けのランチャーアプリです。ホットキーで簡単に呼び出して、アプリ・ファイルの検索やWebサイトの検索、ワークフロー（手続き処理）などあらゆることを高速に実行できるランチャーアプリです。この**Alfredを使いたいからMacを選ぶ**という人もいるほど根強いフォンを抱えているアプリです。
 
-Alfredの公式サイトはこちらになります。
+公式サイトはこちらになります。
 
 https://www.alfredapp.com/
 
