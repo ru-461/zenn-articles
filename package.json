@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preview": "npx zenn preview",
+    "preview": "zenn preview",
+    "zennv": "zenn --version",
     "textlint": "textlint",
     "textlint:fix": "textlint --fix"
   },
