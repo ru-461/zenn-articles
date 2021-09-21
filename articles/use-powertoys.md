@@ -39,7 +39,7 @@ PowerToysをインストールすることでこれらの機能が一気に使�
 
 PoweToysはGitHub上のリリースページから最新バージョンのセットアップ実行ファイルをダウンロードしてインストールできます。
 
-`Assetsの中にある**PowerToysSetup-〇〇〇-x64.exe**をクリックするとダウンロードが始まります。〇にはインストールされるバージョンが入ります。
+Assetsの中にある**PowerToysSetup-〇〇〇-x64.exe**をクリックするとダウンロードが始まります。〇にはインストールされるバージョンが入ります。
 
 https://github.com/microsoft/PowerToys/releases/
 
