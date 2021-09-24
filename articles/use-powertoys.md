@@ -31,7 +31,7 @@ https://github.com/microsoft/PowerToys
 | KeyBoard Manager | キーボードの再マッパ |
 | PowerRename | ファイル名一括編集ツール |
 | PowerToys Run | 検索＆ランチャー |
-| Shortcut Guide | Windowsキー のショートカットガイド |
+| Shortcut Guide | Windowsキーのショートカットガイド |
 
 PowerToysをインストールすることでこれらの機能が一気に使えるようになります。
 
