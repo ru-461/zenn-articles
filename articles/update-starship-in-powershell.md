@@ -10,15 +10,16 @@ published: false
 
 私は普段からWindowsのWSL、PowerShellなどでRust製のプロンプト[Starship](https://starship.rs/ja-JP/)を愛用しています。
 
-Starshipについては以前Zennにて詳しく[Rust製ツールでおしゃれなターミナル環境を作る【Starship ✕ exa】](https://zenn.dev/ryuu/articles/customize-your-terminal)というタイトルで紹介記事を書いたのでStarshipを知らない方はこちらから記事を覗いてもらえると嬉しいです。
+Starshipについては以前[Rust製ツールでおしゃれなターミナル環境を作る【Starship ✕ exa】](https://zenn.dev/ryuu/articles/customize-your-terminal)というタイトルで紹介記事を書いたのでこちらから記事を覗いてもらえると嬉しいです。
 
 Starshipを初めて導入したときはバージョン0.51.0だったのですが、あれから何回かアップデートがあり現在バージョン0.58.0となっています。
 
-PowerShell以外のターミナルについてはHomebrewやaptでインストールしていたため半自動的に最新に更新されていたのですが、久しぶりにPowerShellを確認したところバージョンが0.51.0で止まっていたため手動でアップデートしてみました。
+PowerShell以外ではHomebrewやaptでインストールしていたため半自動的に更新されていたのですが、PowerShellを確認したところバージョンが0.51.0で止まっていました。
 
 ![WSL2とPowerShellの比較画像](/images/update-starship-in-powershell/image01.png)
-*左がWSL2・右がPowerShell　それぞれStarshipのバージョンを表示しています*
+*左WSL2・右PowerShell それぞれStarshipのバージョンを表示しています*
 
+今回は手動でアップデートする方法を確認するとともに、PowerShellのStarshipもパッケージマネージャでの管理に乗り換えてみました。
 # アップデートする
 
 アップデートする際は至ってシンプルかつ簡単です。公式のドキュメントにもあるのですが以下のコマンドを実行するだけで最新のStarshipに置き換わります。
@@ -27,7 +28,7 @@ PowerShell以外のターミナルについてはHomebrewやaptでインスト�
 > sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
-インストールもアップデートも同じコマンドでできるのは便利です。
+インストール、アップデートが同じコマンドでできるのは便利です。
 
 このとき設定等がデフォルトの値に上書きされ、また最初から環境構築しなきゃならないのかと感じますが、アップデートの際は設定ファイルの互換性を保ったまま本体だけアップデートしてくれます。設定ファイル等の心配が減るだけでもかなり便利ですね。パッケージマネージャでバージョン管理をしている場合はあまり意識することがありませんが、手動でインストールする際の心理的負担が減るのは大きいです。
 
@@ -67,7 +68,7 @@ coopが導入できたらScoop経由でStarshipを導入します。Scoopがイ�
 > scoop install starship
 ```
 
-`'starship' was installed successfully!`と出力されると完了です。コマンドの最後に表示されるUsageに有効化する方法が記載されているのでガイドにしたがって設定します。
+`'starship' was installed successfully!`と出力されると完了です。コマンドの最後に有効化する方法が記載されているのでガイドにしたがって設定します。
 
 Starshipを有効化するためにはプロファイルに初期化処理を書く必要があります。プロファイルの場所は以下のコマンドで調べることができます。
 
