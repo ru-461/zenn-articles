@@ -6,29 +6,34 @@ topics: ["windows", "powertoys", "microsoft"]
 published: true
 ---
 
+:::message
+-2021/10/10 ー **v0.47.0**に合わせて記事を一部更新しました。
+:::
+
 # PowerToysとは？
 
 [PowerToys](https://docs.microsoft.com/ja-jp/windows/powertoys/)とはMicrodoftが開発しているWindowsの拡張ユーティリティ郡になります。もともとWindowsに搭載される予定だった機能が、別途まとめて配信されているものとなり、現在オープンソース化されて開発されています。
 
 https://github.com/microsoft/PowerToys
 
-現在Windows10の機能はアップデートでどんどん改良され、リリースされた当時に比べると全体的にかなり使いやすくなってきました。しかしまだ完全ではなく微妙に使いにくいと感じる部分も多くあります。Windowsには多くのフリーソフトが存在するため、各自で不満点を補うことが簡単にできるのが強みです。そこでMicrosoftもPowerToysというユーティリティを開発し提供しており、開発を進めています。またMicrosoftが開発している公式の拡張ユーティリティ群になるのでシステムから簡単に呼び出せたりといったWindowsとの親和性の高さと安定感があります。
+現在Windowsはアップデートでどんどん改良され、アップデートを重ねるたびに全体的にかなり使いやすくなってきました。しかしまだ完全ではなく微妙に使いにくいと感じる部分も多くあります。Windowsには多くのフリーソフトが存在するため、各自で不満点を補うことが簡単にできるのが強みです。そこでMicrosoftもPowerToysというユーティリティを開発し提供しており、開発を進めています。またMicrosoftが開発している公式の拡張ユーティリティ群になるのでシステムから簡単に呼び出せたりといったWindowsとの親和性の高さと安定感があります。
 
 提供されている機能はPowerToysのアップデートにより、どんどん追加され、Windowsに今後標準搭載される可能性もあります。
 
 :::message
-この記事内ではPowerToys **v0.33.1時点**で含まれる機能について紹介しています。PowerToysは現在開発途中のアプリケーションのため、今後アップデートにより提供される機能や、仕様が大きく変わることもあります。
+この記事内ではPowerToys **v0.47.0時点**で含まれる機能について紹介しています。PowerToysは現在開発途中のアプリケーションのため、今後アップデートにより提供される機能や、仕様が大きく変わることもあります。
 :::
 
 # PowerToysで提供される機能一覧
 
 | 機能名 | 説明 |
 | ---- | ---- |
+| PowerToys Awake | PCの起動維持ツール |
 | Color Picker | カラーピッカーツール |
 | FancyZones | ウィンドウの分割ツール |
 | エクスプローラー | 標準のエクスプローラーに機能を追加 |
 | Image Resizer | 画像のリサイズツール |
-| KeyBoard Manager | キーボードの再マッパ |
+| KeyBoard Manager | キーボードの再マッパー |
 | PowerRename | ファイル名一括編集ツール |
 | PowerToys Run | 検索＆ランチャー |
 | Shortcut Guide | Windowsキーのショートカットガイド |
@@ -53,9 +58,16 @@ https://github.com/microsoft/PowerToys/releases/
 > WinGet install powertoys
 ```
 
+:::message
+v0.47.0現在、Microsoft Storeが最新に更新されている場合、Microsoft Storeから簡単にインストールできるようになりました。
+
+![powertoysインストールページの画像](/images/use-powertoys/image10.png)
+*インストールボタンをクリックしてインストールできます*
+:::
+
 インストールし起動するとタスクトレイからPowerToysのアイコンが現れます。アイコンをクリックして以下のような設定画面が表示されたらインストールは成功しています。
 
-![デフォルトの設定画面の画像](https://storage.googleapis.com/zenn-user-upload/x14yaeyvet2fouzewzpha39ubahn)
+![デフォルトの設定画面の画像](/images/use-powertoys/image01.png)
 *インストール直後からすべて日本語化されている*
 
 再起動をすることなくすぐにPowerToysを使い始めることができます
@@ -63,16 +75,26 @@ https://github.com/microsoft/PowerToys/releases/
 
 # 追加される機能
 
+## PowerToys Awake
+
+Windowsを起動したままにするなど起動状態を制御できるユーティリティです。
+「Awakeを有効にする」をオンにすることで有効になります。有効になるとタスクバーにマグカップのようなアイコンが表示されます。有効にすると**画面をつけたままにする**、**電源をつけたままにする**といった細かい制御がタスクバーからできるようになります。
+
+PCをどうしても起動したままにしておきたい場合に有効となる機能です。awakeの制御コマンドも用意されているため組み合わせ次第ではPC制御の自動化など便利に使えそうな機能ですね。フリーソフトを使って実現していたことがOSに親和性の高い形で実現できるためさらにPC利用の可能性が広がるように感じます。
+
+使用できるCLI、コマンドについては公式ドキュメントにて詳しく解説されています。
+
+https://docs.microsoft.com/ja-jp/windows/powertoys/awake
 ## ColorPicker
 
 Windows内でいつでも呼び出せるカラーピッカーです。画面の中の要素にカーソルを合わせることで色のカラーコードを取得できます。
 Chromeの拡張機能でよく目にするカラーピッカーですが、Windowsの標準の機能としてカラーピッカーが使えるようになるのは大きいです。
 
-使用するには設定ウィンドウからColorPickerを呼び出すショートカットを設定する必要があります。デフォルトでは`Windows`＋`Shift`＋`C`で呼び出せるように設定されています。
+使用するには設定ウィンドウからColorPickerを呼び出すショートカットを設定する必要があります。デフォルトでは`Windowsキー`＋`Shift`＋`C`で呼び出せるように設定されています。
 
 試しにWindowsのデスクトップ壁紙のカラーコードを取得してみたところ。
 
-![壁紙の色コードを取得する様子](https://storage.googleapis.com/zenn-user-upload/u9jc1jw6zo3q15ng23lewelm92pj)
+![壁紙の色コードを取得する様子](/images/use-powertoys/image02.png)
 
 カーソルのあたった箇所のカラーコードを取得できました。取得した色についての詳細の表示や、色の編集も可能です。
 
@@ -81,10 +103,10 @@ Chromeの拡張機能でよく目にするカラーピッカーですが、Windo
 ウィンドウをレイアウトを分けてきれいに配置するためのアシストツールになります。
 マルチタスクのために画面を分割して使うときに威力を発揮します。
 
-まずレイアウトエディターでレイアウトを設定します。レイアウトエディタは`Windows`＋`@`で呼び出せます。
+まずレイアウトエディターでレイアウトを設定します。レイアウトエディタは`Windowsキー`＋`@`で呼び出せます。
 設定できるレイアウトはいくつかレイアウトがテンプレートとして用意されています。テンプレート以外にも各自でレイアウトを新規に定義もできます。
 
-![レイアウトエディタの画面](https://storage.googleapis.com/zenn-user-upload/q07csh1x16dhr6bhl10qbm272mzw)
+![レイアウトエディタの画面](/images/use-powertoys/image03.png)
 
 ここで設定したレイアウトに沿ってウィンドウの配置を簡単に行えるようになります。デフォルトでは`Shift`を押したままウィンドウをドラッグすることで指ウィンドウを柔軟に配置することが可能になります。
 
@@ -92,28 +114,26 @@ Chromeの拡張機能でよく目にするカラーピッカーですが、Windo
 
 Windows標準のファイル管理ツールエクスプローラーに機能を追加できます。
 
-[powertoys v0.33.1](https://github.com/microsoft/PowerToys/releases) 時点では以下の項目が追加可能です。
+[powertoys v0.47.0](https://github.com/microsoft/PowerToys/releases) 時点では以下の項目が追加可能です。
 
 それぞれの機能は設定から個別にオン・オフできます。
 
-![エクスプローラー設定の画面](https://storage.googleapis.com/zenn-user-upload/bc7u7j32q8fkxcekdl1550u36ms2)
+![エクスプローラー設定の画面](/images/use-powertoys/image04.png)
 
-上の例では、プレビュー可能ファイルにSVGファイル（.svg）とマークダウンファイル（.md）を追加しています。またアイコンプレビューとしてSVGファイルがサムネイルとして表示されるようになります。
+上の例では、プレビュー可能ファイルに**SVGファイル（.svg）**と**マークダウンファイル（.md）**、PDFファイル（.pdf）を追加しています。下のプレビュー設定を有効にすることでSVGファイルとPDFファイルをプレビューできるようになります。
+
 現時点では標準でプレビューに表示されないマークダウンファイルが手軽にプレビューできるようになるので、Windows上でマークダウンファイルを扱う人におすすめです。
-
-これらの機能は今後標準のエクスプローラーにも実装されそうですね。
-
 ## Image Resizer
 
 画像リサイズ機能を右クリックメニューへ追加し、エクスプローラーから画像のリサイズを簡単に行えるようにします。
 
 使い方は簡単で、右クリックで表示されるコンテキストメニューから画像のサイズを変更を選択するだけです。
 
-![コンテキストメニューの様子](https://storage.googleapis.com/zenn-user-upload/qffz9esgpkbxvpqdu2q1ctiqbvl9)
+![コンテキストメニューの様子](/images/use-powertoys/image05.png)
 
 すると以下のような選択した画像をリサイズするウィンドウが開かれるので、ここから自由に画像のサイズ変更を行えます。
 
-![リサイズメニューの様子](https://storage.googleapis.com/zenn-user-upload/5w3aoy4rsuau8yq8lkjyc2no03s1 =520x)
+![リサイズメニューの様子](/images/use-powertoys/image06.png =520x)
 
 予めよく使われる解像度がプリセットで用意されているので簡単に目的のサイズにリサイズできるのはとても便利です。またカスタムとして各々が指定した数値でのリサイズも可能です。
 
@@ -130,7 +150,7 @@ Windows標準のファイル管理ツールエクスプローラーに機能を�
 
 使い方は簡単でエクスプローラから編集したいファイルを複数選択し右クリックのコンテキストメニューから「Powerrename」を選択することで編集ウィンドウが開きます。
 
-![Powerremoveウィンドウの画像](https://storage.googleapis.com/zenn-user-upload/xlo8thjodz666pnjva92rv8l2si5 =520x)
+![Powerremoveウィンドウの画像](/images/use-powertoys/image07.png =520x)
 
 まとめてファイル名を変更でき、おなじみの正規表現も使用できるため、柔軟にファイル名を編集できます。
 
@@ -141,7 +161,7 @@ MacにはSpotlight検索を便利した[Alfred](https://www.alfredapp.com/)と�
 
 デフォルトでは`Alt`＋`Space`で呼び出すように設定されています。ショートカットキーを実行すると以下のようなウィンドウが画面上に現れます。
 
-![表示されたウインドウの画像](https://storage.googleapis.com/zenn-user-upload/vi1e83i0ptyypuswfxwf2h18sgfn)
+![表示されたウインドウの画像](/images/use-powertoys/image08.png)
 
 例としてインストール済みのアプリを検索してみます。検索したい文字列を途中まで入れるとその文字列を含むアプリを列挙してくれます。
 ![検索結果の画像](https://storage.googleapis.com/zenn-user-upload/1qxl8zxk8g1ilge0tgc2vwx9v4l4)
@@ -156,11 +176,12 @@ MacにはSpotlight検索を便利した[Alfred](https://www.alfredapp.com/)と�
 まだ発展途上の機能にはなりますが、この機能は今後、Windows標準のツールとしてぜひ取り入れて欲しいものです。
 ## Shortcut Guide
 
-有効化することでWindowsキーを長押したときに使用できるショートカットがオーバーレイとして表示されるようになります。
+指定したキーを長押したときに、有効なショートカットのチートシートがオーバーレイとして表示されるようになります。
+前はWindowsキー長押しで実行するのがデフォルトの設定でした。しかし現在はショートカットキーを組み合わせて実行することが公式から推奨されており、デフォルトで`Windowsキー` + `Shift` + `/`の同時押しが割り当てられています。
 
-![ショートカットガイドを表示させた様子](https://storage.googleapis.com/zenn-user-upload/cmuozzbjf7w62p6r745mti8aqs8j)
+![ショートカットガイドを表示させた様子](/images/use-powertoys/image09.png)
 
-例えば、`Windows`＋`矢印`でウィンドウのスナップ、`Windows`＋`A`でアクションセンターを開くなど。
+例えば、`Windowsキー`＋`矢印`でウィンドウのスナップ、`Windowsキー`＋`A`でアクションセンターを開くなど。
 Windowsキーが絡むショートカットキーは組合わせが覚えにくいものもあるので、すぐに使用できるキーの組み合わせを表示できるのは便利です。
 
 # おわりに
@@ -175,3 +196,4 @@ PowerToysを使うことでいつものWindowsの作業が少し便利に楽し�
 # 参考
 
 - [Microsoft公式ツール「Powertoys」を解説。なんでこの機能、Windowsに標準で入ってないの？という神機能が特盛！ – すまほん!!](https://smhn.info/202101-how-to-use-microsoft-windows-powertoys#i-3)
+- [「PowerToys」がWindows 11の「Microsoft Store」から入手可能に - 窓の杜](https://forest.watch.impress.-co.jp/docs/news/1352509.html)
