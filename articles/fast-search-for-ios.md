@@ -35,9 +35,15 @@ Chromeだとその他の検索エンジンから以下の設定で特定のキ�
 
 # Safariの拡張機能対応で手元からカスタム検索が可能に
 
-PC版のブラウザだと検索エンジンを柔軟に設定できたためかなり汎用性があるのですが、モバイル版のSafariやChromeだと同等の機能がなかったりと少し不便に感じることがありました。しかし今回のiOS15、iPadOS15にてmac向けのSafari拡張機能の一部が使用できるようになり、macOSと環境を揃えることが可能となりました。
+PC版のブラウザだと検索エンジンを柔軟に設定できたためかなり汎用性があるのですが、モバイル版のSafariやChromeだと同等の機能がなかったりと少し不便に感じることがありました。しかし今回のiOS15、iPadOS15にてmac向けのSafari拡張機能の一部が使用できるようになり、Safariでできることが大幅に増えました。
 
 またSafariの検索はiPhone、iPadのホーム画面、ロック画面を下にスワイプすることで呼び出せるSpotlight検索から行えます。これはつまり、極端に言うならロック画面からでも特定のサイト内でのダイレクトサーチが可能になることを意味し、Safariを使用した爆速検索が実現することになります。
+
+下の例ではロック画面からSpotlight検索を使ってZennの[reactの検索結果](https://zenn.dev/search?q=react)を表示しています。登録した検索エンジンショートカット（zn）を検索文字列の前に付与することで
+明示的に検索エンジンを指定するイメージです。
+
+![Spotlight検索からZennにてreactを検索する様子の画像](/images/fast-search-for-ios/movie01.gif =550x)
+*Spotlight検索でZennの中でキーワード「react」を検索する様子*
 
 特定の検索サイト内に絞って検索できると情報へたどり着く時間がぐんと短縮できるため情報にたどり着く際の時短テクニックとして是非取り入れてほしいです。
 
@@ -82,7 +88,7 @@ xSearchの初回起動をすると以下のような画面になります。
 ![エンジンタブの画像](/images/fast-search-for-ios/image06.png)
 *ギャラリーから追加も可能*
 
-PCのブラウザにて検索エンジンをカスタマイズしていたことがあれば、直感的に入力欄がわかるのでとても設定しやすいかと思われます。
+PCのブラウザにて検索エンジンをカスタマイズしていたことがあれば、設定の項目、設定値をそのまま流用できるため直感的に理解しやすいかと思われます。
 
 ギャラリーには既に検索エンジンがいくつかテンプレートとして公開してあるため、こちらから直接追加できます。しかし日本語対応しているサイトが現時点ではほとんどないため、ドメインなどを、適宜変更する必要があります。ここのギャラリーにある設定例はアップデートによりどんどん増えているので気になったのがあればどんどん追加してみるのもいいです。直近だと先日までなかったDeepL翻訳が追加され翻訳の選択肢が増えました。追加する際は右にスワイプするだけで有効化してすぐ使えるようになります。
 
@@ -117,8 +123,8 @@ URLによく使われるキーワードが候補として用意されており�
 | GitHub | gh | https://github.com/search?q=%s |
 | MDN | mdn | https://developer.mozilla.org/search?q=%s |
 | npm | npm | https://www.npmjs.com/search?q=%s |
-| DeepL翻訳（→ 日本語） | dlj | https://www.deepl.com/ja/translator#en/ja/%s |
-| DeepL翻訳（→ 英語） | dle | https://www.deepl.com/ja/translator#ja/en/%s |
+| DeepL翻訳（→ 日本語） | dlj | https://www.deepl.com/ja/translator#../ja/%s |
+| DeepL翻訳（→ 英語） | dle | https://www.deepl.com/ja/translator#../en/%s |
 | Google翻訳（→ 日本語） | gtj | https://translate.google.com/?sl=auto&tl=ja&text=%s&op=translate |
 | Google翻訳（→ 英語） | gte | https://translate.google.com/?sl=auto&tl=en&text=%s&op=translate |
 
