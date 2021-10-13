@@ -2,7 +2,7 @@
 title: "ロック画面からでもSafariで高速検索したい【xSearch】"
 emoji: "🔎"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["ios", "ipados", "safari"]
+topics: ["ios", "ipados", "safari", "ios15", ipados15"]
 published: true
 ---
 
