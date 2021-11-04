@@ -28,13 +28,11 @@ npxが使える状態であえて使わないのはもったいないに便利�
 
 https://www.npmjs.com/package/npx
 
-もしnpxコマンドが存在しない場合は。
+もしnpxコマンドが存在しない場合は以下のコマンドでグローバルにインストールできます。
 
 ```shell
 $ npm install -g npx
 ```
-
-でグローバルにインストールできます。
 
 # Why？ npx
 
