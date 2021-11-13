@@ -85,7 +85,7 @@ Invoke-Expression (&starship init powershell)
 プロファイルの編集が完了したらリロードするためPowerShellを再起動します。再起動せずに`$PROFILE`と実行することでもプロファイルを再読み込みできます。
 
 ![WSL2とPowerShellの比較画像](/images/update-starship-in-powershell/image02.png)
-*Scoop経由で最新のバージョンのStarshipがインストール完了*
+*Scoop経由で最新のバージョンのStarshipがインストールできた*
 
 これでStarshipをScoopで管理するようにできました。Starshipのアップデートがあった際は、`scoop update starship`のコマンドでバージョンが上げられるようになります。
 
