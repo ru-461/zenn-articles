@@ -59,7 +59,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 上の3項目それぞれデフォルトから変更しました。これにより最小限のUI表示を保ちながら作業に没入できるのでおすすめです。
 
-![Zen Modeの設定変更後の様子](/images/what-zen-mode/image05.png)
+![Zen Modeの設定変更後の様子](/images/what-zen-mode/image06.png)
 *作業スペースが広くなるのでターミナルとエディタを並べても余裕*
 
 他にもサイドバー、上部のUIの表示や、非表示を設定できます。
