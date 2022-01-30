@@ -43,7 +43,7 @@ https://brew.sh/index_ja
 
 ## インストールの準備
 
-Homebrweを導入するにあたりパッケージを最新に更新しておきます。
+Homebrewを導入するにあたりパッケージを最新に更新しておきます。
 
 ```shell
 $ sudo apt update
@@ -145,7 +145,7 @@ brewコマンド実行の際に怒られる場合はおなじみの`brew doctor`
 HomebrewではパッケージをFomulaと呼び、以下のようにインストールします。
 
 ```shell
-# 有名な treeコマンドを Homebrew を使ってインストール
+# treeコマンドをHomebrewでインストール
 $ brew install tree
 ```
 インストールが完了すると同時にパスも通るためターミナルからすぐに実行できます。
