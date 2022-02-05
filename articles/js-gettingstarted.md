@@ -48,7 +48,7 @@ http://localhost:8080 で開発サーバが立ち上がります。
 
 ![Vue.jsウェルカムページの画像](/images/js-gettingstarted/image01.png)
 
-# Nuxt.js
+# Nuxt.js（2.x）
 
 ## npm
 
@@ -76,7 +76,23 @@ $ yarn dev
 
 http://localhost:3000 で開発サーバーが立ち上がります。
 
-![Nuxt.jsウェルカムページの画像](/images/js-gettingstarted/image02.png)
+![Nuxt.js2ウェルカムページの画像](/images/js-gettingstarted/image02.png)
+
+# Nuxt.js（3.x）
+
+Nuxt3からはセットアップ手順が大幅に変更されました。
+`nuxi`を用いて従来よりも簡略的かつ高速にセットアップできます。nuxiとはNuxt用の新しいCLIになります。
+
+```shell
+$ npx nuxi init <project-name>
+$ cd <project-name>
+$ yarn install
+$ yarn dev -o
+```
+
+http://localhost:3000 で開発サーバーが立ち上がります。
+
+![Nuxt.js3ウェルカムページの画像](/images/js-gettingstarted/image02_2.png)
 
 # React
 
