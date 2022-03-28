@@ -45,6 +45,27 @@ PHPのインストールに伴い依存しているパッケージやモジュ�
 
 続けてmacOSにPHPの設定をしていきます。
 
+## セットアップ
+
+インストールしたPHPは自動的にパスが通らないため、シェルのプロファイルからパスを手動で通す必要があります。使用しているシェルのプロファイル（.bascrcや.zshrc）などを開き以下コマンドを叩くか、プロファイルを直接編集しパスを構成します。Zshを使用している場合は以下のようになります。
+
+```shell:.zshrc
+$ echo 'export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+$ echo 'export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+```
+
+コマンドを実行後、パスを読み込ませるために一旦シェルを再起動します。シェルを再起動したあとに`php --version`でPHPのバージョン情報が出力されれば問題なくパスが通り使用できるようになっています。
+
+パスが通ることを確認できたら併せて以下の設定も行います。シェルのプロファイル内に次の２行を追記します。
+
+```shell:.zshrc
+export LDFLAGS="-L/opt/homebrew/opt/php@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
+```
+
+こちらも追記後にシェルを再読み込みし有効化しておきます。
+
+これでPHPを使用できる環境が構築できました。
 
 ## インストール
 
