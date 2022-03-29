@@ -35,7 +35,7 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 
 # 環境
 
-- Windows10バージョン20H2
+- Windows10 バージョン20H2
 - WSL2（Ubuntu 20.04 LTS）
 
 # インストール
