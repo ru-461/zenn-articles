@@ -3,7 +3,7 @@ title: "【macOS Monterey】HomebrewでPHPの実行環境をセットアップ�
 emoji: "🐘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["mac", "php", "homebrew"]
-published: false
+published: tech
 ---
 
 # はじめに
