@@ -1,3 +1,3 @@
-# My Zenn Articles
+# Zenn Articles
 
 - [Articles](https://zenn.dev/ryuu)
