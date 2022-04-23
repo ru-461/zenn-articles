@@ -57,6 +57,29 @@ $ sudo apt update & sudo apt upgrade
 
 上記のコマンドでパッケージのアップデートとアップデートを同時に行い、パッケージを最新の状態にしておきます。
 
+## ディストリビューションアップデートの確認
+
+ディストリビューションのアップグレードを確認するために必要なパッケージをインストールします。
+
+```shell
+$ sudo apt dist-upgrade & sudo apt install update-manager-core
+```
+
+ディストリビューションの依存関係の解決が行われます。`apt install update-manager-core`では、update-manager-coreが存在しなかった場合のみインストールが行われます。
+
+## relese-upgradeの設定
+
+relese-upgradeの設定ファイルを変更します。以下のファイルをエディタで開きます。使用するエディタはVimやnanoなど普段使用しているもので問題ありません。
+
+```shell
+$ sudo vim /etc/update-manager/release-upgrades
+```
+
+ファイルの一番下に`Prompt`という項目があります。ここの値を`lts`に変更します。18.04 LTSや20.04 LTSなどのLTSリリースを使用している場合はデフォルトで`Prompt=lts`となっているため変更する必要はありません。
+
+設定を確認しファイルを閉じます。値を変更した場合はファイルを保存して閉じるようにします。
+これで最新のLTSへアップグレードする準備が完了しました。
+
 # アップグレードの実行
 
 # 確認
