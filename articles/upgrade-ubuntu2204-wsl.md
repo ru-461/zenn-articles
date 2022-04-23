@@ -20,7 +20,32 @@ https://www.microsoft.com/ja-jp/p/ubuntu-2204-lts/9pn20msr04dw?activetab=pivot:o
 
 # アップグレードのインストール準備
 
+アップグレードを行う前に、現在実行しているバージョンの把握とパッケージの依存関係を最新にし解決しておきます。
+
 ## 現行バージョンを確認
+
+まず、現在実行しているUbuntuのバージョンを確認しておきます。
+
+WSL2にてUbuntuを起動し、バージョン情報が記述されたファイルを'cat'で確認します。Ubuntuは/etc/os-releaseの情報を参照することでバージョンを把握できます。
+
+```shell
+$ cat /etc/os-release
+
+NAME="Ubuntu"
+VERSION="20.04.4 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.4 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+```
+
+バージョン情報が確認できました。上の例だと20.04.4 LTS （Focal Fossa）が実行されていることが分かります。
 
 # アップグレードの実行
 
