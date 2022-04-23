@@ -163,3 +163,9 @@ UBUNTU_CODENAME=jammy
 Ubuntu 22.04 LTSの変更点については現在勉強中のため、引き続きWSL2のメイン環境として使用しつつ理解を深めていきたいです。
 
 最後まで読んでいただきありがとうございました。
+
+# 参考
+
+- [Download Ubuntu Desktop | Download | Ubuntu](https://ubuntu.com/download/desktop)
+- [Jammy Jellyfish Release Notes - Release - Ubuntu Community Hub](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668)
+- [How to Upgrade WSL 2 or 1 Ubuntu 20.04 to 22.04 LTS - Linux Shout](https://www.how2shout.com/linux/how-to-upgrade-wsl-2-or-1-ubuntu-20-04-to-22-04-lts/)
