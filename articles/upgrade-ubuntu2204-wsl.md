@@ -63,7 +63,7 @@ UBUNTU_CODENAME=focal
 Ubuntuにインストールしているパッケージのアップデートと依存解決を行います。
 
 ```shell
-$ sudo apt update & sudo apt upgrade
+$ sudo apt update && sudo apt upgrade
 ```
 
 上記のコマンドでパッケージのアップデートとアップデートを同時に行い、パッケージを最新の状態にしておきます。
@@ -73,7 +73,7 @@ $ sudo apt update & sudo apt upgrade
 ディストリビューションのアップグレードを確認するために必要なパッケージをインストールします。
 
 ```shell
-$ sudo apt dist-upgrade & sudo apt install update-manager-core
+$ sudo apt dist-upgrade && sudo apt install update-manager-core
 ```
 
 ディストリビューションアップグレードの依存解決が行われます。`apt install update-manager-core`は、update-manager-coreが存在しなかった場合のみインストールが行われます。
