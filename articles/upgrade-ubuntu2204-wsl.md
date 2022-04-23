@@ -29,6 +29,9 @@ https://www.microsoft.com/ja-jp/p/ubuntu-2204-lts/9pn20msr04dw?activetab=pivot:o
 # アップグレードのインストール準備
 
 アップグレードを行う前に、現在実行しているバージョンの把握とパッケージの依存関係を最新にし解決しておきます。事前準備を行うことでこの後行うアップグレード作業を進めやすくなります。
+アップグレードの際に日本語表示で来たほうがデバッグしやすくなるのでUbuntuのロケール変更と日本語対応させておくのがおすすめです。
+
+WSL2のUbuntu日本語対応については以前執筆した「[WSL2を日本語化するときにやったこと](https://zenn.dev/ryuu/articles/wsl2-locale-jp)」の記事内で解説しております。以下の表示項目は日本語対応させた環境での出力結果となることをご了承下さい。
 
 ## 現行バージョンを確認
 
@@ -73,7 +76,8 @@ $ sudo apt update & sudo apt upgrade
 $ sudo apt dist-upgrade & sudo apt install update-manager-core
 ```
 
-ディストリビューションの依存関係の解決が行われます。`apt install update-manager-core`では、update-manager-coreが存在しなかった場合のみインストールが行われます。
+ディストリビューションアップグレードの依存解決が行われます。`apt install update-manager-core`は、update-manager-coreが存在しなかった場合のみインストールが行われます。
+エラー、警告がでないことを確認したら次のステップに進みます。
 
 ## relese-upgradeの設定
 
