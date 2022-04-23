@@ -1,5 +1,5 @@
 ---
-title: "【WSL2】Ubuntu 20.04.4 LTSを22.04 LTSへアップグレードした"
+title: "【WSL2】Ubuntu 20.04.4 LTS を 22.04 LTS へアップグレードした"
 emoji: "📑"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["wsl2", "ubuntu", "ubuntu2004", "ubuntu2204"]
