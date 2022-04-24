@@ -8,8 +8,8 @@ published: true
 
 # はじめに
 
-先日、2022年4月21日にUbuntu 22.04 LTS Jammy Jellyfishがリリースされました。これは2020年4月23日にリリースされたUbuntu 20.04 LTSの次のLTSリリースとなります。
-現在WSL2（Windows Subsystem for Linux）では[18.04 LTS](https://www.microsoft.com/ja-jp/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab)と[20.04.4 LTS](https://www.microsoft.com/ja-jp/p/ubuntu-20044-lts/9mttcl66cpxj?activetab=pivot:overviewtab)のLTSリリースがMicrosoft Storeにて提供されています。
+先日、2022年4月21日に[Ubuntu 22.04 LTS Jammy Jellyfish](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668)がリリースされました。これは2020年4月23日にリリースされたUbuntu 20.04 LTSの次のLTSリリースとなります。
+現在WSL2（Windows Subsystem for Linux）ではUbuntuの[18.04 LTS](https://www.microsoft.com/ja-jp/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab)と[20.04.4 LTS](https://www.microsoft.com/ja-jp/p/ubuntu-20044-lts/9mttcl66cpxj?activetab=pivot:overviewtab)のLTSリリースがMicrosoft Storeにて提供されています。
 
 記事執筆現在、`wsl --list --online`で確認できるディストリビューションリストには表示されていませんが、Microsoft Storeには掲載されております。
 以下のページからUbuntu 22.04 LTSを新規にダウンロードしてWSL2で実行できます。
@@ -56,7 +56,7 @@ VERSION_CODENAME=focal
 UBUNTU_CODENAME=focal
 ```
 
-バージョン情報が確認できました。上の例だと20.04.4 LTS （Focal Fossa）が実行されていることが分かります。
+バージョン情報が確認できました。上の例だと２行目`VERSION="20.04.4 LTS (Focal Fossa)"`の部分からUbuntu20.04.4 LTSが実行されていることが読み取れます。
 
 ## パッケージの依存解決
 
@@ -164,7 +164,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-`VERSION="22.04 (Jammy Jellyfish)"`となっていることが確認できれば22.04 LTSへのアップグレードは問題なく完了しております。
+項目の記載例が20.04.4と少し異なってはいますが、`VERSION="22.04 (Jammy Jellyfish)"`と記載されていることを確認できれば22.04 LTSへのアップグレードは問題なく完了しております。
 
 # おわりに
 
