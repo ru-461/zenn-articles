@@ -3321,10 +3321,10 @@ xtend@^4.0.0, xtend@^4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
-zenn-cli@^0.1.108:
-  version "0.1.108"
-  resolved "https://registry.yarnpkg.com/zenn-cli/-/zenn-cli-0.1.108.tgz#43e4f95e9dea22eba7fc3544a102f96e735df468"
-  integrity sha512-dbcqwSQVsWw2XpNWROKxvXXxdC051ykEpBkm/ozlA5jsrLi+zx2UqWIoiia5HsLSSARPkfDWaAfIzn5UoiMNvA==
+zenn-cli@^0.1.110:
+  version "0.1.110"
+  resolved "https://registry.yarnpkg.com/zenn-cli/-/zenn-cli-0.1.110.tgz#e04bd45e09b18e8216bc68f7800ec55e42f174ad"
+  integrity sha512-E8cV4C9SdlgrI9zH1fKBvpGuazfufdbCzJFC1K1mUCqNGJe9LcMeS8pz1E+FpxHob+0N74ToGG5N9lwg+7kW7Q==
   dependencies:
     arg "^5.0.0"
     cheerio "^1.0.0-rc.10"
@@ -3340,12 +3340,12 @@ zenn-cli@^0.1.108:
     node-fetch "^2.6.7"
     open "^8.2.0"
     ws "^7.4.6"
-    zenn-markdown-html "^0.1.108"
+    zenn-markdown-html "^0.1.110"
 
-zenn-markdown-html@^0.1.108:
-  version "0.1.108"
-  resolved "https://registry.yarnpkg.com/zenn-markdown-html/-/zenn-markdown-html-0.1.108.tgz#c573b80220e077aa0e7646423f6d0b7c1f56bb83"
-  integrity sha512-NDoe3Oe5wXYRyTy4ASFG0Ol0DdJv7c1aINzq3qjEifhgPAjjbbc12llYq6OLca4hRNX9E93kaR9RnpDJ5AMqsg==
+zenn-markdown-html@^0.1.110:
+  version "0.1.110"
+  resolved "https://registry.yarnpkg.com/zenn-markdown-html/-/zenn-markdown-html-0.1.110.tgz#9455d0485cdbc6f36412ef64cc05d6b61ac5a121"
+  integrity sha512-C0VVqg+chQKZgg2+rduPohVY+8KBoGFwq2szN7AhfWNBXI8Qi6KuxljN+wBXCjTcFpZewPf3k9HlF0NwtDaq0w==
   dependencies:
     "@steelydylan/markdown-it-imsize" "^1.0.2"
     markdown-it "^12.3.2"
