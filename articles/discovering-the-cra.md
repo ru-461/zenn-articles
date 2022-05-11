@@ -2,7 +2,7 @@
 title: "Create React Appはカレントディレクトリに直接展開できる"
 emoji: "💡"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["createreactapp","topics"]
+topics: ["react", "createreactapp"]
 published: true
 ---
 
