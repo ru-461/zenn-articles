@@ -43,7 +43,7 @@ $ npx create-react-app .
 Creating a new React app in react-projects/my-app.
 ...
 cd react-projects/my-app
-  yarn start
+  npm start
 
 Happy hacking!
 ```
@@ -59,15 +59,15 @@ $ tree -L 1
 .
 ├── README.md
 ├── node_modules
+├── package-lock.json
 ├── package.json
 ├── public
-├── src
-└── yarn.lock
+└── src
 
 3 directories, 3 files
 ```
 
-結果として`/react-projects`内で`npx create-react-app my-app`したのと同じになります。カレントディレクトリにプロジェクトファイルが配置されているため、続けて`yarn start`すると開発サーバーが立ち上がります。また、`create-react-app`のあとに続けて階層を指定すると作成先のファイル階層をさらに深くしたりと自由に作成先を指定できるので覚えておくと便利です。
+結果として`/react-projects`内で`npx create-react-app my-app`したのと同じになります。カレントディレクトリにプロジェクトファイルが配置されているため、続けて`npm start`すると開発サーバーが立ち上がります。また、`create-react-app`のあとに続けて階層を指定すると作成先のファイル階層をさらに深くしたりと自由に作成先を指定できるので覚えておくと便利です。
 
 ```shell
 # カレントディレクトリにreact-projects/my-react-app/appを作成
