@@ -34,7 +34,7 @@ anyenv 1.1.2-1時点では以下の **env系ツールをインストール可能
 | goenv | Go |
 | hsenv | Haskell |
 | jenv | Java |
-| jlenv | Text |
+| jlenv | Julia |
 | luaenv | Lua |
 | nodenv | Node.js |
 | phpenv | PHP |
