@@ -2,7 +2,7 @@
 title: "Create React Appで使うパッケージマネージャをnpmに強制する"
 emoji: "💼"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["createreactapp","npm"]
+topics: ["react", "createreactapp","npm"]
 published: true
 ---
 
