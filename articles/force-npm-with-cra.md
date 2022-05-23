@@ -6,6 +6,12 @@ topics: ["react", "createreactapp","npm"]
 published: true
 ---
 
+:::message
+この記事の内容は[Create React App v5.0.0](https://github.com/facebook/create-react-app/releases/tag/v5.0.0)以前の内容です。現在はデフォルトでnpmをパッケージマネージャとして使用するように仕様変更されています。
+
+yarnを引き続き使うには`yarn create react-app <project-name>`でプロジェクトを生成できます。
+:::
+
 # はじめに
 
 [Create React App](https://create-react-app.dev/)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx crate-react-app my-app`とした場合は以下のように表示されYarnで起動するコマンドが促されます。
