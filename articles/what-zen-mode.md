@@ -8,9 +8,9 @@ published: true
 
 # はじめに
 
-Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/) は拡張機能が豊富で柔軟なコーティング環境を作れるエディタでとても人気があります。また最近は同社が開発しているTypeScriptがフロントエンド開発のトレンドになってることもあり、VSCodeをメインのエディタとして使用することも多くなってきました。私自身、VSCodeにて記事を執筆していることもありいつもお世話になってます。
+Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/) は拡張機能が豊富で柔軟なコーティング環境を作れるエディタでとても人気があります。また最近では同社が開発しているTypeScriptがフロントエンド開発のトレンドになってることもあり、VSCodeをメインのエディタとして使用することも多くなってきました。私自身、VSCodeにて記事を執筆していることもありかなりお世話になってます。
 
-そこで今回は、コーティング作業へ集中することに特化した機能、**禅モード（Zen mode）** をご紹介します。
+そこで今回は、コーティング作業へ集中することに特化した機能、**禅モード（Zen mode）**をご紹介します。
 
 余談ではありますが、この記事を投稿しているこちらのサイト[Zenn](https://zenn.dev/) とは何も関係ありません。「Zen」です。
 
