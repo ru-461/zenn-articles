@@ -112,6 +112,11 @@ Nuxt.jsを使ったプロジェクトはスクラッチで１から始めるこ�
 
 最後まで読んでいただきありがとうございました。
 
+以下のスクラップでnpxで使用すると便利なツール・パッケージをまとめております。
+npxを活用する上で参考になれば幸いです。
+
+https://zenn.dev/ryuu/scraps/bcb45ea47630c3
+
 # 参考
 
 - [nuxt/create-nuxt-app: Create Nuxt.js App in seconds.](https://github.com/nuxt/create-nuxt-app)
