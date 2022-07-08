@@ -16,7 +16,7 @@ published: true
 
 タイトルにもある「anyenv」は、公式が「All in one for env」と謳っている、オールインワンのバージョンマネージャーです。今回はそんなオールインワンなツール「anyenv」を紹介します。
 
-anyenvのGitリポジトリはこちらになります。
+anyenvのGitHubリポジトリはこちらになります。
 
 https://github.com/anyenv/anyenv
 
