@@ -22,7 +22,7 @@ https://github.com/anyenv/anyenv
 
 # anyenvでインストールできるもの
 
-1.1.2-1時点では以下のツールをanyenv経由でインストール可能です。
+v1.1.5時点では以下のツールをanyenv経由でインストール可能です。
 
 | ツール | 対象環境・言語 |
 | ---- | ---- |
@@ -50,20 +50,20 @@ https://github.com/anyenv/anyenv
 
 ## 実行環境
 
-- WSL2（Ubuntu 20.04.2 LTS）
-- macOS Big Sur バージョン11.2.3（AppleSilicon）
+- WSL2（Ubuntu 22.04 LTS）
+- macOS Monterey 12.5.1（AppleSilicon）
 
 ## 手動インストール
 
 Gitからチェックアウトしてインストールする方法です。Gitを使うため、特定のパッケージマネージャや、OSを選ぶことなくインストールできます。
 
-ます、Gitを使いanyenvのGitHubリポジトリから本体をクローンしてきます。Gitコマンドを使うため、**事前に Git コマンドがインストールされている必要**があります。
+まず、Gitを使いanyenvのGitHubリポジトリから本体をクローンしてきます。Gitコマンドを使うため、**事前に Git コマンドがインストールされている必要**があります。
 以下のコマンドを実行してバージョン情報がうまく返ってくればGitコマンドがインストールされています。
 
 ```shell
 # Gitのバージョンを確認
 $ git --version
-  git version 2.31.0
+  git version 2.37.2
 ```
 
 Gitが使えることを確認したら以下のコマンドでユーザーのホームディレクトリにanyenv本体をクローンします。
