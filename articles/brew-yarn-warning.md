@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-以前、M1 MacbookにてHomebrewを使い、anyenvとnodenvをインストールしてNode.jsを使った開発環境を構築しました。
+以前、M1 MacbookにてHomebrewを使い、anyenvとnodenvを使ったNode.jsの開発環境を構築しました。
 
 パッケージマネージャにYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`コマンドで見てもらったところ以下のようなWarningがでてきて焦りました。
 
