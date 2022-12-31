@@ -2,7 +2,7 @@
 title: "composer create-projectコマンドは何をしているのか追ってみる"
 emoji: "🎼"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["composer", "php"]
+topics: ["php", "composer"]
 published: false
 ---
 
@@ -11,14 +11,14 @@ published: false
 
 PHPでパッケージの依存解決をするときは[Composer](https://getcomposer.org)を使うことが多く、PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
-たとえば、Laravelプロジェクト雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
+たとえば、PHPアプリケーションフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
 
 ```shell
 $ composer create-project laravel/laravel example-app
 ```
 
 コマンドを何気なくタイプしている中で具体的に何をしているのか気になったので実態を調べてみました。
-コマンドの名前からしてJavaScriptのパッケージ管理ツールnpmやyarnでいう`npm init`や`yarn init`みたいなもののように感じますがどうなのでしょうか。
+コマンドの名前からしてJavaScriptのパッケージ管理ツールnpmやYarnでいう`npm init`や`yarn init`みたいなもののように感じますがどうなのでしょうか。
 
 # 結論
 
@@ -26,12 +26,44 @@ $ composer create-project laravel/laravel example-app
 
 # create-projectコマンドの実態
 
-Composerの公式ドキュメントを眺めていたら気になる一文を発見しました。
+Composer公式ドキュメントのcreate-project[^1]を眺めていたら気になる一文を発見しました。
 
-| You can use Composer to create new projects from an existing package. This is the equivalent of doing a Git clone/svn checkout followed by a composer install of the vendors.
+> You can use Composer to create new projects from an existing package. This is the equivalent of doing a Git clone/svn checkout followed by a composer install of the vendors.
 
-要約すると、Gitやsvnなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。
+[^1]: 引用 https://getcomposer.org/doc/03-cli.md#create-project
+
+要約すると、GitやSvnなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。想像よりもシンプルで驚きました。
 
 本当にそうなのか検証してみます。
+
+# Laravelを例に検証する
+
+以下、Laravelの例で考えます。
+
+Laravelの実体は以下のGitHubリポジトリに存在します。
+
+https://github.com/laravel/laravel
+
+記事執筆時点で最新バージョンはv9.4.1となっております。このリポジトリをローカルにクローンするには以下のコマンドを実行します。
+
+```shell
+$ git clone https://github.com/laravel/laravel.git example-app
+```
+
+上のコマンドを実行することで現在のディレクトリ配下にexample-appというディレクトリが生成され、中にGitHubリポジトリ上のソースがすべてコピーされた状態になります。
+
+この状態でLaravelのローカルサーバーを起動しようとすると必要なパッケージをロードできないためarisanコマンドでPHPのWarningが発生します。
+
+```shell
+$ php artisan serve
+
+PHP Warning: ..
+```
+
+なぜならGitHub上にあるlaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcompose.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
+
+その時に使われるのが`composer install`になります。
+
+ここまで来るともうお分かりなのですが、`composer create-project laravel/laravel example-app`はlaravelのlaravelリポジトリを`git clone`したあとに`composer install`を実行してよしなに環境を構築してくれるワンライナーの役目を果たしているのでした。
 
 # おわりに
