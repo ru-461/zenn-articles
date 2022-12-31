@@ -66,7 +66,7 @@ PHP Warning: ..
 
 ここまで来るともうお分かりなのですが、`composer create-project laravel/laravel example-app`はlaravelのlaravelリポジトリを`git clone`したあとに`composer install`を実行してよしなに環境を構築してくれるワンライナーの役目を果たしているのでした。
 
-# 応用
+# 応用してみる
 
 つまりコマンド内の`laravel/larvel`の部分を任意のリポジトリ名に変えて上げることで他のフレームワークにも応用できます。
 
@@ -79,3 +79,7 @@ $ composer create-project symfony/skeleton example-app
 コマンド1つで開発環境を作れるのはすごく便利ですね。
 
 # おわりに
+
+今回は手短ながら、分かっているようで分からないcomposer installコマンドについてまとめました。ドキュメントを読み解くこと発見も多くあり、より知識が深まるので気になったら調べてみると精神は大切ですね。
+
+最後まで読んでいただきありがとうございました。
