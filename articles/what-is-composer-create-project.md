@@ -9,7 +9,7 @@ published: false
 
 # はじめに
 
-PHPでパッケージの依存解決をするときは[Composer](https://getcomposer.org)を使うことが多く、PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
+PHPでパッケージの依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
 たとえば、PHPアプリケーションフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
 
@@ -52,7 +52,7 @@ $ git clone https://github.com/laravel/laravel.git example-app
 
 上のコマンドを実行することで現在のディレクトリ配下にexample-appというディレクトリが生成され、中にGitHubリポジトリ上のソースがすべてコピーされた状態になります。
 
-この状態でLaravelのローカルサーバーを起動しようとすると必要なパッケージをロードできないためarisanコマンドでPHPのWarningが発生します。
+この状態でLaravelのビルトインサーバー（組み込み開発サーバー）を起動しようとすると必要なパッケージをロードできないためarisanコマンドでPHPのWarningが発生します。
 
 ```shell
 $ php artisan serve
@@ -65,6 +65,20 @@ PHP Warning: ..
 その時に使われるのが`composer install`になります。
 
 ここまで来るともうお分かりなのですが、`composer create-project laravel/laravel example-app`はlaravelのlaravelリポジトリを`git clone`したあとに`composer install`を実行してよしなに環境を構築してくれるワンライナーの役目を果たしているのでした。
+
+`composer create-project`を使わずに、`git clone`、`composer install`で構築した場合は.envファイルが存在しないため500エラーになる可能性があります。その場合は、.envファイルを構成しencriptキーを生成することで解決します。
+
+```shell
+// サンプルの.envファイルをコピー
+$ cp .env.example .env
+
+// encriptキーを生成してビルトインサーバー起動
+$ php artisan key:generate && php artisan serve
+```
+
+基本的には公式ドキュメントに合わせて`composer create-project`でプロジェクトを開始し適宜カスタマイズしていくのが無難そうです。
+
+![ビルトインサーバートップページの画像](/images/what-is-composer-create-project/image01.png)
 
 # 応用してみる
 
