@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-PHPでパッケージの依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
+PHPでパッケージ間の依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
 例えば、PHPアプリケーションフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
 
