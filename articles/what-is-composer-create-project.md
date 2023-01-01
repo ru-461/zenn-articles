@@ -1,17 +1,16 @@
 ---
-title: "composer create-projectコマンドは何をしているのか追ってみる"
+title: "Composerのcreate-projectコマンドは何をしているのか追ってみる"
 emoji: "🎼"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["php", "composer"]
 published: false
 ---
 
-
 # はじめに
 
 PHPでパッケージの依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
-たとえば、PHPアプリケーションフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
+例えば、PHPアプリケーションフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
 
 ```shell
 $ composer create-project laravel/laravel example-app
@@ -22,11 +21,17 @@ $ composer create-project laravel/laravel example-app
 
 # 結論
 
-`git clone`して`composer install`をワンライナーで実行するのと同じ挙動になる。
+`git clone`して`composer install`を順番に実行するのと同じ挙動をする。
+
+予想よりも意外とシンプルで驚きました。続けて詳しく見ていきます。
+
+またコマンドの実装は以下のファイルになります。
+
+https://github.com/composer/composer/blob/main/src/Composer/Command/CreateProjectCommand.php
 
 # create-projectコマンドの実態
 
-Composer公式ドキュメントのcreate-project[^1]を眺めていたら気になる一文を発見しました。
+Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気になる一文を発見しました。
 
 > You can use Composer to create new projects from an existing package. This is the equivalent of doing a Git clone/svn checkout followed by a composer install of the vendors.
 
@@ -69,10 +74,10 @@ PHP Warning: ..
 `composer create-project`を使わずに、`git clone`、`composer install`で構築した場合は.envファイルが存在しないため500エラーになる可能性があります。その場合は、.envファイルを構成しencriptキーを生成することで解決します。
 
 ```shell
-// サンプルの.envファイルをコピー
+# サンプルの.envファイルをコピー
 $ cp .env.example .env
 
-// encriptキーを生成してビルトインサーバー起動
+# encriptキーを生成してビルトインサーバー起動
 $ php artisan key:generate && php artisan serve
 ```
 
@@ -94,6 +99,6 @@ $ composer create-project symfony/skeleton example-app
 
 # おわりに
 
-今回は手短ながら、分かっているようで分からないcomposer installコマンドについてまとめました。ドキュメントを読み解くこと発見も多くあり、より知識が深まるので気になったら調べてみると精神は大切ですね。
+今回は手短ながら、分かっているようで分からない`composer create-project`についてまとめました。ドキュメントを読み解くこと発見も多くあり、より知識が深まるので気になったら調べてみると精神は大切ですね。
 
 最後まで読んでいただきありがとうございました。
