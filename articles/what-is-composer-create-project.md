@@ -3,7 +3,7 @@ title: "Composerのcreate-projectコマンドは何をしているのか追っ�
 emoji: "🎼"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["php", "composer"]
-published: false
+published: true
 ---
 
 # はじめに
@@ -25,7 +25,7 @@ $ composer create-project laravel/laravel example-app
 
 予想よりも意外とシンプルで驚きました。続けて詳しく見ていきます。
 
-またコマンドの実装は以下のファイルになります。
+また`composer create-project`の実装は以下の PHPファイルになります。
 
 https://github.com/composer/composer/blob/main/src/Composer/Command/CreateProjectCommand.php
 
