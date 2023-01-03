@@ -1,5 +1,5 @@
 ---
-title: "Laravel Sailのsailコマンドと仲良くなりたい"
+title: "Laravel SailのSailコマンドと仲良くなりたい"
 emoji: "⛴️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["laravel", "laravelsail"]
@@ -16,11 +16,13 @@ https://github.com/laravel/sail
 
 Laravel SailはDocker初学者への配慮もあり、今自分が操作しているコンテナを意識することなくSailコマンドを経由してコマンド操作が可能となっております。そして公式のドキュメントには以下のような記載があります。
 
-> without requiring prior Docker experience.
+> without requiring prior Docker experience.[^1]
+
+[^1]: https://laravel.com/docs/9.x/sail
 
 和訳すると「Dockerの経験を必要とせず」となります。Dockerの経験がなくても簡単にPHP, MySQLやRedisといったサービスを組み合わせてLaravelの開発にすぐ着手することをコンセプトに掲げています。
 
-コマンドはSail用に用意されており通常のLaravelより学習コストが嵩むのではという懸念もありますが、個人的にさほど問題になることはないように感じました。
+Sail専用のコマンドが用意されており、Laravelより学習コストが嵩むのではという懸念もありますが、個人的にさほど問題になることはないように感じました。
 
 例えば、ビルトインサーバーを立ち上げるコマンド`php artisan serve`は`sail artisan serve`で代替されています。
 
@@ -34,7 +36,7 @@ Docker Composeがブラックボックス化されていることでコンテナ
 
 ## コマンドの場所について
 
-Sailコマンドの実態は約500行程のBashスクリプトファイルになっており、「vendor/laravel/sail/bin/sail」に実装があります。
+Sailコマンドの実態は約500行程のBashスクリプトになっており、「vendor/laravel/sail/bin/sail」に実装があります。
 
 コマンドラインから呼び出す際、直接呼び出すのではなく、「vendor/bin/sail」を経由して呼び出すことを公式が推奨しており、冗長化防止のため以下のBashエイリアスを公式が提唱しています。
 
@@ -50,7 +52,7 @@ https://github.com/laravel/sail/blob/1.x/bin/sail
 
 ## ファイルの実行確認
 
-中身を見るとわかるのですがかなりシンプルな構成となっており、コマンドラインから`vendor/bin/sail $1`の形で引数を付けて実行するたびにこのファイルの中が呼び出される仕組みになっています。
+中身を見ると分かるのですが、全体的にかなりシンプルな構成となっており、コマンドラインから`vendor/bin/sail $1`の形で引数を付けて実行するたびにこのファイルの中が呼び出される仕組みになっています。
 
 試しにスクリプトのファイルの先頭で定義済みの`UNAMEOUT`を出力して終了させてみます。
 `UNAMEOUT`は現在実行しているOS名を取得して格納しているため、実行しているOSに応じて異なる値が入ります。
@@ -76,8 +78,9 @@ Darwin
 
 ## docker compose
 
-Sailコマンドを実行していて一番気になった部分、docker-composeの操作箇所について見ていきます。
-Sailコマンドの核となる部分です。シェルスクリプトを読んでいくとdocker composeコマンドを`DOCKER COMPOSE`定数に代入して引数に応じてコマンドを動的に生成→実行というプロセスが踏まれています。
+Sailコマンドの核ともいえるDocker Composeの操作箇所について見ていきます。
+
+シェルスクリプトを読んでいくとDocker Composeのコマンドを`DOCKER COMPOSE`変数に代入して引数に応じてコマンドを動的に生成 → 引数付与 → 実行というプロセスが踏まれています。
 
 このとき気になったのが次の箇所です。
 
@@ -91,15 +94,15 @@ else
 fi
 ```
 
-コマンドの存在を判定してそれぞれ定数に代入しているのですが、全く同じ定数に代入しているのが少し気になりました。
+コマンドの存在を判定してそれぞれ変数に代入しているのですが、全く同じ変数に代入しているのが少し気になりました。
 
-`docker compose`と`docker-compose`一見同じコマンドのように見えますが、これはれっきとした別物のコマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
+`docker compose`と`docker-compose`一見同じコマンドのように見えますが、これはれっきとした別コマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
 
 詳しくは以下のドキュメントにまとめられております。
 
 https://docs.docker.jp/compose/index.html#compose-v2-docker-compose
 
-コマンドのフラグやオプションなどは互換性がある模様で同じ定数に代入していますが、これは今後の実装などで明確に区別されていくのでしょうか。とりあえず、この箇所以降に登場する`DOCKER_COMPOSE`を読み替えながら進めていきます。
+コマンドの確認をして適切なコマンドを変数に割り当てており、`DOCKER_COMPOSE`変数をベースに引数を追加してDocker Composeが実行されます。
 
 ## コマンド作成
 
@@ -135,7 +138,7 @@ if文で引数を判定、コマンド組み立て、最後に実行するとい
 
 コンテナをあまり意識することなくコマンドを組み立てて実行してくれる点は便利です。
 
-1つ注意点を挙げるとすると`ARGS`に`docker compose`の引数が`+=`で文字列連結されていく中で登場する`APP_SERVICE`定数は`laravel.test`という値が直接格納されている点です。
+1つ注意点を挙げるとすると`ARGS`に`docker compose`の引数が`+=`で文字列連結されていく中で登場する`APP_SERVICE`変数は`laravel.test`という値が直接格納されている点です。
 
 デフォルトでサービス名が決め打ちされているため、`laravel.test`から任意のコンテナ名に変更した場合は.envファイルも適切に変更しておく必要があります。
 
@@ -163,7 +166,7 @@ fi
 ```
 
 即興で作ったもので、少し無理矢理感は否めませんが、`sail`で実行した際にどのようなコマンドが暗黙的に作られて実行されているかを確認できるのは非常に便利です。
-私はこの方法でLaravel Sailが内部的に行っていることを1つ1つ確認して覚えました。
+私はこの方法でLaravel SailがDocker Composeで内部的に行っていることを1つ1つ確認して覚えました（笑）
 
 # おわりに
 
