@@ -20,7 +20,7 @@ Laravel SailはDocker初学者への配慮もあり、今自分が操作して�
 
 [^1]: https://laravel.com/docs/9.x/sail
 
-和訳すると「Dockerの経験を必要とせず」となります。Dockerの経験がなくても簡単にPHP・MySQL・Redisといった複数のサービスを組み合わせてLaravelの開発にすぐ着手させることをコンセプトに掲げています。
+和訳すると「Dockerの経験を必要とせず」となります。Dockerの経験がなくても簡単にPHPP・MySQL・Redisといった複数のサービスを組み合わせてLaravelの開発にすぐ着手させることをコンセプトに掲げています。
 
 Sail専用のコマンドが用意されており、Laravelより学習コストが嵩むのではという懸念もありますが、個人的にさほど問題になることはないように感じました。
 
@@ -165,15 +165,49 @@ if [ "${YN}" != "y" ]; then
 fi
 ```
 
-即興で作ったもので、少し無理矢理感は否めませんが、`sail`で実行した際にどのようなコマンドが暗黙的に作られて実行されているかを確認できるのは非常に便利です。
+即興で作ったもので、少し無理矢理感は否めませんが、実行時にどのようなDocker Comoposeコマンドが暗黙的に作られて実行されているかを確認できるのは非常に便利です。
+
+例えばMySQLコンテナに入り、ログインする`sail mysql`というコマンドがあります。実際に実行してみると以下のようになります。
+組み立てられた`docker compose`から始まるコマンドを見ていくとコンテナ内でコマンドを実行する`docker compose exec`に続けて実行するサービス名、コマンドが列挙されているのが分かります。つまりSailコマンド内に定義されているMySQLユーザー情報変数を展開し、MySQLへログインを試行していることになります。
+
+```shell
+$ sail mysql
+Command:
+===========================================================
+docker compose exec mysql bash -c MYSQL_PWD=${MYSQL_PASSWORD} mysql -u ${MYSQL_USER} ${MYSQL_DATABASE}
+===========================================================
+Do you want to execute the following command? (y/n)y
+```
+
+`y`とタイプすることでMySQLへの接続とログインが自動的に行われます。
+
+```shell
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.31 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+```
+
+Sailが事前に用意しているコマンドが具体的に何をしているのかを確認することでDocker Composeへの理解も深まります。
 私はこの方法でLaravel SailがDocker Composeで内部的に行っていることを1つ1つ確認して覚えました（笑）
+
+他にもSailが提供している便利なコマンドが多数あるため`sail --help`で確認したコマンドを上記の方法で確認し、Docker Composeコマンドが裏側で動いている様子を見てみるのも面白いです。
 
 # おわりに
 
-本記事内ではSailコマンドにて気になった部分を取り上げながら解説をしてみました。Dockerを使ったLaravelの開発に少しむずかしい印象を抱いており敬遠していた部分があったのですが、紐解いていくことで少しSailと仲良くなれた気がします。
+本記事内ではSailコマンドにて気になった部分を取り上げながら解説をしてみました。Dockerを使ったLaravelの開発に少しむずかしい印象を抱いており敬遠していた部分があったのですが、紐解いていくことで少しSailコマンドと仲良くなれた気がします。
 
 Laravel Sailを使うことでDockerを詳しく知らなくても開発に参画しやすいと言うメリットもありますが、その反面カスタマイズする際にDockerを避けては通れないと個人的に感じております。1からLaravelを学びつつDockerを学ぶというのは大変ですが、実際にソースを読みつつ内部的にやっていることをデバッグしてみるだけでも理解が深まります。その点でもあえてLaravel Sailを触って見る価値はあるのかなとも感じました。
 
-この記事を通して少しでもSailへの知見が深まれば幸いです。
+この記事を通して少しでもLaravel Sailへの知見が深まれば幸いです。
 
 最後まで読んでいただきありがとうございました。
