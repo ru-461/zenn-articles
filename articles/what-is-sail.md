@@ -3,7 +3,8 @@ title: "Laravel SailのSailコマンドと仲良くなりたい"
 emoji: "⛴️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["laravel", "laravelsail"]
-published: false
+published: true
+published_at: 2023-01-04 12:00
 ---
 
 # はじめに
