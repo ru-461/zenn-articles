@@ -1,3 +1,3 @@
-# Zenn Articles Repository
+# Zenn Articles
 
-- [Articles](https://zenn.dev/ryuu)
+- [記事一覧 | Zenn](https://zenn.dev/ryuu)
