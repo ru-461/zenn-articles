@@ -13,7 +13,7 @@ Zennでは[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ば�
 # 作成したエイリアスの一覧
 
 :::message
-以下のエイリアスはmacOSのデフォルトシェルであるZshで利用するものになります。また記事を管理するディレクトリへのパスは環境によって各自読み替えてください。WSL2（Ubuntu Zsh）・Macbook（Zsh）にてそれぞれ動作確認済みです。
+以下のエイリアスはZshでの利用を前提としています。また、記事を管理するディレクトリへのパスは環境によって各自読み替えてください。
 :::
 
 ```shell:.zshrc
@@ -71,13 +71,13 @@ alias zenn='cd ~/Documents/my-zenn-contents'
 
 ![コンテンツ管理ディレクトリに移動する様子](/images/alias-of-zenncli/image01.gif)
 
-私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com/)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
+私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
 
 https://zenn.dev/ryuu/articles/what-vscodecommand
 
 以下のようなコマンドで、別のディレクトリで作業していてもVSCodeでZennのコンテンツ管理ディレクトリをすぐに開いてくれます。
 
-```shell:
+```shell
 # Zennのコンテンツ管理ディレクトリをVSCodeで開く
 $ code ~/Documents/my-zenn-contents
 ```
@@ -90,17 +90,16 @@ VSCodeにはデフォルトでマークダウンのプレビュー機能が搭�
 $ npx zenn preview
 ```
 
-と実行し、ブラウザで[localhost:8000](http://localhost:8000)へアクセスすると`ZennEditor`が起動しており、ブラウザ上での見え方をリアルタイムで確認できます。
+と実行し、ブラウザで[localhost:8000](http://localhost:8000)へアクセスするとZenn上での見え方をリアルタイムで確認できます。
 
-この機能を簡単に呼び出すために、`zennpr`というエイリアスを設定しています。エイリアスを使うことで、記事のプレビューコマンド`npx zenn preview`を簡略化でき時短に繋がります。
-エイリアスの中で、プレビューコマンドに加えて`--open`オプションを追加しているところがポイントになります 。
+この機能を簡単に呼び出すため、`zennpr`というエイリアスを設定しています。エイリアスを使うことで、コマンド`npx zenn preview`を簡略化でき時短に繋がります。
 
 ```shell:.zshrc
 # 記事と本のプレビュー
 alias zennpr='zenn && npx zenn preview --open'
 ```
 
-公式ドキュメントには詳しく記載がありませんが、ここで`--open`というオプションをつけることで、デフォルトのブラウザでプレビュー画面が自動的に開かれるようになります。予めエイリアスに--openオプションを含めておくことですぐにプレビューできるようにしています。ローカルで記事の修正をしたときなどすぐに見え方を確認できるのはとても便利です。
+また、`--open`オプションをつけることで、デフォルトのブラウザが自動的に開かれるようになります。予めエイリアスに`--open`オプションを含めておくことですぐにプレビューできるようにしています。ローカルで記事の修正をしたときなどすぐに見え方を確認できるのはとても便利です。
 
 ## 新しい記事・本の作成
 
@@ -111,7 +110,7 @@ Zenn CLIを使って新しい記事・本を作成するときのコマンド、
 alias zennnas='zenn && npx zenn new:article --slug'
 
 # 新しい本をスラッグを指定して作成
-alias zennnbs='zenn && npx zenn new:book --slug '
+alias zennnbs='zenn && npx zenn new:book --slug'
 ```
 
 エイリアスに続けて、付けたいスラッグを続けるだけで簡単にオリジナルのスラッグをつけて記事を書き始められるので便利です。
