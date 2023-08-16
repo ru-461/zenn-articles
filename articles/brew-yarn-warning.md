@@ -9,7 +9,6 @@ published: true
 # はじめに
 
 以前、M1 MacbookにてHomebrewを使い、anyenvとnodenvを使ったNode.jsの開発環境を構築しました。
-
 パッケージマネージャにYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`コマンドで見てもらったところ以下のようなWarningがでてきて焦りました。
 
 ```shell
@@ -116,7 +115,7 @@ Yarnに対するWarningがきれいさっぱりなくなりました。
 # おわりに
 
 Homebrewを使ってまだ日が浅いため、わからないことが多くありましたが、無事に問題を解決できてよかったです。
-Homebrewは`brew doctor`で現在の状況をわかりやすく提示してくれるのがいいですね。
+Homebrewは`brew doctor`で問題をわかりやすく提示してくれるのがいいですね。
 
 結果的に今回のエラーがなぜ起こっていたのかわかりませんでしたが、ずっと放置していた警告メッセージがなくなり今後ぐっすり眠れそうです。
 今回の問題はYarn以外でも起こり得るようなので、同じような問題を抱えている方の参考になれば幸いです。
@@ -125,5 +124,5 @@ Homebrewは`brew doctor`で現在の状況をわかりやすく提示してく�
 
 # 参考
 
-- [brew doctorコマンドを実行した時に発生したwarningを1個ずつ解決していきます！ | LaptrinhX](https://laptrinhx.com/brew-doctorkomandowo-shi-xingshita-shini-fa-shengshitawarningwo1gezutsu-jie-jueshiteikimasu-2122113170/)
+- [brew doctorコマンドを実行した時に発生したwarningを1個ずつ解決していきます！ | LaptrinhX](https://laptrinhx.com/brew-doctorkomandowo-shi-xingshita-shini-fa-shengshitawarningwo1gezutsu-jie-jueshiteikimasu-2122113170)
 - [HomebrewでdoctorしたらWarning: You have unlinked kegs in your Cellarとなった時の対応方法 - Qiita](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
