@@ -18,7 +18,7 @@ Windowsの場合はプログラミング言語やIDEもインストーラーを�
 
 Macには[Homebrew](https://brew.sh/index_ja)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
 
-今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh/)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
+今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
 
 [Flutter の公式のドキュメント](https://flutter.dev/docs/get-started/install/windows)でも紹介されていますが、Flutterを公式サイトからダウンロードして、ローカルに配置、システム環境変数にFlutterのパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作してFlutterのアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
 ## Flutterとは
@@ -346,5 +346,5 @@ Windows10は今現在もPowerToys、Windows Terminalや、Windows Package Manage
 
 # 参考ドキュメント
 
-- [winget ツールを使用したアプリケーションのインストールと管理 | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/package-manager/winget/)
+- [winget ツールを使用したアプリケーションのインストールと管理 | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/package-manager/winget)
 - [windows 10でFlutter開発環境構築【Scoop使用】 - Qiita](https://qiita.com/StrayDog/items/5ba0cbc00606eb8a0d46)
