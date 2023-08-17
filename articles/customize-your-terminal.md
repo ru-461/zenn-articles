@@ -10,7 +10,7 @@ published: true
 
 エンジニアとして仕事をする中でPCからターミナルを使って作業することがとても多いです。エンジニアをしている人はこだわりが強く、それぞれ自分の作業しやすい環境を確立させている人が多い印象です。私も毎日使うものや作業環境は日々使いやすいようにカスタマイズするのが好きでいろんなツールについて常日頃から情報収集しています。
 
-エンジニアに限らず、日々使うものをこだわったり、自分の使いやすいようにカスタマイズすることでやる気が高まり**作業効率のアップ、生産性の向上に繋がります**。
+エンジニアに限らず、日々使うものをこだわる、自分の使いやすいようにカスタマイズすることでやる気が高まり**作業効率のアップ、生産性の向上に繋がります**。
 
 最近、GitHubなどでRust製のコマンドやプロンプトが注目されているのが気になりリポジトリを眺めているうちに「ターミナルをもっとおしゃれに使いたい」と思いが強くなりました。そこで今回は、StarshipというRust製のプロンプトとRust製コマンドexaを活用してモダンかつ軽量、おしゃれなターミナル、シェル環境を構築してみました。
 
@@ -42,7 +42,7 @@ https://draculatheme.com/
 
 ---
 
-私は、開発でWindowsとmacOSを両方使用しておりターミナルツールとしてそれぞれWindowsでは[Windows Terminal](https://docs.microsoft.com/ja-jp/windows/terminal/)、Macでは[iTerm2](https://iterm2.com/)を使用しています。Rust製ツールは互換性が重視されており、異なる環境であっても簡単に同じような環境を作成できるのが大きなメリットです。
+私は、開発でWindowsとmacOSを両方使用しておりターミナルツールとしてそれぞれWindowsでは[Windows Terminal](https://docs.microsoft.com/ja-jp/windows/terminal)、Macでは[iTerm2](https://iterm2.com)を使用しています。Rust製ツールは互換性が重視されており、異なる環境であっても簡単に同じような環境を作成できるのが大きなメリットです。
 
 # Starshipを導入する
 
@@ -95,11 +95,10 @@ echo eval "$(starship init bash)" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-シェルの再読み込みをすることでStarshipが有効になり以下のような表示に変わります。
+シェルの再読み込みをすることでStarshipが有効になりプロンプトが以下のような表示に変わります。
 
 ```shell
-# デフォルトの表示
-~
+# StarShip導入後のプロンプト表示
 ❯
 ```
 
@@ -129,7 +128,7 @@ $ starship config
 
 とすることで~/.configの下にstarship.tomlという設定ファイルが作成され開かれます。
 
-設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config/)を見てみてください。上記の画像では以下の設定をしています。
+設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config)を見てみてください。上記の画像では以下の設定をしています。
 
 ```toml:starship.toml
 # 空行追加
@@ -147,7 +146,6 @@ error_symbol = "[▶](bold red)"    # コマンド失敗時
 # exaを導入する
 
 exaとはLinuxでおなじみの`ls`を拡張したコマンドになります。こちらもRust製でとても扱いやすいものになっております。デフォルトでカラフルな表示とオプションを使用した詳細表示に対応しており前述したStarshipととても相性がいいです。
-
 GitHubリポジトリはこちらになります。
 
 https://github.com/ogham/exa
@@ -167,8 +165,6 @@ WSL2でUbuntuを使用している場合であってもHomebrewを導入する�
 ## Cargoを使用したインストール
 
 Rustのビルドシステム兼パッケージマネージャーのCargoを使用してexaを導入する方法です。
-
-
 Cargoを使用するためにRustの環境を作る必要があるのですが、今回はrustupというツールを使い簡単に始めます。
 
 https://github.com/rust-lang/rustup/blob/master/README.md
@@ -181,9 +177,7 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
 インストールの途中で質問されたらエンターを押して続行します。デフォルトで1の（Proceed with installation）が選択されます。そのままでも問題ありませんが、カスタムインストールを行う場合は適宜選択を変えてください。
-
 ターミナル上に`Rust is installed now. Great!`と表示されればインストールは成功です。
-
 この状態でシェルにリログインすると自動的にパスが通ります。すぐにパスを通して使いたい場合は、sourceコマンドを使い以下のようにすると自動的にパスを通してくれます。
 
 ```shell
@@ -192,7 +186,6 @@ source $HOME/.cargo/env
 ```
 
 インストールが終わったらrustupのバージョンを確認してみます。パスが無事に通っているとcargoコマンドが使用できるようになっています。
-
 以下のコマンドでバージョンを確認し、アップデートがあれば最新の状態にアップデートしておきます。
 
 ```shell
@@ -230,7 +223,6 @@ lsコマンドの代わりにexaを使用することで全体的に文字をカ
 
 またexaはオプションがかなり多く、オプションを組み合わせて柔軟な表示ができのも魅力です。
 exaに続けてオプションを指定するのですが、オプションが覚えきれないくらい多いので詳しくは公式のReadMeを参考にしてみてください。
-
 また私はlsコマンドに慣れていることもあり、同じように使用したいので私はexaコマンドに対してエイリアスを設定しています。
 
 # エイリアス設定でさらにexaを活用する
@@ -263,8 +255,7 @@ lsをベースに、ファイルの種類ごとにアイコンを表示するオ
 
 またコマンドに`t`を混ぜることでツリー表示できるようにしています。
 exaでのファイルツリー表示でもアイコンを合わせて表示するためにオプションを組み合わせています。ここまでくるとオプションがかなり長くなってしまいます。
-
-そこでエイリアスを活用することでlsコマンドの上位互換としての運用が簡単にできるようになりました。
+オプションが長くなる問題の解決策としてエイリアスを活用し`ls`の上位互換としての運用がしやすいようにカスタマイズしております。
 
 エイリアスの設定例としてはこちらのサイトを参考にカスタマイズさせていだたきました。わかりやすい解説ありがとうございます。
 
@@ -284,5 +275,5 @@ Rust製のツールを初めて使いましたが、互換性が高かったり�
 
 - [とってもかわいいプロンプトstarshipで2021年宇宙の旅に出よう](https://zenn.dev/aoi_avant/articles/9ac01d7857add9)
 - [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/title-page.html)
-- [lsよりもexaじゃん! Rust製Linuxコマンド 【exa】 | TomboMemo](https://tombomemo.com/exa-install-settings/)
+- [lsよりもexaじゃん! Rust製Linuxコマンド 【exa】 | TomboMemo](https://tombomemo.com/exa-install-settings)
 - ["error: linker `cc` not found" on Ubuntu 18.04 LTS, using X11 · Issue #1440 · alacritty/alacritty](https://github.com/alacritty/alacritty/issues/1440)
