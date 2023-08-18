@@ -12,7 +12,7 @@ published: true
 
 # PowerToysとは
 
-[PowerToys](https://docs.microsoft.com/ja-jp/windows/powertoys/)とはMicrodoftが開発しているWindowsの拡張ユーティリティ郡になります。もともとWindowsに搭載される予定だった機能が、別途まとめて配信されているものとなり、現在オープンソース化されて開発されています。
+[PowerToys](https://docs.microsoft.com/ja-jp/windows/powertoys)とはMicrodoftが開発しているWindowsの拡張ユーティリティ郡になります。もともとWindowsに搭載される予定だった機能が、別途まとめて配信されているものとなり、現在オープンソース化されて開発されています。
 
 https://github.com/microsoft/PowerToys
 
@@ -157,7 +157,7 @@ Windows標準のファイル管理ツールエクスプローラーに機能を�
 ## PowerToys Run
 
 機能を有効化することで、macOSなどでおなじみのSpotlight検索ライクな検索＆アプリランチャーが使用できるようになります。
-MacにはSpotlight検索を便利した[Alfred](https://www.alfredapp.com/)という有名なツールがあります。PowertoysRunを使うことで完全とはいきませんが、近い操作感をWindowsでも実現させることが可能になります。
+MacにはSpotlight検索を便利した[Alfred](https://www.alfredapp.com)という有名なツールがあります。PowertoysRunを使うことで完全とはいきませんが、近い操作感をWindowsでも実現させることが可能になります。
 
 デフォルトでは`Alt`＋`Space`で呼び出すように設定されています。ショートカットキーを実行すると以下のようなウィンドウが画面上に現れます。
 

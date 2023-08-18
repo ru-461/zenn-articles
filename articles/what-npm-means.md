@@ -24,7 +24,7 @@ https://twitter.com/npmjs/status/105690425242820608?s=20
 
 これだけ聞いてもあまりピンとこないので、この記事でnpmの主張や技術名の略式にまつわる文化についても掘り下げてみます。
 
-またnpmといえばのWebサイト[npm.js](https://www.npmjs.com/)の左上にnpmという文字列から3語の造語（バクロニム）を表示するトリックが有名です。
+またnpmといえばのWebサイト[npm.js](https://www.npmjs.com)の左上にnpmという文字列から3語の造語（バクロニム）を表示するトリックが有名です。
 
 ![npmトップページのIF](/images/what-npm-means/image01.gif)
 ***クリックのたびにnpmのバクロニムが次々に変化します***

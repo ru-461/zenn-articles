@@ -37,7 +37,7 @@ https://github.com/ryu-461/tweet-counter
 
 # Vuetify とは？
 
-VuetifyとはVue向けUIライブラリになります。Googleが近年採用しているマテリアルデザインを採用しており、誰でも簡単にモダンなデザインのコンポーネントを使うことができます。公式サイトは[Vuetify](https://vuetifyjs.com/en/)になります。サイト内にもサンプルが多くあるため、一通り見るだけでもどんなコンポーネントがあるかわかり見やすいドキュメントになっています。
+VuetifyとはVue向けUIライブラリになります。Googleが近年採用しているマテリアルデザインを採用しており、誰でも簡単にモダンなデザインのコンポーネントを使うことができます。公式サイトは[Vuetify](https://vuetifyjs.com/en)になります。サイト内にもサンプルが多くあるため、一通り見るだけでもどんなコンポーネントがあるかわかり見やすいドキュメントになっています。
 
 # プロジェクト作成
 
@@ -371,7 +371,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 付加機能としてTwitterへアクセスできるボタンを配置してみます。APIを使うことでTwitterへツイートさせることもできるようですが、今回はツイートを行わず、 Twitterのホームへリンクさせるボタンとして作成します。
 
-引き続きApp.vueに記述していきます。Vuetifyには [v-btn](https://vuetifyjs.com/ja/components/buttons/)というボタンコンポーネントも用意されているのでこちらを使っていきます。今回はv-btnを使い以下のようにしました。
+引き続きApp.vueに記述していきます。Vuetifyには [v-btn](https://vuetifyjs.com/ja/components/buttons)というボタンコンポーネントも用意されているのでこちらを使っていきます。今回はv-btnを使い以下のようにしました。
 
 ```vue:src/App.vue
 <v-btn
@@ -438,4 +438,4 @@ Vue.jsを使って初めてアプリを作る人の参考になれば幸いで�
 
 [Vuetify に入門する](https://qiita.com/azukiazusa/items/16ebffd361af8fa58333)
 [Font awesome を Vue.js で使ってみよう](https://qiita.com/kurararara/items/d76776a7dc2d763a068b)
-[レイアウト微調整に便利な Spacing Helper (Vuetify) を使ってみる](https://riotz.works/articles/lopburny/2019/08/12/arrange-vuetify-components-with-spacing-helper/)
+[レイアウト微調整に便利な Spacing Helper (Vuetify) を使ってみる](https://riotz.works/articles/lopburny/2019/08/12/arrange-vuetify-components-with-spacing-helper)

@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-[Nuxt.js](https://nuxtjs.org/ja/)のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation/)を読みながら進めていたのですが。
+[Nuxt.js](https://nuxtjs.org/ja)のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation)を読みながら進めていたのですが。
 
 ```shell
 $ npx create-nuxt-app <project-name>

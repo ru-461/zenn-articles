@@ -53,7 +53,7 @@ Voltaのインストールが完了した時点でパスが自動的に追加さ
 
 コマンドが実行できることを確認できれば、WindowsへのVoltaのインストールは成功しています。これでVoltaをWindowsで使用する準備が整いました。
 
-Voltaで使用できるコマンドについては公式リファレンス[Volta Commands | Volta](https://docs.volta.sh/reference/)にわかりやすくまとめられています。`volta`でもコマンドの使用例を確認できますが、詳しい解説については公式リファレンスも合わせて読むと理解しやすいです。
+Voltaで使用できるコマンドについては公式リファレンス[Volta Commands | Volta](https://docs.volta.sh/reference)にわかりやすくまとめられています。`volta`でもコマンドの使用例を確認できますが、詳しい解説については公式リファレンスも合わせて読むと理解しやすいです。
 
 ## VoltaからNode.jsをインストール
 
@@ -132,7 +132,7 @@ npx zenn init
 
 ## 記事の作成とプレビュー
 
-Zennの記事執筆環境が完成したので実際に記事を生成してプレビューしてみます。記事管理のディレクトリ内で`npx zenn preview`とするとサーバーが起動し、[Zenn Editor（localhost:8000）](http://localhost:8000/)にて記事をプレビューできるようになります。
+Zennの記事執筆環境が完成したので実際に記事を生成してプレビューしてみます。記事管理のディレクトリ内で`npx zenn preview`とするとサーバーが起動し、[Zenn Editor（localhost:8000）](http://localhost:8000)にて記事をプレビューできるようになります。
 
 ```shell
 # 記事をプレビュー
@@ -158,7 +158,7 @@ npx zenn preview
 
 https://zenn.dev/zenn/articles/connect-to-github
 
-GitHub連携するためにGitがローカルで使用できる環境が必要となります。Windowsでは[Git for Windows](https://gitforwindows.org/)が使用できるため、Windowsのローカル環境だけで本格的に記事を書いていくことができます。
+GitHub連携するためにGitがローカルで使用できる環境が必要となります。Windowsでは[Git for Windows](https://gitforwindows.org)が使用できるため、Windowsのローカル環境だけで本格的に記事を書いていくことができます。
 
 GitHubでリポジトリ連携して自動デプロイできる環境があるおかげで環境が変わってもVSCodeの設定同期とリポジトリのクローンだけで記事をローカルで執筆し続けられるのがメリットです。WSL2やMacなどに合わせてWindowsでも同じように執筆できるため執筆できる幅が広がるように感じます。
 

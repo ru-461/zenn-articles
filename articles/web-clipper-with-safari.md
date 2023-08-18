@@ -12,7 +12,7 @@ Notionには公式の拡張機能として[Notion Web Clipper](https://www.notio
 
 ![Notion Web Clipperのトップページ画像](/images/web-clipper-with-safari/image01.png)
 
-Web Clipperという名の通り、ブラウザで今見ているWebページをNotionのページに変換し保存できるすぐれものです。ChromeやFirefoxでは[拡張機能](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)・[アドオン](https://addons.mozilla.org/ja/firefox/addon/notion-web-clipper/)として前から提供されていましたが、Safariでは使用できない状態となっていました。モバイル版Safari（iPhone・iPad）からは共有機能を使ってNotionを開くことでWeb Clipperが使用できていましたが、PC版のSafariには対応していませんでした。
+Web Clipperという名の通り、ブラウザで今見ているWebページをNotionのページに変換し保存できるすぐれものです。ChromeやFirefoxでは[拡張機能](https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)・[アドオン](https://addons.mozilla.org/ja/firefox/addon/notion-web-clipper)として前から提供されていましたが、Safariでは使用できない状態となっていました。モバイル版Safari（iPhone・iPad）からは共有機能を使ってNotionを開くことでWeb Clipperが使用できていましたが、PC版のSafariには対応していませんでした。
 
 私は、MacのSafariをあまり使うことがなかったのですが、先日、Notion Web ClipperがSafariに対応したと聞き、実際にSafariへ導入してしばらく使ってみました。
 

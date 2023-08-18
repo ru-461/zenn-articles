@@ -8,13 +8,13 @@ published: true
 
 # はじめに
 
-Node.js v16系となるバージョンが2021年の4月20日にリリースされました。v14に次ぐ[LTS（Long Term Support）](https://nodejs.org/ja/about/releases/)にあたるバージョンになります。Node.jsはメジャーバージョンが偶数になるタイミングでLTSとなり、約30ヶ月間のサポートがされる形となっています。
+Node.js v16系となるバージョンが2021年の4月20日にリリースされました。v14に次ぐ[LTS（Long Term Support）](https://nodejs.org/ja/about/releases)にあたるバージョンになります。Node.jsはメジャーバージョンが偶数になるタイミングでLTSとなり、約30ヶ月間のサポートがされる形となっています。
 
 またリリースしてすぐLTSのアクティブリリースになるわけではなく、約半年後にアクティブLTSリリースとなります。
 
 そして今回リリースされた新のLTS、Node.js 16が**AppleSilicon を正式にサポートする最初のLTSバージョン**となります。つまりM1チップを始めとするSoCを搭載したMacBookやiMac上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
 
-AppleSiliconで動作するかどうかを掲載しているサイト[Does it ARM](https://doesitarm.com/)上でもv16以降で対応と更新されておりました。
+AppleSiliconで動作するかどうかを掲載しているサイト[Does it ARM](https://doesitarm.com)上でもv16以降で対応と更新されておりました。
 
 https://doesitarm.com/app/nodejs/
 
@@ -91,7 +91,7 @@ https://hub.docker.com/_/node/
 
 確認したところNode.js v16のイメージが配布されていたのでDockerコンテナを作成して実行環境を確認します。
 
-Docker Desktopも先日公開されたバージョンv3.3.1にてAppleSiliconへネイティブ対応しました。^[[Docker Desktop for Apple silicon | Docker Documentation](https://docs.docker.com/docker-for-mac/apple-silicon/)]DockerはインストーラやHomebrewで簡単にインストールできます。
+Docker Desktopも先日公開されたバージョンv3.3.1にてAppleSiliconへネイティブ対応しました。^[[Docker Desktop for Apple silicon | Docker Documentation](https://docs.docker.com/docker-for-mac/apple-silicon)]DockerはインストーラやHomebrewで簡単にインストールできます。
 
 ```shell
 # HomebrewでDockerをインストール

@@ -25,7 +25,7 @@ https://workona.com/
 
 # 使い方
 
-まず、[Workona 公式ページ](https://workona.com/)にブラウザでアクセスしサインアップします。
+まず、[Workona 公式ページ](https://workona.com)にブラウザでアクセスしサインアップします。
 
 ![Workona公式ページトップ画像](/images/recommendations-for-tabs/image02.png)
 *SIGN UP FREEから新規にアカウント作成できます*
@@ -37,7 +37,7 @@ https://workona.com/
 Googleのアカウントを持っていればログインするだけですぐに使い始めることができます。サインアップが完了したらタブを登録していきます。このタイミングで拡張機能の追加を促されるので予め以下の拡張機能をそれぞれインストールしておくをおすすめします。
 
 - [Workona (Chrome ウェブストア)](https://chrome.google.com/webstore/detail/workona/ailcmbgekjpnablpdkmaaccecekgdhlh)
-- [Workona (Firefox ADD-ONS)](https://addons.mozilla.org/ja/firefox/addon/workona/)
+- [Workona (Firefox ADD-ONS)](https://addons.mozilla.org/ja/firefox/addon/workona)
 
 Workona公式の拡張機能になります。この拡張機能を入れることでワークスペースが表示されるようになります。ワークスペースとはタブをまとめて管理するためのグループのようなものです。ワークスペースでタブを管理してワークスペース単位でタブをまとめて切り替えるのがこの拡張機能の主な機能となります。このあとはこのワークスペースにジャンルごとタブを登録していくことになります。Workonaをインストールするとブラウザに固定タブ形式で管理ページが開かれます。
 

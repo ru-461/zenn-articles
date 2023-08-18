@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-私は普段からWindowsのWSL、PowerShellなどでRust製のプロンプト[Starship](https://starship.rs/ja-JP/)を使用しています。
+私は普段からWindowsのWSL、PowerShellなどでRust製のプロンプト[Starship](https://starship.rs/ja-JP)を使用しています。
 
 Starshipについては以前[Rust製ツールでおしゃれなターミナル環境を作る【Starship ✕ exa】](https://zenn.dev/ryuu/articles/customize-your-terminal)というタイトルで紹介記事を書いたのでこちらから記事を覗いてもらえると嬉しいです。
 
@@ -44,7 +44,7 @@ ScoopはWindowsで使用できるコマンドラインベースのパッケー�
 
 https://scoop.sh
 
-Windowsのパッケージマネージャというと[Chocolatey](https://chocolatey.org/)が有名ですが、Scoopも並んで人気があるツールです。
+Windowsのパッケージマネージャというと[Chocolatey](https://chocolatey.org)が有名ですが、Scoopも並んで人気があるツールです。
 
 ## Scoopのインストール
 

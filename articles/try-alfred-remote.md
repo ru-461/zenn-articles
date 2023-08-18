@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-[Alfred Remote](https://www.alfredapp.com/remote/)というアプリをご存知でしょうか。
+[Alfred Remote](https://www.alfredapp.com/remote)というアプリをご存知でしょうか。
 
 Alfredを利用している人なら設定画面に「Remote」という設定項目があることに気づいている人も多いかと感じます。
 
@@ -42,7 +42,7 @@ https://apps.apple.com/jp/app/alfred-remote/id927944141
 
 上記リンク、AppStoreからインストールします。Alfred Remoteは**iOS・iPadOSのみの**サポートになります。**Androidには対応していないので注意してください**。
 
-またAlfred Remoteの単体では使用できないため、**Mac側にAlfredがインストールされていること**、**有料の機能拡張コンテンツである[Power Pack](https://www.alfredapp.com/powerpack/)が導入されていることが必須になります**。
+またAlfred Remoteの単体では使用できないため、**Mac側にAlfredがインストールされていること**、**有料の機能拡張コンテンツである[Power Pack](https://www.alfredapp.com/powerpack)が導入されていることが必須になります**。
 
 AlfredにPower packを導入することでワークフロー機能がアンロック、コピー履歴保存機能、カスタムテーマなどが使えるようになります。Power Packにはバージョンごとの買い切りライセンスとライフタイムライセンス（永久ライセンス）の2種類が存在します。違いはバージョンアップの際のサポートが受けられるか受けられないかの違いと価格です。ライフタイムライセンスはバージョンライセンスに比べて倍近くの価格がしますが、1回の購入でずっとサポートを受けられるのが大きいです。私は、Alfredを使わない日がないくらいに使い込んでいるので迷わずライフタイムライセンスを購入しました。
 
@@ -107,7 +107,7 @@ Alfredと連携しているだけあり、アイテム登録の自由度はか�
 
 今回はAlfred Remoteを紹介しました。使っている人をいままで聞いたことがなく、マイナーなアプリといった印象でしたが、実際に触ってみて使い込むと便利なアプリだと感じました。ただ、実際にMacを使用しているときにiPhoneを取り出して操作するよりキーボードでAlfredを呼び出したほうがはやいように感じます。ここはそれぞれのライフスタイル、作業スタイルによるので断言はできませんが、シャットダウンや特定のスクリプトの遠隔実行など使う場面によっては便利だなと感じる部分もあります。
 
-Macをリモートコントロールできる珍しいユーティリティなので工夫とアイデアで生産性を上げられるアプリなのは間違いないですが、惜しいポイントもあります。**対応プラットフォームがMacとiPhone、iPadといったApple製品に限られること**。^[[Alfred Remote for Android? - Alfred Remote Discussion & Help - Alfred App Community Forum](https://www.alfredforum.com/topic/5432-alfred-remote-for-android/)]**Alfred Remoteのアプリが有料である**、**Power Packが必須である**など導入の敷居がやや高く、どうしてもネックになると感じました。環境が揃えば、親和性が高くて便利なだけにすごく惜しいポイントだと感じてしまいます。このあたりは作業環境にも大きく依存する部分なのでクロスプラットフォームなリモコンアプリになればいいのになとも感じました。
+Macをリモートコントロールできる珍しいユーティリティなので工夫とアイデアで生産性を上げられるアプリなのは間違いないですが、惜しいポイントもあります。**対応プラットフォームがMacとiPhone、iPadといったApple製品に限られること**。^ae[[Alfred Remote for Android? - Alfred Remote Discussion & Help - Alfred App Community Forum](https://www.alfredforum.com/topic/5432-alfred-remote-for-android)]**Alfred Remoteのアプリが有料である**、**Power Packが必須である**など導入の敷居がやや高く、どうしてもネックになると感じました。環境が揃えば、親和性が高くて便利なだけにすごく惜しいポイントだと感じてしまいます。このあたりは作業環境にも大きく依存する部分なのでクロスプラットフォームなリモコンアプリになればいいのになとも感じました。
 
 私もしばらく使い込んでみてより便利に使えるようカスタマイズしていくつもりです。便利なものはどんどん生活に取り入れていきたいので、Alfred Remoteのこんな便利な使い方あるよなどあれば是非教えてほしいです。
 
