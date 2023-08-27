@@ -6,7 +6,7 @@ topics: ["wsl2", "ubuntu", "ubuntu2004", "ubuntu2204"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 先日、2022年4月21日に[Ubuntu 22.04 LTS Jammy Jellyfish](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668)がリリースされました。これは2020年4月23日にリリースされたUbuntu 20.04 LTSの次のLTSリリースとなります。
 現在WSL2（Windows Subsystem for Linux）ではUbuntuの[18.04 LTS](https://www.microsoft.com/ja-jp/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab)と[20.04.4 LTS](https://www.microsoft.com/ja-jp/p/ubuntu-20044-lts/9mttcl66cpxj?activetab=pivot:overviewtab)のLTSリリースがMicrosoft Storeにて提供されています。
@@ -26,14 +26,14 @@ https://www.microsoft.com/ja-jp/p/ubuntu-2204-lts/9pn20msr04dw?activetab=pivot:o
 メイン環境のアップグレードは自己責任となります。完全に新しい環境で始める際はアップグレードではなく、22.04 LTSの**新規インストールをおすすめします**。
 :::
 
-# アップグレードのインストール準備
+## アップグレードのインストール準備
 
 アップグレードを行う前に、現在実行しているバージョンの把握とパッケージの依存関係を最新にし解決しておきます。事前準備をすることで、この後の作業を進めやすくなります。
 アップグレードの際に日本語表示できたほうが原因の特定がしやすくなるのでUbuntuのロケール変更と日本語対応させておくのがおすすめです。
 
 WSL2のUbuntu日本語対応については以前執筆した「[WSL2を日本語化するときにやったこと](https://zenn.dev/ryuu/articles/wsl2-locale-jp)」の記事内で解説しております。以下の表示項目は**日本語対応させた環境での出力結果となることをご了承下さい**。
 
-## 現行バージョンを確認
+### 現行バージョンを確認
 
 まず、現在実行しているUbuntuのバージョン情報を確認しておきます。
 
@@ -58,7 +58,7 @@ UBUNTU_CODENAME=focal
 
 バージョン情報が確認できました。上の例だと２行目`VERSION="20.04.4 LTS (Focal Fossa)"`の部分からUbuntu20.04.4 LTSが実行されていることが読み取れます。
 
-## パッケージの依存解決
+### パッケージの依存解決
 
 Ubuntuにインストールしているパッケージのアップデートと依存解決を行います。
 
@@ -68,7 +68,7 @@ $ sudo apt update && sudo apt upgrade
 
 上記のコマンドでパッケージのアップデートとアップデートを同時に行い、パッケージを最新の状態にしておきます。
 
-## ディストリビューションアップデートの確認
+### ディストリビューションアップデートの確認
 
 ディストリビューションのアップグレードを確認するために必要なパッケージをインストールします。
 
@@ -79,7 +79,7 @@ $ sudo apt dist-upgrade && sudo apt install update-manager-core
 ディストリビューションアップグレードの依存解決が行われます。`apt install update-manager-core`は、update-manager-coreが存在しなかった場合のみインストールが行われます。
 エラー、警告がでないことを確認したら次のステップに進みます。
 
-## relese-upgradeの設定
+### relese-upgradeの設定
 
 relese-upgradeの設定ファイルを変更します。以下のファイルをエディタで開きます。このとき使用するエディタはVimやnanoなど普段使用しているもので問題ありません。
 
@@ -93,7 +93,7 @@ $ sudo vim /etc/update-manager/release-upgrades
 設定を確認しファイルを閉じます。値を変更した場合はファイルを保存して閉じるようにします。
 これで最新のLTSへアップグレードする準備が完了しました。
 
-# アップグレードの実行
+## アップグレードの実行
 
 ここまでで最新のLTSへのアップグレード準備が完了しているため、アップグレードの実行に着手していきます。アップグレードの前に重要なファイルや個人設定をバックアップしておくのがおすすめです。
 
@@ -145,7 +145,7 @@ sudo do-release-upgrade -d
 
 画面の指示に従い`y`と入力してシェルを再起動します。シェルの再起動に失敗する場合は、Windows Terminalなどで再度開きなおすことで解決します。
 
-# アップグレード後のバージョンを確認
+## アップグレード後のバージョンを確認
 
 正常にアップグレードできているかバージョンを確認します。アップグレード前と同じようにUbuntuの場合は`cat /etc/os-release`で確認できます。
 
@@ -166,7 +166,7 @@ UBUNTU_CODENAME=jammy
 
 各項目の順番が20.04.4と少し異なってはいますが、`VERSION="22.04 (Jammy Jellyfish)"`と記載されていることを確認できれば22.04 LTSへのアップグレードは問題なく完了しております。
 
-# おわりに
+## おわりに
 
 今回はWSL2で動かしているUbuntu 20.04.4 LTSをUbuntu 22.04 LTSへアップグレードする手順についてまとめてみました。
 
@@ -176,7 +176,7 @@ Ubuntu 22.04 LTSの変更点については現在勉強中のため、引き続�
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [Download Ubuntu Desktop | Download | Ubuntu](https://ubuntu.com/download/desktop)
 - [Jammy Jellyfish Release Notes - Release - Ubuntu Community Hub](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668)

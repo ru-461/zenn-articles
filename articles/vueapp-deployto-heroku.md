@@ -6,7 +6,7 @@ topics: ["vuejs", "heroku", "wsl2", "個人開発"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify.com)や[GitHub Pages](https://docs.github.com/ja/github/working-with-github-pages/about-github-pages#)といったホスティングサービスを使う方法があります。
 
@@ -15,7 +15,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 以前Herokuにアプリをデプロイした経験はありましたが、Vue.jsで作成したSPAをデプロイした経験がなかったため、今回はHerokuにデプロイし動かせるところまでについてまとめてみます。
 
-# 環境
+## 環境
 
 - Windows10バージョン20H2
 - WSL2（Ubuntu 20.04.1 LTS）
@@ -24,15 +24,15 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 - Heroku CLI 7.47.11
 - Git 2.25.1
 
-# 現状
+## 現状
 
 - 以前Vagrantを使ってHeokuにPHP製アプリをデプロイした経験はあり
 - WSL2でHerokuを使ったことはない
 - Vue CLIで作ったSPAをHerokuにデプロイできるのかわからない
 
-# インストール
+## インストール
 
-## Heroku CLIをWSL2にインストール
+### Heroku CLIをWSL2にインストール
 
 Herokuは各プラットフォーム向けにHeroku CLIというツールを提供しているためこちらを利用します。
 Heroku公式ドキュメントに各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
@@ -58,7 +58,7 @@ error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: di
 $ sudo curl https://cli-assets.heroku.com/install.sh | sh
 ```
 
-## バージョン確認
+### バージョン確認
 
 インストールに成功したかを確認するために以下のコマンドでCLIのバージョンを表示してみます。
 
@@ -68,11 +68,11 @@ $ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
 
 インストールに成功し、WSL2上にてHeroku CLIが使えるようになりました。
 
-# デプロイする下準備
+## デプロイする下準備
 
 それではHeroku CLIを実際に動かしてデプロイする準備をしていきます。
 
-## Herokuへログイン
+### Herokuへログイン
 
 以下のページからHerokuアカウントを登録します。
 
@@ -99,7 +99,7 @@ Logging in... done
 
 ターミナルでもログインが成功していることを確認できます。
 
-## 必要なファイルの生成
+### 必要なファイルの生成
 
 以下のページにVue CLIで構築したアプリをHerokuへデプロイする方法が載っていたため参考にして進めていきます。
 
@@ -140,7 +140,7 @@ $ git add static.json
 $ git commit -m "add static configuration"
 ```
 
-## Herokuアプリを作成
+### Herokuアプリを作成
 
 ターミナルからHerokuへログインしデプロイ対象のプロジェクトのディレクトリで以下のコマンドを実行します。
 
@@ -162,7 +162,7 @@ $ heroku open
 
 ブラウザからアクセスできることが確認できればOKです。
 
-## アプリをビルドする環境を作成
+### アプリをビルドする環境を作成
 
 Vueで作成したSPAはビルドする必要があります。
 Heroku上でアプリをビルドするために以下のビルドパックが必要になるため、それぞれ追加します。
@@ -185,7 +185,7 @@ $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 ビルドパックはheroku/Node.js → heroku-buildpack-staticの順に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
 :::
 
-## Herokuへデプロイする
+### Herokuへデプロイする
 
 Herokuへデプロイしていきます。
 
@@ -202,7 +202,7 @@ $ git push heroku main
 ドキュメントではmasterブランチにプッシュしていますが、現在はmainブランチに変更されているため注意してください。
 :::
 
-# デプロイできたかの確認
+## デプロイできたかの確認
 
 ブラウザからアプリのページにアクセスして確認してみます。
 
@@ -216,7 +216,7 @@ $ heroku open
 
 Vue CLIで作成したプロジェクトがブラウザに表示され動作が確認できました。
 
-# さいごに
+## さいごに
 
 今回Herokuを使ってVueで作成したSPAのデプロイ手順をまとめました。
 インターネット上で見る記事ではExpressを使用してデプロイしている例が多くありましたが、ビルドパックを使うことで簡単にビルド、静的ホスティングまで行ってくれるのに驚きました。
@@ -225,7 +225,7 @@ Vue CLIで作成したプロジェクトがブラウザに表示され動作が�
 
 お役に立てれば幸いです。最後まで読んでいただきありがとうございました。
 
-# 補足：デプロイ後にアプリ名を変更したい
+## 補足：デプロイ後にアプリ名を変更したい
 
 デフォルトだとランダムでアプリの名前が付与されます。
 変更したい場合はCLIを使い以下の手順で変更可能です。
@@ -238,7 +238,7 @@ $ heroku apps:rename 【変更したい名前】
 新しいアプリページは名前の変更後にダッシュボードか`heroku open`で開くことができます。
 アプリのダッシュボードから変更するとGit remoteへ変更がうまく反映されないため、上記のコマンドを使用し、Heroku CLIから変更するのが無難です。
 
-# 参考ドキュメント
+## 参考ドキュメント
 
 - [The Heroku CLI | Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install)
 - [Deployment | Vue CLI](https://cli.vuejs.org/guide/deployment.html#heroku)

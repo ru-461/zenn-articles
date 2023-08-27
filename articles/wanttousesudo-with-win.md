@@ -6,7 +6,7 @@ topics: ["windows", "powershell", "scoop"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 UNIX系のOSでは管理者権限で実行する際に`sudo`コマンドを主に使用します。ログアウトせずに一時的に管理者権限（root）に切り替えてコマンドを実行できることもあり、Linuxの環境構築などで多用されます。
 
@@ -16,7 +16,7 @@ Windowsには、コマンドプロンプトやPowershellを起動する際「管
 
 そこでScoopというWindows向けパッケージマネージャーを使用し、 sudoコマンドをインストール、使用できるようになるまでを紹介します。
 
-# Scoop とは
+## Scoop とは
 
 Windows向けのパッケージマネージャーになります。
 
@@ -32,7 +32,7 @@ https://scoop.sh/
 
 それではScoopをWindowsへインストールしていきます。
 
-## Scoop のインストール
+### Scoop のインストール
 
 インストールはとても簡単で、PowerShellを起動して以下のスクリプトを実行するだけで導入できます。
 
@@ -57,7 +57,7 @@ Usage: scoop <command> [<args>]
 ヘルプが表示されます。
 
 
-# sudo コマンドのインストール
+## sudo コマンドのインストール
 
 先程インストールしたScoopを使用してsudoコマンドをインストールしていきます。
 
@@ -79,7 +79,7 @@ Creating shim for 'sudo'.
 Scoopを使ってインストールしたコマンドの実体は~\scoop\apps\shimsに存在します。Scoop経由でインストールしたものはすべてユーザーディレクトリの決まった場所にまとめられるため、インストールと実行に管理者権限が必要ありません。
 :::
 
-# 実行してみる
+## 実行してみる
 
 インストール直後に自動でパスが通っているため、コマンドプロンプトやPowerShellからおなじみのsudoコマンドを実行できます。
 
@@ -107,13 +107,13 @@ usage: sudo <cmd...>
 
 このようにsudoコマンドをインストールすることでUNIX系OSと同じ感覚で一時的に管理者に昇格してコマンド・アプリの実行ができるようになります。
 
-# おわりに
+## おわりに
 
 Scoopを使ってWindowsでsudoコマンドを使えるようにする方法について紹介しました。Windowsでも一時的に管理者権限で操作したい処理があるときに手軽に管理者権限に切り替えて実行できるのは便利です。また紹介したScoopというパッケージマネージャーを使うことで様々なコマンドをWindowsにも導入できます。Scoopを活用することで開発環境の構築、コマンドラインを使ったWindowsの操作が楽になるため、使えるものはどんどん活用していきたいところです。
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [sudo - Wikipedia](https://ja.wikipedia.org/wiki/Sudo)
 - [Luke Sampson-Sudo for Windows](http://blog.lukesampson.com/sudo-for-windows)
