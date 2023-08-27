@@ -6,7 +6,7 @@ topics: ["wsl", "ubuntu", "windows", "homebrew"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 [前回の記事](https://zenn.dev/ryuu/articles/brew-yarn-warning)に続きHomebrew関連の記事になります。
 
@@ -33,15 +33,15 @@ Homebrewの公式サイト（日本語）はこちらです。
 
 https://brew.sh/index_ja
 
-# 環境
+## 環境
 
 - CPU Core™ i5-9400F（x86_64）
 - Windows10バージョン20H2
 - WSL2（Ubuntu 20.04 LTS）
 
-# Homebrewのインストール
+## Homebrewのインストール
 
-## インストールの準備
+### インストールの準備
 
 Homebrewを導入するにあたりパッケージを最新に更新しておきます。
 
@@ -66,7 +66,7 @@ $ sudo apt-get install build-essential curl file git
 このときにインストールしているbuild-essentialとは開発のビルドパッケージをまとめてインストールできるもののようです
 :::
 
-## インストールスクリプトの実行
+### インストールスクリプトの実行
 
 必要条件を満たしたらターミナル上で以下のワンライナーを実行します。
 
@@ -94,9 +94,9 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 しかしまだPATH関連でWarningが表示されており、brewコマンドを使うことができません。
 ターミナルに表示されたNext stepsと公式ドキュメントを参考に手動で初期設定をしていきます。
 
-# Homebrewの初期設定
+## Homebrewの初期設定
 
-## パスを通してコマンドを使えるようにする
+### パスを通してコマンドを使えるようにする
 
 コマンドを叩けるように現在使用しているシェルのプロファイルにパスを追記する必要があります。
 ターミナルに表示されている指示どおりに公式ドキュメントから以下のコマンドを順番に実行します。
@@ -161,7 +161,7 @@ $ which tree
 パスを見て分かるように、WSLにインストールしたHomebrewではパッケージを/home/linuxbrew/.linuxbrewの配下で管理します。
 ホームディレクトリ配下で完結するため、**システム環境をあまり汚さない**のがいいですね。
 
-# さいごに
+## さいごに
 
 今回、WSL2の環境にパッケージマネージャーであるHomebrewをインストールしてみました。
 インターネットの情報ではパッケージインストールにHomebrewを使って解説している情報も多く、Ubuntuだとその都度aptコマンドで置き換えてインストールするなど少し手間でした。今回Homebrewが使えるようになったことで **macOSと同じ感覚で操作できる、コマンドの管理、パッケージの管理がしやすい**などの大きなメリットがあると感じました。
@@ -170,7 +170,7 @@ $ which tree
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [Homebrew on Linux — Homebrew Documentation](https://docs.brew.sh/Homebrew-on-Linux)
 - [Linux/WSLを正式サポート ～macOS向けパッケージマネージャー「Homebrew 2.0.0」が公開 - 窓の杜](https://forest.watch.impress.co.jp/docs/news/1167988.html)
