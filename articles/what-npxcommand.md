@@ -6,7 +6,7 @@ topics: ["nodejs", "npm", "npx", "javascript"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 [Nuxt.js](https://nuxtjs.org/ja)のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation)を読みながら進めていたのですが。
 
@@ -20,7 +20,7 @@ $ npx create-nuxt-app <project-name>
 
 間違っている部分もあるかと思われますので、ご指摘いただけると幸いです。
 
-# What？ npx
+## What？ npx
 
 `npx`はnpmバージョン5.2.0より同梱されているコマンドで、ローカルインストールしたコマンドを実行するために使われます。npmのバージョン5.2.0がリリースされたのは、今から約3年ほど前になるため、今主に使われているnpmではほとんど使える状態にあります。
 
@@ -34,7 +34,7 @@ https://www.npmjs.com/package/npx
 $ npm install -g npx
 ```
 
-# Why？ npx
+## Why？ npx
 
 なぜ、`npx`なのでしょうか。
 
@@ -65,7 +65,7 @@ npmを使ってスクリプトを実行するためにはpackage.jsonの`scripts
 
 **インストールするまでも無いけど手軽に試したい**、**環境を汚したくない**そんなニーズにぴったりだと感じました。
 
-# How Use？ npx
+## How Use？ npx
 
 npxコマンドの基本的な使い方は次のとおりです。
 
@@ -102,7 +102,7 @@ $ npx create-nuxt-app <project-name>
 
 Nuxt.jsを使ったプロジェクトはスクラッチで１から始めることもできますが、create-nuxt-appを使うことで**簡単に始められるのは大きなメリット**だと感じます。
 
-# まとめ
+## まとめ
 
 `npx`を使うことで、インストールせずともスクリプトの実行が簡単に行えることが分かりました。
 
@@ -117,7 +117,7 @@ npxを活用する上で参考になれば幸いです。
 
 https://zenn.dev/ryuu/scraps/bcb45ea47630c3
 
-# 参考
+## 参考
 
 - [nuxt/create-nuxt-app: Create Nuxt.js App in seconds.](https://github.com/nuxt/create-nuxt-app)
 - [npx-npm](https://www.npmjs.com/package/npx)

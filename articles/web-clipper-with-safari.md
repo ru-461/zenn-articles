@@ -6,7 +6,7 @@ topics: ["notion", "safari", "拡張機能"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Notionには公式の拡張機能として[Notion Web Clipper](https://www.notion.so/web-clipper)というものがあります。
 
@@ -20,11 +20,11 @@ https://twitter.com/NotionHQ/status/1387825941263486976
 
 Notion Web ClipperはNotionを使うならぜひとも合わせて使いたいくらいに便利なものなのでご紹介します。
 
-# Safariに拡張機能を導入する
+## Safariに拡張機能を導入する
 
 あまり知られていないように感じますが、SafariもChromeやFirefoxと同様に拡張機能を導入することで、さらに機能を増やすことができます。Safariへ拡張機能を追加する際はMacのAppStoreから拡張機能を入手しインストールする形となります。
 
-## 導入済みの拡張機能を管理する
+### 導入済みの拡張機能を管理する
 
 Safariの設定画面を開き、拡張機能の項目を開くことで現在Safariに導入している拡張機能を確認できます。
 
@@ -34,7 +34,7 @@ Safariの設定画面を開き、拡張機能の項目を開くことで現在Sa
 ここに拡張機能を検索して追加することで管理が可能となります。チェックマークの付け外しで有効無効の切り替えを行ったり、アンインストールもここから行うことができます。
 
 また右下には「拡張機能を追加...」というボタンがあり、ここからAppStoreのSafari拡張機能カテゴリページを開くことができます。
-## Mac AppStoreで拡張機能を探す
+### Mac AppStoreで拡張機能を探す
 
 Mac AppStoreのサイドメニューからカテゴリを選択すると一覧の中にSafari拡張機能があります。
 
@@ -42,7 +42,7 @@ Mac AppStoreのサイドメニューからカテゴリを選択すると一覧�
 
 ここにSafariで使用可能な拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが探しやすくて便利です。Safariの拡張機能は、通常のMacアプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダ（~/Applications）の中に格納されます。
 
-# Notion Web ClipperをSafariにインストール
+## Notion Web ClipperをSafariにインストール
 
 それでは、SafariにNotion Web Clipperをインストールしていきます。
 Mac AppStore内の検索から「Notion」と検索することで上位にヒットします。
@@ -58,7 +58,7 @@ https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
 
 インストールした後はSafariの設定から拡張機能を開くことで有効 / 無効を切り替えられるようになります。インストールしてもうまく反映されない場合は拡張機能が有効になっているかどうかを見直してみてください。
 
-# Notion Web ClipperでWebページをクリップする
+## Notion Web ClipperでWebページをクリップする
 
 ここからはChromeやFirefoxと共通の操作になります。
 
@@ -75,7 +75,7 @@ Notionにログインしてあるので、Workspaceと保存先のページを�
 
 保存したあとに表示されるOpen in NotionをクリックすることでクリップしたページをすぐにNotionで開いて確認できるのが便利です。
 
-# おわりに
+## おわりに
 
 今回、Safariの拡張機能とNotion Web Clipperを導入する方法について書きました。初めてSafariに拡張機能を導入しましたが、SafariもChromeと同じように拡張機能を導入できるのが便利だと感じました。有名な拡張機能は一通り揃っているのでChromeの拡張機能を多様していても、比較的移行しやすい環境だと感じます。
 

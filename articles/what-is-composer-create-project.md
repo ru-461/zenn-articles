@@ -6,7 +6,7 @@ topics: ["php", "composer"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 PHPでパッケージ間の依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
@@ -19,7 +19,7 @@ $ composer create-project laravel/laravel example-app
 コマンドを何気なくタイプしている中で具体的に何をしているのか気になったので実態を調べてみました。
 コマンドの名前からしてJavaScriptのパッケージ管理ツールnpmやYarnでいう`npm init`や`yarn init`みたいなもののように感じますがどうなのでしょうか。
 
-# 結論
+## 結論
 
 `git clone`して`composer install`を順番に実行するのと同じ挙動をする。
 
@@ -29,7 +29,7 @@ $ composer create-project laravel/laravel example-app
 
 https://github.com/composer/composer/blob/main/src/Composer/Command/CreateProjectCommand.php
 
-# create-projectコマンドの実態
+## create-projectコマンドの実態
 
 Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気になる一文を発見しました。
 
@@ -41,7 +41,7 @@ Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気
 
 本当にそうなのか検証してみます。
 
-# Laravelを例に検証する
+## Laravelを例に検証する
 
 以下、Laravelの例で考えます。
 
@@ -85,7 +85,7 @@ $ php artisan key:generate && php artisan serve
 
 ![ビルトインサーバートップページの画像](/images/what-is-composer-create-project/image01.png)
 
-# 応用してみる
+## 応用してみる
 
 つまりコマンド内の`laravel/larvel`の部分を任意のリポジトリ名に変えて上げることで他のフレームワークにも応用できます。
 
@@ -97,7 +97,7 @@ $ composer create-project symfony/skeleton example-app
 
 コマンド1つで開発環境を作れるのはすごく便利ですね。
 
-# おわりに
+## おわりに
 
 今回は手短ながら、分かっているようで分からない`composer create-project`についてまとめました。ドキュメントを読み解くこと発見も多くあり、より知識が深まるので気になったら調べてみると精神は大切ですね。
 
