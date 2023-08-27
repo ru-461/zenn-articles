@@ -6,7 +6,7 @@ topics: ["javascript", "ツール", "nodejs", "npm", "yarn"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 JavaScriptのフレームワークにはnpmやYarnなどのパッケージマネージャーを使い簡単に依存関係を解決し、プロジェクトの雛形を作成してくれるコマンドが用意されていることが多いです。
 コマンドラインツールによって簡単にプロジェクトの自動作成、開発サーバーでの実行ができ便利だと感じたため、有名なJavaScriptフレームワークの雛形作成コマンドを備忘録として挙げてみます。
@@ -17,14 +17,14 @@ JavaScriptのフレームワークにはnpmやYarnなどのパッケージマネ
 公式のドキュメントに沿って基本となるコマンドをまとめています。プロジェクト作成時に対話形式で設定可能な項目については記事内で扱いません。項目の説明や、利用できるオプションについては公式のドキュメントを参照のうえ実行をお願いします。
 :::
 
-# 前提条件
+## 前提条件
 
 - Node.jsがインストールされていること（バージョン8以降、最新のLTSバージョンを推奨）
 - npmもしくはYarnが利用可能であるこ（npmはNode.jsにデフォルトで搭載）
 
-# Vue
+## Vue
 
-## npm
+### npm
 
 ```shell
 $ npm install -g @vue/cli
@@ -34,7 +34,7 @@ $ cd <project-name>
 $ npm run serve
 ```
 
-## Yarn
+### Yarn
 
 ```shell
 $ yarn global add @vue/cli
@@ -48,9 +48,9 @@ http://localhost:8080 で開発サーバが立ち上がります。
 
 ![Vue.jsウェルカムページの画像](/images/js-gettingstarted/image01.png)
 
-# Nuxt.js（2.x）
+## Nuxt.js（2.x）
 
-## npm
+### npm
 
 ```shell
 $ npm init nuxt-app <project-name>
@@ -58,7 +58,7 @@ $ cd <project-name>
 $ npm run dev (yarn dev)
 ```
 
-## npx
+### npx
 
 ```shell
 $ npx create-nuxt-app <project-name>
@@ -78,7 +78,7 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 
 ![Nuxt.js2ウェルカムページの画像](/images/js-gettingstarted/image02.png)
 
-# Nuxt.js（3.x）
+## Nuxt.js（3.x）
 
 Nuxt3からはセットアップ手順が大幅に変更されました。
 `nuxi`を用いて従来よりも簡略的かつ高速にセットアップできます。nuxiとはNuxt用の新しいCLIになります。
@@ -94,9 +94,9 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 
 ![Nuxt.js3ウェルカムページの画像](/images/js-gettingstarted/image02_2.png)
 
-# React
+## React
 
-## npm
+### npm
 
 ```shell
 $ npm init react-app <project-name>
@@ -104,7 +104,7 @@ $ cd <project-name>
 $ npm start
 ```
 
-## npx
+### npx
 
 ```shell
 $ npx create-react-app <project-name>
@@ -112,7 +112,7 @@ $ cd <project-name>
 $ npm start
 ```
 
-## Yarn
+### Yarn
 
 ```shell
 $ yarn create react-app <project-name>
@@ -126,9 +126,9 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 
 ![Reactウェルカムページの画像](/images/js-gettingstarted/image03.png)
 
-# Next.js
+## Next.js
 
-## npm
+### npm
 
 ```shell
 $ npx create-next-app <project-name>
@@ -136,7 +136,7 @@ $ cd <project-name>
 $ npm run dev
 ```
 
-## Yarn
+### Yarn
 
 ```shell
 $ yarn create next-app <project-name>
@@ -150,9 +150,9 @@ http://localhost:3000 で開発サーバーが立ち上がります。
 
 ![Next.jsウェルカムページの画像](/images/js-gettingstarted/image04.png)
 
-# Angular
+## Angular
 
-## npm
+### npm
 
 ```shell
 $ npm install -g @angular/cli
@@ -162,7 +162,7 @@ $ cd <project-name>
 $ ng serve --open
 ```
 
-## Yarn
+### Yarn
 
 ```shell
 $ npm install -g @angular/cli
@@ -178,11 +178,11 @@ http://localhost:4200 で開発サーバーが立ち上がります。
 
 ![Angularウェルカムページの画像](/images/js-gettingstarted/image05.png)
 
-# Svelte
+## Svelte
 
 公式で公開されているテンプレートから新規プロジェクトを作る。
 
-## npx
+### npx
 
 ```shell
 $ npx degit sveltejs/template <project-name>
@@ -195,7 +195,7 @@ http://localhost:5000 で開発サーバーが立ち上がります。
 
 ![Svelteウェルカムページの画像](/images/js-gettingstarted/image06.png)
 
-# おわりに
+## おわりに
 
 有名なJavaScriptフレームワークの雛形プロジェクト作成コマンドを公式ドキュメントをもとに列挙してみました。簡単なコマンド1つですぐに開発を始める環境が作成できるのはとても便利です。フレームワークがここまで発展し、多くの人に選ばれる理由わかった気がします。
 
@@ -203,7 +203,7 @@ http://localhost:5000 で開発サーバーが立ち上がります。
 
 最後まで読んでいただきありがとうございました。
 
-# 参考ドキュメント
+## 参考ドキュメント
 
 https://cli.vuejs.org/guide/creating-a-project.html#vue-create
 https://ja.nuxtjs.org/docs/2.x/get-started/installation/
