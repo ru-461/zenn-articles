@@ -6,7 +6,7 @@ topics: ["nodejs", "applesilicon", "docker", "nodenv"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Node.js v16系となるバージョンが2021年の4月20日にリリースされました。v14に次ぐ[LTS（Long Term Support）](https://nodejs.org/ja/about/releases)にあたるバージョンになります。Node.jsはメジャーバージョンが偶数になるタイミングでLTSとなり、約30ヶ月間のサポートがされる形となっています。
 
@@ -28,20 +28,20 @@ Node.js v16のリリースノート（GitHub）はこちらになります。
 
 https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
-# さっそくインストールしてみる
+## さっそくインストールしてみる
 
 それでは、Node.js 16を実際にAppleSiliconなMacへインストールしていきます。今回はローカルとDockerでそれぞれ検証しました。
 
 この記事の内容は執筆時点でM1チップを搭載したMacbook Proにて検証したものになります。
 
-## 検証環境
+### 検証環境
 
 - MacBook Pro（macOS Big Sur 11.4）
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
 - Docker Desktop v3.3.3
 
-## ローカルへnodenvでインストール
+### ローカルへnodenvでインストール
 
 まず、ローカルな環境にNode.jsをインストールします。公式サイトからバイナリをダウンロードしてきてもいいのですが、すでにanyenvを使ってnodeのバージョン切り替えができる環境を構築しているため、nodenvを使用します。
 
@@ -83,7 +83,7 @@ $ node -v
 
 バージョンの表示ができれば成功です。
 
-## Dockerでさくっと実行環境を作る
+### Dockerでさくっと実行環境を作る
 
 Node.jsは公式でDockerイメージを配布しており、DockerHubから習得が可能です。
 
@@ -132,7 +132,7 @@ v16.2.0
 
 上のコマンドで作成したNode.jsコンテナを止めるときは`exit`にて止めることができます。またオプションに`--rm`を指定しているため、起動と同時にコンテナは破棄されます。イメージはローカルに残るため、次回起動するときはさらに高速で環境を立ち上げることが可能です。
 
-# おわりに
+## おわりに
 
 今まで開発にLTS版のNode.js v14系を使用していましたが、あっという間にバージョンが16まで進んでいて驚きました。AppleSilicon正式にネイティブ対応したことでアーキテクチャ問題を解決し、Rosetta2まわりを考慮することなくインストールできるので心理的負担が減りました。
 
