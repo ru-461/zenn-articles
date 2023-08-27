@@ -6,7 +6,7 @@ topics: ["wsl2", "yarn", "nodejs","npm"]
 published: true
 ---
 
-# Yarnとは？
+## Yarnとは？
 
 YarnとはJavaScript用のパッケージマネージャーです。
 
@@ -33,13 +33,13 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 現在、Yarnにはv1とv2が存在します。この記事内ではYarn v1のインストール手順にについて解説します。
 :::
 
-# 環境
+## 環境
 
 - Windows10 バージョン20H2
 - WSL2（Ubuntu 20.04 LTS）
 
-# インストール
-## Node.jsのインストール
+## インストール
+### Node.jsのインストール
 
 まずaptを使ってNode.jsとその周りの依存関係をまとめてインストールします。
 ターミナルにて以下のコマンドを実行するとNode.jsがインストールされます。
@@ -82,11 +82,11 @@ $ node -v
 ```
 バージョンが返ってきたらWSL2にNode.jsがインストールされています。
 
-## Yarnのインストール
+### Yarnのインストール
 
 つづいてYarnをインストールしていきます。Yarnのインストール方法は複数あります。
 
-## aptでインストール
+### aptでインストール
 
 npmがインストールされていなくてもインストール可能な方法です。
 
@@ -126,7 +126,7 @@ $ yarn --version
   1.22.5
 ```
 
-## npmを使ってインストール
+### npmを使ってインストール
 
 ```shell
 $ sudo npm install -g yarn
@@ -142,7 +142,7 @@ $ yarn --version
 
 npmを使って導入する場合、グローバルオプション`-g`を付けてグローバルにインストールすることが公式ドキュメントにて推奨されています。
 
-# さいごに
+## さいごに
 
 WSL2にNode.jsとYarnをインストールする方法についてまとめました。
 パッケージマネージャーは依存性を解決しながらモジュールを管理してくれる優秀なツールで、JavaScriptの開発をする上では必要不可欠です。
@@ -152,7 +152,7 @@ WSL2にNode.jsとYarnをインストールする方法についてまとめま�
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [npmとyarnとpnpmの違い2021](https://zenn.dev/hibikine/articles/27621a7f95e761)
 - [ubuntu 18.04 にyarn をインストールする - Qiita](https://qiita.com/crash-boy/items/5c9b7341e95b142e0d56)

@@ -6,7 +6,7 @@ topics: ["vscode"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code) は拡張機能が豊富で柔軟なコーティング環境を作れるエディタでとても人気があります。また最近では同社が開発しているTypeScriptがフロントエンド開発のトレンドになってることもあり、VSCodeをメインのエディタとして使用することも多くなってきました。私自身、VSCodeにて記事を執筆していることもありかなりお世話になってます。
 
@@ -20,7 +20,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 この表現がサービスをうまく表現しているなと感じるとともに私がZennを好きな理由でもあります。
 
-# Zen Modeの有効化
+## Zen Modeの有効化
 
 拡張機能の導入などは必要なく、VSCodeにデフォルトで用意されている機能なので、ショートカットで簡単に有効化できます。デフォルトでショートカットキーが用意されており、Windowsであれば`Ctrl`＋`K・Z` 、macOSであれば、`⌘`＋`K・Z`でZen Modeが発動します。
 
@@ -43,7 +43,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 実際この記事もVSCodeのZenn Modeを使用して執筆しています。ターミナルもVSCode内からアクセスできるため、VSCodeの画面だけで作業が完結し、快適に執筆を進められるのがよかったです。
 
-# 設定でさらにカスタマイズ
+## 設定でさらにカスタマイズ
 
 またZen modeは設定でさらにカスタマイズできます。初めてZen Modeを使うとき設定は以下のようになっています。
 
@@ -66,7 +66,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 この状態でZen Modeの有効・無効を何回か切り替えてみるとコーディング環境が通常表示よりスリムになったのがよくわかります。
 
-# おわりに
+## おわりに
 
 今回は、VSCodeでZen Modeを使用したコーディングだけに集中できる環境についてご紹介しました。
 
