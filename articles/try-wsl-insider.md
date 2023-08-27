@@ -6,7 +6,7 @@ topics: ["windows", "mac", "wsl2", "parallels", "arm"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Mac上でWindowsを動かすといったことがIntel製CPUを搭載していたMacでは[Boot Camp](https://support.apple.com/ja-jp/HT201468)や[Parallels Desktop](https://www.parallels.com/jp)を使うことで容易に実現できていました。しかし、2020年秋に登場したMacシリーズでCPUがAppleSiliconへと変わりアーキテクチャがarm64に変わり。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**AppleSilicon に対応**[^1]しました。これでParallels DesktopはIntel Mac ・ AppleSilicon Mac両方へ対応したことになります。
 
@@ -20,15 +20,15 @@ Mac上でWindowsを動かすといったことがIntel製CPUを搭載してい�
 
 結論から述べると、現状の環境ではWSL1は起動しますが、WSL2は**起動させることができませんでした**。今回は検証作業の中でいくつか気になることや気付きがあったため記事として共有します。
 
-# 検証環境
+## 検証環境
 
 - macOS BigSurバージョン11.3（ホストOS）
 - Parallels Desktop 16 for Macバージョン16.5.0
 - Windows 10 on ARM Insider Preview OSビルド21354.1（ゲストOS）
 
-# 事前準備
+## 事前準備
 
-## Preview arm 版Windows10の入手
+### Preview arm 版Windows10の入手
 
 Windows Insider Programに参加することで以下のページからPreview版のビルドを無料でダウンロードできます。
 
@@ -42,7 +42,7 @@ https://www.parallels.com/jp/products/desktop/trial/
 
 ParallelsDesktopは有料のソフトですが、**無料で14日間のトライアル版を使用できます**。永久ライセンスはバージョンごとに買い切りとなっておりバージョンアップ時に買い直す必要があります。また現在はサブスクリプション形式でのライセンス購入もできるようです。
 
-## バージョン情報を確認
+### バージョン情報を確認
 
 Mac上で仮想化したWindows10から見える情報はこのようになっております。
 
@@ -54,7 +54,7 @@ Mac上で仮想化したWindows10から見える情報はこのようになっ�
 
 この環境にWSL2（Windows Subsystems Linux 2）を導入して動かせるか試していきます。
 
-# WSL2を導入する
+## WSL2を導入する
 
 WSLのインストールは最新のWindows Previewにおいてコマンド1つでインストールが可能になりました。
 
@@ -66,7 +66,7 @@ WSL2を有効にするためには、仮想マシン周りの設定変更やWSL2
 
 今回は、簡略化されたコマンド`wsl --install`を実際に使用して環境を構築していきます。
 
-## WSL2の有効化
+### WSL2の有効化
 
 Parallels DesktopでWindowsが起動したら管理者権限で起動したコマンドプロンプトを起動して以下のコマンドを実行します。
 
@@ -84,7 +84,7 @@ Parallels DesktopでWindowsが起動したら管理者権限で起動したコ�
 
 これでWSL2が有効となり、ディストリビューションをインストールする準備が整いました。
 
-## WSL2にディストリビューションを追加する
+### WSL2にディストリビューションを追加する
 
 WSLを有効にしただけではディストリビューションがインストールされていません。
 
@@ -114,7 +114,7 @@ Ubuntu-20.04    Ubuntu 20.04 LTS
 
 Ubuntu 20.04 LTSのインストールが開始されます。インストールが完了すると自動的に起動します。
 
-## 起動する
+### 起動する
 
 WSL2にUbuntu 20.04 LTSがインストールできたので起動してみます。
 
@@ -123,7 +123,7 @@ WSL2にUbuntu 20.04 LTSがインストールできたので起動してみます
 ![WSL2起動エラーの画像](/images/try-wsl-insider/image01.png)
 *一部文字化けしているがエラーのよう*
 
-## エラー解決に向けて試したこと
+### エラー解決に向けて試したこと
 
 このままエラーで引き下がれないので、どうにか起動できないか試行錯誤してみました。
 
@@ -160,7 +160,7 @@ Paralles Desktopでは**設定から「ネスト化された仮想化を有効�
 
 以前のバージョンではWSL2の動作が仮想化されたWindows10上にて実現できている例が見られたので、今後も引き続き検証していきたいところです。
 
-## 補足 : WSL1 として設定する
+### 補足 : WSL1 として設定する
 
 本題はWSL2の実現なのですが、この環境でWSL1が動作することを検証中に確認できたので補足としてまとめます。
 
@@ -179,7 +179,7 @@ WSL1とWSL2の違いは以下のページでまとめられています。
 
 https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
-# おわりに
+## おわりに
 
 今回、WSL2をParallels Desktopに導入したWindows10 arm64 Insider Preview上で有効化できるのかを検証しました。結果としてはうまく動作させることができませんでした。まだWindows10がPreviewビルドであったり、Parallels DesktopがAppleSiliconに対応したばかりだったりとまだまだ技術面で課題があるように感じました。
 
@@ -189,7 +189,7 @@ https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [M1 Mac正式対応の「Parallels Desktop 16.5」提供開始 - PC Watch](https://pc.watch.impress.co.jp/docs/news/1318735.html)
 - [M1搭載MacBook ProでWindowsアプリを動かす｢Parallels Desktop｣を試す | Business Insider Japan](https://www.businessinsider.jp/post-234408)

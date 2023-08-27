@@ -6,7 +6,7 @@ topics: ["vscode", "windows", "mac", "m1", "applesilicon"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com)の[version 1.48](https://code.visualstudio.com/updates/v1_48)にて設定同期機能（Settings Sync）が実装され話題となりました。
 
@@ -37,13 +37,13 @@ https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 2020年２月に提供されたVSCode 1.54にてStable版がAppleSiliconに対応しました。
 :::
 
-## Macの新CPU アーキテクチャ問題
+### Macの新CPU アーキテクチャ問題
 
 昨年末発売されたMacBook Air、MacBook Pro、Mac miniには、従来のIntel製CPU（x64）ではなく、Appleが独自開発した新CPU（arm64）が搭載されています。このことにより、CPUのアーキテクチャがARMに置き換わったため、従来のIntelベースのアプリを動かすためにRosetta 2という変換ツールを介してアプリを動かすことになります。
 
 M1 Macに最適化という言葉をよく聞くようになりましたが、これはアプリがARMアーキテクチャに対応し、特別な変換などをしなくともそのまま動かせるということになります。つまりM1チップからするとネイティブな環境です。ネイティブというだけあり、パーフォーマンスやメモリの使用量などもかなり改善され、M1チップのパワーを最大限に活用することも可能となります。
 
-## VSCode Insidersが一足早くM1対応するも、しかし...
+### VSCode Insidersが一足早くM1対応するも、しかし...
 
 M1 Macが発売してすぐの12月中旬VSCode Insidersが一足早くM1チップに対応しました。
 いきなり対応したので、この情報を知ってすぐにインストールした覚えがあります。
@@ -62,13 +62,13 @@ https://twitter.com/code/status/1338886895867224070
 続いてMacBookにインストールしたInsiders版で同期しようとしたのですが上手く、同期できませんでした。
 ここでつまづき、今日に至るまで、Windows版で使っていた拡張機能を１つずつ確認してインストールして環境を合わせながら使っておりました。これはかなり面倒な作業で、「Stable版とInsiders版で同期できれば、こんな苦労しなくていいのに...」そんな思いをしながら渋々Insiders版を使っていました。最初はパフォーマンス面で不安定な部分もありましたが、アップデートが積み重なり、今ではパフォーマンス面でかなり満足しています。
 
-# 解決策
+## 解決策
 
 公式ドキュメントを眺めていたらStable版とInsiders版で設定同期ができるとのトピックがあり、試したところ上手くいきました。
 
 https://code.visualstudio.com/docs/editor/settings-sync#_syncing-stable-versus-insiders
 
-## 設定同期機能をオンにする
+### 設定同期機能をオンにする
 
 VSCode公式の設定同期機能はこちらからオンにできます。
 この記事内では、Windows側（Stable版）からMac（Insiders版）への同期を解説します。
@@ -100,7 +100,7 @@ Stable版とInsiders版で設定の同期は可能ですが、同期した際に
 右下に成功のメッセージが表示されたらうまくクラウドに保存され同期する準備ができています。
 以上で同期する側の設定は終わりです。
 
-## 設定を取り込みたいVSCodeで同期機能をオンにする
+### 設定を取り込みたいVSCodeで同期機能をオンにする
 
 同期させたいデータをクラウドに保存できたら、同期させたい端末側での操作が必要です。
 今回は、Insiders版にStable版の設定を同期させます。
@@ -133,7 +133,7 @@ Mac側にInsiders版のVSCodeをインストールし、Windows版（Stable版�
 
 また、設定が競合した場合に差分をマージ、手動で設定を確認しながらのマージも行えるみたいです。
 
-# おわりに
+## おわりに
 
 今回はVSCode公式の設定同期機能を使ってStable版とInsiders版を同期しました。
 これでWindowsマシンの環境にて使っていたVSCode拡張機能をMacBook側でも簡単にインストールできるようになりました。その他、同期したくない項目についても設定ファイルで柔軟に設定できるようです。
@@ -142,7 +142,7 @@ Mac側にInsiders版のVSCodeをインストールし、Windows版（Stable版�
 
 この記事が誰かの参考になれば幸いです。最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [Visual Studio Code January 2021](https://code.visualstudio.com/updates/v1_53#_engineering)
 - [Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync#_can-i-share-settings-between-vs-code-stable-and-insiders)

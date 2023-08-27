@@ -6,7 +6,7 @@ topics: ["powershell", "starship","scoop"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 私は普段からWindowsのWSL、PowerShellなどでRust製のプロンプト[Starship](https://starship.rs/ja-JP)を使用しています。
 
@@ -20,7 +20,7 @@ PowerShell以外ではHomebrewやaptでインストールしていたため半�
 *左WSL2・右PowerShell それぞれStarshipのバージョンを表示しています*
 
 今回は手動でアップデートする方法を確認するとともに、PowerShellのStarshipもパッケージマネージャでの管理に乗り換えてみました。
-# アップデートする
+## アップデートする
 
 アップデートする際は至ってシンプルかつ簡単です。公式のドキュメントにもあるのですが以下のコマンドを実行するだけで最新のStarshipに置き換わります。
 
@@ -37,7 +37,7 @@ Starshipはクロスプラットフォームへ対応していることもあり
 手動でインストールしている場合は手動で上のコマンドを実行しないと最新のバージョンになりません。
 手動でアップデートを確認するのは少し不便なので、この際にパッケージマネージャでの管理に切り替えてみます。
 
-# Scoopでの管理に乗り換える
+## Scoopでの管理に乗り換える
 
 手動での管理からScoopというWindows用のパッケージマネージャを使用したインストールに切り替えます。
 ScoopはWindowsで使用できるコマンドラインベースのパッケージマネージャです。
@@ -46,7 +46,7 @@ https://scoop.sh
 
 Windowsのパッケージマネージャというと[Chocolatey](https://chocolatey.org)が有名ですが、Scoopも並んで人気があるツールです。
 
-## Scoopのインストール
+### Scoopのインストール
 
 PowerShellにて以下のコマンドを順番に実行するだけでインストールが完了します。
 
@@ -59,7 +59,7 @@ PowerShellにて以下のコマンドを順番に実行するだけでインス�
 ```
 
 インストールが完了後`scoop --version`と実行してバージョン情報が返ってくれば導入は成功です。
- ## Scoopを利用したStarshipのインストール
+### Scoopを利用したStarshipのインストール
 
 導入できたらScoop経由でStarshipを導入します。Scoopがインストールされている状態で以下のコマンドを実行することでインストールできます。
 
@@ -89,7 +89,7 @@ Invoke-Expression (&starship init powershell)
 
 これでStarshipをScoopで管理するようにできました。Starshipのアップデートがあった際は、`scoop update starship`のコマンドでバージョンが上げられるようになります。
 
-# おわりに
+## おわりに
 
 今回はStarshipをアップデート、Scoopでのパッケージ管理に切り替えてみました。パッケージマネージャー経由での管理に切り替えたことで、アップデートがより便利になりました。
 
