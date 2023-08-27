@@ -6,7 +6,7 @@ topics: ["flutter", "windows", "androidstudio", "scoop", "winget"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Macで開発環境を構築する際にHomebrewなどのパッケージマネージャーを使って構築している記事をよく見かけます。パッケージマネージャーを使うことで、コマンドラインでパッケージの依存関係も解決してインストールできるため、開発環境構築の際に重宝されます。パッケージマネージャーを使うメリットに、コマンドのインストールと同時にパスも通してくれるためすぐにコマンドの実行ができること。コマンドのある場所をIDE（統合開発環境）などに教えてあげることですぐに開発に取りかかれるという点があります。
 
@@ -14,20 +14,20 @@ Windowsの場合はプログラミング言語やIDEもインストーラーを�
 
 開発を始める前の環境構築で頻出するシステム環境変数、パス周りの概念がわからないと初学者にとって環境構築は少しハードルが高いように感じます。私がプログラミングを勉強し始めたとき、環境変数編集から管理者権限で間違えて他のシステム側の変数を削除してしまったためPCの起動ができなくなり、泣く泣くWindowsを再インストールしたことがあります。その経験から、Windows上でなるべくシステム環境変数を触らず、環境を汚すことなく手軽に開発環境を構築できればいいなと感じていました。そんなときに、Linuxのaptやyumといったパッケージマネージャーと出会い、その仕組みや手軽さに感動した記憶があります。
 
-## Windowsにおけるパッケージマネージャー
+### Windowsにおけるパッケージマネージャー
 
 Macには[Homebrew](https://brew.sh/index_ja)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
 
 今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
 
 [Flutter の公式のドキュメント](https://flutter.dev/docs/get-started/install/windows)でも紹介されていますが、Flutterを公式サイトからダウンロードして、ローカルに配置、システム環境変数にFlutterのパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作してFlutterのアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
-## Flutterとは
+### Flutterとは
 
 https://flutter.dev/
 
 Googleが開発しているUIツールキットになります。Dart言語で書かれており、単一のコードからモバイル・Web・デスクトップなどの環境を問わずに実行できるアプリを作成できる「クロスプラットフォーム開発」が特徴です。最近はモバイルアプリ開発を始める人がFlutterから学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。FlutterはSDKのインストールとプラグインのインストールを行うことでAndroidStudioやXcodeといったIDEを使用して開発することが出来ます。
 
-# インストール検証環境
+## インストール検証環境
 
 OSにはWindows10を使用しています。
 
@@ -38,7 +38,7 @@ OSにはWindows10を使用しています。
 | Android Studio | 4.1.2.0 |
 | Flutter | 2.0.4 |
 
-# Windows Package Managerの準備
+## Windows Package Managerの準備
 
 Windows Package Managerを使用してコマンドでAndroid Studioをインストールしていきます。
 Windows Package Manager（winget-cli）はMicrosoft Storeからアプリインストーラーを更新することで使用できるようになります。
@@ -117,7 +117,7 @@ Windowsのスタートメニューを確認するとAndroid Studioがインス�
 ![スタートメニューからAndroid Studioを確認した様子](/images/flutter-with-commandline/image02.png)
 
 公式サイトからインストーラーをダウンロードしてローカルで実行、GUIをポチポチとすることなくAndroid Stuidoをインストールできました。インストールに時間もそれほどかからないです。
-# Flutterの導入
+## Flutterの導入
 
 ここまでコマンドだけでAndroid Studioをインストールできました。続いてScoopというパッケージマネージャーを導入してFlutterと依存関係をまとめて導入します。
 ScoopとはWindows向けのパッケージマネージャーの1つでパッケージ管理に管理者権限を使わないという特徴を持ちます。
@@ -130,7 +130,7 @@ https://scoop.sh/
 【GitHub】
 https://github.com/lukesampson/scoop
 
-## Scoopのインストール
+### Scoopのインストール
 
 インストールするために以下のスクリプトをPowerShellから実行します。
 
@@ -156,7 +156,7 @@ Usage: scoop <command> [<args>]
 
 コマンドの使い方と使用可能なオプションが表示されます。
 
-## FlutterをScoopからインストール
+### FlutterをScoopからインストール
 
 Scoopコマンドが使えることを確認できたら、続けてFlutterを導入します。
 Scoopには、**Bucket**という概念が存在し、Bucketを追加することでインストールできるアプリを増やすことができます。デフォルトでは`main Bucket`しか追加されていません。
@@ -234,7 +234,7 @@ No platform detected. Please select a platform to install [Default: 24]:
 
 しかし、doctorコマンドを実行したときにAndroid toolchainでエラーがでますので、Android Studio側で修正していきます。
 
-# Android Studioの初期設定
+## Android Studioの初期設定
 
 最初に、WingetでインストールしたAndroid Studioを起動します。最初の設定でAndroid SDKが見つからないとエラーになります。
 
@@ -278,7 +278,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 もう一度`flutter doctor`を実行して`• No issues found!`と出力されればFlutterの導入は完了です。
 
-## Flutter開発プラグインの導入
+### Flutter開発プラグインの導入
 
 Flutterのプロジェクトを作成するためにプラグインが必要になるためインストールします。
 Android Studioのメニュー画面から「Configure」→「Plugins」と進みます。
@@ -314,7 +314,7 @@ Flutter SDK pathのところにC:\Users\ユーザー名\scoop\app\scoop\apps\flu
 
 そのまま続行すると新規FlutterプロジェクトがAndroid Studio上で開かれます。
 
-# Flutterアプリを実行する
+## Flutterアプリを実行する
 
 Android Studio上でプロジェクトが開かれるのを確認したら、実際に実行できるか試します。
 
@@ -334,7 +334,7 @@ AVDマネージャーからAndroid Emulatorを作成して実行してみます�
 
 以上で、ScoopからインストールしたFlutter、 Windows Package ManagerでインストールしたAndroid Studioを組み合わせて開発環境を構築することが出来ました。
 
-# おわりに
+## おわりに
 
 今回、コマンドラインからパッケージ マネージャーを使ってAndroid StudioとFlutter 、各種SDKをインストールしてアプリをビルドするところまで行いました。Windows Package Managerはまだ現時点プレビュー版ですが、もうすぐ正式リリースされるみたいです。GUIを持つアプリケーションであっても、コマンドラインからいい感じにセットアップしてくれるのが便利だと感じました。また、Scoopも管理者権限をつかうことなく、アプリやコマンドをインストールできるので便利です。最終的にはWindows Package Managerにパッケージ管理を集約し、コマンド1つでWindowsの環境構築もできるようにしたいところです。
 
@@ -344,7 +344,7 @@ Windows10は今現在もPowerToys、Windows Terminalや、Windows Package Manage
 
 長くなりましたが、最後まで読んでいただきありがとうございました。
 
-# 参考ドキュメント
+## 参考ドキュメント
 
 - [winget ツールを使用したアプリケーションのインストールと管理 | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/package-manager/winget)
 - [windows 10でFlutter開発環境構築【Scoop使用】 - Qiita](https://qiita.com/StrayDog/items/5ba0cbc00606eb8a0d46)
