@@ -6,11 +6,11 @@ topics: ["zenn", "zenncli"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 Zennでは[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるツールが公式から提供されており、GitHubを利用した記事の投稿、記事のバージョン管理ができます。ブラウザ上のエディタに縛られない柔軟な執筆環境を構築できる点がZennの大きな特徴です。今回は、Zenn CLI用のエイリアスを作成することで記事の執筆に集中できる環境を作成しました。
 
-# 作成したエイリアスの一覧
+## 作成したエイリアスの一覧
 
 :::message
 以下のエイリアスはZshでの利用を前提としています。また、記事を管理するディレクトリへのパスは環境によって各自読み替えてください。
@@ -39,7 +39,7 @@ alias zennv='zenn && npx zenn --version'
 alias zennup='zenn && npm install zenn-cli@latest'
 ```
 
-# すぐ執筆環境を立ち上げるオールインワンエイリアス
+## すぐ執筆環境を立ち上げるオールインワンエイリアス
 
 Zennの執筆をすぐ行いたいとき用のエイリアスを定義したら以下のようになりました。&& でつないでおり、かなりごちゃごちゃしていますが、個人的なオールインワンエイリアスになります。
 
@@ -55,7 +55,7 @@ alias zenn='cd ~/Documents/my-zenn-contents' # 共通処理 ディレクトリ�
 alias zennop='zenn && code ~/Documents/my-zenn-contents && npx zenn preview --open'
 ```
 
-# ポイント
+## ポイント
 
 Zenn CLIをローカルにインストールしているため、基本的に`npx`を使ってコマンド実行します。npxコマンドの実行の際にエイリアス`zenn`でZennコンテンツ管理ディレクトリへ必ず移動するようにしています。
 ## コンテンツ管理ディレクトリへのアクセス
@@ -82,7 +82,7 @@ https://zenn.dev/ryuu/articles/what-vscodecommand
 $ code ~/Documents/my-zenn-contents
 ```
 
-## 記事や本のプレビュー
+### 記事や本のプレビュー
 
 VSCodeにはデフォルトでマークダウンのプレビュー機能が搭載されているため、マークダウンファイル（.md）をその場でプレビューしながら書くことができます。しかし、ZennにはZenn独自のマークダウン記法（メッセージやアコーディオン、トグル）があるためVSCodeのプレビュー機能では完全にプレビューできません。そこでZenn CLIには、localhostでサーバーを立ち上げてZenn上でどのように表示されるのかを投稿前に確認できるZenn Editorがあります。ホットリロードに対応しているため、ローカルで加えた変更を瞬時に反映しながら記事を書いていくことができます。
 
@@ -101,7 +101,7 @@ alias zennpr='zenn && npx zenn preview --open'
 
 また、`--open`オプションをつけることで、デフォルトのブラウザが自動的に開かれるようになります。予めエイリアスに`--open`オプションを含めておくことですぐにプレビューできるようにしています。ローカルで記事の修正をしたときなどすぐに見え方を確認できるのはとても便利です。
 
-## 新しい記事・本の作成
+### 新しい記事・本の作成
 
 Zenn CLIを使って新しい記事・本を作成するときのコマンド、`npx zenn new:article`を`zennna` 、`npx zenn new:book`を`zennnb`としています。記事と本とでエイリアスの後ろを（new:article , new:book）をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ（任意の記事名）を指定でき、`npx zenn new:article`とするとランダムのスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug`というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs`のようにスラッグオプション（--slug）を含めたエイリアスも定義しています。
 
@@ -123,7 +123,7 @@ $ zennnas alias-of-zenncli（任意のスラッグ）
 
 https://zenn.dev/zenn/articles/zenn-cli-guide
 
-# まとめ
+## まとめ
 
 今回、Zennの執筆をするときに活用しているエイリアスについて紹介しました。
 

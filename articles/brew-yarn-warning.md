@@ -6,7 +6,7 @@ topics: ["homebrew", "mac", "yarn", "nodejs"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 以前、M1 MacbookにてHomebrewを使い、anyenvとnodenvを使ったNode.jsの開発環境を構築しました。
 パッケージマネージャにYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`コマンドで見てもらったところ以下のようなWarningがでてきて焦りました。
@@ -28,7 +28,7 @@ brew doctorコマンドを使用するとこのメッセージが表示されま
 
 種類も`Warning : `だったので致命的なエラーではないという判断で長い間放置していましたが、コマンドを実行するたびに表示されるのが少し気になり精神衛生上あまり良くないので解決策を探してみました。
 
-# 環境・バージョン等
+## 環境・バージョン等
 
 - macOS Big Sur 11.2.1
 - HomeBrew 3.0.2
@@ -37,7 +37,7 @@ brew doctorコマンドを使用するとこのメッセージが表示されま
 - Node.js 14.15.4
 - yarn 1.22.10
 
-# ここまでやったこと
+## ここまでやったこと
 
 https://github.com/anyenv/anyenv#homebrew-for-macos-user
 
@@ -56,7 +56,7 @@ $ yarn --version
 
 インストールに成功し、Yarnを使ったパッケージの管理はエラーなく行えるが、`brew doctor`を実行するたび毎回Warningが表示されるようになりました。
 
-# 解決策
+## 解決策
 
 結論としては、すでにYarnが存在しており、シンボリックリンクが切れていることが原因でした。
 
@@ -112,7 +112,7 @@ Your system is ready to brew.
 
 Yarnに対するWarningがきれいさっぱりなくなりました。
 
-# おわりに
+## おわりに
 
 Homebrewを使ってまだ日が浅いため、わからないことが多くありましたが、無事に問題を解決できてよかったです。
 Homebrewは`brew doctor`で問題をわかりやすく提示してくれるのがいいですね。
@@ -122,7 +122,7 @@ Homebrewは`brew doctor`で問題をわかりやすく提示してくれるの�
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [brew doctorコマンドを実行した時に発生したwarningを1個ずつ解決していきます！ | LaptrinhX](https://laptrinhx.com/brew-doctorkomandowo-shi-xingshita-shini-fa-shengshitawarningwo1gezutsu-jie-jueshiteikimasu-2122113170)
 - [HomebrewでdoctorしたらWarning: You have unlinked kegs in your Cellarとなった時の対応方法 - Qiita](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
