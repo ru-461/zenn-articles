@@ -6,7 +6,7 @@ topics: ["mac", "php", "homebrew"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 macOS12ことMontereyがリリースされてしばらく日が経ちました。ユニバーサルコントロール対応などの目玉機能が注目されるなか、密かにPHPがmacOSにバンドルされなくなっていることに気づきました。
 いままでのmacOSではインストール時からPHPがセットアップされて使える状態になっているというのが暗黙の了解で常識化していたように感じます。
@@ -20,14 +20,14 @@ PHPの公式サイトでも一番手っ取り早いインストール方法と�
 
 https://www.php.net/manual/ja/install.macosx.packages.php
 
-# 使用環境
+## 使用環境
 
 ・Macbook Pro(13-inchi, M1, 2020)
 ・macOS Monterey(バージョン 12.3)
 ・Homebrew/homebrew-core(Git revision 1f841cb3044; last commit 2022-03-27)
 ・Homebrew/homebrew-cask(Git revision 60208d8c20; last commit 2022-03-26)
 
-# PHPのインストール
+## PHPのインストール
 
 Homebrewを使用してPHPをインストールします。
 
@@ -50,7 +50,7 @@ PHPのインストールに伴い依存しているパッケージやモジュ�
 
 続けてmacOSにPHPの設定をしていきます。
 
-## セットアップ
+### セットアップ
 
 インストールしたPHPは自動的にパスが通らないため、シェルのプロファイルからパスを手動で通す必要があります。使用しているシェルのプロファイル（.bascrcや.zshrc）などを開き以下コマンドを叩くか、プロファイルを直接編集しパスを構成します。Zshを使用している場合は以下のようになります。
 
@@ -72,7 +72,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
 
 これでPHPを使用できる環境が構築できました。
 
-# おわりに
+## おわりに
 
 PHPをmacOS12以降で利用できるようにする方法についてまとめました。Homebrewで構築する場合依存関係を解決し適切にパスを通すだけで使えるようになるのはやはり便利です。
 いままで依存関係でPHPのビルドに苦戦することが多かったので、Homebrewの快適さに驚きました。
