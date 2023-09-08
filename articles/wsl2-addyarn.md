@@ -16,7 +16,7 @@ Node.jsをインストールすると標準で[npm](https://www.npmjs.com)とい
 
 こちらがYarnの公式ページになります。
 
-https://yarnpkg.com/
+https://yarnpkg.com
 
 Yarnはnpmが問題としていた部分を抑えるように設計され、登場当時はnpmよりインストール速度が早くなったりとメリットが大きかったようです。
 今ではnpmのバージョンアップで差があまりなくなってきたとのこと。
