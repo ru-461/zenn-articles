@@ -110,7 +110,7 @@ aptでインストールする際は以下のリポジトリ追加と構成を�
 
 ```shell
 $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+$ echo "deb https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 
 リポジトリを追加したら以下のコマンドを実行します。
