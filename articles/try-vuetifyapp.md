@@ -22,7 +22,7 @@ JavaScriptを使って文字をカウントするアプリを作るサンプル�
 テキストエリアに文字を入力すると下のカウンターが動的に変化します。
 コードはこちらで公開しています。
 
-https://github.com/ryu-461/tweet-counter
+https://github.com/ru-461/tweet-counter
 
 ## 前提条件
 
