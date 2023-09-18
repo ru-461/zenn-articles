@@ -22,7 +22,6 @@
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
   "volta": {
-    "node": "18.17.1",
-    "pnpm": "8.7.0"
+    "node": "18.17.1"
   }
 }
