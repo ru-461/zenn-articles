@@ -12,7 +12,7 @@
     "textlint:fix": "textlint --fix"
   },
   "dependencies": {
-    "zenn-cli": "^0.1.145"
+    "zenn-cli": "^0.1.146"
   },
   "devDependencies": {
     "textlint": "^13.3.3",
