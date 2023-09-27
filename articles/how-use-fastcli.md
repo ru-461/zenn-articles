@@ -74,7 +74,7 @@ Discussionにて紹介されたのですが、同じようなツールとして[
 
 最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [sindresorhus / fast-cli](https://github.com/sindresorhus/fast-cli)
 - [回線速度のテストができる「fast」コマンドが便利だった](https://qiita.com/suin/items/8398f0b07299a3cc194f)
