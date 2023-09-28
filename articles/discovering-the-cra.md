@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Reactで手早くプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev)を使用する例は多いです。Reactの開発をしているFacebookチームが開発しており、Reactチュートリアルでも仕様が推奨されています。
+Reactで手早くプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev)を使用する例は多いです。Reactの開発をしているMeta社が開発しており、Reactチュートリアルでも仕様が推奨されています。
 
 https://ja.reactjs.org/docs/create-a-new-react-app.html
 
@@ -77,7 +77,6 @@ $ npx create-react-app react-projects/my-react-app/app
 ## おわりに
 
 今回、CreateReactAppでカレントディレクトリにプロジェクトを展開するやり方についてまとめました。DockerでReactの環境を作る際にディレクトリ構成で迷いがちだったので明示的にプロジェクトを指定して展開できるとわかりやすいですね。
-
 公式ドキュメントに書いてないので、このやり方がレアケースかなとは感じておりますが誰かの参考になれば幸いです。
 
 最後まで読んでいただきありがとうございました。
