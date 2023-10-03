@@ -147,7 +147,7 @@ npmの遊び心が感じられるリポジトリで寄せられたものを見�
 
 長くなりましたが、最後まで読んでいただきありがとうございました。
 
-# 参考
+## 参考
 
 - [node.js - Why is npm's name not Node Package Manager? - Stack Overflow](https://stackoverflow.com/questions/45531942/why-is-npms-name-not-node-package-manager)
 - [WAIT! @Myles, What DOES npm stand for?! · Discussion #639 · githubevents/universe2020 · GitHub](https://github.com/githubevents/universe2020/discussions/639)
