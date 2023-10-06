@@ -22,7 +22,7 @@ published: true
 ターミナルから以下のコマンドでインストール。
 
 ```shell
-npm i devicon
+$ npm install devicon
 ```
 
 アイコンを表示させるためテンプレート内に以下のタグを入れてみる。
