@@ -12,7 +12,7 @@ published: true
 
 ## 環境
 
-- Windows 10バージョン20H2
+- Windows 10 バージョン20H2
 - Windows Subsystem for Linux 2（WSL2）
 - Ubuntu 20.04.1 LTS（Focal Fossa）
 
