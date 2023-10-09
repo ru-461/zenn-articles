@@ -20,7 +20,7 @@ Windowsには、コマンドプロンプトやPowershellを起動する際「管
 
 Windows向けのパッケージマネージャーになります。
 
-https://scoop.sh/
+https://scoop.sh
 
 有名なものとしてRed Hat系OSでいう、yumやRPM、Debian系OSだとapt、macOSでのHomebrewにあたります。
 
