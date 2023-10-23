@@ -57,7 +57,7 @@ alias zennop='zenn && code ~/Documents/my-zenn-contents && npx zenn preview --op
 2. VSCodeで開く
 3. ブラウザを起動し記事をプレビュー
 
-Zenn CLIを使って記事をすぐに書き始められる環境がコマンド一つで立ち上がるのは地味に便利です。
+Zenn CLIを使って記事をすぐに書き始められる環境がコマンド1つで立ち上がるのは地味に便利です。
 
 ## コンテンツ管理ディレクトリへのアクセス
 
