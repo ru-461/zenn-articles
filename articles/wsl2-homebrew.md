@@ -30,8 +30,7 @@ AppleSilicon Mac登場のときも話題になりましたが、HomebrewはCPU�
 :::
 
 Homebrewの公式サイト（日本語）はこちらです。
-
-https://brew.sh/index_ja
+https://brew.sh/ja/
 
 ## 環境
 
