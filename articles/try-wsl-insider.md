@@ -28,7 +28,7 @@ Mac上でWindowsを動かすといったことがIntel製CPUを搭載してい�
 
 ## 事前準備
 
-### Preview arm 版Windows10の入手
+### Preview arm版Windows10の入手
 
 Windows Insider Programに参加することで以下のページからPreview版のビルドを無料でダウンロードできます。
 
