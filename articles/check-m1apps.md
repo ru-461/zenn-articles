@@ -8,13 +8,13 @@ published: true
 
 ## はじめに
 
-AppleSilicon M1が世に出てからしばらく経ちました。現在多くのMacはAppleSiliconへ移行しつつあり、アーキテクチャに**ARM**を採用しています。そのため、従来のモデルにて使用されていたIntelCPU向けのアプリ（x64アーキテクチャ）との互換性がなくなり、そのままでは動かすことはできないという課題がありました。
+AppleSilicon M1が世に出てからしばらく経ちました。現在多くのMacはAppleSiliconへ移行しつつあり、アーキテクチャに**ARM**を採用しています。そのため、従来のモデルにて使用されていたIntelCPU向けのアプリ（x64アーキテクチャ）との互換性がなくなり、そのままでは動かすことができないという課題がありました。
 
 そこでAppleはRosetta 2という変換ツールを用意しており、x64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作するAppleSilicon対応ビルドやユニバーサルビルドが増えてきており、今では多くのアプリにてAppleSiliconの恩恵を預かることができるようになりました。
 
 そして先日、Docker Desktopがv3.3.1にて正式にAppleSiliconへ対応し、話題になりました。
 
-https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon
+https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 まだまだ盛り上がりを見せているM1 Macですが、まだRosseta２を使用しないと動作させられないアプリも存在します。そこでM1チップへネイティブ対応しているアプリと、対応していない従来のアプリが混在する状態となっているなか、どのアプリがM1チップに最適化されているのかを一瞬で確認する方法について紹介します。
 
@@ -28,7 +28,7 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon
 ***プロセスごとにアーキテクチャを確認できる***
 これで1つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこでiMobie M1 App Checkerというツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
 
-https://www.imobie.com/m1-app-checker
+https://www.imobie.com/m1-app-checker/
 
 公式サイトから「Free Download」をクリックしてインストールできます。パッケージマネージャーとしてHomebrewを導入している場合は、以下のコマンドでインストールできます。
 
