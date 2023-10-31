@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Zennには[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるコマンドラインインターフェース（CLI）があり、記事の管理をGitHub、執筆をローカルのエディタを使うといった運用が可能となっています。
+Zennには[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるコマンドラインインタフェース（CLI）があり、記事の管理をGitHub、執筆をローカルのエディタを使うといった運用が可能となっています。
 
 Zennの執筆環境周りについての説明は以下にまとめられています。
 https://zenn.dev/zenn/articles/editor-guide
