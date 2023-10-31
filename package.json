@@ -8,8 +8,8 @@
   "main": "index.js",
   "scripts": {
     "preview": "zenn preview",
-    "textlint": "textlint",
-    "textlint:fix": "textlint --fix"
+    "lint": "textlint article",
+    "lint:fix": "textlint --fix"
   },
   "dependencies": {
     "zenn-cli": "^0.1.148"
@@ -22,6 +22,6 @@
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
   "volta": {
-    "node": "18.17.1"
+    "node": "20.9.0"
   }
 }
