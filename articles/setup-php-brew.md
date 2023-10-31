@@ -17,13 +17,12 @@ macOS 12移行にアップグレードした環境で`php --version`をすると
 そこでmacOSでパッケージマネージャHomebrewを使用してPHPの実行環境をセットアップするまでにやったことまとめてみます。恥ずかしながらかなりハマったポイントがあるためこれから新規にPHPをmacOSにセットアップする方の参考になれば嬉しいです。
 
 PHPの公式サイトでも一番手っ取り早いインストール方法として紹介されているものになります。
-
 https://www.php.net/manual/ja/install.macosx.packages.php
 
 ## 使用環境
 
-・Macbook Pro(13-inchi, M1, 2020)
-・macOS Monterey(バージョン 12.3)
+・Macbook Pro(M1, 2020)
+・macOS Monterey(バージョン12.3)
 ・Homebrew/homebrew-core(Git revision 1f841cb3044; last commit 2022-03-27)
 ・Homebrew/homebrew-cask(Git revision 60208d8c20; last commit 2022-03-26)
 
