@@ -16,28 +16,18 @@ https://fast.com/ja/
 上記リンクにアクセスすると接続している回線の速度を測定してくれます。
 そこで、回線速度を計測したいときにブラウザを使って測定サイトにアクセスしなくても、ターミナルからインターネット回線速度を図る方法が便利だったためまとめてみました。
 
-## 公式コマンドラインツール「fast-cli」のインストール
+## 公式コマンドラインツール「fast-cli」
 
-Node.js（バージョン8以降）がインストールされている場合、npmやYarnなどのパッケージマネージャーから簡単に導入できます。以下のコマンドをターミナルにて実行しグローバルにインストールすることで使えるようになります。
-
-### npmでインストール
-
-```shell
-$ npm install --global fast-cli
-```
-
-### Yarnでインストール
-
-```shell
-$ yarn global add fast-cli
-```
+[Node.js](https://nodejs.org)がインストールされている場合、`npx`を利用してインストールせずに使用できます。
+npxについては過去に投稿した記事で説明しているので興味がある方は併せてご覧ください。
+https://zenn.dev/ryuu/articles/what-npxcommand
 
 ## 実行
 
 ### ダウンロードとアップロード速度を計測
 
 ```shell
-$ fast
+$ npx fast-cli
 ```
 
 ダウンロードの速度を計測します。オプションとして`--upload`を付けないとダウンロードのみの計測となります。
@@ -45,13 +35,13 @@ $ fast
 
 ```shell
 # ダウンロード速度とアップロード速度を計測
-$ fast -u
+$ npx fast-cli --upload
 ```
 
 ### ダウンロード速度を計測して結果を一行表示
 
 ```shell
-$ fast --single-line
+$ npx fast-cli --single-line
 ```
 
 一行でシンプルにダウンロード速度を計測します。
@@ -59,7 +49,7 @@ $ fast --single-line
 ### fast-cliのヘルプを表示
 
 ```shell
-$ fast --help
+$ npx fast-cli --help
 ```
 
 使用可能なコマンドと使用例を表示します。`--help`は`-h`としても同じ意味となります。
