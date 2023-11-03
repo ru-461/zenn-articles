@@ -22,6 +22,9 @@ https://fast.com/ja/
 npxについては過去に投稿した記事で説明しているので興味がある方は併せてご覧ください。
 https://zenn.dev/ryuu/articles/what-npxcommand
 
+またグローバルに`npm install --global fast-cli`としてインストールして使用もできます。
+グローバルインストールして使う場合は`fast-cli`を`fast`に適宜読み替えて実行してください。
+
 ## 実行
 
 ### ダウンロードとアップロード速度を計測
