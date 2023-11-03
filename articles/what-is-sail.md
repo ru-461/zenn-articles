@@ -11,7 +11,6 @@ published: true
 [Laravel Sail](https://laravel.com/docs/9.x/sail)と呼ばれる公式が提供しているLaravelの開発環境があります。
 
 内部的にDocker Composeを利用し、Dockerの利用環境があれば簡単に開発環境を用意できるという点、公式が提供している点が評価され日々利用者を広げています。
-
 https://github.com/laravel/sail
 
 Laravel SailはDocker初学者への配慮もあり、今自分が操作しているコンテナを意識することなくSailコマンドを経由してコマンド操作が可能となっております。そして公式のドキュメントには以下のような記載があります。
@@ -20,7 +19,8 @@ Laravel SailはDocker初学者への配慮もあり、今自分が操作して�
 
 [^1]: https://laravel.com/docs/9.x/sail
 
-和訳すると「Dockerの経験を必要とせず」となります。Dockerの経験がなくても簡単にPHP・MySQL・Redisといった複数のサービスを組み合わせてLaravelの開発にすぐ着手させることをコンセプトに掲げています。
+和訳すると「Dockerの経験を必要とせず」となります。
+Dockerの経験がなくても簡単にPHP・MySQL・Redisといった複数のサービスを組み合わせてLaravelの開発にすぐ着手させることをコンセプトに掲げています。
 
 Sail専用のコマンドが用意されており、Laravelより学習コストが嵩むのではという懸念もありますが、個人的にさほど問題になることはないように感じました。
 
@@ -200,7 +200,8 @@ mysql>
 Sailが事前に用意しているコマンドが具体的に何をしているのかを確認することでDocker Composeへの理解も深まります。
 私はこの方法でLaravel SailがDocker Composeで内部的に行っていることを1つ1つ確認して覚えました（笑）
 
-他にもSailが提供している便利なコマンドが多数あるため`sail --help`で確認したコマンドを上記の方法で確認し、Docker Composeコマンドが裏側で動いている様子を見てみるのも面白いです。
+他にもSailが提供している便利なコマンドが多数あります。
+`sail --help`で確認したコマンドを上記の方法で確認し、Docker Composeコマンドが裏側で動いている様子を見てみるのも面白いので試してみてください。
 
 ## おわりに
 
