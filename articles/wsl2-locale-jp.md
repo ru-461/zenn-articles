@@ -57,7 +57,7 @@ $ locale -a
 ### 日本語の言語パックをインストール
 
 ```shell
-$ sudo apt install -y language-pack-ja
+$ sudo apt install language-pack-ja -y
 ```
 
 パスワードが求められたらroot権限のパスワード（初回に設定したパスワード）を入力して続行します。
@@ -121,7 +121,7 @@ $ date
 ### コマンドのマニュアル表示も日本語にする
 
 ```shell
-$ sudo apt -y install manpages-ja manpages-ja-dev
+$ sudo apt install manpages-ja manpages-ja-dev -y
 ```
 
 実行することでマニュアルコマンド`$man`の表示が日本語で表示されるようになります。
