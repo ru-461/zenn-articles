@@ -15,7 +15,6 @@ aptを使ったインストールやアップデートの速度を早くする�
 そこでツールを利用して速度をあげられる方法をないか探したところ「apt-fast」といったツールをGitHubにて発見しました。今回は、aptからapt-fastへ乗り換えて速度を爆速にしてみたのでまとめます。
 
 apt-fastのGitHubリポジトリは以下になります。
-
 https://github.com/ilikenwf/apt-fast
 
 ## apt-fast の仕組みと概要
@@ -45,6 +44,7 @@ $ sudo add-apt-repository ppa:apt-fast/stable
 # リポジトリを最新に更新
 $ sudo apt-get update
 ```
+
 ### インストールと初期設定
 
 リポジトリの追加と更新が終わったら以下のコマンドでapt-fastをインストールします。
@@ -55,12 +55,10 @@ $ sudo apt-get -y install apt-fast
 ```
 
 インストールが開始されます。Ubuntuだと途中で以下のような設定ダイアログが表示されます。
-
 ![パッケージマネージャー選択画面の画像](/images/fast-aptcommand/image01.png)
 *使用するパッケージマネージャーの選択*
 
 使用するパッケージマネージャーを選択します。apt-fastは**apt-get**、**apt**、**aptitude**の3つをデフォルトでをサポートしています。パッケージマネージャーとしてaptを使いたいため選択肢からaptを選択します。
-
 ![最大の接続数を指定する画面の画像](/images/fast-aptcommand/image02.png)
 *最大接続数の指定*
 
