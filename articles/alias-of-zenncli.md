@@ -73,7 +73,6 @@ alias zenn='cd ~/Documents/my-zenn-contents'
 ![コンテンツ管理ディレクトリに移動する様子](/images/alias-of-zenncli/image01.gif)
 
 私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
-
 https://zenn.dev/ryuu/articles/what-vscodecommand
 
 以下のようなコマンドで、別のディレクトリで作業していてもVSCodeでZennのコンテンツ管理ディレクトリをすぐに開いてくれます。
@@ -121,7 +120,6 @@ $ zennnas alias-of-zenncli（任意のスラッグ）
 ```
 
 スラッグ以外に、絵文字やタイトル、本の販売価格など作成時に利用できるオプションは数多くあるので、詳しくは以下の公式記事を参考にしてみてください。
-
 https://zenn.dev/zenn/articles/zenn-cli-guide
 
 ## まとめ
