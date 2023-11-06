@@ -85,7 +85,7 @@ $ sudo update-locale LANG=ja_JP.UTF8
 インストールが終わったら`exit`でシェルを終了し、再起動します。
 
 :::message
-以下のコマンドでデフォルトのロケールに戻すこともできます。
+以下のコマンドでデフォルトのロケール（en_US.UTF-8）に戻すこともできます。
 
 ```shell
 $ sudo update-locale LANG=en_US.UTF8
