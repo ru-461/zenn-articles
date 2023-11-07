@@ -28,7 +28,6 @@ iTerm2を起動して、設定（Preferences）を開きます。メニューか
 iTerm2は設定ファイルの保存先をカスタムでき、自由に保存先を指定できます。
 
 DropboxのアプリをMacにインストールして使っている場合、FinderからDropboxへアクセス可能となり、Dropbox上の場所も指定できるようになります。
-
 https://help.dropbox.com/ja-jp/installs-integrations/desktop/locate-dropbox-folder
 
 [Dropbox を公式サイトからインストール](https://www.dropbox.com/install)し、セットアップを進めることでDropboxディレクトリにアクセス可能となります。
