@@ -91,6 +91,7 @@ $ sudo update-locale LANG=ja_JP.UTF8
 $ sudo update-locale LANG=en_US.UTF8
 ```
 :::
+
 これで日本語ロケールの導入ができました。しかし、デフォルトではタイムゾーンが日本時間になっていません。せっかくなのでタイムゾーンも日本時間（JST）に設定していきます。
 
 ### タイムゾーンの変更
