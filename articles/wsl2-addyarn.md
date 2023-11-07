@@ -33,10 +33,11 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 
 ## 環境
 
-- Windows10 バージョン20H2
+- Windows 10（20H2）
 - WSL2（Ubuntu 20.04 LTS）
 
 ## インストール
+
 ### Node.jsのインストール
 
 まずaptを使ってNode.jsとその周りの依存関係をまとめてインストールします。
