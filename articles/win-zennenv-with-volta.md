@@ -11,7 +11,6 @@ published: true
 Rust製のコマンド・ユーティリティをよく見るようになりました。Rustの特徴として**パフォーマンス・信頼性・生産性**に優れているというものがあり、多くのRust製ツールがクロスプラットフォームに動作するのが魅力の1つになっています。
 
 近年注目されているRust製ツールのひとつに「Volta」いうJavaScriptツールマネージャがあります。
-
 https://volta.sh
 
 Rust製で高速に動作することはもちろんのこと、クロスプラットフォームでの動作もできるバージョンマネージャとなっています。
@@ -155,7 +154,6 @@ npx zenn preview
 ここまでWindowsの環境でも問題なくVoltaを使用してのNode.js実行環境の構築、記事の作成と編集まで行うことが確認できました。
 
 実際にZennへ記事をデプロイするときはGitHubリポジトリ連携でデプロイ可能です。本記事ではGitのセットアップやリポジトリの設定は割愛します。
-
 https://zenn.dev/zenn/articles/connect-to-github
 
 GitHub連携するためにGitがローカルで使用できる環境が必要となります。Windowsでは[Git for Windows](https://gitforwindows.org)が使用できるため、Windowsのローカル環境だけで本格的に記事を書いていくことができます。
