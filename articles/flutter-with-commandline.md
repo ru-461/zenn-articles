@@ -44,7 +44,6 @@ Windows Package Managerを使用してコマンドでAndroid Studioをインス�
 Windows Package Manager（winget-cli）はMicrosoft Storeからアプリインストーラーを更新することで使用できるようになります。
 
 WindowsのスタートメニューからMicrosoft Storeを起動して「アプリ インストーラー」と検索するか、以下のリンクから飛べます。
-
 https://www.microsoft.com/ja-jp/p/%E3%82%A2%E3%83%97%E3%83%AA-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC/9nblggh4nns1?activetab=pivot:overviewtab
 
 インストールページが開かれます。
