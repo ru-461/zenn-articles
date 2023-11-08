@@ -98,7 +98,7 @@ node_modules  package-lock.json  package.json  public  README.md  src
 
 ## おわりに
 
-YarnはReactの開発元であるMeta（旧 Facebook）が開発していることもあり、Crate React AppがデフォルトでYarnを選択する仕様には納得です。npmを使用したい場合でも公式からオプションが提供されており、npmを使用するケースがあった場合にも柔軟に対応できるのが便利だと感じました。
+YarnはReactの開発元であるMeta（旧Facebook）が開発していることもあり、Crate React AppがデフォルトでYarnを選択する仕様には納得です。npmを使用したい場合でも公式からオプションが提供されており、npmを使用するケースがあった場合にも柔軟に対応できるのが便利だと感じました。
 
 最後まで読んでいただきありがとうございました。
 
