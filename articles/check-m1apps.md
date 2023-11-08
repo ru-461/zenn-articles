@@ -13,7 +13,6 @@ AppleSilicon M1が世に出てからしばらく経ちました。現在多く�
 そこでAppleはRosetta 2という変換ツールを用意しており、x64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作するAppleSilicon対応ビルドやユニバーサルビルドが増えてきており、今では多くのアプリにてAppleSiliconの恩恵を預かることができるようになりました。
 
 そして先日、Docker Desktopがv3.3.1にて正式にAppleSiliconへ対応し、話題になりました。
-
 https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 まだまだ盛り上がりを見せているM1 Macですが、まだRosseta２を使用しないと動作させられないアプリも存在します。そこでM1チップへネイティブ対応しているアプリと、対応していない従来のアプリが混在する状態となっているなか、どのアプリがM1チップに最適化されているのかを一瞬で確認する方法について紹介します。
@@ -52,7 +51,6 @@ $ brew install --cask imobie-m1-app-checker
 アプリの中にはアップデートでAppleSiliconに対応するものが多くあります。現在使用しているアプリが現行バージョンにてAppleSiliconに対応しているかしていないかを調べるときに活用できるサイトがいくつかあるため紹介します。
 
 上記のM1-App-Checkerは公式サイトにてAppleSiliconに対応しているかどうかを調べるための早見表を提供しています。
-
 https://www.imobie.jp/m1-app-checker/?ref=m1
 
 ![M1-App-Checkerが提供するリスト画像](/images/check-m1apps/image04.png)
@@ -62,7 +60,6 @@ https://www.imobie.jp/m1-app-checker/?ref=m1
 ### Does it ARM？
 
 ![Does it ARM?のページ画像](/images/check-m1apps/image05.png)
-
 https://doesitarm.com/
 
 アプリ名から対応状況を検索できるサイトになります。アプリごとに詳細を見ることができ、対応したバージョンやリリースノートへのリンクがまとめられています。また目的のアプリがAppleSiliconにネイティブ対応していない場合、対応したときに**メールにて更新情報を受け取る機能**もあり、いち早く対応状況を知りたいときに活用できそうです。
@@ -70,7 +67,6 @@ https://doesitarm.com/
 ### Is Apple silicon ready？
 
 ![Is Apple silicon ready？のページ画像](/images/check-m1apps/image06.png)
-
 https://isapplesiliconready.com/jp
 
 こちらも同じくアプリの対応状況をまとめたリストを提供しています。こちらは、デフォルトで**日本語表示に対応**しております。探しているアプリが見つからない場合や、情報が古い場合は情報の更新を申し立てることができるようです。
