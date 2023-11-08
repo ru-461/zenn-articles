@@ -24,13 +24,11 @@ Cloudreadyは本家ChromeOSと比較したときにGoogle Playストアがサポ
 その他はそのままChromeOSと同じように使うことができます。
 
 CloudReadyの公式ページはこちらになります。
-
 https://www.neverware.com/freedownload
 
 このCloudReadyを使用することで古いPCやMacを簡単にChromeBook化できるということで注目を集めています。
 
 つい先日、ChromeOSがCloudReadyを買収し統合される方針のツイートがありました。
-
 https://twitter.com/neverware/status/1338606293737730050?s=19
 
 CloudReadyが正式にChromeOSとして生まれ変わる日も近いみたいですね。
@@ -51,7 +49,6 @@ CloudReadyが正式にChromeOSとして生まれ変わる日も近いみたい�
 CloudReadyを仮想マシンで利用する場合はVMware Workstation Playerでの動作のみサポートされているためVMware Workstation Playerを使用します。VirtualBoxでは上手く動作しない模様です。
 
 VMware Workstation Playerは以下のページからダウンロード可能です。
-
 https://www.vmware.com/jp/products/workstation-player/workstation-player-evaluation.html
 
 ![VMware Workstation Playerをインストールする様子](/images/try-cloudready/image01.png)
