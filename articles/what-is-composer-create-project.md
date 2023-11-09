@@ -25,8 +25,7 @@ $ composer create-project laravel/laravel example-app
 
 予想よりも意外とシンプルで驚きました。続けて詳しく見ていきます。
 
-また`composer create-project`の実装は以下の PHPファイルになります。
-
+また`composer create-project`の実装は以下のPHPファイルになります。
 https://github.com/composer/composer/blob/main/src/Composer/Command/CreateProjectCommand.php
 
 ## create-projectコマンドの実態
@@ -34,7 +33,6 @@ https://github.com/composer/composer/blob/main/src/Composer/Command/CreateProjec
 Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気になる一文を発見しました。
 
 > You can use Composer to create new projects from an existing package. This is the equivalent of doing a Git clone/svn checkout followed by a composer install of the vendors.
-
 [^1]: 引用 https://getcomposer.org/doc/03-cli.md#create-project
 
 要約すると、GitやSvnなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。想像よりもシンプルで驚きました。
