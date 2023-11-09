@@ -24,7 +24,6 @@ Notionを自分専用のWikiのように活用し、一箇所で必要な情報�
 ## 「VSCode Notion」とは何者か？
 
 VSCodeの拡張機能として提供されており、VSCodeに導入して使用するものになります。
-
 https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 
 拡張機能はすべて英語で表記されているため、難しそうに思えますが、機能としてはタブとしてVSCode内でNotionを開くことを可能にする拡張機能となります。
