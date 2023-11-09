@@ -66,7 +66,7 @@ PHP Warning: ..
 
 その時に使われるのが`composer install`になります。
 
-ここまで来るともうお分かりなのですが、`composer create-project laravel/laravel example-app`はlaravelのlaravelリポジトリを`git clone`したあとに`composer install`を実行してよしなに環境を構築してくれるワンライナーの役目を果たしているのでした。
+つまり`composer create-project laravel/laravel example-app`はLaravelの新規プロジェクトを自動生成するワンライナーの役目を果たしているのです。
 
 `composer create-project`を使わずに、`git clone`、`composer install`で構築した場合は.envファイルが存在しないため500エラーになる可能性があります。その場合は、.envファイルを構成しencriptキーを生成することで解決します。
 
