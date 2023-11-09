@@ -27,7 +27,6 @@ Ubuntu系のOSを使っている人がターミナルに以下のようなロゴ
 ## インストール
 
 GitHubリポジトリはこちらです。
-
 https://github.com/KittyKatt/screenFetch
 
 screenfetchコマンドはパッケージマネージャーから簡単にインストールできます。
