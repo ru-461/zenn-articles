@@ -10,7 +10,7 @@ published: true
 
 PHPでパッケージ間の依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
-例えば、PHPアプリケーションフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドをタイプすると最新バージョンのLaravelプロジェクトが自動的に生成されます。
+例えば、PHPのフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドを実行すると最新バージョンのLaravelプロジェクトが自動生成されます。
 
 ```shell
 $ composer create-project laravel/laravel example-app
@@ -44,7 +44,6 @@ Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気
 以下、Laravelの例で考えます。
 
 Laravelの実体は以下のGitHubリポジトリに存在します。
-
 https://github.com/laravel/laravel
 
 記事執筆時点で最新バージョンはv9.4.1となっております。このリポジトリをローカルにクローンするには以下のコマンドを実行します。
