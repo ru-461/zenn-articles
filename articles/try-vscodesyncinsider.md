@@ -20,7 +20,6 @@ VSCodeには、Stable releaseと、Inseders releaseという２つのバージ�
 *左がStable版、右がInsiders版のアイコン*
 
 昨年、VSCode公式がStable版に設定同期機能を実装し話題になりましたが、今までVSCodeの設定を同期する拡張機能は存在していました。
-
 https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 しかし、私は当時メインマシンであるWindows（WSL）で主に開発していたため、同期の拡張機能については全く触れていませんでした。昨年末に、開発用にM1チップを搭載したMacbook Proをお迎えしたのですが、開発環境を構築する上で小さな葛藤がありました。小さな問題ですが、設定の方法が分からず解決まで時間がかかったため、備忘録としてまとめます。
@@ -28,7 +27,6 @@ https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 # 何が問題だったのか
 
 VSCodeの設定をしているときにしたツイートです。
-
 https://twitter.com/Ry86163204/status/1339206380914237442?s=20
 
 ツイート内の情報がかなり乏しく、なんのことか伝わりにくいですが、MacBookの環境構築をする際にCPUのアーキテクチャが変わったことでVSCodeの環境も大きく変わりました。
@@ -65,7 +63,6 @@ https://twitter.com/code/status/1338886895867224070
 ## 解決策
 
 公式ドキュメントを眺めていたらStable版とInsiders版で設定同期ができるとのトピックがあり、試したところ上手くいきました。
-
 https://code.visualstudio.com/docs/editor/settings-sync#_syncing-stable-versus-insiders
 
 ### 設定同期機能をオンにする
