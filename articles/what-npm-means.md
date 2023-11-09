@@ -13,13 +13,11 @@ Node.jsにはデフォルトでnpmというパッケージマネージャが付�
 npmはよく「**N**ode **P**ackage **M**anagerの略です」といった説明がされています。しかしそれは本当に正しいのでしょうか。一般的に「Node Package Manager」の頭文字を並べたものという認識がされているなか、先日npmのGitHubリポジトリを見ていたときに興味深い説明を発見したので調べてみました。
 
 こちらがnpmのGitHubリポジトリになります。
-
 https://github.com/npm/cli
 
 npmのリポジトリは長い間[npm/npm](https://github.com/npm/npm)でしたが、2018年にアーカイブされ現在は[npm/cli](https://github.com/npm/cli)へ移動しています。
 
 結論からまとめると**npmとは「npm is not an acronym」を再帰的に表したもの**であり、**「Node Package Manager」の頭文字を表しているものではない**とのことです。
-
 https://twitter.com/npmjs/status/105690425242820608?s=20
 
 これだけ聞いてもあまりピンとこないので、この記事でnpmの主張や技術名の略式にまつわる文化についても掘り下げてみます。
