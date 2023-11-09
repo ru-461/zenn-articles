@@ -15,7 +15,6 @@ Node.js v16系となるバージョンが2021年の4月20日にリリースさ�
 そして今回リリースされた新のLTS、Node.js 16が**AppleSilicon を正式にサポートする最初のLTSバージョン**となります。つまりM1チップを始めとするSoCを搭載したMacBookやiMac上にて**ネイティブ動作するようになった**ということです。これはすごいですね。
 
 AppleSiliconで動作するかどうかを掲載しているサイト[Does it ARM](https://doesitarm.com)上でもv16以降で対応と更新されておりました。
-
 https://doesitarm.com/app/nodejs/
 
 公式サイトでも最新版のタブから、x64とARM64にマルチ対応したインストーラーがmacOSへ提供されるようになりました。マルチビルドを採用しているため、環境に応じてネイティブに動作します。
@@ -25,7 +24,6 @@ https://doesitarm.com/app/nodejs/
 メジャーバージョンが上がったことで**Timers Promises API が安定版に移行**や、**V8 JavaScript エンジンが V8.9.0 へ更新**などと比較的大きな変更も含まれています。
 
 Node.js v16のリリースノート（GitHub）はこちらになります。
-
 https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
 ## さっそくインストールしてみる
@@ -86,7 +84,6 @@ $ node -v
 ### Dockerでさくっと実行環境を作る
 
 Node.jsは公式でDockerイメージを配布しており、DockerHubから習得が可能です。
-
 https://hub.docker.com/_/node/
 
 確認したところNode.js v16のイメージが配布されていたのでDockerコンテナを作成して実行環境を確認します。
