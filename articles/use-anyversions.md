@@ -17,7 +17,6 @@ published: true
 タイトルにもある「anyenv」は、公式が「All in one for env」と謳っている、オールインワンのバージョンマネージャです。今回はそんなオールインワンなツール「anyenv」を紹介します。
 
 anyenvのGitHubリポジトリはこちらになります。
-
 https://github.com/anyenv/anyenv
 
 ## anyenvでインストールできるもの
@@ -330,7 +329,6 @@ rbenv:
 anyenvで管理できるenv系ツールはよくアップデートでバージョンが上がります。複数のenvを使用している場合、アップデートを確認して場合それぞれ個別にアップデートするのは大変です。そこでenv系のバージョンをまとめてアップデートできる便利なプラグインがあるため紹介します。
 
 プラグインのリポジトリはこちらになります。
-
 https://github.com/znz/anyenv-update
 
 ```shell
