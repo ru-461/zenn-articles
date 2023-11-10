@@ -13,7 +13,6 @@ published: true
 
 記事執筆現在、`wsl --list --online`で確認できるディストリビューションリストには表示されていませんが、Microsoft Storeには掲載されております。
 以下のページからUbuntu 22.04 LTSを新規にダウンロードしてWSL2で実行できます。
-
 https://www.microsoft.com/ja-jp/p/ubuntu-2204-lts/9pn20msr04dw?activetab=pivot:overviewtab
 
 新規にインストールすることはもちろん可能なのですが、現在使用しているLTS環境を引き続ぐ形でバージョンをアップグレードすることも可能となります。
@@ -164,7 +163,8 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-各項目の順番が20.04.4と少し異なってはいますが、`VERSION="22.04 (Jammy Jellyfish)"`と記載されていることを確認できれば22.04 LTSへのアップグレードは問題なく完了しております。
+20.04.4と比べた場合各項目の順番がと少し異なっております。
+`VERSION="22.04 (Jammy Jellyfish)"`と記載されていることを確認できればアップグレードは問題なく完了しております。
 
 ## おわりに
 
