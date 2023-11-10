@@ -36,7 +36,6 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 Herokuは各プラットフォーム向けにHeroku CLIというツールを提供しているためこちらを利用します。
 Heroku公式ドキュメントに各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
-
 https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install
 
 ドキュメントに従い以下のコマンドをターミナルで実行。
@@ -75,7 +74,6 @@ $ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
 ### Herokuへログイン
 
 以下のページからHerokuアカウントを登録します。
-
 https://signup.heroku.com/
 
 アカウントの登録ができたらターミナルからログインをしていきます。
@@ -102,7 +100,6 @@ Logging in... done
 ### 必要なファイルの生成
 
 以下のページにVue CLIで構築したアプリをHerokuへデプロイする方法が載っていたため参考にして進めていきます。
-
 https://cli.vuejs.org/guide/deployment.html#heroku
 
 デプロイするのにstatic.jsonというファイルが必要みたいなので、Vueプロジェクトのルートディレクトリに移動してstatic.jsonを作成します。
@@ -166,7 +163,6 @@ $ heroku open
 
 Vueで作成したSPAはビルドする必要があります。
 Heroku上でアプリをビルドするために以下のビルドパックが必要になるため、それぞれ追加します。
-
 https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-nodejs
 
 ```shell
