@@ -31,13 +31,11 @@ Mac上でWindowsを動かすといったことがIntel製CPUを搭載してい�
 ### Preview arm版Windows10の入手
 
 Windows Insider Programに参加することで以下のページからPreview版のビルドを無料でダウンロードできます。
-
 https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewARM64?wa=wsignin1.0
 
 入手したWindowsイメージはVHDXファイルとなっており、Parallels Destopにて選択することで起動させることができます。
 
 ParallelsDesktopは以下のページからダウンロードしてインストールできます。
-
 https://www.parallels.com/jp/products/desktop/trial/
 
 ParallelsDesktopは有料のソフトですが、**無料で14日間のトライアル版を使用できます**。永久ライセンスはバージョンごとに買い切りとなっておりバージョンアップ時に買い直す必要があります。また現在はサブスクリプション形式でのライセンス購入もできるようです。
@@ -59,7 +57,6 @@ Mac上で仮想化したWindows10から見える情報はこのようになっ�
 WSLのインストールは最新のWindows Previewにおいてコマンド1つでインストールが可能になりました。
 
 WSLの公式のドキュメントに日本語で詳しく説明があります。
-
 https://docs.microsoft.com/ja-jp/windows/wsl/install-win10
 
 WSL2を有効にするためには、仮想マシン周りの設定変更やWSL2のデフォルト化などの手順を踏まなければなりませんが、今後ワンライナーにより簡単にWSL2の環境が作れるようになるようです。便利ですね。
@@ -176,7 +173,6 @@ Paralles Desktopでは**設定から「ネスト化された仮想化を有効�
 ![WSL1として設定した様子](/images/try-wsl-insider/image04.png)
 
 WSL1とWSL2の違いは以下のページでまとめられています。
-
 https://docs.microsoft.com/ja-jp/windows/wsl/compare-versions
 
 ## おわりに
