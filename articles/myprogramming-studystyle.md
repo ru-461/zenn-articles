@@ -72,7 +72,6 @@ IT業界では毎日のようにトレンドが激しく変わり、また新し
 目的を明確にして、どのような技術が必要なのか、学習コストはどのくらいかなどを考えて学習することで学習は進めやすくなります。
 
 Web開発を学ぶとき、どのような技術を学習すればいいのかを調べるときはChromeの拡張機能であるWappalyzerがおすすめです。
-
 https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ja
 
 この拡張機能を導入することでWebサイトやWebアプリを構成している技術を分析できます。
