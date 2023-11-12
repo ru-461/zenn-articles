@@ -23,7 +23,7 @@ https://doesitarm.com/app/nodejs/
 
 メジャーバージョンが上がったことで**Timers Promises API が安定版に移行**や、**V8 JavaScript エンジンが V8.9.0 へ更新**などと比較的大きな変更も含まれています。
 
-Node.js v16のリリースノート（GitHub）はこちらになります。
+Node.js v16のリリースノートはこちらになります。
 https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
 ## さっそくインストールしてみる
