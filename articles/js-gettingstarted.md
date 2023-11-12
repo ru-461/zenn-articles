@@ -44,7 +44,7 @@ $ cd <project-name>
 $ npm run serve
 ```
 
-[localhost](http://localhost:8080)で開発サーバが立ち上がります。
+[localhost:8080](http://localhost:8080)で開発サーバが立ち上がります。
 
 ![Vue.jsウェルカムページの画像](/images/js-gettingstarted/image01.png)
 
@@ -74,7 +74,7 @@ $ cd <project-name>
 $ yarn dev
 ```
 
-http://localhost:3000 で開発サーバーが立ち上がります。
+[localhost:3000](http://localhost:3000)で開発サーバーが立ち上がります。
 
 ![Nuxt.js2ウェルカムページの画像](/images/js-gettingstarted/image02.png)
 
@@ -90,7 +90,7 @@ $ yarn install
 $ yarn dev -o
 ```
 
-http://localhost:3000 で開発サーバーが立ち上がります。
+[localhost:3000](http://localhost:3000)で開発サーバーが立ち上がります。
 
 ![Nuxt.js3ウェルカムページの画像](/images/js-gettingstarted/image02_2.png)
 
@@ -122,7 +122,7 @@ $ yarn start
 
 npm、npxでインストールする場合はYarnがインストールされているとデフォルトのパッケージマネージャーとしてYarnを使用するようになります。
 
-http://localhost:3000 で開発サーバーが立ち上がります。
+[localhost:3000](http://localhost:3000)で開発サーバーが立ち上がります。
 
 ![Reactウェルカムページの画像](/images/js-gettingstarted/image03.png)
 
@@ -146,7 +146,7 @@ $ yarn dev
 
 Reactと同じくYarnがインストールされているとデフォルトでYarnが使用されます。
 
-http://localhost:3000 で開発サーバーが立ち上がります。
+[localhost:3000](http://localhost:3000)で開発サーバーが立ち上がります。
 
 ![Next.jsウェルカムページの画像](/images/js-gettingstarted/image04.png)
 
@@ -174,7 +174,7 @@ $ ng serve --open
 ```
 
 `ng serve --open`とすることでデフォルトのブラウザで起動します。
-http://localhost:4200 で開発サーバーが立ち上がります。
+[localhost:4200](http://localhost:4200)で開発サーバーが立ち上がります。
 
 ![Angularウェルカムページの画像](/images/js-gettingstarted/image05.png)
 
@@ -191,7 +191,7 @@ $ npm install
 $ npm run dev
 ```
 
-http://localhost:5000 で開発サーバーが立ち上がります。
+[localhost:5000](http://localhost:5000)で開発サーバーが立ち上がります。
 
 ![Svelteウェルカムページの画像](/images/js-gettingstarted/image06.png)
 
