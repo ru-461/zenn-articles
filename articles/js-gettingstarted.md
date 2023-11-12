@@ -44,7 +44,7 @@ $ cd <project-name>
 $ npm run serve
 ```
 
-http://localhost:8080 で開発サーバが立ち上がります。
+[localhost](http://localhost:8080)で開発サーバが立ち上がります。
 
 ![Vue.jsウェルカムページの画像](/images/js-gettingstarted/image01.png)
 
