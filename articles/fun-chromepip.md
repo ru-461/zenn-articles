@@ -48,7 +48,6 @@ Chromeの標準ではピクチャー イン ピクチャーの有効・無効を
 
 Windows標準の仮想デスクトップに機能を追加していきます。
 これには「SylphyHorn」というユーティリティを使います。無料で使えて、かつ動作が軽いためおすすめです。
-
 https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overviewtab
 
 上記のリンクからインストールできます。
