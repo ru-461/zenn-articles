@@ -88,11 +88,9 @@ Invoke-Expression (&starship init powershell)
 ![WSL2とPowerShellの比較画像](/images/update-starship-in-powershell/image02.png)
 *Scoop経由で最新のバージョンのStarshipがインストールできた*
 
-これでStarshipをScoopで管理するようにできました。Starshipのアップデートがあった際は、`scoop update starship`のコマンドでバージョンが上げられるようになります。
+これでStarshipをScoopで管理するようにできました。Starshipのアップデートがあった際は、`scoop update starship`のコマンドでバージョンアップが可能となります。
 
-## おわりに
-
-今回はStarshipをアップデート、Scoopでのパッケージ管理に切り替えてみました。パッケージマネージャー経由での管理に切り替えたことで、アップデートがより便利になりました。
+今回はStarshipをアップデート、Scoopでのパッケージ管理に切り替えてみました。Scoopをパッケージマネージャー経由での管理に切り替えたことで、アップデートがより便利になりました。
 
 手動でバージョンを上げるより、1つのコマンドで他のツールとまとめてアップデートできるのが便利なのでStarshipを使うときはパッケージマネージャーでの管理をぜひおすすめします。Starshipはクロスプラットフォーム対応しているため、環境が変わってもいつも使っているパッケージマネージャ経由で簡単に導入できるのが、なによりも便利です。
 
