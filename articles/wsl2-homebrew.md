@@ -90,8 +90,8 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 ターミナルに`==> Installation successful!`と表示されれるとインストールが完了です。
 
-しかしまだPATH関連でWarningが表示されており、brewコマンドを使うことができません。
-ターミナルに表示されたNext stepsと公式ドキュメントを参考に手動で初期設定をしていきます。
+しかしまだWarningが表示されており、brewコマンドを使うことができません。
+引き続きターミナルに表示されたNext stepsと公式ドキュメントを参考に初期設定を進めます。
 
 ## Homebrewの初期設定
 
