@@ -6,3 +6,7 @@ node_modules
 
 # textlint
 .textlintrc
+.textlintrc.js
+.textlintrc.json
+.textlintrc.yml
+.textlintrc.yaml
