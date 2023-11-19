@@ -15,7 +15,7 @@ published: true
 - Windows 10（20H2）
 - WSL2（Ubuntu 20.04.1 LTS）
 
-## Microsoft StoreからWSL2へUbuntuをインストール
+## WSL2へUbuntuをインストール
 
 ![Microsoft Store Ubuntu 20.04のインストールページの画像](/images/wsl2-locale-jp/image01.png)
 *インストールができたら「起動」をクリック*
@@ -46,7 +46,7 @@ $ sudo apt update && sudo apt upgrade
 
 まずは、使用可能パッケージのリスト更新とアップグレードを先に行います。
 
-### 使用可能なロケールを確認する
+### 使用可能なロケールの確認
 
 ```shell
 $ locale -a
@@ -119,7 +119,7 @@ $ date
 
 これでWSL2上にて日本時間が使用できるようになりました。
 
-### コマンドのマニュアル表示も日本語にする
+### コマンドのマニュアル表示を日本語化
 
 ```shell
 $ sudo apt install manpages-ja manpages-ja-dev -y
