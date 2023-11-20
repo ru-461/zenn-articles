@@ -49,7 +49,7 @@ Notionにウィジェットを埋め込むために外部サービスを使う�
 
 ![使い方説明の画像](/images/notion-wedgets/image03.png)
 
-「Try in your page！」の中にあるコードをNotionに埋め込んでみてください。
+「Try in your page」の中にあるコードをNotionに埋め込んでみてください。
 
 自動的にウィジェットに変換されてサンプルのウィジェットが埋め込まれます。
 ![ウィジットをNotionに埋め込む様子](https://i.gyazo.com/1db3f598a0cbd98d2cd7a2a38a55db28.gif)
