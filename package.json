@@ -7,8 +7,8 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "lint": "textlint article/",
-    "lint:fix": "textlint --fix",
+    "lint": "textlint articles/",
+    "lint:fix": "textlint --fix articles/",
     "preview": "zenn preview"
   },
   "dependencies": {
