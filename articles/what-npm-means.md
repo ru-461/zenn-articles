@@ -98,7 +98,7 @@ PHPはPHP: Hypertext Preprocessorを再帰的に略したものという説明�
 再帰的頭字語の有名なものとしてYAMLやGNU、LAMEがあります。
 
 - YAML（**Y**AML **A**in't a **M**arkup **L**anguage）- YAMLはマークアップ言語じゃないの意
-- GNU（**G**NU's **N**ot **U**NIX！）- GNUはUNIXではないの意
+- GNU（**G**NU's **N**ot **U**NIX）- GNUはUNIXではないの意
 - LAME（**L**AME **A**in't an **M**p3 **E**ncoder）- LAMEはMP3のエンコーダーではないの意
 
 上に挙げたもののように言葉遊びにユーモアがありつつ皮肉がこめられているものが多くあります。再帰的に略するのは日本ではあまり馴染みないように感じますが、調べてみるとたくさんあり面白いですね。
