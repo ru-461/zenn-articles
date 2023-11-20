@@ -12,7 +12,7 @@ published: true
 
 ## 検索するときに効率化できれば生産性が上がるのでは
 
-Google検索を頻繁に行う場合、テンポよく調べたい情報を手に入れられることが重要だと感じます。ショートカットキーを使って作業を効率化するように、検索する際にもマウスやトラックパッドを使わずに少ない移動だけで検索を行えるのかを追求することは生産性が上げる上で重要だと感じます。Chromeには拡張機能と呼ばれるものが[Chrome ウェブストア](https://chrome.google.com/webstore/category/extensions)上にて公開されています。その中で検索エンジンを使ってより効率的に作業できるものがないか調べたところ以下の拡張機能が良さげだったのでご紹介します。
+Google検索を頻繁に行う場合、テンポよく調べたい情報を手に入れられることが重要だと感じます。ショートカットキーを使って作業を効率化するように、検索する際にもマウスやトラックパッドを使わずに少ない移動だけで検索を行えるのかを追求することは生産性が上げる上で重要だと感じます。Chromeには拡張機能と呼ばれるものが[Chromeウェブストア](https://chrome.google.com/webstore/category/extensions)上にて公開されています。その中で検索エンジンを使ってより効率的に作業できるものがないか調べたところ以下の拡張機能が良さげだったのでご紹介します。
 
 ## 新規タブページをGoogleのページで開きたい
 
@@ -21,7 +21,7 @@ Chromeを初期設定で使うと、新規タブを開いたとき以下のよ�
 ![Chromeのデフォルトトップページの画像](/images/chrome-search-efficiency/image01.png)
 *Chromeインストール直後の画像です*
 
-Chromeを使う中で、このページではなくGoogleのトップページを使いたいと感じたため、このページを [Google トップページ](https://www.google.com)に置き換えました。今回、使用した拡張機能は以下になります。
+Chromeを使う中で、このページではなくGoogleのトップページを使いたいと感じたため、このページを [Googleトップページ](https://www.google.com)に置き換えました。今回、使用した拡張機能は以下になります。
 
 ### New Tab Redirect
 
@@ -56,7 +56,7 @@ Redirect URLのフォームに新規タブを開いたときに開きたいペ�
 
 ## Google検索キーボードショートカット
 
-![Google 検索キーボードショートカットのストア画像](/images/chrome-search-efficiency/image07.png)
+![Google検索キーボードショートカットのストア画像](/images/chrome-search-efficiency/image07.png)
 
 以下のリンクからインストールできます。
 
@@ -82,7 +82,7 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 `J / K`でリンクフォーカスの上下ができる他にも、キーの組み合わせで画像や動画などのコンテンツも検索できるみたいです。これはとても便利ですね。
 この拡張機能をインストールするとすぐにGoogle検索の結果画面で使用可能になります。
 
-![Google 検索キーボードショートカット導入後の様子](/images/chrome-search-efficiency/image08.png)
+![Google検索キーボードショートカット導入後の様子](/images/chrome-search-efficiency/image08.png)
 *この拡張機能を導入したことで検索直後からフォーカスがあたりました*
 
 すぐに`K`を押すと..。
