@@ -21,7 +21,7 @@ Notionを自分専用のWikiのように活用し、一箇所で必要な情報�
 
 私は、ローカルのエディタとしてMicrosoftが開発しているVisual Studio Code（VSCode）というエディタを愛用しています。隣には、いつもNotionを開いて情報を見ながらのコーディングや、記事の執筆をする機会が多いです。これだと2つのアプリを行き来することになるので、作業が多くなるほどウィンドウの切り替えや視線の移動が多くなり大変に感じることが多くありました。
 
-## 「VSCode Notion」とは何者か？
+## 「VSCode Notion」とは何者か
 
 VSCodeの拡張機能として提供されており、VSCodeに導入して使用するものになります。
 https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
