@@ -6,7 +6,7 @@ topics: ["wsl2", "yarn", "nodejs","npm"]
 published: true
 ---
 
-## Yarnとは？
+## Yarnとは
 
 YarnとはJavaScript用のパッケージマネージャーです。
 
@@ -23,7 +23,7 @@ Yarnはnpmが問題としていた部分を抑えるように設計され、登�
 JavaScript用パッケージマネージャーについて詳しく解説してくれている記事がありました。
 https://zenn.dev/hibikine/articles/27621a7f95e761
 
-優良な解説記事ありがとうございます！
+丁寧な解説記事ありがとうございます。
 
 今回はWSL2（Windows Sub System for Linux 2）の環境にNode.jsとYarnを導入して動かすところまで行います。
 
