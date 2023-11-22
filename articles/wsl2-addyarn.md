@@ -10,7 +10,7 @@ published: true
 
 YarnとはJavaScript用のパッケージマネージャーです。
 
-Node.jsをインストールすると標準で[npm](https://www.npmjs.com)というパッケージマネージャーが付属します。
+Node.jsにはデフォルトで[npm](https://www.npmjs.com)と呼ばれるパッケージマネージャーが付属します。
 パッケージマネージャとしてはnpmが有名ですが、他にもパッケージマネージャーはいくつか存在します。
 その中の１つにFaceBook社が開発したYarnというパッケージマネージャーがあります。
 
