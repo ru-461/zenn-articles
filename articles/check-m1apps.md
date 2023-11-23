@@ -26,7 +26,6 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 
 ***プロセスごとにアーキテクチャを確認できる***
 これで1つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこでiMobie M1 App Checkerというツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
-
 https://www.imobie.com/m1-app-checker/
 
 公式サイトから「Free Download」をクリックしてインストールできます。パッケージマネージャーとしてHomebrewを導入している場合は、以下のコマンドでインストールできます。
