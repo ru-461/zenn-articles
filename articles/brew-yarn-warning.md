@@ -86,7 +86,7 @@ To list all files that would be deleted:
   brew link --overwrite --dry-run yarn
 ```
 
-どうやらすでにYarnが/opt/homebrew/bin配下に存在しておりシンボリックリンクに失敗しているようです。
+どうやらすでにYarnが/opt/homebrew/bin配下に存在しておりシンボリックリンクの作成に失敗しているようです。
 
 ```shell
 $ rm `/opt/homebrew/bin/yarn`
