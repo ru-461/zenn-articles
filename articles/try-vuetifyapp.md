@@ -58,8 +58,8 @@ Vue CLI v4.5.9
 🎉  Successfully created project counter-app.
 👉  Get started with the following commands:
 
- $ cd counter-app
- $ npm run serve
+$ cd counter-app
+$ npm run serve
 ```
 
 このような表示がでればプロジェクトの作成に成功しています。
