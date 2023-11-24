@@ -292,9 +292,9 @@ export default {
 Vuetifyの基本として、template内では一番親要素に`<v-app>`メインとなるコンテンツに`<v-main>`を使います。この中にページ固有のコンテンツを配置していきます。Vuetifyにはテキストエリアコンポーネントがあります。ドキュメントは[こちら](https://vuetifyjs.com/en/components/textareas/#usage)になります。Vuetifyのドキュメントにはサンプルのコードに加えて、Prop（プロパティ）まとめられているので便利です。それでは先程の`<textarea>`をテキストエリアコンポーネントで置き換えていきます。
 
 ```vue:src/App.vue
- <v-textarea
-      v-model.trim="tweet">
-  </v-textarea>
+<v-textarea
+  v-model.trim="tweet">
+</v-textarea>
 ```
 
 このようにして保存するとテキストエリアが画面全体に広がり、少しおしゃれなテキストエリアになります。コンポーネントを置き換えても先程のテキストエリアと同じように動作するのがわかります。ここにProp（プロパティ）を追加してテキストエリアを拡張していきます。
@@ -325,10 +325,10 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 ```vue:src/App.vue
 <style>
-#app {
-  text-align: center;
-  background-color: #00aced;
-}
+  #app {
+    text-align: center;
+    background-color: #00aced;
+  }
 </style>
 ```
 
