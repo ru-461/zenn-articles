@@ -56,14 +56,14 @@ https://www.imobie.jp/m1-app-checker/?ref=m1
 
 サイトの中段にリストがあり検索ボックスからアプリのAppleSilicon対応状況を調べることができます。ただ全体的にアプリの情報が他のサイトに比べて乏しく、検索しても見つからないアプリもあります。そこで以下で紹介するサイトも合わせて参照することをおすすめします。アプリが見つからない場合はリクエストもできるようです。
 
-### Does it ARM？
+### Does it ARM
 
 ![Does it ARM?のページ画像](/images/check-m1apps/image05.png)
 https://doesitarm.com/
 
 アプリ名から対応状況を検索できるサイトになります。アプリごとに詳細を見ることができ、対応したバージョンやリリースノートへのリンクがまとめられています。また目的のアプリがAppleSiliconにネイティブ対応していない場合、対応したときに**メールにて更新情報を受け取る機能**もあり、いち早く対応状況を知りたいときに活用できそうです。
 
-### Is Apple silicon ready？
+### Is Apple silicon ready
 
 ![Is Apple silicon ready？のページ画像](/images/check-m1apps/image06.png)
 https://isapplesiliconready.com/jp
