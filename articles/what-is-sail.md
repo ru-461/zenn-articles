@@ -47,7 +47,6 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 本記事内では上記のエイリアスを事前に設定している状態で進めますので予めご了承ください。
 
 LaravelのGitHubリポジトリ上では以下のソースに該当します。
-
 https://github.com/laravel/sail/blob/1.x/bin/sail
 
 ### ファイルの実行確認
@@ -97,7 +96,7 @@ fi
 
 コマンドの存在を判定してそれぞれ変数に代入しているのですが、全く同じ変数に代入しているのが少し気になりました。
 
-`docker compose`と`docker-compose`一見同じコマンドのように見えますが、これはれっきとした別コマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
+`docker compose`と`docker-compose`は一見同じコマンドのように見えますが、これはれっきとした別コマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
 
 詳しくは以下のドキュメントにまとめられております。
 
