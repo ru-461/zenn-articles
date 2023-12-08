@@ -69,7 +69,7 @@ Voltaを経由でインストールしたNode.js、ツールチェインは`volt
 ```shell
 volta list
 ⚡️ Currently active tools:
-    Node: v14.17.3 (default)
+  Node: v14.17.3 (default)
 ```
 
 上の例だと**Node.js v14.17.3**がデフォルトとして使用されるという意味になります。また同じようにnpmやYarnといったパッケージマネージャのインストール、デフォルト化もできます。
