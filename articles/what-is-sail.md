@@ -99,7 +99,6 @@ fi
 `docker compose`と`docker-compose`は一見同じコマンドのように見えますが、これはれっきとした別コマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
 
 詳しくは以下のドキュメントにまとめられております。
-
 https://docs.docker.jp/compose/index.html#compose-v2-docker-compose
 
 コマンドの確認をして適切なコマンドを変数に割り当てており、`DOCKER_COMPOSE`変数をベースに引数を追加してDocker Composeが実行されます。
