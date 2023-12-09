@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Zennには[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるコマンドラインインタフェース（CLI）があり、記事の管理をGitHub、執筆をローカルのエディタを使うといった運用が可能となっています。
+Zennには[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ばれるコマンドラインインタフェース（CLI）があり、記事の管理をGitHubで行い、執筆をローカルのエディタで行うといった運用が可能となっています。
 
 Zennの執筆環境周りについての説明は以下にまとめられています。
 https://zenn.dev/zenn/articles/editor-guide
@@ -31,7 +31,7 @@ GitHubのコミットメッセージなどで目にすることが多いです�
 
 ## 個人的な運用について
 
-コミットメッセージの先頭にプレフィックスをつけワンライン（1行）形式にするのが個人的に運用しやすいと感じました。
+コミットメッセージの先頭にプレフィックスを付与し修正内容の要点をメッセージとして添える短形式にするのが個人的に運用しやすいと感じました。
 
 プレフィックスについては以下の記事を参考にしています。
 https://qiita.com/numanomanu/items/45dd285b286a1f7280ed
