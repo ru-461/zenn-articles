@@ -127,13 +127,17 @@ NerdFontを追加した「HackGenNerd Console」というフォントがある�
 
 Starshipはデフォルトでもアイコンフォントの表示やカラフルな表示に対応しており便利なのですが、設定ファイルを作成して使用することでより細かい設定が可能となります。
 
+下記のコマンドでStarshipの設定ファイルを作成します。
+
 ```shell
 $ starship config
 ```
 
-とすることで~/.configの下にstarship.tomlという設定ファイルが作成され開かれます。
+設定ファイルの保存先はデフォルトで~/.config/starship.tomlとなります。
 
-設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config)を見てみてください。上記の画像では以下の設定をしています。
+Starship設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config)を見てみてください。
+
+以下に記事内の画像にて使用している設定を記載します。
 
 ```toml:starship.toml
 # 空行追加
@@ -142,10 +146,10 @@ add_newline = true
 # タイムアウト時間
 scan_timeout = 10
 
-# 記号の設定
+# シンボル設定
 [character]
-success_symbol = "[▶](bold green)" # コマンド成功時
-error_symbol = "[▶](bold red)"    # コマンド失敗時
+success_symbol = "[▶](bold green)"  # コマンド成功時
+error_symbol   = "[▶](bold red)"    # コマンド失敗時
 ```
 
 ## exaを導入する
