@@ -74,8 +74,16 @@ $ brew install starship
 ### 初期設定：Starshipの有効化
 
 Starshipを有効にするたの処理をシェルプロファイルへ記述する必要があります。
+現在使用しているシェルを確認するには以下のコマンドで確認可能です。
 
-シェルにZshを使用している場合は以下のようにします。
+```shell
+$ echo $SHELL
+
+# Zshを使用している場合
+/bin/zsh
+```
+
+Zshを使用している場合は以下のようにします。
 
 ```shell:zsh
 # .zshrcの末尾に追記
@@ -95,7 +103,7 @@ echo eval "$(starship init bash)" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-シェルの再読み込みをすることでStarshipが有効になりプロンプトが以下のような表示に変わります。
+シェルの再読み込みをすることでStarshipが有効になりプロンプトの表示が変化します。
 
 ```shell
 # StarShip導入後のプロンプト表示
@@ -103,7 +111,7 @@ source ~/.bashrc
 ```
 
 :::message
-`eval "$(starship init zsh)"`は必ずファイルの末尾に記述してある必要があります。シェルを再起動しても有効にならない場合は記述位置を見直して見てください。
+`eval "$(starship init zsh)"`・`eval "$(starship init bash)"`は必ず**シェルプロファイルの末尾**に記述してある必要があります。シェルを再起動しても有効にならない場合は記述位置を見直してみてください。
 :::
 
 ### 初期設定：フォントの導入
