@@ -174,47 +174,45 @@ WSL2でUbuntuを使用している場合であってもHomebrewを導入する�
 
 Rustのビルドシステム兼パッケージマネージャーのCargoを使用してexaを導入する方法です。
 Cargoを使用するためにRustの環境を作る必要があるのですが、今回はrustupというツールを使い簡単に始めます。
-https://github.com/rust-lang/rustup/blob/master/README.md
+https://www.rust-lang.org/ja/tools/install
 
-rustupとはRustの公式ドキュメント内でも推奨されているツールで、ワンライナーでRust環境構築を簡単に行えるスグレモノです。以下のワンライナーを実行してRustをインストールできます。
+rustupとはRustの公式ドキュメント内でも推奨されているツールで、簡単にRustのインストールと開発環境のセットアップを行ってくれる便利なツールです。
 
 ```shell
 # rutupをインストール
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-インストールの途中で質問されたらエンターを押して続行します。デフォルトで1の（Proceed with installation）が選択されます。そのままでも問題ありませんが、カスタムインストールを行う場合は適宜選択を変えてください。
+インストール中にいくつかの質問が表示されますが、基本的にはそのままで問題ありません。
+カスタマイズする場合は選択を変更して適宜設定してください。
+
 ターミナル上に`Rust is installed now. Great!`と表示されればインストールは成功です。
-この状態でシェルにリログインすると自動的にパスが通ります。すぐにパスを通して使いたい場合は、sourceコマンドを使い以下のようにすると自動的にパスを通してくれます。
+次回ターミナル起動時に自動的にパスが通ります。すぐに使用したい場合は、以下のようにすると自動的にパスを通してくれます。
 
 ```shell
 # rustupが用意してくれているスクリプトを実行してパスを通す
 source $HOME/.cargo/env
 ```
 
-インストールが終わったらrustupのバージョンを確認してみます。パスが無事に通っているとcargoコマンドが使用できるようになっています。
+インストールが終わったらバージョンを確認してみます。
 以下のコマンドでバージョンを確認し、アップデートがあれば最新の状態にアップデートしておきます。
 
 ```shell
-# rustupのバージョンを確認 (Vは大文字なので注意)
-$ rustup -V
+# rustupのバージョンを確認
+$ rustup --version
 
-# rustupを最新にアップデート
-$ rustup update
-
-# rustup自体を最新にアップデート
+# rustupをアップデート
 $ rustup self update
 ```
 
-パスが通るとパッケージ管理ツールのCargoが使用できるようになり、Cargo経由でexaを導入できます。
+ここまでできたらCargoが使用できるため、以下のコマンドでezaをインストールできます。
 
 ```shell
-# exaのインストール
-$ cargo install exa
+$ cargo install eza
 ```
 
 :::message
-Ubuntuなどの環境によっては`error: linker cc not found`となりexaのビルドに失敗する場合があります。これはgccとその依存関係がないことによるエラーのため`apt install build-essential`で必要なコンパイラをインストールした上で再試行してみてください。
+Ubuntuなどの環境によっては`error: linker cc not found`と表示されビルドに失敗する場合があります。これはgccとその依存関係がないことによるエラーのため事前に`apt install build-essential`で必要なコマンドをインストールした上で再試行してみてください。
 :::
 
 # exaを使ってみる
