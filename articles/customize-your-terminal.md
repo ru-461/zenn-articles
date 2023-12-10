@@ -60,12 +60,12 @@ https://starship.rs/ja-jp/
 WSL2でUbuntuなどを利用している場合は以下のスクリプトを使ったインストールが簡単です。
 
 ```shell
-$ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+$ curl -sS https://starship.rs/install.sh | sh
 ```
 
-`✓ Starship installed `表示されればインストールは完了です。またこのやり方でインストールした場合、Starshipの更新も同じコマンドで行います。アップデートする際は設定ファイルを変えることなく環境を引き続きながらバージョンを置き換えてくれます。
+`✓ Starship installed `と表示されればインストールは完了です。またこのやり方でインストールした場合、Starshipの更新も同じコマンドで行います。アップデートする際は設定ファイルを変えることなく環境を引き続きながらバージョンを置き換えてくれます。
 
-またMacなどでパッケージ管理にHomebrewを使っている場合は以下のコマンドでもインストールできます。
+またMacなどでパッケージ管理に[Homebrew](https://brew.sh/ja/)を使っている場合は以下のコマンドでもインストールできます。
 
 ```shell
 $ brew install starship
