@@ -266,7 +266,7 @@ lsをベースに、ファイルの種類ごとにアイコンを表示するオ
 
 ## おわりに
 
-今回は、**おしゃれなターミナル**というテーマでターミナルとシェルのカスタマイズをしてみました。ターミナル環境をカスタマイズすることで気分転換にもなりターミナルを開くたびにモチベーションが高まるように感じます。また作業環境にこだわるという点で生産性が上がるのを体感することが出来ました。
+今回は、**おしゃれなターミナル**というテーマでターミナルとシェルのカスタマイズをしてみました。ターミナル環境をカスタマイズすることで気分転換にもなりターミナルを開くたびに作業モチベーションが高まるように感じます。
 
 Rust製のツールを初めて使いましたが、互換性が高かったり、安全かつ高速だったりとメリットが多く更に調べて取り入れていきたいと感じました。この記事をきっかけに、モダンな技術で柔軟にカスタマイズできるターミナルを簡単に構築できることに少しでも魅力を感じてもらえたら幸いです。
 
@@ -276,5 +276,4 @@ Rust製のツールを初めて使いましたが、互換性が高かったり�
 
 - [とってもかわいいプロンプトstarshipで2021年宇宙の旅に出よう](https://zenn.dev/aoi_avant/articles/9ac01d7857add9)
 - [The Rust Programming Language 日本語版 - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/title-page.html)
-- [lsよりもexaじゃん! Rust製Linuxコマンド 【exa】 | TomboMemo](https://tombomemo.com/exa-install-settings)
 - ["error: linker `cc` not found" on Ubuntu 18.04 LTS, using X11 · Issue #1440 · alacritty/alacritty](https://github.com/alacritty/alacritty/issues/1440)
