@@ -165,10 +165,10 @@ ezaコマンドはインストール方法が多数ありディストリビュ�
 パッケージ管理にHomebrewを使用している場合は以下のコマンドでインストールできます。
 
 ```shell
-$ brew install exa
+$ brew install eza
 ```
 
-WSL2でUbuntuを使用している場合であってもHomebrewを導入することで同じようにインストールできます。私はWSL2においてHomebrewを導入した上でexaコマンドを導入しています。WSL2上のUbuntu20.04 LTSにHomebrewを導入するやり方は過去に[こちらの記事](https://zenn.dev/ryuu/articles/wsl2-homebrew)にて紹介しています。
+WSL2でUbuntuを使用している場合であってもHomebrewを導入することで同じようにインストールできます。私はWSL2においてHomebrewを導入した上でコマンドを導入しています。WSL2上のUbuntu20.04 LTSにHomebrewを導入するやり方は過去に[こちらの記事](https://zenn.dev/ryuu/articles/wsl2-homebrew)にて紹介していますので参考にしてください。
 
 ### Cargoを使用したインストール
 
