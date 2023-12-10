@@ -1,8 +1,8 @@
 ---
-title: "Rust製ツールでおしゃれなターミナル環境を作る【Starship ✕ exa】"
+title: "Rust製ツールでおしゃれなターミナル環境を作る【Starship ✕ eza】"
 emoji: "✨"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["starship", "exa", "shell", "rust", "ターミナル"]
+topics: ["starship", "eza", "shell", "rust", "ターミナル"]
 published: true
 ---
 
@@ -16,10 +16,10 @@ Rust製のコマンドやツールなどが昨今注目されており、GitHub�
 
 今回作成したものがこちらです。
 
-![starship x exa で作成したターミナル画像](/images/customize-your-terminal/image01.png)
-*プロンプトはStarship、アイコンツリー表示にexaを使用*
+![starship x eza で作成したターミナル画像](/images/customize-your-terminal/image01.png)
+*プロンプトはStarship、アイコンツリー表示にezaを使用*
 
-Starshipで作業ブランチ名とNode.jsのバージョンを表示し、exaを使ってアイコン付きのツリー表示でReactのプロジェクトを開いた様子です。カラフルな表示とアイコンフォントで視認性を上げつつ、全体的にモダンな雰囲気になりました。
+Starshipで作業ブランチ名とNode.jsのバージョンを表示し、ezaを使ってアイコン付きのツリー表示でReactのプロジェクトを開いた様子です。カラフルな表示とアイコンフォントで視認性を上げつつ、全体的にモダンな雰囲気になりました。
 
 またターミナルのテーマにはDraculaを使用しています。今回使用するStarshipと色合いが似ており、テーマと合わせることで全体的に雰囲気がおしゃれになります。DraculaはWindows TerminalやiTerm2など多くのターミナルツールに対応しています。
 https://draculatheme.com/
@@ -175,7 +175,7 @@ WSL2でUbuntuを使用している場合であってもHomebrewを導入する�
 
 ### Cargoを使用したインストール
 
-Rustのビルドシステム兼パッケージマネージャーのCargoを使用してexaを導入する方法です。
+Rustのビルドシステム兼パッケージマネージャーのCargoを使用してezaを導入する方法です。
 Cargoを使用するためにRustの環境を作る必要があるのですが、今回はrustupというツールを使い簡単に始めます。
 https://www.rust-lang.org/ja/tools/install
 
@@ -235,7 +235,7 @@ ezaに続けてオプションを指定するのですが、オプションが�
 ## lsをezaに置き換える
 
 `eza`は`ls`と同じように使用できると聞いてピンときた人も多いのではないでしょうか。
-**exaはエイリアスと組み合わせることで本領を発揮**します。
+**ezaはエイリアスと組み合わせることで本領を発揮**します。
 
 エイリアスはコマンド短縮形または代替形のコマンドを定義できる機能です。シェルプロファイルに記載することで長いコマンドや複雑なコマンドをひとまとめにして別のコマンドを割りてたりできるようになります。
 
