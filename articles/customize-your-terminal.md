@@ -86,20 +86,20 @@ $ echo $SHELL
 Zshを使用している場合は以下のようにします。
 
 ```shell:zsh
-# .zshrcの末尾に追記
+# シェルプロファイル（.zshrc）の末尾に追記
 echo eval "$(starship init zsh)" >> ~/.zshrc
 
-# シェルの再読み込み
+# シェルプロファイルの再読み込み
 source ~/.zshrc
 ```
 
 Bashを使用している場合は以下のようになります。
 
 ```shell:bash
-# .bashrcの末尾に追記
+# シェルプロファイル（.bashrc）の末尾に追記
 echo eval "$(starship init bash)" >> ~/.bashrc
 
-# シェルの再読み込み
+# シェルプロファイルの再読み込み
 source ~/.bashrc
 ```
 
