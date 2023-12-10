@@ -232,42 +232,37 @@ lsコマンドの代わりにezaを使用することで全体的に文字をカ
 またezaはオプションがかなり多く、オプションを組み合わせて柔軟な表示ができのも魅力です。
 ezaに続けてオプションを指定するのですが、オプションが覚えきれないくらい多いので詳しくは[Command-line options](https://github.com/eza-community/eza?tab=readme-ov-file#command-line-options)を参考にしてみてください。
 
-## エイリアス設定でさらにexaを活用する
+## lsをezaに置き換える
 
-lsコマンドと同じように使えると聞いてピンときた人も多いのではないでしょうか。exaはエイリアスと組み合わせることで本領を発揮します。
-前述したとおりexaはオプションがとても多く覚えて毎回入力するのは大変なので、lsコマンドに対してエイリアスを設定することでlsコマンドと同じような感覚で使用できるようになります。
+`eza`は`ls`と同じように使用できると聞いてピンときた人も多いのではないでしょうか。
+**exaはエイリアスと組み合わせることで本領を発揮**します。
 
-私はlsコマンドと同じような使い方を保ちながらexaの恩恵を受けるために以下のようなエイリアスを設定しています。
+エイリアスはコマンド短縮形または代替形のコマンドを定義できる機能です。シェルプロファイルに記載することで長いコマンドや複雑なコマンドをひとまとめにして別のコマンドを割りてたりできるようになります。
+
+`eza`のオプションは前述した通りとても多く、組み合わせると長くなることが多いのでよく使用するものをひとまとめにしてエイリアス化したほうが便利に使用できます。
+
+私は下記のようなエイリアスをシェルプロファイルに登録して使用しています。
 
 ```shell:.zshrc
-if [[ $(command -v exa) ]]; then
-  alias e='exa --icons --git'
-  alias l=e
-  alias ls=e
-  alias ea='exa -a --icons --git'
-  alias la=ea
-  alias ee='exa -aahl --icons --git'
-  alias ll=ee
-  alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
-  alias lt=et
-  alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
-  alias lta=eta
-  alias l='clear && ls'
-fi
+alias ei="eza --icons --git"
+alias ea="eza -a --icons --git"
+alias ee="eza -aahl --icons --git"
+alias et="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
+alias eta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
+alias ls=ei
+alias la=ea
+alias ll=ee
+alias lt=et
+alias lta=eta
+alias l="clear && ls"
 ```
 
-内容としてはexaコマンドがインストールされている環境でのみ有効になるエイリアスとしています。
+上記のように設定することで`ls`を実行するとカスタマイズされた`eza`コマンドが実行されカラフルにファイルが表示されるようになります。
 
-lsをベースに、ファイルの種類ごとにアイコンを表示するオプション`--icons`を付けてエイリアスにしています。また`--git`オプションを付与することでGitのファイル管理ステータスもリストに反映してくれるようになります。
+lsをベースに、ファイルの種類ごとにアイコンを表示するオプション`--icons`を付与したものをエイリアスとして登録しています。また`--git`オプションを付与することでGitのファイル管理ステータスもリストに反映してくれるようになります。
 
-またコマンドに`t`を混ぜることでツリー表示できるようにしています。
-exaでのファイルツリー表示でもアイコンを合わせて表示するためにオプションを組み合わせています。ここまでくるとオプションがかなり長くなってしまいます。
-オプションが長くなる問題の解決策としてエイリアスを活用し`ls`の上位互換としての運用がしやすいようにカスタマイズしております。
-
-エイリアスの設定例としてはこちらのサイトを参考にカスタマイズさせていだたきました。わかりやすい解説ありがとうございます。
-https://tombomemo.com/exa-install-settings/
-
-exaはオプションを組みわせることで柔軟なファイル表示ができるので、各々使いやすいようにエイリアスを作成してみてください。
+先程の例は、あくまで私の設定になりすので、各自自分の使いやすいように設定してみてください。
+使用可能なオプションについては[Command-line options](https://github.com/eza-community/eza?tab=readme-ov-file#command-line-options)にわかりやすくまとめられています。きっと気になるオプションがあるはずです。
 
 ## おわりに
 
