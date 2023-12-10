@@ -28,16 +28,17 @@ https://draculatheme.com/
 
 今回は以下の環境、バージョンにてそれぞれターミナルを構築しました。
 
-[Windows]
+---
 
-- Windows Terminalバージョン: 1.7.1033.0
+[Windows]
+- Windows Terminal 1.18.3181.0
 - WSL2（Ubuntu 20.04 LTS）
-- Zsh 1.56.0
+- zsh 5.9
 
 [Mac]
-- iTerm2 Build 3.4.8
-- macOS BigSurバージョン11.3
-- Zsh 1.56.0
+- iTerm2 Build 3.4.22
+- macOS Sonoma 14.1.1
+- zsh 5.9
 
 ---
 
