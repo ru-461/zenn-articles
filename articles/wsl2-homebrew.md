@@ -77,7 +77,7 @@ $ sudo apt-get install build-essential curl file git
 インストールに使用するワンライナーは今後変更されることも予測されるのでその都度公式ページから最新の情報を参照するようにしてください。
 :::
 
-WSL2のターミナル上で**一般ユーザーに切り替えたうえで実行します。**
+WSL2のターミナル上で**一般ユーザーに切り替えてから下記を実行します。**
 
 ```shell
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
