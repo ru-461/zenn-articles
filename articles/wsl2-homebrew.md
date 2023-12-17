@@ -34,8 +34,7 @@ https://brew.sh/ja/
 
 ## 環境
 
-- CPU Core™ i5-9400F（x86_64）
-- Windows10バージョン20H2
+- Windows 10（20H2）
 - WSL2（Ubuntu 20.04 LTS）
 
 ## Homebrewのインストール
