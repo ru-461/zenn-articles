@@ -16,7 +16,7 @@ Windowsの場合はプログラミング言語やIDEもインストーラーを�
 
 ### Windowsにおけるパッケージマネージャー
 
-Macには[Homebrew](https://brew.sh/index_ja)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
+Macには[Homebrew](https://brew.sh/ja/)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
 
 今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
 
