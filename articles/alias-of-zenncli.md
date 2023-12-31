@@ -95,7 +95,7 @@ $ npx zenn preview
 この機能を簡単に呼び出すため、`zennpr`というエイリアスを設定しています。エイリアスを使うことで、コマンド`npx zenn preview`を簡略化でき時短に繋がります。
 
 ```shell:.zshrc
-# 記事と本のプレビュー
+# 記事・本のプレビュー
 alias zennpr='zenn && npx zenn preview --open'
 ```
 
