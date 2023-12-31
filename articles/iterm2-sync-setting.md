@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
->[iTerm2](https://iterm2.com)使ってますか？
+「突然ですが [iTerm2](https://iterm2.com)使ってますか」
 
 iTerm2とはmacOSで使用できるターミナルアプリです。エンジニア界隈では、かなり有名なので現在使用している人でも多いのではないしょうか。
 
