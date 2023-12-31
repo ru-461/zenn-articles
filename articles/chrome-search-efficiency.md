@@ -97,7 +97,7 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 
 1. Chromeを起動
 2. `Ctrl`＋`T`で新規タブを開く
-3. 検索したいキーワードをタイピング
+3. 検索キーワードをタイピング
 4. `J / K`でフォーカスを上下に
 5. `Enter`でページを開く
 
