@@ -61,7 +61,7 @@ $ sudo apt-get install build-essential curl file git
 ```
 
 :::message
-build-essentialとは開発によく使用されるビルドパッケージをまとめてイントールできるものです
+build-essentialとは開発によく使用されるビルドパッケージをまとめてイントールできるものです。
 :::
 
 ### インストールスクリプトの実行
