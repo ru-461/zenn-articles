@@ -10,7 +10,7 @@ published: true
 
 [前回の記事](https://zenn.dev/ryuu/articles/brew-yarn-warning)に続きHomebrew関連の記事になります。
 
-最近、WindowsのWSL2とM1 Macbookの環境を行き来することが多く、それぞれの環境でパッケージマネージャーを使いパッケージの依存関係を管理していました。WSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt) 、Macでは[3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0)にて最近M1チップに対応した[Homebrew](https://github.com/Homebrew/brew)というパッケージマネージャーをそれぞれ使用しています。
+最近、WindowsのWSL2とM1 Macbookの環境を行き来することが多く、それぞれの環境でパッケージマネージャーを使いパッケージの依存関係を管理していました。WSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt) 、Macでは[3.0.0](https://brew.sh/2021/02/05/homebrew-3.0.0)にて最近M1チップに対応した[Homebrew](https://brew.sh/ja/)というパッケージマネージャーをそれぞれ使用しています。
 
 それぞれのパッケージマネージャで使用するコマンドが異なるため、環境が変わったときにコマンドを暗記していても瞬間的に出てこないことがありました。そこでWSL2にもHomebrewが対応しているという情報を目にして今更ながらWSL2にHomebrewを導入しました。
 
