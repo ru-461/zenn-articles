@@ -43,10 +43,6 @@ https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
 まず、ローカルな環境にNode.jsをインストールします。公式サイトからバイナリをダウンロードしてきてもいいのですが、すでにanyenvを使ってnodeのバージョン切り替えができる環境を構築しているため、nodenvを使用します。
 
-:::message
-検証のためターミナルは情報を見るから、Rosettaを使用するのチェックを外した状態で使用しています。
-:::
-
 anyenvのインストールは[以前投稿したこちらの記事](https://zenn.dev/ryuu/articles/use-anyversions)で詳しく紹介しているのでこの記事では割愛します。
 
 nodenv anyenv経由で以下のコマンドを使ってインストールできます。
