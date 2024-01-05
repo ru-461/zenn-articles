@@ -41,7 +41,7 @@ PC版のブラウザだと検索エンジンを柔軟に設定できたためか
 下の例ではロック画面からSpotlight検索を使ってZennの[reactの検索結果](https://zenn.dev/search?q=react)を表示しています。登録した検索エンジンショートカット（zn）を検索文字列の前に付与することで
 明示的に検索エンジンを指定するイメージです。SpotlightでSafariを呼び出していますが、これはSafariのアドレスバーへ直接入力しても機能します。
 
-![Spotlight検索からZennにてreactを検索する様子の画像](/images/fast-search-for-ios/movie01.gif =550x)
+![Spotlight検索からZennにてreactを検索する様子の画像](/images/fast-search-for-ios/movie01.gif)
 *Spotlight検索でZennの中でキーワード「react」を検索する様子*
 
 特定の検索サイト内に絞って検索できると情報へたどり着く時間がぐんと短縮できるため情報にたどり着く際の時短テクニックとして是非取り入れてほしいです。
