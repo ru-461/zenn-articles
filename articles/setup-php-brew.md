@@ -23,8 +23,7 @@ https://www.php.net/manual/ja/install.macosx.packages.php
 
 ・Macbook Pro(M1, 2020)
 ・macOS Monterey(バージョン12.3)
-・Homebrew/homebrew-core(Git revision 1f841cb3044; last commit 2022-03-27)
-・Homebrew/homebrew-cask(Git revision 60208d8c20; last commit 2022-03-26)
+・Homebrew(Git revision 1f841cb3044)
 
 ## PHPのインストール
 
