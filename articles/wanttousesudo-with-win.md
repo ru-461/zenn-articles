@@ -87,10 +87,10 @@ Scoopを使ってインストールしたコマンドの実体は~\scoop\apps\sh
 usage: sudo <cmd...>
 ```
 
-例として、編集に管理者権限が必要なhostsファイルを管理者権限でメモ帳を使って開いてみます。
+例として、編集に管理者権限が必要なhostsを管理者権限でメモ帳を使って開いてみます。
 
 ```powershell:powershell
-# notepad(メモ帳)でhostsファイルを指定
+# notepad(メモ帳)でhostsを指定
 > sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
@@ -98,9 +98,9 @@ usage: sudo <cmd...>
 
 ![ユーザーアカウント制御の画面](/images/wanttousesudo-with-win/image01.png)
 
-続行すると管理者権限でhostsファイルをメモ帳で開くことができます。
+続行すると管理者権限でhostsをメモ帳で開くことができます。
 
-![管理者権限でhostsファイルを開いた様子](/images/wanttousesudo-with-win/image02.png)
+![管理者権限でhostsを開いた様子](/images/wanttousesudo-with-win/image02.png)
 
 このようにsudoコマンドをインストールすることでUNIX系OSと同じ感覚で一時的に管理者に昇格してコマンド・アプリの実行ができるようになります。
 
