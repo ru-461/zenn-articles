@@ -70,6 +70,7 @@ $ brew --cellar
 ```
 
 メッセージにてリンクしろと言われていたためbrew linkコマンドでリンクを試みるも。
+
 ```shell
 $ brew link yarn
 
