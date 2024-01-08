@@ -234,7 +234,7 @@ $ heroku apps:rename 【変更したい名前】
 新しいアプリページは名前の変更後にダッシュボードか`heroku open`で開くことができます。
 アプリのダッシュボードから変更するとGit remoteへ変更がうまく反映されないため、上記のコマンドを使用し、Heroku CLIから変更するのが無難です。
 
-## 参考ドキュメント
+## 参考
 
 - [The Heroku CLI | Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install)
 - [Deployment | Vue CLI](https://cli.vuejs.org/guide/deployment.html#heroku)

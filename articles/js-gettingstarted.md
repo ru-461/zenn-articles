@@ -203,7 +203,7 @@ $ npm run dev
 
 最後まで読んでいただきありがとうございました。
 
-## 参考ドキュメント
+## 参考
 
 https://cli.vuejs.org/guide/creating-a-project.html#vue-create
 https://ja.nuxtjs.org/docs/2.x/get-started/installation/

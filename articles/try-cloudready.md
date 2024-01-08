@@ -180,7 +180,7 @@ CloudReadyを触っていく中でこの部分についても引き続き検証�
 
 最後まで読んでいただきありがとうございました。
 
-## 参考ドキュメント
+## 参考
 
 - [Chromium OS 派生 CloudReady - なろぐ 2](https://narolll.hateblo.jp/entry/20201027/1603784651)
 - [グーグル、「Chromium」ベースの OS「CloudReady」の Neverware 買収 - ZDNet Japan](https://japan.zdnet.com/article/35164052)
