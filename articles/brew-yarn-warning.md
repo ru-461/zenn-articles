@@ -9,7 +9,7 @@ published: true
 ## はじめに
 
 以前、M1 MacbookにてHomebrewを使い、anyenvとnodenvを使ったNode.jsの開発環境を構築しました。
-パッケージマネージャにYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`コマンドで見てもらったところ以下のようなWarningがでてきて焦りました。
+パッケージマネージャのYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`を実行したところ以下のWarningがでてきて焦りました。
 
 ```shell
 $ brew doctor
@@ -24,8 +24,8 @@ those kegs to fail to run properly once built. Run `brew link` on these:
   yarn
 ```
 
-brew doctorコマンドを使用するとこのメッセージが表示されますが、問題なくYarnを使ったパッケージ管理はできます。
-種類も`Warning : `だったので致命的なエラーではないという判断で長い間放置していましたが、コマンドを実行するたびに表示されるのが少し気になり精神衛生上あまり良くないので解決策を探してみました。
+Waringは表示されますが、問題なくYarnを使ったパッケージ管理はできます。
+しかし、コマンドを実行するたびに表示されるのが少し気になり精神衛生上あまり良くないので解決策を探してみました。この記事は解決の備忘録となります。
 
 ## 環境・バージョン等
 
