@@ -59,9 +59,9 @@ $ yarn --version
 結論としては、すでにYarnが存在しており、シンボリックリンクが切れていることが原因でした。
 
 エラーを見てみると、一番上に`You have unlinked kegs in your Cellar.`とあり、どうやらリンクが上手くできないために表示されているようです。
-Cellarとは英語で「貯蔵庫」を意味し、Homebrewではコマンドの実体である「Keg」を格納するためのディレクトリを指しています。
+Cellarとは英語で「貯蔵庫」を意味し、Homebrewではコマンドの実体であるKegを格納するためのディレクトリを指しています。
 
-Celllarディレクトリの場所は以下のコマンドで調べることができます。
+Celllarの場所は以下のコマンドで調べることができます。
 
 ```shell
 $ brew --cellar
@@ -69,7 +69,7 @@ $ brew --cellar
 /opt/homebrew/Cellar
 ```
 
-メッセージにてリンクしろと言われていたためbrew linkコマンドでリンクを試みるも。
+メッセージに従い、`brew link`を試みるが。
 
 ```shell
 $ brew link yarn
@@ -87,13 +87,13 @@ To list all files that would be deleted:
   brew link --overwrite --dry-run yarn
 ```
 
-どうやらすでにYarnが/opt/homebrew/bin配下に存在しておりシンボリックリンクの作成に失敗しているようです。
+どうやらシンボリックリンクの作成に失敗しているようです。
 
 ```shell
 $ rm `/opt/homebrew/bin/yarn`
 ```
 
-でディレクトリを削除して、競合するファイルを上書きしながらリンクを行いました。
+メッセージに従い /opt/homebrew/bin/yarn ディレクトリを削除して、競合するファイルを上書きしつつリンクを行いました。
 
 ```shell
 $ brew link --overwrite yarn
@@ -101,7 +101,8 @@ $ brew link --overwrite yarn
 Linking /opt/homebrew/Cellar/yarn/1.22.10... 2 symlinks created.
 ```
 
-これで上手くシンボリックリンクが作成されたようです。
+2つのシンボリックリンクが作成されました。これで上手くシンボリックリンクが作成されたようです。
+もう一度`brew doctor`で問題がないか診てもらいましょう。
 
 ```shell
 $ brew doctor
@@ -109,7 +110,7 @@ $ brew doctor
 Your system is ready to brew.
 ```
 
-Yarnに対するWarningがきれいさっぱりなくなりました。
+Warningがきれいさっぱりなくなりました。
 
 ## おわりに
 
