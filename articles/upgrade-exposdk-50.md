@@ -9,17 +9,15 @@ published: true
 ## Expo SDK 50 がやってきた
 
 2024年1月中旬にExpo SDKのメジャーバージョンとなる50が正式に公開されました。
+
 本家React NativeからExpoでのReact Native開発に移行し、今回初めてExpo SDKのメジャーアップグレードを行ったので記念の意味も込めて備忘録としてまとめてみます。
 
 [Expo](https://expo.dev)は[React Native](https://reactnative.dev)の開発支援ツールキットになります。
 Expo SDKはExpoを使用するうえで便利なパッケージなどをひとまとめにしたもので、Expoを使用するうえで必須になるパッケージとなります。
-
 Expo SDKはReact Native側のアップデートに追従する形で都度アップグレードが実施されております。
 
 今回のExpo SDK 50の目玉は昨年末にリリースされた[React Native 0.73](https://reactnative.dev/blog/2023/12/06/0.73-debugging-improvements-stable-symlinks)となります。
-Expo SDK 50のベータ版然り、全体的に思っていたよりかなり前倒しでリリースされた印象があります。
-
-この度、正式にExpo SDK 50が利用可能になったため、早速個人で開発しているプロダクトに採用してみました。
+Expo SDK 50のベータ版然り、全体的に思っていたよりかなり前倒しでリリースされた印象があります。この度、正式にExpo SDK 50が利用可能になったため、早速個人で開発しているプロダクトに採用してみました。
 
 ## リリースノート
 
@@ -41,8 +39,8 @@ https://docs.expo.dev/guides/using-bun/
 
 ### eas-cli
 
-Expo上にてアプリをホスティング、ビルドを行うために必要となります。
-導入している場合のみアップグレードが必要になります。
+Expoが提供するクラウドにてアプリのビルドやストア提出を行う際に必要となるツールになります。
+開発にて導入している場合のみアップグレードが必要になります。
 
 ```shell
 $ bun add --global eas-cli
@@ -58,8 +56,7 @@ eas-cli/6.1.0 darwin-arm64 node-v20.9.0
 
 ### expo
 
-今回のアップグレードのメイン、Expo SDKの**本体**となります。
-必ずアップグレードしましょう。
+今回のアップグレードのメイン、Expo SDKの**本体**となります。必ずアップグレードしましょう。
 
 ```shell
 $ bun add expo@^50.0.0
@@ -69,9 +66,7 @@ $ bun add expo@^50.0.0
 
 手持ちのスマートフォンやタブレットなどでアプリを動作させるために必要なクライアントアプリとなります。
 
-忘れがちですが、こちらもExpo SDK 50の対応バージョンが必要なためアプリの最新化を行います。
-
-手持ちの端末ごとに各種ストアからインストール、アップグレードを行います。
+忘れがちですが、こちらもExpo SDK 50の対応バージョンが必要なためアプリの最新化を行います。手持ちの端末ごとに各種ストアからインストール、アップグレードを行います。
 
 - [Expo Go - App Store](https://apps.apple.com/jp/app/expo-go/id982107779)
 - [Expo - Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja&gl=US&pli=1)
@@ -108,8 +103,7 @@ $ bunx expo install --fix
 
 ### expo doctor
 
-アップグレードも終盤です。
-ここまできたら最後にCLIから診断を受けて終わりになります。
+アップグレード作業も終盤です。ここまできたら最後に診断を受けて終わりになります。
 
 ```shell
 $ bunx expo doctor@latest
