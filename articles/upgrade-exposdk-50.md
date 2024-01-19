@@ -89,6 +89,8 @@ Expo SDKが最新でも、Expo Goのアップデートを忘れているとア�
 
 ## 依存関係の修復とチェック
 
+### fix
+
 ここまできたらExpo SDK 50を使用してのアプリ起動は可能になります。
 しかし、Expo SDKに付随するパッケージの依存関係が最新化されていない可能性があるためチェックを行います。
 
@@ -104,13 +106,18 @@ $ bunx expo install --fix
 ### expo doctor
 
 アップグレード作業も終盤です。ここまできたら最後に診断を受けて終わりになります。
+Expoが提供している[expo-doctor](https://www.npmjs.com/package/expo-doctor)を使用します。
+
+
+:::message
+最新のSDKに対応させるため必ず`doctor@latest`と指定してください。
+:::
 
 ```shell
 $ bunx expo doctor@latest
 ```
 
-最新リリースを使用するうえで設定やディレクトリ構成に問題がないか自動でチェックしてくれます。
-以下の出力がされ、全てに`✓`が付いていることを確認したら完了となります。
+最新リリースを使用するうえで設定やディレクトリ構成に問題がないか自動でチェックしてくれます。全てに`✓`が付いていることを確認したら完了となります。
 
 ```shell
 ✔ Check Expo config for common issues
@@ -127,7 +134,7 @@ $ bunx expo doctor@latest
 Didn't find any issues with the project!
 ```
 
-Expo SDK 50をインストール後、`Didn't find any issues with the project!`が表示されることで、Expo SDK 50を使用する準備が完了しました。
+`Didn't find any issues with the project!`が表示されたことで、無事にExpo SDK 50を使用する準備が完了しました。
 
 ## おわりにとこれから
 
