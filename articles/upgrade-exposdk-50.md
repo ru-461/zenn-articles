@@ -2,7 +2,7 @@
 title: "Expo SDKを 49 → 50 にアップグレードしてみた"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["expo", "reactnative"]
+topics: ["reactnative", "expo"]
 published: true
 ---
 
