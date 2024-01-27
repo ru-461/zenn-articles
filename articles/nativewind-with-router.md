@@ -1,5 +1,5 @@
 ---
-title: "Expo Router V3でNativeWind（Tailwind CSS）を使用する"
+title: "Expo RouterでNativeWind（Tailwind CSS）を使用する"
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["expo", "exporouter", "nativewind", "tailwindcss", "reactnative"]
