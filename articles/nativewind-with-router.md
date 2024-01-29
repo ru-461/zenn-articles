@@ -6,7 +6,7 @@ topics: ["expo", "exporouter", "nativewind", "tailwindcss", "reactnative"]
 published: true
 ---
 
-# はじめに
+## はじめに
 
 React NativeのプロジェクトでTailwind CSSを使用可能にするNativeWindというライブラリがあります。
 
@@ -20,7 +20,7 @@ https://www.nativewind.dev/
 2024年初頭にExpo Router V3が登場し、記事公開時点ではNativeWindはV4への移行途中となっております。破壊的変更が入る可能性もあるため、不明点については[公式ドキュメント](https://www.nativewind.dev/v4/overview)も併せてご確認ください。
 :::
 
-# Expo-Routerの新規プロジェクト作成
+## 新規プロジェクト作成
 
 Expoが提供している`create-expo-app`を利用して新規プロジェクトを作成します。
 `--template`オプションをつけて実行すると既にExpoが用意しているテンプレートからプロジェクトを始めることができます。
@@ -49,9 +49,9 @@ $ bun run start
 
 ![Navigationサンプル画像](/images/nativewind-with-router/image01.png)
 
-# NativeWindセットアップ
+## NativeWindセットアップ
 
-## パッケージ導入
+### パッケージ導入
 
 `expo install`を使用して必須パッケージをまとめて導入します。
 
@@ -61,7 +61,7 @@ $ bunx expo install nativewind@^4.0.1 react-native-reanimated tailwindcss
 
 導入するパッケージはこれだけです。続けてReact NativeへNativeWindを使用してTailwind CSSを反映するために必要な設定を進めていきます。
 
-## 設定ファイル作成
+### 設定ファイル作成
 
 Tailwind CSSの設定ファイルであるtailwind.config.jsを作成します。
 パッケージのインストールに続けて以下のコマンドを実行します。
@@ -106,7 +106,7 @@ module.exports = {
 }
 ```
 
-## CSSファイル作成
+### CSSファイル作成
 
 Tailwind CSSで使用するCSSファイルを新規作成します。
 
@@ -122,7 +122,7 @@ $ touch ./global.css
 @tailwind utilities;
 ```
 
-## Babelの設定変更
+### Babelの設定変更
 
 以下のようにbabel.config.jsを修正します。
 
@@ -140,7 +140,7 @@ module.exports = function (api) {
 };
 ```
 
-## Metroの設定変更
+### Metroの設定変更
 
 metro.config.jsの設定を変更します。
 プロジェクトルートにmetro.config.jsが存在しない場合は下記のコマンドで生成できます。
@@ -160,7 +160,7 @@ const config = getDefaultConfig(__dirname)
 module.exports = withNativeWind(config, { input: './global.css' })
 ```
 
-## 型参照の追加
+### 型参照の追加
 
 TypeScriptで正しく形定義の参照ができるようプロジェクトのルートにnativewind-env.d.tsを新規作成します。
 
@@ -174,7 +174,7 @@ $ touch nativewind-env.d.ts
 /// <reference types="nativewind/types" />
 ```
 
-## CSSのインポート
+### CSSのインポート
 
 アプリのエントリーポイントとなるコンポーネントで先ほど作成したglobal.cssをインポートします。
 Expo Routerの場合はデフォルトでapp/_layout.tsxが一番親のコンポーネントになります。
@@ -254,7 +254,7 @@ export default function WindScreen() {
 
 ![新しくページが追加された様子の画像](/images/nativewind-with-router/image03.png)
 
-# おわりに
+## おわりに
 
 今回は、Expo RouterのプロジェクトにNativeWindを導入し、Tailwind CSSを利用できるようにするまでの手順を解説しました。導入手順がWebと比べて少し複雑ではありますが、ユーティリティファーストでアプリ開発を進めることが可能になるので検討する価値があると感じました。
 
