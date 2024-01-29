@@ -45,7 +45,7 @@ Expo Goを使用してサンプルアプリを開けることを確認します�
 
 ![Navigationサンプル画像](/images/nativewind-with-router/image01.png)
 
-# NativeWindインストール
+# NativeWindセットアップ
 
 ## パッケージ導入
 
@@ -57,4 +57,51 @@ $ bun add -d tailwindcss
 
 導入するパッケージはこれだけです。続けてReact NativeへTailWind CSSを反映するために必要な設定を進めていきます。
 
+## 設定ファイル作成
+
+Tailwind CSSの設定ファイルであるtailwind.config.jsを作成します。
+パッケージのインストールに続けて以下のコマンドを実行します。
+
+```shell
+$ bunx tailwindcss init --ts
+```
+
+実行するとプロジェクトのルートにtailwind.config.jsが新しく生成されます。
+`--ts`としているのはTypeScriptへ対応するためになります。
+
+生成された設定ファイルを以下のように書き換えます。
+
+```diff javascript:tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
++  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+`content: []`の箇所にTailwind CSSを適用する対象のファイルの場所を記述します。
+デフォルトでは`app`となっていますが、トップディレクトリはプロジェクトに応じて適宜修正してください。
+
+Expo RouterではNext.jsなどのフレームワークでよく見られる、srcディレクトリが標準でサポートされています。
+
+https://docs.expo.dev/router/reference/src-directory/
+
+```diff javascript:tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+-  content: ["./app/**/*.{js,jsx,ts,tsx}"],
++  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
 # おわりに
+
+
+[^1]: 
