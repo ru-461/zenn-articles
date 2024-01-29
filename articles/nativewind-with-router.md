@@ -52,7 +52,7 @@ Expo Goを使用してサンプルアプリを開けることを確認します�
 必須パッケージであるTailwind CSSを導入します。
 
 ```shell
-$ bun add -d tailwindcss
+$ bunx expo install nativewind@^4.0.1 react-native-reanimated tailwindcss
 ```
 
 導入するパッケージはこれだけです。続けてReact NativeへTailWind CSSを反映するために必要な設定を進めていきます。
@@ -63,7 +63,7 @@ Tailwind CSSの設定ファイルであるtailwind.config.jsを作成します�
 パッケージのインストールに続けて以下のコマンドを実行します。
 
 ```shell
-$ bunx tailwindcss init --ts
+$ bunx tailwindcss init
 ```
 
 実行するとプロジェクトのルートにtailwind.config.jsが新しく生成されます。
@@ -75,6 +75,7 @@ $ bunx tailwindcss init --ts
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 +  content: ["./app/**/*.{js,jsx,ts,tsx}"],
++  presets: [require("nativewind/preset")],
   theme: {
     extend: {},
   },
@@ -94,6 +95,7 @@ https://docs.expo.dev/router/reference/src-directory/
 module.exports = {
 -  content: ["./app/**/*.{js,jsx,ts,tsx}"],
 +  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
   theme: {
     extend: {},
   },
@@ -106,15 +108,64 @@ module.exports = {
 Tailwind CSSで使用するCSSファイルを新規作成します。
 
 ```shell
-$ touch ./tailwind.css
+$ touch ./global.css
 ```
 
 以下の3行を記述します。
 
-```css:tailwind.css
+```css:global.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+## Babelの設定変更
+
+babel.config.jsを修正します。以下の行を追加します。
+
+```diff javascript:babel.config.js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+-   presets: ['babel-preset-expo']
++   ["babel-preset-expo", { jsxImportSource: "nativewind" }],
++   "nativewind/babel",
+  };
+};
+```
+
+## Metroの設定変更
+
+metro.config.jsの設定を変更します。
+プロジェクトルートにmetro.config.jsが存在しない場合は下記のコマンドで生成できます。
+
+```shell
+$ bunx expo customize metro.config.js
+```
+
+生成されたmetro.config.jsを下記のように書き換えます。
+
+```javascript:metro.config.js
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require('nativewind/metro');
+
+const config = getDefaultConfig(__dirname)
+
+module.exports = withNativeWind(config, { input: './global.css' })
+```
+
+## 型参照の追加
+
+TypeScriptで正しく形定義の参照ができるようプロジェクトのルートにnativewind-env.d.tsを新規作成します。
+
+```shell
+$ touch nativewind-env.d.ts
+```
+
+下記の定義を追加します。
+
+```typescript:nativewind-env.d.ts
+/// <reference types="nativewind/types" />
 ```
 
 これにてNativeWindの導入は完了です。プロジェクト内でTailwind CSSを使用する準備ができました。
