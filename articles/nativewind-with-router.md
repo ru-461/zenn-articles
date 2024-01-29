@@ -19,7 +19,7 @@ https://www.nativewind.dev/
 # Expo-Routerの新規プロジェクト作成
 
 Expoが提供している`create-expo-app`を利用して新規プロジェクトを作成します。
-`--template`オプションをつけて実行するとテンプレートから始めることができます。
+`--template`オプションをつけて実行すると既にExpoが用意しているテンプレートからプロジェクトを始めることができます。
 
 ```shell
 $ bunx create-expo-app nativewind-app --template
@@ -44,5 +44,17 @@ $ bun run start
 Expo Goを使用してサンプルアプリを開けることを確認します。
 
 ![Navigationサンプル画像](/images/nativewind-with-router/image01.png)
+
+# NativeWindインストール
+
+## パッケージ導入
+
+必須パッケージであるTailwind CSSを導入します。
+
+```shell
+$ bun add -d tailwindcss
+```
+
+導入するパッケージはこれだけです。続けてReact NativeへTailWind CSSを反映するために必要な設定を進めていきます。
 
 # おわりに
