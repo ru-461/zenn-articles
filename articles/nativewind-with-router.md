@@ -12,9 +12,13 @@ React NativeのプロジェクトでTailwind CSSを使用可能にするNativeWi
 
 https://www.nativewind.dev/
 
-原理としては、Web環境では`CSS StyleSheet`、Native環境では`StyleSheet.create`をそれぞれ出力しTailwind CSSを実現しているようです。
+原理としては、Web環境では`CSS StyleSheet`、Native環境では`StyleSheet.create`をそれぞれ出力しTailwind CSSを実現しているようです。Native環境で使用する場合、Webで使用可能なユーティリティクラスが一部使えないなどの制約がありますが現在開発が進められており日々進化を続けています。
 
-今回はExpo Routerが導入されたプロジェクトにNativeWindを新規に導入し、使用可能にするまでの流れを解説します。
+今回はExpo Routerが導入されたプロジェクトにNativeWindを新規に導入し、使用可能になるまでの流れを解説します。
+
+:::message
+2024年初頭にExpo Router V3が登場し、記事公開時点ではNativeWindはV4への移行途中となっております。破壊的変更が入る可能性もあるため、不明点については[公式ドキュメント](https://www.nativewind.dev/v4/overview)も併せてご確認ください。
+:::
 
 # Expo-Routerの新規プロジェクト作成
 
@@ -242,3 +246,9 @@ export default function WindScreen() {
 ![新しくページが追加された様子の画像](/images/nativewind-with-router/image03.png)
 
 # おわりに
+
+今回は、Expo RouterのプロジェクトにNativeWindを導入し、Tailwind CSSを利用できるようにするまでの手順を解説しました。導入手順がWebと比べて少し複雑ではありますが、ユーティリティファーストでアプリ開発を進めることが可能になるので検討する価値があると感じました。
+
+まだまだWeb向けのTailwind CSSよりも情報が少ないですが、React NativeでもTailwind CSSを利用できるのは大きな魅力だと感じました。うまく活用して開発効率を上げていきましょう。
+
+最後まで読んでいただきありがとうございました。
