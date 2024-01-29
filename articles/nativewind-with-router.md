@@ -101,7 +101,22 @@ module.exports = {
 }
 ```
 
+## CSSファイル作成
+
+Tailwind CSSで使用するCSSファイルを新規作成します。
+
+```shell
+$ touch ./tailwind.css
+```
+
+以下の3行を記述します。
+
+```css:tailwind.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+これにてNativeWindの導入は完了です。プロジェクト内でTailwind CSSを使用する準備ができました。
+
 # おわりに
-
-
-[^1]: 
