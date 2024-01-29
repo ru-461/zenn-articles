@@ -121,15 +121,18 @@ $ touch ./global.css
 
 ## Babelの設定変更
 
-babel.config.jsを修正します。以下の行を追加します。
+以下のようにbabel.config.jsを修正します。
 
 ```diff javascript:babel.config.js
 module.exports = function (api) {
   api.cache(true);
   return {
 -   presets: ['babel-preset-expo']
-+   ["babel-preset-expo", { jsxImportSource: "nativewind" }],
-+   "nativewind/babel",
++   presets: [
++     ["babel-preset-expo", { jsxImportSource: "nativewind" }],
++     "nativewind/babel",
++   ],
++   plugins: ['react-native-reanimated/plugin'],
   };
 };
 ```
@@ -168,6 +171,74 @@ $ touch nativewind-env.d.ts
 /// <reference types="nativewind/types" />
 ```
 
-これにてNativeWindの導入は完了です。プロジェクト内でTailwind CSSを使用する準備ができました。
+## CSSのインポート
+
+アプリのエントリーポイントとなるコンポーネントで先ほど作成したglobal.cssをインポートします。
+Expo Routerの場合はデフォルトでapp/_layout.tsxが一番親のコンポーネントになります。
+
+_layout.tsxの先頭へ下記の一行を追加します。
+
+```tsx:_layout.tsx
+import "@/global.css"
+```
+
+これにてExpo RouterへNativeWindの導入は完了です。プロジェクト内でTailwind CSSを使用する準備ができました。
+
+## NativeWindを試す
+
+導入したNativeWindを使用して簡単なページを作成します。
+Expo Routerではappディレクトリを起点としてルーティングが自動生成されます。
+
+(tab)グループの中に新しいルート（/wind）を作成します。
+
+```shell
+$ touch app/(tabs)/wind.tsx
+```
+
+Tab Windページの内容を記載します。
+
+```tsx:wind.tsx
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Text, View } from "@/components/Themed";
+
+export default function WindScreen() {
+  return (
+    <View className="flex-1 items-center justify-center">
+      <MaterialCommunityIcons size={48} name="tailwind" color="#1AB3BA" />
+      <Text className="text-2xl font-bold underline">Hello, NativeWind!</Text>
+    </View>
+  );
+}
+```
+
+タブバーへボタンを新規追加します(コードが長くなるため一部抜粋)
+`<Tabs.Screen />`を複製し末尾に新しいタブを追加してください。
+
+```tsx:_layout.tsx
+      // 抜粋
+      <Tabs.Screen
+        name="two"
+        options={{
+          title: 'Tab Two',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="wind"
+        options={{
+          title: 'Tab Wind',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+```
+
+アプリのタブバーに新しく`Tab Wind`タブが追加されます。
+
+![新しくタブが追加された様子の画像](/images/nativewind-with-router/image02.png)
+
+新しく追加された`Tab Wind`をタップしてページを開きます。
+以下のようにTailwind CSSでスタイルが当たることを確認します。
+
+![新しくページが追加された様子の画像](/images/nativewind-with-router/image03.png)
 
 # おわりに
