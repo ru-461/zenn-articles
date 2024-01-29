@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-React NativeのプロジェクトでTailwind CSSを使用可能にするNativeWindというライブラリがあります。
+React Nativeのプロジェクトで[Tailwind CSS](https://tailwindcss.com)を使用可能にするNativeWindというライブラリがあります。
 
 https://www.nativewind.dev/
 
@@ -57,6 +57,13 @@ $ bun run start
 
 ```shell
 $ bunx expo install nativewind@^4.0.1 react-native-reanimated tailwindcss
+```
+
+プロジェクトルートにiosディレクトリがある場合は下記のコマンドを実行してください。
+本記事の手順で、Expoのテンプレートから始めた場合は実行不要です。
+
+```shell
+$ bunx pod-install
 ```
 
 導入するパッケージはこれだけです。続けてReact NativeへNativeWindを使用してTailwind CSSを反映するために必要な設定を進めていきます。
