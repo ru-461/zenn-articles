@@ -53,13 +53,13 @@ $ bun run start
 
 ## パッケージ導入
 
-必須パッケージであるTailwind CSSを導入します。
+`expo install`を使用して必須パッケージをまとめて導入します。
 
 ```shell
 $ bunx expo install nativewind@^4.0.1 react-native-reanimated tailwindcss
 ```
 
-導入するパッケージはこれだけです。続けてReact NativeへTailWind CSSを反映するために必要な設定を進めていきます。
+導入するパッケージはこれだけです。続けてReact NativeへNativeWindを使用してTailwind CSSを反映するために必要な設定を進めていきます。
 
 ## 設定ファイル作成
 
