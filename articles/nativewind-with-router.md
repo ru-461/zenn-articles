@@ -1,6 +1,6 @@
 ---
 title: "Expo RouterでNativeWind（Tailwind CSS）を使用する"
-emoji: "🔥"
+emoji: "💨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["expo", "exporouter", "nativewind", "tailwindcss", "reactnative"]
 published: false
@@ -45,7 +45,7 @@ $ bunx create-expo-app nativewind-app --template
 $ bun run start
 ```
 
-Expo Goを使用してサンプルアプリを開けることを確認します。
+[Expo Go](https://expo.dev/client)や各種シミュレーターを使用してサンプルアプリを開けることを確認します。
 
 ![Navigationサンプル画像](/images/nativewind-with-router/image01.png)
 
@@ -71,7 +71,6 @@ $ bunx tailwindcss init
 ```
 
 実行するとプロジェクトのルートにtailwind.config.jsが新しく生成されます。
-`--ts`としているのはTypeScriptへ対応するためになります。
 
 生成された設定ファイルを以下のように書き換えます。
 
@@ -88,9 +87,9 @@ module.exports = {
 ```
 
 `content: []`の箇所にTailwind CSSを適用する対象のファイルの場所を記述します。
-デフォルトでは`app`となっていますが、トップディレクトリはプロジェクトに応じて適宜修正してください。
+デフォルトでは`./app/**/*.{js,jsx,ts,tsx}`となっており`./app`の配下にあるファイルへ自動適用されます。
 
-Expo RouterではNext.jsなどのフレームワークでよく見られる、srcディレクトリが標準でサポートされています。
+また、Expo RouterではNext.jsなどのフレームワークでよく見られる、**srcディレクトリ**が標準サポートされています。srcディレクトリを使用する場合は`./src/**/*.{js,jsx,ts,tsx}`にする必要があります。
 
 https://docs.expo.dev/router/reference/src-directory/
 
@@ -188,6 +187,16 @@ import "@/global.css"
 
 これにてExpo RouterへNativeWindの導入は完了です。プロジェクト内でTailwind CSSを使用する準備ができました。
 
+ここまで記載したら、一旦キャッシュをクリアしアプリを起動します。
+
+```shell
+$ bun run start -c
+```
+
+[Expo Go](https://expo.dev/client)や各種シミュレーターを使用してアプリが正常に表示できることを確認します。
+
+エラーなどがなくアプリを起動できれば問題ありません。エラーが表示される場合は手順を確認のうえ漏れがないか見直しを行ってください。
+
 ## NativeWindを試す
 
 導入したNativeWindを使用して簡単なページを作成します。
@@ -236,7 +245,7 @@ export default function WindScreen() {
       />
 ```
 
-アプリのタブバーに新しく`Tab Wind`タブが追加されます。
+アプリのタブバーに新しく`Tab Wind`タブが追加されています。
 
 ![新しくタブが追加された様子の画像](/images/nativewind-with-router/image02.png)
 
