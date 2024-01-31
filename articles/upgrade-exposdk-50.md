@@ -103,18 +103,18 @@ $ bunx expo install --fix
 
 警告が表示された場合は指示に従って各種依存関係の手動修正が必要になる場合があります。
 
-### expo doctor
+### expo-doctor
 
-アップグレード作業も終盤です。ここまできたら最後に診断を受けて終わりになります。
+アップグレード作業もいよいよ終盤です。ここまできたら最後に診断を受けて終わりになります。
 Expoが提供している[expo-doctor](https://www.npmjs.com/package/expo-doctor)を使用します。
 
 
 :::message
-最新のSDKに対応させるため必ず`doctor@latest`と指定してください。
+最新のSDKに対応させるため、必ず`@latest`まで指定してください。
 :::
 
 ```shell
-$ bunx expo doctor@latest
+$ bunx expo-doctor@latest
 ```
 
 最新リリースを使用するうえで設定やディレクトリ構成に問題がないか自動でチェックしてくれます。全てに`✓`が付いていることを確認したら完了となります。
