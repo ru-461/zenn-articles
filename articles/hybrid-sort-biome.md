@@ -1,5 +1,5 @@
 ---
-title: "【Next.js】BiomeとESLintを組み合わせてコードをソートしたい"
+title: "【Next.js】BiomeとESLintを組み合わせてコードをソートする"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["biome", "eslint", "nextjs"]
@@ -9,43 +9,48 @@ published: false
 ## はじめに
 
 :::message
-本記事の内容はBiome 1.5.3 時点での暫定対応になります。
-Biomeでまだ実装されていないルールをESLintで補おうという趣旨のため予めご了承ください。
-今後のBiomeのアップデートによって全てBiomeで対応可能になる可能性があります。
+本記事の内容は[Biome 1.5.3](https://biomejs.dev/ja/internals/changelog/#153-2024-01-22)時点での暫定対応になります。
+
+Biomeでまだ実装されていないルールを[ESLint](https://eslint.org)で補おうという趣旨のため予めご了承ください。今後のBiomeのアップデートによって全てBiomeで対応可能になる可能性があります。
 :::
 
-普段、Biomeをメインのリンター・フォーマットとしてNext.js 14のプロジェクトにて早速導入して使用しています。ESLintのルールと互換性がバージョンアップごとに向上しており、すぐ移行でき結構気に入っております。
+普段、Biomeをメインのリンター・フォーマッターとしてNext.js 14のプロジェクトにて使用しています。ESLintのルールと互換性が高いためすぐ移行でき、結構気に入っております。
 
 https://biomejs.dev
 
-Biomeが注目されたことで脱ESLintや脱Prettierに向けているプロジェクトも多そうですね。私も実際に環境構築をしてみたのですが、まだ一部のルールがBiomeにて対応していないため適宜ESLintを併用したいと感じることがありました。
+Biomeが注目されたことで脱ESLintや脱Prettierに向けているプロジェクトも多そうですね。
+私も実際に環境構築を試みましたが、まだ一部のルールがBiomeで未対応なため、必要に応じてESLintを併用することがあります。
 
-日々ESLintからBiomeへの移行を進める中で、暫定ではありますが、ESLintとBiomeを組み合わせて自分なりのハイブリッドアプローチができたので共有いたします。
+日々ESLintからBiomeへの移行を進めながら、一時的ながらもESLintとBiomeを組み合わせたハイブリッドアプローチを取ることができたため記事にします。
 
-## Biomeでカバー
+## ESLint併用に至った経緯
 
-ESLintにてよく設定される人気のルールに下記の2つがあります。
+ESLintを使用してコードのソートまで行える有名なルールに下記の2つがあります。
 
 - [import-js/eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)
 - [jsx-eslint/eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
 
-それぞれ、import、propsを解析し、並び替えを提案、自動ソートしてくれるものになります。これらは、Next.jsの新規プロジェクトセットアップ記事などでよくおすすめされていることもあり使用しているプロジェクトをよく見ます。
+それぞれ、import、propsを解析、並び替えを提案、`--fix`を使用しての自動修正まで実行可能なルールになります。
+これらは、Next.jsの新規プロジェクトセットアップ記事などでよくおすすめされていることもあり導入されているプロジェクトをよく見ます。
 
-しかしBiome 1.5.3現在、上記のルールと完全に互換するルールは存在しません。
+しかしBiome 1.5.3現在、**上記のルールと完全に互換するルールは存在しません**。
 
-補足しておくと、eslint-plugin-import相当の機能はBiomeに存在します。import文に空行を入れてグルーピングすることでグループ単位でのソート提案、自動修正をしてくれます。
+補足しておくと、[eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)相当の機能はBiomeでは"Analyzer imports-sorting"として実装されています。
 
-https://biomejs.dev/analyzer/
+https://biomejs.dev/analyzer/#imports-sorting
 
-しかし、上記の機能ではimportのグルーピングは行ってくれないため開発者が目視で並べ替えする必要があります。
+Biomeの機能としてimport文に空行を入れてグルーピングすることでグループ単位でのソート提案、自動修正をしてくれます。
+しかし、上記の機能では[eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)が提供するimportのグループ化までは自動で行ってくれないため開発者自身でグループ分けする必要があります。
 
+都度、自分でグループ分けしてもいいのですが、importがファイル内に増えてくると手動ではどうしても管理しづらいという問題があります。
+
+そこで、ESLintの力を享受する名付けてソートハイブリッドアプローチを提案します。
 
 ## Biomeのセットアップ
 
-予め、[create-next-app](https://nextjs.org/docs/pages/api-reference/create-next-app)を使用してNext.jsのプロジェクトがセットアップされているものとします。
-このとき、ESLintの設定まで完了し、以下の.eslintrc.jsonがプロジェクトルートに存在していることを前提とします。
+[create-next-app](https://nextjs.org/docs/pages/api-reference/create-next-app)を使用してNext.jsのプロジェクトがセットアップされているものとします。
 
-デフォルトでは以下の.eslintrc.jsonが作成されています。
+プロジェクトを生成する際`Would you like to use ESLint?`に`Yes`で答えた場合、ESLintが自動インストールされ、以下の.eslintrc.jsonが自動生成されます。
 
 ```json:.eslintrc.json
 {
@@ -53,11 +58,13 @@ https://biomejs.dev/analyzer/
 }
 ```
 
+本構成ではメインとしてBiomeを使用するため、上記のJSONファイルをベースにして**必要なルール**のみを追加します。
+
 ### Biomeのインストール
 
-本記事内ではパッケージマネージャにBunを使用します。適宜お使いのパッケージマネージャに読み替えて実行してください。
+本記事内ではパッケージマネージャに[Bun](https://bun.sh)を使用します。適宜お使いのパッケージマネージャに読み替えて実行してください。
 
-Biomeをインストールします。
+まず、Biomeをインストールします。
 
 ```shell
 $ bun add --dev --exact @biomejs/biome
@@ -90,20 +97,23 @@ $ bunx @biomejs/biome init
 
 ## Biomeの設定
 
-続けてBiomeの設定をします。
-設定可能な項目については以下を参考にしてください。
+続けてBiomeの設定をします。設定可能な項目については以下を参考にしてください。
 
 https://biomejs.dev/ja/linter/rules/
 
 ESLintやPrettierで提供されているルールは一通り網羅されています。ルールによってはオプションがあるためドキュメントを参照してください。
 
-リンターのルールはデフォルトで`"recommended": true`となっており、メジャーなリンタールールは一通り適用されています。足りない設定があれば続けて記載することで追加したり上書きしたりできます。
+リンターのルールはデフォルトで`"recommended": true`となっており、推奨されるルールが一通り適用されています。またルールを追加したり上書きしたりできます。
+ここはプロジェクトに応じて適宜変更してみてください。
 
-一応、私がNext.jsのプロジェクトにてよく使用している設定を掲載します。
+一応、参考として私がNext.jsのプロジェクトにてよく使用している設定を掲載します。
 
 ```json:biome.json
 {
   "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
   "formatter": {
     "enabled": true,
     "ignore": [".next", "node_modules"],
@@ -120,6 +130,7 @@ ESLintやPrettierで提供されているルールは一通り網羅されてい
     "rules": {
       "recommended": true,
       "correctness": {
+				"noUnusedTemplateLiteral": "off",
         "noUnusedVariables": "error",
         "useHookAtTopLevel": "error"
       },
@@ -131,31 +142,26 @@ ESLintやPrettierで提供されているルールは一通り網羅されてい
         "useBlockStatements": "error"
       }
     }
-  },
-  "organizeImports": {
-    "enabled": true
   }
 }
 ```
 
 今回Biomeのimport最適化機能を使用したいため必ず、`organizeImports`は`"enabled": true`にして有効化してください。
 
-Next.jsでBiomeを使用し始めたばかりなので、もっとおすすめの構成があれば教えて下さい。
+私自身、Next.jsでBiomeを使用し始めたばかりなので、もっとおすすめの構成があれば教えて下さい。
 
 ## ESLintの構成
 
 上記のBiomeでフォーマットとリンターの設定は完了したのですが、import文のソートと、propsのソートがまだできないため、不足しているルールをESLintで補います。
-
-デフォルトでインストールされているNext.jsのESLintルール（next/core-web-vitals）を拡張しBiomeにて提供されていないルールを補う形になります。
+デフォルトでインストールされている[eslint-config-next](https://nextjs.org/docs/app/building-your-application/configuring/eslint#eslint-config)を拡張し、Biomeにて提供されていないルールを補う形になります。
 
 ### JSXのpropsをソート
 
-JSX（TSX）内にてpropsを解析し並び順を警告します。
-`--fix`を使用して自動フォーマットもできるようになります。
+JSX（TSX）内にてpropsを解析し最適な並び順を提案します。また、`--fix`を使用して自動ソートも可能となります。
 
-.eslintrc.jsonに以下を追記します。
+ルールを有効化するため、.eslintrc.json内に以下を追記します。
 
-```diff:json:.eslintrc.json
+```diff json:.eslintrc.json
 {
   "extends": "next/core-web-vitals",
 + "rules": {
@@ -170,11 +176,36 @@ JSX（TSX）内にてpropsを解析し並び順を警告します。
 $ bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
 ```
 
+例として以下のコンポーネントがある場合。
+
+```tsx:src/app/loading.tsx
+export default function Loading() {
+  return (
+    <Box display="flex" h="100vh" justifyContent="center" alignItems="center">
+      <Spinner size="xl" color="#10B981" />
+    </Box>
+  );
+}
+```
+
+コマンド実行後に**アルファベット順**でpropsがソートされます。
+
+```tsx:src/app/loading.tsx
+export default function Loading() {
+  return (
+    <Box alignItems="center" display="flex" h="100vh" justifyContent="center">
+      <Spinner color="#10B981" size="xl" />
+    </Box>
+  );
+}
+```
+
 ### importの自動グループ化
 
-.eslintrc.jsonに以下を追記します。
+importの種別毎にグループ化、並び替えを行います。
+ルールを有効化するため.eslintrc.json内に以下を追記します。
 
-```diff:json:.eslintrc.json
+```diff json:.eslintrc.json
 {
   "extends": "next/core-web-vitals",
   "rules": {
@@ -195,8 +226,8 @@ $ bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
 ```
 
 上記の設定で一番重要なのは`"newlines-between": "always",`の部分になります。
-importをグループ化し、適宜空行をいれてくれるため、BiomeのorganizeImportsとうまく組み合わせられるようになります。
-ソート順については、BiomeのorganizeImportsと合わせるため、`"alphabetize":`をアルファベット順（`asc`）としています。
+グループ化したうえで、グループ毎に空行を入れてくれるため、BiomeのorganizeImportsとうまく組み合わせられるようになります。
+ソート順については、Biomeのもつ[Analyzer](https://biomejs.dev/analyzer/#imports-sorting)と合わせるため、`"alphabetize":`をアルファベット順（`asc`）としています。
 
 またimportのグループ化ついて細かく設定ができるため。好みに合わせて調整してみてください。
 私は以下のような設定をしています。
@@ -248,17 +279,52 @@ importをグループ化し、適宜空行をいれてくれるため、Biomeの
 }
 ```
 
+propsのソートと同様に以下のコマンドでESLintを使用した自動ソートが可能になります。
+
+```shell
+eslint './src/**/*.{js,jsx,ts,tsx}' --fix
+```
+
+例えば以下のようなコンポーネントのimportがある場合。
+
+```tsx:app/src/layout.tsx
+import type { Metadata } from 'next';
+import { ChakraProvider } from '@chakra-ui/react';
+import { Header } from '@/components/Header';
+import { Main } from '@/components/Main';
+import { Footer } from '@/components/Footer';
+...
+```
+
+ESLintによって以下のようにソート、グルーピングされます。
+
+```tsx:app/src/layout.tsx
+import { ChakraProvider } from '@chakra-ui/react';
+
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Main } from '@/components/Main';
+
+import type { Metadata } from 'next';
+...
+```
+
 ## VSCodeとの統合
 
 VSCodeで開発する際に、自動でBiomeのフォーマットとリンターを適用したいので拡張機能を導入します。
+
 以下の拡張機能をMarketplaceから導入します。
 
 https://marketplace.visualstudio.com/items?itemName=biomejs.biome
 
+また、ESLintの拡張機能も合わせて導入します。
+
+https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
 導入後、以下のコマンドでVSCodeの設定ファイルを作成します。既に作成してある場合は不要です。
 
 ```shell
-mkdir -p ./vscode && touch ./vscode/settings.json
+mkdir -p ./.vscode && touch ./.vscode/settings.json
 ```
 
 settings.jsonへ以下を記載します。
@@ -267,7 +333,9 @@ settings.jsonへ以下を記載します。
 {
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit",
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports.biome": "explicit"
   },
   "editor.defaultFormatter": "biomejs.biome",
   "editor.formatOnPaste": true,
@@ -275,15 +343,15 @@ settings.jsonへ以下を記載します。
 }
 ```
 
-これでVSCodeにてファイルの保存をしたタイミングで自動的にBiomeによるフォーマットが行われるようになります。
-また任意ですが、コードをペーストしたタイミングでもフォーマットがかかるようにしています。お好みで設定は調整してください。
+これでVSCodeにてファイルの保存をしたタイミングで自動的にBiomeとESLintによるフォーマットが行われるようになります。
+また任意ですが、コードをペーストしたタイミングでもフォーマットされるようにしています。お好みで設定は調整してください。
 
 ## スクリプト追加
 
 コマンドから実行するために、フォーマット用のスクリプトをpackage.jsonに記載しておきます。
 私の設定例を紹介しますが、こちらも適宜使いやすいように調整してください。
 
-```shell:package.json
+```diff json:package.json
 "scripts": {
   ...
 + "check": "biome check --apply ./src && eslint './src/**/*.{js,jsx,ts,tsx}' --fix",
@@ -291,6 +359,9 @@ settings.jsonへ以下を記載します。
 ```
 
 Biome CLIが提供している[biome check](https://biomejs.dev/ja/reference/cli/#biome-check)とESLintを同時に実行します。
+
+https://biomejs.dev/ja/reference/cli/#biome-check
+
 `biome check`はフォーマットとリントを同時に行ってくれる便利なコマンドになっております。
 また、`--apply`をつけることで修正可能なものを見つけて自動修正してくれます。
 
@@ -299,16 +370,11 @@ eslintは`--fix`としているため、ESLintによってimportのグループ�
 
 これにより、コミットする前に`bun run check`と実行することでコードの粒度を保つことができます。
 
-### 本構成の注意点
-
-VSCodeでのコード編集時はBiomeの拡張機能によって、リンターとフォーマッター処理のみが行われます。
-ESLintの処理は自動的に実行されないため、`eslint './src/**/*.{js,jsx,ts,tsx}' --fix`をコミット前に忘れず実行することが必要となります。
-
-[huskey](https://typicode.github.io/husky/)や[lint-staged](https://github.com/lint-staged/lint-staged)などを導入してコミット前に自動実行させるのもおすすめです。
+また、[huskey](https://typicode.github.io/husky/)や[lint-staged](https://github.com/lint-staged/lint-staged)などを導入してコミット前に自動実行させるのもおすすめです。
 
 ## おわりに
 
-今回BiomeとESLintを組み合わせたハイブリッドアプローチを紹介しました。
+今回BiomeとESLintを併用するコードの自動ソートのハイブリッドアプローチを紹介しました。
 
 自分のユースケースでは完全にBiomeに移行できなかったため暫定対応とはなりますが、現在大きな問題なく運用できています。
 
