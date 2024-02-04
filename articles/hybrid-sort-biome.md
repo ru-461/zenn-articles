@@ -3,7 +3,7 @@ title: "【Next.js】BiomeとESLintのハイブリッド構成について考え
 emoji: "🏞️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["biome", "eslint", "nextjs"]
-published: false
+published: true
 ---
 
 ## はじめに
