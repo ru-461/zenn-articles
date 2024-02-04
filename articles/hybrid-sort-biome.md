@@ -1,6 +1,6 @@
 ---
-title: "【Next.js】BiomeとESLintを組み合わせてコードをソートする"
-emoji: "🤖"
+title: "【Next.js】BiomeとESLintのハイブリッド構成について考える（暫定版）"
+emoji: "🏞️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["biome", "eslint", "nextjs"]
 published: false
@@ -14,14 +14,15 @@ published: false
 Biomeでまだ実装されていないルールを[ESLint](https://eslint.org)で補おうという趣旨のため予めご了承ください。今後のBiomeのアップデートによって全てBiomeで対応可能になる可能性があります。
 :::
 
-普段、Biomeをメインのリンター・フォーマッターとしてNext.js 14のプロジェクトにて使用しています。ESLintのルールと互換性が高いためすぐ移行でき、結構気に入っております。
+普段、Biomeをメインのリンター・フォーマッターとしてNext.js 14のプロジェクトにて使用しています。ESLintと互換性のあるルールが多く実装されておりどんどん移行しやすくなってきている印象を受けます。
 
 https://biomejs.dev
 
-Biomeが注目されたことで脱ESLintや脱Prettierに向けているプロジェクトも多そうですね。
-私も実際に環境構築を試みましたが、まだ一部のルールがBiomeで未対応なため、必要に応じてESLintを併用することがあります。
+Biomeが注目されたことで脱ESLintや脱Prettierに向けて動いているプロジェクトも多そうですね。
+私も実際に環境構築を試みましたが、まだ一部のルールがBiomeで未実装のため、必要に応じてESLintを併用することがあります。
 
 日々ESLintからBiomeへの移行を進めながら、一時的ながらもESLintとBiomeを組み合わせたハイブリッドアプローチを取ることができたため記事にします。
+本構成としてはBiomeとESLint 9:1 ぐらいの比率で構成し、メインとしてBiomeを使いつつ、不足しているルールをESLintでカバーすることを目的としています。
 
 ## ESLint併用に至った経緯
 
