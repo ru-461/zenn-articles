@@ -217,6 +217,16 @@ importの種別毎にグループ化、並び替えを行います。
 +         "caseInsensitive": true,
 +         "order": "asc"
 +       },
++       "groups": [
++         "builtin",
++         "external",
++         "internal",
++         "parent",
++         "sibling",
++         "index",
++         "object",
++         "type"
++       ],
 +       "newlines-between": "always",
 +       "pathGroupsExcludedImportTypes": ["builtin"]
 +     }
@@ -227,10 +237,12 @@ importの種別毎にグループ化、並び替えを行います。
 ```
 
 上記の設定で一番重要なのは`"newlines-between": "always",`の部分になります。
+後述するVSCodeのESLint拡張機能を使用する場合、`"groups"`の定義がないと自動でグループ化されません。必ず定義するようにします。
+
 グループ化したうえで、グループ毎に空行を入れてくれるため、BiomeのorganizeImportsとうまく組み合わせられるようになります。
 ソート順については、Biomeのもつ[Analyzer](https://biomejs.dev/analyzer/#imports-sorting)と合わせるため、`"alphabetize":`をアルファベット順（`asc`）としています。
 
-またimportのグループ化ついて細かく設定ができるため。好みに合わせて調整してみてください。
+また、importのグループ化ついて細かく設定ができるため。好みに合わせて調整してみてください。
 私は以下のような設定をしています。
 
 ```json:.eslintrc.json
