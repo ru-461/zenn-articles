@@ -9,7 +9,6 @@ published: true
 ## はじめに
 
 React Nativeのプロジェクトで[Tailwind CSS](https://tailwindcss.com)を使用可能にするNativeWindというライブラリがあります。
-
 https://www.nativewind.dev/
 
 Web環境では`CSS StyleSheet`、Native環境では`StyleSheet.create`をそれぞれ出力しTailwind CSSを実現しているようです。Native環境で使用する場合、Webで使用可能なユーティリティクラスが一部使えないなどの制約がありますが現在開発が進められており日々進化を続けています。
@@ -97,7 +96,6 @@ module.exports = {
 デフォルトでは`./app/**/*.{js,jsx,ts,tsx}`となっており`./app`の配下にあるファイルへ自動適用されます。
 
 また、Expo RouterではNext.jsなどのフレームワークでよく見られる、**srcディレクトリ**が標準サポートされています。srcディレクトリを使用する場合は`./src/**/*.{js,jsx,ts,tsx}`にする必要があります。
-
 https://docs.expo.dev/router/reference/src-directory/
 
 ```diff javascript:tailwind.config.js
