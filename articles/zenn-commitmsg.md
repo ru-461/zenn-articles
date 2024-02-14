@@ -34,8 +34,8 @@ GitHubのコミットメッセージなどで目にすることが多いです�
 コミットメッセージの先頭にプレフィックスを付与し修正内容の要点をメッセージとして添える短形式にするのが個人的に運用しやすいと感じました。
 
 プレフィックスについては以下の記事を参考にしています。
+
 https://qiita.com/numanomanu/items/45dd285b286a1f7280ed
-https://qiita.com/konatsu_p/items/dfe199ebe3a7d2010b3e
 
 上の記事ではともに[angular.js/DEVELOPERS.md](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type)が参考にされています。
 Gitコミットガイドラインの中にプレフィックスとして8つ挙げられていますが、それぞれしっかりとした意味を持っており、プレフィックを見ただけで意味がわかりやすいと感じました。
