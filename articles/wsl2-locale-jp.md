@@ -32,7 +32,7 @@ published: true
 パスワードは2回確認されるので同じものを入力します。
 :::
 
-### デフォルトの WSL のバージョンを設定
+### デフォルトのWSLのバージョンを設定
 
 ```shell
 $ wsl --set-default-version 2
