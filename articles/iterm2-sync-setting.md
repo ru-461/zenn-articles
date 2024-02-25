@@ -33,11 +33,10 @@ https://help.dropbox.com/ja-jp/installs-integrations/desktop/locate-dropbox-fold
 [Dropbox を公式サイトからインストール](https://www.dropbox.com/install)し、セットアップを進めることでDropboxディレクトリにアクセス可能となります。
 
 ```shell
-# ユーザーディレクトリからDropboxへ移動
 $ cd ~/Dropbox
 ```
 
-上のようにすることでDropboxへアクセスできます。Dropboxを開けることを確認したらiTerm2の設定ファイルの保存場所を作成します。
+Dropboxディレクトリを開けることを確認したらiTerm2の設定ファイルの保存場所を作成します。
 
 ```shell
 # Dropboxディレクトリの直下に Mac / Settings ディレクトリを作成(任意)
