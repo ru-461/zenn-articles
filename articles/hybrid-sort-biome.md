@@ -15,7 +15,6 @@ Biomeでまだ実装されていないルールを[ESLint](https://eslint.org)�
 :::
 
 普段、Biomeをメインのリンター・フォーマッターとしてNext.js 14のプロジェクトにて使用しています。ESLintと互換性のあるルールが多く実装されておりどんどん移行しやすくなってきている印象を受けます。
-
 https://biomejs.dev
 
 Biomeが注目されたことで脱ESLintや脱Prettierに向けて動いているプロジェクトも多そうですね。
