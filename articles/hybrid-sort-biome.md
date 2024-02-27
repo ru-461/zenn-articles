@@ -36,7 +36,6 @@ ESLintを使用してコードのソートまで行える有名なルールに�
 しかしBiome 1.5.3現在、**上記のルールと完全に互換するルールは存在しません**。
 
 補足しておくと、[eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)相当の機能はBiomeでは"Analyzer imports-sorting"として実装されています。
-
 https://biomejs.dev/analyzer/#imports-sorting
 
 Biomeの機能としてimport文に空行を入れてグルーピングすることでグループ単位でのソート提案、自動修正をしてくれます。
@@ -98,7 +97,6 @@ $ bunx @biomejs/biome init
 ## Biomeの設定
 
 続けてBiomeの設定をします。設定可能な項目については以下を参考にしてください。
-
 https://biomejs.dev/ja/linter/rules/
 
 ESLintやPrettierで提供されているルールは一通り網羅されています。ルールによってはオプションがあるためドキュメントを参照してください。
@@ -326,11 +324,9 @@ import type { Metadata } from 'next';
 VSCodeで開発する際に、自動でBiomeのフォーマットとリンターを適用したいので拡張機能を導入します。
 
 以下の拡張機能をMarketplaceから導入します。
-
 https://marketplace.visualstudio.com/items?itemName=biomejs.biome
 
 また、ESLintの拡張機能も合わせて導入します。
-
 https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 導入後、以下のコマンドでVSCodeの設定ファイルを作成します。既に作成してある場合は不要です。
@@ -371,7 +367,6 @@ settings.jsonへ以下を記載します。
 ```
 
 Biome CLIが提供している[biome check](https://biomejs.dev/ja/reference/cli/#biome-check)とESLintを同時に実行します。
-
 https://biomejs.dev/ja/reference/cli/#biome-check
 
 `biome check`はフォーマットとリントを同時に行ってくれる便利なコマンドになっております。
