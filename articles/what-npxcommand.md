@@ -48,12 +48,12 @@ $ npm init <project-name>
 npmを使ってスクリプトを実行するためにはpackage.jsonの`scripts`へ予めスクリプトを定義しておく必要があります。
 
 ```json
- "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
+"scripts": {
+  "dev": "nuxt",
+  "build": "nuxt build",
+  "start": "nuxt start",
+  "generate": "nuxt generate"
+},
 ```
 
 上記は[nuxt/create-nuxt-app](https://github.com/nuxt/create-nuxt-app)で作成したプロジェクトから抜粋。
