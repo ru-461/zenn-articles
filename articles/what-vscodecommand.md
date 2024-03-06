@@ -65,7 +65,7 @@ $ code-insiders
 よく使うコマンドをまとめました。コマンドはWindowsとMac共通で同じものが使えます。
 
 :::message
-VSCode Insidersの場合は`code`を`code-insiders`に適宜置き換えてください。
+VSCodeの開発者向けプレビュー版である[VSCode Insiders](https://code.visualstudio.com/insiders/)を使用している場合は`code`を`code-insiders`に読み替えてください。
 :::
 
 ### VSCodeを起動
