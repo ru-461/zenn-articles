@@ -261,7 +261,7 @@ export default function WindScreen() {
 
 ## おわりに
 
-今回は、Expo RouterのプロジェクトにNativeWindを導入し、Tailwind CSSを利用できるようにするまでの手順を解説しました。導入手順がWebと比べて少し複雑ではありますが、ユーティリティファーストでアプリ開発を進めることが可能になるので検討する価値があると感じました。
+今回は、Expo RouterのプロジェクトにNativeWindを導入し、Tailwind CSSを利用するまでの手順を解説しました。導入手順が少し複雑ではありますが、ユーティリティファーストでアプリ開発を進めることが可能になるので検討する価値があると感じました。
 
 まだまだWeb向けのTailwind CSSよりも情報が少ないですが、React NativeでもTailwind CSSを利用できるのは大きな魅力だと感じました。うまく活用して開発効率を上げていきましょう。
 
