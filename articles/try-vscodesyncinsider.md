@@ -26,8 +26,8 @@ https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 # 何が問題だったのか
 
-VSCodeの設定をしているときにしたツイートです。
-https://twitter.com/ru_461/status/1339206380914237442
+VSCodeの設定をしているときにしたポストです。
+https://x.com/ru_461/status/1339206380914237442
 
 ツイート内の情報がかなり乏しく、なんのことか伝わりにくいですが、MacBookの環境構築をする際にCPUのアーキテクチャが変わったことでVSCodeの環境も大きく変わりました。
 
@@ -45,7 +45,7 @@ M1 Macに最適化という言葉をよく聞くようになりましたが、�
 
 M1 Macが発売してすぐの12月中旬VSCode Insidersが一足早くM1チップに対応しました。
 いきなり対応したので、この情報を知ってすぐにインストールした覚えがあります。
-https://twitter.com/code/status/1338886895867224070
+https://x.com/code/status/1338886895867224070
 
 しかし、記事執筆時点（2021年2月上旬）では、VSCode（Stable版）はまだM1 Macに完全対応しておらず従来のアーキテクチャで動作している状態です。
 同時に起動した時のアクティビティモニタがこちらです。アーキテクチャを見ると一目瞭然ですね。
