@@ -27,7 +27,7 @@ https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 # 何が問題だったのか
 
 VSCodeの設定をしているときにしたツイートです。
-https://twitter.com/Ry86163204/status/1339206380914237442?s=20
+https://twitter.com/ru_461/status/1339206380914237442
 
 ツイート内の情報がかなり乏しく、なんのことか伝わりにくいですが、MacBookの環境構築をする際にCPUのアーキテクチャが変わったことでVSCodeの環境も大きく変わりました。
 
