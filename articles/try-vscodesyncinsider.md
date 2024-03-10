@@ -10,11 +10,11 @@ published: true
 
 Microsoft社が開発しているエディタ[VisualStudioCode](https://code.visualstudio.com)の[version 1.48](https://code.visualstudio.com/updates/v1_48)にて設定同期機能（Settings Sync）が実装され話題となりました。
 
-VSCodeには、Stable releaseと、Inseders releaseという２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
+VSCodeには、[Stable release（Stable版）](https://code.visualstudio.com)と、[Insiders release（Insiders版）](https://code.visualstudio.com/insiders/)という２つのバージョンがあります。Insiders版で先に新機能が試験的に搭載され、安定したらStable版にも追加されるといった形で開発が進められています。設定同期機能はもともとInsiders版で試験的に実装されており、昨年アップデートでStable版でも使えるようになりました。
 
-普段、私達がよく目にする青いVSCodeはStable版となり、安定版と呼ばれています。Insidera版少し緑がかった色のアイコンをしており、色で区別がつくようになっています。
+普段、私達がよく目にする青いVSCodeはStable releaseとなり、安定版と呼ばれています。一方Insider版は少し緑がかったアイコンをしており、色で区別がつくようになっています。
 
-**それぞれの VSCode は独立しているため、同じ PC 内に共存させることも可能です。**
+**それぞれの VSCodeは独立しているため、共存させることも可能です。**
 
 ![VSCodeのアイコン画像](/images/try-vscodesyncinsider/image01.png)
 *左がStable版、右がInsiders版のアイコン*
@@ -22,7 +22,7 @@ VSCodeには、Stable releaseと、Inseders releaseという２つのバージ�
 昨年、VSCode公式がStable版に設定同期機能を実装し話題になりましたが、今までVSCodeの設定を同期する拡張機能は存在していました。
 https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
-しかし、私は当時メインマシンであるWindows（WSL）で主に開発していたため、同期の拡張機能については全く触れていませんでした。昨年末に、開発用にM1チップを搭載したMacbook Proをお迎えしたのですが、開発環境を構築する上で小さな葛藤がありました。小さな問題ですが、設定の方法が分からず解決まで時間がかかったため、備忘録としてまとめます。
+しかし、私は当時メインマシンであるWindows（WSL2）で主に開発していたため、同期の拡張機能については全く触れていませんでした。昨年末に、開発用にM1チップを搭載したMacbook Proをお迎えしたのですが、開発環境を構築する上で小さな葛藤がありました。小さな問題ですが、設定の方法が分からず解決まで時間がかかったため、備忘録としてまとめます。
 
 # 何が問題だったのか
 
