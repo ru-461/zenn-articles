@@ -16,7 +16,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 このサイト「Zenn」の名前の由来については過去に[catnoseさん](https://zenn.dev/catnose99)がdevsumi 2021にて言及されています。^[[Zennという名前にした理由](https://youtu.be/DTpGfpLybr0?t=1180)]
 
-> 善い行いをすればいずれ返ってくる...  →  善  → "Zenn"
+> 善い行いをすればいずれ返ってくる...  →  善  →  "Zenn"
 
 この表現がサービスをうまく表現しているなと感じるとともに私がZennを好きな理由でもあります。
 
