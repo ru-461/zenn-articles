@@ -10,7 +10,7 @@ published: true
 
 Laravelには公式が提供している[Laravel Sail](https://laravel.com/docs/9.x/sail)と呼ばれる開発環境があります。
 
-内部的にDocker Composeを利用し、Dockerの利用環境があれば簡単に開発環境を用意できるという点、公式が提供している点が評価されており、日々利用者を広げています。
+内部的にDocker Composeを利用し、簡単に開発環境を用意できるという点、公式が提供している点が評価されており、日々利用者を広げています。
 https://github.com/laravel/sail
 
 Laravel SailはDocker初学者への配慮もあり、今自分が操作しているコンテナを意識することなくSailコマンドを経由してコマンド操作が可能となっております。そして公式のドキュメントには以下のような記載があります。
