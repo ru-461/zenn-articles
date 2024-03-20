@@ -50,7 +50,6 @@ $ sudo apt-get update
 リポジトリの追加と更新が終わったら以下のコマンドでapt-fastをインストールします。
 
 ```shell
-# apt-fastをインストール
 $ sudo apt-get -y install apt-fast
 ```
 
