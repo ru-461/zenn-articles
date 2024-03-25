@@ -17,7 +17,6 @@ macOS 12移行にアップグレードした環境で`php --version`をすると
 そこでmacOSでパッケージマネージャHomebrewを使用してPHPの実行環境をセットアップするまでにやったことまとめてみます。恥ずかしながらかなりハマったポイントがあるためこれから新規にPHPをmacOSにセットアップする方の参考になれば嬉しいです。
 
 PHPの公式サイトでも一番手っ取り早いインストール方法として紹介されているものになります。
-
 https://www.php.net/manual/ja/install.macosx.packages.php
 
 ## 使用環境
