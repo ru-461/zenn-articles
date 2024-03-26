@@ -59,7 +59,7 @@ $ git clone https://github.com/laravel/laravel.git example-app
 ```shell
 $ php artisan serve
 
-PHP Warning: ..
+  PHP Warning: ..
 ```
 
 なぜならGitHub上にあるlaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcompose.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
