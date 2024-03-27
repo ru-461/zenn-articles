@@ -53,7 +53,7 @@ https://github.com/microsoft/PowerToys/releases/
 また[Windows Package Manager](https://github.com/microsoft/winget-cli)を導入している場合は以下のコマンドをコマンドプロンプトやPowerShell上から実行することで簡単にインストールできます。
 
 ```powershell:PowerShell
-> WinGet install powertoys
+> winget install powertoys
 ```
 
 :::message
