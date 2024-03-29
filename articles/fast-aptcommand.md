@@ -79,7 +79,7 @@ apt-fastの設定は、/etc/apt-fast.confに記述されています。設定フ
 # パッケージを最新に更新
 $ sudo apt-fast update
 
-# 指定したパッケージをインストール(git)
+# パッケージを指定してインストール 例: Git
 $ sudo apt-fast install git
 ```
 
