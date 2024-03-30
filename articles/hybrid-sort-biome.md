@@ -33,7 +33,7 @@ ESLintを使用してコードのソートまで行える有名なルールに�
 それぞれ、import、propsを解析、並び替えを提案、`--fix`を使用しての自動修正まで実行可能なルールになります。
 これらは、Next.jsの新規プロジェクトセットアップ記事などでよくおすすめされていることもあり導入されているプロジェクトをよく見ます。
 
-しかしBiome 1.5.3現在、**上記のルールと完全に互換するルールは存在しません**。
+しかしBiome 1.5.3現在、**上記ルールと完全に互換するルールは存在しません**。
 
 補足しておくと、[eslint-plugin-import](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)相当の機能はBiomeでは"Analyzer imports-sorting"として実装されています。
 https://biomejs.dev/analyzer/#imports-sorting
