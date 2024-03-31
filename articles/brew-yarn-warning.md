@@ -8,8 +8,8 @@ published: true
 
 ## はじめに
 
-以前、M1 MacbookにてHomebrewを使い、anyenvとnodenvを使ったNode.jsの開発環境を構築しました。
-パッケージマネージャのYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`を実行したところ以下のWarningがでてきて焦りました。
+以前、Homebrewを使用して、anyenvとnodenvを使ったNode.jsの開発環境を構築しました。
+パッケージマネージャであるYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`を実行したところ以下の`Warning:`が出力され焦りました。
 
 ```shell
 $ brew doctor
@@ -24,8 +24,7 @@ those kegs to fail to run properly once built. Run `brew link` on these:
   yarn
 ```
 
-Waringは表示されますが、問題なくYarnを使ったパッケージ管理はできます。
-しかし、コマンドを実行するたびに表示されるのが少し気になり精神衛生上あまり良くないので解決策を探してみました。この記事は解決の備忘録となります。
+使用上あまり問題はありませんが、毎回表示されるのは精神衛生上あまり良くないので解決策を探してみました。この記事は解決の備忘録となります。
 
 ## 環境・バージョン等
 
@@ -40,8 +39,8 @@ Waringは表示されますが、問題なくYarnを使ったパッケージ管�
 
 https://github.com/anyenv/anyenv#homebrew-for-macos-user
 
-上記を参考にHomebrewでanyenvをインストールし、anyenv経由でnodenvをインストールしました。
-nodenvで導入した環境にYarnをHomebrew経由でインストールしています。
+上記を参考にHomebrewでanyenvをインストール、anyenv経由でnodenvをインストールしました。
+Yarnはnpm経由ではなく、Homebrew経由でインストールしています。
 
 ```shell
 # Homebrew経由でYarnをインストール
@@ -52,14 +51,14 @@ $ yarn --version
 1.22.10
 ```
 
-インストールに成功し、Yarnを使ったパッケージの管理はエラーなく行えるが、`brew doctor`を実行するたび毎回Warningが表示されるようになりました。
+無事にYarnのインストールに成功し、パッケージの管理を行えるようになりましたが、`brew doctor`を実行するたび毎回Warningが表示されるようになりました。
 
 ## 解決策
 
 結論としては、すでにYarnが存在しており、シンボリックリンクが切れていることが原因でした。
 
 エラーを見てみると、一番上に`You have unlinked kegs in your Cellar.`とあり、どうやらリンクが上手くできないために表示されているようです。
-Cellarとは英語で「貯蔵庫」を意味し、Homebrewではコマンドの実体であるKegを格納するためのディレクトリを指しています。
+Cellarとは英語で「貯蔵庫」を意味し、Homebrewではコマンドの実体を格納するためのディレクトリを意味します。
 
 Celllarの場所は以下のコマンドで調べることができます。
 
@@ -69,7 +68,7 @@ $ brew --cellar
 /opt/homebrew/Cellar
 ```
 
-メッセージに従い、`brew link`を試みるが。
+Warning内のメッセージに従い、`brew link`を試みるが。
 
 ```shell
 $ brew link yarn
@@ -87,7 +86,7 @@ To list all files that would be deleted:
   brew link --overwrite --dry-run yarn
 ```
 
-どうやらシンボリックリンクの作成に失敗しているようです。
+どうやら、シンボリックリンクの作成に失敗しているようです。
 
 ```shell
 $ rm `/opt/homebrew/bin/yarn`
@@ -117,7 +116,7 @@ Warningがきれいさっぱりなくなりました。
 Homebrewを使ってまだ日が浅いため、わからないことが多くありましたが、無事に問題を解決できてよかったです。Homebrewは`brew doctor`で問題をわかりやすく提示してくれるのがいいですね。
 結果的に今回のエラーがなぜ起こっていたのかわかりませんでしたが、ずっと放置していた警告メッセージがなくなり今後ぐっすり眠れそうです。
 
-今回の問題はYarn以外でも起こり得るようなので、同じような問題を抱えている方の参考になれば幸いです。
+同じような問題を抱えている方の参考になれば幸いです。
 
 最後まで読んでいただきありがとうございました。
 
