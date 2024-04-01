@@ -175,7 +175,7 @@ WSL2でUbuntuを使用している場合であってもHomebrewを導入する�
 
 ### Cargoを使用したインストール
 
-Rustのビルドシステム兼パッケージマネージャーのCargoを使用してezaを導入する方法です。
+Rustのビルドシステム兼パッケージマネージャーのCargoを使用してezaをインストールする方法です。
 Cargoを使用するためにRustの環境を作る必要があるのですが、今回はrustupというツールを使い簡単に始めます。
 https://www.rust-lang.org/ja/tools/install
 
