@@ -62,7 +62,7 @@ AppStoreからインストールしたあとは通常のアプリと同様にApp
 ## 初期設定
 
 xSearchは検索エンジンの追加をアプリ側で行います。このときSafariで拡張機能の有効化を行っておきます。
-設定から、Safari、機能拡張と進みxSearchの機能を「ON」にします。
+設定から、Safari → 機能拡張と進みxSearchの機能を「ON」にします。
 
 ![拡張機能オプションの画像](/images/fast-search-for-ios/image03.png)
 
