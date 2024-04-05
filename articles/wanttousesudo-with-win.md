@@ -18,7 +18,7 @@ Windowsには、コマンドプロンプトやPowershellを起動する際「管
 
 ## Scoop とは
 
-Windows向けのパッケージマネージャーになります。
+結論から述べると、**Windows向けのパッケージマネージャー**なります。
 https://scoop.sh
 
 有名なものとしてRed Hat系OSでいう、yumやRPM、Debian系OSだとapt、macOSでのHomebrewにあたります。
