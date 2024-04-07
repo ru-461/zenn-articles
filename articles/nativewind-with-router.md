@@ -113,7 +113,7 @@ module.exports = {
 
 ### CSSファイル作成
 
-Tailwind CSSで使用するCSSファイルを新規作成します。
+Tailwind CSSで使用するCSSファイル(global.css)を新規作成します。
 
 ```shell
 $ touch ./global.css
