@@ -114,7 +114,7 @@ $ docker run --rm -it node:16 /bin/bash
 root@:/#
 ```
 
-コンテナが起動し、接続できたのでNode.jsのバージョンを確認してみます。
+コンテナが起動し、接続できたのでインストールされているNode.jsのバージョンを確認してみます。
 
 ```docker
 root@:/# node -v
