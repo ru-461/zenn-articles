@@ -173,7 +173,6 @@ $ anyenv install --init
 
 ```shell
 $ anyenv install -l
-
   Renv
   crenv
   denv
