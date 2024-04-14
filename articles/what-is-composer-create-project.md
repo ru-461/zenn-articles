@@ -35,7 +35,7 @@ Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気
 > You can use Composer to create new projects from an existing package. This is the equivalent of doing a Git clone/svn checkout followed by a composer install of the vendors.
 [^1]: 引用 https://getcomposer.org/doc/03-cli.md#create-project
 
-要約すると、GitやSvnなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。想像よりもシンプルで驚きました。
+要約すると、GitやSVNなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。想像よりもシンプルで驚きました。
 
 本当にそうなのか検証してみます。
 
