@@ -22,9 +22,9 @@ Rubyなら[rbenv](https://github.com/rbenv/rbenv)，Node.jsなら[nodenv](https:
 
 ## anyenvでインストールできるもの
 
-v1.1.5時点では以下のツールをanyenv経由でインストール可能です。
+最新版のv1.1.5（2024年4月現在時点）では以下のバージョンマネージャをanyenv経由でインストール可能です。
 
-| ツール | 対象環境・言語 |
+| ツール名 | 対象の環境・言語 |
 | ---- | ---- |
 | Renv | R  |
 | crenv | Crystal |
