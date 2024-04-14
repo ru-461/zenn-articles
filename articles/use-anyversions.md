@@ -50,7 +50,7 @@ v1.1.5時点では以下のツールをanyenv経由でインストール可能�
 ### 実行環境
 
 - WSL2（Ubuntu 22.04 LTS）
-- macOS Monterey 12.5.1（AppleSilicon）
+- macOS Monterey 12.5.（AppleSilicon）
 
 ### 手動インストール
 
@@ -62,7 +62,7 @@ Gitからチェックアウトしてインストールする方法です。Git�
 ```shell
 # Gitのバージョンを確認
 $ git --version
-  git version 2.37.2
+git version 2.34.1
 ```
 
 Gitが使えることを確認したら以下のコマンドでユーザーのホームディレクトリにanyenv本体をクローンします。
@@ -121,10 +121,12 @@ $ echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
 続けて複数のenvをインストールするために必要なセットアップをしていきます。
 
 ```shell
-anyenv install --init
+$ anyenv install --init
+Manifest directory doesn't exist: /root/.config/anyenv/anyenv-install
+Do you want to checkout https://github.com/anyenv/anyenv-install.git? [y/N]:
 ```
 
-コマンドを実行途中で確認を求められたら続行します。`Completed!`と表示されれば完了です。これで手動でのanyenvセットアップは終了です。
+`Do you want to checkout...`と確認されるので`y`で続行します。`Completed!`と表示されれば完了です。これでanyenvのセットアップは終了です。
 
 ### Homebrewを使ったインストール
 
@@ -227,28 +229,25 @@ $ nodenv install -l
 ### バージョンを指定してのインストール
 
 ```shell
-# Node.js 14.15.4(LTS)をインストール
-$ nodenv install 14.15.4
+# Node.js 20.12.2(LTS)をインストール
+$ nodenv install 20.12.2
 
-# nodevをrehash 新しいバージョンをいれたら rehashを行う
-$ nodenv rehash
-
-# インストールされたバージョンを確認
+# インストールされているNode.jsのバージョンを一覧表示
 $ nodenv versions
-  14.15.4
+  20.12.2
 ```
 
 ### システム全体で使うバージョンを指定
 
-インストールしただけではまだnodeコマンドを使用できないため、システム上でメインとして使うバージョンを指定する必要があります。
+インストールしただけではまだNode.jsは使用できないため、システム上でメインとして使うバージョンを明示的にセットしてあげる必要があります。
 
 ```shell
-# システム全体で使用するバージョンを設定 例 node 14.15.4
-$ nodenv global 14.15.4
+# システム全体で使用するバージョンを指定
+$ nodenv global 20.12.2
 
 # Node.jsのバージョンを確認
 $ node --version
-  node 14.15.4
+v20.12.2
 ```
 
 ### 複数バージョンの切り替え
@@ -257,49 +256,51 @@ env系ツールを使う醍醐味である複数バージョンの切り替え�
 ここでは新しい別のバージョンを新たにインストールして切り替える例を紹介します。
 
 ```shell
-# 異なるバージョン(15.10.0)をインストール
-$ nodenv install 15.10.0
+# 異なるバージョン(21.7.3)をインストール
+$ nodenv install 21.7.3
 
 ~
-Installed node-v15.10.0-linux-x64 to /home/user/.anyenv/envs/nodenv/versions/15.10.0
+Installed node-v21.7.3-linux-x64 to /home/user/.anyenv/envs/nodenv/versions/21.7.3
 
-# 15.10.0がインストールされた グローバルで指定されている14.15.4は先頭に * (アスタリスク)がつく
+# 21.7.3のインストールが完了
+# システム全体で適用されている20.12.2は先頭に '*' がつく
 $ nodenv versions
-* 14.15.4 (set by /home/user/.anyenv/envs/nodenv/version)
-  15.10.0
+* 20.12.2 (set by /home/user/.anyenv/envs/nodenv/version)
+  21.7.3
 
-# システムで使うバージョンを15.10.0に変更
-$ nodenv global 15.10.0
+# システムで使うバージョンを21.7.3に変更
+$ nodenv global 21.7.3
 
 # 切り替わったか確認
-$ node -v
-  15.10.0
+$ node -version
+  21.7.3
 
-# システム全体で使うバージョンが15.10.0に変更されている
+# システム全体で使うバージョンが21.7.3に変更されている
 $ nodenv versions
-  14.15.4
-* 15.10.0 (set by /home/user/.anyenv/envs/nodenv/version)
+  20.12.2
+* 21.7.3 (set by /home/user/.anyenv/envs/nodenv/version)
 ```
 
 ### プロジェクトごとに使いたいバージョンを切り替える
 
 先程設定したバージョンと **異なるバージョン**をプロジェクト内で使いたいという前提でバージョンを切り替える例を紹介します。
-Node.js 15.10.0を14.15.4に切り替えてみます。
+
+Node.js 21.7.3を20.12.2に切り替えてみます。
 
 ```shell
-# システムでのバージョンを確認
+# 現在適用されているバージョンを確認
 $ node --version
-  15.10.0
+  21.7.3
 
-# バージョンを指定したいプロジェクトへ移動
+# 異なるバージョンを使用したいプロジェクトへ移動
 $ cd ~/Documents/example-project
 
-# 使用したいバージョンを(local)で指定
-$ nodenv local 14.15.4
+# localで使用したいバージョンを指定
+$ nodenv local 20.12.2
 
 # Node.jsのバージョンを確認
 $ node --version
-  14.15.4
+  20.12.2
 
 # バージョンを指定するとプロジェクト内に .node-version ファイルが作成される
 ```
@@ -313,7 +314,7 @@ $ anyenv versions
 
 nodenv:
   system
-* 14.15.4 (set by /home/user/.anyenv/envs/nodenv/version)
+* 20.12.2 (set by /home/user/.anyenv/envs/nodenv/version)
 phpenv:
   7.4.15
 rbenv:
