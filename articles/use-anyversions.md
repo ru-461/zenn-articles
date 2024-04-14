@@ -148,8 +148,8 @@ $ anyenv init
 
 設定ファイルに初期化処理を記述するように促されるので、`.zshrc`へ記述します。
 
-```
-$ echo 'eval "$(anyenv init -)"' >>  ~/.zshrc
+```shell:.zshrc
+$ echo 'eval "$(anyenv init -)"' >> ~/.zshrc
 ```
 
 これで初期化ができました。以下のコマンドで再ログインします。
