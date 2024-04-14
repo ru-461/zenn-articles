@@ -49,8 +49,8 @@ v1.1.5時点では以下のツールをanyenv経由でインストール可能�
 
 ### 実行環境
 
-- WSL2（Ubuntu 22.04 LTS）
-- macOS Monterey 12.5.（AppleSilicon）
+- Ubuntu 22.04 LTS (WSL2)
+- macOS Sonoma 14.4.1
 
 ### 手動インストール
 
