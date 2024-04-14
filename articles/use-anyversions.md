@@ -232,7 +232,7 @@ $ nodenv install -l
 # Node.js 20.12.2(LTS)をインストール
 $ nodenv install 20.12.2
 
-# インストールされているNode.jsのバージョンを一覧表示
+# インストールされているバージョンを一覧表示
 $ nodenv versions
   20.12.2
 ```
@@ -245,7 +245,7 @@ $ nodenv versions
 # システム全体で使用するバージョンを指定
 $ nodenv global 20.12.2
 
-# Node.jsのバージョンを確認
+# バージョンを確認
 $ node --version
 v20.12.2
 ```
@@ -262,7 +262,7 @@ $ nodenv install 21.7.3
 ~
 Installed node-v21.7.3-linux-x64 to /home/user/.anyenv/envs/nodenv/versions/21.7.3
 
-# 21.7.3のインストールが完了
+# バージョン21.7.3のインストールが完了
 # システム全体で適用されている20.12.2は先頭に '*' がつく
 $ nodenv versions
 * 20.12.2 (set by /home/user/.anyenv/envs/nodenv/version)
@@ -295,19 +295,33 @@ $ node --version
 # 異なるバージョンを使用したいプロジェクトへ移動
 $ cd ~/Documents/example-project
 
-# localで使用したいバージョンを指定
+# プロジェクト内で使用したいバージョンを指定
 $ nodenv local 20.12.2
 
-# Node.jsのバージョンを確認
+# バージョンを確認
 $ node --version
   20.12.2
 
 # バージョンを指定するとプロジェクト内に .node-version ファイルが作成される
 ```
 
-上の流れでバージョンを切り替えることができます。anyenvを経由して柔軟にenv系のツールをインストール、バージョンの指定までできるのは便利です。
+上の流れでバージョンを切り替えることができます。
 
-また、anyenvでは複数のenv系ツールをまとめて管理できます。以下のコマンドでanyenvにて管理しているenv系ツールを表示します。
+なお、上記で設定したローカルバージョンはプロジェクト内のみで有効となる点に注意が必要です。
+ディレクトリを移動すると`global`で設定したバージョンが優先的に使用されます。
+
+```shell
+# ホームディレクトリへ移動
+$ cd
+
+# システム全体で使うバージョンが表示される
+$ node --version
+  21.7.3
+```
+
+## Node.js以外のenv系ツールを使用する
+
+anyenvでは例で紹介したnodenv以外にも、多言語のenv系ツールをまとめて管理できます。以下のコマンドでanyenvにて管理しているenv系ツールを表示します。
 
 ```shell
 $ anyenv versions
