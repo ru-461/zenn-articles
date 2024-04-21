@@ -81,7 +81,7 @@ $ yarn dev
 ## Nuxt.js（3.x）
 
 Nuxt3からはセットアップ手順が大幅に変更されました。
-`nuxi`を用いて従来よりも簡略的かつ高速にセットアップできます。nuxiとはNuxt用の新しいCLIになります。
+`nuxi`コマンドを用いて従来よりも簡略的かつ高速にセットアップできます。nuxiとはNuxt用の新しいCLIになります。
 
 ```shell
 $ npx nuxi init <project-name>
