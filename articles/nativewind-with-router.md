@@ -44,7 +44,7 @@ $ bunx create-expo-app nativewind-app --template
 $ bun run start
 ```
 
-[Expo Go](https://expo.dev/client)や各種シミュレーターを使用してサンプルアプリを開けることを確認します。
+[Expo Go](https://expo.dev/client)やシミュレーターを使用してサンプルアプリを開けることを確認します。
 
 ![Navigationサンプル画像](/images/nativewind-with-router/image01.png)
 
