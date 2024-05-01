@@ -277,7 +277,7 @@ $ nodenv versions
 * 20.12.2 (set by /home/user/.anyenv/envs/nodenv/version)
   21.7.3
 
-# システムで使うバージョンを21.7.3に変更
+# システム全体で使うバージョンを21.7.3に変更
 $ nodenv global 21.7.3
 
 # 切り替わったか確認
