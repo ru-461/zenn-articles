@@ -33,7 +33,7 @@ those kegs to fail to run properly once built. Run `brew link` on these:
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
 - Node.js 14.15.4
-- yarn 1.22.10
+- Yarn 1.22.10
 
 ## ここまでやったこと
 
