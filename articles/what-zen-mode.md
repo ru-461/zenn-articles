@@ -46,7 +46,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 ## 設定でさらにカスタマイズ
 
-またZen modeは設定でさらにカスタマイズできます。初めてZen Modeを使うとき設定は以下のようになっています。
+またZen modeは設定でさらにカスタマイズできます。初めてZen Modeを使用する時の設定は以下のようになっています。
 
 ![設定がデフォルトの様子](/images/what-zen-mode/image03.png)
 *設定変更前*
