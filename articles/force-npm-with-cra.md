@@ -9,7 +9,7 @@ published: true
 :::message
 この記事の内容は[Create React App v5.0.0](https://github.com/facebook/create-react-app/releases/tag/v5.0.0)以前の内容です。現在はデフォルトでnpmをパッケージマネージャとして使用するように仕様変更されています。
 
-yarnを引き続き使うには`yarn create react-app <project-name>`でプロジェクトを生成できます。
+Yarnを引き続き使うには`yarn create react-app <project-name>`でプロジェクトを生成できます。
 :::
 
 ## はじめに
