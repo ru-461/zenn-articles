@@ -360,7 +360,7 @@ https://github.com/znz/anyenv-update
 # プラグイン管理用のディレクトリ作成
 $ mkdir -p $(anyenv root)/plugins
 
-# anyenv-updateプラグインをGitHubからクローン
+# anyenv-updateプラグインのリポジトリをGitHubからクローン
 $ git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 
 # anyenvで管理しているバージョンマネージャの一括アップデート
