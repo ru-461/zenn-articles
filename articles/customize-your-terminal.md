@@ -16,7 +16,7 @@ Rust製のコマンドやツールなどが昨今注目されており、GitHub�
 
 今回作成したものがこちらです。
 
-![starship x eza で作成したターミナル画像](/images/customize-your-terminal/image01.png)
+![starship x ezaで作成したターミナル画像](/images/customize-your-terminal/image01.png)
 *プロンプトはStarship、アイコンツリー表示にezaを使用*
 
 Starshipで作業ブランチ名とNode.jsのバージョンを表示し、ezaを使ってアイコン付きのツリー表示でReactのプロジェクトを開いた様子です。カラフルな表示とアイコンフォントで視認性を上げつつ、全体的にモダンな雰囲気になりました。
