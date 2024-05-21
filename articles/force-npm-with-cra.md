@@ -60,7 +60,7 @@ Yarnがインストールされている状態で`npx`を使用して作成し�
 
 ## オプションでnpmを強制させる
 
-Create react Appにはパッケージマネージャをnpmに固定するオプションがあります。
+Create react Appには使用するパッケージマネージャをnpmに固定するオプションがあります。
 
 ```shell
 $ npx create-react-app my-app --use-npm
