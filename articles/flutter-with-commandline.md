@@ -185,7 +185,7 @@ Flutterのインストールが始まります。インストール途中で以�
 依存関係としてなにがインストールされるかは`depends`で都度確認できます。
 
 ```powershell:powershell
-> scoop depends  flutter
+> scoop depends flutter
 
 adopt8-hotspot
 android-sdk
