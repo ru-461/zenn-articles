@@ -14,7 +14,7 @@ VSCodeには、[Stable release（Stable版）](https://code.visualstudio.com)と
 
 普段、私達がよく目にする青いVSCodeはStable releaseとなり、安定版と呼ばれています。一方Insider版は少し緑がかったアイコンをしており、色で区別がつくようになっています。
 
-**それぞれの VSCodeは独立しているため、共存させることも可能です。**
+**それぞれのVSCodeは独立しているため、共存させることも可能です。**
 
 ![VSCodeのアイコン画像](/images/try-vscodesyncinsider/image01.png)
 *左がStable版、右がInsiders版のアイコン*
