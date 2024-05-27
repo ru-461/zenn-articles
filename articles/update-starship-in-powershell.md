@@ -41,7 +41,7 @@ Starshipはクロスプラットフォームへ対応していることもあり
 ## Scoopでの管理に乗り換える
 
 手動での管理からScoopというWindows用のパッケージマネージャを使用したインストールに切り替えます。
-ScoopはWindowsで使用できる**コマンドラインベースのパッケージマネージャです。
+ScoopはWindowsで使用できる**コマンドラインベース**のパッケージマネージャです。
 https://scoop.sh/
 
 Windowsのパッケージマネージャというと[Chocolatey](https://chocolatey.org)が有名ですが、Scoopも並んで人気があるツールです。
