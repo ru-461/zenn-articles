@@ -233,21 +233,20 @@ export default function WindScreen() {
 `<Tabs.Screen />`を複製し末尾に新しいタブを追加してください。
 
 ```tsx:_layout.tsx
-      // 抜粋
-      <Tabs.Screen
-        name="two"
-        options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="wind"
-        options={{
-          title: 'Tab Wind',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
+<Tabs.Screen
+  name="two"
+  options={{
+    title: 'Tab Two',
+    tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+  }}
+/>
+<Tabs.Screen
+  name="wind"
+  options={{
+    title: 'Tab Wind',
+    tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+  }}
+/>
 ```
 
 アプリのタブバーに新しく`Tab Wind`タブが追加されています。
