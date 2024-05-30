@@ -75,7 +75,7 @@ apt-fastの設定は、/etc/apt-fast.confに記述されています。設定フ
 
 使い方は簡単で、おなじみのaptコマンドaptをapt-fastへ置き換えるだけです。コマンドを叩くと自動的にapt-fastが選択され、高速な通信が可能となります。
 
-```shell:example
+```shell
 # パッケージを最新に更新
 $ sudo apt-fast update
 
