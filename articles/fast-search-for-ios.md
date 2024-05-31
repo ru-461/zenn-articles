@@ -107,7 +107,7 @@ URLによく使われるキーワードが候補として用意されており�
 
 私が設定しているカスタムエンジンの設定例をご紹介します。私はかなりの数を登録しており、すべて載せるとかなりの量になるので、よく使うものからいくつか絞ってみました。
 
-| 検索エンジン（Engine Name） | キーワード（Shortcuts） |  URL（URL）|
+| 検索エンジン（Engine Name） | キーワード（Shortcuts） | URL（URL）|
 | ---- | ---- | ---- |
 | Zenn | zn | https://zenn.dev/search?q=%s |
 | Qiita | qi | https://qiita.com/search?q=%s |
