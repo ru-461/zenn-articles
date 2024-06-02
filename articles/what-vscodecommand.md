@@ -99,11 +99,13 @@ $ code -d hoge1.txt hoge2.txt
 ```shell
 $ code -v
 ```
+
 ### ヘルプを表示
 
 ```shell
 $ code -h
 ```
+
 使えるコマンドが一覧で表示されます。
 
 ## おわりに
