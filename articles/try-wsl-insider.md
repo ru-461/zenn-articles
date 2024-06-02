@@ -22,9 +22,9 @@ Mac上でWindowsを動かすといったことがIntel製CPUを搭載してい�
 
 ## 検証環境
 
-- macOS BigSurバージョン11.3（ホストOS）
-- Parallels Desktop 16 for Macバージョン16.5.0
-- Windows 10 on ARM Insider Preview OSビルド21354.1（ゲストOS）
+- macOS BigSurバージョン 11.3（ホストOS）
+- Parallels Desktop 16 for Macバージョン 16.5.0
+- Windows 10 on ARM Insider Preview OSビルド 21354.1（ゲストOS）
 
 ## 事前準備
 
