@@ -36,13 +36,13 @@ screenfetchコマンドはパッケージマネージャーから簡単にイン
 
 aptを使う場合は以下のコマンド。
 
-```shell:apt
+```shell
 $ apt install screenfetch
 ```
 
 Homebrewを使う場合は以下のコマンド。
 
-```shell:Homebrew
+```shell
 $ brew install screenfetch
 ```
 
