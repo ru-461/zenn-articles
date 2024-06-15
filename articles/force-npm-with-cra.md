@@ -84,7 +84,6 @@ We suggest that you begin by typing:
   npm start
 
 Happy hacking!
-
 ```
 
 Yarnがインストールされている環境でもnpmを使用するように設定できました。`--use-npm`をつけて作成した場合、yarn.lockではなくpackage-lock.jsonがプロジェクト配下に生成されます。
