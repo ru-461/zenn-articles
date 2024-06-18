@@ -266,7 +266,6 @@ SDKの場所のセットアップが終わった後に、PowerShellにてもう�
 Doctor summary (to see all details, run flutter doctor -v):
 [!] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
     ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
-
 ```
 
 上から2番目のAndroid toolchainの内容が変わっています。追加でライセンスに承諾する必要があるため、以下のコマンドでライセンスに承諾します。
