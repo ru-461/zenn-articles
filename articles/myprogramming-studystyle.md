@@ -75,7 +75,7 @@ Web開発を学ぶとき、どのような技術を学習すればいいのか�
 https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ja
 
 この拡張機能を導入することでWebサイトやWebアプリを構成している技術を分析できます。
-技術が見える化されることで新しい発見や、初めて見る技術も多く見ているだけでも面白いです。
+いつも使っているサービスの構成が可視化されることで新しい発見あり見ているだけでも面白いです。
 
 ### 実際にモノを作ってみる【アウトプット】
 
