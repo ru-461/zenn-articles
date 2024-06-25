@@ -135,7 +135,6 @@ $ sudo npm install -g yarn
 
 ```shell
 $ yarn --version
-
   1.22.10
 ```
 
