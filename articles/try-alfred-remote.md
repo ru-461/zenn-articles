@@ -29,7 +29,7 @@ Alfredの紹介で前置きが長くなってしまいましたが、今回紹�
 
 今回そんなAlfred Remoteを導入してどこまでの操作ができるか、作業を効率化できるかをやってみました。
 
-Alfred Remoteは**買い切り型の有料アプリ**になります。現状対応しているのがiPhone、iPadのみとなり、App Storeにて購入できます。私が購入したときは610円でした。以下のストアページになります。
+Alfred Remoteは**買い切り型の有料アプリ**になります。現状対応しているのがiPhone、iPadのみとなり、App Storeにて購入できます。
 https://apps.apple.com/jp/app/alfred-remote/id927944141
 
 :::message
