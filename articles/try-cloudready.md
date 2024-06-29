@@ -1,5 +1,5 @@
 ---
-title: "Windows上でChrome OSを動かす【CloudReady】"
+title: "Windows上でChromeOSを動かす【CloudReady】"
 emoji: "⛅"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["windows", "chromeos", "cloudready", "vmware", "ツール"]
@@ -170,7 +170,7 @@ CloudReadyを触っていく中でこの部分についても引き続き検証�
 ## おわりに
 
 仮想マシンで手軽にChromeOSの環境を動作させられるのが便利だと感じました。
-今後ChromeOSがCloudReadyに買収されるなどChrome OSが今後どんどん使いやすくなっていくと思われます。
+今後ChromeOSがCloudReadyに買収されるなどChromeOSが今後どんどん使いやすくなっていくと思われます。
 
 今回紹介した方法はあくまで検証用や動作確認用ですが、手元にWindowsPCが1台あれば環境を大きく変えることなく試すことができるのでChromeOSに触ってみたい方には最適な手段だと感じました。今回紹介しているのは仮想マシンでの利用ですが、CloudReady側としてはPCにメインのOSとしてインストールするのを推奨しているため今度は、メインOSとして使ってみるのも面白そうです。
 
