@@ -26,7 +26,7 @@ Cloudreadyは本家ChromeOSと比較したときにGoogle Playストアがサポ
 CloudReadyの公式ページはこちらになります。
 https://www.neverware.com/freedownload
 
-このCloudReadyを使用することで古いPCやMacを簡単にChromeBook化できるということで注目を集めています。
+このCloudReadyを使用することでPCを簡単にChromeBook化できるということで注目を集めています。
 
 つい先日、ChromeOSがCloudReadyを買収し統合される方針のツイートがありました。
 https://twitter.com/neverware/status/1338606293737730050?s=19
