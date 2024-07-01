@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-ChromeBookにはGoogle ChromeOSというOSが搭載されています。
+ChromeBookにはChromeOSというOSが搭載されています。
 これはオープンソースであるChromiumOSをベースに設計されているOSで、現在Chromebookにて採用されていることで有名です。
 
 UIがとてもシンプルで洗練されており、Googleのサービスを利用するのに便利、困らなそうという印象を受けました。
