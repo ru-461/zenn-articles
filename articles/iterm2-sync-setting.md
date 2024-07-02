@@ -51,6 +51,7 @@ Dropbox(.)
 └── Mac
    └── Settings
 ```
+
 ディレクトリを作成したらiTerm2の設定ファイルの保存先を指定します。
 
 Preferenceから"Load preferences from a custom folder or URL"にチェックを入れるとFinderが開くので、先程作成したファイルの場所を選択します。
