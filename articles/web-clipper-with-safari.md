@@ -66,7 +66,7 @@ https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
 初回起動時はNotionのログインページへ促されNotionのアカウントでログインする画面になります。ログイン後、Webページを開いた状態でNotion Web Clipperを起動すると以下のような表示になります。
 
 ![Webページをクリップする様子](/images/web-clipper-with-safari/image05.png)
-*Notion Web Clipper のページをクリップする様子*
+*Notion Web Clipperのページをクリップする様子*
 
 Notionにログインしてあるので、Workspaceと保存先のページを選ぶ項目が表示されています。
 
