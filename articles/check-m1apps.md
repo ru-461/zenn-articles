@@ -23,7 +23,7 @@ https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
 プロセスの中にあるアーキテクチャの項目に**Apple**と表示されていればそのアプリはAppleSiliconに**最適化されている**といえます。また従来のアーキテクチャ（x64）で動作しているアプリは**Intel**と表示されます。
 
 ![プロセスを見て調べる様子](/images/check-m1apps/image01.png)
-***プロセスごとにアーキテクチャを確認できる***
+*プロセスごとにアーキテクチャを確認できる*
 
 これで1つづつ確認していくこともできるのですが、**アプリごとに起動させて調べるのはとても大変**です。そこでiMobie M1 App Checkerというツールを使用することで、インストール済みアプリから一括で対応状況を確認できます。
 https://www.imobie.com/m1-app-checker/
