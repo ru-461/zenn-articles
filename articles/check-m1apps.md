@@ -36,7 +36,7 @@ $ brew install --cask imobie-m1-app-checker
 
 アプリを起動させるとこのような画面が表示されます。
 
-![M1-App-Checkerが起動した様子](/images/check-m1apps/image02.png)
+![M1 App Checkerが起動した様子](/images/check-m1apps/image02.png)
 
 アプリケーションがインストールされているディレクトリ（デフォルトでは/Applications）を確認して「チェック」をクリックします。するとチェック結果が表示されます。
 
@@ -49,10 +49,10 @@ $ brew install --cask imobie-m1-app-checker
 
 アプリの中にはアップデートでAppleSiliconに対応するものが多くあります。現在使用しているアプリが現行バージョンにてAppleSiliconに対応しているかしていないかを調べるときに活用できるサイトがいくつかあるため紹介します。
 
-上記のM1-App-Checkerは公式サイトにてAppleSiliconに対応しているかどうかを調べるための早見表を提供しています。
+上記のM1 App Checkerは公式サイトにてAppleSiliconに対応しているかどうかを調べるための早見表を提供しています。
 https://www.imobie.jp/m1-app-checker/?ref=m1
 
-![M1-App-Checkerが提供するリスト画像](/images/check-m1apps/image04.png)
+![M1 App Checkerが提供するリスト画像](/images/check-m1apps/image04.png)
 
 サイトの中段にリストがあり検索ボックスからアプリのAppleSilicon対応状況を調べることができます。ただ全体的にアプリの情報が他のサイトに比べて乏しく、検索しても見つからないアプリもあります。そこで以下で紹介するサイトも合わせて参照することをおすすめします。アプリが見つからない場合はリクエストもできるようです。
 
