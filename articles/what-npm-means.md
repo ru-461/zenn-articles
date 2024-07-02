@@ -18,7 +18,7 @@ https://github.com/npm/cli
 npmのリポジトリは長い間[npm/npm](https://github.com/npm/npm)でしたが、2018年にアーカイブされ現在は[npm/cli](https://github.com/npm/cli)へ移動しています。
 
 結論からまとめると**npmとは「npm is not an acronym」を再帰的に表したもの**であり、**「Node Package Manager」の頭文字を表しているものではない**とのことです。
-https://twitter.com/npmjs/status/105690425242820608?s=20
+https://x.com/npmjs/status/105690425242820608?s=20
 
 これだけ聞いてもあまりピンとこないので、この記事でnpmの主張や技術名の略式にまつわる文化についても掘り下げてみます。
 

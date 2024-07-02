@@ -62,7 +62,7 @@ https://ru-portforio.netlify.app
 ![基礎から学ぶVue.js表紙の画像](/images/try-portfoliosite/image02.jpg)
 *基礎から学ぶVue.js*
 
-[mio さん(@mio3io)](https://twitter.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
+[mio さん(@mio3io)](https://x.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
 
 :::message
 この記事を執筆した2020年11月現在、改定2版が出版されています。画像は改定前の表紙になります。

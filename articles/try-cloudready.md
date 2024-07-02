@@ -29,7 +29,7 @@ https://www.neverware.com/freedownload
 このCloudReadyを使用することでPCを簡単にChromeBook化できるということで注目を集めています。
 
 つい先日、ChromeOSがCloudReadyを買収し統合される方針のツイートがありました。
-https://twitter.com/neverware/status/1338606293737730050?s=19
+https://x.com/neverware/status/1338606293737730050?s=19
 
 CloudReadyが正式にChromeOSとして生まれ変わる日も近いみたいですね。
 
