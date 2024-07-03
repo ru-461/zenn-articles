@@ -49,6 +49,7 @@ https://x.com/code/status/1338886895867224070
 
 しかし、記事執筆時点（2021年2月上旬）では、VSCode（Stable版）はまだM1 Macに完全対応しておらず従来のアーキテクチャで動作している状態です。
 同時に起動した時のアクティビティモニタがこちらです。アーキテクチャを見ると一目瞭然ですね。
+
 ![アクティビティモニターの画像](/images/try-vscodesyncinsider/image02.png)
 *Stable版はIntel、Insiders版はAppleとなっている*
 
