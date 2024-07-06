@@ -346,5 +346,5 @@ Windows10は今現在もPowerToys、Windows Terminalや、Windows Package Manage
 
 ## 参考
 
-- [winget ツールを使用したアプリケーションのインストールと管理 | Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/package-manager/winget)
+- [winget ツールを使用したアプリケーションのインストールと管理 - Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/package-manager/winget)
 - [windows 10でFlutter開発環境構築【Scoop使用】 - Qiita](https://qiita.com/StrayDog/items/5ba0cbc00606eb8a0d46)
