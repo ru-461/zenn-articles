@@ -13,7 +13,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 その中で今回は[Heroku](https://jp.heroku.com)にてデプロイする方法を調べてみました。
 以前、[こちら](https://zenn.dev/ryuu/articles/try-vuetifyapp)の記事でVue CLIを使って作成したSPAを実際にHerokuへデプロイしていきます。
 
-以前Herokuにアプリをデプロイした経験はありましたが、Vue.jsで作成したSPAをデプロイした経験がなかったため、今回はHerokuにデプロイし動かせるところまでについてまとめてみます。
+以前、Herokuにアプリをデプロイした経験はありましたが、Vue.jsで作成したSPAをデプロイした経験がなかったため、今回はHerokuにデプロイし動かせるところまでについてまとめてみます。
 
 ## 環境
 
