@@ -120,7 +120,7 @@ Mac側にInsiders版のVSCodeをインストールし、Windows版（Stable版�
 わかりにくいですが、VSCodeの拡張機能をWindows（Stable版）とMacBook Pro（Insider版）で同期した様子です。Stable版とInsiders版ですが、うまく同期に成功しています。
 
 ![拡張機能を同期した様子](/images/try-vscodesyncinsider/image07.png)
-*Windows（Stable版） ・ MacBook Pro（Insider版）*
+*Windows（Stable版）・MacBook Pro（Insider版）*
 
 今回は起こりませんでしたが、同期を取り込む側で先に同期データが存在していた場合、設定の競合が発生します。
 その場合は一旦設定の同期をオフ → 全てのデバイスで同期をオフにし、もう一度設定の同期機能をオンにすることで解決します。
