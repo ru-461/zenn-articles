@@ -111,4 +111,4 @@ Notionはこれからスタンダードになるオールインワンツール�
 
 ## 参考
 
-- [Notion ドキュメントに埋め込むだけ！ミニアプリで機能強化できる「Apption」を使ってみた！ - paiza 開発日誌](https://paiza.hatenablog.com/entry/2020/12/09/143000)
+- [Notionドキュメントに埋め込むだけ！ミニアプリで機能強化できる「Apption」を使ってみた！ - paiza times](https://paiza.hatenablog.com/entry/2020/12/09/143000)
