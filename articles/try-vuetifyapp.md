@@ -393,9 +393,9 @@ VuetifyでFontAwesomeを利用するためには、あらかじめFontAwesomeの
 ターミナル上でnpmを使いインストールしていきます。
 
 ```shell
-npm install  @fortawesome/fontawesome-svg-core
-npm install  @fortawesome/free-brands-svg-icons
-npm install  @fortawesome/vue-fontawesome
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-brands-svg-icons
+npm install @fortawesome/vue-fontawesome
 ```
 
 インストールが完了したらsrc/main.jsに以下の記述をしてアイコンをインポートします。
