@@ -62,7 +62,7 @@ https://ru-portforio.netlify.app
 ![基礎から学ぶVue.js表紙の画像](/images/try-portfoliosite/image02.jpg)
 *基礎から学ぶVue.js*
 
-[mio さん(@mio3io)](https://x.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
+[mioさん(@mio3io)](https://x.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
 
 :::message
 この記事を執筆した2020年11月現在、改定2版が出版されています。画像は改定前の表紙になります。
@@ -72,7 +72,7 @@ https://ru-portforio.netlify.app
 
 昨年、書店で購入して読み進めていたのですが、忙しかったこともあり、積読になってしまっていました。触りの部分しか読めていなかったため、中途半端な理解のままVueで成果物を作ることなく、令和を迎えてしまいました。
 
-今回、勉強する際に、改めて最初から読み直し、重要なところはメモを取るなどして少しづつ理解を進めていきました。それと同時にUdemyにて人気が高かった[超 Vue.js 2 完全パック - もう他の教材は買わなくて OK！ (Vue Router, Vuex 含む)](https://www.udemy.com/course/vue-js-complete-guide)を購入し、猫本と並行して学習していきました。かなりボリュームがありますが、1回購入すれば何度も見られるということもあり、再生速度を変えながら通勤時間などで繰り返し見るなどして学習を進めました。どちらも半分くらいまで見終えたぐらいから構築した環境で開発をはじめました。なおVue.jsは[公式ドキュメント](https://jp.vuejs.org/index.html)も充実しているのでとても学習しやすいと感じました。
+今回、勉強する際に、改めて最初から読み直し、重要なところはメモを取るなどして少しづつ理解を進めていきました。それと同時にUdemyにて人気が高かった[超Vue.js 完全ガイド2024 (Vue Router, Pinia含む)](https://www.udemy.com/course/vue-js-complete-guide)を購入し、猫本と並行して学習していきました。かなりボリュームがありますが、1回購入すれば何度も見られるということもあり、再生速度を変えながら通勤時間などで繰り返し見るなどして学習を進めました。どちらも半分くらいまで見終えたぐらいから構築した環境で開発をはじめました。なおVue.jsは[公式ドキュメント](https://jp.vuejs.org/index.html)も充実しているのでとても学習しやすいと感じました。
 
 :::message
 ポートフォリオサイトを作成し始めるタイミングでちょうどよくVue3がリリースされたのですが、書籍とUdemyの内容に合わせるため、今回は**Vue 2.x系**を利用して制作しています。
