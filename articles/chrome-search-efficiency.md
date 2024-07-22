@@ -58,7 +58,6 @@ Redirect URLのフォームに新規タブを開いたときに開きたいペ�
 ![Google検索キーボードショートカットのストア画像](/images/chrome-search-efficiency/image07.png)
 
 以下のリンクからインストールできます。
-
 https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifgjemlhiekookpgjmkcelg?hl=ja
 
 操作方法はとても簡単で以下の通り。
