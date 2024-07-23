@@ -103,7 +103,7 @@ VMwareのトップ画面から仮想マシンを開くをクリック。
 
 デフォルトでは言語が英語、キーボード配列がUS配列になっているため私は以下のように変更しました。
 
-![言語とキーボード変更画面の画像](/images/try-cloudready/image08.png) *使用しているキーボードが JIS 配列のため日本語を選択*
+![言語とキーボード変更画面の画像](/images/try-cloudready/image08.png) *使用しているキーボードがJIS配列のため日本語を選択*
 
 VMwareは`Ctrl`＋`Alt`でホストOS（Windows）とゲストOS（CloudReady）を行き来できるのが便利です。
 
