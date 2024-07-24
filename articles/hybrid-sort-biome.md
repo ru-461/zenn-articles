@@ -332,7 +332,7 @@ https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 導入後、以下のコマンドでVSCodeの設定ファイルを作成します。既に作成してある場合は不要です。
 
 ```shell
-mkdir -p ./.vscode && touch ./.vscode/settings.json
+$ mkdir -p ./.vscode && touch ./.vscode/settings.json
 ```
 
 settings.jsonへ以下を記載します。
