@@ -68,4 +68,4 @@ Discussionにて紹介されたのですが、同じようなツールとして[
 
 - [sindresorhus / fast-cli](https://github.com/sindresorhus/fast-cli)
 - [回線速度のテストができる「fast」コマンドが便利だった](https://qiita.com/suin/items/8398f0b07299a3cc194f)
-- [windows10 fast.com のコマンドラインツール「fast-cli」を使って回線速度を計測する](https://mebee.info/2020/04/28/post-10023)
+- [windows10 fast.comのコマンドラインツール「fast-cli」を使って回線速度を計測する](https://mebee.info/2020/04/28/post-10023)
