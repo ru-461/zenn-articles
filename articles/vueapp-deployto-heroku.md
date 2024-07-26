@@ -238,5 +238,5 @@ $ heroku apps:rename 【変更したい名前】
 
 - [The Heroku CLI | Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install)
 - [Deployment | Vue CLI](https://cli.vuejs.org/guide/deployment.html#heroku)
-- [WSl 環境における Heroku CLI の導入 - Qiita](https://qiita.com/RoaaaA/items/604f7538d9ef57d2f9c7)
-- [Vue.js のアプリケーションを手早く Heroku で公開する - Qiita](https://qiita.com/akirakudo/items/f63322f6851feef3d9e4)
+- [WSL環境におけるHeroku CLIの導入](https://qiita.com/RoaaaA/items/604f7538d9ef57d2f9c7)
+- [Vue.jsのアプリケーションを手早くHerokuで公開する](https://qiita.com/akirakudo/items/f63322f6851feef3d9e4)
