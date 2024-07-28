@@ -38,7 +38,7 @@ https://apps.apple.com/jp/app/alfred-remote/id927944141
 
 ## Alfred Remoteを使う上での前提条件
 
-上記リンク、AppStoreからインストールします。Alfred Remoteは**iOS・iPadOSのみの**サポートになります。**Androidには対応していないので注意してください**。
+上記リンク、AppStoreからインストールします。Alfred Remoteは**iOS・iPadOSのみ**のサポートになります。**Androidには対応していないので注意してください**。
 
 またAlfred Remoteの単体では使用できないため、**Mac側にAlfredがインストールされていること**、**有料の機能拡張コンテンツである[Power Pack](https://www.alfredapp.com/powerpack)が導入されていることが必須になります**。
 
