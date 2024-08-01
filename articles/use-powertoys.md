@@ -163,6 +163,7 @@ MacにはSpotlight検索を便利した[Alfred](https://www.alfredapp.com)とい
 ![表示されたウインドウの画像](/images/use-powertoys/image08.png)
 
 例としてインストール済みのアプリを検索してみます。検索したい文字列を途中まで入れるとその文字列を含むアプリを列挙してくれます。
+
 ![検索結果の画像](https://storage.googleapis.com/zenn-user-upload/1qxl8zxk8g1ilge0tgc2vwx9v4l4)
 *Visual Studioと検索した結果*
 
