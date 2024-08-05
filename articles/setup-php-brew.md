@@ -66,7 +66,7 @@ export LDFLAGS="-L/opt/homebrew/opt/php@8.0/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
 ```
 
-こちらも追記後にシェルを再読み込みし有効化しておきます。
+こちらも追記後にシェルを再読み込みしておきます。
 
 これでPHPを使用できる環境が構築できました。
 
