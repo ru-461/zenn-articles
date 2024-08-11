@@ -86,7 +86,7 @@ $ php artisan key:generate && php artisan serve
 
 つまりコマンド内の`laravel/larvel`の部分を任意のリポジトリ名に変えて上げることで他のフレームワークにも応用できます。
 
-例えばSymfonyというPHPフレームワークの場合は以下のようになります。
+例えば[Symfony](https://symfony.com)というPHPフレームワークの場合は以下のようになります。
 
 ```shell
 $ composer create-project symfony/skeleton example-app
