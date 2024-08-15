@@ -81,7 +81,8 @@ Apple Silicon搭載のMacでUNIXのアスキーアートが表示される場合
 ![macで実行した様子](/images/screenart-installation/image03.png)
 
 ターミナル上にAppleのロゴであるリンゴのアスキーアートが表示されます。すごくおしゃれですね。
-以前は、UNIXのアスキーアートが表示されていましたが、最新版をインストールすることで解決しました。
+
+以前は、不具合でUNIXのアスキーアートが表示されていましたが、screenfetchの最新版をインストールしなおすことで解決しました。
 
 ### Termux（Androidアプリ）
 
