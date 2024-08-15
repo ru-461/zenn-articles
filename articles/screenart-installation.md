@@ -41,9 +41,10 @@ $ apt install screenfetch
 ```
 
 Homebrewを使う場合は以下のコマンド。
+Apple Silicon搭載（M1チップ以降）のMacシリーズではBig Sur以降のバージョンで正常動作しない不具合あるため、最新版を明示的にインストールするため`--HEAD`を指定します。
 
 ```shell
-$ brew install screenfetch
+$ brew install --HEAD screenfetch
 ```
 
 でコマンドをインストールできます。
@@ -70,12 +71,17 @@ $ screenfetch
 
 ### macOS
 
+:::message
+2024/08/15
+本記事のDiscussionにて情報提供していただきました。
+
+Apple Silicon搭載のMacでUNIXのアスキーアートが表示される場合は、`brew install`時にオプション`--HEAD`をつけることでAppleのロゴが表示できるようになります。
+:::
+
 ![macで実行した様子](/images/screenart-installation/image03.png)
-*macOSはUnix系のOSであるということがロゴからもわかりますね*
 
-Macのターミナル上でコマンドを入力したときは「UNIX」という文字列が大きく表示されます。とてもシンプルでかっこいいですね。M1チップ搭載のMacBook上で実行しているからなのかわかりませんが、端末情報の表示がうまくいきませんでした。その他エラーが出ていますがコマンドはうまく実行できロゴが表示されました。実行時のエラーは`-E`オプションを渡すことで非表示にできます。
-
-コマンドを入力するまでAppleのロゴがでるのかと予想してましたが、これもいいですね。もしもAppleのロゴが表示できるのならもっとテンション上がりそうです。
+ターミナル上にAppleのロゴであるリンゴのアスキーアートが表示されます。すごくおしゃれですね。
+以前は、UNIXのアスキーアートが表示されていましたが、最新版をインストールすることで解決しました。
 
 ### Termux（Androidアプリ）
 
