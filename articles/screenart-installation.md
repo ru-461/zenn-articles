@@ -64,7 +64,7 @@ $ screenfetch
 
 例えば、Ubuntu-20.04 LTSをインストールしているWSL2上で実行した場合は。
 
-![Ubuntuのロゴを表示している様子](/images/screenart-installation/image02.png)
+![Ubuntu上で実行している様子](/images/screenart-installation/image02.png)
 
 このようにおなじみのUbuntuのロゴがカラフルに表示されます。
 画面の左には、ロゴのアスキーアート、右にはコマンドを実行している端末の詳細情報が表示されます。ユーザー名は隠していますが、端末の詳細についてかなり細かく表示されるのが驚きです。
@@ -78,7 +78,7 @@ $ screenfetch
 Apple Silicon搭載のMacでUNIXのアスキーアートが表示される場合は、`brew install`時にオプション`--HEAD`をつけることでAppleのロゴが表示できるようになります。
 :::
 
-![macで実行した様子](/images/screenart-installation/image03.png)
+![macOS上で実行している様子](/images/screenart-installation/image03.png)
 
 ターミナル上にAppleのロゴであるリンゴのアスキーアートが表示されます。すごくおしゃれですね。
 
@@ -88,7 +88,7 @@ Apple Silicon搭載のMacでUNIXのアスキーアートが表示される場合
 
 Android OS上で動作するターミナル環境[Termux](https://play.google.com/store/apps/details?id=com.termux&hl=ja&gl=US)にコマンドをインストールして実行しました。
 
-![Termuxで実行した様子](/images/screenart-installation/image04.png)
+![Termux上で実行している様子](/images/screenart-installation/image04.png)
 *端末の機種名やOS、メモリまでしっかりと表示されている*
 
 TermuxはAndroid端末で動作するターミナルエミュレータになります。
@@ -107,7 +107,7 @@ Termuxでは、デフォルトのパッケージマネージャとしてaptが�
 $ screenfetch -D 'CentOS'
 ```
 
-![CentOSのロゴを表示した様子](/images/screenart-installation/image05.png)
+![CentOS上で実行している様子](/images/screenart-installation/image05.png)
 
 オプションを付けたことでUbuntuが動作する環境でもCentOSのロゴと端末情報を表示できました。
 引数のディストリビューション名にはCentOSの他にもおなじみのRed Hatやdebian、Arch Linux、Mintなどを指定できます。
