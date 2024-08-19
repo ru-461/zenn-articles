@@ -323,7 +323,7 @@ import type { Metadata } from 'next';
 
 VSCodeで開発する際に、自動でBiomeのフォーマットとリンターを適用したいので拡張機能を導入します。
 
-以下の拡張機能をMarketplaceから導入します。
+以下の拡張機能をVSCodeのMarketplaceから導入します。
 https://marketplace.visualstudio.com/items?itemName=biomejs.biome
 
 また、ESLintの拡張機能も合わせて導入します。
