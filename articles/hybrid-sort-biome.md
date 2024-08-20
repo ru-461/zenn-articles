@@ -329,7 +329,7 @@ https://marketplace.visualstudio.com/items?itemName=biomejs.biome
 また、ESLintの拡張機能も合わせて導入します。
 https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
-導入後、以下のコマンドでVSCodeの設定ファイルを作成します。既に作成してある場合は不要です。
+導入後、以下のコマンドでVSCodeの設定ファイル.settings.jsonを作成します。既に作成してある場合は不要です。
 
 ```shell
 $ mkdir -p ./.vscode && touch ./.vscode/settings.json
