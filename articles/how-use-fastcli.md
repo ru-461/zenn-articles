@@ -18,6 +18,7 @@ https://fast.com/ja/
 ## 公式コマンドラインツール「fast-cli」
 
 [Node.js](https://nodejs.org)がインストールされている場合、`npx`を利用してインストールせずに使用できます。
+
 npxについては過去に投稿した記事で説明しているので興味がある方は併せてご覧ください。
 https://zenn.dev/ryuu/articles/what-npxcommand
 
