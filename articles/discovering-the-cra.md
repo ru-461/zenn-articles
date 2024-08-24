@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Reactで手早くプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev)を使用する例は多いです。Reactの開発をしているMeta社が開発しており、Reactチュートリアルでも仕様が推奨されています。
+Reactで手早くプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev)を使用する例は多いです。Reactの開発をしているMeta社が開発しており、Reactチュートリアルでも使用が推奨されています。
 https://ja.reactjs.org/docs/create-a-new-react-app.html
 
 Node.jsを実行できる環境で以下のコマンドを実行することでReactのプロジェクトをすぐに生成できます。
