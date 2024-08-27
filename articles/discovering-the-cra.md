@@ -14,7 +14,7 @@ https://ja.reactjs.org/docs/create-a-new-react-app.html
 Node.jsを実行できる環境で以下のコマンドを実行することでReactのプロジェクトをすぐに生成できます。
 
 ```shell
-npx create-react-app my-app
+$ npx create-react-app my-app
 ```
 
 この例だとコマンドを実行しているディレクトリ直下に`my-app`というディレクトリが生成されます。
