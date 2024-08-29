@@ -58,8 +58,6 @@ https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overvi
 
 ### 設定方法
 
-設定方法はシンプルで、SylphyHornの設定画面を開き。
-
 ![SylphyHorn設定画面の画像](/images/fun-chromepip/image04.png)
 
 キー設定2となっているところにショートカットキーを設定するだけです。私は両方設定していますが、YouTubeなどの動画を固定するだけなら上にあるウィンドウをすべてのデスクトップに表示（ピン留め）の部分だけで機能します。`Shift`＋`Pause`でウィンドウを最前面に固定し、外すときは`Shift`＋`Ctrl`＋`Pause`で解除するようにします（画面上では`Cancel`となっていますが`Pause`になります）。これでピクチャー イン ピクチャー化した再生ウィンドウを常に最前面に保持したまま他の作業もできるようになりました。
