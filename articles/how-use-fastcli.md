@@ -19,7 +19,7 @@ https://fast.com/ja/
 
 [Node.js](https://nodejs.org)がインストールされている場合、`npx`を利用してインストールせずに使用できます。
 
-npxについては過去に投稿した記事で説明しているので興味がある方は併せてご覧ください。
+npxについては過去に投稿した記事で詳しく説明しているので興味がある方は併せてご覧ください。
 https://zenn.dev/ryuu/articles/what-npxcommand
 
 また、グローバルに`npm install --global fast-cli`としてインストールして使用もできます。
