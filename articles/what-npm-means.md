@@ -90,7 +90,7 @@ npmも「**N**ode **P**ackage **M**anager」かと思われがちですが、こ
 これは海外でハッカー集団の間での伝統や、略語でありながら皮肉、自虐的に略するような文化があったことに由來するようです。
 
 再帰的頭字語の例だとプログラミング言語のPHPの由来が有名です。
-[PHPのドキュメントの冒頭](https://www.php.net/manual/ja/intro-whatis.php)に以下の説明があります（PHPマニュアルはじめにから引用）
+[PHPドキュメントの冒頭](https://www.php.net/manual/ja/intro-whatis.php)に以下の説明があります（PHPマニュアルはじめにから引用）
 
 > PHP (PHP: Hypertext Preprocessor を再帰的に略したものです) は、広く使われているオープンソースの汎用スクリプト言語です。
 
