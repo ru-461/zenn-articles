@@ -118,7 +118,7 @@ FAQには合わせて以下のような説明があります。
 
 > The precursor to npm was actually a bash utility named "pm", which was the shortform name of "pkgmakeinst" - a bash function that installed various things on various platforms. If npm were to ever have been considered an acronym, it would be as "node pm" or, potentially "new pm".
 
-> npmの前身は、実際には "pm "という名前のbashユーティリティで、これは "pkgmakeinst "というbash関数の短縮形の名前でした。もしnpmの頭文字を取るとしたら、"node pm "か、あるいは "new pm "になるでしょう。
+> npmの前身は、実際には "pm" という名前のbashユーティリティで、これは "pkgmakeinst "というbash関数の短縮形の名前でした。もしnpmの頭文字を取るとしたら、"node pm "か、あるいは "new pm "になるでしょう。
 
 npmの前身となるパッケージマネージャの名前が「pm」というものだったようです。npmを頭文字をとったものとするならnpmは「node pm」「new pm」のようになると主張しています。
 
