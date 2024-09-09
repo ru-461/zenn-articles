@@ -12,7 +12,7 @@ published: true
 
 本家React NativeからExpoでのReact Native開発に移行し、今回初めてExpo SDKのメジャーアップグレードを行ったので記念の意味も込めて備忘録としてまとめてみます。
 
-[Expo](https://expo.dev)は[React Native](https://reactnative.dev)の開発支援ツールキットになります。
+[Expo](https://expo.dev)は[React Native](https://reactnative.dev)のフレームワークになります。
 Expo SDKはExpoを使用するうえで便利なパッケージなどをひとまとめにしたもので、Expoを使用するうえで必須になるパッケージとなります。
 Expo SDKはReact Native側のアップデートに追従する形で都度アップグレードが実施されております。
 
