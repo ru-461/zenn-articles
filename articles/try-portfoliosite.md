@@ -89,7 +89,7 @@ https://ru-portforio.netlify.app
 
 ![ドロワーを開いたときの様子](/images/try-portfoliosite/image_4.png)
 
-そこで見つけたのが [v-bottom-navigation コンポーネント](https://vuetifyjs.com/en/components/bottom-navigation/#usage)です。
+そこで見つけたのが[v-bottom-navigation コンポーネント](https://vuetifyjs.com/en/components/bottom-navigation/#usage)です。
 
 ```vue:components/Navigation.vue
 <template>
