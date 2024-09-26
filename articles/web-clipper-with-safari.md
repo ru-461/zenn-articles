@@ -17,7 +17,7 @@ Web Clipperという名の通り、ブラウザで今見ているWebページを
 私は、MacのSafariをあまり使うことがなかったのですが、先日、Notion Web ClipperがSafariに対応したと聞き、実際にSafariへ導入してしばらく使ってみました。
 https://x.com/NotionHQ/status/1387825941263486976
 
-Notion Web ClipperはNotionを使うならぜひとも合わせて使いたいくらいに便利なものなのでご紹介します。
+Notion Web ClipperはNotionを使うなら併せて使いたいくらいに便利なものなのでご紹介します。
 
 ## Safariに拡張機能を導入する
 
