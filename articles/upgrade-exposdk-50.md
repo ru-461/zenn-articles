@@ -108,7 +108,6 @@ $ bunx expo install --fix
 アップグレード作業もいよいよ終盤です。ここまできたら最後に診断を受けて終わりになります。
 Expoが提供している[expo-doctor](https://www.npmjs.com/package/expo-doctor)を使用します。
 
-
 :::message
 最新のSDKに対応させるため、必ず`@latest`まで指定してください。
 :::
