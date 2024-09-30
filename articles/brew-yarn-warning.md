@@ -101,7 +101,7 @@ Linking /opt/homebrew/Cellar/yarn/1.22.10... 2 symlinks created.
 ```
 
 2つのシンボリックリンクが作成されました。これで上手くシンボリックリンクが作成されたようです。
-もう一度`brew doctor`で問題がないか診てもらいましょう。
+もう一度`brew doctor`を実行し、問題がないか診てもらいましょう。
 
 ```shell
 $ brew doctor
