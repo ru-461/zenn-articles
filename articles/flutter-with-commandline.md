@@ -332,7 +332,7 @@ AVDマネージャーからAndroid Emulatorを作成して実行してみます�
 
 エミュレーター上でもエラーなく実行でき、Chromeで実行したときと同じような結果が得られました。このようにFlutterは単一のコードでWeb・モバイルを問わずに実行できる点が特徴です。
 
-以上で、ScoopからインストールしたFlutter、 Windows Package ManagerでインストールしたAndroid Studioを組み合わせて開発環境を構築することが出来ました。
+以上で、ScoopからインストールしたFlutter、Windows Package ManagerでインストールしたAndroid Studioを組み合わせて開発環境を構築することが出来ました。
 
 ## おわりに
 
