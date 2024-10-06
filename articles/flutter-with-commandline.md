@@ -327,7 +327,7 @@ Android Studio上でプロジェクトが開かれるのを確認したら、実
 
 AVDマネージャーからAndroid Emulatorを作成して実行してみます。
 
-![Pixel4 Emulator でアプリを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/3ck4my6py4f4lra31h6ue20tiht5=300x)
+![Pixel4 Emulatorでアプリを開いたときの様子](https://storage.googleapis.com/zenn-user-upload/3ck4my6py4f4lra31h6ue20tiht5=300x)
 *Pixel 4 API 30*
 
 エミュレーター上でもエラーなく実行でき、Chromeで実行したときと同じような結果が得られました。このようにFlutterは単一のコードでWeb・モバイルを問わずに実行できる点が特徴です。
