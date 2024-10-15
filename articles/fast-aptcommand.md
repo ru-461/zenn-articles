@@ -31,7 +31,7 @@ GitHubリポジトリのREADMEにもありますが、インストール自体�
 まずapt-fastはデフォルトのリポジトリに含まれておらずそのままではインストールできないため、下準備としてapt-fastがあるリポジトリを追加します。
 
 ```shell
-# apt-fastを含むリポジトリを追加
+# リポジトリを追加
 $ sudo add-apt-repository ppa:apt-fast/stable
 
   This PPA contains tested (stable) builds of apt-fast.
