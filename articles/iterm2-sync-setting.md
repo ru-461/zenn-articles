@@ -39,7 +39,7 @@ $ cd ~/Dropbox
 Dropboxディレクトリを開けることを確認したらiTerm2の設定ファイルの保存場所を作成します。
 
 ```shell
-# Dropboxディレクトリの直下に Mac/Settings ディレクトリを作成(任意)
+# Dropboxディレクトリの直下設定ファイル格納用のディレクトリを作成
 ~/Dropbox $ mkdir -p Mac/Settings
 ```
 
