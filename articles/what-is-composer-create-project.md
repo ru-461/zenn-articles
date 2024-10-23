@@ -62,7 +62,7 @@ $ php artisan serve
   PHP Warning: ..
 ```
 
-なぜならGitHub上にあるlaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcompose.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
+なぜならGitHub上にあるLaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcompose.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
 
 その時に使われるのが`composer install`になります。
 
