@@ -215,7 +215,7 @@ $ cargo install eza
 ```
 
 :::message
-Ubuntuなどの環境によっては`error: linker cc not found`と表示されビルドに失敗する場合があります。これはgccとその依存関係がないことによるエラーのため事前に`apt install build-essential`で必要なコマンドをインストールした上で再試行してみてください。
+Ubuntuなどの環境によっては`error: linker cc not found`と表示されビルドに失敗する場合があります。これはgccとその依存関係がないことによるエラーのため、事前に`apt install build-essential`で必要なコマンドをインストールした上で再試行してみてください。
 :::
 
 # ezaを使ってみる
