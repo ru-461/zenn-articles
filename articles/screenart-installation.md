@@ -89,7 +89,7 @@ Apple Silicon搭載のMacでUNIXのアスキーアートが表示される場合
 Android OS上で動作するターミナル環境[Termux](https://play.google.com/store/apps/details?id=com.termux&hl=ja&gl=US)にコマンドをインストールして実行しました。
 
 ![Termux上で実行している様子](/images/screenart-installation/image04.png)
-*端末の機種名やOS、メモリまでしっかりと表示されている*
+*端末の機種名やOS、搭載メモリまでしっかりと表示されている*
 
 TermuxはAndroid端末で動作するターミナルエミュレータになります。
 
