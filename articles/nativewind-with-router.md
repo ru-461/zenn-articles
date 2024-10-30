@@ -46,7 +46,7 @@ $ bun run start
 
 [Expo Go](https://expo.dev/client)やシミュレーターを使用してサンプルアプリを開けることを確認します。
 
-![Navigationサンプル画像](/images/nativewind-with-router/image01.png)
+![Navigationサンプルの画像](/images/nativewind-with-router/image01.png)
 
 ## NativeWindセットアップ
 
