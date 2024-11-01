@@ -28,7 +28,7 @@ Chromeを使う中で、このページではなくGoogleのトップページ�
 ![New Tab RedirectのChromeウェブストアページの画像](/images/chrome-search-efficiency/image02.png)
 https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna
 
-この拡張機能を使うことでChromeにて新規タブが開かれたときに、自動で設定したサイトにリダイレクトをしてくれます。設定画面はこんな感じでかなりシンプルです。
+この拡張機能を使うことでChromeにて新規タブが開かれたときに、自動で設定したサイトにリダイレクトしてくれます。設定画面はこんな感じでかなりシンプルです。
 
 ![New tab Redirect設定画面の画像](/images/chrome-search-efficiency/image03.png)
 
