@@ -41,7 +41,7 @@ App.vueで以下のように記述。
 import "devicon";
 ```
 
-![Vue.jsロゴアイコンの表示に成功した様子](/images/how-use-devicon/image02.png)
+![Vue.jsのロゴアイコン表示に成功した様子](/images/how-use-devicon/image02.png)
 
 App.vueの中に上の一文を追加したところ、うまく表示してくれました。
 
