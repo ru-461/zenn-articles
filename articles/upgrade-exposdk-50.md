@@ -34,7 +34,7 @@ https://docs.expo.dev/guides/using-bun/
 
 `bun`ではなく`npm`を使用する場合、各コマンド対応は以下になります。
 
-- `bun` → `npm`
+- `bun`  → `npm`
 - `bunx` → `npx`
 
 ### eas-cli
