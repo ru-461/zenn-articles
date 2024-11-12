@@ -85,7 +85,7 @@ $ bun run start
 Expo Go on <device-name> is outdated, would you like to upgrade?
 ```
 
-Expo SDKが最新でも、Expo Goのアップデートを忘れているとアプリを動作させることができないため、まず最優先で確認したいところです。
+Expo SDKが最新でも、Expo Goのアップデートを忘れているとアプリを動作させることができないため、最優先で確認したいところです。
 
 ## 依存関係の修復とチェック
 
