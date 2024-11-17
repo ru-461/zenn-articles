@@ -208,7 +208,7 @@ $ rustup --version
 $ rustup self update
 ```
 
-ここまでできたらCargoが使用できるため、以下のコマンドでezaをインストールできます。
+ここまでできたらCargoが使用できるため、以下のコマンドで`eza`をインストールできます。
 
 ```shell
 $ cargo install eza
