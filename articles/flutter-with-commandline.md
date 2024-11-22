@@ -310,7 +310,7 @@ Android Studioを再起動すると、「Create New Flutter Project」の項目�
 C:\Users\user\scoop\apps\flutter\current
 ```
 
-Flutter SDK pathのところにC:\Users\ユーザー名\scoop\app\scoop\apps\flutter\currentを指定して続行します。
+Flutter SDK pathのところに`C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\current`を指定して続行します。
 
 そのまま続行すると新規FlutterプロジェクトがAndroid Studio上で開かれます。
 
