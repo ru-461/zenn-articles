@@ -191,8 +191,7 @@ import "@/global.css"
 ```
 
 これにてExpo RouterへNativeWindの導入は完了です。プロジェクト内でTailwind CSSを使用する準備ができました。
-
-ここまで記載したら、一旦キャッシュをクリアしアプリを起動します。
+一旦キャッシュをクリアしアプリを起動します。
 
 ```shell
 $ bun run start -c
@@ -207,7 +206,7 @@ $ bun run start -c
 導入したNativeWindを使用して簡単なページを作成します。
 Expo Routerではappディレクトリを起点としてルーティングが自動生成されます。
 
-(tab)グループの中に新しいルート（/wind）を作成します。
+グループの中に新しいルート（/wind）を作成します。
 
 ```shell
 $ touch app/(tabs)/wind.tsx
