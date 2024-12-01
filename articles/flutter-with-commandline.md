@@ -289,7 +289,7 @@ Android Studioのメニュー画面から「Configure」→「Plugins」と進�
 
 ![Flutterプラグインをインストールする様子](/images/flutter-with-commandline/image06.png)
 
-これでFlutterの開発プラグインの導入は完了です。合わせて **Dartのプラグインも必要になるのですが Flutterのプラグインをインストールするときに合わせてインストールされる**ので気にしなくて問題ありません。
+これでFlutterの開発プラグインの導入は完了です。合わせて **Dartのプラグインも必要になるのですが Flutterのプラグインをインストールするときに併せてインストールされる**ので気にしなくて問題ありません。
 
 Android Studioを再起動すると、「Create New Flutter Project」の項目が増えているので、ここから新規Flutterプロジェクトを作成できるようになります。うまく反映されない場合はプラグイン画面から「Dart」と「Flutter」プラグインが**Enable**になっていることを再度確認してください。
 
