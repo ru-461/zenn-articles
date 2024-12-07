@@ -78,7 +78,7 @@ https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overvi
 
 macOSの環境で試したところ、前述した拡張機能の導入だけでデスクトップをまたいでのピクチャー イン ピクチャーができることを確認できました。
 
-Windowsと比べて、画面をすべてのデスクトップの最前面へ固定化する必要が無いのはかなり便利です。
+Windowsと比べて、デスクトップの最前面へ固定化する必要が無いのはかなり便利です。
 
 ## さいごに
 
