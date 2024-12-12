@@ -227,7 +227,7 @@ Ubuntuなどの環境によっては`error: linker cc not found`と表示され�
 $ eza
 ```
 
-lsコマンドの代わりに`eza`を使用することで全体的に文字をカラフルに表示してくれるためターミナルが一気に華やかになります。
+lsコマンドの代わりに`eza`を使用することで文字をカラフルに表示してくれるためターミナルが一気に華やかになります。
 
 また、`eza`はオプションがかなり多く、オプションを組み合わせて柔軟な表示ができのも魅力です。
 `eza`に続けてオプションを指定するのですが、オプションが覚えきれないくらい多いので詳しくは[Command-line options](https://github.com/eza-community/eza?tab=readme-ov-file#command-line-options)を参考にしてみてください。
