@@ -44,7 +44,7 @@ Redirect URLのフォームに新規タブを開いたときに開きたいペ�
 ![一番上のページへリンクフォーカスする様子](/images/chrome-search-efficiency/image05.png)
 *一番上にヒットしたサイトのタイトルへフォーカスが当たった状態*
 
-`Tab`で次のリンクを選択できるかと思いきや..。
+`Tab`で次のリンクを選択できるかと思いきや...。
 
 ![キャッシュボタンにフォーカスが当たる様子](/images/chrome-search-efficiency/image06.png)
 *サイトのキャッシュにフォーカスが...*
