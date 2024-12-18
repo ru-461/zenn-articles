@@ -26,7 +26,7 @@ Rubyなら[rbenv](https://github.com/rbenv/rbenv)，Node.jsなら[nodenv](https:
 
 | ツール名 | 対象の環境・言語 |
 | ---- | ---- |
-| Renv | R  |
+| Renv | R |
 | crenv | Crystal |
 | denv | D |
 | erlenv | Erlang |
