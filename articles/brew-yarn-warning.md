@@ -122,4 +122,4 @@ Homebrewを使ってまだ日が浅いため、わからないことが多くあ
 
 ## 参考
 
-- [HomebrewでdoctorしたらWarning: You have unlinked kegs in your Cellarとなった時の対応方法 - Qiita](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
+[HomebrewでdoctorしたらWarning: You have unlinked kegs in your Cellarとなった時の対応方法 - Qiita](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
