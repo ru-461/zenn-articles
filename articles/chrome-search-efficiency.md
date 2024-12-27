@@ -21,7 +21,7 @@ Chromeを初期設定で使うと、新規タブを開いたとき以下のよ�
 ![Chromeのデフォルトトップページの画像](/images/chrome-search-efficiency/image01.png)
 *Chromeインストール直後の画像です*
 
-Chromeを使う中で、このページではなくGoogleのトップページを使いたいと感じたため、このページを [Googleトップページ](https://www.google.com)に置き換えました。今回、使用した拡張機能は以下になります。
+Chromeを使う中で、このページではなくGoogleのトップページを使いたいと感じたため、このページを[Googleトップページ](https://www.google.com)に置き換えました。今回、使用した拡張機能は以下になります。
 
 ### New Tab Redirect
 
