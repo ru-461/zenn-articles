@@ -112,7 +112,7 @@ Chromeの拡張機能でよく目にするカラーピッカーですが、Windo
 
 Windows標準のファイル管理ツールエクスプローラーに機能を追加できます。
 
-[powertoys v0.47.0](https://github.com/microsoft/PowerToys/releases) 時点では以下の項目が追加可能です。
+[powertoys v0.47.0](https://github.com/microsoft/PowerToys/releases)時点では以下の項目が追加可能です。
 
 それぞれの機能は設定から個別にオン・オフできます。
 
