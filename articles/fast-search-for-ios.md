@@ -122,7 +122,6 @@ URLによく使われるキーワードが候補として用意されており�
 | Google翻訳（→ 日本語） | gtj | https://translate.google.com/?sl=auto&tl=ja&text=%s&op=translate |
 | Google翻訳（→ 英語） | gte | https://translate.google.com/?sl=auto&tl=en&text=%s&op=translate |
 
-
 上にサンプルとして上げていないものでも、検索ページのクエリを`%s`に置き換えることでほとんどのサイトに対応可能です。何を追加するべきか迷っている方の参考になれば幸いです。
 
 また上の検索エンジンはPC版のChromeなどでも同じものが使えるため、自分なりに作成したものをドキュメントとしてまとめてどの環境でも設定できるようにするのがおすすめです。
