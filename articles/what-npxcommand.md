@@ -8,15 +8,17 @@ published: true
 
 ## はじめに
 
-[Nuxt.js](https://nuxtjs.org/ja)のプロジェクトを作成する際に、[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation)を読みながら進めていたのですが。
+[Nuxt.js](https://nuxt.com/)を眺めていたときのことです。
 
 ```shell
-$ npx create-nuxt-app <project-name>
+$ npx nuxi@latest init <project-name>
 ```
 
-という記述があり、おなじみの`install`みたいな何かという勝手な認識だけで進めていました。
+という記述が目に入りました。
 
-しかし、何回かプロジェクト作成を繰り返す中で`npx`について理解していないことに気づき、調べてみたところ便利だと感じたのでまとめてみます。
+おなじみの`npm install`みたいな何かという勝手な認識だけで進めていました。
+
+しかし、何回か実行を繰り返す中で`npx`について理解していないことに気づき、調べてみたところ便利だと感じたのでまとめてみます。
 
 間違っている部分もあるかと思われますので、ご指摘いただけると幸いです。
 
