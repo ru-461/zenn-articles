@@ -10,7 +10,7 @@ published: true
 
 Node.jsにはデフォルトで**npm**というパッケージマネージャが付属します。
 
-npmはよく「**N**ode **P**ackage **M**anagerの略です」といった説明がされています。しかしそれは本当に正しいのでしょうか。一般的に「Node Package Manager」の頭文字を並べたものという認識がされているなか、先日npmのGitHubリポジトリを見ていたときに興味深い説明を発見したので調べてみました。
+npmが「**N**ode **P**ackage **M**anagerの略です」といった説明がされているのをよく見ます。しかしそれは本当に正しいのでしょうか。一般的に「Node Package Manager」の頭文字を並べたものという認識がされているなか、先日npmのGitHubリポジトリを見ていたときに興味深い説明を発見したので調べてみました。
 
 こちらがnpmのGitHubリポジトリになります。
 https://github.com/npm/cli
