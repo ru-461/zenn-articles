@@ -29,7 +29,7 @@ https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 VSCodeの設定をしているときにしたポストです。
 https://x.com/ru_461/status/1339206380914237442
 
-ツイート内の情報がかなり乏しく、なんのことか伝わりにくいですが、MacBookの環境構築をする際にCPUのアーキテクチャが変わったことでVSCodeの環境も大きく変わりました。
+MacBookの環境構築をする際にCPUのアーキテクチャが変わったことでVSCodeの環境も大きく変わりました。
 
 :::message
 2020年２月に提供されたVSCode 1.54にてStable版がAppleSiliconに対応しました。
