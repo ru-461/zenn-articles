@@ -45,7 +45,7 @@ https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
 
 anyenvのインストールは[以前投稿したこちらの記事](https://zenn.dev/ryuu/articles/use-anyversions)で詳しく紹介しているのでこの記事では割愛します。
 
-nodenv anyenv経由で以下のコマンドを使ってインストールできます。
+nodenvはanyenv経由で以下のコマンドを使ってインストールできます。
 
 ```shell
 # anyenvでnodenvをインストール
