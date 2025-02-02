@@ -24,7 +24,7 @@ https://x.com/npmjs/status/105690425242820608?s=20
 
 またnpmといえばのWebサイト[npm.js](https://www.npmjs.com)の左上にnpmという文字列から3語の造語（バクロニム）を表示するトリックが有名です。
 
-![npmトップページのIF](/images/what-npm-means/image01.gif)
+![npm公式サイトトップページの画像](/images/what-npm-means/image01.gif)
 ***クリックのたびにnpmのバクロニムが次々に変化します***
 
 10回クリックすることで意味深なGitHubのリポジトリページへ遷移する仕様となっています。
