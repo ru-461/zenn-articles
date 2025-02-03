@@ -32,7 +32,7 @@ https://x.com/npmjs/status/105690425242820608?s=20
 
 ## npmの主張
 
-GitHubリポジトリのREADMEに以下の見出しがあり、なぜnpmがnpmと呼ばれるのかについての注釈がありました。
+GitHubリポジトリのREADMEに以下の見出しがあり、なぜnpmが"npm"と呼ばれるのかについての注釈がありました。
 
 以下、README内「FAQ on Branding」からの引用となります。
 
