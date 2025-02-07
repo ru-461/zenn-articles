@@ -12,7 +12,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 そこで今回は、コーティング作業へ集中することに特化した機能、**禅モード(Zen mode)**をご紹介します。
 
-余談ではありますが、この記事を投稿しているこちらのサイト[Zenn](https://zenn.dev) とは何も関係ありません。**「Zen」**です。
+余談ではありますが、この記事を投稿しているこちらのサイト[Zenn](https://zenn.dev)とは何も関係ありません。**「Zen」**です。
 
 このサイト「Zenn」の名前の由来については過去に[catnoseさん](https://zenn.dev/catnose99)がdevsumi 2021にて言及されています。^[[Zennという名前にした理由](https://youtu.be/DTpGfpLybr0?t=1180)]
 
