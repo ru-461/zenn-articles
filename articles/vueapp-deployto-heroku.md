@@ -44,7 +44,7 @@ https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-i
 $ sudo snap install --classic heroku
 ```
 
-以下のような**エラー**が出ました。
+以下のようなエラーが出ました。
 
 ```shell
 error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: dial unix /run/snapd.socket: connect: no such file or directory
