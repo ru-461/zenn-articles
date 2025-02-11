@@ -97,7 +97,7 @@ fi
 
 コマンドの存在を判定してそれぞれ変数に代入しているのですが、全く同じ変数に代入しているのが少し気になりました。
 
-`docker compose`と`docker-compose`は一見同じコマンドのように見えますが、これはれっきとした別コマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
+`docker compose`と`docker-compose`は一見同じコマンドに見えますが、これはれっきとした別コマンドになります。Docker CLIの`compose`か、`docker-compose`かの違いになるようです。
 
 詳しくは以下のドキュメントにまとめられております。
 https://docs.docker.jp/compose/index.html#compose-v2-docker-compose
