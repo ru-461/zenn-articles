@@ -28,7 +28,7 @@ https://zenn.dev/ryuu/articles/what-npxcommand
 
 ## 実行
 
-### ダウンロードとアップロード速度を計測
+### ダウンロード速度とアップロード速度を計測
 
 ダウンロードの速度を計測します。
 
@@ -52,7 +52,7 @@ $ npx fast-cli --single-line
 
 1行でシンプルにダウンロード速度を計測します。
 
-### fast-cliのヘルプを表示
+### コマンドのヘルプを表示
 
 ```shell
 $ npx fast-cli --help
