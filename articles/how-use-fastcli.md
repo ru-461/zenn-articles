@@ -19,6 +19,8 @@ Webページにアクセスすると、接続中の回線速度を自動で測�
 
 ## コマンドラインツール「fast-cli」
 
+https://github.com/sindresorhus/fast-cli
+
 [Node.js](https://nodejs.org)がインストールされている場合、コマンド`npx`を利用してインストールせずに使用できます。
 
 npxについては過去に投稿した記事で詳しく説明しているので興味がある方は併せてご覧ください。
