@@ -81,7 +81,7 @@ select Locationに取得したい天気予報の地域を指定します。ア�
 
 ### Notionへカスタマイズしたウィジェットを埋め込む
 
-埋め込みを行うためにHTMLのコードをNotionで表示できる形式に変換する必要があります。 Apptionが提供する[DIY Embed URL](https://apption.co/embeds/new)でNotionに埋め込み表示できる形式へと変換できます。
+埋め込みを行うためにHTMLのコードをNotionで表示できる形式に変換する必要があります。Apptionが提供する[DIY Embed URL](https://apption.co/embeds/new)でNotionに埋め込み表示できる形式へと変換できます。
 
 ![埋め込みURlへ変換するページの画像](/images/notion-wedgets/image06.png)
 
