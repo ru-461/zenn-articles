@@ -28,7 +28,7 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 今回はWSL2（Windows Sub System for Linux 2）の環境にNode.jsとYarnを導入して動かすところまで行います。
 
 :::message
-現在、Yarnにはv1とv3、v4が存在します。この記事内ではYarn v1のインストール手順について解説します。
+現在、Yarnにはv1とv3、v4が存在します。この記事内では**Yarn v1**のインストール手順について解説します。
 :::
 
 ## 環境
