@@ -68,7 +68,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/php@8.0/include"
 
 こちらも追記後にシェルを再読み込みしておきます。
 
-これでPHPを使用できる環境が構築できました。
+これでPHP環境が構築できました。
 
 ## おわりに
 
