@@ -26,7 +26,8 @@ https://github.com/ru-461/tweet-counter
 
 ## 前提条件
 
-- Node.jsがインストールされておりnpmコマンドが使えること
+- Node.jsがインストールされていること
+- npmコマンドが使えること
 - Vue CLIがインストールされていること
 
 ## Vuetifyとは
