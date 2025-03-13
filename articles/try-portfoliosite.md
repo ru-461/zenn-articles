@@ -65,7 +65,7 @@ https://ru-portforio.netlify.app
 [mioさん(@mio3io)](https://x.com/mio3io?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)が執筆した`猫本`の愛称で親しまれている有名な1冊です。
 
 :::message
-この記事を執筆した2020年11月現在、改定2版が出版されています。画像は改定前の表紙になります。
+この記事を執筆した2020年11月現在、改定2版が出版されています。表紙は改定前のものになります。
 :::
 
 [書籍サポートページ](https://cr-vue.mio3io.com)が充実しているので、動くものを見ながら学習できたのが良かったです。
