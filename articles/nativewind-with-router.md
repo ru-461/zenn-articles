@@ -70,7 +70,8 @@ $ bunx pod-install
 ### 設定ファイル作成
 
 Tailwind CSSの設定ファイルであるtailwind.config.jsを作成します。
-パッケージのインストールに続けて以下のコマンドを実行します。
+
+以下のコマンドを実行します。
 
 ```shell
 $ bunx tailwindcss init
