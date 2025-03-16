@@ -80,7 +80,7 @@ $ sudo apt dist-upgrade && sudo apt install update-manager-core
 
 ### relese-upgradeの設定
 
-relese-upgradeの設定ファイルを変更します。以下のファイルをエディタで開きます。このとき使用するエディタはVimやnanoなど普段使用しているもので問題ありません。
+relese-upgradeの設定ファイルを変更します。以下のファイルをエディタで開きます。このとき使用するエディタは普段使用しているもので問題ありません。
 
 ```shell
 # sudoでファイルを開く
