@@ -54,7 +54,7 @@ $ git clone https://github.com/laravel/laravel.git example-app
 
 上のコマンドを実行することで現在のディレクトリ配下にexample-appというディレクトリが生成され、中にGitHubリポジトリ上のソースがすべてコピーされた状態になります。
 
-この状態でLaravelのビルトインサーバー（組み込み開発サーバー）を起動しようとすると必要なパッケージをロードできないためarisanコマンドでPHPのWarningが発生します。
+この状態でLaravelのビルトインサーバー（組み込み開発サーバー）を起動しようとすると必要なパッケージをロードできないため、arisanコマンドでPHPのWarningが発生します。
 
 ```shell
 $ php artisan serve
