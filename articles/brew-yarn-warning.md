@@ -92,7 +92,7 @@ To list all files that would be deleted:
 $ rm `/opt/homebrew/bin/yarn`
 ```
 
-メッセージに従い /opt/homebrew/bin/yarn ディレクトリを削除して、競合するファイルを上書きしつつリンクを行いました。
+メッセージに従い/opt/homebrew/bin/yarnディレクトリを削除して、競合するファイルを上書きしつつリンクを行いました。
 
 ```shell
 $ brew link --overwrite yarn
