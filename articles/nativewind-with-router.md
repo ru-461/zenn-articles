@@ -77,7 +77,7 @@ Tailwind CSSの設定ファイルであるtailwind.config.jsを作成します�
 $ bunx tailwindcss init
 ```
 
-実行するとプロジェクトのルートにtailwind.config.jsが新しく生成されます。
+実行するとプロジェクトのルートにtailwind.config.jsが生成されます。
 
 生成された設定ファイルを以下のように書き換えます。
 
