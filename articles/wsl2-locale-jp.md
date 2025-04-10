@@ -169,5 +169,5 @@ WSL2で日本語表示ができる環境を作ることができました。コ�
 
 ## 参考
 
-- [WSL の Ubuntu 環境を日本語化する：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1806/28/news043.html)
-- [Ubuntu - 日本語版 man は WSL 上の Ubuntu20.04 の apt からインストールすることができないのでしょうか？｜ teratail](https://teratail.com/questions/262291)
+- [WSLのUbuntu環境を日本語化する：Tech TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1806/28/news043.html)
+- [日本語版man はWSL上のUbuntu20.04のaptからインストールすることができないのでしょうか？ - teratail](https://teratail.com/questions/262291)
