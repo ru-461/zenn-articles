@@ -35,7 +35,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 ### Heroku CLIをWSL2にインストール
 
 Herokuは各プラットフォーム向けにHeroku CLIというツールを提供しているためこちらを利用します。
-Heroku公式ドキュメントに各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
+Heroku公式ドキュメント内に各プラットフォームごとのCLIをインストールする方法が列挙されているのでこちらを参考に進めます。
 https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-install
 
 ドキュメントに従い以下のコマンドをターミナルで実行。
