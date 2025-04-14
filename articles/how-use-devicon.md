@@ -25,7 +25,7 @@ published: true
 $ npm install devicon
 ```
 
-アイコンを表示させるためテンプレート内に以下のタグを入れてみる。
+アイコンを表示させるためテンプレート内に以下のタグを入れてみます。
 
 ```html:hello.vue
 <i class="devicon-vuejs-plain"></i>
