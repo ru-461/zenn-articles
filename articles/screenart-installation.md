@@ -30,7 +30,7 @@ GitHubリポジトリはこちらです。
 https://github.com/KittyKatt/screenFetch
 
 screenfetchコマンドはパッケージマネージャーから簡単にインストールできます。
-ここでは多数のDebian系のLinuxディストリビューションにて採用されているaptとMacユーザーに親しまれているHomebrewを使ったインストール方法をご紹介します。
+ここでは多数のDebian系のLinuxディストリビューションにて採用されているapt、Macユーザーに親しまれているHomebrewを使ったインストール方法をご紹介します。
 
 その他のパッケージマネージャーを使う場合は、[Installing screenFetch](https://github.com/KittyKatt/screenFetch/wiki/Installation)に詳しくインストール方法がまとめられているので環境に応じてその都度参照をお願いします。
 
