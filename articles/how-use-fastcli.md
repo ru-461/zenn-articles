@@ -26,7 +26,7 @@ https://github.com/sindresorhus/fast-cli
 npxについては過去に投稿した記事で詳しく説明しているので興味がある方は併せてご覧ください。
 https://zenn.dev/ryuu/articles/what-npxcommand
 
-また、グローバルに`npm install --global fast-cli`としてインストールして使用もできます。
+また、グローバルに`npm install --global fast-cli`としてインストールもできます。
 グローバルにインストールして使う場合は`fast-cli`を`fast`に適宜読み替えて実行してください。
 
 ## 実行
