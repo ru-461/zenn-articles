@@ -16,7 +16,7 @@ iTerm2はカスタマイズ機能にも優れており、自分の使いやす�
 
 今回、iTerm2とクラウドストレージサービスの[Dropbox](https://www.dropbox.com/ja)を使用して設定を管理、同期する方法について紹介します。
 
-## 設定ファイルの保存先をDropboxにする
+## 設定ファイルの保存先をDropboxに設定する
 
 iTerm2を起動して、設定（Preferences）を開きます。メニューからiTerm2 → Preferencesまたはショートカットキーで`⌘`＋`,`とすることで開くことができます。
 
