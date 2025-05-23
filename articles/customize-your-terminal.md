@@ -136,7 +136,7 @@ $ starship config
 
 設定ファイルの保存先はデフォルトで~/.config/starship.tomlとなります。
 
-Starship設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config)を見てみてください。
+Starshipは設定できる項目がかなり多く、自由なカスタマイズが可能です。詳しくは[設定 | Starship](https://starship.rs/ja-jp/config)を見てみてください。
 
 以下に記事内の画像にて使用している設定を記載します。
 
