@@ -76,7 +76,7 @@ $ sudo apt dist-upgrade && sudo apt install update-manager-core
 ```
 
 ディストリビューションアップグレードの依存解決が行われます。`apt install update-manager-core`は、update-manager-coreが存在しなかった場合のみインストールが行われます。
-エラー、警告がでないことを確認したら次のステップに進みます。
+エラーや警告がでないことを確認したら次のステップに進みます。
 
 ### relese-upgradeの設定
 
