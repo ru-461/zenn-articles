@@ -12,7 +12,7 @@
     "preview": "zenn preview"
   },
   "dependencies": {
-    "zenn-cli": "^0.1.159"
+    "zenn-cli": "^0.1.161"
   },
   "devDependencies": {
     "textlint": "^14.7.2",
