@@ -25,7 +25,7 @@ https://workona.com/
 
 ## 使い方
 
-まず、[Workona 公式ページ](https://workona.com)にブラウザでアクセスしサインアップします。
+まず、[Workona 公式ページ](https://workona.com)にアクセスしサインアップします。
 
 ![Workona公式ページトップ画像](/images/recommendations-for-tabs/image02.png)
 *SIGN UP FREEからアカウントを作成できます*
