@@ -14,7 +14,7 @@ published: true
 
 パッケージマネージャごとに微妙にコマンド、オプションが異なるため、環境が変わったときにコマンドが瞬間的に出てこないことがありました。そこでWSL2にもHomebrewが対応しているという情報を目にして今更ながらWSL2にHomebrewを導入しました。
 
-HomebrewといえばmacOSユーザー の特権という先入観でmac OSだけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
+HomebrewといえばmacOSユーザーの特権という先入観でmac OSだけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
 
 > The Missing Package Manager for macOS (or Linux)
 (macOS（またはLinux）用パッケージマネージャー)
