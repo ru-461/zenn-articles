@@ -73,7 +73,7 @@ $ npx create-react-app my-app --use-npm
 $ which yarn
 /opt/homebrew/bin/yarn
 
-# npmを強制するオプションをつけて作成
+# npmの利用を強制するオプションをつけて作成
 $ npx create-react-app my-app --use-npm
 
 ...
