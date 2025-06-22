@@ -254,7 +254,7 @@ export default function WindScreen() {
 ![新しくタブが追加された様子の画像](/images/nativewind-with-router/image02.png)
 
 新しく追加された`Tab Wind`をタップしてページを開きます。
-以下のようにTailwind CSSでスタイルが当たることを確認します。
+以下のようにTailwind CSSが適用されることを確認します。
 
 ![新しくページが追加された様子の画像](/images/nativewind-with-router/image03.png)
 
