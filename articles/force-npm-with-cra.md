@@ -14,7 +14,7 @@ Yarnを引き続き使うには`yarn create react-app <project-name>`でプロ�
 
 ## はじめに
 
-[Create React App](https://create-react-app.dev)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx crate-react-app my-app`とした場合は以下のように表示されYarnで起動するコマンドが促されます。
+[Create React App](https://create-react-app.dev)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx crate-react-app my-app`とした場合は以下のように表示されYarnで起動するコマンドが表示されます。
 
 ```shell
 # Yarnがローカルに存在
