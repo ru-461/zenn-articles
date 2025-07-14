@@ -21,7 +21,7 @@ https://doesitarm.com/app/nodejs/
 
 ![v16から配布されるようになったインストーラーの画像](/images/node-supports-applesilicon/image01.png)
 
-メジャーバージョンが上がったことで**Timers Promises API が安定版に移行**や、**V8 JavaScript エンジンが V8.9.0 へ更新**などと比較的大きな変更も含まれています。
+メジャーバージョンが上がったことで**Timers Promises APIが安定版に移行**や、**V8 JavaScriptエンジンがV8.9.0へ更新**などと比較的大きな変更も含まれています。
 
 Node.js v16のリリースノートはこちらになります。
 https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md
