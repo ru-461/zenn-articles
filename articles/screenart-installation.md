@@ -121,6 +121,7 @@ Androidのロゴ（ドロイド君）は`-A`オプションを付けないとう
 ---
 
 またコマンド実行時にエラーがでてロゴが見えにくい場合は -Dの前に`-E`オプションでエラーを取り除いて出力できます。
+
 端末情報だけを表示したい場合は`-n`オプション、単色表示したい場合は`-N`オプションなどscreenfetchコマンドには数多くのオプションがあります。
 
 使用できるオプションはGitHubリポジトリの[README - Running screenfetch](https://github.com/KittyKatt/screenFetch#running-screenfetch)にまとめられているので覗いてみてください。
