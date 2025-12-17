@@ -17,7 +17,7 @@ Zennでは[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ば�
 :::
 
 ```shell:.zshrc
-# Zenn CLI用にに定義したエイリアスの確認用
+# Zenn CLI用に定義したエイリアスの確認用
 alias agzenn='alias | grep zenn'
 # Zennのコンテンツ管理に移動
 alias zenn='cd ~/Documents/my-zenn-contents'
@@ -92,7 +92,7 @@ $ npx zenn preview
 
 と実行し、ブラウザで[localhost:8000](http://localhost:8000)へアクセスするとZenn上での見え方をリアルタイムで確認できます。
 
-この機能を簡単に呼び出すため、`zennpr`というエイリアスを設定しています。エイリアスを使うことで、コマンド`npx zenn preview`を簡略化でき時短に繋がります。
+この機能を簡単に呼び出すため、`zennpr`というエイリアスを設定しています。エイリアスを使うことで、コマンド`npx zenn preview`を簡略化できて時短に繋がります。
 
 ```shell:.zshrc
 # 記事・本のプレビュー
@@ -103,7 +103,7 @@ alias zennpr='zenn && npx zenn preview --open'
 
 ### 新しい記事・本の作成
 
-Zenn CLIを使って新しい記事・本を作成するときのコマンド、`npx zenn new:article`を`zennna` 、`npx zenn new:book`を`zennnb`としています。記事と本とでエイリアスの後ろを（new:article , new:book）をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ（任意の記事名）を指定でき、`npx zenn new:article`とするとランダムのスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug`というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs`のようにスラッグオプション（--slug）を含めたエイリアスも定義しています。
+Zenn CLIを使って新しい記事・本を作成するときのコマンド、`npx zenn new:article`を`zennna`、`npx zenn new:book`を`zennnb`としています。記事と本とでエイリアスの後ろ（new:article, new:book）をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ（任意の記事名）を指定でき、`npx zenn new:article`とするとランダムのスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug`というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs`のようにスラッグオプション（--slug）を含めたエイリアスも定義しています。
 
 ```shell:.zshrc
 # 新しい記事をスラッグを指定して作成
@@ -126,7 +126,7 @@ https://zenn.dev/zenn/articles/zenn-cli-guide
 
 今回、私が普段Zennの執筆をするときに活用しているエイリアスについて紹介しました。
 
-Zenn CLIとZennEditorはZenn独自の機能で、とても革新的なものだと感じています。この執筆体験をさらに良いものにするため、エイリアスなどでカスタマイズすることで、より執筆に集中できる環境を作ることができました。
+Zenn CLIとZenn EditorはZenn独自の機能で、とても革新的なものだと感じています。この執筆体験をさらに良いものにするため、エイリアスなどでカスタマイズすることで、より執筆に集中できる環境を作ることができました。
 
 今回紹介したエイリアスは、記事の執筆に専念できる環境作りというコンセプトで考えたものです。あくまで個人的な運用なので、ベストプラクティスとはいえませんが、参考程度に各自が使いやすいように設定してみてください。
 
