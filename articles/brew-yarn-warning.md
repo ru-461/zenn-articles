@@ -29,7 +29,7 @@ those kegs to fail to run properly once built. Run `brew link` on these:
 ## 環境・バージョン等
 
 - macOS Big Sur 11.2.1
-- HomeBrew 3.0.2
+- Homebrew 3.0.2
 - anyenv 1.1.2
 - nodenv 1.4.0+3.631d0b6
 - Node.js 14.15.4
@@ -60,7 +60,7 @@ $ yarn --version
 エラーを見てみると、一番上に`You have unlinked kegs in your Cellar.`とあり、どうやらリンクが上手くできないために表示されているようです。
 Cellarとは英語で「貯蔵庫」を意味し、Homebrewではコマンドの実体を格納するためのディレクトリを意味します。
 
-Celllarの場所は以下のコマンドで調べることができます。
+Cellarの場所は以下のコマンドで調べることができます。
 
 ```shell
 $ brew --cellar
@@ -68,7 +68,7 @@ $ brew --cellar
 /opt/homebrew/Cellar
 ```
 
-Warning内のメッセージに従い、`brew link`を試みるが。
+Warning内のメッセージに従い、`brew link`を試みましたが、
 
 ```shell
 $ brew link yarn
@@ -89,10 +89,10 @@ To list all files that would be deleted:
 どうやら、シンボリックリンクの作成に失敗しているようです。
 
 ```shell
-$ rm `/opt/homebrew/bin/yarn`
+$ rm /opt/homebrew/bin/yarn
 ```
 
-メッセージに従い/opt/homebrew/bin/yarnディレクトリを削除して、競合するファイルを上書きしつつリンクを行いました。
+メッセージに従い`/opt/homebrew/bin/yarn`を削除して、競合するファイルを上書きしつつリンクを行いました。
 
 ```shell
 $ brew link --overwrite yarn
