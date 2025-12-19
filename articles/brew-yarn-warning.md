@@ -68,7 +68,7 @@ $ brew --cellar
 /opt/homebrew/Cellar
 ```
 
-Warning内のメッセージに従い、`brew link`を試みましたが、
+Warning内のメッセージに従い、`brew link`を試みましたが。
 
 ```shell
 $ brew link yarn
