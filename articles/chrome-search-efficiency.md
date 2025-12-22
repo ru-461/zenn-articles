@@ -81,7 +81,7 @@ https://chrome.google.com/webstore/detail/google-search-results-sho/dchaandmcifg
 この拡張機能をインストールするとすぐにGoogle検索の結果画面で使用可能になります。
 
 ![Google検索キーボードショートカット導入後の様子](/images/chrome-search-efficiency/image08.png)
-*この拡張機能を導入したことで検索直後からフォーカスがあたりました*
+*この拡張機能を導入したことで検索直後からフォーカスが当たりました*
 
 すぐに`K`を押すと...。
 
