@@ -201,7 +201,7 @@ export default function Loading() {
 ### importの自動グループ化
 
 importの種別毎にグループ化、並び替えを行います。
-ルールを有効化するため.eslintrc.json内に以下を追記します。
+ルールを有効化するため、.eslintrc.json内に以下を追記します。
 
 ```diff json:.eslintrc.json
 {
@@ -239,7 +239,7 @@ importの種別毎にグループ化、並び替えを行います。
 グループ化したうえで、グループ毎に空行を入れてくれるため、BiomeのorganizeImportsとうまく組み合わせられるようになります。
 ソート順については、Biomeのもつ[Analyzer](https://biomejs.dev/analyzer/#imports-sorting)と合わせるため、`"alphabetize":`をアルファベット順（`asc`）としています。
 
-また、importのグループ化ついて細かく設定ができるため。好みに合わせて調整してみてください。
+また、importのグループ化について細かく設定ができるため、好みに合わせて調整してみてください。
 私は以下のような設定をしています。
 
 ```json:.eslintrc.json
@@ -297,7 +297,7 @@ eslint './src/**/*.{js,jsx,ts,tsx}' --fix
 
 例えば以下のようなコンポーネントのimportがある場合。
 
-```tsx:app/src/layout.tsx
+```tsx:src/app/layout.tsx
 import type { Metadata } from 'next';
 import { ChakraProvider } from '@chakra-ui/react';
 import { Header } from '@/components/Header';
@@ -308,7 +308,7 @@ import { Footer } from '@/components/Footer';
 
 ESLintによって以下のようにソート、グルーピングされます。
 
-```tsx:app/src/layout.tsx
+```tsx:src/app/layout.tsx
 import { ChakraProvider } from '@chakra-ui/react';
 
 import { Footer } from '@/components/Footer';
@@ -329,7 +329,7 @@ https://marketplace.visualstudio.com/items?itemName=biomejs.biome
 また、ESLintの拡張機能も合わせて導入します。
 https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
-導入後、以下のコマンドでVSCodeの設定ファイル.settings.jsonを作成します。既に作成してある場合は不要です。
+導入後、以下のコマンドでVSCodeの設定ファイル`.vscode/settings.json`を作成します。既に作成してある場合は不要です。
 
 ```shell
 $ mkdir -p ./.vscode && touch ./.vscode/settings.json
@@ -337,7 +337,7 @@ $ mkdir -p ./.vscode && touch ./.vscode/settings.json
 
 settings.jsonへ以下を記載します。
 
-```json:./vscode/settings.json
+```json:.vscode/settings.json
 {
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
@@ -375,9 +375,9 @@ https://biomejs.dev/ja/reference/cli/#biome-check
 上記のスクリプトでは`biome check`と合わせて`eslint`を実行します。
 eslintは`--fix`としているため、ESLintによってimportのグループ化とソート、propsの自動ソートが実行されます。
 
-これにより、コミットする前に`bun run check`と実行することでコードの粒度を保つことができます。
+これにより、コミットする前に`bun run check`を実行することでコードの粒度を保つことができます。
 
-また、[huskey](https://typicode.github.io/husky/)や[lint-staged](https://github.com/lint-staged/lint-staged)などを導入してコミット前に自動実行させるのもおすすめです。
+また、[husky](https://typicode.github.io/husky/)や[lint-staged](https://github.com/lint-staged/lint-staged)などを導入してコミット前に自動実行させるのもおすすめです。
 
 ## おわりに
 
