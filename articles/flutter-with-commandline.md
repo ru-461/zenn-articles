@@ -15,9 +15,9 @@ Windowsの場合はインストーラーを用いたインストールが、追�
 
 ### Windowsにおけるパッケージマネージャー
 
-Macには[Homebrew](https://brew.sh/ja/)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており。**2021 年 4 月現在でプレビュー版**として提供しております。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
+Macには[Homebrew](https://brew.sh/ja/)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli) として公式のパッケージマネージャーを開発しており、**2021年4月現在でプレビュー版**として提供しています。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
 
-今回は、Windowsのパッケージマネージャである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
+今回は、Windowsのパッケージマネージャーである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
 
 [Flutter の公式のドキュメント](https://flutter.dev/docs/get-started/install/windows)でも紹介されていますが、Flutterを公式サイトからダウンロードして、ローカルに配置、システム環境変数にFlutterのパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作してFlutterのアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
 
@@ -25,7 +25,7 @@ Macには[Homebrew](https://brew.sh/ja/)という強力なパッケージマネ�
 
 https://flutter.dev/
 
-Googleが開発しているUIツールキットになります。Googleが開発したDart言語で書かれており、単一のコードで「クロスプラットフォーム開発」が可能です。最近はモバイルアプリ開発を始める人がFlutterから学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。FlutterはSDKのインストールとプラグインのインストールを行うことでAndroidStudioやXcodeといったIDEを使用して開発することが出来ます。
+Googleが開発しているUIツールキットになります。Googleが開発したDart言語で書かれており、単一のコードで「クロスプラットフォーム開発」が可能です。最近はモバイルアプリ開発を始める人がFlutterから学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。FlutterはSDKのインストールとプラグインのインストールを行うことでAndroid StudioやXcodeといったIDEを使用して開発することができます。
 
 ## インストール検証環境
 
@@ -111,18 +111,18 @@ Downloading https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/an
 
 「インストールが完了しました」となればインストール成功です。うまくいかない場合は管理者権限にてコマンドを実行しているかを確認してください。
 
-Windowsのスタートメニューを確認するとAndroid Studioがインストールているのが確認できます。
+Windowsのスタートメニューを確認するとAndroid Studioがインストールされているのが確認できます。
 
 ![スタートメニューからAndroid Studioを確認した様子](/images/flutter-with-commandline/image02.png)
 
-公式サイトからインストーラーをダウンロードしてローカルで実行、GUIをポチポチとすることなくAndroid Stuidoをインストールできました。インストールに時間もそれほどかからないです。
+公式サイトからインストーラーをダウンロードしてローカルで実行、GUIをポチポチとすることなくAndroid Studioをインストールできました。インストールに時間もそれほどかからないです。
 
 ## Flutterの導入
 
 ここまでコマンドだけでAndroid Studioをインストールできました。続いてScoopというパッケージマネージャーを導入してFlutterと依存関係をまとめて導入します。
 ScoopとはWindows向けのパッケージマネージャーの1つでパッケージ管理に管理者権限を使わないという特徴を持ちます。
 
-Scoopはコマンドツール以外にもAndroid StudioやVSCodeようなGUIアプリケーションもインストールできます。しかし、Scoopを使用する場合、Windowsの想定するディレクトリ構成と異なるため不具合に繋がる可能性もあります。そのため私は現在GUIベースのアプリケーションをWindows Package Manager、CUIベースのツールをScoopと分けて管理しています。
+Scoopはコマンドツール以外にもAndroid StudioやVSCodeのようなGUIアプリケーションもインストールできます。しかし、Scoopを使用する場合、Windowsの想定するディレクトリ構成と異なるため不具合に繋がる可能性もあります。そのため私は現在GUIベースのアプリケーションをWindows Package Manager、CUIベースのツールをScoopと分けて管理しています。
 
 【公式サイト】
 https://scoop.sh/
@@ -162,7 +162,7 @@ Scoopコマンドが使えることを確認できたら、続けてFlutterを�
 Scoopには、**Bucket**という概念が存在し、Bucketを追加することでインストールできるアプリを増やすことができます。デフォルトでは`main Bucket`しか追加されていません。
 Flutter関連のツールはextras Bucketとjava Bucketに存在するため、予め追加しないとインストールできません。
 
-以下のコマンドでFlutterのインストールに必要なBucketをまとめて追加出来ます。
+以下のコマンドでFlutterのインストールに必要なBucketをまとめて追加できます。
 
 ```powershell:powershell
 > scoop bucket add java extras versions
@@ -243,11 +243,11 @@ No platform detected. Please select a platform to install [Default: 24]:
 ここでAndroid SDKの場所を設定してあげます。
 Scoopでインストールしたものは~\scoop\の中にすべてまとめられています。
 
-Scoopでインストールしたアプリとライブラリの格納場所は以下のコマンドで調べることが出来ます。
+Scoopでインストールしたアプリとライブラリの格納場所は以下のコマンドで調べることができます。
 
 ```powershell:powershell
 # インストール先を絶対パスで取得
-> scoop prefix android-sdk
+> scoop prefix flutter
 
 C:\Users\user\scoop\apps\android-sdk\current
 ```
@@ -304,12 +304,12 @@ Android Studioを再起動すると、「Create New Flutter Project」の項目�
 
 ```powershell:powershell
 # インストール先を絶対パスで取得
-> scoop prefix android-sdk
+> scoop prefix flutter
 
 C:\Users\user\scoop\apps\flutter\current
 ```
 
-Flutter SDK pathのところに`C:\Users\ユーザー名\scoop\app\scoop\apps\flutter\current`を指定して続行します。
+Flutter SDK pathのところに`C:\Users\ユーザー名\scoop\apps\flutter\current`を指定して続行します。
 
 そのまま続行すると新規FlutterプロジェクトがAndroid Studio上で開かれます。
 
@@ -331,11 +331,11 @@ AVDマネージャーからAndroid Emulatorを作成して実行してみます�
 
 エミュレーター上でもエラーなく実行でき、Chromeで実行したときと同じような結果が得られました。このようにFlutterは単一のコードでWeb・モバイルを問わずに実行できる点が特徴です。
 
-以上で、ScoopからインストールしたFlutter、Windows Package ManagerでインストールしたAndroid Studioを組み合わせて開発環境を構築することが出来ました。
+以上で、ScoopからインストールしたFlutter、Windows Package ManagerでインストールしたAndroid Studioを組み合わせて開発環境を構築することができました。
 
 ## おわりに
 
-今回、コマンドラインからパッケージ マネージャーを使ってAndroid StudioとFlutter 、各種SDKをインストールしてアプリをビルドするところまで行いました。Windows Package Managerはまだ現時点プレビュー版ですが、もうすぐ正式リリースされるみたいです。GUIを持つアプリケーションであっても、コマンドラインからいい感じにセットアップしてくれるのが便利だと感じました。また、Scoopも管理者権限をつかうことなく、アプリやコマンドをインストールできるので便利です。最終的にはWindows Package Managerにパッケージ管理を集約し、コマンド1つでWindowsの環境構築もできるようにしたいところです。
+今回、コマンドラインからパッケージマネージャーを使ってAndroid StudioとFlutter、各種SDKをインストールしてアプリをビルドするところまで行いました。Windows Package Managerはまだ現時点ではプレビュー版ですが、もうすぐ正式リリースされるみたいです。GUIを持つアプリケーションであっても、コマンドラインからいい感じにセットアップしてくれるのが便利だと感じました。また、Scoopも管理者権限をつかうことなく、アプリやコマンドをインストールできるので便利です。最終的にはWindows Package Managerにパッケージ管理を集約し、コマンド1つでWindowsの環境構築もできるようにしたいところです。
 
 開発環境の際にHomebrewを使っているドキュメントが多く、Windowsで参考にするとつまづきがちでしたがパッケージマネージャーを使うことで詰まることなく爆速での環境構築ができて満足しています。
 
