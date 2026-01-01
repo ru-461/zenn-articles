@@ -14,7 +14,7 @@ Yarnを引き続き使うには`yarn create react-app <project-name>`でプロ�
 
 ## はじめに
 
-[Create React App](https://create-react-app.dev)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx crate-react-app my-app`とした場合は以下のように表示されYarnで起動するコマンドが表示されます。
+[Create React App](https://create-react-app.dev)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx create-react-app my-app`とした場合は以下のように表示されYarnで起動するコマンドが表示されます。
 
 ```shell
 # Yarnがローカルに存在
@@ -28,7 +28,7 @@ $ npx create-react-app my-app
 
 We suggest that you begin by typing:
 
-  cd my-app2
+  cd my-app
   yarn start
 
 Happy hacking!
@@ -54,7 +54,7 @@ We suggest that you begin by typing:
 Happy hacking!
 ```
 
-Yarnがインストールされている状態で`npx`を使用して作成したReactプロジェクトではYarnの利用を想定してYarn.lockが生成されています。`npm start`でもアプリを立ち上げることは可能ですが、npmの利用を強制するところまでは至りません。
+Yarnがインストールされている状態で`npx`を使用して作成したReactプロジェクトではYarnの利用を想定して`yarn.lock`が生成されています。`npm start`でもアプリを立ち上げることは可能ですが、npmの利用を強制するところまでは至りません。
 
 そこでnpmを使用してのパッケージ管理を強制したい場合にできることを紹介します。
 
