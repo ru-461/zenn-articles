@@ -17,7 +17,7 @@ Windowsの場合はインストーラーを用いたインストールが、追�
 
 Macには[Homebrew](https://brew.sh/ja/)という強力なパッケージマネージャーが存在しますが、Windowsにも10年ぐらい前からパッケージ管理の仕組みをもつソフトがいくつか存在し、今現在も開発が続けられています。そして現在、Microsoftが[Windows Package Manager Client](https://github.com/microsoft/winget-cli)として公式のパッケージマネージャーを開発しており、**2021年4月現在でプレビュー版**として提供しています。パッケージマネージャーを使うことでCLI（コマンドプロンプトなど）からパッケージインストールや依存関係の管理ができるため、Windowsでも柔軟な環境構築ができるような日も近いのではと感じます。
 
-今回は、Windowsのパッケージマネージャーである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterのアプリをビルド、実行できるところまでやってみます。
+今回は、Windowsのパッケージマネージャーである、[Scoop](https://scoop.sh)とWindows Package Manager Clientを使用してFlutterアプリをビルド、実行できるところまでやってみます。
 
 [Flutter の公式のドキュメント](https://flutter.dev/docs/get-started/install/windows)でも紹介されていますが、Flutterを公式サイトからダウンロードして、ローカルに配置、システム環境変数にFlutterのパスを追加する方法が一般的だと思われます。ですが、今回はなるべく環境変数を触らずにコマンドでパッケージマネージャーを操作してFlutterのアプリの編集と実行できる環境を構築することを目標に環境構築をしました。
 
@@ -25,7 +25,7 @@ Macには[Homebrew](https://brew.sh/ja/)という強力なパッケージマネ�
 
 https://flutter.dev/
 
-Googleが開発しているUIツールキットになります。Googleが開発したDart言語で書かれており、単一のコードで「クロスプラットフォーム開発」が可能です。最近はモバイルアプリ開発を始める人がFlutterから学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。FlutterはSDKのインストールとプラグインのインストールを行うことでAndroid StudioやXcodeといったIDEを使用して開発することができます。
+Googleが開発しているUIツールキットになります。Googleが開発したDart言語で書かれており、単一のコードで「クロスプラットフォーム開発」が可能です。最近はモバイルアプリ開発を始める人がFlutterから学び始めている例を多く見るため、どんどん盛り上がってる印象を受けます。FlutterはSDKのインストールとプラグインのインストールを行うことでAndroid StudioやXcodeといったIDEを使用して開発できます。
 
 ## インストール検証環境
 
