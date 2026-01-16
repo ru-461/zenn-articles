@@ -21,7 +21,7 @@ Biomeが注目されたことで脱ESLintや脱Prettierに向けて動いてい�
 私も実際に環境構築を試みましたが、まだ一部のルールがBiomeで未実装のため、必要に応じてESLintを併用することがあります。
 
 日々ESLintからBiomeへの移行を進めながら、一時的ながらもESLintとBiomeを組み合わせたハイブリッドアプローチを取ることができたため記事にします。
-本構成としてはBiomeとESLint 9:1 ぐらいの比率で構成し、メインとしてBiomeを使いつつ、不足しているルールをESLintでカバーすることを目的としています。
+本構成としてはBiomeとESLint 9:1ぐらいの比率で構成し、メインとしてBiomeを使いつつ、不足しているルールをESLintでカバーすることを目的としています。
 
 ## ESLint併用に至った経緯
 
@@ -43,7 +43,7 @@ Biomeの機能としてimport文に空行を入れてグルーピングするこ
 
 都度、自分でグループ分けしてもいいのですが、importがファイル内に増えてくると手動ではどうしても管理しづらいという問題があります。
 
-そこで、ESLintの力を享受する名付けてソートハイブリッドアプローチを提案します。
+そこで、ESLintの力を享受する、名付けて「ソート・ハイブリッドアプローチ」を提案します。
 
 ## Biomeのセットアップ
 
@@ -128,7 +128,7 @@ ESLintやPrettierで提供されているルールは一通り網羅されてい
     "rules": {
       "recommended": true,
       "correctness": {
-				"noUnusedTemplateLiteral": "off",
+        "noUnusedTemplateLiteral": "off",
         "noUnusedVariables": "error",
         "useHookAtTopLevel": "error"
       },
@@ -146,7 +146,7 @@ ESLintやPrettierで提供されているルールは一通り網羅されてい
 
 今回Biomeのimport最適化機能を使用したいため必ず、`organizeImports`は`"enabled": true`にして有効化してください。
 
-私自身、Next.jsでBiomeを使用し始めたばかりなので、もっとおすすめの構成があれば教えて下さい。
+私自身、Next.jsでBiomeを使用し始めたばかりなので、もっとおすすめの構成があれば教えてください。
 
 ## ESLintの構成
 
@@ -162,9 +162,9 @@ JSX（TSX）内にてpropsを解析し最適な並び順を提案します。ま
 ```diff json:.eslintrc.json
 {
   "extends": "next/core-web-vitals",
-+ "rules": {
-+   "react/jsx-sort-props": "warn"
-+ }
++  "rules": {
++    "react/jsx-sort-props": "warn"
++  }
 }
 ```
 
@@ -200,7 +200,7 @@ export default function Loading() {
 
 ### importの自動グループ化
 
-importの種別毎にグループ化、並び替えを行います。
+importの種別ごとにグループ化、並び替えを行います。
 ルールを有効化するため、.eslintrc.json内に以下を追記します。
 
 ```diff json:.eslintrc.json
@@ -228,7 +228,7 @@ importの種別毎にグループ化、並び替えを行います。
 +       "pathGroupsExcludedImportTypes": ["builtin"]
 +     }
 +   ],
-  "react/jsx-sort-props": "warn"
++   "react/jsx-sort-props": "warn"
   }
 }
 ```
@@ -236,7 +236,7 @@ importの種別毎にグループ化、並び替えを行います。
 上記の設定で一番重要なのは`"newlines-between": "always",`の部分になります。
 後述するVSCodeのESLint拡張機能を使用する場合、`"groups"`の定義がないと自動でグループ化されません。必ず定義するようにします。
 
-グループ化したうえで、グループ毎に空行を入れてくれるため、BiomeのorganizeImportsとうまく組み合わせられるようになります。
+グループ化したうえで、グループごとに空行を入れてくれるため、BiomeのorganizeImportsとうまく組み合わせられるようになります。
 ソート順については、Biomeのもつ[Analyzer](https://biomejs.dev/analyzer/#imports-sorting)と合わせるため、`"alphabetize":`をアルファベット順（`asc`）としています。
 
 また、importのグループ化について細かく設定ができるため、好みに合わせて調整してみてください。
@@ -292,7 +292,7 @@ importの種別毎にグループ化、並び替えを行います。
 propsのソートと同様に以下のコマンドでESLintを使用した自動ソートが可能になります。
 
 ```shell
-eslint './src/**/*.{js,jsx,ts,tsx}' --fix
+$ bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
 ```
 
 例えば以下のようなコンポーネントのimportがある場合。
@@ -372,8 +372,8 @@ https://biomejs.dev/ja/reference/cli/#biome-check
 `biome check`はフォーマットとリントを同時に行ってくれる便利なコマンドになっております。
 また、`--apply`をつけることで修正可能なものを見つけて自動修正してくれます。
 
-上記のスクリプトでは`biome check`と合わせて`eslint`を実行します。
-eslintは`--fix`としているため、ESLintによってimportのグループ化とソート、propsの自動ソートが実行されます。
+上記のスクリプトでは`biome check`と合わせて`ESLint`を実行します。
+ESLintは`--fix`としているため、ESLintによってimportのグループ化とソート、propsの自動ソートが実行されます。
 
 これにより、コミットする前に`bun run check`を実行することでコードの粒度を保つことができます。
 
