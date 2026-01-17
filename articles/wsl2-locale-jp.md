@@ -125,7 +125,7 @@ $ date
 $ sudo apt install manpages-ja manpages-ja-dev -y
 ```
 
-実行することでマニュアルコマンド`man`の表示が日本語で表示されるようになります。
+実行することでマニュアルコマンド`man`が日本語表示されるようになります。
 
 ```shell
 $ man apt
