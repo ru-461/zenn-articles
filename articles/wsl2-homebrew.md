@@ -10,11 +10,11 @@ published: true
 
 [前回の記事](https://zenn.dev/ryuu/articles/brew-yarn-warning)に続きHomebrew関連の記事になります。
 
-私自身、WindowsのWSL2とMacbookの環境を行き来することが多くあります。それぞれパッケージマネージャーを経由してツールのインストールを行うことが多くあり、今までWSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt) 、Macでは[Homebrew](https://brew.sh/ja/)と使用しています。
+私自身、WindowsのWSL2とMacBookの環境を行き来することが多くあります。それぞれパッケージマネージャーを経由してツールのインストールを行うことが多くあり、今までWSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt)、Macでは[Homebrew](https://brew.sh/ja/)と使用しています。
 
 パッケージマネージャごとに微妙にコマンド、オプションが異なるため、環境が変わったときにコマンドが瞬間的に出てこないことがありました。そこでWSL2にもHomebrewが対応しているという情報を目にして今更ながらWSL2にHomebrewを導入しました。
 
-HomebrewといえばmacOSユーザーの特権という先入観でmac OSだけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
+HomebrewといえばmacOSユーザーの特権という先入観でmacOSだけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
 
 > The Missing Package Manager for macOS (or Linux)
 (macOS（またはLinux）用パッケージマネージャー)
@@ -54,14 +54,14 @@ $ sudo apt update
 - Glibc 2.13
 - CPU（64-bit x86_64）
 
-現在使っているPCではx86_64のCPU上でWSL2（Ubuntu 20.0.4）が動作しているため、以下のパッケージをコマンドでインストールします。
+現在使っているPCではx86_64のCPU上でWSL2（Ubuntu 20.04）が動作しているため、以下のパッケージをコマンドでインストールします。
 
 ```shell
 $ sudo apt-get install build-essential curl file git
 ```
 
 :::message
-build-essentialとは開発によく使用されるビルドパッケージをまとめてイントールできるものです。
+build-essentialとは開発によく使用されるビルドパッケージをまとめてインストールできるものです。
 :::
 
 ### インストールスクリプトの実行
@@ -87,7 +87,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 インストールと同時に初期設定をするため完了までしばらく時間がかかります。
 
-ターミナルに`==> Installation successful!`と表示されれるとインストールが完了です。
+ターミナルに`==> Installation successful!`と表示されるとインストールが完了です。
 
 しかしまだWarningが表示されており、brewコマンドを使うことができません。
 引き続きターミナルに表示されたNext stepsと公式ドキュメントを参考に初期設定を進めます。
@@ -140,7 +140,7 @@ Homebrew/linuxbrew-core (git revision b2e4cd; last commit 2021-02-27)
 
 brewコマンド実行の際に怒られる場合はおなじみの`brew doctor`で細かく指摘を受けることができます。
 
-HomebrewではパッケージをFomulaと呼び、以下のようにインストールします。
+HomebrewではパッケージをFormulaと呼び、以下のようにインストールします。
 
 ```shell
 # treeコマンドをHomebrewでインストール
