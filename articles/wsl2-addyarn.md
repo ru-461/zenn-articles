@@ -11,7 +11,7 @@ published: true
 YarnとはJavaScript用のパッケージマネージャーです。
 
 Node.jsにはデフォルトで[npm](https://www.npmjs.com)と呼ばれるパッケージマネージャーが付属します。
-パッケージマネージャとしてはnpmが有名ですが、他にもパッケージマネージャーはいくつか存在します。
+パッケージマネージャーとしてはnpmが有名ですが、他にもパッケージマネージャーはいくつか存在します。
 その中の１つにMeta（Facebook）社が開発したYarnというパッケージマネージャーがあります。
 
 こちらがYarnの公式ページになります。
@@ -25,7 +25,7 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 
 丁寧な解説記事ありがとうございます。
 
-今回はWSL2（Windows Sub System for Linux 2）の環境にNode.jsとYarnを導入して動かすところまで行います。
+今回はWSL2（Windows Subsystem for Linux 2）の環境にNode.jsとYarnを導入して動かすところまで行います。
 
 :::message
 現在、Yarnにはv1とv3、v4が存在します。この記事内では**Yarn v1**のインストール手順について解説します。
