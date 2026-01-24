@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code) は拡張機能が豊富で柔軟なコーディング環境を作れるエディタでとても人気があります。また最近では同社が開発しているTypeScriptがフロントエンド開発のトレンドになってることもあり、VSCodeをメインのエディタとして使用することも多くなってきました。私自身、VSCodeにて記事を執筆していることもありかなりお世話になってます。
+Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code)は拡張機能が豊富で柔軟なコーディング環境を作れるエディタでとても人気があります。また最近では同社が開発しているTypeScriptがフロントエンド開発のトレンドになってることもあり、VSCodeをメインのエディタとして使用することも多くなってきました。私自身、VSCodeにて記事を執筆していることもありかなりお世話になってます。
 
 そこで今回は、コーディング作業へ集中することに特化した機能、**禅モード(Zen Mode)**をご紹介します。
 
@@ -75,6 +75,6 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 個人的にこのZen（禅）で集中力を高めるという発想がかなり気に入っています。小技的な機能にはなりますが、ショートカットキー1つでいつでも集中へ特化したレイアウトに変更できるのはとても便利です。またVSCodeは有志が開発している拡張機能が豊富で、VSCodeだけで完結できることが多くオールインワンエディタとしてのポテンシャルを秘めていると感じました。今回紹介したZen Mode以外にも便利な機能が多く、VSCodeを通して得られる**オールインワンな開発体験**にはすごく満足しています。
 
-Zen ModeはJetBrains社の提供するPhpStorm^[[IDE 表示モード | PhpStorm](https://pleiades.io/help/phpstorm/ide-viewing-modes.html)] やPyCharm^[[IDE 表示モード | PyCharm](https://pleiades.io/help/pycharm/ide-viewing-modes.html)]などのIDEにも実装されているようです。他にも搭載しているエディタ、IDEがないか探してみるのも面白いですね。
+Zen ModeはJetBrains社の提供するPhpStorm^[[IDE 表示モード | PhpStorm](https://pleiades.io/help/phpstorm/ide-viewing-modes.html)]やPyCharm^[[IDE 表示モード | PyCharm](https://pleiades.io/help/pycharm/ide-viewing-modes.html)]などのIDEにも実装されているようです。他にも搭載しているエディタ、IDEがないか探してみるのも面白いですね。
 
 最後まで読んでいただきありがとうございました。
