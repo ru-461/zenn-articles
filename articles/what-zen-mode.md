@@ -14,7 +14,7 @@ Microsoft社が開発している[VSCode](https://azure.microsoft.com/ja-jp/prod
 
 余談ではありますが、この記事を投稿しているこちらのサイト[Zenn](https://zenn.dev)とは何も関係ありません。**「Zen」**です。
 
-このサイト「Zenn」の名前の由来については過去に[catnoseさん](https://zenn.dev/catnose99)がdevsumi 2021にて言及されています。^[[Zennという名前にした理由](https://youtu.be/DTpGfpLybr0?t=1180)]
+このサイト「Zenn」の名前の由来については過去に[catnoseさん](https://zenn.dev/catnose99)がDevelopers Summit 2021にて言及されています。^[[Zennという名前にした理由](https://youtu.be/DTpGfpLybr0?t=1180)]
 
 > 善い行いをすればいずれ返ってくる...  →  善  →  "Zenn"
 
