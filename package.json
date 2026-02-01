@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "i": "^0.3.7",
-    "zenn-cli": "^0.4.2"
+    "zenn-cli": "^0.4.4"
   },
   "devDependencies": {
     "textlint": "^15.5.1",
