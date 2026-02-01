@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-PHPでパッケージ間の依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作ろときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
+PHPでパッケージ間の依存解決をするときは[Composer](https://getcomposer.org)がよく使われます。PHPのフレームワークなどでプロジェクトの雛形を作るときに毎回`composer create-project xxx`とお決まりのコマンドを実行することが多いです。
 
 例えば、PHPのフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドを実行すると最新バージョンのLaravelプロジェクトが自動生成されます。
 
@@ -54,7 +54,7 @@ $ git clone https://github.com/laravel/laravel.git example-app
 
 上のコマンドを実行することで現在のディレクトリ配下にexample-appというディレクトリが生成され、中にGitHubリポジトリ上のソースがすべてコピーされた状態になります。
 
-この状態でLaravelのビルトインサーバー（組み込み開発サーバー）を起動しようとすると必要なパッケージをロードできないため、arisanコマンドでPHPのWarningが発生します。
+この状態でLaravelのビルトインサーバー（組み込み開発サーバー）を起動しようとすると必要なパッケージをロードできないため、artisanコマンドでPHPのWarningが発生します。
 
 ```shell
 $ php artisan serve
@@ -62,19 +62,19 @@ $ php artisan serve
   PHP Warning: ..
 ```
 
-なぜならGitHub上にあるLaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcompose.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
+なぜならGitHub上にあるLaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcomposer.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
 
 その時に使われるのが`composer install`になります。
 
 つまり`composer create-project laravel/laravel example-app`はLaravelの新規プロジェクトを自動生成するワンライナーの役目を果たしているのです。
 
-`composer create-project`を使わずに、`git clone`、`composer install`で構築した場合は.envファイルが存在しないため500エラーになる可能性があります。その場合は、.envファイルを構成しencriptキーを生成することで解決します。
+`composer create-project`を使わずに、`git clone`、`composer install`で構築した場合は.envファイルが存在しないため500エラーになる可能性があります。その場合は、.envファイルを構成しencryptキーを生成することで解決します。
 
 ```shell
 # サンプルの.envファイルをコピー
 $ cp .env.example .env
 
-# encriptキーを生成してビルトインサーバー起動
+# encryptキーを生成してビルトインサーバー起動
 $ php artisan key:generate && php artisan serve
 ```
 
@@ -84,7 +84,7 @@ $ php artisan key:generate && php artisan serve
 
 ## 応用してみる
 
-つまり、コマンド内の`laravel/larvel`の部分を任意のリポジトリ名に変えて上げることで他のフレームワークにも応用できます。
+つまり、コマンド内の`laravel/laravel`の部分を任意のリポジトリ名に変えてあげることで他のフレームワークにも応用できます。
 
 例えば[Symfony](https://symfony.com)というPHPフレームワークの場合は以下のようになります。
 
@@ -96,6 +96,6 @@ $ composer create-project symfony/skeleton example-app
 
 ## おわりに
 
-今回は手短ながら、分かっているようで分からない`composer create-project`についてまとめました。ドキュメントを読み解くこと発見も多くあり、より知識が深まるので気になったら調べてみると精神は大切ですね。
+今回は手短ながら、分かっているようで分からない`composer create-project`についてまとめました。ドキュメントを読み解くことで発見も多くあり、知識が深まるので気になったら調べてみる姿勢は大切ですね。
 
 最後まで読んでいただきありがとうございました。
