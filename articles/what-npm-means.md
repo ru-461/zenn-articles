@@ -42,7 +42,7 @@ GitHubリポジトリのREADMEに以下の見出しがあり、なぜnpmが"npm"
 
 日本語に訳すと以下のようになります。
 
-Q. "npm "は "Node Package Manager "の頭文字ですか。
+Q. "npm"は "Node Package Manager"の頭文字ですか。
 
 A. 一般的に信じられていることとは異なり、npmは実際には「Node Package Manager」の頭文字ではありません。もしプロジェクト名が「ninaa」なら頭文字といえます。
 
@@ -54,7 +54,7 @@ A. 一般的に信じられていることとは異なり、npmは実際には�
 
 を再帰的に表現したものなんですね。
 
-要するに、npmは"Node package Manager"という意味であるが、必ずしもnpmはそのまま頭文字を並べたものではないとのことです。
+要するに、npmは"Node Package Manager"という意味であるが、必ずしもnpmはそのまま頭文字を並べたものではないとのことです。
 
 再帰的に表現や頭文字といった言葉が続きます。混乱を防ぐために、ここで一旦アクロニムという言葉やバクロニムといった略式、文化について整理していきます。
 
@@ -110,7 +110,7 @@ PHPはPHP: Hypertext Preprocessorを再帰的に略したものという説明�
 - 頭文字 - 英単語の頭文字を並べて作られた言葉
 - 逆頭字語 - ある単語の並びから後付で頭文字としての意味をつけた言葉（頭文字の逆）
 
-頭文字とバクロニムは対照的な関係、再帰的頭字語は名称に自身の単語が含まれるというのを抑えると覚えやすいです。
+頭文字とバクロニムは対照的な関係、再帰的頭字語は名称に自身の単語が含まれるというのを押さえると覚えやすいです。
 
 ## npmの本質とは
 
@@ -118,11 +118,11 @@ FAQには合わせて以下のような説明があります。
 
 > The precursor to npm was actually a bash utility named "pm", which was the shortform name of "pkgmakeinst" - a bash function that installed various things on various platforms. If npm were to ever have been considered an acronym, it would be as "node pm" or, potentially "new pm".
 
-> npmの前身は、実際には "pm" という名前のbashユーティリティで、これは "pkgmakeinst "というbash関数の短縮形の名前でした。もしnpmの頭文字を取るとしたら、"node pm" か、あるいは "new pm" になるでしょう。
+> npmの前身は、実際には "pm" という名前のbashユーティリティで、これは "pkgmakeinst"というbash関数の短縮形の名前でした。もしnpmの頭文字を取るとしたら、"node pm" か、あるいは "new pm" になるでしょう。
 
 npmの前身となるパッケージマネージャの名前が「pm」というものだったようです。npmの頭文字をとったものとするならnpmは「node pm」「new pm」のようになると主張しています。
 
-このことから今はNode.jsに限らず、JavaScriptのパッケージマネージャとしての立ち位置にあるnpmが**Node.jsに縛られないパッケージマネージャである**と主張しているように感じられます。このように見ていくと「npmは頭文字じゃない」を再帰的に略したものがnpmであるという説明もやや皮肉が含まれていて面白いですね。歴史を見ていく中で、npmは「Node package Manager」という意味を取り除きたいように感じます。
+このことから今はNode.jsに限らず、JavaScriptのパッケージマネージャとしての立ち位置にあるnpmが**Node.jsに縛られないパッケージマネージャである**と主張しているように感じられます。このように見ていくと「npmは頭文字じゃない」を再帰的に略したものがnpmであるという説明もやや皮肉が含まれていて面白いですね。歴史を見ていく中で、npmは「Node Package Manager」という意味を取り除きたいように感じます。
 
 **つまりnpmという名前には深い意味はなく、npmはnpmである**ということなのでしょう。調べつつ記事を書いていく中で頭が混乱してきたのでその結論にて終わりにします。もっと詳しく知っている方がいれば教えていただきたいです。
 
