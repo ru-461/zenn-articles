@@ -39,7 +39,7 @@ Googleのアカウントを持っていれば"Sign up with Google"からすぐ�
 - [Workona (Chrome ウェブストア)](https://chrome.google.com/webstore/detail/workona/ailcmbgekjpnablpdkmaaccecekgdhlh)
 - [Workona (Firefox ADD-ONS)](https://addons.mozilla.org/ja/firefox/addon/workona)
 
-Workona公式の拡張機能になります。この拡張機能を入れることでワークスペースが表示されるようになります。ワークスペースとはタブをまとめて管理するためのグループのようなものです。ワークスペースでタブを管理してワークスペース単位でタブをまとめて切り替えるのがこの拡張機能の主な機能となります。このあとはこのワークスペースにジャンルごとにタブを登録していくことになります。Workonaをインストールするとブラウザに固定タブ形式で管理ページが開かれます。
+Workona公式の拡張機能になります。この拡張機能を入れることでワークスペースが表示されるようになります。ワークスペースとはタブをまとめて管理するためのグループのようなものです。ワークスペースでタブを管理してワークスペース単位でタブをまとめて切り替えるのがこの拡張機能の主な機能となります。このあとは、このワークスペースでジャンルごとにタブを登録していきます。Workonaをインストールするとブラウザに固定タブ形式で管理ページが開かれます。
 
 ![タブ管理ページの画像](/images/recommendations-for-tabs/image04.png)
 
