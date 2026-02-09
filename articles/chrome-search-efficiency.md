@@ -30,7 +30,7 @@ https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbh
 
 この拡張機能を使うことでChromeにて新規タブが開かれたときに、自動で設定したサイトにリダイレクトしてくれます。設定画面はこんな感じでかなりシンプルです。
 
-![New tab Redirect設定画面の画像](/images/chrome-search-efficiency/image03.png)
+![New tab Redirect設定画面の画像](/images/chrome-search-efficiency/image03.PNG)
 
 Redirect URLのフォームに新規タブを開いたときに開きたいページを指定することで毎回決まったサイトを開いてくれるようになります。今回は、Googleの検索ページを開きたいのでGoogleのURLを指定しました。これで次回から新規タブを開くときに必ずGoogleの検索ページが開かれることになります。新規タブを変更しましたが、検索は今まで通り行うことができます。デフォルトでは`Ctrl`＋`T` / `⌘`＋`T`でGoogleに遷移して検索キーワードを入力することでスムーズに検索でき、使用感はChromeデフォルトのタブと遜色ありません。便利ですね。
 
