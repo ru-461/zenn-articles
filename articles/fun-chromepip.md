@@ -64,7 +64,7 @@ https://www.microsoft.com/ja-jp/p/sylphyhorn/9nblggh58t01?activetab=pivot:overvi
 
 ### 活用例 [ドットインストール]
 
-この方法はYouTube以外の動画サイトにも活用できます。例えば、有名なプログラミング動画学習サイトである[ドットインストール](https://dotinstall.com)で動画を再生したままVScodeでコーディングをするなど工夫次第ではより効率的に学習する環境を作るのにも使えます。
+この方法はYouTube以外の動画サイトにも活用できます。例えば、有名なプログラミング動画学習サイトである[ドットインストール](https://dotinstall.com)で動画を再生したままVSCodeでコーディングをするなど工夫次第ではより効率的に学習する環境を作るのにも使えます。
 
 ![ドットインストールで使用する様子の画像](/images/fun-chromepip/image05.png)
 
