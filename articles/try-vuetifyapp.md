@@ -76,7 +76,7 @@ $ npm run serve
 
 ブラウザでアクセスし、以下の画面が表示されればプロジェクトが正しく生成されています。
 
-![Vue Welcome Pageの画像](/images/try-vuetifyapp/image01.png)
+![Vue Welcome Pageの画像](/images/try-vuetifyapp/image01.gif)
 
 上のWelcomeページで表示されているテンプレートはsrcディレクトリ内のApp.vueファイルに記述されている内容になります。
 
@@ -141,7 +141,7 @@ $ vue add vuetify
 
 この状態でサーバーを立ち上げアクセスするとVue.js AppのWelcomeページからVuetifyのWelcomeページに置き換わっているのがわかります。
 
-![Vuetify Welcom Pageの画像](/images/try-vuetifyapp/image02.png)
+![Vuetify Welcome Pageの画像](/images/try-vuetifyapp/image02.png)
 
 App.vueを開くと中身がVuetifyのものに変わっています。
 
@@ -358,7 +358,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
 
 文字の色を変えて、スタイルを調整を調整すると以下のようになります。
 
-![スタイル後の画面画像](/images/try-vuetifyapp/image05.png)
+![スタイル後の画面画像](/images/try-vuetifyapp/image05.PNG)
 
 ここまでで文字数をカウントする機能とスタイリングができました。
 
@@ -378,7 +378,7 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
   class="mt-4">ツイートしてみる？</v-btn>
 ```
 
-![v-btn追加後の画像](/images/try-vuetifyapp/image06.png)
+![v-btn追加後の画像](/images/try-vuetifyapp/image06.PNG)
 
 上のボタンをブラウザで見ると以下のようになります。
 
@@ -421,7 +421,7 @@ Twitterのアイコンを使いたいため、インストールしたfree-brand
 
 以上のようにすることでタイトルの横にTwitterのアイコンが表示されるようになります。これでTwitterらしさを出すことができました。
 
-![完成後の画像](/images/try-vuetifyapp/image06.png)
+![完成後の画像](/images/try-vuetifyapp/image06.PNG)
 
 ## さいごに
 
