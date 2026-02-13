@@ -12,7 +12,7 @@ published: true
 
 ## PowerToysとは
 
-[PowerToys](https://docs.microsoft.com/ja-jp/windows/powertoys)とはMicrodoftが開発しているWindowsの拡張ユーティリティ郡になります。もともとWindowsに搭載される予定だった機能が、別途まとめて配信されているものとなり、現在オープンソース化されて開発されています。
+[PowerToys](https://docs.microsoft.com/ja-jp/windows/powertoys)とはMicrosoftが開発しているWindowsの拡張ユーティリティ群になります。もともとWindowsに搭載される予定だった機能が、別途まとめて配信されているものとなり、現在オープンソース化されて開発されています。
 https://github.com/microsoft/PowerToys
 
 現在Windowsはアップデートでどんどん改良され、アップデートを重ねるたびに全体的にかなり使いやすくなってきました。しかしまだ完全ではなく微妙に使いにくいと感じる部分も多くあります。Windowsには多くのフリーソフトが存在するため、各自で不満点を補うことが簡単にできるのが強みです。そこでMicrosoftもPowerToysというユーティリティを開発し提供しており、開発を進めています。またMicrosoftが開発している公式の拡張ユーティリティ群になるのでシステムから簡単に呼び出せたりといったWindowsとの親和性の高さと安定感があります。
@@ -147,16 +147,16 @@ Windows標準のファイル管理ツールエクスプローラーに機能を�
 
 ファイルの名前を一括して置換する強力なツールです。
 
-使い方は簡単でエクスプローラから編集したいファイルを複数選択し右クリックのコンテキストメニューから「Powerrename」を選択することで編集ウィンドウが開きます。
+使い方は簡単でエクスプローラから編集したいファイルを複数選択し右クリックのコンテキストメニューから「PowerRename」を選択することで編集ウィンドウが開きます。
 
-![Powerremoveウィンドウの画像](/images/use-powertoys/image07.png =520x)
+![PowerRenameウィンドウの画像](/images/use-powertoys/image07.png =520x)
 
 まとめてファイル名を変更でき、おなじみの正規表現も使用できるため、柔軟にファイル名を編集できます。
 
 ### PowerToys Run
 
 機能を有効化することで、macOSでおなじみのSpotlight検索ライクな検索機能＆アプリランチャーが使用できるようになります。
-MacにはSpotlight検索を便利した[Alfred](https://www.alfredapp.com)という有名なツールがあります。PowertoysRunを使うことで完全とはいきませんが、近い操作感をWindowsでも実現させることが可能になります。
+MacにはSpotlight検索を便利にした[Alfred](https://www.alfredapp.com)という有名なツールがあります。PowerToys Runを使うことで完全とはいきませんが、近い操作感をWindowsでも実現させることが可能になります。
 
 デフォルトでは`Alt`＋`Space`で呼び出すように設定されています。ショートカットキーを実行すると以下のウィンドウが画面上に現れます。
 
@@ -197,4 +197,4 @@ PowerToysを使うことでいつものWindowsの作業が少し便利に楽し�
 ## 参考
 
 - [Microsoft公式ツール「Powertoys」を解説。なんでこの機能、Windowsに標準で入ってないの？という神機能が特盛！ – すまほん!!](https://smhn.info/202101-how-to-use-microsoft-windows-powertoys#i-3)
-- [「PowerToys」がWindows 11の「Microsoft Store」から入手可能に - 窓の杜](https://forest.watch.impress.-co.jp/docs/news/1352509.html)
+- [「PowerToys」がWindows 11の「Microsoft Store」から入手可能に - 窓の杜](https://forest.watch.impress.co.jp/docs/news/1352509.html)
