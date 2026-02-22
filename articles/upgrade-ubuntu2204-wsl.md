@@ -15,7 +15,7 @@ published: true
 以下のページからUbuntu 22.04 LTSを新規にダウンロードしてWSL2で実行できます。
 https://www.microsoft.com/ja-jp/p/ubuntu-2204-lts/9pn20msr04dw?activetab=pivot:overviewtab
 
-新規にインストールすることはもちろん可能なのですが、現在使用しているLTS環境を引き続ぐ形でバージョンをアップグレードすることも可能となります。
+新規にインストールすることはもちろん可能なのですが、現在使用しているLTS環境を引き継ぐ形でバージョンをアップグレードすることも可能となります。
 今回はWindowsで開発する際にメイン利用していたUbuntu 20.04.4 LTSを早速22.04 LTSへアップグレードしてみたので備忘録としてまとめていきます。
 
 余談にはなりますが、この記事は以下の手順でアップグレードしたWSL2上のUbuntu 22.04 LTSですべて執筆しています。
@@ -78,9 +78,9 @@ $ sudo apt dist-upgrade && sudo apt install update-manager-core
 ディストリビューションアップグレードの依存解決が行われます。`apt install update-manager-core`は、update-manager-coreが存在しなかった場合のみインストールが行われます。
 エラーや警告がでないことを確認したら次のステップに進みます。
 
-### relese-upgradeの設定
+### release-upgradeの設定
 
-relese-upgradeの設定ファイルを変更します。以下のファイルをエディタで開きます。このとき使用するエディタは普段使用しているもので問題ありません。
+release-upgradeの設定ファイルを変更します。以下のファイルをエディタで開きます。このとき使用するエディタは普段使用しているもので問題ありません。
 
 ```shell
 # sudoでファイルを開く
@@ -162,7 +162,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-20.04.4と比べた場合各項目の順番がと少し異なっております。
+20.04.4と比べた場合各項目の順番が少し異なっております。
 `VERSION="22.04 (Jammy Jellyfish)"`と記載されていることを確認できればアップグレードは問題なく完了しております。
 
 ## おわりに
