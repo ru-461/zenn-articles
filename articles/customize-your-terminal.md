@@ -88,7 +88,7 @@ Zshを使用している場合は以下のようにします。
 
 ```shell:zsh
 # シェルプロファイル（.zshrc）の末尾に追記
-echo eval "$(starship init zsh)" >> ~/.zshrc
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
 # シェルプロファイルの再読み込み
 source ~/.zshrc
@@ -98,7 +98,7 @@ Bashを使用している場合は以下のようになります。
 
 ```shell:bash
 # シェルプロファイル（.bashrc）の末尾に追記
-echo eval "$(starship init bash)" >> ~/.bashrc
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # シェルプロファイルの再読み込み
 source ~/.bashrc
