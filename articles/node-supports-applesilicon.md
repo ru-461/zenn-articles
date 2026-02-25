@@ -67,12 +67,12 @@ $ anyenv update
 # 最新のNode.jsをインストール
 $ nodenv install 16.2.0
 
-# nodenのrehash
+# nodenvのrehash
 $ nodenv rehash
 
 # バージョン確認
 $ node -v
-  v16.20.0
+  v16.2.0
 ```
 
 バージョンの表示ができれば成功です。

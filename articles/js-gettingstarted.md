@@ -41,7 +41,7 @@ $ yarn global add @vue/cli
 
 $ vue create <project-name>
 $ cd <project-name>
-$ npm run serve
+$ yarn serve
 ```
 
 [localhost:8080](http://localhost:8080)で開発サーバが立ち上がります。

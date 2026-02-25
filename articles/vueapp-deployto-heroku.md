@@ -26,7 +26,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 ## 現状
 
-- 以前Vagrantを使ってHeokuにPHP製アプリをデプロイした経験はあり
+- 以前Vagrantを使ってHerokuにPHP製アプリをデプロイした経験はあり
 - WSL2でHerokuを使ったことはない
 - Vue CLIで作ったSPAをHerokuにデプロイできるのかわからない
 
