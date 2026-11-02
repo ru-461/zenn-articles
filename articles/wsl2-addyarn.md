@@ -17,7 +17,7 @@ Node.jsにはデフォルトで[npm](https://www.npmjs.com)と呼ばれるパッ
 こちらがYarnの公式ページになります。
 https://yarnpkg.com
 
-Yarnはnpmが問題としていた部分を抑えるように設計され、登場当時はnpmよりインストール速度が早くなったりとメリットが大きかったようです。
+Yarnはnpmが問題としていた部分を抑えるように設計され、登場当時はnpmよりインストール速度が速くなったりとメリットが大きかったようです。
 今ではnpmのバージョンアップで差があまりなくなってきたとのこと。
 
 JavaScript用パッケージマネージャーについて詳しく解説してくれている記事がありました。
@@ -44,39 +44,41 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 ターミナルにて以下のコマンドを実行するとNode.jsがインストールされます。
 
 ```shell
-$ sudo apt install -y nodejs npm
+sudo apt install -y nodejs npm
 ```
 
 Node.js用のバージョン管理ツールnをWSL2に導入します。
-バージョン管理ツールを使うことでプロジェクトごとNode.jsのバージョンを簡単に切り替えられるため重宝します。
+バージョン管理ツールを使うことでプロジェクトごとにNode.jsのバージョンを簡単に切り替えられるため重宝します。
 
 ```shell
-$ sudo npm install -g n
+sudo npm install -g n
 ```
 
 続いてNode.jsの安定版（記事執筆時点ではv14.15.4 LTS）をインストールします。
 
 ```shell
-$ sudo n lts
+sudo n lts
 ```
 
 以後はnを使ってバージョン管理するため、最初にaptでインストールしたNode.jsとnpmを削除します。
 
 ```shell
-$ sudo apt purge -y nodejs npm
+sudo apt purge -y nodejs npm
 ```
 
 依存関係も削除します。
 
 ```shell
-$ sudo apt autoremove -y
+sudo apt autoremove -y
 ```
 
 nでNode.jsがうまくインストールされているかを確認します。
 
 ```shell
-$ node -v
+node -v
+```
 
+```text:実行結果
   v14.15.4
 ```
 バージョンが返ってきたらWSL2にNode.jsがインストールされています。
@@ -93,10 +95,13 @@ npmがインストールされていなくてもインストール可能な方�
 リポジトリの追加にcurlを使うため、予めcurlコマンドをインストールしておきます。
 
 ```shell
-$ sudo apt install -y curl
+sudo apt install -y curl
 
 # コマンドの確認
-$ which curl
+which curl
+```
+
+```text:実行結果
   /usr/bin/curl
 ```
 
@@ -108,33 +113,39 @@ aptでインストールする際は以下のリポジトリ追加と構成を�
 :::
 
 ```shell
-$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-$ echo "deb https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 
 リポジトリを追加したら以下のコマンドを実行します。
 
 ```shell
-$ sudo apt update && sudo apt install yarn
+sudo apt update && sudo apt install yarn
 ```
 
 Yarnがインストールされたか確認します。
 
 ```shell
-$ yarn --version
+yarn --version
+```
+
+```text:実行結果
   1.22.5
 ```
 
 ### npmを使ってインストール
 
 ```shell
-$ sudo npm install -g yarn
+sudo npm install -g yarn
 ```
 
 インストールされたバージョンを確認します。
 
 ```shell
-$ yarn --version
+yarn --version
+```
+
+```text:実行結果
   1.22.10
 ```
 
