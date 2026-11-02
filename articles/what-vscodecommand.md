@@ -23,7 +23,7 @@ VSCodeをインストールすることで自動的にパスが通りコマン�
 コマンドプロンプトから以下のコマンドでVSCodeが起動します。
 
 ```shell
-$ code
+code
 ```
 
 ローカルのファイルを開くことはもちろん可能ですが、WSLであっても同じように使用できます。
@@ -46,7 +46,7 @@ VSCodeを開き、`⌘`＋`Shift`＋`p`でコマンドパレットを表示し�
 ターミナルを開いて`code`と入力するとVSCodeが起動します。
 
 ```shell
-$ code
+code
 ```
 
 これでCodeコマンドのインストール、使用する準備は完了です。
@@ -54,7 +54,7 @@ CodeコマンドはVSCode Stable版、Insiders版ともに使用可能です。2
 VSCode Insidersのコマンドは以下のようになります。
 
 ```shell
-$ code-insiders
+code-insiders
 ```
 
 使うにはそれぞれのビルドでコマンドパレットからコマンドインストールの手順を踏む必要があります。
@@ -71,13 +71,13 @@ VSCodeの開発者向けプレビュー版である[VSCode Insiders](https://cod
 ### VSCodeを起動
 
 ```shell
-$ code
+code
 ```
 
 ### VSCodeでディレクトリを開く
 
 ```shell
-$ code .
+code .
 ```
 
 開きたいディレクトリへ移動して以下のコマンドを実行します。
@@ -85,32 +85,32 @@ $ code .
 ### VSCodeでファイルを開く
 
 ```shell
-$ code hoge.txt
+code hoge.txt
 ```
 
 ### VSCodeでファイルを比較する
 
 ```shell
-$ code -d hoge1.txt hoge2.txt
+code -d hoge1.txt hoge2.txt
 ```
 
 ### VSCodeのバージョンを表示
 
 ```shell
-$ code -v
+code -v
 ```
 
 ### ヘルプを表示
 
 ```shell
-$ code -h
+code -h
 ```
 
 使えるコマンドが一覧で表示されます。
 
 ## おわりに
 
-Codeコマンドを利用することでターミナルからVSCodeでファイルやディレクトリを直接開けるようになるため、結果として生産性の向上に繋がります。VSCodeをメインのエディタとして使うなら是非とも抑えておきたいところです。
+Codeコマンドを利用することでターミナルからVSCodeでファイルやディレクトリを直接開けるようになるため、結果として生産性の向上に繋がります。VSCodeをメインのエディタとして使うなら是非とも押さえておきたいところです。
 
 上手に活用してVSCodeでの生産性を上げていきましょう。
 
