@@ -35,7 +35,7 @@ MacBookの環境構築をする際にCPUのアーキテクチャが変わった�
 2021年2月版の[VSCode 1.54](https://code.visualstudio.com/updates/v1_54)から、Stable版がApple Siliconに対応しました。
 :::
 
-### Macの新CPU アーキテクチャ問題
+### Macの新CPUアーキテクチャ問題
 
 MacBook Air、MacBook Pro、Mac miniには、従来のIntel製CPU（x64）ではなく、Appleが独自開発した新CPU（arm64）が搭載されています。このことにより、CPUのアーキテクチャがARMに置き換わったため、従来のIntelベースのアプリを動かすためにRosetta 2という変換ツールを介してアプリを動かすことになります。
 

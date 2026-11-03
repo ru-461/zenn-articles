@@ -38,11 +38,13 @@ sudo add-apt-repository ppa:apt-fast/stable
 ```text:実行結果
  This PPA contains tested (stable) builds of apt-fast.
  More info: https://launchpad.net/~apt-fast/+archive/ubuntu/stable
-Press [ENTER] to continue or Ctrl-c to cancel adding it. # Enterで続行
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
 ...
 
 Reading package lists... Done
 ```
+
+途中で`Press [ENTER] to continue`と表示されたら、Enterキーを押して続行します。
 
 ```shell
 # リポジトリを最新に更新
