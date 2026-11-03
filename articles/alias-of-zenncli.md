@@ -19,7 +19,7 @@ Zennでは[Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli)と呼ば�
 ```shell:.zshrc
 # Zenn CLI用に定義したエイリアスの確認用
 alias agzenn='alias | grep zenn'
-# Zennのコンテンツ管理に移動
+# Zennのコンテンツ管理ディレクトリに移動
 alias zenn='cd ~/Documents/my-zenn-contents'
 # Zennのコンテンツ管理ディレクトリに移動してVSCodeで開く & プレビュー表示
 alias zennop='zenn && code ~/Documents/my-zenn-contents && npx zenn preview --open'
@@ -72,14 +72,14 @@ alias zenn='cd ~/Documents/my-zenn-contents'
 
 ![コンテンツ管理ディレクトリに移動する様子](/images/alias-of-zenncli/image01.gif)
 
-私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com)というエディタをZennの記事を書くときに利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
+私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com)（通称VSCode）を利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
 https://zenn.dev/ryuu/articles/what-vscodecommand
 
 以下のようなコマンドで、別のディレクトリで作業していてもVSCodeでZennのコンテンツ管理ディレクトリをすぐに開いてくれます。
 
 ```shell
 # Zennのコンテンツ管理ディレクトリをVSCodeで開く
-$ code ~/Documents/my-zenn-contents
+code ~/Documents/my-zenn-contents
 ```
 
 ### 記事や本のプレビュー
@@ -87,7 +87,7 @@ $ code ~/Documents/my-zenn-contents
 VSCodeにはデフォルトでマークダウンのプレビュー機能が搭載されているため、マークダウンファイル（.md）をその場でプレビューしながら書くことができます。しかし、ZennにはZenn独自のマークダウン記法（メッセージやアコーディオン、トグル）があるためVSCodeのプレビュー機能では完全にプレビューできません。そこでZenn CLIには、localhostでサーバーを立ち上げてZenn上でどのように表示されるのかを投稿前に確認できるZenn Editorがあります。ホットリロードに対応しているため、ローカルで加えた変更を瞬時に反映しながら記事を書いていくことができます。
 
 ```shell
-$ npx zenn preview
+npx zenn preview
 ```
 
 と実行し、ブラウザで[localhost:8000](http://localhost:8000)へアクセスするとZenn上での見え方をリアルタイムで確認できます。
@@ -103,7 +103,7 @@ alias zennpr='zenn && npx zenn preview --open'
 
 ### 新しい記事・本の作成
 
-Zenn CLIを使って新しい記事・本を作成するときのコマンド、`npx zenn new:article`を`zennna`、`npx zenn new:book`を`zennnb`としています。記事と本とでエイリアスの後ろ（new:article, new:book）をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ（任意の記事名）を指定でき、`npx zenn new:article`とするとランダムのスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug`というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs`のようにスラッグオプション（--slug）を含めたエイリアスも定義しています。
+Zenn CLIを使って新しい記事・本を作成するときのコマンド、`npx zenn new:article`を`zennna`、`npx zenn new:book`を`zennnb`としています。記事と本とでエイリアスの後ろ（new:article, new:book）をそれぞれの頭文字にしてわかりやすくしました。記事にはスラッグ（任意の記事名）を指定でき、`npx zenn new:article`とするとランダムなスラッグにて記事が作成されます。スラッグを付ける場合はコマンドの後ろにそれぞれ、`--slug`というオプションを付けることで任意のスラッグをつけることができます。私は記事ごとに個別のスラッグをつけて管理することが多いので、`zennnas`、`zennnbs`のようにスラッグオプション（--slug）を含めたエイリアスも定義しています。
 
 ```shell:.zshrc
 # 新しい記事をスラッグを指定して作成
@@ -113,10 +113,11 @@ alias zennnas='zenn && npx zenn new:article --slug'
 alias zennnbs='zenn && npx zenn new:book --slug'
 ```
 
-エイリアスに続けて、付けたいスラッグを続けるだけで簡単にオリジナルのスラッグをつけて記事を書き始められるので便利です。
+エイリアスに続けて付けたいスラッグを入力するだけで、すぐに記事を書き始められるので便利です。
 
 ```shell
-$ zennnas alias-of-zenncli（任意のスラッグ）
+# 任意のスラッグを指定して記事を作成
+zennnas alias-of-zenncli
 ```
 
 スラッグ以外にも作成時に利用できるオプションは数多くあるので、詳しくは以下の公式記事を参考にしてみてください。
