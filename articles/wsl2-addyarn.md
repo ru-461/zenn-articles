@@ -12,7 +12,7 @@ YarnとはJavaScript用のパッケージマネージャーです。
 
 Node.jsにはデフォルトで[npm](https://www.npmjs.com)と呼ばれるパッケージマネージャーが付属します。
 パッケージマネージャーとしてはnpmが有名ですが、他にもパッケージマネージャーはいくつか存在します。
-その中の１つにMeta（Facebook）社が開発したYarnというパッケージマネージャーがあります。
+その中の1つにMeta（Facebook）社が開発したYarnというパッケージマネージャーがあります。
 
 こちらがYarnの公式ページになります。
 https://yarnpkg.com
