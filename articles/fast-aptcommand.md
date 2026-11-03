@@ -12,14 +12,14 @@ UbuntuをはじめとするDebian系のOSではパッケージマネージャー
 
 aptを使ったインストールやアップデートの速度を速くする方法として、**ミラーサーバーを見直す**、**ネットワーク状況を見直す**といったことが挙げられます。
 
-そこでツールを利用して速度を上げられる方法がないか探したところ「apt-fast」といったツールをGitHubにて発見しました。今回は、aptからapt-fastへ乗り換えて速度を爆速にしてみたのでまとめます。
+そこでツールを利用して速度を上げられる方法がないか探したところ「apt-fast」といったツールをGitHubにて発見しました。今回は、aptからapt-fastへ乗り換えて高速化してみたのでまとめます。
 
 apt-fastのGitHubリポジトリは以下になります。
 https://github.com/ilikenwf/apt-fast
 
 ## apt-fast の仕組みと概要
 
-apt-fastはaptコマンドをラップするシェルスクリプトという位置づけでパッケージの並列ダウンロードを可能にします。並列ダウンロードには[aria2c](https://aria2.github.io/index-ja.html)というパラレルダウンロードツールをバックに使用しています。そして通常より、コネクションを多く貼ること（マルチコネクション）で複数のサーバーから高速な同時ダウンロード、分割ダウンロードを実現させています。これはcurlやwgetコマンドと比べるとかなり強力なものになります、aria2cは単体でダウンロードして使用することも出来るようです。
+apt-fastはaptコマンドをラップするシェルスクリプトという位置づけでパッケージの並列ダウンロードを可能にします。並列ダウンロードには[aria2c](https://aria2.github.io/index-ja.html)というパラレルダウンロードツールをバックに使用しています。そして通常より、コネクションを多く張ること（マルチコネクション）で複数のサーバーから高速な同時ダウンロード、分割ダウンロードを実現させています。これはcurlやwgetコマンドと比べるとかなり強力なものになります。aria2cは単体でダウンロードして使用することも出来るようです。
 
 ## インストール
 
@@ -32,17 +32,21 @@ GitHubリポジトリのREADMEにもありますが、インストール自体�
 
 ```shell
 # リポジトリを追加
-$ sudo add-apt-repository ppa:apt-fast/stable
+sudo add-apt-repository ppa:apt-fast/stable
+```
 
-  This PPA contains tested (stable) builds of apt-fast.
-  More info: https://launchpad.net/~apt-fast/+archive/ubuntu/stable
-  Press [ENTER] to continue or Ctrl-c to cancel adding it. # Enterで続行
-  ...
+```text:実行結果
+ This PPA contains tested (stable) builds of apt-fast.
+ More info: https://launchpad.net/~apt-fast/+archive/ubuntu/stable
+Press [ENTER] to continue or Ctrl-c to cancel adding it. # Enterで続行
+...
 
-  Reading package lists... Done
+Reading package lists... Done
+```
 
+```shell
 # リポジトリを最新に更新
-$ sudo apt-get update
+sudo apt-get update
 ```
 
 ### インストールと初期設定
@@ -50,7 +54,7 @@ $ sudo apt-get update
 リポジトリの追加と更新が終わったら以下のコマンドでapt-fastをインストールします。
 
 ```shell
-$ sudo apt-get -y install apt-fast
+sudo apt-get -y install apt-fast
 ```
 
 インストールが開始されます。Ubuntuだと途中で以下のような設定ダイアログが表示されます。
@@ -80,10 +84,10 @@ apt-fastの設定は、/etc/apt-fast.confに記述されています。設定フ
 
 ```shell
 # パッケージを最新に更新
-$ sudo apt-fast update
+sudo apt-fast update
 
 # パッケージを指定してインストール 例: Git
-$ sudo apt-fast install git
+sudo apt-fast install git
 ```
 
 ## おわりに

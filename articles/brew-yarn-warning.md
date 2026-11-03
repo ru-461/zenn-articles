@@ -12,8 +12,10 @@ published: true
 パッケージマネージャであるYarnを使おうとHomebrewからインストールしたのですが、`brew doctor`を実行したところ以下の`Warning:`が出力され焦りました。
 
 ```shell
-$ brew doctor
+brew doctor
+```
 
+```text:実行結果
 Please note that these warnings are just used to help the Homebrew maintainers
 with debugging if you file an issue. If everything you use Homebrew for is
 working fine: please don't worry or file an issue; just ignore this. Thanks!
@@ -44,14 +46,17 @@ Yarnはnpm経由ではなく、Homebrew経由でインストールしていま�
 
 ```shell
 # Homebrew経由でYarnをインストール
-$ brew install yarn
+brew install yarn
 
 # バージョン確認
-$ yarn --version
+yarn --version
+```
+
+```text:実行結果
 1.22.10
 ```
 
-無事にYarnのインストールに成功し、パッケージの管理を行えるようになりましたが、`brew doctor`を実行するたび毎回、上記のWarningが表示されるようになりました。
+無事にYarnのインストールに成功し、パッケージの管理を行えるようになりましたが、`brew doctor`を実行するたびに、上記のWarningが表示されるようになりました。
 
 ## 解決策
 
@@ -63,16 +68,20 @@ Cellarとは英語で「貯蔵庫」を意味し、Homebrewではコマンドの
 Cellarの場所は以下のコマンドで調べることができます。
 
 ```shell
-$ brew --cellar
+brew --cellar
+```
 
+```text:実行結果
 /opt/homebrew/Cellar
 ```
 
-Warning内のメッセージに従い、`brew link`を試みましたが。
+Warning内のメッセージに従い、`brew link`を試みましたが、以下のエラーが出ました。
 
 ```shell
-$ brew link yarn
+brew link yarn
+```
 
+```text:実行結果
 Linking /opt/homebrew/Cellar/yarn/1.22.10...
 Error: Could not symlink bin/yarn
 Target /opt/homebrew/bin/yarn
@@ -89,14 +98,16 @@ To list all files that would be deleted:
 どうやら、シンボリックリンクの作成に失敗しているようです。
 
 ```shell
-$ rm /opt/homebrew/bin/yarn
+rm /opt/homebrew/bin/yarn
 ```
 
 メッセージに従い`/opt/homebrew/bin/yarn`を削除して、競合するファイルを上書きしつつリンクを行いました。
 
 ```shell
-$ brew link --overwrite yarn
+brew link --overwrite yarn
+```
 
+```text:実行結果
 Linking /opt/homebrew/Cellar/yarn/1.22.10... 2 symlinks created.
 ```
 
@@ -104,8 +115,10 @@ Linking /opt/homebrew/Cellar/yarn/1.22.10... 2 symlinks created.
 もう一度`brew doctor`を実行し、問題がないか診てもらいましょう。
 
 ```shell
-$ brew doctor
+brew doctor
+```
 
+```text:実行結果
 Your system is ready to brew.
 ```
 
