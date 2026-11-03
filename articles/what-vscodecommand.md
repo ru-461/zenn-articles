@@ -14,7 +14,7 @@ published: true
 
 ## Codeコマンドとは
 
-VSCodeにはCodeコマンドと呼ばれるコマンドが存在します。このコマンドを使うことでターミナルから直接VSCodeを起動したり、指定したファイル、ディレクトリを瞬間的に開けるようになります。
+VSCodeにはCodeコマンドと呼ばれるコマンドが存在します。このコマンドを使うことでターミナルから直接VSCodeを起動したり、指定したファイル、ディレクトリを開けるようになります。
 瞬間的にVSCodeが立ち上がり、ファイルやディレクトリが開かれるので、生産性が上がります。
 
 ## Codeコマンドの準備【Windows】
@@ -34,7 +34,7 @@ VSCodeとWSL2の親和性が高いのでWindowsで開発するときに威力を
 macOSの場合はシェルコマンドを手動で実行する必要があり、少し手間がかかります。
 VSCodeを開き、`⌘`＋`Shift`＋`p`でコマンドパレットを表示します。
 
-コマンドパレットにshell commandと打ち込むことで以下のような選択が表示されます。
+コマンドパレットにshell commandと打ち込むことで以下のような選択肢が表示されます。
 
 ![コマンドパレットを開いた様子](https://storage.googleapis.com/zenn-user-upload/g6g74ukk33yndvsz0siedopguxrm)
 *シェルコマンド : PATH内にcodeコマンドをインストールしますを選択*
@@ -62,7 +62,7 @@ code-insiders
 
 ## コマンド使用例
 
-よく使うコマンドをまとめました。コマンドはWindowsとMac共通で同じものが使えます。
+よく使うコマンドをまとめました。コマンドはWindowsとMacで同じものが使えます。
 
 :::message
 VSCodeの開発者向けプレビュー版である[VSCode Insiders](https://code.visualstudio.com/insiders/)を使用している場合は`code`を`code-insiders`に読み替えてください。
@@ -76,11 +76,11 @@ code
 
 ### VSCodeでディレクトリを開く
 
+開きたいディレクトリへ移動して以下のコマンドを実行します。
+
 ```shell
 code .
 ```
-
-開きたいディレクトリへ移動して以下のコマンドを実行します。
 
 ### VSCodeでファイルを開く
 
