@@ -54,7 +54,7 @@ alias zennop='zenn && code ~/Documents/my-zenn-contents && npx zenn preview --op
 上記を実行することで以下の動作が順番に実行されます。
 
 1. Zennの作業ディレクトリに移動
-2. VSCodeで開く
+2. Visual Studio Code（通称VSCode）で開く
 3. ブラウザを起動し記事をプレビュー
 
 Zenn CLIを使って記事をすぐに書き始められる環境がコマンド1つで立ち上がるのは地味に便利です。
@@ -72,7 +72,7 @@ alias zenn='cd ~/Documents/my-zenn-contents'
 
 ![コンテンツ管理ディレクトリに移動する様子](/images/alias-of-zenncli/image01.gif)
 
-私は、Zennの記事を執筆する際に[Visual Studio Code](https://code.visualstudio.com)（通称VSCode）を利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
+私は、Zennの記事を執筆する際に[VSCode](https://code.visualstudio.com)を利用しています。VSCodeの利点として、指定したディレクトリをVSCode上で瞬時に開くことのできるCodeコマンドの存在があります。Codeコマンドについては以前、Zenn記事にまとめています。
 https://zenn.dev/ryuu/articles/what-vscodecommand
 
 以下のようなコマンドで、別のディレクトリで作業していてもVSCodeでZennのコンテンツ管理ディレクトリをすぐに開いてくれます。
