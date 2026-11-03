@@ -10,7 +10,7 @@ published: true
 
 Apple Silicon M1が世に出てからしばらく経ちました。現在多くのMacはApple Siliconへ移行しつつあり、アーキテクチャに**ARM**を採用しています。そのため、従来のモデルにて使用されていたIntel CPU向けのアプリ（x64アーキテクチャ）との互換性がなくなるという課題がありました。
 
-そこでAppleはRosetta 2という変換ツールを用意しており、x64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作するApple Silicon対応ビルドやユニバーサルビルドが増えてきており、今では多くのアプリにてApple Siliconの恩恵を預かることができるようになりました。
+そこでAppleはRosetta 2という変換ツールを用意しており、x64ベースのアプリをM1チップ上で変換し動作させることを可能としています。M1チップ上でネイティブに動作するApple Silicon対応ビルドやユニバーサルビルドが増えてきており、今では多くのアプリにてApple Siliconの恩恵に与ることができるようになりました。
 
 そして先日、Docker Desktopがv3.3.1にて正式にApple Siliconへ対応し、話題になりました。
 https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/
@@ -31,7 +31,7 @@ https://www.imobie.com/m1-app-checker/
 公式サイトから「Free Download」をクリックしてインストールできます。パッケージマネージャーとしてHomebrewを導入している場合は、以下のコマンドでインストールできます。
 
 ```shell:Terminal
-$ brew install --cask imobie-m1-app-checker
+brew install --cask imobie-m1-app-checker
 ```
 
 アプリを起動させるとこのような画面が表示されます。
