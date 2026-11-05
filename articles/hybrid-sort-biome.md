@@ -66,7 +66,7 @@ Biomeの機能としてimport文に空行を入れてグルーピングするこ
 まず、Biomeをインストールします。
 
 ```shell
-$ bun add --dev --exact @biomejs/biome
+bun add --dev --exact @biomejs/biome
 ```
 
 ### 設定ファイルの作成
@@ -74,10 +74,10 @@ $ bun add --dev --exact @biomejs/biome
 Biomeの設定に必要なファイル（biome.json）を生成します。
 
 ```shell
-$ bunx @biomejs/biome init
+bunx @biomejs/biome init
 ```
 
-プロジェクトルートに下記のJSONファイルが生成されます。Biomeの設定はリンターとフォーマットまでが1つのJSONファイルによって定義されます。
+プロジェクトルートに下記のJSONファイルが生成されます。Biomeの設定はリンターとフォーマッターまでが1つのJSONファイルによって定義されます。
 
 ```json:biome.json
 {
@@ -171,7 +171,7 @@ JSX（TSX）内にてpropsを解析し最適な並び順を提案します。ま
 上記の設定後、下記のコマンドでpropsのソートが可能になります。
 
 ```shell
-$ bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
+bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
 ```
 
 例として以下のコンポーネントがある場合。
@@ -292,7 +292,7 @@ importの種別ごとにグループ化、並び替えを行います。
 propsのソートと同様に以下のコマンドでESLintを使用した自動ソートが可能になります。
 
 ```shell
-$ bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
+bunx eslint './src/**/*.{js,jsx,ts,tsx}' --fix
 ```
 
 例えば以下のようなコンポーネントのimportがある場合。
@@ -326,13 +326,13 @@ VSCodeで開発する際に、自動でBiomeのフォーマットとリンター
 以下の拡張機能をVSCodeのMarketplaceから導入します。
 https://marketplace.visualstudio.com/items?itemName=biomejs.biome
 
-また、ESLintの拡張機能も合わせて導入します。
+また、ESLintの拡張機能も併せて導入します。
 https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 導入後、以下のコマンドでVSCodeの設定ファイル`.vscode/settings.json`を作成します。既に作成してある場合は不要です。
 
 ```shell
-$ mkdir -p ./.vscode && touch ./.vscode/settings.json
+mkdir -p ./.vscode && touch ./.vscode/settings.json
 ```
 
 settings.jsonへ以下を記載します。
@@ -372,10 +372,10 @@ https://biomejs.dev/ja/reference/cli/#biome-check
 `biome check`はフォーマットとリントを同時に行ってくれる便利なコマンドになっております。
 また、`--apply`をつけることで修正可能なものを見つけて自動修正してくれます。
 
-上記のスクリプトでは`biome check`と合わせて`ESLint`を実行します。
+上記のスクリプトでは`biome check`と併せて`ESLint`を実行します。
 ESLintは`--fix`としているため、ESLintによってimportのグループ化とソート、propsの自動ソートが実行されます。
 
-これにより、コミットする前に`bun run check`を実行することでコードの粒度を保つことができます。
+これにより、コミットする前に`bun run check`を実行することでコードの品質を保つことができます。
 
 また、[husky](https://typicode.github.io/husky/)や[lint-staged](https://github.com/lint-staged/lint-staged)などを導入してコミット前に自動実行させるのもおすすめです。
 
