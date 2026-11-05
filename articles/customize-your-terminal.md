@@ -61,7 +61,7 @@ https://github.com/starship/starship
 WSL2でUbuntuなどを利用している場合は以下のスクリプトを使ったインストールが簡単です。
 
 ```shell
-$ curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh
 ```
 
 `✓ Starship installed`と表示されればインストールは完了です。またこのやり方でインストールした場合、Starshipの更新も同じコマンドで行います。アップデートする際は設定ファイルを変えることなく環境を引き継ぎながらバージョンを置き換えてくれます。
@@ -69,7 +69,7 @@ $ curl -sS https://starship.rs/install.sh | sh
 またMacなどでパッケージ管理に[Homebrew](https://brew.sh/ja/)を使っている場合は以下のコマンドでもインストールできます。
 
 ```shell
-$ brew install starship
+brew install starship
 ```
 
 ### 初期設定：Starshipの有効化
@@ -78,8 +78,10 @@ Starshipを有効にするための処理をシェルプロファイルへ記述
 現在使用しているシェルは以下のコマンドで確認可能です。
 
 ```shell
-$ echo $SHELL
+echo $SHELL
+```
 
+```text:実行結果
 # Zshを使用している場合
 /bin/zsh
 ```
@@ -117,12 +119,12 @@ source ~/.bashrc
 
 ### 初期設定：フォントの導入
 
-Starshipはアイコンフォントに対応しているため、使用しているフォントがアイコンフォントに対応していないと一部文字化けする可能性があります。また後述するezaもアイコンフォントに対応しているため、NerdFont、またはNerdFontを含むフォントを導入することをおすすめします。
+Starshipはアイコンフォントに対応しているため、使用しているフォントがアイコンフォントに対応していないと一部文字化けする可能性があります。また後述するezaもアイコンフォントに対応しているため、Nerd Fonts、またはNerd Fontsを含むフォントを導入することをおすすめします。
 
 私は、[たわら様](https://x.com/tawara_san)が開発しているプログラミングフォント「白源（はくげん ／ HackGen）」をターミナルのフォントに使用しています。
 https://github.com/yuru7/HackGen
 
-NerdFontを追加した「HackGenNerd Console」というフォントがあるため、こちらをインストールして使用することでアイコンフォントも問題なく表示できます。またプログラミングフォントのため全角スペース・半角スペースなどの識別がしやすい点もおすすめです。
+Nerd Fontsを追加した「HackGenNerd Console」というフォントがあるため、こちらをインストールして使用することでアイコンフォントも問題なく表示できます。またプログラミングフォントのため全角スペース・半角スペースなどの識別がしやすい点もおすすめです。
 
 ### Starshipのカスタマイズ
 
@@ -131,7 +133,7 @@ Starshipはデフォルトでもアイコンフォントの表示やカラフル
 下記のコマンドでStarshipの設定ファイルを作成します。
 
 ```shell
-$ starship config
+starship config
 ```
 
 設定ファイルの保存先はデフォルトで~/.config/starship.tomlとなります。
@@ -168,7 +170,7 @@ ezaコマンドはインストール方法が多数あります。この記事�
 パッケージ管理にHomebrewを使用している場合は以下のコマンドでインストールできます。
 
 ```shell
-$ brew install eza
+brew install eza
 ```
 
 WSL2でUbuntuを使用している場合であってもHomebrewを導入することで同じようにインストールできます。私はWSL2においてHomebrewを導入した上でコマンドを導入しています。WSL2上のUbuntu 20.04 LTSにHomebrewを導入するやり方は過去に[こちらの記事](https://zenn.dev/ryuu/articles/wsl2-homebrew)にて紹介していますので参考にしてください。
@@ -202,16 +204,16 @@ source $HOME/.cargo/env
 
 ```shell
 # rustupのバージョンを確認
-$ rustup --version
+rustup --version
 
 # rustupをアップデート
-$ rustup self update
+rustup self update
 ```
 
 ここまでできたらCargoが使用できるため、以下のコマンドで`eza`をインストールできます。
 
 ```shell
-$ cargo install eza
+cargo install eza
 ```
 
 :::message
@@ -224,7 +226,7 @@ Ubuntuなどの環境によっては`error: linker cc not found`と表示され�
 
 ```shell
 # ezaを使用してファイルをリスト表示
-$ eza
+eza
 ```
 
 lsコマンドの代わりに`eza`を使用することで文字をカラフルに表示してくれるためターミナルが一気に華やかになります。
@@ -237,7 +239,7 @@ lsコマンドの代わりに`eza`を使用することで文字をカラフル�
 `eza`は`ls`と同じように使用できると聞いてピンときた人も多いのではないでしょうか。
 **ezaはエイリアスと組み合わせることで真価を発揮します**。
 
-エイリアスはコマンド短縮形または代替コマンドを定義できる機能です。シェルプロファイルに記載することで長いコマンドや複雑なコマンドをひとまとめにして別のコマンドを割り当てたりできるようになります。
+エイリアスはコマンドの短縮形または代替コマンドを定義できる機能です。シェルプロファイルに記載することで長いコマンドや複雑なコマンドをひとまとめにして別のコマンドを割り当てたりできるようになります。
 
 `eza`のオプションは前述した通りとても多く、組み合わせると長くなることが多いのでよく使用するものをひとまとめにしてエイリアス化したほうが便利に使用できます。
 
