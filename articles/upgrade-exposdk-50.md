@@ -13,7 +13,7 @@ published: true
 本家React NativeからExpoでのReact Native開発に移行し、今回初めてExpo SDKのメジャーアップグレードを行ったので記念の意味も込めて備忘録としてまとめてみます。
 
 [Expo](https://expo.dev)は[React Native](https://reactnative.dev)のフレームワークになります。
-Expo SDKはExpoを使用するうえで便利なパッケージなどをひとまとめにしたもので、Expoを使用するうえで必須になるパッケージとなります。
+Expo SDKはExpoを使用するうえで便利なパッケージなどをひとまとめにしたもので、Expoでの開発には必須のパッケージとなります。
 Expo SDKはReact Native側のアップデートに追従する形で都度アップグレードが実施されております。
 
 今回のExpo SDK 50の目玉は昨年末にリリースされた[React Native 0.73](https://reactnative.dev/blog/2023/12/06/0.73-debugging-improvements-stable-symlinks)となります。
@@ -32,7 +32,7 @@ https://expo.dev/changelog/2024/01-18-sdk-50
 BunについてはExpoの公式ドキュメントにインストール手順があったため、こちらを参考に導入してセットアップしております。
 https://docs.expo.dev/guides/using-bun/
 
-`bun`ではなく`npm`を使用する場合、各コマンド対応は以下になります。
+`bun`ではなく`npm`を使用する場合、各コマンドの対応は以下になります。
 
 - `bun`  → `npm`
 - `bunx` → `npx`
@@ -43,14 +43,16 @@ Expoが提供するクラウドにてアプリのビルドやストア提出を�
 開発にて導入している場合のみアップグレードが必要になります。
 
 ```shell
-$ bun install --global eas-cli
+bun install --global eas-cli
 ```
 
 インストール後、バージョンを確認して正常にアップグレードできていれば成功です。
 
 ```shell
-$ eas --version
+eas --version
+```
 
+```text:実行結果
 eas-cli/6.1.0 darwin-arm64 node-v20.9.0
 ```
 
@@ -59,7 +61,7 @@ eas-cli/6.1.0 darwin-arm64 node-v20.9.0
 今回のアップグレードのメイン、Expo SDKの**本体**となります。必ずアップグレードしましょう。
 
 ```shell
-$ bun add expo@^50.0.0
+bun add expo@^50.0.0
 ```
 
 ### Expo Go
@@ -71,19 +73,22 @@ $ bun add expo@^50.0.0
 - [Expo Go - App Store](https://apps.apple.com/jp/app/expo-go/id982107779)
 - [Expo - Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja&gl=US&pli=1)
 
-アップグレード後、Expo Goのタブメニューから「Settings」を選択し、「App Info」内に記載された「Support SDKs」に`50`が含まれていることを確認します。
+アップグレード後、Expo Goのタブメニューから「Settings」を選択し、「App Info」内に記載された「Supported SDKs」に`50`が含まれていることを確認します。
 
-![Support SDKsの確認画像](/images/upgrade-exposdk-50/image01.jpg)
+![Supported SDKsの確認画像](/images/upgrade-exposdk-50/image01.jpg)
 
 また、iOSシミュレータ、Androidエミュレータ内のExpo Goを使用して開発している場合は、次回起動時にExpo Goのアップデートを行うか確認されます。
 `Y`と答えてインストールすることで自動アップデートが行われ、エミュレータでも問題なくExpo SDK 50での開発が可能になります。
 
 ```shell
-$ bun run start
+bun run start
+```
 
-# <device-name>は利用している仮想デバイス名
+```text:実行結果
 Expo Go on <device-name> is outdated, would you like to upgrade?
 ```
+
+`<device-name>`には利用している仮想デバイス名が表示されます。
 
 Expo SDKが最新でも、Expo Goのアップデートを忘れているとアプリを動作させることができないため、最優先で確認したいところです。
 
@@ -95,7 +100,7 @@ Expo SDKが最新でも、Expo Goのアップデートを忘れているとア�
 しかし、Expo SDKに付随するパッケージの依存関係が最新化されていない可能性があるためチェックを行います。
 
 ```shell
-$ bunx expo install --fix
+bunx expo install --fix
 ```
 
 依存関係のチェックが行われ、SDKに合わせた対応バージョンへの更新作業が行われます。
@@ -105,7 +110,7 @@ $ bunx expo install --fix
 
 ### expo-doctor
 
-アップグレード作業もいよいよ終盤です。ここまできたら最後に診断を受けて終わりになります。
+アップグレード作業もいよいよ終盤です。最後に診断を受けて終わりになります。
 Expoが提供している[expo-doctor](https://www.npmjs.com/package/expo-doctor)を使用します。
 
 :::message
@@ -113,7 +118,7 @@ Expoが提供している[expo-doctor](https://www.npmjs.com/package/expo-doctor
 :::
 
 ```shell
-$ bunx expo-doctor@latest
+bunx expo-doctor@latest
 ```
 
 最新リリースを使用するうえで設定やディレクトリ構成に問題がないか自動でチェックしてくれます。全てに`✓`が付いていることを確認したら完了となります。
@@ -138,7 +143,7 @@ Didn't find any issues with the project!
 ## おわりにとこれから
 
 今回、Expo SDK 50のメジャーアップグレードを行い、備忘録としてまとめました。
-私と同じようにこれからExpoを使用したReact Nativeの開発に参入する人の参考になれれば幸いです。
+私と同じようにこれからExpoを使用したReact Nativeの開発に参入する人の参考になれば幸いです。
 
 メジャーアップグレードといいながら、手順がかなりわかりやすく手軽にアップグレードできました。
 

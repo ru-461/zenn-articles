@@ -32,7 +32,7 @@ Homebrewを使用してPHPをインストールします。
 まず、HomebrewでインストールできるPHPを探してみます。
 
 ```shell
-$ brew search php
+brew search php
 ```
 
 インストール可能なPHPのパッケージが表示されます。今回は現時点でPHP 8系（php@8.0）がリリースされているため、8系を利用する前提で進めます。
@@ -40,7 +40,7 @@ $ brew search php
 
 ```shell
 # バージョン指定でPHP8.0をインストール
-$ brew install php@8.0
+brew install php@8.0
 ```
 
 PHPのインストールに伴い依存しているパッケージやモジュールが次々にインストールされていくので完了まで待ちます。
@@ -50,11 +50,11 @@ PHPのインストールに伴い依存しているパッケージやモジュ�
 
 ### セットアップ
 
-インストールしたPHPは自動的にパスが通らないため、シェルのプロファイルからパスを手動で通す必要があります。使用しているシェルプロファイル（.bashrcや.zshrc）などを開き以下コマンドを叩くか、プロファイルを直接編集しパスを構成します。Zshを使用している場合は以下のようになります。
+インストールしたPHPは自動的にパスが通らないため、シェルのプロファイルからパスを手動で通す必要があります。使用しているシェルプロファイル（.bashrcや.zshrc）などを開き以下のコマンドを叩くか、プロファイルを直接編集しパスを構成します。Zshを使用している場合は以下のようになります。
 
 ```shell
-$ echo 'export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
-$ echo 'export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"' >> ~/.zshrc
 ```
 
 コマンドを実行後、パスを読み込ませるためにシェルを再起動します。シェルを再起動したあとに`php --version`でPHPのバージョン情報が出力されれば問題なくパスが通り使用できるようになっています。

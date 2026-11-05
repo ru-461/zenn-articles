@@ -13,7 +13,7 @@ PHPでパッケージ間の依存解決をするときは[Composer](https://getc
 例えば、PHPのフレームワークで有名な[Laravel](https://laravel.com)の雛形を作成する場合、公式ドキュメントの冒頭にある以下のコマンドを実行すると最新バージョンのLaravelプロジェクトが自動生成されます。
 
 ```shell
-$ composer create-project laravel/laravel example-app
+composer create-project laravel/laravel example-app
 ```
 
 コマンドを何気なくタイプしている中で具体的に何をしているのか気になったので実態を調べてみました。
@@ -33,9 +33,10 @@ https://github.com/composer/composer/blob/main/src/Composer/Command/CreateProjec
 Composer公式ドキュメントのcreate-project[^1]項を眺めていたら気になる文を発見しました。
 
 > You can use Composer to create new projects from an existing package. This is the equivalent of doing a Git clone/svn checkout followed by a composer install of the vendors.
+
 [^1]: 引用 https://getcomposer.org/doc/03-cli.md#create-project
 
-要約すると、GitやSVNなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。想像よりもシンプルで驚きました。
+要約すると、GitやSVNなどのバージョン管理ツールでリポジトリをローカルにクローンして`composer install`することと同義であるとのこと。
 
 本当にそうなのか検証してみます。
 
@@ -49,7 +50,7 @@ https://github.com/laravel/laravel
 記事執筆時点で最新バージョンはv9.4.1となっております。このリポジトリをローカルにクローンするには以下のコマンドを実行します。
 
 ```shell
-$ git clone https://github.com/laravel/laravel.git example-app
+git clone https://github.com/laravel/laravel.git example-app
 ```
 
 上のコマンドを実行することで現在のディレクトリ配下にexample-appというディレクトリが生成され、中にGitHubリポジトリ上のソースがすべてコピーされた状態になります。
@@ -57,12 +58,14 @@ $ git clone https://github.com/laravel/laravel.git example-app
 この状態でLaravelのビルトインサーバー（組み込み開発サーバー）を起動しようとすると必要なパッケージをロードできないため、artisanコマンドでPHPのWarningが発生します。
 
 ```shell
-$ php artisan serve
-
-  PHP Warning: ..
+php artisan serve
 ```
 
-なぜならGitHub上にあるLaravelのソースにはVendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcomposer.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
+```text:実行結果
+PHP Warning: ..
+```
+
+なぜならGitHub上にあるLaravelのソースにはvendorディレクトリが含まれていないためです。そこでディレクトリルートにあるcomposer.jsonの内容をもとに必要パッケージのインストールと依存解決をしてあげる必要があります。
 
 その時に使われるのが`composer install`になります。
 
@@ -72,10 +75,10 @@ $ php artisan serve
 
 ```shell
 # サンプルの.envファイルをコピー
-$ cp .env.example .env
+cp .env.example .env
 
 # encryptキーを生成してビルトインサーバー起動
-$ php artisan key:generate && php artisan serve
+php artisan key:generate && php artisan serve
 ```
 
 基本的には公式ドキュメントに合わせて`composer create-project`でプロジェクトを開始し適宜カスタマイズしていくのが無難そうです。
@@ -89,7 +92,7 @@ $ php artisan key:generate && php artisan serve
 例えば[Symfony](https://symfony.com)というPHPフレームワークの場合は以下のようになります。
 
 ```shell
-$ composer create-project symfony/skeleton example-app
+composer create-project symfony/skeleton example-app
 ```
 
 コマンド1つで開発環境を作れるのはすごく便利ですね。

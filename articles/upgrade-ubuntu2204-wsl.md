@@ -21,7 +21,7 @@ https://www.microsoft.com/ja-jp/p/ubuntu-2204-lts/9pn20msr04dw?activetab=pivot:o
 余談にはなりますが、この記事は以下の手順でアップグレードしたWSL2上のUbuntu 22.04 LTSですべて執筆しています。
 
 :::message
-アップグレード失敗した場合を想定して事前に重要なファイルをバックアップしておくことをおすすめします。
+アップグレードに失敗した場合を想定して事前に重要なファイルをバックアップしておくことをおすすめします。
 メイン環境のアップグレードは自己責任となります。完全に新しい環境で始める際はアップグレードではなく、**新規インストールをおすすめします**。
 :::
 
@@ -39,8 +39,10 @@ WSL2のUbuntu日本語対応については以前執筆した「[WSL2を日本�
 WSL2にてUbuntuを起動し、バージョン情報が記述されたファイルを`cat`で確認します。Ubuntuは/etc/os-releaseからバージョンの詳細を確認できます。
 
 ```shell
-$ cat /etc/os-release
+cat /etc/os-release
+```
 
+```text:実行結果
 NAME="Ubuntu"
 VERSION="20.04.4 LTS (Focal Fossa)"
 ID=ubuntu
@@ -55,24 +57,24 @@ VERSION_CODENAME=focal
 UBUNTU_CODENAME=focal
 ```
 
-バージョン情報が確認できました。上の例だと２行目`VERSION="20.04.4 LTS (Focal Fossa)"`の部分からUbuntu20.04.4 LTSが実行されていることが読み取れます。
+バージョン情報が確認できました。上の例だと2行目`VERSION="20.04.4 LTS (Focal Fossa)"`の部分からUbuntu 20.04.4 LTSが実行されていることが読み取れます。
 
 ### パッケージの依存解決
 
 Ubuntuにインストールしているパッケージのアップデートと依存解決を行います。
 
 ```shell
-$ sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
-上記のコマンドでパッケージのアップデートとアップデートを同時に行い、パッケージを最新の状態にしておきます。
+上記のコマンドでパッケージ情報の更新とアップグレードを同時に行い、パッケージを最新の状態にしておきます。
 
 ### ディストリビューションアップデートの確認
 
 ディストリビューションのアップグレードを確認するために必要なパッケージをインストールします。
 
 ```shell
-$ sudo apt dist-upgrade && sudo apt install update-manager-core
+sudo apt dist-upgrade && sudo apt install update-manager-core
 ```
 
 ディストリビューションアップグレードの依存解決が行われます。`apt install update-manager-core`は、update-manager-coreが存在しなかった場合のみインストールが行われます。
@@ -84,7 +86,7 @@ release-upgradeの設定ファイルを変更します。以下のファイル�
 
 ```shell
 # sudoでファイルを開く
-$ sudo vim /etc/update-manager/release-upgrades
+sudo vim /etc/update-manager/release-upgrades
 ```
 
 ファイルの一番下に`Prompt`という項目があります。ここの値を`lts`に変更します。すでにLTSリリースを使用している場合はデフォルトで`Prompt=lts`となっているため手動で変更する必要はありません。
@@ -169,7 +171,7 @@ UBUNTU_CODENAME=jammy
 
 今回はWSL2で動かしているUbuntu 20.04.4 LTSをUbuntu 22.04 LTSへアップグレードする手順についてまとめました。
 
-普段使用している環境をそのままアップグレードすることで、情報を引き続きつつ、新しいバージョンを使い続けられるのはメリットだと感じます。Ubuntu 22.04.4はLTSリリースとなり、2027年5月までサポートされるとのことだったので、長期間安定したバージョンを使い続けられるという安心感はありますね。
+普段使用している環境をそのままアップグレードすることで、情報を引き継ぎつつ、新しいバージョンを使い続けられるのはメリットだと感じます。Ubuntu 22.04はLTSリリースとなり、2027年5月までサポートされるとのことだったので、長期間安定したバージョンを使い続けられるという安心感はありますね。
 
 Ubuntu 22.04 LTSの変更点については現在勉強中のため、引き続きWSL2をメイン環境として使用しつつ理解を深めていきたいです。
 

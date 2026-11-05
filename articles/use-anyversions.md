@@ -12,17 +12,17 @@ anyenvはバージョンマネージャと呼ばれるツール群を一元管�
 
 ## なぜバージョンマネージャが必要なのか
 
-世の中には数多くのプログラミング言語が存在し、必ず開発環境を構築することは避けて通れません。プログラミングの環境構築中によくある問題として、特定のバージョンによって動かないパッケージの存在など、**プロジェクト毎に異なるバージョンを使いたいといったケースが存在します**。またプログラミング言語がバージョンアップするたびに開発環境の構築方法が変わったりすることも多くあるため、複数のバージョンを使用するときに苦労を強いられることもあります。
+世の中には数多くのプログラミング言語が存在し、開発環境の構築は避けて通れません。プログラミングの環境構築中によくある問題として、特定のバージョンによって動かないパッケージの存在など、**プロジェクト毎に異なるバージョンを使いたいといったケースが存在します**。またプログラミング言語がバージョンアップするたびに開発環境の構築方法が変わったりすることも多くあるため、複数のバージョンを使用するときに苦労を強いられることもあります。
 
 そんな時に活躍するのが、**env系ツール**、通称バージョンマネージャとなります。
 
-Rubyなら[rbenv](https://github.com/rbenv/rbenv)，Node.jsなら[nodenv](https://github.com/nodenv/nodenv)といったように各言語にはOSSとして公開されている有名なツールが存在します。
+Rubyなら[rbenv](https://github.com/rbenv/rbenv)、Node.jsなら[nodenv](https://github.com/nodenv/nodenv)といったように各言語にはOSSとして公開されている有名なツールが存在します。
 
 バージョンマネージャを使用することでプログラミング言語、バージョンを簡単にコントロールできるようになるので多くの開発現場で採用され根強い人気を誇っています。
 
 ## anyenvでインストールできるもの
 
-最新版のv1.1.5（2024年4月現在時点）では以下のバージョンマネージャをanyenv経由でインストール可能です。
+最新版のv1.1.5（2024年4月現在）では以下のバージョンマネージャをanyenv経由でインストール可能です。
 
 | ツール名 | 対象の環境・言語 |
 | ---- | ---- |
@@ -66,7 +66,10 @@ GitHubからクローンするメリットとして特定のパッケージマ�
 
 ```shell
 # Gitのバージョンを確認
-$ git --version
+git --version
+```
+
+```text:実行結果
 git version 2.34.1
 ```
 
@@ -76,14 +79,16 @@ https://docs.github.com/ja/get-started/getting-started-with-git/set-up-git
 `git`が使用できることを確認したら、anyenv本体をローカル環境にクローンします。
 
 ```shell
-$ git clone https://github.com/anyenv/anyenv ~/.anyenv
+git clone https://github.com/anyenv/anyenv ~/.anyenv
 ```
 
 クローンが終わると、ユーザーのホームディレクトリに.anyenvディレクトリが生成されます。
 
 ```shell
-$ ls -a
+ls -a
+```
 
+```text:実行結果
 . .. .anyenv
 ```
 
@@ -91,27 +96,29 @@ $ ls -a
 シェルにbashを利用している場合は以下のコマンドを実行。
 
 ```shell:bash
-$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
 ```
 
 zshを使用している場合は以下のコマンドを実行します。
 
 ```shell:zsh
-$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.zshrc
 ```
 
 コマンドを実行したら設定を有効化するためシェルに再ログインします。以下のコマンドで再ログインできます。
 
 ```shell
 # シェルを再起動
-$ exec $SHELL -l
+exec $SHELL -l
 ```
 
 つづいて、anyenvの初期化をしていきます。ターミナルで以下のコマンドを実行。
 
 ```shell
-$ anyenv init
+anyenv init
+```
 
+```text:実行結果
 # Load anyenv automatically by adding
 # the following to ~/.bash_profile:
 
@@ -121,7 +128,7 @@ eval "$(anyenv init -)"
 コマンドを実行すると設定の手順が表示されます。指示に従い、設定ファイル（この場合は.bash_profile）へ初期化処理を記述し初期設定を完了させます。
 
 ```shell
-$ echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
 ```
 
 コマンド実行後、シェルに再ログインします。
@@ -129,7 +136,10 @@ $ echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
 続けて複数のenvをインストールするために必要なセットアップをしていきます。
 
 ```shell
-$ anyenv install --init
+anyenv install --init
+```
+
+```text:実行結果
 Manifest directory doesn't exist: /root/.config/anyenv/anyenv-install
 Do you want to checkout https://github.com/anyenv/anyenv-install.git? [y/N]:
 ```
@@ -143,7 +153,7 @@ macOSなど、パッケージマネージャとしてHomebrewを使用してい�
 brewコマンドが使える状況で以下のコマンドを実行します。
 
 ```shell
-$ brew install anyenv
+brew install anyenv
 ```
 
 :::message
@@ -153,26 +163,26 @@ Homebrewでインストールした場合はすでにパスが通っているた
 インストールが完了したら初期化処理をします。
 
 ```shell
-$ anyenv init
+anyenv init
 ```
 
 設定ファイルに初期化処理を記述するように促されるので、`.zshrc`へ記述します。
 
-```shell:.zshrc
-$ echo 'eval "$(anyenv init -)"' >> ~/.zshrc
+```shell
+echo 'eval "$(anyenv init -)"' >> ~/.zshrc
 ```
 
 これで初期化ができました。以下のコマンドで再ログインします。
 
 ```shell
 # シェルを再起動
-$ exec $SHELL -l
+exec $SHELL -l
 ```
 
 続けてanyenvのセットアップをします。
 
 ```shell
-$ anyenv install --init
+anyenv install --init
 ```
 
 コマンドを実行途中で確認を求められたら続行します。`Completed!`と表示されれば完了です。
@@ -182,7 +192,10 @@ $ anyenv install --init
 以下のコマンドで現在のanyenvで使用できるバージョンマネージャを一覧表示できます。
 
 ```shell
-$ anyenv install -l
+anyenv install -l
+```
+
+```text:実行結果
   Renv
   crenv
   denv
@@ -211,7 +224,10 @@ $ anyenv install -l
 例としてNode.jsのバージョンマネージャである、[nodenv](https://github.com/nodenv/nodenv)をインストールしてみます。
 
 ```shell
-$ anyenv install nodenv
+anyenv install nodenv
+```
+
+```text:実行結果
 ...
 
 Install nodenv succeeded!
@@ -227,33 +243,39 @@ Please reload your profile (exec $SHELL -l) or open a new session.
 ### インストールできるバージョンの表示
 
 ```shell
-$ nodenv install -l
-  ~
-  # インストール可能なすべてのバージョンが表示される
+nodenv install -l
 ```
+
+インストール可能なすべてのバージョンが一覧で表示されます。
 
 ### バージョンを指定してのインストール
 
 ```shell
 # Node.js 20.12.2(LTS)をインストール
-$ nodenv install 20.12.2
+nodenv install 20.12.2
 
 # インストールされているバージョンを一覧表示
-$ nodenv versions
+nodenv versions
+```
+
+```text:実行結果
   20.12.2
 ```
 
 ### システム全体で使うバージョンを指定
 
 インストールしただけではまだNode.jsは使用できません。
-システム全体で優先的にで使用するバージョンを明示的に指定する必要があります。
+システム全体で優先的に使用するバージョンを明示的に指定する必要があります。
 
 ```shell
 # システム全体で使用するバージョンを指定
-$ nodenv global 20.12.2
+nodenv global 20.12.2
 
 # システム全体で使用するバージョンを確認
-$ node --version
+node --version
+```
+
+```text:実行結果
 v20.12.2
 ```
 
@@ -266,26 +288,43 @@ env系ツールを使う醍醐味である複数バージョンの切り替え�
 
 ```shell
 # 異なるバージョン(21.7.3)をインストール
-$ nodenv install 21.7.3
+nodenv install 21.7.3
+```
 
+```text:実行結果
 ~
 Installed node-v21.7.3-linux-x64 to /home/user/.anyenv/envs/nodenv/versions/21.7.3
+```
 
+```shell
 # バージョン21.7.3のインストールが完了
 # システム全体で適用されている20.12.2は先頭に '*' がつく
-$ nodenv versions
+nodenv versions
+```
+
+```text:実行結果
 * 20.12.2 (set by /home/user/.anyenv/envs/nodenv/version)
   21.7.3
+```
 
+```shell
 # システム全体で使うバージョンを21.7.3に変更
-$ nodenv global 21.7.3
+nodenv global 21.7.3
 
 # 切り替わったか確認
-$ node --version
-  v21.7.3
+node --version
+```
 
+```text:実行結果
+v21.7.3
+```
+
+```shell
 # システム全体で使うバージョンが21.7.3に変更されている
-$ nodenv versions
+nodenv versions
+```
+
+```text:実行結果
   20.12.2
 * 21.7.3 (set by /home/user/.anyenv/envs/nodenv/version)
 ```
@@ -298,21 +337,29 @@ Node.js 21.7.3を20.12.2に切り替えてみます。
 
 ```shell
 # 現在適用されているバージョンを確認
-$ node --version
-  21.7.3
+node --version
+```
 
+```text:実行結果
+v21.7.3
+```
+
+```shell
 # 異なるバージョンを使用したいプロジェクトへ移動
-$ cd ~/Documents/example-project
+cd ~/Documents/example-project
 
 # プロジェクト内で使用したいバージョンを指定
-$ nodenv local 20.12.2
+nodenv local 20.12.2
 
 # バージョンを確認
-$ node --version
-  20.12.2
-
-# バージョンを指定するとプロジェクト内に .node-version ファイルが作成される
+node --version
 ```
+
+```text:実行結果
+v20.12.2
+```
+
+バージョンを指定すると、プロジェクト内に`.node-version`ファイルが作成されます。
 
 上の流れでバージョンを切り替えることができます。
 
@@ -321,11 +368,14 @@ $ node --version
 
 ```shell
 # ホームディレクトリへ移動
-$ cd
+cd
 
 # システム全体で使うバージョンが表示される
-$ node --version
-  21.7.3
+node --version
+```
+
+```text:実行結果
+v21.7.3
 ```
 
 ## Node.js以外のenv系ツールを使用する
@@ -333,8 +383,10 @@ $ node --version
 anyenvでは例で紹介したnodenv以外にも、多言語のenv系ツールをまとめて管理できます。以下のコマンドでanyenvにて管理しているenv系ツールを表示します。
 
 ```shell
-$ anyenv versions
+anyenv versions
+```
 
+```text:実行結果
 nodenv:
   system
 * 20.12.2 (set by /home/user/.anyenv/envs/nodenv/version)
@@ -358,26 +410,29 @@ https://github.com/znz/anyenv-update
 
 ```shell
 # プラグイン管理用のディレクトリ作成
-$ mkdir -p $(anyenv root)/plugins
+mkdir -p $(anyenv root)/plugins
 
 # anyenv-updateプラグインのリポジトリをGitHubからクローン
-$ git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 
 # anyenvで管理しているバージョンマネージャの一括アップデート
-$ anyenv update
-  ...
-  Updating 'anyenv'...
-  Updating 'anyenv/anyenv-update'...
-  Updating 'nodenv'...
-  Updating 'nodenv/node-build'...
-  Updating 'nodenv/nodenv-vars'...
-  Updating 'anyenv manifest directory'...
+anyenv update
+```
+
+```text:実行結果
+...
+Updating 'anyenv'...
+Updating 'anyenv/anyenv-update'...
+Updating 'nodenv'...
+Updating 'nodenv/node-build'...
+Updating 'nodenv/nodenv-vars'...
+Updating 'anyenv manifest directory'...
 ```
 
 アップデートがあっても`anyenv update`とひとつのコマンドを実行するだけなのは非常に便利です。
 
 ## おわりに
 
-今回は、オールインワンなバージョンマネージャ「anyenv」についてまとめました。これ１つでバージョン管理はバッチリというぐらいに柔軟にツールの管理ができてとても便利だと感じました。anyenvを使うことでcomposerやbundlerといったおなじみのパッケージマネージャも導入できたりと痒いところに手が届くので便利です。**anyenvを使うことで誰もが通るプログラミング環境構築という大きな壁も柔軟に解決できそうな気がしました**。開発環境に時間をかけることなく開発の方に集中したほうが望ましいため、このようなツールは積極的に活用していきたいところですね。
+今回は、オールインワンなバージョンマネージャ「anyenv」についてまとめました。これ1つでバージョン管理はバッチリというぐらいに柔軟にツールの管理ができてとても便利だと感じました。anyenvでバージョンを管理した各言語と、composerやbundlerといったおなじみのパッケージマネージャを組み合わせて使えたりと痒いところに手が届くので便利です。**anyenvを使うことで誰もが通るプログラミング環境構築という大きな壁も柔軟に解決できそうな気がしました**。開発環境に時間をかけることなく開発の方に集中したほうが望ましいため、このようなツールは積極的に活用していきたいところですね。
 
 最後まで読んでいただきありがとうございました。
