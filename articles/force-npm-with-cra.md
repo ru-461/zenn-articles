@@ -14,16 +14,23 @@ Yarnを引き続き使うには`yarn create react-app <project-name>`でプロ�
 
 ## はじめに
 
-[Create React App](https://create-react-app.dev)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx create-react-app my-app`とした場合は以下のように表示されYarnで起動するコマンドが表示されます。
+[Create React App](https://create-react-app.dev)ではローカルにYarnがインストールされているとデフォルトでパッケージマネージャとしてYarnが使われます。**Yarnがローカルにインストールされている状態**で`npx create-react-app my-app`とした場合は以下のようにYarnで起動するコマンドが表示されます。
 
 ```shell
 # Yarnがローカルに存在
-$ which yarn
+which yarn
+```
+
+```text:実行結果
 /opt/homebrew/bin/yarn
+```
 
+```shell
 # Create React Appでアプリを作成
-$ npx create-react-app my-app
+npx create-react-app my-app
+```
 
+```text:実行結果
 ...
 
 We suggest that you begin by typing:
@@ -38,12 +45,19 @@ Happy hacking!
 
 ```shell
 # Yarnがローカルに存在しない
-$ which yarn
+which yarn
+```
+
+```text:実行結果
 yarn not found
+```
 
+```shell
 # Create React Appでアプリを作成
-$ npx create-react-app my-app
+npx create-react-app my-app
+```
 
+```text:実行結果
 ...
 
 We suggest that you begin by typing:
@@ -63,19 +77,26 @@ Yarnがインストールされている状態で`npx`を使用して作成し�
 Create React Appには使用するパッケージマネージャをnpmに固定するオプションがあります。
 
 ```shell
-$ npx create-react-app my-app --use-npm
+npx create-react-app my-app --use-npm
 ```
 
 上のように`--use-npm`というオプションを付けることでYarnがインストールされている状態でもnpmをデフォルトで使用するようにできます。
 
 ```shell
 # Yarnがローカルに存在
-$ which yarn
+which yarn
+```
+
+```text:実行結果
 /opt/homebrew/bin/yarn
+```
 
+```shell
 # npmの利用を強制するオプションをつけて作成
-$ npx create-react-app my-app --use-npm
+npx create-react-app my-app --use-npm
+```
 
+```text:実行結果
 ...
 
 We suggest that you begin by typing:
@@ -89,9 +110,12 @@ Happy hacking!
 Yarnがインストールされている環境でもnpmを使用するように設定できました。`--use-npm`をつけて作成した場合、yarn.lockではなくpackage-lock.jsonがプロジェクト配下に生成されます。
 
 ```shell
-$ cd my-app
+cd my-app
 # --use-npmをつけて作成した場合の構成
-$ ls
+ls
+```
+
+```text:実行結果
 node_modules  package-lock.json  package.json  public  README.md  src
 ```
 
