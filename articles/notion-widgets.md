@@ -11,7 +11,7 @@ published: true
 Notionは「All-in-one workspace」をコンセプトとして掲げているデジタルメモツールです。あらゆるサービスを埋め込んで一元化したり、チームでの共同編集作業、サイトの制作・公開など幅広いユースケースに注目が集まっており、今後更に盛り上がりを見せることが期待されています。
 https://www.notion.so
 
-そんな盛り上がりを見せているNotionですが、Notionにはテキストドキュメントだけでなく、Webページなども埋め込むことができます。その埋め込み機能を活用して便利なウィジェットを追加できる方法をご紹介します。最近では、Notionの機能を拡張するサービスも増えてきたため、どんどん活用して便利に活用していきましょう。
+そんな盛り上がりを見せているNotionですが、Notionにはテキストドキュメントだけでなく、Webページなども埋め込むことができます。その埋め込み機能を活用して便利なウィジェットを追加できる方法をご紹介します。最近では、Notionの機能を拡張するサービスも増えてきたため、どんどん便利に活用していきましょう。
 
 ## ウィジェットの仕組み
 
@@ -69,7 +69,7 @@ Select Locationに取得したい天気予報の地域を指定します。ア�
 
 ラベルの表示名やアイコン、温度の単位などはタブから自由にカスタマイズできます。カスタマイズができたら下にあるGET CODEからHTML埋め込みコードを取得します。
 
-```javascript
+```html
 <a class="weatherwidget-io" href="https://forecast7.com/en/35d71139d73/tokyo/" data-label_1="TOKYO" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="random_grey" >TOKYO WEATHER</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
