@@ -32,20 +32,20 @@ Safariの設定画面を開き、拡張機能の項目を開くことで導入�
 
 ここに拡張機能を検索して追加することで管理が可能となります。チェックマークの付け外しで有効無効の切り替えを行ったり、アンインストールもここから行うことができます。
 
-また右下には「拡張機能を追加...」というボタンがあり、ここからAppStoreのSafari拡張機能カテゴリページを開くことができます。
+また右下には「拡張機能を追加...」というボタンがあり、ここからApp StoreのSafari拡張機能カテゴリページを開くことができます。
 
-### Mac AppStoreで拡張機能を探す
+### Mac App Storeで拡張機能を探す
 
-Mac AppStoreのサイドメニューからカテゴリを選択すると一覧の中にSafari拡張機能があります。
+Mac App Storeのサイドメニューからカテゴリを選択すると一覧の中にSafari拡張機能があります。
 
 ![拡張機能カテゴリの画像](/images/web-clipper-with-safari/image03.png)
 
-ここにSafariで使用可能な拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが探しやすくて便利です。Safariの拡張機能は、通常のMacアプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダ（~/Applications）の中に格納されます。
+ここにSafariで使用可能な拡張機能がまとまっています。無料のものから有料のものまで数多くありますが、ランキング形式で見やすくまとめられているのが探しやすくて便利です。Safariの拡張機能は、通常のMacアプリと同じようにインストールが可能で、デフォルトでアプリケーションフォルダ（/Applications）の中に格納されます。
 
 ## Notion Web ClipperをSafariにインストール
 
 それでは、SafariにNotion Web Clipperをインストールしていきます。
-Mac AppStore内の検索から「Notion」と検索することで上位にヒットします。
+Mac App Store内の検索から「Notion」と検索することで上位にヒットします。
 
 ![Notion Web Clipperの画像](/images/web-clipper-with-safari/image04.png)
 *インストール済みの場合は「開く」に変わる*
@@ -63,7 +63,7 @@ https://apps.apple.com/jp/app/notion-web-clipper/id1559269364?mt=12
 
 拡張機能を導入するとSafariの上部メニューにNotionのアイコンが表示されるようになり、ここからNotion Web Clipperにアクセスできます。
 
-初回起動時はNotionのログインページへ促されNotionのアカウントでログインする画面になります。ログイン後、Webページを開いた状態でNotion Web Clipperを起動すると以下のような表示になります。
+初回起動時はNotionのログインを促されNotionのアカウントでログインする画面になります。ログイン後、Webページを開いた状態でNotion Web Clipperを起動すると以下のような表示になります。
 
 ![Webページをクリップする様子](/images/web-clipper-with-safari/image05.png)
 *Notion Web Clipperのページをクリップする様子*

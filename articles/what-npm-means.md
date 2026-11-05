@@ -25,7 +25,7 @@ https://x.com/npmjs/status/105690425242820608?s=20
 またnpmといえばのWebサイト[npmjs.com](https://www.npmjs.com)の左上にnpmという文字列から3語の造語（バクロニム）を表示するトリックが有名です。
 
 ![npm公式サイトトップページの画像](/images/what-npm-means/image01.gif)
-***クリックのたびにnpmのバクロニムが次々に変化します***
+*クリックのたびにnpmのバクロニムが次々に変化します*
 
 10回クリックすることで意味深なGitHubのリポジトリページへ遷移する仕様となっています。
 これもnpmの由来、意味に関係するのでしょうか。
@@ -44,23 +44,21 @@ GitHubリポジトリのREADMEに以下の見出しがあり、なぜnpmが"npm"
 
 Q. "npm"は "Node Package Manager"の頭文字ですか。
 
-A. 一般的に信じられていることとは異なり、npmは実際には「Node Package Manager」の頭文字ではありません。もしプロジェクト名が「ninaa」なら頭文字といえます。
+A. 一般的に信じられていることとは異なり、npmは実際には「Node Package Manager」の頭文字ではありません。npmは「npm is not an acronym（npmは頭字語ではない）」を再帰的に略したバクロニムです（もしプロジェクト名が「ninaa」なら頭字語といえます）。
 
-早速、「Node Package Manager」の頭文字を並べたもの ≠ npmと主張しています。さっそく否定から入ったのでこれには驚きました。ずっと頭文字を並べたものだと思っていたので公式リポジトリ内で主張していることがとても衝撃的でした。
+早速、「Node Package Manager」の頭文字を並べたもの ≠ npmと主張しています。否定から入ったのでこれには驚きました。ずっと頭文字を並べたものだと思っていたので公式リポジトリ内で主張していることがとても衝撃的でした。
 
-要約するとnpmとは。
+要約すると、npmは以下のフレーズを再帰的に表現したものなんですね。
 
 > npm is not an acronym（npmはacronymではない）
 
-を再帰的に表現したものなんですね。
-
-要するに、npmは"Node Package Manager"という意味であるが、必ずしもnpmはそのまま頭文字を並べたものではないとのことです。
+つまり、npmはNode.jsのパッケージマネージャではあるものの、名前は"Node Package Manager"の頭文字を並べたものではないということです。
 
 再帰的に表現や頭文字といった言葉が続きます。混乱を防ぐために、ここで一旦アクロニムという言葉やバクロニムといった略式、文化について整理していきます。
 
 ## バクロニムとアクロニムとは
 
-バクロニム（backronym）は日本語で**逆頭字語**と表されます。またアクロニム（acronym）とは**頭文字**のことを表します。言葉だけだと少しわかりにくいので例を挙げてみます。
+バクロニム（backronym）は日本語で**逆頭字語**と表されます。またアクロニム（acronym）とは**頭字語**、つまり頭文字を並べた略語のことを表します。言葉だけだと少しわかりにくいので例を挙げてみます。
 
 バクロニムの有名な例として「SOS」というものがあります。本来モールス信号であるものが（**S**ave **O**ur **S**hip）や（**S**ave **O**ur **S**ouls）といった後付の解釈によって表されます。本来意味のない言葉が後付によって頭文字のような意味をもつ。つまり一種の言葉遊びのようなものですね。
 日本だと「あいうえお作文」がバクロニムと言えそうです。
@@ -79,7 +77,7 @@ A. 一般的に信じられていることとは異なり、npmは実際には�
 - RPA（**R**obotic **P**rocess **A**utomation）
 - IOC（**I**nternational **O**lympic **C**ommittee）
 
-イニシャリズムのなかにアクロニムが含まれるといったイメージだとわかりやすいです。多くの場面ではこれらをひとまとめに頭文字と表すことがあることもあります。
+広い意味でのアクロニムのなかにイニシャリズムが含まれるといったイメージだとわかりやすいです。多くの場面ではこれらをひとまとめに頭文字と表すこともあります。
 
 npmも「**N**ode **P**ackage **M**anager」かと思われがちですが、これが面白いことにnpmはバクロニムで「npm is not an acronym」の再帰表現であると主張しています。これが本記事で取り上げる内容に繋がります。
 
@@ -114,7 +112,7 @@ PHPはPHP: Hypertext Preprocessorを再帰的に略したものという説明�
 
 ## npmの本質とは
 
-FAQには合わせて以下のような説明があります。
+FAQには併せて以下のような説明があります。
 
 > The precursor to npm was actually a bash utility named "pm", which was the shortform name of "pkgmakeinst" - a bash function that installed various things on various platforms. If npm were to ever have been considered an acronym, it would be as "node pm" or, potentially "new pm".
 
@@ -140,7 +138,7 @@ npmの遊び心が感じられるリポジトリで寄せられたものを見�
 
 調べていく中で、DVDのように時代の移り変わりで言葉の持つ意味も少しずつ変わっていくのを感じました。最初は半信半疑でしたが最終的に「npmはnpmである」という結論に至り、なぜか納得している自分がいます。
 
-再帰的略語や頭文字が多く飛び交うIT業界で仕事をしていると、なぜこのような名前にしたのか不思議に感じる技術を目にすることが多くあります。実際何気なく見ているものでも調べてみるとその背景には開発者の思いや、考え方が現れており、多くの発見があるように感じます。
+再帰的頭字語や頭文字が多く飛び交うIT業界で仕事をしていると、なぜこのような名前にしたのか不思議に感じる技術を目にすることが多くあります。実際何気なく見ているものでも調べてみるとその背景には開発者の思いや、考え方が現れており、多くの発見があるように感じます。
 
 また気になったことを調べることで得られる発見により技術がもっと好きになりますね。
 
@@ -151,5 +149,5 @@ npmの遊び心が感じられるリポジトリで寄せられたものを見�
 - [node.js - Why is npm's name not Node Package Manager? - Stack Overflow](https://stackoverflow.com/questions/45531942/why-is-npms-name-not-node-package-manager)
 - [WAIT! @Myles, What DOES npm stand for?! · Discussion #639 · githubevents/universe2020 · GitHub](https://github.com/githubevents/universe2020/discussions/639)
 - [頭字語 - Wikipedia](https://ja.wikipedia.org/wiki/%E9%A0%AD%E5%AD%97%E8%AA%9E)
-- [バクロニム - Wikipedia](https://ja.wikipedia.org/wiki/-%E3%83%90%E3%82%AF%E3%83%AD%E3%83%8B%E3%83%A0)
+- [バクロニム - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%AF%E3%83%AD%E3%83%8B%E3%83%A0)
 - [再帰的頭字語 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%86%8D%E5%B8%B0%E7%9A%84%E9%A0%AD%E5%AD%97%E8%AA%9E)
