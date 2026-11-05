@@ -16,7 +16,7 @@ Web環境では`CSS StyleSheet`、Native環境では`StyleSheet.create`をそれ
 今回はExpo Routerが導入されたプロジェクトにNativeWindを新規に導入し、使用可能になるまでの流れを解説します。
 
 :::message
-2024年の初頭に[Expo Router v3](https://expo.dev/changelog/2024/01-23-router-3)が登場し、記事公開時点ではNativeWindはV4への移行途中となっております。破壊的変更が入る可能性もあるため、不明点については[公式ドキュメント](https://www.nativewind.dev/v4/overview)も併せてご確認ください。
+2024年の初頭に[Expo Router v3](https://expo.dev/changelog/2024/01-23-router-3)が登場し、記事公開時点ではNativeWindはv4への移行途中となっております。破壊的変更が入る可能性もあるため、不明点については[公式ドキュメント](https://www.nativewind.dev/v4/overview)も併せてご確認ください。
 :::
 
 ## 新規プロジェクト作成
@@ -25,7 +25,7 @@ Expoが提供している`create-expo-app`を利用して新規プロジェク�
 `--template`オプションをつけて実行すると既にExpoが用意しているテンプレートからプロジェクトを始めることができます。
 
 ```shell
-$ bunx create-expo-app nativewind-app --template
+bunx create-expo-app nativewind-app --template
 ```
 
 テンプレートの選択を求められるので、`Navigation (TypeScript)`を選択します。
@@ -41,7 +41,7 @@ $ bunx create-expo-app nativewind-app --template
 作成したプロジェクトが起動できることを確認します。
 
 ```shell
-$ bun run start
+bun run start
 ```
 
 [Expo Go](https://expo.dev/client)やシミュレーターを使用してサンプルアプリを開けることを確認します。
@@ -55,14 +55,14 @@ $ bun run start
 `expo install`を使用して必須パッケージをまとめて導入します。
 
 ```shell
-$ bunx expo install nativewind@^4.0.1 react-native-reanimated tailwindcss
+bunx expo install nativewind@^4.0.1 react-native-reanimated tailwindcss
 ```
 
 プロジェクトルートにiosディレクトリがある場合は下記のコマンドを実行してください。
 本記事の手順で、Expoのテンプレートから始めた場合は実行不要です。
 
 ```shell
-$ bunx pod-install
+bunx pod-install
 ```
 
 導入するパッケージはこれだけです。続けてReact NativeへNativeWindを使用してTailwind CSSを反映するために必要な設定を進めていきます。
@@ -74,7 +74,7 @@ Tailwind CSSの設定ファイルであるtailwind.config.jsを作成します�
 以下のコマンドを実行します。
 
 ```shell
-$ bunx tailwindcss init
+bunx tailwindcss init
 ```
 
 実行するとプロジェクトのルートにtailwind.config.jsが生成されます。
@@ -117,7 +117,7 @@ module.exports = {
 Tailwind CSSで使用するCSSファイル(global.css)を新規作成します。
 
 ```shell
-$ touch ./global.css
+touch ./global.css
 ```
 
 以下の3行を記述します。
@@ -152,7 +152,7 @@ metro.config.jsの設定を変更します。
 プロジェクトルートにmetro.config.jsが存在しない場合は下記のコマンドで生成できます。
 
 ```shell
-$ bunx expo customize metro.config.js
+bunx expo customize metro.config.js
 ```
 
 生成されたmetro.config.jsを下記のように書き換えます。
@@ -168,10 +168,10 @@ module.exports = withNativeWind(config, { input: './global.css' })
 
 ### 型参照の追加
 
-TypeScriptで正しく形定義の参照ができるようプロジェクトのルートにnativewind-env.d.tsを新規作成します。
+TypeScriptで正しく型定義の参照ができるようプロジェクトのルートにnativewind-env.d.tsを新規作成します。
 
 ```shell
-$ touch nativewind-env.d.ts
+touch nativewind-env.d.ts
 ```
 
 下記の定義を追加します。
@@ -195,7 +195,7 @@ import "@/global.css"
 一旦キャッシュをクリアしアプリを起動します。
 
 ```shell
-$ bun run start -c
+bun run start -c
 ```
 
 [Expo Go](https://expo.dev/client)や各種シミュレーターを使用してアプリが正常に表示できることを確認します。
@@ -210,7 +210,7 @@ Expo Routerではappディレクトリを起点としてルーティングが自
 グループの中に新しいルート（/wind）を作成します。
 
 ```shell
-$ touch app/(tabs)/wind.tsx
+touch "app/(tabs)/wind.tsx"
 ```
 
 Tab Windページの内容を記載します。
