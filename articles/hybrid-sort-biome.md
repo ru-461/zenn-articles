@@ -83,7 +83,7 @@ bunx @biomejs/biome init
 {
   "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
   "organizeImports": {
-    "enabled": false
+    "enabled": true
   },
   "linter": {
     "enabled": true,
@@ -362,7 +362,7 @@ settings.jsonへ以下を記載します。
 ```diff json:package.json
 "scripts": {
   ...
-+ "check": "biome check --apply ./src && eslint './src/**/*.{js,jsx,ts,tsx}' --fix",
++ "check": "biome check --apply ./src && eslint './src/**/*.{js,jsx,ts,tsx}' --fix"
 },
 ```
 
