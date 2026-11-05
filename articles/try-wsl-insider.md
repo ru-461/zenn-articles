@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Mac上でWindowsを動かすといったことがIntel製CPUを搭載していたMacでは[Boot Camp](https://support.apple.com/ja-jp/HT201468)や[Parallels Desktop](https://www.parallels.com/jp)を使うことで容易に実現できていました。しかし、2020年秋に登場したMacシリーズでCPUがApple Siliconへと変わりアーキテクチャがarm64に変わりました。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**Apple Siliconに対応**しました。これでParallels DesktopはIntel Mac ・ Apple Silicon Mac両方へ対応したことになります。
+Mac上でWindowsを動かすといったことがIntel製CPUを搭載していたMacでは[Boot Camp](https://support.apple.com/ja-jp/HT201468)や[Parallels Desktop](https://www.parallels.com/jp)を使うことで容易に実現できていました。しかし、2020年秋に登場したMacシリーズでCPUがApple Siliconへと変わりアーキテクチャがarm64に変わりました。その影響でWindowsをMac上で動かすのが困難となっていましたが、先日Parallels Desktop 16がバージョン16.5にて**Apple Siliconに対応**しました。これでParallels DesktopはIntel Mac・Apple Silicon Mac両方へ対応したことになります。
 
 現在、Apple SiliconのMacでPreview版Windows 10が動作する段階まで来ています。まだまだ一部の環境でしか使用されていないarm64版Windows 10ですが、Previewビルドにて**x64 アプリのエミュレーションが実現**[^1]するなど着々と進化を遂げております。
 
@@ -46,7 +46,7 @@ Mac上で仮想化したWindows 10から見える情報はこのようになっ�
 
 プロセッサとしてMac側のApple Siliconが認識されており、問題なく動作しております。実装RAMは仮想マシンの設定から、4GBを割り当てておりしっかりと認識されています。Windows 10 ProバージョンDevとして動作します。
 
-全体的にネイティブに動作しているWindows 10と比較するとアニメーションの描画時など少しもっさりするかなといった部分はありますが、基本的な操作は問題なく行えるくらいに快適に動作してます。
+全体的にネイティブに動作しているWindows 10と比較するとアニメーションの描画時など少しもっさりするかなといった部分はありますが、基本的な操作は問題なく行えるくらいに快適に動作しています。
 
 この環境にWSL2（Windows Subsystem for Linux 2）を導入して動かせるか試していきます。
 

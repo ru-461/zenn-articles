@@ -91,7 +91,7 @@ https://www.notion.so/ja-jp/help/keyboard-shortcuts
 
 ![ボタンにアイコンを設定する様子の画像](/images/notion-custom-touchbar/image04.png)
 
-初期設定からカスタマイズしてる点は以下のとおりです。
+初期設定からカスタマイズしている点は以下のとおりです。
 
 - ボタンタイトル（動作がわかりやすい名前）
 - 背景色（背景色に同化させたいためブラックを指定）
