@@ -87,7 +87,7 @@ https://hub.docker.com/_/node/
 
 確認したところNode.js v16のイメージが配布されていたのでDockerコンテナを作成して実行環境を確認します。
 
-Docker Desktopも先日公開されたバージョンv3.3.1にてApple Siliconへネイティブ対応しました。^[[Docker Desktop for Apple silicon | Docker Documentation](https://docs.docker.com/docker-for-mac/apple-silicon)]DockerはインストーラやHomebrewで簡単にインストールできます。
+Docker Desktopも先日公開されたバージョンv3.3.1にてApple Siliconへネイティブ対応しました。^[[Docker Desktop for Apple silicon | Docker Documentation](https://docs.docker.com/docker-for-mac/apple-silicon)]DockerはインストーラーやHomebrewで簡単にインストールできます。
 
 ```shell
 # HomebrewでDockerをインストール
