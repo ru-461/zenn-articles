@@ -27,21 +27,21 @@ JavaScriptフレームワークでは、npmやYarnなどのパッケージマネ
 ### npm
 
 ```shell
-$ npm install -g @vue/cli
+npm install -g @vue/cli
 
-$ vue create <project-name>
-$ cd <project-name>
-$ npm run serve
+vue create <project-name>
+cd <project-name>
+npm run serve
 ```
 
 ### Yarn
 
 ```shell
-$ yarn global add @vue/cli
+yarn global add @vue/cli
 
-$ vue create <project-name>
-$ cd <project-name>
-$ yarn serve
+vue create <project-name>
+cd <project-name>
+yarn serve
 ```
 
 [localhost:8080](http://localhost:8080)で開発サーバーが立ち上がります。
@@ -53,9 +53,9 @@ $ yarn serve
 ### npm
 
 ```shell
-$ npm init nuxt-app <project-name>
-$ cd <project-name>
-$ npm run dev
+npm init nuxt-app <project-name>
+cd <project-name>
+npm run dev
 ```
 
 Yarnを使う場合は`yarn dev`を実行してください。
@@ -63,17 +63,17 @@ Yarnを使う場合は`yarn dev`を実行してください。
 ### npx
 
 ```shell
-$ npx create-nuxt-app <project-name>
-$ cd <project-name>
-$ npm run dev
+npx create-nuxt-app <project-name>
+cd <project-name>
+npm run dev
 ```
 
 ### Yarn
 
 ```shell
-$ yarn create nuxt-app <project-name>
-$ cd <project-name>
-$ yarn dev
+yarn create nuxt-app <project-name>
+cd <project-name>
+yarn dev
 ```
 
 [localhost:3000](http://localhost:3000)で開発サーバーが立ち上がります。
@@ -86,10 +86,10 @@ Nuxt 3からはセットアップ手順が大幅に変更されました。
 `nuxi`コマンドを用いることで、従来よりも簡潔かつ高速にセットアップできます。`nuxi`はNuxt用の新しいCLIです。
 
 ```shell
-$ npx nuxi init <project-name>
-$ cd <project-name>
-$ yarn install
-$ yarn dev -o
+npx nuxi init <project-name>
+cd <project-name>
+yarn install
+yarn dev -o
 ```
 
 [localhost:3000](http://localhost:3000)で開発サーバーが立ち上がります。
@@ -101,25 +101,25 @@ $ yarn dev -o
 ### npm
 
 ```shell
-$ npm init react-app <project-name>
-$ cd <project-name>
-$ npm start
+npm init react-app <project-name>
+cd <project-name>
+npm start
 ```
 
 ### npx
 
 ```shell
-$ npx create-react-app <project-name>
-$ cd <project-name>
-$ npm start
+npx create-react-app <project-name>
+cd <project-name>
+npm start
 ```
 
 ### Yarn
 
 ```shell
-$ yarn create react-app <project-name>
-$ cd <project-name>
-$ yarn start
+yarn create react-app <project-name>
+cd <project-name>
+yarn start
 ```
 
 `npx create-react-app`の実行時は、環境によってはYarnを選択することがあります。
@@ -133,17 +133,17 @@ $ yarn start
 ### npx
 
 ```shell
-$ npx create-next-app <project-name>
-$ cd <project-name>
-$ npm run dev
+npx create-next-app <project-name>
+cd <project-name>
+npm run dev
 ```
 
 ### Yarn
 
 ```shell
-$ yarn create next-app <project-name>
-$ cd <project-name>
-$ yarn dev
+yarn create next-app <project-name>
+cd <project-name>
+yarn dev
 ```
 
 Reactと同様に、環境によってはYarnを選択することがあります。
@@ -157,22 +157,22 @@ Reactと同様に、環境によってはYarnを選択することがありま�
 ### npm
 
 ```shell
-$ npm install -g @angular/cli
+npm install -g @angular/cli
 
-$ ng new <project-name>
-$ cd <project-name>
-$ ng serve --open
+ng new <project-name>
+cd <project-name>
+ng serve --open
 ```
 
 ### Yarn
 
 ```shell
-$ npm install -g @angular/cli
+npm install -g @angular/cli
 
-$ ng config -g cli.packageManager yarn
-$ ng new <project-name>
-$ cd <project-name>
-$ ng serve --open
+ng config -g cli.packageManager yarn
+ng new <project-name>
+cd <project-name>
+ng serve --open
 ```
 
 `ng serve --open`とすることでデフォルトのブラウザで起動します。
@@ -187,10 +187,10 @@ $ ng serve --open
 ### npx
 
 ```shell
-$ npx degit sveltejs/template <project-name>
-$ cd <project-name>
-$ npm install
-$ npm run dev
+npx degit sveltejs/template <project-name>
+cd <project-name>
+npm install
+npm run dev
 ```
 
 [localhost:5000](http://localhost:5000)で開発サーバーが立ち上がります。
@@ -199,7 +199,7 @@ $ npm run dev
 
 ## おわりに
 
-有名なJavaScriptフレームワークの雛形プロジェクト作成コマンドを、公式ドキュメントをもとに列挙しました。簡単なコマンド1つで、すぐに開発を始める環境を作成できるのはとても便利です。フレームワークがここまで発展し、多くの人に選ばれる理由を実感しました。
+有名なJavaScriptフレームワークの雛形プロジェクト作成コマンドを、公式ドキュメントをもとに列挙しました。簡単なコマンド1つで、すぐに開発を始められる環境を作成できるのはとても便利です。フレームワークがここまで発展し、多くの人に選ばれる理由を実感しました。
 
 公式ドキュメントを見ながら記事を執筆する中で得た気づきが多くあったため、今後もJavaScriptフレームワークについてさらに理解を深めていきたいです。
 
