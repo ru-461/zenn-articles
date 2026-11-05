@@ -8,13 +8,13 @@ published: true
 
 ## はじめに
 
-Reactで手早くプロジェクトの雛形を作る際に[Create-React-App](https://create-react-app.dev)を使用する例は多いです。Reactの開発をしているMeta社が開発しており、Reactチュートリアルでも使用が推奨されています。
+Reactで手早くプロジェクトの雛形を作る際に[Create React App](https://create-react-app.dev)を使用する例は多いです。Reactの開発をしているMeta社が開発しており、Reactチュートリアルでも使用が推奨されています。
 https://ja.reactjs.org/docs/create-a-new-react-app.html
 
 Node.jsを実行できる環境で以下のコマンドを実行することでReactのプロジェクトを生成できます。
 
 ```shell
-$ npx create-react-app my-app
+npx create-react-app my-app
 ```
 
 この例だとコマンドを実行しているディレクトリ直下に`my-app`というディレクトリが生成されます。
@@ -26,7 +26,7 @@ $ npx create-react-app my-app
 プロジェクトを生成するときにプロジェクト名をコマンドの後ろにつけるのですが、ここである疑問が浮かびました。それは**プロジェクトのディレクトリ内にプロジェクトを生成するのではなく、プロジェクトをカレントディレクトリの中に展開できないのか**というものです。
 
 Create React Appの[公式ドキュメント](https://create-react-app.dev/docs/getting-started)を見たところ全てプロジェクト名（my-app）を指定して作成していました。
-しかし、カレントディレクトリにプロジェクトの中身（my-app）の中身を展開するやり方の紹介がありませんでした。
+しかし、カレントディレクトリにプロジェクト（my-app）の中身を展開するやり方の紹介がありませんでした。
 
 やり方を模索してた所、直感的にカレントディレクトリ（.）を指定したところカレントディレクトリにプロジェクトを生成できました。
 
@@ -34,15 +34,17 @@ Create React Appの[公式ドキュメント](https://create-react-app.dev/docs/
 
 ```shell
 # 先にプロジェクトを格納するディレクトリを作成して移動
-$ mkdir my-app
-$ cd my-app
+mkdir my-app
+cd my-app
 
 # my-app内にReactプロジェクトを生成
-$ npx create-react-app .
+npx create-react-app .
+```
 
+```text:実行結果
 Creating a new React app in react-projects/my-app.
 ...
-cd react-projects/my-app
+  cd react-projects/my-app
   npm start
 
 Happy hacking!
@@ -50,12 +52,17 @@ Happy hacking!
 
 上のようにすることでカレントディレクトリ（my-app）にReactプロジェクトの中身だけを作成できます。
 
-```shell
+```text:作業ディレクトリ
 # 場所
 /Users/user/react-projects/my-app
+```
 
+```shell
 # フォルダ構成を確認
-$ tree -L 1
+tree -L 1
+```
+
+```text:実行結果
 .
 ├── README.md
 ├── node_modules
@@ -71,7 +78,7 @@ $ tree -L 1
 
 ```shell
 # カレントディレクトリにreact-projects/my-react-app/appを作成
-$ npx create-react-app react-projects/my-react-app/app
+npx create-react-app react-projects/my-react-app/app
 ```
 
 ## おわりに
