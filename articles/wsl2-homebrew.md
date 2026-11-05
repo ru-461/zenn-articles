@@ -10,11 +10,11 @@ published: true
 
 [前回の記事](https://zenn.dev/ryuu/articles/brew-yarn-warning)に続きHomebrew関連の記事になります。
 
-私自身、WindowsのWSL2とMacBookの環境を行き来することが多くあります。それぞれパッケージマネージャーを経由してツールのインストールを行うことが多くあり、今までWSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt)、Macでは[Homebrew](https://brew.sh/ja/)と使用しています。
+私自身、WindowsのWSL2とMacBookの環境を行き来することが多くあります。それぞれパッケージマネージャーを経由してツールのインストールを行うことが多くあり、今までWSL2ではデフォルトで使用できる[apt](https://github.com/Debian/apt)、Macでは[Homebrew](https://brew.sh/ja/)を使用しています。
 
-パッケージマネージャごとに微妙にコマンド、オプションが異なるため、環境が変わったときにコマンドが瞬間的に出てこないことがありました。そこでWSL2にもHomebrewが対応しているという情報を目にして今更ながらWSL2にHomebrewを導入しました。
+パッケージマネージャーごとに微妙にコマンド、オプションが異なるため、環境が変わったときにコマンドが瞬間的に出てこないことがありました。そこでWSL2にもHomebrewが対応しているという情報を目にして今更ながらWSL2にHomebrewを導入しました。
 
-HomebrewといえばmacOSユーザーの特権という先入観でmacOSだけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると。
+HomebrewといえばmacOSユーザーの特権という先入観でmacOSだけで使えるパッケージマネージャーかとずっと思っていたのですが、公式サイトを確認すると以下のように書かれていました。
 
 > The Missing Package Manager for macOS (or Linux)
 (macOS（またはLinux）用パッケージマネージャー)
@@ -23,7 +23,7 @@ HomebrewといえばmacOSユーザーの特権という先入観でmacOSだけ�
 
 これは過去にLinuxbrewといった名前で開発されていたパッケージマネージャーがあったことに関係するようです。2019年2月に公開された[2.0.0](https://brew.sh/2019/02/02/homebrew-2.0.0)よりLinuxとWSLが公式にサポートされるようになり現在へと至ります。
 
-今までずっとaptを使ってパッケージ管理をしてきました。通常ユーザーで作業する際にaptだと管理者権限（sudoコマンド）必須というのが少し気になっていました。**Homebrewではホームディレクトリ内でパッケージを管理するため sudoを使わない**というのも魅力的です。また、MacでHomebrewを使っていることもあり、それぞれのプラットフォームで**コマンドが共通して使える**という点にとても魅力を感じました。パッケージマネージャーを乗り換えるのは少し抵抗がありますが重い腰を上げてこの機会にaptからHomebrewへ乗り換えました。
+今までずっとaptを使ってパッケージ管理をしてきました。通常ユーザーで作業する際にaptだと管理者権限（sudoコマンド）必須というのが少し気になっていました。**Homebrewでは専用のディレクトリでパッケージを管理するため、パッケージのインストールにsudoを使わない**というのも魅力的です。また、MacでHomebrewを使っていることもあり、それぞれのプラットフォームで**コマンドが共通して使える**という点にとても魅力を感じました。パッケージマネージャーを乗り換えるのは少し抵抗がありますが重い腰を上げてこの機会にaptからHomebrewへ乗り換えました。
 
 :::message
 HomebrewはCPUのアーキテクチャ（x86_64やARM）によってインストール方法や使用できるパッケージが異なります。今回は私の環境（x86_64）をベースに解説することを予めご了承ください。
@@ -44,7 +44,7 @@ https://brew.sh/ja/
 Homebrewを導入するにあたりパッケージを最新に更新しておきます。
 
 ```shell
-$ sudo apt update
+sudo apt update
 ```
 
 またHomebrewを導入するのに以下の最低条件を満たす必要があります。
@@ -57,7 +57,7 @@ $ sudo apt update
 現在使っているPCではx86_64のCPU上でWSL2（Ubuntu 20.04）が動作しているため、以下のパッケージをコマンドでインストールします。
 
 ```shell
-$ sudo apt-get install build-essential curl file git
+sudo apt-get install build-essential curl file git
 ```
 
 :::message
@@ -68,7 +68,7 @@ build-essentialとは開発によく使用されるビルドパッケージを�
 
 必要条件を満たしたらターミナル上で以下のワンライナーを実行します。
 
-これはHomebrewのトップページに表示されているワンライナーになります
+これはHomebrewのトップページに表示されているワンライナーになります。
 ![インストールワンライナーの画像](/images/wsl2-homebrew/image01.png)
 *MacとLinux共通で使用する*
 
@@ -79,7 +79,7 @@ build-essentialとは開発によく使用されるビルドパッケージを�
 WSL2のターミナル上で**一般ユーザーに切り替えてから下記を実行します。**
 
 ```shell
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 コマンドを実行するとインストールされるスクリプトと、インストールで作成されるディレクトリが一覧で表示されます。
@@ -100,25 +100,27 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 ターミナルに表示されている指示どおりに公式ドキュメントから以下のコマンドを順番に実行します。
 
 ```shell
-$ test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-$ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-$ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-$ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 ```
 
 設定を上手く反映させるためにシェルを再起動します。
 
 ```shell
 # シェル再起動
-$ exec $SHELL -l
+exec $SHELL -l
 ```
 
 これでパスの追加が完了です。
 試しに`brew`と打って以下のようなコマンド候補が返ってくればパスが上手く通っています。
 
 ```shell
-$ brew
+brew
+```
 
+```text:実行結果
 Example usage:
   brew search [TEXT|/REGEX/]
   brew info [FORMULA...]
@@ -130,8 +132,10 @@ Example usage:
 導入されたバージョンは以下のコマンドで確認できます。
 
 ```shell
-$ brew --version
+brew --version
+```
 
+```text:実行結果
 Homebrew 3.0.2
 Homebrew/linuxbrew-core (git revision b2e4cd; last commit 2021-02-27)
 ```
@@ -144,25 +148,27 @@ HomebrewではパッケージをFormulaと呼び、以下のようにインス�
 
 ```shell
 # treeコマンドをHomebrewでインストール
-$ brew install tree
+brew install tree
 ```
 インストールが完了すると同時にパスも通るためターミナルからすぐに実行できます。
 
 インストールされた場所の確認。
 
 ```shell
-$ which tree
+which tree
+```
 
+```text:実行結果
 /home/linuxbrew/.linuxbrew/bin/tree
 ```
 
 パスを見て分かるように、WSLにインストールしたHomebrewではパッケージを/home/linuxbrew/.linuxbrewの配下で管理します。
-ホームディレクトリ配下で完結するため、**システム環境をあまり汚さない**のがいいですね。
+Homebrew専用のディレクトリ配下で完結するため、**システム環境をあまり汚さない**のがいいですね。
 
 ## さいごに
 
 今回、WSL2の環境にパッケージマネージャーであるHomebrewをインストールしてみました。
-インターネットの情報ではパッケージインストールにHomebrewを使って解説している情報も多く、Ubuntuだとその都度aptコマンドで置き換えてインストールするなど少し手間でした。今回Homebrewが使えるようになったことで **macOSと同じ感覚で操作できる、コマンドの管理、パッケージの管理がしやすい**などの大きなメリットがあると感じました。
+インターネットの情報ではパッケージインストールにHomebrewを使って解説している情報も多く、Ubuntuだとその都度aptコマンドで置き換えてインストールするなど少し手間でした。今回Homebrewが使えるようになったことで**macOSと同じ感覚で操作できる、コマンドの管理、パッケージの管理がしやすい**などの大きなメリットがあると感じました。
 
 なによりsudoを使わずに手軽にパッケージマネージャーを使えるのが大きいです。Homebrewを思い切って導入したことでWSL2での開発がさらに捗りそうです。
 

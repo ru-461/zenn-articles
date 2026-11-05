@@ -17,7 +17,7 @@ Vueで作成したSPAをデプロイする際には[Netlify](https://www.netlify
 
 ## 環境
 
-- Windows10バージョン20H2
+- Windows 10バージョン20H2
 - WSL2（Ubuntu 20.04.1 LTS）
 - Node.js v12.18.4
 - Vue CLI 4.5.10
@@ -41,12 +41,12 @@ https://devcenter.heroku.com/articles/heroku-cli?source=post_page#download-and-i
 ドキュメントに従い以下のコマンドをターミナルで実行。
 
 ```shell
-$ sudo snap install --classic heroku
+sudo snap install --classic heroku
 ```
 
 以下のようなエラーが出ました。
 
-```shell
+```text:実行結果
 error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: dial unix /run/snapd.socket: connect: no such file or directory
 ```
 
@@ -54,15 +54,21 @@ error: cannot communicate with server: Post http://localhost/v2/snaps/heroku: di
 そこで以下のコマンドでスタンドアローンインストールを実行します。
 
 ```shell
-$ sudo curl https://cli-assets.heroku.com/install.sh | sh
+curl https://cli-assets.heroku.com/install.sh | sh
 ```
+
+インストールスクリプトの中で`sudo`が実行されるため、途中でパスワードの入力を求められます。
 
 ### バージョン確認
 
 インストールに成功したかを確認するために以下のコマンドでCLIのバージョンを表示してみます。
 
 ```shell
-$ heroku --version heroku/7.47.11 linux-x64 node-v12.16.2
+heroku --version
+```
+
+```text:実行結果
+heroku/7.47.11 linux-x64 node-v12.16.2
 ```
 
 インストールに成功し、WSL2上にてHeroku CLIが使えるようになりました。
@@ -79,9 +85,11 @@ https://signup.heroku.com/
 アカウントの登録ができたらターミナルからログインをしていきます。
 
 ```shell
-$ heroku login
-  heroku: Press any key to open up the browser to login or q to exit:
-  # ブラウザにてログイン処理を行う
+heroku login
+```
+
+```text:実行結果
+heroku: Press any key to open up the browser to login or q to exit:
 ```
 
 `q`以外のキーを押すと自動的にデフォルトのブラウザでHerokuのログイン画面が開かれるのでブラウザ上でアカウントへログインします。
@@ -105,7 +113,7 @@ https://cli.vuejs.org/guide/deployment.html#heroku
 デプロイするのにstatic.jsonというファイルが必要みたいなので、Vueプロジェクトのルートディレクトリに移動してstatic.jsonを作成します。
 
 ```shell
-$ touch static.json
+touch static.json
 ```
 
 作成したファイルを以下のように編集して保存します。
@@ -128,13 +136,13 @@ Gitのインストール、`git init`でプロジェクトの初期化が済ん�
 先程作成したstatic.jsonをステージング。
 
 ```shell
-$ git add static.json
+git add static.json
 ```
 
 コミットする。
 
 ```shell
-$ git commit -m "add static configuration"
+git commit -m "add static configuration"
 ```
 
 ### Herokuアプリを作成
@@ -142,15 +150,18 @@ $ git commit -m "add static configuration"
 ターミナルからHerokuへログインしデプロイ対象のプロジェクトのディレクトリで以下のコマンドを実行します。
 
 ```shell
-$ heroku create
+heroku create
+```
+
+```text:実行結果
 Creating app... done
 ```
 
-コマンド１つでHerokuプロジェクトが生成されます。
+コマンド1つでHerokuプロジェクトが生成されます。
 以下のコマンドでアプリのページを開くことができます。
 
 ```shell
-$ heroku open
+heroku open
 ```
 
 デフォルトのブラウザが起動してアプリのページが表示されれば正常にアプリが作成されています。
@@ -166,19 +177,19 @@ Heroku上でアプリをビルドするために以下のビルドパックが�
 https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-nodejs
 
 ```shell
-$ heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/nodejs
 ```
 
 https://github.com/heroku/heroku-buildpack-static
 
 ```shell
-$ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static
 ```
 
-上の２つのビルドパックを導入することでアプリをビルドできる環境が出来上がりました。
+上の2つのビルドパックを導入することでアプリをビルドできる環境が出来上がりました。
 
 :::message
-ビルドパックはheroku/Node.js → heroku-buildpack-staticの順に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
+ビルドパックはheroku/nodejs → heroku-buildpack-staticの順に追加してください。追加する順番を間違うと上手く動作しない可能性があります。
 :::
 
 ### Herokuへデプロイする
@@ -188,7 +199,7 @@ Herokuへデプロイしていきます。
 以下のGitコマンドを実行します。
 
 ```shell
-$ git push heroku main
+git push heroku main
 ```
 
 すぐにHerokuへデプロイ処理が行われます。
@@ -205,7 +216,7 @@ $ git push heroku main
 以下のコマンドを実行することでデフォルトのブラウザでアプリを確認できます。
 
 ```shell
-$ heroku open
+heroku open
 ```
 
 ![ブラウザからデプロイしたアプリを開いた様子](/images/vueapp-deployto-heroku/image03.png)
@@ -227,7 +238,7 @@ Vue CLIで作成したプロジェクトがブラウザに表示され動作が�
 変更したい場合はCLIを使い以下の手順で変更可能です。
 
 ```shell
-$ heroku apps:rename 【変更したい名前】
+heroku apps:rename 【変更したい名前】
 ```
 
 アプリの名前が変わるとアドレスも変わります。
