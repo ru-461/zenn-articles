@@ -25,8 +25,10 @@ PowerShell以外ではHomebrewやaptでインストールしていたため半�
 
 アップデートする際は至ってシンプルかつ簡単です。公式のドキュメントにもあるのですが以下のコマンドを実行するだけで最新のStarshipに置き換わります。
 
+このコマンドはシェルスクリプトを`sh`で実行するため、WindowsではPowerShellではなく、Git Bashなど`sh`が使える環境で実行します。PowerShellだけで完結させたい場合は、後述のScoopを使う方法がおすすめです。
+
 ```shell
-> sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
 インストール、アップデートが同じコマンドでできるのは便利です。

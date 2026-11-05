@@ -59,7 +59,7 @@ https://github.com/microsoft/PowerToys/releases/
 :::message
 v0.47.0現在、Microsoft Storeが最新に更新されている場合、Microsoft Storeから簡単にインストールできるようになりました。
 
-![powertoysインストールページの画像](/images/use-powertoys/image10.png)
+![PowerToysインストールページの画像](/images/use-powertoys/image10.png)
 *インストールボタンをクリックしてインストールできます*
 :::
 
@@ -112,7 +112,7 @@ Chromeの拡張機能でよく目にするカラーピッカーですが、Windo
 
 Windows標準のファイル管理ツールエクスプローラーに機能を追加できます。
 
-[powertoys v0.47.0](https://github.com/microsoft/PowerToys/releases)時点では以下の項目が追加可能です。
+[PowerToys v0.47.0](https://github.com/microsoft/PowerToys/releases)時点では以下の項目が追加可能です。
 
 - プレビューペイン：SVG（.svg）、Markdown（.md）、PDF（.pdf）
 - アイコンのプレビュー（サムネイル）：SVG（.svg）、PDF（.pdf）
