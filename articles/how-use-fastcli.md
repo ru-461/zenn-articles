@@ -36,7 +36,7 @@ https://zenn.dev/ryuu/articles/what-npxcommand
 ダウンロードの速度を計測します。
 
 ```shell
-$ npx fast-cli
+npx fast-cli
 ```
 
 オプション`--upload`を付けないとダウンロードのみの計測となります。
@@ -44,13 +44,13 @@ $ npx fast-cli
 
 ```shell
 # ダウンロード速度とアップロード速度を計測
-$ npx fast-cli --upload
+npx fast-cli --upload
 ```
 
 ### ダウンロード速度を計測して結果を1行表示
 
 ```shell
-$ npx fast-cli --single-line
+npx fast-cli --single-line
 ```
 
 1行でシンプルにダウンロード速度を計測します。
@@ -58,7 +58,7 @@ $ npx fast-cli --single-line
 ### コマンドのヘルプを表示
 
 ```shell
-$ npx fast-cli --help
+npx fast-cli --help
 ```
 
 使用可能なコマンドと使用例を表示します。`--help`は`-h`としても同じ意味となります。
