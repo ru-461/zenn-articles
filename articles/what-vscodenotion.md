@@ -8,10 +8,10 @@ published: true
 
 ## はじめに
 
-私は学習メモやに日々のタスクを「Notion」と呼ばれるオンラインノートアプリを使って一元管理しています。
+私は学習メモや日々のタスクを「Notion」と呼ばれるオンラインノートアプリを使って一元管理しています。
 Notionを自分専用のWikiのように活用し、一箇所で必要な情報を取得できるようにすることで生産性の向上に繋がります。
 
-以前投稿した[こちらの記事](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)でNotionをプログラミングノートとして運用する方法について書いていますのでよろしければ合わせてご覧ください。
+以前投稿した[こちらの記事](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)でNotionをプログラミングノートとして運用する方法について書いていますのでよろしければ併せてご覧ください。
 
 今回はVSCode内でNotionを使うことができる「VSCode Notion」という便利な拡張機能をご紹介します。
 
@@ -29,10 +29,10 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 拡張機能はすべて英語で表記されているため、難しそうに思えますが、機能としてはタブとしてVSCode内でNotionを開くことを可能にする拡張機能となります。
 更新の履歴を見てみると2021年の1月10日に初期バージョンがリリースされたばかりの拡張機能であることがわかります。
 
-拡張機能の説明にはunofficial API（非公式API）を使用するとの記述があります。そのため認証機能などは使えず、いくつかの機能が制限されるとのことですが、**今後正式なAPIの提供に伴いAPIを切り替えていく**との記述があり今後に期待できそうな拡張機能です。先日、Notion APIのPublicBetaが公開されたため今後に注目したいですね。
+拡張機能の説明にはunofficial API（非公式API）を使用するとの記述があります。そのため認証機能などは使えず、いくつかの機能が制限されるとのことですが、**今後正式なAPIの提供に伴いAPIを切り替えていく**との記述があり今後に期待できそうな拡張機能です。先日、Notion APIのPublic Betaが公開されたため今後に注目したいですね。
 
 :::message
-非公式APIを使用している現在段階では、**Notionで作成したページの閲覧だけできる状態**となっています。編集をするなどの操作が制限されているため、しばらくはNotionドキュメントの閲覧だけに使えるものと割り切って使う必要がありそうです。
+非公式APIを使用している現段階では、**Notionで作成したページの閲覧だけできる状態**となっています。編集をするなどの操作が制限されているため、しばらくはNotionドキュメントの閲覧だけに使えるものと割り切って使う必要がありそうです。
 :::
 
 ### VSCode Notion の導入
@@ -49,7 +49,7 @@ https://marketplace.visualstudio.com/items?itemName=frenco.VScode-notion
 
 VSCode Notionを開くとRECENTS（最近VSCodeで開いたページ）とBOOKMARKS（ブックマークしたページ）の2つから選ぶことができます。
 
-初めて使用するときはまだページを開いていないため、 Notionページを開くための「Open A Page」ボタンが表示されています。
+初めて使用するときはまだページを開いていないため、Notionページを開くための「Open A Page」ボタンが表示されています。
 
 ![Notionのページを開く様子](/images/what-vscodenotion/image02.png)
 *Open A PageからNotionのページを開くことができる*
@@ -93,30 +93,28 @@ Notionのアクセストークンを取得します。ブラウザにてNotion�
 以前[こちら](https://zenn.dev/ryuu/articles/8f7513d83f05c77d06a3)の記事で作成したプログラミングノートのトップページを開いてみます。
 アドレスで指定したページがVSCode内で表示できており、問題なく動作しました。
 
-![VSCodeから見たプログラミングノートトップページの画像](/images/what-vscodenotion/image05.png)
+![VSCodeから見たプログラミングノートトップページの画像](/images/what-vscodenotion/image06.png)
 *プログラミングノートトップページ - 技術ページへの遷移も可能*
 
-![VSCodeから見た技術個別ページの画像](/images/what-vscodenotion/image06.png)
+![VSCodeから見た技術個別ページの画像](/images/what-vscodenotion/image07.png)
 *技術ごとのページ - データベース表示が崩れ気味*
 
-![VSCodeから見た備忘録メモページの画像](/images/what-vscodenotion/image07.png)
+![VSCodeから見た備忘録メモページの画像](/images/what-vscodenotion/image08.png)
 *備忘録メモ - Notion 内のコードブロックもうまく表示できており可読性も問題なし*
 
 ### 使ってみて気になった点
 
 トップページを**ブラウザ**で見たものが以下になります。
 
-![ブラウザから見たプログラミングノートの画像](/images/what-vscodenotion/image08.png)
+![ブラウザから見たプログラミングノートの画像](/images/what-vscodenotion/image09.png)
 *ブラウザで見たときの表示*
 
-テキストは問題なく表示できていますが、オリジナルのNotionとVSCode Notionを比較すると表示に失敗している部分が多々見受けられました。比較してみると。
+テキストは問題なく表示できていますが、オリジナルのNotionとVSCode Notionを比較すると表示に失敗している部分が多々見受けられました。比較してみると、以下の部分が上手く表示できていないことがわかります。
 
 - データベースのフルページへの直リンク
 - ページに設定したアイコンイメージ（ローカルからのアップロードのみ）
 - データベースのフルページ
-
-が上手く表示できていないことがわかります。
-データベースページヘのリンクを直接開こうとすると`Request failed with status code 404`となり、上手く表示ができませんでした。
+データベースページへのリンクを直接開こうとすると`Request failed with status code 404`となり、上手く表示ができませんでした。
 
 ## おわりに
 

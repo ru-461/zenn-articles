@@ -8,12 +8,12 @@ published: true
 
 ## はじめに
 
-ChromeBookにはChromeOSというOSが搭載されています。
+ChromebookにはChromeOSというOSが搭載されています。
 これはオープンソースであるChromiumOSをベースに設計されているOSで、現在Chromebookにて採用されていることで有名です。
 
 UIがとてもシンプルで洗練されており、Googleのサービスを利用するのに便利そうという印象を受けました。
 Linuxの機能がベータ版として組み込まれており、ターミナルを使った開発もできるようです。
-ChromeBookの普及により今後、目にする機会や触る機会が多くなると思われます。
+Chromebookの普及により今後、目にする機会や触る機会が多くなると思われます。
 
 ## ChromeOSを試してみたい
 
@@ -26,14 +26,14 @@ CloudReadyは本家ChromeOSと比較したときにGoogle Playストアがサポ
 CloudReadyの公式ページはこちらになります。
 https://www.neverware.com/freedownload
 
-このCloudReadyを使用することでPCを簡単にChromeBook化できるということで注目を集めています。
+このCloudReadyを使用することでPCを簡単にChromebook化できるということで注目を集めています。
 
-つい先日、ChromeOSがCloudReadyを買収し統合される方針のツイートがありました。
+つい先日、GoogleがCloudReadyの開発元であるNeverwareを買収し統合される方針のツイートがありました。
 https://x.com/neverware/status/1338606293737730050?s=19
 
 CloudReadyが正式にChromeOSとして生まれ変わる日も近いみたいですね。
 
-今回はWindowsにて仮想マシンを用意し、CloudReady HomeEditionを動かすところまでを解説します。
+今回はWindowsにて仮想マシンを用意し、CloudReady Home Editionを動かすところまでを解説します。
 
 :::message
 後述しますが、本来CloudReadyは仮想環境で本番運用することを推奨していません。今回紹介する方法は検証用、動作チェックを想定して公開している仮想マシンイメージとなるため予めご了承ください。
@@ -66,7 +66,7 @@ CloudReadyの公式ページにてOSのVMwareイメージが配布されてい�
 
 https://cloudreadykb.neverware.com/s/article/Download-CloudReady-Image-For-VMware
 
-こちらのページからVMwareのイメージダウンロードできます。
+こちらのページからVMwareのイメージをダウンロードできます。
 
 ![イメージをダウンロードするリンクの画像](/images/try-cloudready/image03.png)
 
@@ -103,7 +103,8 @@ VMwareのトップ画面から仮想マシンを開くをクリック。
 
 デフォルトでは言語が英語、キーボード配列がUS配列になっているため私は以下のように変更しました。
 
-![言語とキーボード変更画面の画像](/images/try-cloudready/image08.png) *使用しているキーボードがJIS配列のため日本語を選択*
+![言語とキーボード変更画面の画像](/images/try-cloudready/image08.png)
+*使用しているキーボードがJIS配列のため日本語を選択*
 
 VMwareは`Ctrl`＋`Alt`でホストOS（Windows）とゲストOS（CloudReady）を行き来できるのが便利です。
 
@@ -122,7 +123,7 @@ VMwareは`Ctrl`＋`Alt`でホストOS（Windows）とゲストOS（CloudReady）
 ### インターネットに繋がらない
 
 私はPCを有線接続（イーサネット）で接続していたのですが、CloudReadyの初期設定で上手く接続ができませんでした。
-ChromeOSの初期設定をすすめる上でインターネット接続ができないと先に進めないため困りました。そこで、仮想マシンの設定の編集からネットワークアダプタを選択し。
+ChromeOSの初期設定をすすめる上でインターネット接続ができないと先に進めないため困りました。そこで、仮想マシンの設定の編集からネットワークアダプタを選択し、接続方法を変更しました。
 
 ![ブリッジ接続からNATへ変更する様子](/images/try-cloudready/image10.png)
 
@@ -146,11 +147,11 @@ PINにしてからストレスなくロック解除ができるようになり�
 CloudReady（ChromeOS）にはターミナル機能とLinuxの機能が搭載されています。
 ターミナルは標準で搭載されており、`Ctrl`＋`Shift`＋`t`で呼び出すことができます。
 
-![CloudReadyのターミナル画像](/images/try-cloudready/image11.png)
+![CloudReadyのターミナル画像](/images/try-cloudready/image12.png)
 
-それと合わせて使用できるLinux機能が存在し、設定からインストールできるはずなのですが...。
+それと併せて使用できるLinux機能が存在し、設定からインストールできるはずなのですが...。
 
-![Linuxが起動できない様子](/images/try-cloudready/image12.png)
+![Linuxが起動できない様子](/images/try-cloudready/image13.png)
 
 しかし仮想マシンで実行しているCloudReadyでは設定画面に項目が存在するものの起動ができませんでした。
 
@@ -162,7 +163,7 @@ CloudReady（ChromeOS）にはターミナル機能とLinuxの機能が搭載さ
 > Neverwareは、ホストOSも関与している場合、セキュリティと管理のメリットが減少または排除されるため、本番ユースケースのVMとしてCloudReadyを実行することを推奨しません。
 
 公式のVMwareイメージ配布ページでもこのように説明がされている通り、やはり仮想マシンではLinuxの実行は現実的で無いような気がします。
-ChromeOSで開発環境を構築している情報も多く見受けられますが、CloudReady開発マシンとして運用する場合は仮想マシンではなく、メインのOSとして正規にインストールするしかないみたいです。
+ChromeOSで開発環境を構築している情報も多く見受けられますが、CloudReadyを開発マシンとして運用する場合は仮想マシンではなく、メインのOSとして正規にインストールするしかないみたいです。
 
 上記を踏まえても、仮想マシンでの運用は動作確認と検証用に留めるのが理想的だと感じました。
 CloudReadyを触っていく中でこの部分についても引き続き検証していきたいです。
@@ -170,7 +171,7 @@ CloudReadyを触っていく中でこの部分についても引き続き検証�
 ## おわりに
 
 仮想マシンで手軽にChromeOSの環境を動作させられるのが便利だと感じました。
-今後CloudReadyがChromeOSに統合されるなど、ChromeOSが今後どんどん使いやすくなっていくと思われます。
+今後CloudReadyがChromeOSに統合されるなど、ChromeOSはどんどん使いやすくなっていくと思われます。
 
 今回紹介した方法はあくまで検証用や動作確認用ですが、手元にWindowsPCが1台あれば環境を大きく変えることなく試すことができるのでChromeOSに触ってみたい方には最適な手段だと感じました。今回紹介しているのは仮想マシンでの利用ですが、CloudReady側としてはPCにメインのOSとしてインストールするのを推奨しているためメインOSとして使ってみるのもありですね。
 
