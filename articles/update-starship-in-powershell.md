@@ -54,10 +54,10 @@ PowerShellにて以下のコマンドを順番に実行するだけでインス�
 
 ```powershell
 # ユーザーポリシーの変更（オプションは -scope なので注意）
-> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 # Scoop本体のインストール
-> iwr -useb get.scoop.sh | iex
+iwr -useb get.scoop.sh | iex
 ```
 
 インストールの完了後`scoop --version`と実行してバージョン情報が返ってくれば導入は成功です。
@@ -67,7 +67,7 @@ PowerShellにて以下のコマンドを順番に実行するだけでインス�
 導入できたらScoop経由でStarshipを導入します。Scoopがインストールされている状態で以下のコマンドを実行することでインストールできます。
 
 ```powershell
-> scoop install starship
+scoop install starship
 ```
 
 `'starship' was installed successfully!`と出力されると完了です。コマンドの最後に有効化する方法が記載されているのでガイドにしたがって設定します。
@@ -76,7 +76,7 @@ Starshipを有効化するためにはPowerShellのプロファイルに初期�
 
 ```powershell
 # プロファイルの場所を表示
-> $PROFILE
+$PROFILE
 ```
 
 上のコマンドで表示されたのが読み込んでいるプロファイルの絶対パスになります。メモ帳やVSCodeなどのエディタでプロファイルを開き最後の行に初期化処理を追記します。

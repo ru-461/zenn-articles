@@ -64,7 +64,7 @@ WSL2を有効にするためには、仮想マシン周りの設定変更やWSL2
 Parallels DesktopでWindowsが起動したら管理者権限でコマンドプロンプトを起動して以下のコマンドを実行します。
 
 ```shell:コマンドプロンプト
-> wsl --install
+wsl --install
 ```
 
 これでWSL2が有効となりデフォルトとして設定されます。再起動後に有効化されるので、ここで一旦Windows 10を再起動します。
@@ -72,7 +72,7 @@ Parallels DesktopでWindowsが起動したら管理者権限でコマンドプ�
 再起動後、wslコマンドが有効になります。以下のコマンドを入力すると簡単なコマンドのヘルプが表示されます。
 
 ```shell:コマンドプロンプト
-> wsl --help
+wsl --help
 ```
 
 これでWSL2が有効となり、ディストリビューションをインストールする準備が整いました。
@@ -83,7 +83,10 @@ WSLを有効にしただけではディストリビューションがインス�
 
 ```shell:コマンドプロンプト
 # インストールされているディストリビューションをリスト表示
-> wsl --list
+wsl --list
+```
+
+```text:実行結果
 Linux 用 Windows サブシステムには、ディストリビューションがインストールされていません。
 ディストリビューションは Microsoft Store にアクセスしてインストールすることができます:
 https://aka.ms/wslstore
@@ -92,7 +95,10 @@ https://aka.ms/wslstore
 今回は、UbuntuをWSL2のディストリビューションとしてインストールしてみます。以下のコマンドでインストールできるディストリビューションを表示しオプション`-d`を指定してインストールします。
 
 ```shell:コマンドプロンプト
-> wsl --list --online
+wsl --list --online
+```
+
+```text:実行結果
 インストールできる有効なディストリビューションの一覧を次に示します。
  'wsl --install -d <Distro>'を使用してインストールします。
 
@@ -100,9 +106,11 @@ NAME            FRIENDLY NAME
 Ubuntu          Ubuntu
 Ubuntu-18.04    Ubuntu 18.04 LTS
 Ubuntu-20.04    Ubuntu 20.04 LTS
+```
 
+```shell:コマンドプロンプト
 # Ubuntu-20.04 LTS をインストール
-> wsl --install -d Ubuntu-20.04
+wsl --install -d Ubuntu-20.04
 ```
 
 Ubuntu 20.04 LTSのインストールが開始されます。インストールが完了すると自動的に起動します。
@@ -161,7 +169,7 @@ Parallels Desktopでは**設定から「ネスト化された仮想化を有効�
 
 ```shell:コマンドプロンプト
 # バージョン1をデフォルトにする
-> wsl --set-default-version 1
+wsl --set-default-version 1
 ```
 
 この状態でディストリビューションをインストールして起動することでWSL1として設定できます。

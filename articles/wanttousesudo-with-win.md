@@ -36,20 +36,22 @@ https://scoop.sh
 インストールはとても簡単で、PowerShellを起動して以下のスクリプトを実行するだけで導入できます。
 
 ```powershell:powershell
-> iwr -useb get.scoop.sh | iex
+iwr -useb get.scoop.sh | iex
 ```
 
 うまく実行できないときは以下のコマンドでユーザーポリシーを緩めることでインストールできます。
 
 ```powershell:powershell
-> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
 Scoopコマンドが実行できることを確認できればインストールは完了です。
 
 ```powershell:powershell
-> scoop
+scoop
+```
 
+```text:実行結果
 Usage: scoop <command> [<args>]
 ...
 ```
@@ -60,8 +62,10 @@ Usage: scoop <command> [<args>]
 
 ```powershell:powershell
 # Scoop経由でsudoコマンドをインストールする
-> scoop install sudo
+scoop install sudo
+```
 
+```text:実行結果
 Installing 'sudo' (0.2020.01.26) [64bit]
 sudo.ps1 (2.2 KB) [======/ ~ ======] 100%
 Checking hash of sudo.ps1 ... ok.
@@ -82,8 +86,10 @@ Scoopを使ってインストールしたコマンドの実体は`~\scoop\apps\<
 
 ```powershell:powershell
 # 確認
-> sudo
+sudo
+```
 
+```text:実行結果
 usage: sudo <cmd...>
 ```
 
@@ -91,7 +97,7 @@ usage: sudo <cmd...>
 
 ```powershell:powershell
 # notepad(メモ帳)でhostsを指定
-> sudo notepad C:\Windows\System32\drivers\etc\hosts
+sudo notepad C:\Windows\System32\drivers\etc\hosts
 ```
 
 管理者に昇格するためのUAC（ユーザーアカウント制御）が表示されます。
