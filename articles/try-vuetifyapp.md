@@ -378,19 +378,15 @@ Vuetifyの基本として、template内では一番親要素に`<v-app>`メイ�
   class="mt-4">ツイートしてみる？</v-btn>
 ```
 
-上のボタンをブラウザで見ると以下のようになります。
-
-![v-btn追加後の画像](/images/try-vuetifyapp/image06.PNG)
-
 ボタンの配置ができました。上の記述だけで少し立体感のあるボタンが作成されました。hrefに対してTwitterのURL、`target="_blank"`としているため、ボタンをクリックするとTwitterが別タブで開かれます。ツイートする機能はないのであくまでツイートを促すだけのボタンになります。メインの機能は文字数のカウンターのため、ツイートボタンはあくまでオマケ的な位置づけです。
 
 ### Twitterのブランドアイコンを表示する
 
 ここまでで一通りの機能ができました。しかしこれだけだとTwitterの文字カウンターというのが少しひと目でわかりにくいのでタイトルの横にTwitterのアイコンを表示してみます。Vuetifyにはアイコンを便利に扱えるコンポーネントが用意されているため、活用します。
 
-今回はFontAwesomeにある[Twitterアイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
+今回はFont Awesomeにある[Twitterアイコン](https://fontawesome.com/icons/twitter?style=brands)を利用します。
 
-VuetifyでFontAwesomeを利用するためには、あらかじめFontAwesomeのアイコンをインストールする必要があります。
+VuetifyでFont Awesomeを利用するためには、あらかじめFont Awesomeのアイコンをインストールする必要があります。
 ターミナル上でnpmを使いインストールしていきます。
 
 ```shell

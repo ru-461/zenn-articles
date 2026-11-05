@@ -28,7 +28,7 @@ https://www.neverware.com/freedownload
 
 このCloudReadyを使用することでPCを簡単にChromebook化できるということで注目を集めています。
 
-つい先日、GoogleがCloudReadyの開発元であるNeverwareを買収し統合される方針のツイートがありました。
+つい先日、GoogleがCloudReadyの開発元であるNeverwareを買収し、CloudReadyがChromeOSに統合される方針であるとのツイートがありました。
 https://x.com/neverware/status/1338606293737730050?s=19
 
 CloudReadyが正式にChromeOSとして生まれ変わる日も近いみたいですね。
